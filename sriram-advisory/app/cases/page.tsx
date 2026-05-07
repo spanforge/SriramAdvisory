@@ -71,7 +71,7 @@ export default function CasesPage() {
       <Navbar />
 
       {/* HEADER */}
-      <section style={{ paddingTop: 120, paddingBottom: 80, paddingLeft: 40, paddingRight: 40, background: "#0a1628", textAlign: "center" }}>
+      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#0a1628", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div className="hero-badge" style={{ margin: "0 auto 28px", width: "fit-content" }}>
             <span className="hero-badge-dot" />
@@ -94,7 +94,7 @@ export default function CasesPage() {
         <div className="section-inner">
           <div style={{ display: "flex", flexDirection: "column", gap: 64 }}>
             {CASES.map((c, i) => (
-              <div key={c.id} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, paddingBottom: i < CASES.length - 1 ? 64 : 0, borderBottom: i < CASES.length - 1 ? "1px solid rgba(248,250,255,0.07)" : "none" }}>
+              <div key={c.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12" style={{ paddingBottom: i < CASES.length - 1 ? 64 : 0, borderBottom: i < CASES.length - 1 ? "1px solid rgba(248,250,255,0.07)" : "none" }}>
                 {/* LEFT */}
                 <div>
                   <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>

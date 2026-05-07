@@ -59,7 +59,7 @@ export default function InsightsPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: "#0a1628", padding: "100px 40px 80px" }}>
+      <section className="px-5 md:px-10" style={{ background: "#0a1628", paddingTop: 100, paddingBottom: 80 }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
@@ -106,7 +106,7 @@ export default function InsightsPage() {
       </section>
 
       {/* LAUNCH NOTICE */}
-      <section style={{ background: "#f7f9fc", borderBottom: "1px solid rgba(10,22,40,0.07)", padding: "28px 40px" }}>
+      <section className="px-5 md:px-10" style={{ background: "#f7f9fc", borderBottom: "1px solid rgba(10,22,40,0.07)", paddingTop: 28, paddingBottom: 28 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
           <span style={{
             display: "inline-flex", alignItems: "center", gap: 8,
@@ -124,7 +124,7 @@ export default function InsightsPage() {
       </section>
 
       {/* COMING SOON GRID */}
-      <section style={{ background: "#ffffff", padding: "72px 40px" }}>
+      <section className="px-5 md:px-10" style={{ background: "#ffffff", paddingTop: 72, paddingBottom: 72 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
@@ -187,7 +187,7 @@ export default function InsightsPage() {
       </section>
 
       {/* NOTIFY CTA */}
-      <section style={{ background: "#0a1628", padding: "80px 40px", textAlign: "center" }}>
+      <section className="px-5 md:px-10" style={{ background: "#0a1628", paddingTop: 80, paddingBottom: 80, textAlign: "center" }}>
         <div style={{ maxWidth: 520, margin: "0 auto" }}>
           <h2 style={{
             fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",

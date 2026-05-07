@@ -14,7 +14,7 @@ export default function ReportPage() {
       <Navbar />
 
       {/* HEADER */}
-      <section style={{ paddingTop: 120, paddingBottom: 80, paddingLeft: 40, paddingRight: 40, background: "#0a1628", textAlign: "center" }}>
+      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#0a1628", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div className="hero-badge" style={{ margin: "0 auto 28px", width: "fit-content" }}>
             <span className="hero-badge-dot" />
@@ -35,7 +35,7 @@ export default function ReportPage() {
       {/* WHAT YOU GET — SAMPLE CARD */}
       <section className="section section-mid">
         <div className="section-inner">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16" style={{ alignItems: "center" }}>
             <div>
               <span className="section-label">What You Receive</span>
               <h2 className="section-title">The Report Card</h2>
@@ -105,7 +105,7 @@ export default function ReportPage() {
       {/* PROCESS */}
       <section className="section section-dark">
         <div className="section-inner">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <div>
               <span className="section-label">How It Works</span>
               <h2 className="section-title">3 Steps.<br />No Surprises.</h2>

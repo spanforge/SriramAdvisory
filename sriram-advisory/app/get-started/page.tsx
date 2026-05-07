@@ -18,9 +18,9 @@ export default function GetStartedPage() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/snapshot", {
+      const res = await fetch("https://formspree.io/f/meenljjo", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify(form),
       });
       if (res.ok) setSubmitted(true);

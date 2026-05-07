@@ -27,7 +27,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: "#0a1628", padding: "100px 40px 80px" }}>
+      <section className="px-5 md:px-10" style={{ background: "#0a1628", paddingTop: 100, paddingBottom: 80 }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
@@ -55,8 +55,8 @@ export default function AboutPage() {
       </section>
 
       {/* PHOTO + STORY */}
-      <section style={{ background: "#ffffff", padding: "80px 40px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 2fr", gap: 72, alignItems: "start" }}>
+      <section className="px-5 md:px-10" style={{ background: "#ffffff", paddingTop: 80, paddingBottom: 80 }}>
+        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-10 md:gap-16" style={{ maxWidth: 1100, margin: "0 auto", alignItems: "start" }}>
           <div>
             <img
               src="/sriram.png"
@@ -123,7 +123,7 @@ export default function AboutPage() {
       </section>
 
       {/* PHILOSOPHY */}
-      <section style={{ background: "#f7f9fc", padding: "80px 40px" }}>
+      <section className="px-5 md:px-10" style={{ background: "#f7f9fc", paddingTop: 80, paddingBottom: 80 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
@@ -154,7 +154,7 @@ export default function AboutPage() {
       </section>
 
       {/* WHAT MAKES THIS DIFFERENT */}
-      <section style={{ background: "#0a1628", padding: "80px 40px" }}>
+      <section className="px-5 md:px-10" style={{ background: "#0a1628", paddingTop: 80, paddingBottom: 80 }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
@@ -187,7 +187,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "#ffffff", padding: "80px 40px", textAlign: "center" }}>
+      <section className="px-5 md:px-10" style={{ background: "#ffffff", paddingTop: 80, paddingBottom: 80, textAlign: "center" }}>
         <div style={{ maxWidth: 560, margin: "0 auto" }}>
           <h2 style={{
             fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",

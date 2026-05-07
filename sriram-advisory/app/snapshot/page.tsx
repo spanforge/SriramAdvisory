@@ -36,7 +36,7 @@ export default function SnapshotPage() {
       <Navbar />
 
       {/* HEADER */}
-      <section style={{ paddingTop: 120, paddingBottom: 60, paddingLeft: 40, paddingRight: 40, background: "#0a1628" }}>
+      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 60, background: "#0a1628" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
           <div>
             <div className="hero-badge" style={{ marginBottom: 24, width: "fit-content" }}>

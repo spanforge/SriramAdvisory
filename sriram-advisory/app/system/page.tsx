@@ -59,7 +59,7 @@ export default function SystemPage() {
       <Navbar />
 
       {/* HEADER */}
-      <section style={{ paddingTop: 120, paddingBottom: 80, paddingLeft: 40, paddingRight: 40, background: "#0a1628", textAlign: "center" }}>
+      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#0a1628", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div className="hero-badge" style={{ margin: "0 auto 28px", width: "fit-content" }}>
             <span className="hero-badge-dot" />
