@@ -36,22 +36,12 @@ const SERVICE_CARDS = [
 
 export default function HomePage() {
   return (
-    <div style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)", background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
+    <div className="font-body bg-white text-[#0a1628] min-h-screen">
 
       {/* HEADER — logo only, no menu */}
-      <header style={{
-        position: "sticky", top: 0, zIndex: 100,
-        background: "rgba(255,255,255,0.97)",
-        backdropFilter: "blur(12px)",
-        borderBottom: "1px solid rgba(10,22,40,0.08)",
-        padding: "0 40px",
-      }}>
-        <div style={{
-          maxWidth: 1200, margin: "0 auto",
-          display: "flex", alignItems: "center",
-          height: 68,
-        }}>
-          <Link href="/" style={{ display: "flex", alignItems: "center", gap: 14, textDecoration: "none" }}>
+      <header className="sticky top-0 z-[100] backdrop-blur-[12px] border-b border-[rgba(10,22,40,0.08)]" style={{ background: "rgba(255,255,255,0.97)" }}>
+        <div className="max-w-[1200px] mx-auto flex items-center h-[68px] px-5 md:px-10">
+          <Link href="/" className="flex items-center gap-3.5 no-underline">
             <img
               src="/sriram.png"
               alt="Sriram"
@@ -80,18 +70,13 @@ export default function HomePage() {
           backgroundImage: "linear-gradient(rgba(79,195,247,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(79,195,247,0.04) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }} />
-        <div style={{
+        <div className="hidden lg:block" style={{
           position: "absolute", top: -80, right: "10%",
           width: 600, height: 600, borderRadius: "50%",
           background: "radial-gradient(circle, rgba(26,79,214,0.25) 0%, transparent 70%)",
           pointerEvents: "none",
         }} />
-        <div style={{
-          position: "relative", maxWidth: 1200, margin: "0 auto",
-          padding: "100px 40px 100px",
-          display: "grid", gridTemplateColumns: "1fr 1fr",
-          gap: 80, alignItems: "center",
-        }}>
+        <div className="relative max-w-[1200px] mx-auto px-5 md:px-10 py-16 md:py-24 lg:py-[100px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left */}
           <div>
             <div style={{
@@ -158,11 +143,9 @@ export default function HomePage() {
           </div>
 
           {/* Right — Value card */}
-          <div style={{
+          <div className="backdrop-blur-[12px] rounded-[20px] p-8 md:p-12" style={{
             background: "rgba(255,255,255,0.04)",
             border: "1px solid rgba(255,255,255,0.1)",
-            borderRadius: 20, padding: "48px 40px",
-            backdropFilter: "blur(12px)",
           }}>
             <p style={{
               fontSize: "clamp(18px, 2.2vw, 26px)", fontWeight: 300,
@@ -186,9 +169,9 @@ export default function HomePage() {
       </section>
 
       {/* WHO WE SERVE */}
-      <section style={{ background: "#ffffff", padding: "100px 40px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ maxWidth: 640, marginBottom: 64 }}>
+      <section className="bg-white py-16 md:py-24 lg:py-[100px] px-5 md:px-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-[640px] mb-12 md:mb-16">
             <div style={{
               fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
               fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
@@ -205,18 +188,17 @@ export default function HomePage() {
               the world has shifted and wants to shift with it — we meet you where you are.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SERVICE_CARDS.map((s) => (
-              <div key={s.service} style={{
-                border: "1px solid rgba(10,22,40,0.1)", borderRadius: 16,
-                padding: "36px 32px", display: "flex", flexDirection: "column", gap: 16,
+              <div key={s.service} className="flex flex-col gap-4 rounded-[16px] p-8 md:p-9" style={{
+                border: "1px solid rgba(10,22,40,0.1)",
               }}>
                 <div style={{ width: 40, height: 3, background: "#1a4fd6", borderRadius: 2 }} />
                 <h3 style={{
                   fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
                   fontSize: 26, letterSpacing: "0.04em", color: "#0a1628", margin: 0,
                 }}>{s.service}</h3>
-                <p style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.75, margin: 0, flex: 1 }}>{s.desc}</p>
+                <p className="flex-1" style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -224,16 +206,16 @@ export default function HomePage() {
       </section>
 
       {/* PILLARS + CTA */}
-      <section style={{ background: "#0a1628", padding: "80px 40px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{
+      <section className="py-16 md:py-20 lg:py-[80px] px-5 md:px-10" style={{ background: "#0a1628" }}>
+        <div className="max-w-[1200px] mx-auto">
+          <div className="mb-10 md:mb-12" style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
             fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-            color: "#4fc3f7", marginBottom: 48,
+            color: "#4fc3f7",
           }}>How We Work</div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 40, marginBottom: 72 }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-16 md:mb-[72px]">
             {PILLARS.map((p) => (
-              <div key={p.title} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              <div key={p.title} className="flex flex-col gap-3">
                 <div style={{ width: 32, height: 2, background: "#4fc3f7", borderRadius: 1 }} />
                 <div style={{
                   fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
@@ -243,26 +225,22 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div style={{
-            borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 56,
-            display: "flex", alignItems: "center", justifyContent: "space-between",
-            flexWrap: "wrap", gap: 24,
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pt-12 md:pt-14" style={{
+            borderTop: "1px solid rgba(255,255,255,0.08)",
           }}>
-            <p style={{
+            <p className="max-w-[600px]" style={{
               fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
               fontSize: "clamp(28px, 4vw, 52px)", color: "#f8faff",
-              margin: 0, letterSpacing: "0.02em", lineHeight: 1, maxWidth: 600,
+              margin: 0, letterSpacing: "0.02em", lineHeight: 1,
             }}>
               The AI era rewards those who{" "}
               <span style={{ color: "#1a4fd6" }}>change how they think,</span>{" "}
               not just what they know.
             </p>
-            <span style={{
-              display: "inline-flex", alignItems: "center", gap: 10,
+            <span className="inline-flex items-center gap-2.5 shrink-0 rounded-[10px] px-7 md:px-9 py-4 md:py-[18px]" style={{
               background: "rgba(79,195,247,0.12)",
               border: "1px solid rgba(79,195,247,0.35)",
               color: "#4fc3f7", fontSize: 15, fontWeight: 600,
-              padding: "18px 36px", borderRadius: 10,
               letterSpacing: "0.02em",
             }}>
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#4fc3f7", display: "inline-block" }} />
@@ -273,16 +251,11 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER — no menu */}
-      <footer style={{
+      <footer className="px-5 md:px-10 pt-10 pb-8" style={{
         background: "#f7f9fc", borderTop: "1px solid rgba(10,22,40,0.08)",
-        padding: "40px 40px 32px",
       }}>
-        <div style={{
-          maxWidth: 1200, margin: "0 auto",
-          display: "flex", alignItems: "center", justifyContent: "space-between",
-          flexWrap: "wrap", gap: 16,
-        }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        <div className="max-w-[1200px] mx-auto flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
             <img
               src="/sriram.png"
               alt="Sriram"
