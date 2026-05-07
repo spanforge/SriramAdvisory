@@ -1,5 +1,7 @@
 # Sriram Advisory — Website Specification
-**Version 1.0 | April 2026**
+**Version 1.2 | May 2026**
+
+> **Version history:** v1.0 (April 2026) — initial architecture. v1.1 (April 2026) — Tamil bilingual strategy added. v1.2 (May 2026) — pre-launch nav architecture revised; /report, /get-started, /insights pages specified; IP protection principles and updated conversion model added.
 
 ---
 
@@ -62,12 +64,57 @@
 
 ## 3. SITE ARCHITECTURE
 
-### Primary Navigation
+### Primary Navigation — v1.2 (Launch Architecture)
+
+> **Updated May 2026.** The original nav below has been revised for launch. The new nav is built around two goals: answer "what will I get?" in under 5 seconds, and protect the IP inside the paid report. See Section 3A for full rationale and page specs.
+
+```
+Home  |  The Report  |  About  |  Insights  |  Get Started
+```
+
+**What each item does:**
+- **Home** — Philosophy + problem frame + single CTA to free snapshot
+- **The Report** — Sells the ₹999 Full Career Risk Report by output and outcome, not methodology
+- **About** — Founder authority page; the thinking is the credential
+- **Insights** — Content hub (analysis, framework concepts, data) — SEO engine and trust builder
+- **Get Started** — Single funnel page: free snapshot OR paid report. No other options.
+
+**What stays off the nav permanently:**
+- A "Services" rate-card page — makes the practice feel transactional, not advisory
+- A "Contact" nav item — contact details in the footer are sufficient; a dedicated page signals friction
+- "Blog" as a label — commodity word; use "Insights" or "Intelligence"
+- The scoring methodology, the five factors by name, or the ladder level definitions
+
+---
+
+### Full Page Map — v1.2
+
+```
+/ (Home)
+/report
+/about
+/insights
+  /insights/[article-slug]
+/get-started
+```
+
+**Pages added in Month 2+:**
+```
+/cases          — Outcomes/proof library (after 5 real cases)
+/inner-circle   — Community subscription page (once community is live)
+/business       — B2B entry point for HR/L&D buyers
+/resources      — Free tools (quiz, worksheet PDF) for list building
+```
+
+---
+
+### Original Navigation (v1.0 — reference only, superseded for launch)
+
 ```
 Home | About | Services | Resources | Newsletter | Contact
 ```
 
-### Full Page Map
+### Original Full Page Map (v1.0 — reference only)
 
 ```
 / (Home)
@@ -85,6 +132,137 @@ Home | About | Services | Resources | Newsletter | Contact
 /contact
 /assessment (free AI Career Readiness Assessment — lead gen tool)
 ```
+
+---
+
+## 3A. PAGE SPECIFICATIONS — v1.2 ARCHITECTURE
+
+> These specs cover the five launch pages and the IP protection principles that govern all of them. The original page specs in Section 4 remain as reference for the broader service and content architecture.
+
+---
+
+### The Core Tension This Architecture Solves
+
+The original site says everything about philosophy and nothing about what a visitor will *get*. The revised architecture answers one question in under 5 seconds: **"What will I get if I engage with this?"** — without revealing the scoring engine, the ladder levels, or the framework specifics that live inside the paid report.
+
+---
+
+### 3A.1 HOME PAGE `/`
+
+Keep the existing philosophy. Add three things:
+
+**Problem statement section (new)**
+> "Most professionals are evaluating their AI risk based on their job title. That's the wrong metric. What matters is your task composition."
+This creates the question without giving the answer. It positions the methodology as something you *earn access to* — not something explained for free on the homepage.
+
+**Proof strip (add once 5+ assessments are complete)**
+> "Assessed across 6 industries. 74% of professionals we've worked with discovered their risk was different — often higher — than they expected."
+Specific, credible, anonymised. Replaces vague social proof with data.
+
+**One CTA only**
+> "Understand Your Risk → Start with a free snapshot."
+Remove all competing CTAs from the homepage. One action. One destination.
+
+**Persistent free entry point**
+A visible "Free Risk Snapshot →" should appear on every page — not buried in the footer, not hidden in the nav. This converts passive readers into leads. Someone who lands, reads the philosophy, and leaves without acting is a lost visitor. The free snapshot removes the reason to leave without engaging.
+
+---
+
+### 3A.2 THE REPORT `/report`
+
+**Purpose:** Sell the ₹999 Full Career Risk Report. Convert warm visitors who understand the problem and are ready to pay for the answer.
+
+**What the page shows:**
+- What the deliverable is (a structured career risk assessment — not how it's built)
+- A blurred or generic sample output image (shows form and depth without revealing the framework)
+- 3 outcome statements from the report format — e.g., "Know exactly which parts of your role are at risk and which are resilient," "Receive a prioritised action plan specific to your task profile," "Understand where you sit on the career positioning spectrum"
+- Pricing: ₹999
+- Turnaround time (e.g., "Delivered within 48 hours of intake")
+- Guarantee language
+- One CTA: "Request Your Report"
+
+**What the page does NOT show:**
+- The five factors by name
+- The scoring formula or weightings
+- The ladder level names or definitions (these are the IP; they live in the report)
+- Any detailed methodology — describe the *output*, not the *engine*
+
+**IP protection principle:** The methodology is what makes the report worth ₹999. The moment it's described in detail on a public page, it loses its value and becomes replicable. Describe what the client *gets* and *feels*, not how the sausage is made.
+
+---
+
+### 3A.3 ABOUT `/about`
+
+**Purpose:** Founder authority page. Build trust with people who are on the fence. The thinking is the credential — no formal AI certification required.
+
+**Sections:**
+
+1. **Photo + one-line positioning** — already on the current site
+2. **"Why I built this" origin story** — condensed, specific, personal. Authentic over polished.
+3. **Philosophy statement**
+   > "Mindset before skillset. Depth before tools. Direction before degrees."
+   This line does more trust work than a credentials list.
+4. **What makes this different** — explicit contrast with coaching, courses, and generic career advice. The framework exists. It's proprietary. You get it in the report.
+5. **Methodology philosophy** — *that* a framework exists, without the details of *what* the framework is. "I spent months building a structured way to assess this. You'll find it in the report."
+6. **CTA** → "Request Your Report" or "Start with a Free Snapshot"
+
+**What this page does not need:** a credentials timeline, certification logos, or a list of past employers. The thinking on this page — and in the free snapshot — is sufficient social proof.
+
+---
+
+### 3A.4 INSIGHTS `/insights`
+
+**Purpose:** SEO engine and trust-building machine. Makes the methodology feel real and credible without exposing it. Replaces the original "Resources / Blog" label.
+
+**Three content types:**
+
+**Analysis posts**
+Specific, role-based, data-referenced. Example: "Why backend developers in IT services face a different risk profile than those in product companies." These posts demonstrate depth without giving away the scoring framework.
+
+**Framework posts**
+Introduce concepts from the positioning ladder *without* the level definitions. Example: "There are five stages of career positioning in the AI era. Most professionals are at stage two. Here is what that means for your next move." The ladder exists. The levels are in the report.
+
+**Data posts** (unlock after 20+ assessments)
+Example: "What we've seen across 31 career risk assessments." Aggregated, anonymised, authority-building. These posts are extremely shareable and establish credibility faster than any credential.
+
+**What this page is not:**
+- A generic blog with "Top 10 AI tools" listicles
+- A place to publish the methodology or framework in detail
+- Labelled "Blog" — that word signals commodity; "Insights" signals expertise
+
+---
+
+### 3A.5 GET STARTED `/get-started`
+
+**Purpose:** Single conversion funnel. Two options, clearly separated. Nothing else.
+
+**Option 1 — Free Risk Snapshot**
+- 4-field form: Name, Role, Years of experience, Email
+- Delivery: "Within 24 hours"
+- Zero commitment language throughout
+- This is the primary top-of-funnel lead capture
+
+**Option 2 — Full Career Intelligence Report — ₹999**
+- Link to payment
+- 2–3 sentence description (output, not methodology)
+- Guarantee prominent
+
+**What this page does not include:**
+- A service menu
+- Subscription options (these come after the report is delivered)
+- Multiple CTAs or competing options
+- Any pricing for other services
+
+---
+
+### 3A.6 FUTURE PAGES (Month 2+)
+
+| Page | When to build | Purpose |
+|---|---|---|
+| `/cases` | After 5 real cases | Proof library. Replaces credentials with results. Anonymised or with permission. |
+| `/inner-circle` | Month 2 | Dedicated subscription/community page once the community is live. |
+| `/business` | Month 3 | Separate B2B entry point for HR, L&D, and organisational buyers. |
+| `/resources` | Month 3 | Free tools — quiz, worksheet PDF — for list building. |
 
 ---
 
@@ -392,6 +570,28 @@ Include: Name, role/industry, quote about transformation or clarity achieved.
 
 ## 5. CONTENT ARCHITECTURE PRINCIPLES
 
+### IP Protection Principles
+
+The scoring engine, the five factors, the weighting formula, and the ladder level definitions are the core IP of the practice. They must never appear on any public-facing page.
+
+**What to keep off the public site permanently:**
+- The five factors by name
+- The scoring formula or dimension weightings
+- The ladder level names and their definitions
+- Any detail that would allow a visitor to self-assess using the methodology without paying
+
+**The rule of thumb:** Describe what the client *gets* and *feels* after the report. Never describe how the report is built. The methodology is what makes the ₹999 price defensible.
+
+**Correct framing (public):**
+> "The report maps your specific task profile against AI automation trends and tells you exactly where you sit — and what to do about it."
+
+**Incorrect framing (gives away the engine):**
+> "We assess you across five dimensions: task automability, institutional embeddedness, skill transferability, decision authority, and relationship density."
+
+The first creates curiosity and demand. The second destroys the reason to pay.
+
+---
+
 ### SEO Strategy
 **Target keyword clusters:**
 - "AI impact on careers [industry]"
@@ -428,17 +628,28 @@ Include: Name, role/industry, quote about transformation or clarity achieved.
 
 ## 6. CONVERSION ARCHITECTURE
 
-### Primary Conversion Goals (ranked)
+### v1.2 — Launch Conversion Model
+
+The original conversion model (assessment → newsletter → session) is superseded at launch by a simpler, tighter funnel:
+
+**Primary conversion goal:** Free Risk Snapshot request (top of funnel, highest volume, qualifies leads)
+**Secondary conversion goal:** ₹999 Full Career Risk Report purchase
+**Tertiary conversion goal:** 1:1 advisory session (post-report upsell, not on the nav)
+
+**The one thing the site currently lacks:**
+A clear first action for a visitor who isn't ready to pay. Right now: someone lands, reads the philosophy, feels good, and leaves. The fix is a visible free entry point — persistent across all pages, not buried. One change: "Free Risk Snapshot →" visible on every page converts passive readers into leads.
+
+### v1.2 CTA Hierarchy (site-wide)
+- **Primary CTA (persistent, every page):** "Free Risk Snapshot →"
+- **Secondary CTA (The Report page, Get Started page):** "Request Your Report — ₹999"
+- **Tertiary CTA (About, Insights):** "Start with the Free Snapshot"
+
+### Original Conversion Goals (v1.0 — reference)
 1. Assessment completion (top of funnel, highest volume)
 2. Newsletter subscription
 3. Session booking (bottom of funnel, highest value)
 4. Guide download (mid-funnel, email capture)
 5. Corporate inquiry
-
-### CTA Hierarchy (site-wide)
-- **Primary CTA (always visible):** "Take the Free Assessment"
-- **Secondary CTA:** "Subscribe to the Newsletter"
-- **Tertiary CTA:** "Book a Session" (on services pages)
 
 ### Trust Signals (place throughout site)
 - Subscriber count ("5,000+ readers")
@@ -477,7 +688,45 @@ Include: Name, role/industry, quote about transformation or clarity achieved.
 
 ## 8. LAUNCH ROADMAP
 
-### Phase 1 — MVP (Weeks 1–4)
+### Phase 1 — MVP Launch (May 16, 2026)
+
+*Five pages. One funnel. IP protected.*
+
+- `/` — Home: philosophy + problem frame + persistent "Free Risk Snapshot →" CTA
+- `/report` — The Report: sells the ₹999 Full Career Risk Report by output, not methodology
+- `/about` — Founder authority page
+- `/insights` — Insights hub (3–5 seeded articles at launch)
+- `/get-started` — Single funnel: free snapshot form + paid report link
+
+**Not in Phase 1:** Rate card service pages, Contact nav item, methodology details, newsletter toggle (newsletter details go in footer)
+
+---
+
+### Phase 2 — Growth (Weeks 5–10)
+
+- `/cases` — Outcomes proof library (after 5 real cases, anonymised or with permission)
+- `/inner-circle` — Community subscription page
+- Tamil landing page (`/ta` or `/tamil`) — see Section 11
+- Assessment tool (interactive version of the free snapshot)
+- Email nurture sequences post-snapshot and post-report
+- 2–3 gated guides
+
+---
+
+### Phase 3 — Scale (Month 4+)
+
+- `/business` — B2B landing page for HR/L&D buyers
+- `/resources` — Free tools, quiz, worksheet PDF for list building
+- Corporate program landing page
+- Full Tamil site toggle (language toggle in nav)
+- Course or cohort program page
+- Speaking/media page
+
+---
+
+### Original Phase Plan (v1.0 — reference)
+
+**Phase 1 — MVP (Weeks 1–4)**
 - Home page
 - About page
 - Services page (overview only, no sub-pages yet)
@@ -485,14 +734,14 @@ Include: Name, role/industry, quote about transformation or clarity achieved.
 - Contact page
 - Basic blog (3–5 cornerstone articles)
 
-### Phase 2 — Growth (Weeks 5–10)
+**Phase 2 — Growth (Weeks 5–10)**
 - Assessment tool (this is the priority growth lever)
 - Individual service sub-pages
 - Resources hub with categories
 - 2–3 gated guides
 - Email nurture sequences
 
-### Phase 3 — Scale (Month 4+)
+**Phase 3 — Scale (Month 4+)**
 - Corporate program landing page
 - Case studies / testimonials page
 - Speaking/media page
