@@ -37,7 +37,7 @@ export default function SnapshotPage() {
 
       {/* HEADER */}
       <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 60, background: "#0a1628" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16" style={{ maxWidth: 1100, margin: "0 auto", alignItems: "start" }}>
           <div>
             <div className="hero-badge" style={{ marginBottom: 24, width: "fit-content" }}>
               <span className="hero-badge-dot" />
@@ -143,7 +143,7 @@ export default function SnapshotPage() {
             <span className="section-label">After You Submit</span>
             <h2 className="section-title">What Happens Next</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 32, maxWidth: 900, margin: "0 auto" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6" style={{ maxWidth: 900, margin: "0 auto" }}>
             {[
               { n: "01", title: "Received", desc: "Your form is logged. You get an email confirmation immediately." },
               { n: "02", title: "Manually Scored", desc: "Sriram reviews your profile against the SA-AIRS™ formula. Not a bot." },
@@ -162,7 +162,7 @@ export default function SnapshotPage() {
       {/* DIMENSIONS PREVIEW */}
       <section className="section section-dark">
         <div className="section-inner" style={{ maxWidth: 800 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12" style={{ alignItems: "start" }}>
             <div>
               <span className="section-label">Scored Against</span>
               <h2 className="section-title">SA-AIRS&#8482; v4<br />Formula</h2>
