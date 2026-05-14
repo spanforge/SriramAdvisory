@@ -44,12 +44,12 @@ export default function HomePage() {
 
       {/* HERO */}
       <section style={{
-        background: "linear-gradient(135deg, #0a1628 0%, #102040 55%, #1a3060 100%)",
+        background: "linear-gradient(135deg, #f0f5ff 0%, #e8eef8 55%, #f4f7fe 100%)",
         position: "relative", overflow: "hidden",
       }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "linear-gradient(rgba(79,195,247,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(79,195,247,0.04) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(26,79,214,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(26,79,214,0.04) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }} />
         <div className="hidden lg:block" style={{
@@ -65,53 +65,41 @@ export default function HomePage() {
               display: "inline-block",
               fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
               fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-              color: "#4fc3f7", marginBottom: 24,
-              padding: "5px 12px", border: "1px solid rgba(79,195,247,0.3)", borderRadius: 4,
+              color: "#1a4fd6", marginBottom: 24,
+              padding: "5px 12px", border: "1px solid rgba(26,79,214,0.25)", borderRadius: 4,
             }}>For Everyone in the AI Era</div>
             <h1 style={{
               fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
               fontSize: "clamp(52px, 7vw, 96px)",
               lineHeight: 0.95, letterSpacing: "0.02em",
-              color: "#f8faff", margin: "0 0 28px",
+              color: "#0a1628", margin: "0 0 28px",
             }}>
               THINK<br />
               <span style={{ color: "#1a4fd6" }}>DIFFERENTLY.<br />THRIVE.</span>
             </h1>
             <p style={{
-              fontSize: "clamp(16px, 2vw, 20px)", color: "rgba(248,250,255,0.75)",
+              fontSize: "clamp(16px, 2vw, 20px)", color: "#5a6a8a",
               lineHeight: 1.7, margin: "0 0 48px", maxWidth: 480,
             }}>
-              Sriram Advisory exists for <strong style={{ color: "#f8faff" }}>everyone</strong> who
+              Sriram Advisory exists for <strong style={{ color: "#0a1628" }}>everyone</strong> who
               is willing to challenge how they think about AI, their career, and their future — not just the technically trained,
               not just the already successful. Everyone.
             </p>
-            <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", marginTop: 8 }}>
-              <span style={{
-                display: "inline-flex", alignItems: "center", gap: 10,
-                background: "rgba(79,195,247,0.12)",
-                border: "1px solid rgba(79,195,247,0.35)",
-                color: "#4fc3f7", fontSize: 15, fontWeight: 600,
-                padding: "14px 28px", borderRadius: 10,
-                letterSpacing: "0.02em",
-              }}>
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#4fc3f7", display: "inline-block", animation: "pulse 2s infinite" }} />
-                Launching On 16th May 2026
-              </span>
-            </div>
+
             <div style={{ marginTop: 20 }}>
-              <p style={{ fontSize: 13, color: "rgba(248,250,255,0.45)", margin: "0 0 10px", letterSpacing: "0.04em" }}>
-                Want to connect before launch?
+              <p style={{ fontSize: 13, color: "rgba(10,22,40,0.5)", margin: "0 0 10px", letterSpacing: "0.04em" }}>
+                Get in touch:
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <a href="mailto:sriram@sriramadvisory.com" style={{
                   display: "inline-flex", alignItems: "center", gap: 8,
-                  fontSize: 15, fontWeight: 500, color: "rgba(248,250,255,0.85)",
-                  textDecoration: "none", borderBottom: "1px solid rgba(79,195,247,0.4)",
+                  fontSize: 15, fontWeight: 500, color: "rgba(10,22,40,0.8)",
+                  textDecoration: "none", borderBottom: "1px solid rgba(26,79,214,0.4)",
                   paddingBottom: 2, letterSpacing: "0.02em", width: "fit-content",
                 }}>sriram@sriramadvisory.com</a>
                 <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{
                   display: "inline-flex", alignItems: "center", gap: 8,
-                  fontSize: 15, fontWeight: 500, color: "rgba(248,250,255,0.85)",
+                  fontSize: 15, fontWeight: 500, color: "rgba(10,22,40,0.8)",
                   textDecoration: "none", width: "fit-content",
                 }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,21 +114,21 @@ export default function HomePage() {
 
           {/* Right — Value card */}
           <div className="backdrop-blur-[12px] rounded-[20px] p-8 md:p-12" style={{
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.1)",
+            background: "rgba(10,22,40,0.04)",
+            border: "1px solid rgba(10,22,40,0.08)",
           }}>
             <p style={{
               fontSize: "clamp(18px, 2.2vw, 26px)", fontWeight: 300,
-              lineHeight: 1.6, color: "#f8faff", margin: "0 0 28px",
+              lineHeight: 1.6, color: "#0a1628", margin: "0 0 28px",
             }}>
               The AI era rewards those who{" "}
-              <strong style={{ fontWeight: 700, color: "#4fc3f7" }}>change how they think</strong>,{" "}
+              <strong style={{ fontWeight: 700, color: "#1a4fd6" }}>change how they think</strong>,{" "}
               not just what they know — and it is open to{" "}
               <strong style={{ fontWeight: 700 }}>anyone willing to make that shift</strong>.
             </p>
             <p style={{
-              fontSize: 14, color: "rgba(248,250,255,0.5)", lineHeight: 1.75,
-              borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 24, margin: 0,
+              fontSize: 14, color: "rgba(10,22,40,0.5)", lineHeight: 1.75,
+              borderTop: "1px solid rgba(10,22,40,0.08)", paddingTop: 24, margin: 0,
             }}>
               You do not need a computer science degree. You do not need to already be ahead.
               You need the willingness to think differently, the courage to act on that shift, and the right guidance.
@@ -188,46 +176,44 @@ export default function HomePage() {
       </section>
 
       {/* PILLARS + CTA */}
-      <section className="py-16 md:py-20 lg:py-[80px] px-5 md:px-10" style={{ background: "#0a1628" }}>
+      <section className="py-16 md:py-20 lg:py-[80px] px-5 md:px-10" style={{ background: "#f0f4f8" }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-10 md:mb-12" style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
             fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-            color: "#4fc3f7",
+            color: "#1a4fd6",
           }}>How We Work</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-16 md:mb-[72px]">
             {PILLARS.map((p) => (
               <div key={p.title} className="flex flex-col gap-3">
-                <div style={{ width: 32, height: 2, background: "#4fc3f7", borderRadius: 1 }} />
+                <div style={{ width: 32, height: 2, background: "#1a4fd6", borderRadius: 1 }} />
                 <div style={{
                   fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                  fontSize: 20, letterSpacing: "0.04em", color: "#f8faff", lineHeight: 1.2,
+                  fontSize: 20, letterSpacing: "0.04em", color: "#0a1628", lineHeight: 1.2,
                 }}>{p.title}</div>
-                <div style={{ fontSize: 13, color: "rgba(248,250,255,0.5)", lineHeight: 1.7 }}>{p.desc}</div>
+                <div style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.7 }}>{p.desc}</div>
               </div>
             ))}
           </div>
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pt-12 md:pt-14" style={{
-            borderTop: "1px solid rgba(255,255,255,0.08)",
+            borderTop: "1px solid rgba(10,22,40,0.08)",
           }}>
             <p className="max-w-[600px]" style={{
               fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-              fontSize: "clamp(28px, 4vw, 52px)", color: "#f8faff",
+              fontSize: "clamp(28px, 4vw, 52px)", color: "#0a1628",
               margin: 0, letterSpacing: "0.02em", lineHeight: 1,
             }}>
               The AI era rewards those who{" "}
               <span style={{ color: "#1a4fd6" }}>change how they think,</span>{" "}
               not just what they know.
             </p>
-            <span className="inline-flex items-center gap-2.5 shrink-0 rounded-[10px] px-7 md:px-9 py-4 md:py-[18px]" style={{
-              background: "rgba(79,195,247,0.12)",
-              border: "1px solid rgba(79,195,247,0.35)",
-              color: "#4fc3f7", fontSize: 15, fontWeight: 600,
-              letterSpacing: "0.02em",
+            <Link href="/get-started" className="inline-flex items-center gap-2.5 shrink-0 rounded-[10px] px-7 md:px-9 py-4 md:py-[18px]" style={{
+              background: "#1a4fd6",
+              color: "#fff", fontSize: 15, fontWeight: 600,
+              letterSpacing: "0.02em", textDecoration: "none",
             }}>
-              <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#4fc3f7", display: "inline-block" }} />
-              Launching On 16th May 2026
-            </span>
+              Get Your Risk Score →
+            </Link>
           </div>
         </div>
       </section>

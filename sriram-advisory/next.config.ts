@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["better-sqlite3"],
+  async redirects() {
+    return [{ source: "/snapshot", destination: "/get-started", permanent: true }];
+  },
 };
 
 export default nextConfig;

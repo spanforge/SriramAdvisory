@@ -1,11 +1,18 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Full Report | SA-AIRS™ | Sriram Advisory",
+  description:
+    "Get a complete SA-AIRS™ audit — all 5 dimensions scored, composite risk score, 12 & 36-month horizon, and your Top 3 Moves roadmap.",
+};
 
 const FEATURES = [
-  { tier: "Snapshot", price: "Free", desc: "Quick risk read — delivered in 24 hours.", items: ["2-dimension quick score", "Risk tier placement", "1 key insight", "Upgrade path shown"] },
-  { tier: "Full Report", price: "₹999", featured: true, desc: "Complete SA-AIRS™ audit with your action roadmap.", items: ["All 5 dimensions scored", "SA-AIRS™ composite score", "Top 10% Ladder placement", "Top 3 Moves for 90 days", "12 & 36-month risk horizon", "1 actionable insight guarantee"] },
-  { tier: "Deep Dive", price: "₹1499", desc: "Full report + 45-min strategy call and 30-day re-evaluation.", items: ["Everything in Full Report", "45-minute 1:1 strategy call", "30-day re-evaluation (free)", "Score delta tracking", "Domain-specific action plan"] },
+  { tier: "AI Survival Guide", price: "\u20b9299", desc: "Quick clarity and your first action plan.", items: ["India-specific risk guide", "AI Risk Map for your role", "Self-score across 5 dimensions", "30-day action plan"] },
+  { tier: "AI Career Risk Score", price: "\u20b9999", featured: true, desc: "Personalised 1-page assessment of your specific role.", items: ["Role-specific AI exposure analysis", "SA-AIRS\u2122 5-dimension score", "Risk tier placement", "Top 3 priority actions", "Delivered within 24 hours"] },
+  { tier: "Pro Edition", price: "\u20b91,999", desc: "Complete intelligence report + quarterly updates.", items: ["Everything in Risk Score", "Full SA-AIRS\u2122 methodology explained", "Visual data & charts", "7 industry deep dives", "Salary outlook scenarios", "AI tools by profession", "90-day roadmap (detailed)", "2 quarterly updates included"] },
 ];
 
 export default function ReportPage() {
@@ -14,7 +21,7 @@ export default function ReportPage() {
       <Navbar />
 
       {/* HEADER */}
-      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#0a1628", textAlign: "center" }}>
+      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#f0f4f8", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div className="hero-badge" style={{ margin: "0 auto 28px", width: "fit-content" }}>
             <span className="hero-badge-dot" />
@@ -24,10 +31,10 @@ export default function ReportPage() {
             Your Score. Your Tier.<br />Your Top 3 Moves.
           </h1>
           <p className="section-sub" style={{ margin: "0 auto 40px", textAlign: "center" }}>
-            The Full Report gives you everything the Snapshot shows — plus all 5 dimensions, a 36-month risk horizon, and an exact roadmap for the next 90 days.
+            The report gives you everything you need — all 5 dimensions, a 36-month risk horizon, and an exact roadmap for the next 90 days.
           </p>
-          <Link href="/snapshot" className="btn-primary" style={{ display: "inline-flex", margin: "0 auto" }}>
-            Get Full Report &rarr;
+          <Link href="/get-started" className="btn-primary" style={{ display: "inline-flex", margin: "0 auto" }}>
+            Get Started &rarr;
           </Link>
         </div>
       </section>
@@ -139,21 +146,44 @@ export default function ReportPage() {
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <span className="section-label">Pricing</span>
             <h2 className="section-title">Pick Your Level</h2>
-            <p className="section-sub" style={{ margin: "0 auto", textAlign: "center" }}>Start free. Upgrade when you see the value.</p>
+            <p className="section-sub" style={{ margin: "0 auto", textAlign: "center" }}>Choose the depth that matches your situation. All prices in INR (₹).</p>
           </div>
           <div className="pricing-grid">
             {FEATURES.map((f) => (
               <div key={f.tier} className={`price-card${f.featured ? " featured" : ""}`}>
                 {f.featured && <div className="price-featured-badge">Most Popular</div>}
                 <span className="price-tier">{f.tier}</span>
-                <div className="price-amount"><span className="price-currency">{f.price.startsWith("₹") ? "" : ""}</span>{f.price}</div>
+                <div className="price-amount">{f.price}</div>
                 <p className="price-desc">{f.desc}</p>
                 <ul className="price-features">
                   {f.items.map((item) => <li key={item}>{item}</li>)}
                 </ul>
-                <Link href="/snapshot" className="btn-primary" style={{ width: "100%", justifyContent: "center", padding: "12px 24px" }}>
-                  {f.price === "Free" ? "Get Free Snapshot" : "Get Started"} &rarr;
+                <Link href="/get-started" className="btn-primary" style={{ width: "100%", justifyContent: "center", padding: "12px 24px" }}>
+                  Get Started →
                 </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* Premium tiers */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20, marginTop: 20 }}>
+            {[
+              { tier: "Clarity Call", price: "₹3,999 – ₹7,499", sub: "30 min", desc: "1:1 with Sriram to map your exact next move. Includes full SA-AIRS™ audit.", items: ["Role-mapped AI exposure audit", "1:1 call with Sriram", "Exact next-move roadmap", "Session notes delivered"] },
+              { tier: "Domain Deep Dive Program", price: "₹9,999 – ₹24,999+", sub: "Custom", desc: "90-day transition program: your role to its AI-era equivalent.", items: ["Custom 90-day transition plan", "Weekly accountability check-ins", "Role-to-AI-era equivalence mapping", "Personalised tool & upskill plan", "Access to founder directly"] },
+            ].map((p) => (
+              <div key={p.tier} className="price-card" style={{ borderColor: "rgba(26,79,214,0.2)", background: "#f0f4f8" }}>
+                <span className="price-tier">{p.tier}</span>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 4 }}>
+                  <div className="price-amount" style={{ fontSize: 32 }}>{p.price}</div>
+                  <span style={{ fontSize: 12, color: "#8898b8" }}>{p.sub}</span>
+                </div>
+                <p className="price-desc">{p.desc}</p>
+                <ul className="price-features">
+                  {p.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+                <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ width: "100%", justifyContent: "center", padding: "12px 24px", display: "flex" }}>
+                  Enquire on WhatsApp →
+                </a>
               </div>
             ))}
           </div>
@@ -173,11 +203,11 @@ export default function ReportPage() {
             </div>
           </div>
           <div style={{ marginTop: 24, textAlign: "center" }}>
-            <Link href="/snapshot" className="btn-primary" style={{ display: "inline-flex" }}>
-              Get Full Report &rarr;
+            <Link href="/get-started" className="btn-primary" style={{ display: "inline-flex" }}>
+              Get Your Report &rarr;
             </Link>
-            <p style={{ marginTop: 14, fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "rgba(136,152,184,0.6)", letterSpacing: "0.06em" }}>
-              10 reports open this week &middot; 24-hour delivery guaranteed
+            <p style={{ marginTop: 14, fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "rgba(10,22,40,0.4)", letterSpacing: "0.06em" }}>
+              24-hour delivery guaranteed
             </p>
           </div>
         </div>

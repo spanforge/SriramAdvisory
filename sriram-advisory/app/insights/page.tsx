@@ -1,6 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
+import { ARTICLES } from "./[slug]/page";
+
+export const metadata: Metadata = {
+  title: "Insights | Sriram Advisory",
+  description:
+    "Frameworks, data, and honest analysis on AI career displacement. What is actually true about AI and your career.",
+};
 
 const COMING_SOON = [
   {
@@ -105,6 +113,58 @@ export default function InsightsPage() {
         </div>
       </section>
 
+      {/* PUBLISHED ARTICLES */}
+      {ARTICLES.length > 0 && (
+        <section className="px-5 md:px-10" style={{ background: "#ffffff", paddingTop: 72, paddingBottom: 64 }}>
+          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+            <div style={{
+              fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
+              fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
+              color: "#22d3a0", marginBottom: 16,
+            }}>Published</div>
+            <h2 style={{
+              fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
+              fontSize: "clamp(28px, 3.5vw, 42px)", letterSpacing: "0.02em",
+              color: "#0a1628", margin: "0 0 40px", lineHeight: 1,
+            }}>Latest from Sriram</h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: 1, border: "1px solid rgba(10,22,40,0.08)", borderRadius: 14, overflow: "hidden" }}>
+              {ARTICLES.map((article) => {
+                const c = TYPE_COLOURS[article.type] ?? TYPE_COLOURS["Analysis"];
+                return (
+                  <Link key={article.slug} href={`/insights/${article.slug}`} style={{
+                    display: "grid", gridTemplateColumns: "1fr auto",
+                    gap: 24, alignItems: "center",
+                    padding: "28px 32px",
+                    background: "#fafbfc",
+                    textDecoration: "none",
+                    borderBottom: "1px solid rgba(10,22,40,0.06)",
+                  }}>
+                    <div>
+                      <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 10 }}>
+                        <span style={{
+                          background: c.bg, color: c.text,
+                          fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+                          padding: "3px 10px", borderRadius: 20,
+                        }}>{article.type}</span>
+                        <span style={{ fontSize: 11, color: "#8898b8" }}>{article.tag}</span>
+                        <span style={{ fontSize: 11, color: "#8898b8" }}>· {article.readTime}</span>
+                      </div>
+                      <h3 style={{
+                        fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
+                        fontSize: 22, letterSpacing: "0.03em", color: "#0a1628",
+                        margin: "0 0 8px", lineHeight: 1.15,
+                      }}>{article.title}</h3>
+                      <p style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.7, margin: 0 }}>{article.teaser}</p>
+                    </div>
+                    <span style={{ fontSize: 20, color: "#1a4fd6", flexShrink: 0 }}>→</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* LAUNCH NOTICE */}
       <section className="px-5 md:px-10" style={{ background: "#f7f9fc", borderBottom: "1px solid rgba(10,22,40,0.07)", paddingTop: 28, paddingBottom: 28 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
@@ -115,10 +175,10 @@ export default function InsightsPage() {
             fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase",
           }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#4fc3f7", display: "inline-block" }} />
-            Launching 16 May 2026
+            More Coming Soon
           </span>
           <p style={{ fontSize: 14, color: "#5a6a8a", margin: 0 }}>
-            The first wave of pieces goes live at launch. Subscribe below to be notified.
+            More pieces publish over May–July 2026. Get your Risk Score to stay ahead.
           </p>
         </div>
       </section>
@@ -187,14 +247,14 @@ export default function InsightsPage() {
       </section>
 
       {/* NOTIFY CTA */}
-      <section className="px-5 md:px-10" style={{ background: "#0a1628", paddingTop: 80, paddingBottom: 80, textAlign: "center" }}>
+      <section className="px-5 md:px-10" style={{ background: "#f0f4f8", paddingTop: 80, paddingBottom: 80, textAlign: "center" }}>
         <div style={{ maxWidth: 520, margin: "0 auto" }}>
           <h2 style={{
             fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
             fontSize: "clamp(30px, 4vw, 46px)", letterSpacing: "0.02em",
-            color: "#f8faff", margin: "0 0 16px", lineHeight: 1,
+            color: "#0a1628", margin: "0 0 16px", lineHeight: 1,
           }}>Get Notified at Launch</h2>
-          <p style={{ fontSize: 15, color: "rgba(248,250,255,0.65)", lineHeight: 1.75, margin: "0 0 32px" }}>
+          <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 32px" }}>
             We will email you when the first pieces go live on May 16th.
             No newsletters. No drip sequences. Just the work.
           </p>
@@ -204,7 +264,7 @@ export default function InsightsPage() {
             padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 15,
             border: "1px solid #3b6ef0",
           }}>
-            Get the Free Snapshot + Launch Update →
+            Get Your Risk Score →
           </Link>
         </div>
       </section>

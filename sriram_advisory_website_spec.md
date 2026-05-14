@@ -73,11 +73,11 @@ Home  |  The Report  |  About  |  Insights  |  Get Started
 ```
 
 **What each item does:**
-- **Home** — Philosophy + problem frame + single CTA to free snapshot
+- **Home** — Philosophy + problem frame + single CTA to get started
 - **The Report** — Sells the ₹999 Full Career Risk Report by output and outcome, not methodology
 - **About** — Founder authority page; the thinking is the credential
 - **Insights** — Content hub (analysis, framework concepts, data) — SEO engine and trust builder
-- **Get Started** — Single funnel page: free snapshot OR paid report. No other options.
+- **Get Started** — Single funnel page for paid products and guided next steps.
 
 **What stays off the nav permanently:**
 - A "Services" rate-card page — makes the practice feel transactional, not advisory
@@ -160,11 +160,11 @@ This creates the question without giving the answer. It positions the methodolog
 Specific, credible, anonymised. Replaces vague social proof with data.
 
 **One CTA only**
-> "Understand Your Risk → Start with a free snapshot."
+> "Understand Your Risk → Get started."
 Remove all competing CTAs from the homepage. One action. One destination.
 
-**Persistent free entry point**
-A visible "Free Risk Snapshot →" should appear on every page — not buried in the footer, not hidden in the nav. This converts passive readers into leads. Someone who lands, reads the philosophy, and leaves without acting is a lost visitor. The free snapshot removes the reason to leave without engaging.
+**Persistent entry point**
+A visible path to get started should appear on every page — not buried in the footer, not hidden in the nav. Someone who lands, reads the philosophy, and leaves without acting is a lost visitor.
 
 ---
 
@@ -204,9 +204,9 @@ A visible "Free Risk Snapshot →" should appear on every page — not buried in
    This line does more trust work than a credentials list.
 4. **What makes this different** — explicit contrast with coaching, courses, and generic career advice. The framework exists. It's proprietary. You get it in the report.
 5. **Methodology philosophy** — *that* a framework exists, without the details of *what* the framework is. "I spent months building a structured way to assess this. You'll find it in the report."
-6. **CTA** → "Request Your Report" or "Start with a Free Snapshot"
+6. **CTA** → "Request Your Report" or "Get Started"
 
-**What this page does not need:** a credentials timeline, certification logos, or a list of past employers. The thinking on this page — and in the free snapshot — is sufficient social proof.
+**What this page does not need:** a credentials timeline, certification logos, or a list of past employers. The thinking on this page is sufficient social proof.
 
 ---
 
@@ -234,13 +234,11 @@ Example: "What we've seen across 31 career risk assessments." Aggregated, anonym
 
 ### 3A.5 GET STARTED `/get-started`
 
-**Purpose:** Single conversion funnel. Two options, clearly separated. Nothing else.
+**Purpose:** Single conversion funnel for paid offers. Clear options, nothing extraneous.
 
-**Option 1 — Free Risk Snapshot**
-- 4-field form: Name, Role, Years of experience, Email
-- Delivery: "Within 24 hours"
-- Zero commitment language throughout
-- This is the primary top-of-funnel lead capture
+**Option 1 — AI Survival Guide — ₹299**
+- Quick clarity product with structured guidance
+- Designed as the lowest-friction paid entry point
 
 **Option 2 — Full Career Intelligence Report — ₹999**
 - Link to payment
@@ -632,17 +630,17 @@ The first creates curiosity and demand. The second destroys the reason to pay.
 
 The original conversion model (assessment → newsletter → session) is superseded at launch by a simpler, tighter funnel:
 
-**Primary conversion goal:** Free Risk Snapshot request (top of funnel, highest volume, qualifies leads)
+**Primary conversion goal:** Paid assessment purchase through the Get Started page
 **Secondary conversion goal:** ₹999 Full Career Risk Report purchase
 **Tertiary conversion goal:** 1:1 advisory session (post-report upsell, not on the nav)
 
 **The one thing the site currently lacks:**
-A clear first action for a visitor who isn't ready to pay. Right now: someone lands, reads the philosophy, feels good, and leaves. The fix is a visible free entry point — persistent across all pages, not buried. One change: "Free Risk Snapshot →" visible on every page converts passive readers into leads.
+A clear first action for a visitor who is ready to explore the paid offers. The fix is a visible Get Started path across the site.
 
 ### v1.2 CTA Hierarchy (site-wide)
-- **Primary CTA (persistent, every page):** "Free Risk Snapshot →"
+- **Primary CTA (persistent, every page):** "Get Started →"
 - **Secondary CTA (The Report page, Get Started page):** "Request Your Report — ₹999"
-- **Tertiary CTA (About, Insights):** "Start with the Free Snapshot"
+- **Tertiary CTA (About, Insights):** "Get Your Risk Score"
 
 ### Original Conversion Goals (v1.0 — reference)
 1. Assessment completion (top of funnel, highest volume)
@@ -692,11 +690,11 @@ A clear first action for a visitor who isn't ready to pay. Right now: someone la
 
 *Five pages. One funnel. IP protected.*
 
-- `/` — Home: philosophy + problem frame + persistent "Free Risk Snapshot →" CTA
+- `/` — Home: philosophy + problem frame + persistent "Get Started →" CTA
 - `/report` — The Report: sells the ₹999 Full Career Risk Report by output, not methodology
 - `/about` — Founder authority page
 - `/insights` — Insights hub (3–5 seeded articles at launch)
-- `/get-started` — Single funnel: free snapshot form + paid report link
+- `/get-started` — Single funnel: paid offers and purchase paths
 
 **Not in Phase 1:** Rate card service pages, Contact nav item, methodology details, newsletter toggle (newsletter details go in footer)
 
@@ -707,8 +705,8 @@ A clear first action for a visitor who isn't ready to pay. Right now: someone la
 - `/cases` — Outcomes proof library (after 5 real cases, anonymised or with permission)
 - `/inner-circle` — Community subscription page
 - Tamil landing page (`/ta` or `/tamil`) — see Section 11
-- Assessment tool (interactive version of the free snapshot)
-- Email nurture sequences post-snapshot and post-report
+- Assessment tool (interactive self-assessment)
+- Email nurture sequences post-purchase and post-report
 - 2–3 gated guides
 
 ---

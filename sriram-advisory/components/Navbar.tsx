@@ -73,7 +73,7 @@ export default function Navbar() {
               letterSpacing: "0.02em",
               transition: "background 0.15s",
             }}>
-              Free Risk Snapshot →
+              Get Started →
             </Link>
           </div>
 
@@ -135,7 +135,7 @@ export default function Navbar() {
                 background: "#1a4fd6", color: "#ffffff",
                 border: "1px solid #3b6ef0",
               }}>
-              Free Risk Snapshot →
+              Get Started →
             </Link>
           </div>
         )}

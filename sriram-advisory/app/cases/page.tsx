@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Case Studies | Sriram Advisory",
+  description:
+    "Real SA-AIRS™ assessments and outcomes. See how professionals have repositioned their careers in response to AI displacement risk.",
+};
 
 const CASES = [
   {
@@ -71,7 +78,7 @@ export default function CasesPage() {
       <Navbar />
 
       {/* HEADER */}
-      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#0a1628", textAlign: "center" }}>
+      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#f0f4f8", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div className="hero-badge" style={{ margin: "0 auto 28px", width: "fit-content" }}>
             <span className="hero-badge-dot" />
@@ -176,10 +183,10 @@ export default function CasesPage() {
           <span className="section-label">Start Your Audit</span>
           <h2 className="section-title">Get Your Baseline Score</h2>
           <p className="section-sub" style={{ textAlign: "center", marginBottom: 32 }}>
-            Before you can change the score, you need to know it. Start with the free Snapshot. Your number in 24 hours.
+            Before you can change the score, you need to know it. Get your AI Career Risk Score — your number in 24 hours.
           </p>
-          <Link href="/snapshot" className="btn-primary" style={{ display: "inline-flex" }}>
-            Get My Free Snapshot &rarr;
+          <Link href="/get-started" className="btn-primary" style={{ display: "inline-flex" }}>
+            Get Your Risk Score &rarr;
           </Link>
           <p style={{ marginTop: 16, fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "rgba(136,152,184,0.5)", letterSpacing: "0.06em" }}>
             No spam &middot; 24hr delivery &middot; 1 insight guaranteed

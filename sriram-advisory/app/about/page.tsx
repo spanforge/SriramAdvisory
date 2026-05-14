@@ -1,6 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Sriram Advisory",
+  description:
+    "Sriram is an advisory practitioner focused on helping professionals navigate AI career displacement through structured assessment and strategy.",
+};
 
 const PHILOSOPHY = [
   {
@@ -60,14 +67,14 @@ export default function AboutPage() {
           <div>
             <img
               src="/sriram.png"
-              alt="Sriram"
+              alt="Sriram Srinivasan"
               style={{ width: "100%", maxWidth: 280, borderRadius: 16, objectFit: "cover", border: "3px solid #1a4fd6" }}
             />
             <div style={{ marginTop: 24 }}>
               <div style={{
                 fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
                 fontSize: 22, letterSpacing: "0.06em", color: "#0a1628",
-              }}>Sriram</div>
+              }}>Sriram Srinivasan</div>
               <div style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.6, marginTop: 4 }}>
                 Founder, Sriram Advisory<br />
                 Career Risk Strategist
@@ -154,17 +161,17 @@ export default function AboutPage() {
       </section>
 
       {/* WHAT MAKES THIS DIFFERENT */}
-      <section className="px-5 md:px-10" style={{ background: "#0a1628", paddingTop: 80, paddingBottom: 80 }}>
+      <section className="px-5 md:px-10" style={{ background: "#f0f4f8", paddingTop: 80, paddingBottom: 80 }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
             fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-            color: "#4fc3f7", marginBottom: 16,
+            color: "#1a4fd6", marginBottom: 16,
           }}>What Makes This Different</div>
           <h2 style={{
             fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
             fontSize: "clamp(30px, 4vw, 48px)", letterSpacing: "0.02em",
-            color: "#f8faff", margin: "0 0 36px", lineHeight: 1.1,
+            color: "#0a1628", margin: "0 0 36px", lineHeight: 1.1,
           }}>This Is Not Coaching.<br />Not a Course. Not Career Advice.</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {[
@@ -177,9 +184,9 @@ export default function AboutPage() {
               }}>
                 <div style={{
                   fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                  fontSize: 17, letterSpacing: "0.04em", color: "#4fc3f7", marginBottom: 6,
+                  fontSize: 17, letterSpacing: "0.04em", color: "#1a4fd6", marginBottom: 6,
                 }}>{item.label}</div>
-                <p style={{ fontSize: 14, color: "rgba(248,250,255,0.65)", lineHeight: 1.75, margin: 0 }}>{item.body}</p>
+                <p style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>{item.body}</p>
               </div>
             ))}
           </div>
@@ -195,8 +202,7 @@ export default function AboutPage() {
             color: "#0a1628", margin: "0 0 16px", lineHeight: 1,
           }}>Ready to Find Out<br />Where You Stand?</h2>
           <p style={{ fontSize: 16, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 36px" }}>
-            Start with the free Risk Snapshot — 4 fields, delivered within 24 hours.
-            No commitment, no sales call.
+            Get your AI Career Risk Score — understand exactly where you stand.
           </p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/get-started" style={{
@@ -205,7 +211,7 @@ export default function AboutPage() {
               padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 15,
               border: "1px solid #3b6ef0",
             }}>
-              Free Risk Snapshot →
+              Get Started →
             </Link>
             <Link href="/report" style={{
               display: "inline-flex", alignItems: "center", gap: 8,
