@@ -469,7 +469,7 @@ export default function HomePage() {
             SA-AIRS™ Score Report. India&apos;s first analytical scoring system for AI career risk.
             Starting at ₹299.
           </p>
-          <Link href="/career-intelligence-report" style={{
+          <Link href="/sa-airs-score-report" style={{
             display: "inline-flex", alignItems: "center", gap: 10,
             background: "#1a4fd6", color: "#fff", fontWeight: 700,
             fontSize: 18, padding: "18px 48px", borderRadius: 12,
