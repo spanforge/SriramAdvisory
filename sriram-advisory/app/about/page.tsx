@@ -6,123 +6,101 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | Sriram Advisory",
   description:
-    "Sriram is an advisory practitioner focused on helping professionals navigate AI career displacement through structured assessment and strategy.",
+    "Sriram Advisory is India's analytical scoring system for AI career risk. Depth beats tools. Direction beats degrees.",
 };
 
 const PHILOSOPHY = [
   {
-    label: "Mindset Before Skillset",
-    body: "The tools will keep changing. How you think about them determines whether they work for you — or against you.",
+    label: "Depth Beats Tools",
+    body: "The tools will keep changing. How you think about them determines whether they work for you — or against you. Depth compounds. Tool knowledge expires.",
   },
   {
-    label: "Depth Before Tools",
-    body: "Understanding why AI changes your role matters more than learning which tool to use. Depth compounds. Tool knowledge expires.",
-  },
-  {
-    label: "Direction Before Degrees",
-    body: "You do not need a computer science degree to navigate the AI era well. You need clarity about where you are going and why.",
+    label: "Direction Beats Degrees",
+    body: "You do not need a computer science degree to navigate the AI era well. You need clarity about where you are going and what mental model is blocking you.",
   },
   {
     label: "Honesty Over Optimism",
     body: "AI anxiety is a data problem. When you understand what is actually changing — specifically, for your role — fear turns into strategy.",
   },
+  {
+    label: "Thinking Before Doing",
+    body: "More knowledge + same mental model = same outputs. Different thinking + existing knowledge = exponential outputs. The frame comes first.",
+  },
 ];
 
 export default function AboutPage() {
   return (
-    <>
+    <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
 
       {/* HERO */}
-      <section className="px-5 md:px-10" style={{ background: "#0a1628", paddingTop: 100, paddingBottom: 80 }}>
-        <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <div style={{
-            fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-            color: "#4fc3f7", marginBottom: 24,
-          }}>The Advisor</div>
-          <h1 style={{
-            fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-            fontSize: "clamp(42px, 6vw, 80px)",
-            lineHeight: 1, letterSpacing: "0.02em",
-            color: "#f8faff", margin: "0 0 28px",
-          }}>
-            The Thinking Is<br />
-            <span style={{ color: "#1a4fd6" }}>The Credential.</span>
+      <section style={{
+        background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 60%, #e6efff 100%)",
+        paddingTop: 120, paddingBottom: 100, position: "relative", overflow: "hidden",
+      }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(26,79,214,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(26,79,214,0.04) 1px, transparent 1px)", backgroundSize: "64px 64px" }} />
+        <div style={{ position: "absolute", top: -80, right: "5%", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(26,79,214,0.06) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 820, margin: "0 auto", padding: "0 24px", position: "relative" }}>
+          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 28 }}>The Analyst</span>
+          <h1 style={{ fontSize: "clamp(38px, 5.5vw, 70px)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, marginBottom: 24, letterSpacing: "-0.02em" }}>
+            The thinking is<br />
+            <span style={{ background: "linear-gradient(90deg, #1a4fd6, #22d3a0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              the credential.
+            </span>
           </h1>
-          <p style={{
-            fontSize: "clamp(16px, 2vw, 19px)", color: "rgba(248,250,255,0.7)",
-            lineHeight: 1.75, margin: 0, maxWidth: 620,
-          }}>
-            Sriram Advisory exists because most career advice in the AI era is either panic or platitude.
-            Neither helps. What people need is a structured, honest way to understand what is actually
-            changing — and what to do about it.
+          <p style={{ fontSize: "clamp(17px, 2.2vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 600 }}>
+            Sriram Advisory exists because most career commentary in the AI era is either panic or platitude.
+            Neither is grounded in data. What professionals need is a structured, honest read of what is actually
+            changing — clearly enough to make their own call.
           </p>
         </div>
       </section>
 
-      {/* PHOTO + STORY */}
-      <section className="px-5 md:px-10" style={{ background: "#ffffff", paddingTop: 80, paddingBottom: 80 }}>
-        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-10 md:gap-16" style={{ maxWidth: 1100, margin: "0 auto", alignItems: "start" }}>
+      {/* FOUNDER STORY */}
+      <section style={{ padding: "100px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "280px 1fr", gap: 64, alignItems: "start" }}>
           <div>
             <img
-              src="/sriram.png"
-              alt="Sriram Srinivasan"
-              style={{ width: "100%", maxWidth: 280, borderRadius: 16, objectFit: "cover", border: "3px solid #1a4fd6" }}
+              src="/sriram.png" alt="Sriram Srinivasan"
+              style={{ width: "100%", maxWidth: 260, borderRadius: 16, objectFit: "cover", border: "2px solid #1a4fd6" }}
             />
-            <div style={{ marginTop: 24 }}>
-              <div style={{
-                fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                fontSize: 22, letterSpacing: "0.06em", color: "#0a1628",
-              }}>Sriram Srinivasan</div>
-              <div style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.6, marginTop: 4 }}>
-                Founder, Sriram Advisory<br />
-                Career Risk Strategist
+            <div style={{ marginTop: 28 }}>
+              <div style={{ fontSize: 22, fontWeight: 800, color: "#0a1628", marginBottom: 4 }}>Sriram Srinivasan</div>
+              <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.6, textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                Founder, Sriram Advisory<br />SA-AIRS™ Analyst
               </div>
-              <div style={{ marginTop: 20, display: "flex", flexDirection: "column", gap: 8 }}>
-                <a href="mailto:sriram@sriramadvisory.com" style={{
-                  fontSize: 13, color: "#1a4fd6", textDecoration: "none",
-                  display: "flex", alignItems: "center", gap: 6, fontWeight: 500,
-                }}>
+              <div style={{ marginTop: 24, display: "flex", flexDirection: "column", gap: 10 }}>
+                <a href="mailto:sriram@sriramadvisory.com" style={{ fontSize: 13, color: "#1a4fd6", textDecoration: "none", fontWeight: 500 }}>
                   sriram@sriramadvisory.com
                 </a>
-                <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{
-                  fontSize: 13, color: "#1a4fd6", textDecoration: "none",
-                  display: "flex", alignItems: "center", gap: 6, fontWeight: 500,
-                }}>
-                  +91 93422 29420
-                </a>
+                <Link href="/contact" style={{ fontSize: 13, color: "#1a4fd6", textDecoration: "none", fontWeight: 500 }}>
+                  Contact →
+                </Link>
               </div>
             </div>
           </div>
 
           <div>
-            <div style={{
-              fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-              fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-              color: "#1a4fd6", marginBottom: 20,
-            }}>Why I Built This</div>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#0d9268", letterSpacing: "0.14em", textTransform: "uppercase", display: "block", marginBottom: 24 }}>Why I Built This</span>
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-              <p style={{ fontSize: 16, color: "#3a4a6a", lineHeight: 1.8, margin: 0 }}>
+              <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
                 The question I kept hearing — from managers, analysts, engineers, founders — was not
                 &ldquo;what AI tool should I learn?&rdquo; It was &ldquo;am I going to be okay?&rdquo;
                 And nobody was giving them a straight answer.
               </p>
-              <p style={{ fontSize: 16, color: "#3a4a6a", lineHeight: 1.8, margin: 0 }}>
+              <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
                 The career advice industry responded to AI with two flavours: doom (&ldquo;your job is disappearing&rdquo;)
                 and optimism theatre (&ldquo;just learn prompting and you&rsquo;ll be fine&rdquo;). Neither was
-                grounded in how roles actually work or how AI exposure actually distributes across task profiles.
+                grounded in how roles actually work or how AI exposure actually distributes across thinking patterns.
               </p>
-              <p style={{ fontSize: 16, color: "#3a4a6a", lineHeight: 1.8, margin: 0 }}>
-                I spent time building a framework that looks at the right level of abstraction — not job titles,
-                but tasks. Not industries in aggregate, but specific functions within them. What came out of that
-                work is what powers the Career Risk Report. It is not a quiz. It is a structured assessment with
-                a methodology behind it.
+              <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
+                I built SA-AIRS™ around one core insight: the variable is not your tools,
+                your title, or your years of experience. It is how you think about your work.
+                That is what determines whether AI makes you more valuable — or easy to replace.
               </p>
-              <p style={{ fontSize: 16, color: "#3a4a6a", lineHeight: 1.8, margin: 0 }}>
-                The advisory practice exists to make that work useful — not just as a report, but as a conversation,
-                a strategy session, and for some clients, an ongoing relationship. The goal is the same every time:
-                get to clarity faster than you would on your own.
+              <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
+                The SA-AIRS™ scoring system — five dimensions, one composite score, a traceable causal chain — exists to answer
+                one question precisely: <strong style={{ color: "#0a1628" }}>where are you, and what does the data say?</strong>
               </p>
             </div>
           </div>
@@ -130,30 +108,18 @@ export default function AboutPage() {
       </section>
 
       {/* PHILOSOPHY */}
-      <section className="px-5 md:px-10" style={{ background: "#f7f9fc", paddingTop: 80, paddingBottom: 80 }}>
+      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{
-            fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-            color: "#1a4fd6", marginBottom: 16,
-          }}>Philosophy</div>
-          <h2 style={{
-            fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-            fontSize: "clamp(32px, 4vw, 52px)", letterSpacing: "0.02em",
-            color: "#0a1628", margin: "0 0 52px", lineHeight: 1,
-          }}>How I Think About<br />AI and Careers</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
+          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Philosophy</span>
+          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 52, letterSpacing: "-0.02em" }}>
+            How I think about AI and careers
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
             {PHILOSOPHY.map((p) => (
-              <div key={p.label} style={{
-                background: "#ffffff", border: "1px solid rgba(10,22,40,0.08)",
-                borderRadius: 14, padding: "32px 28px",
-              }}>
-                <div style={{ width: 36, height: 3, background: "#1a4fd6", borderRadius: 2, marginBottom: 18 }} />
-                <div style={{
-                  fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                  fontSize: 20, letterSpacing: "0.04em", color: "#0a1628", marginBottom: 12,
-                }}>{p.label}</div>
-                <p style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>{p.body}</p>
+              <div key={p.label} style={{ background: "rgba(10,22,40,0.025)", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 14, padding: "32px 28px" }}>
+                <div style={{ width: 32, height: 3, background: "#1a4fd6", borderRadius: 2, marginBottom: 20 }} />
+                <div style={{ fontSize: 16, fontWeight: 800, color: "#0a1628", marginBottom: 12 }}>{p.label}</div>
+                <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>{p.body}</p>
               </div>
             ))}
           </div>
@@ -161,32 +127,21 @@ export default function AboutPage() {
       </section>
 
       {/* WHAT MAKES THIS DIFFERENT */}
-      <section className="px-5 md:px-10" style={{ background: "#f0f4f8", paddingTop: 80, paddingBottom: 80 }}>
+      <section style={{ padding: "100px 24px", background: "#f7f9fc" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <div style={{
-            fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-            color: "#1a4fd6", marginBottom: 16,
-          }}>What Makes This Different</div>
-          <h2 style={{
-            fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-            fontSize: "clamp(30px, 4vw, 48px)", letterSpacing: "0.02em",
-            color: "#0a1628", margin: "0 0 36px", lineHeight: 1.1,
-          }}>This Is Not Coaching.<br />Not a Course. Not Career Advice.</h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Positioning</span>
+          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 40, letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            More than career advice.<br />More than coaching.<br />More than a course.
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             {[
-              { label: "Not coaching", body: "Coaching works on behaviour. This works on positioning. The question is not how you show up — it is where you stand relative to how AI is reshaping your function." },
-              { label: "Not a course", body: "A course teaches a skill. This answers a question: given everything about your specific role, tasks, and trajectory — where are you actually exposed, and what should you do about it?" },
-              { label: "Not generic career advice", body: "Generic advice says 'learn AI tools' or 'build your personal brand.' This work is specific. It is built on a methodology. The output is a report, a score, and a 90-day action plan — not a list of suggestions." },
+              { label: "Not coaching", body: "Coaching works on behaviour. This works on thinking patterns. The question is not how you show up — it is whether the mental model you operate from creates or destroys career leverage in an AI era." },
+              { label: "Not a course", body: "A course teaches a skill. This answers a question: given everything about your specific role, tasks, and frame profile — where are you actually exposed, and what thinking shift changes that?" },
+              { label: "Not generic career advice", body: "Generic advice says 'learn AI tools' or 'build your personal brand.' This is specific — built on a rule-based methodology with transparent scoring. The output is a score report, dimension benchmarks, and the full causal chain — documented and traceable." },
             ].map((item) => (
-              <div key={item.label} style={{
-                borderLeft: "2px solid #1a4fd6", paddingLeft: 24,
-              }}>
-                <div style={{
-                  fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                  fontSize: 17, letterSpacing: "0.04em", color: "#1a4fd6", marginBottom: 6,
-                }}>{item.label}</div>
-                <p style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>{item.body}</p>
+              <div key={item.label} style={{ borderLeft: "2px solid #1a4fd6", paddingLeft: 24 }}>
+                <div style={{ fontSize: 14, fontWeight: 800, color: "#1a4fd6", marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.08em" }}>{item.label}</div>
+                <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>{item.body}</p>
               </div>
             ))}
           </div>
@@ -194,38 +149,26 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-5 md:px-10" style={{ background: "#ffffff", paddingTop: 80, paddingBottom: 80, textAlign: "center" }}>
+      <section style={{ padding: "100px 24px", background: "#ffffff", textAlign: "center" }}>
         <div style={{ maxWidth: 560, margin: "0 auto" }}>
-          <h2 style={{
-            fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-            fontSize: "clamp(32px, 4vw, 48px)", letterSpacing: "0.02em",
-            color: "#0a1628", margin: "0 0 16px", lineHeight: 1,
-          }}>Ready to Find Out<br />Where You Stand?</h2>
-          <p style={{ fontSize: 16, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 36px" }}>
-            Get your AI Career Risk Score — understand exactly where you stand.
+          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 800, color: "#0a1628", marginBottom: 20, letterSpacing: "-0.02em" }}>
+            Understand where you stand.
+          </h2>
+          <p style={{ fontSize: 17, color: "#5a6a8a", lineHeight: 1.7, marginBottom: 36 }}>
+            SA-AIRS™ Score Report. Starting at ₹499.
           </p>
-          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/get-started" style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              background: "#1a4fd6", color: "#ffffff", textDecoration: "none",
-              padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 15,
-              border: "1px solid #3b6ef0",
-            }}>
-              Get Started →
-            </Link>
-            <Link href="/report" style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              background: "transparent", color: "#5a6a8a", textDecoration: "none",
-              padding: "14px 28px", borderRadius: 8, fontWeight: 500, fontSize: 14,
-              border: "1px solid rgba(10,22,40,0.15)",
-            }}>
-              View the Full Report
-            </Link>
-          </div>
+          <Link href="/sa-airs-score-report" style={{
+            display: "inline-flex", alignItems: "center",
+            background: "#1a4fd6", color: "#fff", fontWeight: 700,
+            fontSize: 16, padding: "15px 36px", borderRadius: 10,
+            textDecoration: "none", border: "1px solid #3b6ef0",
+          }}>
+            Get Your Score →
+          </Link>
         </div>
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }

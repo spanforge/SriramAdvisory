@@ -6,9 +6,12 @@ import { useState } from "react";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "The Report", href: "/report" },
+  { label: "SA-AIRS™ Score", href: "/sa-airs-score-report" },
+  { label: "Career Insights", href: "/career-intelligence-report" },
+  { label: "Methodology", href: "/methodology" },
+  { label: "Blog", href: "/insights" },
   { label: "About", href: "/about" },
-  { label: "Insights", href: "/insights" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -17,7 +20,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav style={{
+      <nav
+        aria-label="Main navigation"
+        style={{
         position: "sticky", top: 0, zIndex: 100,
         background: "rgba(255,255,255,0.97)",
         backdropFilter: "blur(12px)",
@@ -32,7 +37,7 @@ export default function Navbar() {
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}>
             <img
               src="/sriram.png"
-              alt="Sriram"
+              alt="Sriram Advisory"
               style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }}
             />
             <div>
@@ -40,8 +45,8 @@ export default function Navbar() {
                 fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
                 fontSize: 22, letterSpacing: "0.08em", color: "#0a1628", lineHeight: 1,
               }}>Sriram Advisory</div>
-              <div style={{ fontSize: 10, letterSpacing: "0.12em", color: "#1a4fd6", textTransform: "uppercase", lineHeight: 1.5, fontWeight: 500 }}>
-                Clarity. Strategy. Growth.
+              <div style={{ fontSize: 13, letterSpacing: "0.10em", color: "#1a4fd6", textTransform: "uppercase", lineHeight: 1.5, fontWeight: 600 }}>
+                Career Intelligence System
               </div>
             </div>
           </Link>
@@ -51,19 +56,23 @@ export default function Navbar() {
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href;
               return (
-                <Link key={link.href} href={link.href} style={{
-                  fontSize: 13, fontWeight: 500, textDecoration: "none",
-                  padding: "6px 14px", borderRadius: 6,
-                  color: active ? "#0a1628" : "#5a6a8a",
-                  background: active ? "rgba(10,22,40,0.06)" : "transparent",
-                  transition: "color 0.15s, background 0.15s",
-                  letterSpacing: "0.01em",
-                }}>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={active ? "page" : undefined}
+                  style={{
+                    fontSize: 13, fontWeight: 500, textDecoration: "none",
+                    padding: "6px 14px", borderRadius: 6,
+                    color: active ? "#0a1628" : "#5a6a8a",
+                    background: active ? "rgba(10,22,40,0.06)" : "transparent",
+                    transition: "color 0.15s, background 0.15s",
+                    letterSpacing: "0.01em",
+                  }}>
                   {link.label}
                 </Link>
               );
             })}
-            <Link href="/get-started" style={{
+            <Link href="/sa-airs-score-report" style={{
               marginLeft: 8,
               display: "inline-flex", alignItems: "center", gap: 6,
               fontSize: 13, fontWeight: 700, textDecoration: "none",
@@ -73,7 +82,7 @@ export default function Navbar() {
               letterSpacing: "0.02em",
               transition: "background 0.15s",
             }}>
-              Get Started →
+              Get Your Score →
             </Link>
           </div>
 
@@ -81,7 +90,9 @@ export default function Navbar() {
           <button
             className="flex md:hidden"
             onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
             style={{
               background: "none", border: "none", cursor: "pointer",
               flexDirection: "column", gap: 5, padding: 6,
@@ -104,16 +115,22 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {open && (
-          <div style={{
-            borderTop: "1px solid rgba(10,22,40,0.08)",
-            background: "rgba(255,255,255,0.99)",
-            padding: "12px 20px 20px",
-            display: "flex", flexDirection: "column", gap: 4,
-          }} className="md:hidden">
+          <div
+            id="mobile-nav"
+            role="menu"
+            aria-label="Mobile navigation"
+            style={{
+              borderTop: "1px solid rgba(10,22,40,0.08)",
+              background: "rgba(255,255,255,0.99)",
+              padding: "12px 20px 20px",
+              display: "flex", flexDirection: "column", gap: 4,
+            }} className="md:hidden">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link key={link.href} href={link.href}
+                  role="menuitem"
+                  aria-current={active ? "page" : undefined}
                   onClick={() => setOpen(false)}
                   style={{
                     fontSize: 15, fontWeight: 500, textDecoration: "none",
@@ -125,7 +142,8 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <Link href="/get-started"
+            <Link href="/sa-airs-score-report"
+              role="menuitem"
               onClick={() => setOpen(false)}
               style={{
                 marginTop: 8,
@@ -135,11 +153,14 @@ export default function Navbar() {
                 background: "#1a4fd6", color: "#ffffff",
                 border: "1px solid #3b6ef0",
               }}>
-              Get Started →
+              Get Your Score →
             </Link>
           </div>
         )}
       </nav>
+
+      {/* Landmark anchor — skip link jumps here, to content start */}
+      <div id="main-content" tabIndex={-1} style={{ outline: "none" }} />
     </>
   );
 }

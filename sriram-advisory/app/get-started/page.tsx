@@ -95,7 +95,7 @@ export default function GetStartedPage() {
         <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
+            fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
             color: "#1a4fd6", marginBottom: 20,
           }}>The Complete Advisory Range</div>
           <h1 style={{
@@ -144,14 +144,14 @@ export default function GetStartedPage() {
                   <div style={{
                     position: "absolute", top: -1, left: 32,
                     background: "#1a4fd6", color: "#ffffff",
-                    fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+                    fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
                     padding: "4px 14px", borderRadius: "0 0 8px 8px",
                   }}>{p.tag}</div>
                 )}
                 {!p.highlight && (
                   <div style={{
                     fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-                    fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase",
+                    fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase",
                     color: "#1a4fd6", marginBottom: 12,
                   }}>{p.tag}</div>
                 )}
@@ -164,14 +164,14 @@ export default function GetStartedPage() {
                   <div style={{ fontSize: 36, fontWeight: 800, color: "#0a1628", margin: "0 0 6px", fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)", letterSpacing: "0.02em" }}>
                     {p.price}
                   </div>
-                  <p style={{ fontSize: 13, color: "#5a6a8a", margin: "0 0 24px", lineHeight: 1.6 }}>
+                  <p style={{ fontSize: 14, color: "#5a6a8a", margin: "0 0 24px", lineHeight: 1.6 }}>
                     {p.desc}
                   </p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 9, marginBottom: 32 }}>
                     {p.items.map((item) => (
                       <div key={item} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                         <span style={{ color: "#1a4fd6", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>✓</span>
-                        <span style={{ fontSize: 13, color: "#3a4a6a", lineHeight: 1.5 }}>{item}</span>
+                        <span style={{ fontSize: 14, color: "#3a4a6a", lineHeight: 1.5 }}>{item}</span>
                       </div>
                     ))}
                   </div>
@@ -201,7 +201,7 @@ export default function GetStartedPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
+            fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
             color: "#1a4fd6", marginBottom: 12,
           }}>For Serious Professionals</div>
           <h2 style={{
@@ -233,7 +233,7 @@ export default function GetStartedPage() {
               }}>
                 <div style={{
                   fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-                  fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase",
+                  fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase",
                   color: "#1a4fd6", marginBottom: 10,
                 }}>{p.sub}</div>
                 <h3 style={{
@@ -242,12 +242,12 @@ export default function GetStartedPage() {
                   margin: "0 0 4px", lineHeight: 1,
                 }}>{p.tier}</h3>
                 <div style={{ fontSize: 22, fontWeight: 700, color: "#0a1628", margin: "0 0 6px" }}>{p.price}</div>
-                <p style={{ fontSize: 13, color: "#5a6a8a", margin: "0 0 20px", lineHeight: 1.6 }}>{p.desc}</p>
+                <p style={{ fontSize: 14, color: "#5a6a8a", margin: "0 0 20px", lineHeight: 1.6 }}>{p.desc}</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28, flex: 1 }}>
                   {p.items.map((item) => (
                     <div key={item} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                       <span style={{ color: "#1a4fd6", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>✓</span>
-                      <span style={{ fontSize: 13, color: "#3a4a6a", lineHeight: 1.5 }}>{item}</span>
+                      <span style={{ fontSize: 14, color: "#3a4a6a", lineHeight: 1.5 }}>{item}</span>
                     </div>
                   ))}
                 </div>
@@ -263,7 +263,7 @@ export default function GetStartedPage() {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: "#8898b8", marginTop: 24, textAlign: "center" }}>
+          <p style={{ fontSize: 13, color: "#5a6a8a", marginTop: 24, textAlign: "center" }}>
             Founder discounts available in direct conversations. DM / WhatsApp to know more.
           </p>
         </div>
@@ -291,7 +291,7 @@ export default function GetStartedPage() {
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
+            fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
             color: "#1a4fd6", marginBottom: 12,
           }}>Not Sure Where to Start?</div>
           <h2 style={{
@@ -322,7 +322,7 @@ export default function GetStartedPage() {
                 { name: "email", label: "Email Address", placeholder: "you@example.com", type: "email" },
               ].map((field) => (
                 <div key={field.name}>
-                  <label style={{ fontSize: 12, fontWeight: 600, color: "#3a4a6a", display: "block", marginBottom: 6, letterSpacing: "0.04em" }}>
+                  <label style={{ fontSize: 13, fontWeight: 600, color: "#3a4a6a", display: "block", marginBottom: 6, letterSpacing: "0.04em" }}>
                     {field.label}
                   </label>
                   <input
@@ -342,7 +342,7 @@ export default function GetStartedPage() {
                 </div>
               ))}
               <div>
-                <label style={{ fontSize: 12, fontWeight: 600, color: "#3a4a6a", display: "block", marginBottom: 6, letterSpacing: "0.04em" }}>
+                <label style={{ fontSize: 13, fontWeight: 600, color: "#3a4a6a", display: "block", marginBottom: 6, letterSpacing: "0.04em" }}>
                   What would you like to discuss?
                 </label>
                 <textarea
@@ -373,7 +373,7 @@ export default function GetStartedPage() {
               >
                 {loading ? "Sending…" : "Send Message →"}
               </button>
-              <p style={{ fontSize: 12, color: "#aab4c8", margin: "0", textAlign: "center" }}>
+              <p style={{ fontSize: 13, color: "#8898b8", margin: "0", textAlign: "center" }}>
                 Or reach us directly at{" "}
                 <a href="mailto:sriram@sriramadvisory.com" style={{ color: "#1a4fd6" }}>sriram@sriramadvisory.com</a>
                 {" "}or{" "}

@@ -17,7 +17,7 @@ export default function RefundPage() {
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
+            fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
             color: "#4fc3f7", marginBottom: 20,
           }}>Legal</div>
           <h1 style={{
@@ -25,7 +25,7 @@ export default function RefundPage() {
             fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1,
             letterSpacing: "0.02em", color: "#f8faff", margin: "0 0 20px",
           }}>Refund Policy</h1>
-          <p style={{ fontSize: 13, color: "#8898b8", fontFamily: "var(--font-dm-mono), monospace" }}>
+          <p style={{ fontSize: 14, color: "#8898b8", fontFamily: "var(--font-dm-mono), monospace" }}>
             Last updated: {LAST_UPDATED}
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function RefundPage() {
           }}>
             <div style={{
               fontFamily: "var(--font-dm-mono), monospace",
-              fontSize: 11, color: "#1a4fd6", letterSpacing: "0.1em", marginBottom: 10,
+              fontSize: 13, color: "#1a4fd6", letterSpacing: "0.1em", marginBottom: 10,
             }}>THE SHORT VERSION</div>
             <p style={{ fontSize: 15, color: "#0a1628", lineHeight: 1.75, margin: 0 }}>
               If your Full Report or Deep Dive is delivered and you genuinely feel it did not meet the standard described, email us within 7 days.

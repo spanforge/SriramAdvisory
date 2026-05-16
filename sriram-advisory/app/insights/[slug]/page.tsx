@@ -114,7 +114,7 @@ export default async function ArticlePage({ params }: Props) {
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <Link href="/insights" style={{
             display: "inline-flex", alignItems: "center", gap: 8,
-            fontSize: 12, color: "#8898b8", textDecoration: "none",
+            fontSize: 13, color: "rgba(248,250,255,0.65)", textDecoration: "none",
             fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em",
             marginBottom: 32,
           }}>
@@ -125,10 +125,10 @@ export default async function ArticlePage({ params }: Props) {
             <span style={{
               display: "inline-flex",
               background: c.bg, color: c.text,
-              fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+              fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
               padding: "4px 12px", borderRadius: 20,
             }}>{article.type}</span>
-            <span style={{ fontSize: 12, color: "#8898b8" }}>{article.tag}</span>
+            <span style={{ fontSize: 13, color: "rgba(248,250,255,0.65)" }}>{article.tag}</span>
           </div>
 
           <h1 style={{
@@ -144,7 +144,7 @@ export default async function ArticlePage({ params }: Props) {
           <div style={{
             display: "flex", gap: 24, alignItems: "center",
             fontFamily: "var(--font-dm-mono), monospace",
-            fontSize: 12, color: "#8898b8",
+            fontSize: 13, color: "rgba(248,250,255,0.65)",
           }}>
             <span>{article.date}</span>
             <span style={{ color: "rgba(136,152,184,0.3)" }}>·</span>

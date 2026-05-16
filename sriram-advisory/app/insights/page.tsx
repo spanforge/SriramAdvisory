@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { ARTICLES } from "./[slug]/page";
 
 export const metadata: Metadata = {
-  title: "Insights | Sriram Advisory",
+  title: "Blog | Sriram Advisory",
   description:
     "Frameworks, data, and honest analysis on AI career displacement. What is actually true about AI and your career.",
 };
@@ -25,34 +25,6 @@ const COMING_SOON = [
     tag: "All Professionals",
     eta: "May 2026",
   },
-  {
-    type: "Data",
-    title: "What Indian Professionals Are Getting Wrong About AI Risk",
-    teaser: "Data from 200+ career risk assessments across functions. The gap between perceived risk and actual task-level exposure is significant — and actionable.",
-    tag: "India Market",
-    eta: "June 2026",
-  },
-  {
-    type: "Framework",
-    title: "Mindset Inventory: The 8 Beliefs That Determine AI Adaptability",
-    teaser: "Skill acquisition is downstream of belief. Before the tools, there are mental models. This framework maps the eight that matter most in an AI-accelerated career.",
-    tag: "Mindset",
-    eta: "June 2026",
-  },
-  {
-    type: "Analysis",
-    title: "The Seniority Trap: Why Mid-Career Professionals Face the Highest Risk",
-    teaser: "Junior employees adapt. Senior executives are insulated. It is the 8–18 year professional who is most exposed — here is why, and what to do about it.",
-    tag: "Career Strategy",
-    eta: "July 2026",
-  },
-  {
-    type: "Data",
-    title: "90-Day Repositioning: What Works and What Does Not",
-    teaser: "Patterns from clients who successfully repositioned in 90 days. The actions that moved the needle — and the common traps that did not.",
-    tag: "Outcomes",
-    eta: "July 2026",
-  },
 ];
 
 const TYPE_COLOURS: Record<string, { bg: string; text: string }> = {
@@ -71,9 +43,9 @@ export default function InsightsPage() {
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
+            fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
             color: "#4fc3f7", marginBottom: 24,
-          }}>Insights</div>
+          }}>Blog</div>
           <h1 style={{
             fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
             fontSize: "clamp(42px, 6vw, 80px)",
@@ -96,13 +68,13 @@ export default function InsightsPage() {
               return (
                 <div key={type} style={{
                   display: "flex", alignItems: "center", gap: 8,
-                  fontSize: 12, fontWeight: 600, letterSpacing: "0.05em",
+                fontSize: 13, fontWeight: 600, letterSpacing: "0.05em",
                   color: "rgba(248,250,255,0.5)",
                 }}>
                   <span style={{
                     display: "inline-block",
                     background: c.bg, color: c.text,
-                    fontSize: 11, fontWeight: 700, letterSpacing: "0.08em",
+                    fontSize: 13, fontWeight: 700, letterSpacing: "0.08em",
                     padding: "3px 10px", borderRadius: 20,
                   }}>{type}</span>
                   type label
@@ -119,8 +91,8 @@ export default function InsightsPage() {
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
             <div style={{
               fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-              fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
-              color: "#22d3a0", marginBottom: 16,
+            fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
+              color: "#0d9268", marginBottom: 16,
             }}>Published</div>
             <h2 style={{
               fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
@@ -143,11 +115,11 @@ export default function InsightsPage() {
                       <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 10 }}>
                         <span style={{
                           background: c.bg, color: c.text,
-                          fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+                          fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
                           padding: "3px 10px", borderRadius: 20,
                         }}>{article.type}</span>
-                        <span style={{ fontSize: 11, color: "#8898b8" }}>{article.tag}</span>
-                        <span style={{ fontSize: 11, color: "#8898b8" }}>· {article.readTime}</span>
+                        <span style={{ fontSize: 13, color: "#5a6a8a" }}>{article.tag}</span>
+                        <span style={{ fontSize: 13, color: "#5a6a8a" }}>· {article.readTime}</span>
                       </div>
                       <h3 style={{
                         fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
@@ -172,7 +144,7 @@ export default function InsightsPage() {
             display: "inline-flex", alignItems: "center", gap: 8,
             background: "rgba(79,195,247,0.1)", border: "1px solid rgba(79,195,247,0.25)",
             color: "#0991c5", borderRadius: 8, padding: "8px 16px",
-            fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase",
+            fontSize: 13, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase",
           }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#4fc3f7", display: "inline-block" }} />
             More Coming Soon
@@ -188,7 +160,7 @@ export default function InsightsPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase",
+            fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
             color: "#1a4fd6", marginBottom: 16,
           }}>Coming at Launch</div>
           <h2 style={{
@@ -213,14 +185,14 @@ export default function InsightsPage() {
                   <div style={{
                     position: "absolute", top: 18, right: 18,
                     background: "rgba(10,22,40,0.06)", borderRadius: 20,
-                    fontSize: 10, fontWeight: 600, color: "#8898b8",
+                    fontSize: 13, fontWeight: 600, color: "#5a6a8a",
                     letterSpacing: "0.08em", padding: "3px 10px",
                   }}>{piece.eta}</div>
 
                   <span style={{
                     display: "inline-flex", alignSelf: "flex-start",
                     background: c.bg, color: c.text,
-                    fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+                    fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
                     padding: "4px 12px", borderRadius: 20,
                   }}>{piece.type}</span>
 
@@ -235,7 +207,7 @@ export default function InsightsPage() {
                   </p>
 
                   <div style={{ marginTop: "auto", paddingTop: 12, borderTop: "1px solid rgba(10,22,40,0.06)" }}>
-                    <span style={{ fontSize: 11, color: "#8898b8", letterSpacing: "0.06em", fontWeight: 500 }}>
+                    <span style={{ fontSize: 13, color: "#5a6a8a", letterSpacing: "0.06em", fontWeight: 500 }}>
                       {piece.tag}
                     </span>
                   </div>
@@ -243,29 +215,6 @@ export default function InsightsPage() {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* NOTIFY CTA */}
-      <section className="px-5 md:px-10" style={{ background: "#f0f4f8", paddingTop: 80, paddingBottom: 80, textAlign: "center" }}>
-        <div style={{ maxWidth: 520, margin: "0 auto" }}>
-          <h2 style={{
-            fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-            fontSize: "clamp(30px, 4vw, 46px)", letterSpacing: "0.02em",
-            color: "#0a1628", margin: "0 0 16px", lineHeight: 1,
-          }}>Get Notified at Launch</h2>
-          <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 32px" }}>
-            We will email you when the first pieces go live on May 16th.
-            No newsletters. No drip sequences. Just the work.
-          </p>
-          <Link href="/get-started" style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "#1a4fd6", color: "#ffffff", textDecoration: "none",
-            padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 15,
-            border: "1px solid #3b6ef0",
-          }}>
-            Get Your Risk Score →
-          </Link>
         </div>
       </section>
 

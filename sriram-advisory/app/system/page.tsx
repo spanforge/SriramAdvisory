@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -61,7 +61,7 @@ const WHAT_WE_MEASURE = [
 ];
 
 const TIERS = [
-  { label: "Low Risk", color: "#22d3a0", desc: "Complex, trust-dependent work. The moat is real — the task is to maintain and document it." },
+  { label: "Low Risk", color: "#0d9268", desc: "Complex, trust-dependent work. The moat is real — the task is to maintain and document it." },
   { label: "Moderate Risk", color: "#4fc3f7", desc: "Partially automatable. Proactive strategy now prevents reactive scrambling later." },
   { label: "High Risk", color: "#f7a44f", desc: "Significant automation pressure. The 12-month window is the action period." },
   { label: "Very High Risk", color: "#ff7a4d", desc: "Core deliverables already AI-replicable. Urgent repositioning required." },
@@ -109,16 +109,16 @@ export default function SystemPage() {
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
                   <span style={{
                     fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 11, color: "#1a4fd6", fontWeight: 700,
+                    fontSize: 13, color: "#1a4fd6", fontWeight: 700,
                     letterSpacing: "0.1em", paddingTop: 3,
                   }}>D{i + 1}</span>
                   <span style={{ fontWeight: 700, fontSize: 15, color: "#0a1628", lineHeight: 1.3 }}>{dim.label}</span>
                 </div>
-                <p style={{ color: "#5a6a8a", fontSize: 14, lineHeight: 1.75, margin: 0 }}>{dim.desc}</p>
+                <p style={{ color: "#5a6a8a", fontSize: 15, lineHeight: 1.75, margin: 0 }}>{dim.desc}</p>
               </div>
             ))}
           </div>
-          <p style={{ marginTop: 32, fontSize: 13, color: "rgba(136,152,184,0.6)", fontFamily: "var(--font-dm-mono), monospace", lineHeight: 1.8 }}>
+          <p style={{ marginTop: 32, fontSize: 14, color: "#8898b8", fontFamily: "var(--font-dm-mono), monospace", lineHeight: 1.8 }}>
             // Exact dimension weights, scoring rubrics, and calibration data are proprietary.
             Full methodology is shared with clients who complete a Full Report or Deep Dive engagement.
           </p>
@@ -147,8 +147,8 @@ export default function SystemPage() {
                   background: t.color, flexShrink: 0, marginTop: 5,
                 }} />
                 <div>
-                  <div style={{ fontWeight: 700, color: "#0a1628", fontSize: 14, marginBottom: 6 }}>{t.label}</div>
-                  <div style={{ color: "#5a6a8a", fontSize: 13, lineHeight: 1.6 }}>{t.desc}</div>
+                  <div style={{ fontWeight: 700, color: "#0a1628", fontSize: 15, marginBottom: 6 }}>{t.label}</div>
+                  <div style={{ color: "#5a6a8a", fontSize: 15, lineHeight: 1.7 }}>{t.desc}</div>
                 </div>
               </div>
             ))}
@@ -175,10 +175,10 @@ export default function SystemPage() {
               }}>
                 <div style={{
                   fontFamily: "var(--font-dm-mono), monospace",
-                  fontSize: 11, color: "#1a4fd6", letterSpacing: "0.1em", marginBottom: 12,
+                  fontSize: 13, color: "#1a4fd6", letterSpacing: "0.1em", marginBottom: 12,
                 }}>{p.num}</div>
                 <h3 style={{ fontWeight: 700, fontSize: 15, color: "#0a1628", margin: "0 0 10px", lineHeight: 1.3 }}>{p.title}</h3>
-                <p style={{ color: "#5a6a8a", fontSize: 13, lineHeight: 1.75, margin: 0 }}>{p.body}</p>
+                <p style={{ color: "#5a6a8a", fontSize: 15, lineHeight: 1.75, margin: 0 }}>{p.body}</p>
               </div>
             ))}
           </div>
@@ -205,7 +205,7 @@ export default function SystemPage() {
               {
                 tier: "Full Report",
                 conf: "High Confidence",
-                color: "#22d3a0",
+                color: "#0d9268",
                 items: ["All 5 dimensions scored", "Composite SA-AIRS™ score", "12 & 36-month horizons", "Top 3 Moves roadmap"],
               },
             ].map((card) => (
@@ -216,10 +216,10 @@ export default function SystemPage() {
                 borderRadius: 10,
               }}>
                 <div style={{ fontWeight: 700, fontSize: 15, color: "#0a1628", marginBottom: 6 }}>{card.tier}</div>
-                <div style={{ fontSize: 11, color: card.color, letterSpacing: "0.08em", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 16 }}>{card.conf}</div>
+                <div style={{ fontSize: 13, color: card.color, letterSpacing: "0.08em", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 16 }}>{card.conf}</div>
                 <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
                   {card.items.map((it) => (
-                    <li key={it} style={{ fontSize: 13, color: "#5a6a8a", display: "flex", gap: 8, alignItems: "flex-start" }}>
+                    <li key={it} style={{ fontSize: 15, color: "#5a6a8a", display: "flex", gap: 8, alignItems: "flex-start" }}>
                       <span style={{ color: card.color, flexShrink: 0 }}>✓</span> {it}
                     </li>
                   ))}

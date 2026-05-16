@@ -1,0 +1,145 @@
+"use client";
+
+import { useEffect, useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+function PaymentStatusContent() {
+  const params = useSearchParams();
+  const orderId = params.get("order_id");
+  const product = params.get("product");
+
+  const [status, setStatus] = useState<"loading" | "success" | "pending" | "failed">("loading");
+
+  useEffect(() => {
+    if (!orderId) {
+      setStatus("failed");
+      return;
+    }
+
+    // Verify order status server-side
+    fetch(`/api/verify-order?order_id=${encodeURIComponent(orderId)}`)
+      .then((r) => r.json())
+      .then((data) => {
+        const s = data.order_status?.toUpperCase();
+        if (s === "PAID") setStatus("success");
+        else if (s === "ACTIVE" || s === "CREATED") setStatus("pending");
+        else setStatus("failed");
+      })
+      .catch(() => setStatus("pending")); // Default to pending on error
+  }, [orderId]);
+
+  return (
+    <div style={{ minHeight: "70vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "60px 20px" }}>
+      <div style={{ maxWidth: 520, width: "100%", textAlign: "center" }}>
+        {status === "loading" && (
+          <>
+            <div style={{ fontSize: 48, marginBottom: 20 }}>⏳</div>
+            <h1 style={{ fontSize: 28, fontWeight: 800, color: "#0a1628", marginBottom: 12 }}>Checking payment…</h1>
+            <p style={{ color: "#5a6a8a", fontSize: 16 }}>Please wait a moment.</p>
+          </>
+        )}
+
+        {status === "success" && (
+          <>
+            <div style={{ fontSize: 64, marginBottom: 20 }}>✅</div>
+            <h1 style={{ fontSize: 32, fontWeight: 800, color: "#1e6b3a", marginBottom: 16 }}>Payment Successful!</h1>
+            {product && (
+              <p style={{ fontSize: 18, color: "#0a1628", marginBottom: 12 }}>
+                Thank you for purchasing <strong>{product}</strong>.
+              </p>
+            )}
+            <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.7, marginBottom: 32 }}>
+              You will receive your digital report on the email address you provided within a few minutes.
+              Check your spam folder if you don&apos;t see it.
+            </p>
+            <p style={{ fontSize: 15, color: "#5a6a8a", marginBottom: 8 }}>Order ID: {orderId}</p>
+            <Link
+              href="/"
+              style={{
+                display: "inline-flex", alignItems: "center",
+                background: "#1e6b3a", color: "#fff", fontWeight: 700,
+                fontSize: 15, padding: "12px 28px", borderRadius: 10,
+                textDecoration: "none", marginTop: 16,
+              }}
+            >
+              Back to Home →
+            </Link>
+          </>
+        )}
+
+        {status === "pending" && (
+          <>
+            <div style={{ fontSize: 56, marginBottom: 20 }}>⏱</div>
+            <h1 style={{ fontSize: 30, fontWeight: 800, color: "#0a1628", marginBottom: 16 }}>Payment Processing</h1>
+            <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.7, marginBottom: 32 }}>
+              Your payment is being processed. If it was successful, you will receive your report by email shortly.
+              If you were charged and don&apos;t receive it within 30 minutes, please contact us.
+            </p>
+            <p style={{ fontSize: 13, color: "#8898b8", marginBottom: 24 }}>Order ID: {orderId}</p>
+            <Link
+              href="/get-started"
+              style={{
+                display: "inline-flex", alignItems: "center",
+                background: "#1a4fd6", color: "#fff", fontWeight: 700,
+                fontSize: 15, padding: "12px 28px", borderRadius: 10,
+                textDecoration: "none",
+              }}
+            >
+              Contact Us
+            </Link>
+          </>
+        )}
+
+        {status === "failed" && (
+          <>
+            <div style={{ fontSize: 56, marginBottom: 20 }}>❌</div>
+            <h1 style={{ fontSize: 30, fontWeight: 800, color: "#c0392b", marginBottom: 16 }}>Payment Not Completed</h1>
+            <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.7, marginBottom: 32 }}>
+              Your payment was not completed. You have not been charged.
+              Please try again or contact us if you need help.
+            </p>
+            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+              <Link
+                href="/products"
+                style={{
+                  display: "inline-flex", alignItems: "center",
+                  background: "#1a4fd6", color: "#fff", fontWeight: 700,
+                  fontSize: 15, padding: "12px 28px", borderRadius: 10,
+                  textDecoration: "none",
+                }}
+              >
+                Try Again
+              </Link>
+              <Link
+                href="/get-started"
+                style={{
+                  display: "inline-flex", alignItems: "center",
+                  background: "transparent", color: "#1a4fd6", fontWeight: 600,
+                  fontSize: 15, padding: "12px 28px", borderRadius: 10,
+                  textDecoration: "none", border: "1px solid #1a4fd6",
+                }}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default function PaymentStatusPage() {
+  return (
+    <div className="font-body bg-white text-[#0a1628] min-h-screen">
+      <Navbar />
+      <Suspense fallback={<div style={{ minHeight: "70vh", display: "flex", alignItems: "center", justifyContent: "center" }}><p style={{ color: "#5a6a8a" }}>Loading…</p></div>}>
+        <PaymentStatusContent />
+      </Suspense>
+      <Footer />
+    </div>
+  );
+}

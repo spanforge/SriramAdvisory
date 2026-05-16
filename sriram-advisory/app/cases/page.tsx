@@ -90,7 +90,7 @@ export default function CasesPage() {
           <p className="section-sub" style={{ margin: "0 auto 24px", textAlign: "center" }}>
             4 audited professionals. Score before, score after, and exactly what they did in between. Anonymised — the data is real.
           </p>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(136,152,184,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, color: "#5a6a8a", letterSpacing: "0.08em", textTransform: "uppercase", fontWeight: 600 }}>
             Composite scores based on SA-AIRS&#8482; v4 methodology &middot; All names anonymised
           </p>
         </div>
@@ -108,27 +108,27 @@ export default function CasesPage() {
                     {c.tags.map((t) => <span key={t} className="tag tag-blue">{t}</span>)}
                   </div>
                   <h3 style={{ fontSize: 22, fontWeight: 700, color: "#f8faff", marginBottom: 8, lineHeight: 1.3, fontFamily: "var(--font-bebas), sans-serif", letterSpacing: "0.04em", textTransform: "uppercase" }}>{c.title}</h3>
-                  <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#8898b8", marginBottom: 24, lineHeight: 1.8 }}>
+                  <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "rgba(248,250,255,0.65)", marginBottom: 24, lineHeight: 1.8 }}>
                     {c.role} &middot; {c.exp} &middot; {c.industry}
                   </div>
 
                   {/* SCORE DELTA */}
                   <div className="case-card" style={{ marginBottom: 24 }}>
-                    <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#8898b8", marginBottom: 14, textTransform: "uppercase" }}>SA-AIRS&#8482; Score Delta</div>
+                    <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, letterSpacing: "0.08em", color: "rgba(248,250,255,0.65)", marginBottom: 14, textTransform: "uppercase", fontWeight: 700 }}>SA-AIRS&#8482; Score Delta</div>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 16, alignItems: "center" }}>
                       <div style={{ textAlign: "center" }}>
-                        <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8898b8", marginBottom: 6, letterSpacing: "0.1em" }}>BEFORE</div>
+                        <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, color: "rgba(248,250,255,0.65)", marginBottom: 6, letterSpacing: "0.08em", fontWeight: 700 }}>BEFORE</div>
                         <div className="delta-val before">{c.before}</div>
                       </div>
                       <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: "#8898b8" }}>&rarr;</div>
                       <div style={{ textAlign: "center" }}>
-                        <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8898b8", marginBottom: 6, letterSpacing: "0.1em" }}>AFTER</div>
+                        <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, color: "rgba(248,250,255,0.65)", marginBottom: 6, letterSpacing: "0.08em", fontWeight: 700 }}>AFTER</div>
                         <div className="delta-val after">{c.after}</div>
                       </div>
                     </div>
                     <div style={{ textAlign: "center", marginTop: 16 }}>
                       <span className="delta-val change">{c.delta}</span>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#8898b8", marginLeft: 12 }}>over {c.horizon}</span>
+                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "rgba(248,250,255,0.65)", marginLeft: 12 }}>over {c.horizon}</span>
                     </div>
                     <div style={{ marginTop: 14, display: "flex", justifyContent: "center" }}>
                       <span className={`ladder-badge ${c.tier[1]}`}>{c.tier[0]}</span>
@@ -136,25 +136,25 @@ export default function CasesPage() {
                   </div>
 
                   {/* QUOTE */}
-                  <blockquote style={{ margin: 0, padding: "20px 20px", background: "rgba(248,250,255,0.03)", border: "1px solid rgba(248,250,255,0.08)", borderLeft: "3px solid #1a4fd6", borderRadius: "0 10px 10px 0", fontStyle: "italic", fontSize: 14, color: "#8898b8", lineHeight: 1.75 }}>
+                  <blockquote style={{ margin: 0, padding: "20px 20px", background: "rgba(248,250,255,0.03)", border: "1px solid rgba(248,250,255,0.08)", borderLeft: "3px solid #1a4fd6", borderRadius: "0 10px 10px 0", fontStyle: "italic", fontSize: 15, color: "rgba(248,250,255,0.8)", lineHeight: 1.75 }}>
                     &ldquo;{c.quote}&rdquo;
                   </blockquote>
                 </div>
 
                 {/* RIGHT */}
                 <div>
-                  <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#4fc3f7", marginBottom: 16, textTransform: "uppercase" }}>// Top 3 Moves They Made</div>
+                  <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, letterSpacing: "0.08em", color: "#4fc3f7", marginBottom: 16, textTransform: "uppercase", fontWeight: 700 }}>// Top 3 Moves They Made</div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                     {c.moves.map((move, mi) => (
                       <div key={mi} style={{ display: "flex", gap: 16, padding: "14px 16px", background: "rgba(248,250,255,0.03)", border: "1px solid rgba(248,250,255,0.07)", borderRadius: 10, alignItems: "flex-start" }}>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#1a4fd6", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>0{mi + 1}</span>
-                        <span style={{ fontSize: 14, color: "#8898b8", lineHeight: 1.6 }}>{move}</span>
+                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "#4fc3f7", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>0{mi + 1}</span>
+                        <span style={{ fontSize: 15, color: "rgba(248,250,255,0.8)", lineHeight: 1.6 }}>{move}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div style={{ marginTop: 28, padding: "16px 18px", background: "rgba(26,79,214,0.06)", border: "1px solid rgba(26,79,214,0.2)", borderRadius: 10, fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#8898b8", lineHeight: 1.9 }}>
-                    <span style={{ color: "#4fc3f7", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase" }}>SA-AIRS&#8482; v4 Analysis</span><br />
+                  <div style={{ marginTop: 28, padding: "16px 18px", background: "rgba(26,79,214,0.06)", border: "1px solid rgba(26,79,214,0.2)", borderRadius: 10, fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "rgba(248,250,255,0.65)", lineHeight: 1.9 }}>
+                    <span style={{ color: "#4fc3f7", fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700 }}>SA-AIRS&#8482; v4 Analysis</span><br />
                     <span style={{ color: "#f8faff", fontSize: 13 }}>What changed the score:</span><br />
                     D1 dropped as work became less repeatable.<br />
                     D4 rose as decision ownership expanded.<br />
@@ -188,7 +188,7 @@ export default function CasesPage() {
           <Link href="/get-started" className="btn-primary" style={{ display: "inline-flex" }}>
             Get Your Risk Score &rarr;
           </Link>
-          <p style={{ marginTop: 16, fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "rgba(136,152,184,0.5)", letterSpacing: "0.06em" }}>
+          <p style={{ marginTop: 16, fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14, color: "rgba(248,250,255,0.65)", letterSpacing: "0.02em" }}>
             No spam &middot; 24hr delivery &middot; 1 insight guaranteed
           </p>
         </div>

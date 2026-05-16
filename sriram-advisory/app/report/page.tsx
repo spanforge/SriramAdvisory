@@ -51,8 +51,8 @@ export default function ReportPage() {
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {["SA-AIRS™ composite score (0–10)", "5 weighted dimension scores", "Top 10% Ladder placement (L1–L5)", "12-month and 36-month risk horizon", "Top 3 specific moves for next 90 days"].map((item) => (
-                  <li key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start", fontSize: 14, color: "#8898b8" }}>
-                    <span style={{ color: "#22d3a0", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>✓</span>
+                  <li key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start", fontSize: 15, color: "#5a6a8a" }}>
+                    <span style={{ color: "#0d9268", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>✓</span>
                     {item}
                   </li>
                 ))}
@@ -61,7 +61,7 @@ export default function ReportPage() {
 
             {/* SAMPLE SCORE CARD */}
             <div>
-              <div style={{ marginBottom: 10, fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8898b8", textAlign: "center" }}>
+              <div style={{ marginBottom: 10, fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", color: "#5a6a8a", textAlign: "center", fontWeight: 700 }}>
                 &#9888; Sample output — illustrative data
               </div>
               <div className="score-card">
@@ -72,7 +72,7 @@ export default function ReportPage() {
                   </div>
                   <div className="score-card-meta">
                     <div className="score-card-risk">High Risk</div>
-                    <div className="score-card-sub">High Confidence<br />36-month horizon<br /><span style={{ color: "#22d3a0" }}>L2 &rarr; L3 path available</span></div>
+                    <div className="score-card-sub">High Confidence<br />36-month horizon<br /><span style={{ color: "#0d9268" }}>L2 &rarr; L3 path available</span></div>
                   </div>
                 </div>
                 <div className="score-card-body">
@@ -98,7 +98,7 @@ export default function ReportPage() {
                   ))}
                 </div>
               </div>
-              <div style={{ marginTop: 16, padding: "14px 18px", background: "rgba(248,250,255,0.03)", border: "1px solid rgba(248,250,255,0.08)", borderRadius: 10, fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#8898b8", lineHeight: 1.8 }}>
+              <div style={{ marginTop: 16, padding: "14px 18px", background: "rgba(248,250,255,0.03)", border: "1px solid rgba(248,250,255,0.08)", borderRadius: 10, fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "#5a6a8a", lineHeight: 1.8 }}>
                 <span style={{ color: "#4fc3f7" }}>// Top 3 Moves</span><br />
                 1. Transition 30% of output to AI-augmented delivery<br />
                 2. Build one visible system or framework in your domain<br />
@@ -171,11 +171,11 @@ export default function ReportPage() {
               { tier: "Clarity Call", price: "₹3,999 – ₹7,499", sub: "30 min", desc: "1:1 with Sriram to map your exact next move. Includes full SA-AIRS™ audit.", items: ["Role-mapped AI exposure audit", "1:1 call with Sriram", "Exact next-move roadmap", "Session notes delivered"] },
               { tier: "Domain Deep Dive Program", price: "₹9,999 – ₹24,999+", sub: "Custom", desc: "90-day transition program: your role to its AI-era equivalent.", items: ["Custom 90-day transition plan", "Weekly accountability check-ins", "Role-to-AI-era equivalence mapping", "Personalised tool & upskill plan", "Access to founder directly"] },
             ].map((p) => (
-              <div key={p.tier} className="price-card" style={{ borderColor: "rgba(26,79,214,0.2)", background: "#f0f4f8" }}>
+              <div key={p.tier} className="price-card" style={{ borderColor: "rgba(26,79,214,0.06)", background: "#f0f4f8" }}>
                 <span className="price-tier">{p.tier}</span>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 4 }}>
                   <div className="price-amount" style={{ fontSize: 32 }}>{p.price}</div>
-                  <span style={{ fontSize: 12, color: "#8898b8" }}>{p.sub}</span>
+                  <span style={{ fontSize: 13, color: "#5a6a8a" }}>{p.sub}</span>
                 </div>
                 <p className="price-desc">{p.desc}</p>
                 <ul className="price-features">
@@ -206,7 +206,7 @@ export default function ReportPage() {
             <Link href="/get-started" className="btn-primary" style={{ display: "inline-flex" }}>
               Get Your Report &rarr;
             </Link>
-            <p style={{ marginTop: 14, fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "rgba(10,22,40,0.4)", letterSpacing: "0.06em" }}>
+            <p style={{ marginTop: 14, fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14, color: "#5a6a8a", letterSpacing: "0.02em" }}>
               24-hour delivery guaranteed
             </p>
           </div>
