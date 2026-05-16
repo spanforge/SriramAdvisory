@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "SA-AIRS™ Score", href: "/sa-airs-score-report" },
   { label: "Career Insights", href: "/career-intelligence-report" },
+  { label: "Guides", href: "/guides" },
   { label: "Methodology", href: "/methodology" },
   { label: "Blog", href: "/insights" },
   { label: "About", href: "/about" },
@@ -72,18 +73,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <Link href="/sa-airs-score-report" style={{
-              marginLeft: 8,
-              display: "inline-flex", alignItems: "center", gap: 6,
-              fontSize: 13, fontWeight: 700, textDecoration: "none",
-              padding: "8px 18px", borderRadius: 8,
-              background: "#1a4fd6", color: "#ffffff",
-              border: "1px solid #3b6ef0",
-              letterSpacing: "0.02em",
-              transition: "background 0.15s",
-            }}>
-              Get Your Score →
-            </Link>
           </div>
 
           {/* Hamburger */}
