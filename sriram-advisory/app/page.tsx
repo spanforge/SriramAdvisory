@@ -158,7 +158,7 @@ export default function HomePage() {
           </p>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
-            <Link href="/career-intelligence-report" style={{
+            <Link href="/sa-airs-score-report" style={{
               display: "inline-flex", alignItems: "center", gap: 8,
               background: "#1a4fd6", color: "#fff", fontWeight: 700,
               fontSize: 16, padding: "15px 36px", borderRadius: 10,
