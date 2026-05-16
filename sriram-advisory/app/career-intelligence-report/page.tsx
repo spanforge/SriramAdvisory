@@ -113,7 +113,7 @@ export default function CareerIntelligenceReportPage() {
                 <div style={{ fontSize: 32, fontWeight: 800, color: "#0d9268" }}>₹999</div>
                 <div style={{ fontSize: 20, fontWeight: 600, color: "#6a7a9a", textDecoration: "line-through" }}>₹1,999</div>
               </div>
-              <div style={{ fontSize: 14, color: "#5a6a8a", marginTop: 4 }}>Includes follow-up call + quarterly update</div>
+              <div style={{ fontSize: 14, color: "#5a6a8a", marginTop: 4 }}>Includes quarterly update assessment</div>
             </div>
           </div>
 

@@ -31,7 +31,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: "What's the difference between Standard (₹999) and Pro (₹1,999)?",
-        a: "Standard includes the full 6-part report + 30-day re-assessment. Pro adds a 1:1 follow-up call with Sriram to walk through your results, plus a quarterly update assessment for 12 months.",
+        a: "Standard includes the full 6-part report + 30-day re-assessment. Pro adds a quarterly update assessment for 12 months.",
       },
     ],
   },
