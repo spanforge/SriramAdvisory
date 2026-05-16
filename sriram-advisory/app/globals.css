@@ -31,6 +31,72 @@
   transform: translateY(-2px);
 }
 
+/* ── Guides listing — responsive card layout ─────────── */
+.guide-card-body {
+  padding: 36px 40px;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+}
+.guide-card-price-col {
+  text-align: right;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .guide-card-body {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+  .guide-card-price-col {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+/* ── Guide detail pages — responsive elements ────────── */
+.hero-price-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 48px;
+  gap: 6px;
+}
+.stats-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+.dark-card-padded {
+  padding: 52px 48px;
+}
+.qa-score-card-pad {
+  padding: 48px 44px;
+}
+.case-study-card-pad {
+  padding: 44px 48px;
+}
+@media (max-width: 540px) {
+  .hero-price-box {
+    padding: 24px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .stats-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .dark-card-padded {
+    padding: 32px 20px;
+  }
+  .qa-score-card-pad {
+    padding: 32px 20px;
+  }
+  .case-study-card-pad {
+    padding: 28px 20px;
+  }
+}
+
 /* ── Base ────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }

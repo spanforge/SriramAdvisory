@@ -103,11 +103,10 @@ export default function GuidesPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           {GUIDES.map((g) => (
             <Link key={g.href} href={g.href} style={{ textDecoration: "none" }}>
-              <div className="guide-card" style={{
+              <div className="guide-card guide-card-body" style={{
                 background: g.bgGradient,
                 border: `1.5px solid ${g.borderColor}`,
-                borderRadius: 16, padding: "36px 40px",
-                display: "flex", gap: 36, alignItems: "flex-start",
+                borderRadius: 16,
                 cursor: "pointer",
               }}>
                 <div style={{ flex: 1, minWidth: 0 }}>
@@ -125,7 +124,7 @@ export default function GuidesPage() {
                   <p style={{ fontSize: 14, fontWeight: 600, color: g.accentColor, marginBottom: 12 }}>{g.subtitle}</p>
                   <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.7, marginBottom: 0 }}>{g.blurb}</p>
                 </div>
-                <div style={{ textAlign: "right", flexShrink: 0 }}>
+                <div className="guide-card-price-col">
                   <div style={{ fontSize: 13, color: "#9aa8c0", textDecoration: "line-through", marginBottom: 2 }}>{g.strikePrice}</div>
                   <div style={{ fontSize: 28, fontWeight: 800, color: g.accentColor }}>{g.price}</div>
                   <div style={{

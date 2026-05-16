@@ -116,10 +116,9 @@ export default function AICareerRiskGuidePage() {
           </p>
 
           {/* PRICE + BUY */}
-          <div style={{
-            display: "inline-flex", flexDirection: "column", alignItems: "center",
+          <div className="hero-price-box" style={{
             background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.15)",
-            borderRadius: 20, padding: "32px 48px", gap: 6,
+            borderRadius: 20,
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
               <span style={{ fontSize: 22, color: "rgba(200,220,255,0.45)", textDecoration: "line-through", fontWeight: 500 }}>₹499</span>
@@ -171,9 +170,9 @@ export default function AICareerRiskGuidePage() {
           </div>
 
           {/* New question — the real one */}
-          <div style={{
+          <div className="dark-card-padded" style={{
             background: "linear-gradient(135deg, #0a1628 0%, #1a3565 100%)",
-            borderRadius: 20, padding: "52px 48px", textAlign: "center",
+            borderRadius: 20, textAlign: "center",
             position: "relative", overflow: "hidden",
           }}>
             {/* subtle dot grid */}
@@ -206,9 +205,8 @@ export default function AICareerRiskGuidePage() {
           </div>
 
           {/* Context stats */}
-          <div style={{
-            display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 1, background: "#e8eef8",
+          <div className="stats-grid-3" style={{
+            background: "#e8eef8",
             borderRadius: 14, overflow: "hidden", marginTop: 32,
           }}>
             {[

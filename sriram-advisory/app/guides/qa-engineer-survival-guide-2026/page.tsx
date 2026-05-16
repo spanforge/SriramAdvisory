@@ -103,10 +103,9 @@ export default function QAEngineerSurvivalGuidePage() {
           </p>
 
           {/* PRICE + BUY */}
-          <div style={{
-            display: "inline-flex", flexDirection: "column", alignItems: "center",
+          <div className="hero-price-box" style={{
             background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.15)",
-            borderRadius: 20, padding: "32px 48px", gap: 6,
+            borderRadius: 20,
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
               <span style={{ fontSize: 22, color: "rgba(180,230,210,0.4)", textDecoration: "line-through", fontWeight: 500 }}>₹299</span>
@@ -163,9 +162,9 @@ export default function QAEngineerSurvivalGuidePage() {
           </div>
 
           {/* Dark statement card */}
-          <div style={{
+          <div className="qa-score-card-pad" style={{
             background: "linear-gradient(135deg, #071a14 0%, #0d3322 100%)",
-            borderRadius: 20, padding: "48px 44px", textAlign: "center",
+            borderRadius: 20, textAlign: "center",
             position: "relative", overflow: "hidden",
           }}>
             <div style={{
@@ -195,9 +194,8 @@ export default function QAEngineerSurvivalGuidePage() {
           </div>
 
           {/* 3 stats */}
-          <div style={{
-            display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 1, background: "#e8eef8",
+          <div className="stats-grid-3" style={{
+            background: "#e8eef8",
             borderRadius: 14, overflow: "hidden", marginTop: 28,
           }}>
             {[
@@ -323,9 +321,9 @@ export default function QAEngineerSurvivalGuidePage() {
       {/* ── CASE STUDY TEASER ── */}
       <section style={{ padding: "72px 20px", background: "#ffffff" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <div style={{
+          <div className="case-study-card-pad" style={{
             background: "linear-gradient(135deg, #f0fdf8 0%, #dcfce7 100%)",
-            border: "1.5px solid #bbf7d0", borderRadius: 20, padding: "44px 48px",
+            border: "1.5px solid #bbf7d0", borderRadius: 20,
           }}>
             <span style={{
               fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
