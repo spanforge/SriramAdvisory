@@ -46,6 +46,23 @@ const GUIDES = [
     borderColor: "#bbf7d0",
     available: true,
   },
+  {
+    badge: "New",
+    badgeBg: "#d97706",
+    badgeColor: "#ffffff",
+    title: "BPO & Customer Support Career Survival Guide",
+    subtitle: "SA-AIRS™ 9.2/10. 5 new AI-era roles. 30-day repositioning plan. India 2026.",
+    blurb:
+      "Tier 1 and Tier 2 BPO queries are being handled by AI agents today. This guide tells you exactly which roles are safe, the 5 new positions being created by AI adoption, and a 30-day plan to move from voice agent to AI Overseer — built specifically for India's 6M+ BPO and customer support workforce.",
+    price: "₹299",
+    strikePrice: "₹499",
+    tag: "Launch Price",
+    href: "/guides/bpo-career-survival-guide-2026",
+    accentColor: "#d97706",
+    bgGradient: "linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)",
+    borderColor: "#fde68a",
+    available: true,
+  },
 ];
 
 const COMING_SOON: {

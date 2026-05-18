@@ -43,3 +43,6 @@ yarn-error.log*
 /data/
 
 next-env.d.ts
+
+# Sensitive documents
+SA_BPO_Career_Survival_Guide_v7.docx
