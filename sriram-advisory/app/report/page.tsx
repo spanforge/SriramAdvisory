@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 const FEATURES = [
-  { tier: "AI Survival Guide", price: "\u20b9299", desc: "Quick clarity and your first action plan.", items: ["India-specific risk guide", "AI Risk Map for your role", "Self-score across 5 dimensions", "30-day action plan"] },
   { tier: "AI Career Risk Score", price: "\u20b9999", featured: true, desc: "Personalised 1-page assessment of your specific role.", items: ["Role-specific AI exposure analysis", "SA-AIRS\u2122 5-dimension score", "Risk tier placement", "Top 3 priority actions", "Delivered within 24 hours"] },
   { tier: "Pro Edition", price: "\u20b91,999", desc: "Complete intelligence report + quarterly updates.", items: ["Everything in Risk Score", "Full SA-AIRS\u2122 methodology explained", "Visual data & charts", "7 industry deep dives", "Salary outlook scenarios", "AI tools by profession", "90-day roadmap (detailed)", "2 quarterly updates included"] },
 ];

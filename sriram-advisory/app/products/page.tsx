@@ -6,37 +6,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Products | Sriram Advisory",
   description:
-    "AI career intelligence products for Indian professionals — the AI Career Survival Guide, AI Career Intelligence Report Pro Edition, and the SA-AIRS™ personal risk assessment.",
+    "AI career intelligence products for Indian professionals — the AI Career Insights Report Pro Edition and the SA-AIRS™ personal risk assessment.",
 };
 
 const PRODUCTS = [
-  {
-    badge: "Start Here",
-    badgeColor: "#0d9268",
-    badgeBg: "rgba(34,211,160,0.12)",
-    badgeBorder: "rgba(34,211,160,0.3)",
-    accentColor: "#1e6b3a",
-    tag: "Instant Digital Delivery",
-    title: "AI Career Survival Guide",
-    price: "₹299",
-    strikePrice: "₹499",
-    priceNote: "Launch Price",
-    tagline: "Will AI affect MY job?",
-    blurb:
-      "The fastest path to clarity on your personal AI risk. Built specifically for Indian professionals — not adapted from US data. You'll know your risk level, understand the India-specific AI landscape, and walk away with a 30-day action plan.",
-    bullets: [
-      "47+ Indian professions mapped across SA-AIRS™ dimensions",
-      "India-specific context — Tier 2 & Tier 3 dynamics covered",
-      "30-day repositioning framework",
-      "Self-score across all 5 SA-AIRS™ risk dimensions",
-    ],
-    cta: "Buy Survival Guide — ₹299 →",
-    href: "/products/survival-guide",
-    external: false,
-    featured: false,
-    bgGradient: "linear-gradient(135deg, #f0faf5 0%, #e6f9f0 100%)",
-    borderColor: "#bbf7d0",
-  },
   {
     badge: "Most Comprehensive",
     badgeColor: "#ffffff",
@@ -236,27 +209,25 @@ export default function ProductsPage() {
               <thead>
                 <tr style={{ background: "#0a1628", color: "#ffffff" }}>
                   <th style={{ padding: "14px 18px", textAlign: "left", borderRadius: "10px 0 0 0", fontWeight: 600 }}>Feature</th>
-                  <th style={{ padding: "14px 18px", textAlign: "center", fontWeight: 600 }}>Survival Guide<br /><s style={{ fontWeight: 400, fontSize: 13, opacity: 0.6 }}>₹499</s> ₹299</th>
                   <th style={{ padding: "14px 18px", textAlign: "center", fontWeight: 600, background: "#1a4fd6" }}>Pro Edition<br /><s style={{ fontWeight: 400, fontSize: 13, opacity: 0.7 }}>₹1,999</s> ₹999</th>
                   <th style={{ padding: "14px 18px", textAlign: "center", borderRadius: "0 10px 0 0", fontWeight: 600 }}>AIRS Score<br /><s style={{ fontWeight: 400, fontSize: 13, opacity: 0.6 }}>₹1,999</s> ₹999</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["India-specific content", "✓", "✓", "✓"],
-                  ["AI Risk Map (47+ professions)", "✓", "✓", "—"],
-                  ["SA-AIRS™ 5-dimension framework", "Self-score", "Full explained", "Scored for you"],
-                  ["Personalised to your role", "—", "—", "✓"],
-                  ["7 Industry deep dives", "—", "✓", "—"],
-                  ["Salary outlook scenarios", "—", "✓", "—"],
-                  ["AI tools by profession", "—", "✓", "—"],
-                  ["90-day roadmap", "—", "✓ (detailed)", "Benchmarks included"],
-                  ["Quarterly updates", "—", "2 included", "—"],
-                  ["Delivery", "Instant", "Instant", "Within 24h"],
-                ].map(([feature, g, pro, airs], i) => (
+                  ["India-specific content", "✓", "✓"],
+                  ["AI Risk Map (47+ professions)", "✓", "—"],
+                  ["SA-AIRS™ 5-dimension framework", "Full explained", "Scored for you"],
+                  ["Personalised to your role", "—", "✓"],
+                  ["7 Industry deep dives", "✓", "—"],
+                  ["Salary outlook scenarios", "✓", "—"],
+                  ["AI tools by profession", "✓", "—"],
+                  ["90-day roadmap", "✓ (detailed)", "Benchmarks included"],
+                  ["Quarterly updates", "2 included", "—"],
+                  ["Delivery", "Instant", "Within 24h"],
+                ].map(([feature, pro, airs], i) => (
                   <tr key={feature} style={{ background: i % 2 === 0 ? "#ffffff" : "#f8faff" }}>
                     <td style={{ padding: "12px 18px", color: "#2a3a5a", fontWeight: 500 }}>{feature}</td>
-                    <td style={{ padding: "12px 18px", textAlign: "center", color: g === "—" ? "#c0c8d8" : "#1e6b3a", fontWeight: g === "—" ? 400 : 600 }}>{g}</td>
                     <td style={{ padding: "12px 18px", textAlign: "center", color: pro === "—" ? "#c0c8d8" : "#1a4fd6", fontWeight: pro === "—" ? 400 : 600, background: "rgba(26,79,214,0.04)" }}>{pro}</td>
                     <td style={{ padding: "12px 18px", textAlign: "center", color: airs === "—" ? "#c0c8d8" : "#7c3aed", fontWeight: airs === "—" ? 400 : 600 }}>{airs}</td>
                   </tr>
@@ -274,16 +245,15 @@ export default function ProductsPage() {
             Not sure where to start?
           </h2>
           <p style={{ fontSize: 16, color: "#8898b8", lineHeight: 1.7, marginBottom: 32 }}>
-            The Survival Guide is the fastest path to clarity at ₹299 (launch price). If you want a personalised score for your
-            specific role, go straight to the AIRS Assessment at ₹999 (launch price). The Pro Edition is for professionals who
-            want the full picture.
+            For a personalised score on your specific role, start with the AIRS Assessment at ₹999 (launch price). The Pro Edition is for professionals who
+            want the full picture with industry deep dives, salary scenarios, and quarterly updates.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
-            <Link href="/products/survival-guide" style={{
-              background: "#0d9268", color: "#0a1628", fontWeight: 700, fontSize: 14,
+            <Link href="/products/airs-assessment" style={{
+              background: "#7c3aed", color: "#ffffff", fontWeight: 700, fontSize: 14,
               padding: "12px 22px", borderRadius: 8, textDecoration: "none",
             }}>
-              Start with ₹299 →
+              Get AIRS Score — ₹999 →
             </Link>
             <Link href="/get-started" style={{
               background: "transparent", color: "#8898b8", fontWeight: 600, fontSize: 14,

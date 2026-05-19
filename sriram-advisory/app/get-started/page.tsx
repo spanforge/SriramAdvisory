@@ -6,23 +6,6 @@ import { useState } from "react";
 
 const PRODUCTS = [
   {
-    tier: "AI Survival Guide",
-    price: "₹299",
-    tag: "Start here",
-    desc: "Quick clarity and your first action plan. Designed for Indian professionals.",
-    items: [
-      "India-specific AI risk guide",
-      "AI Risk Map across 47+ professions",
-      "Self-score across 5 SA-AIRS™ dimensions",
-      "30-day action plan",
-      "From the Founder — Sriram's perspective",
-    ],
-    cta: "Buy Now — ₹299",
-    href: "https://rzp.io/sriramadvisory",
-    external: true,
-    highlight: false,
-  },
-  {
     tier: "AI Career Risk Score",
     price: "₹999",
     tag: "Most popular",
@@ -104,11 +87,11 @@ export default function GetStartedPage() {
             lineHeight: 1, letterSpacing: "0.02em",
             color: "#0a1628", margin: "0 0 20px",
           }}>
-            Start Small or<br />
-            <span style={{ color: "#1a4fd6" }}>Go Deep.</span>
+            Your Career Score.<br />
+            <span style={{ color: "#1a4fd6" }}>Your Next Move.</span>
           </h1>
           <p style={{ fontSize: 16, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 32px" }}>
-            Both are designed for Indian professionals. Choose the depth that matches your situation.
+            Designed for Indian professionals. Choose the depth that matches your situation.
             All prices in INR (₹).
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
@@ -393,10 +376,6 @@ export default function GetStartedPage() {
             color: "#0a1628", margin: "0 0 40px", lineHeight: 1,
           }}>Common Questions</h2>
           {[
-            {
-              q: "What is the difference between the Survival Guide and the Risk Score?",
-              a: "The AI Survival Guide (₹299) is a structured report covering 47+ professions with a self-scoring framework and 30-day plan — great for quick clarity. The AI Career Risk Score (₹999) is a personalised 1-page assessment of your specific role, scored by Sriram against the SA-AIRS™ framework and delivered within 24 hours.",
-            },
             {
               q: "What does the Pro Edition add over the Risk Score?",
               a: "The Pro Edition (₹1,999) includes everything in the Risk Score plus detailed industry deep dives across 7 sectors, salary outlook scenarios, AI tools curated by profession, a dedicated Top 10% Ladder™ section, a 90-day roadmap, LinkedIn positioning guide, and two quarterly updates.",

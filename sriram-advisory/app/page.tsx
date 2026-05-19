@@ -186,7 +186,7 @@ export default function HomePage() {
             {[
               { num: "5", label: "Thinking Frames Assessed" },
               { num: "5", label: "SA-AIRS™ Risk Dimensions" },
-              { num: "₹299", label: "Starting Price" },
+              { num: "₹999", label: "Starting Price" },
             ].map(({ num, label }) => (
               <div key={label}>
                 <div style={{ fontSize: 28, fontWeight: 800, color: "#1a4fd6", lineHeight: 1 }}>{num}</div>
@@ -467,7 +467,7 @@ export default function HomePage() {
           </h2>
           <p style={{ fontSize: 18, color: "#5a6a8a", lineHeight: 1.7, marginBottom: 48 }}>
             SA-AIRS™ Score Report. India&apos;s first analytical scoring system for AI career risk.
-            Starting at ₹299.
+            Starting at ₹999.
           </p>
           <Link href="/sa-airs-score-report" style={{
             display: "inline-flex", alignItems: "center", gap: 10,
