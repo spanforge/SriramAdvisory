@@ -44,7 +44,7 @@ const TOOLS = [
     bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
     borderColor: "#fecaca",
     ctaLabel: "Book the Audit →",
-    details: ["Full SA-AIRS™ score (all 5 dimensions)", "12-month and 36-month risk horizon", "Top 10% Ladder placement", "Top 3 Moves (90-day action plan)", "90-day re-score included"],
+    details: ["Full SA-AIRS™ score (all 5 dimensions)", "12-month and 36-month risk horizon", "Top 10% Ladder placement", "Top 3 Moves (90-day action plan)"],
   },
 ];
 
