@@ -6,9 +6,9 @@ import { useState } from "react";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "SA-AIRS™ Score", href: "/sa-airs-score-report" },
-  { label: "Career Insights", href: "/career-intelligence-report" },
+  { label: "Reports", href: "/career-intelligence-report" },
   { label: "Guides", href: "/guides" },
+  { label: "Tools", href: "/tools" },
   { label: "Methodology", href: "/methodology" },
   { label: "Blog", href: "/insights" },
   { label: "About", href: "/about" },
