@@ -46,6 +46,23 @@ const GUIDES = [
     borderColor: "#fde68a",
     available: true,
   },
+  {
+    badge: "New",
+    badgeBg: "#2563eb",
+    badgeColor: "#ffffff",
+    title: "Data Analyst Career Guide 2026",
+    subtitle: "SA-AIRS™ 7.8/10. 90-day blueprint. 3 sector paths. SQL mastery. ₹50L target.",
+    blurb:
+      "Reporting roles are being automated. This guide gives you the 90-day blueprint to move from routine dashboards to a product or strategy analyst role — with sector-specific SQL paths for SaaS, FinTech, and E-Commerce, salary data from India's job market, and a portfolio framework built for GCC and SaaS hiring managers.",
+    price: "₹299",
+    strikePrice: "₹499",
+    tag: "Launch Price",
+    href: "/guides/data-analyst-career-guide-2026",
+    accentColor: "#2563eb",
+    bgGradient: "linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)",
+    borderColor: "#bfdbfe",
+    available: true,
+  },
 ];
 
 const COMING_SOON: {
