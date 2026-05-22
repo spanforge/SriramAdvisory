@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AI Career Intelligence Report — Pro Edition | Sriram Advisory",
   description:
-    "Research-backed AI career intelligence for Indian professionals. 47+ roles, 7 sectors, salary scenarios, AI tools by profession, and a 90-day roadmap. ₹1,999.",
+    "Research-backed AI career intelligence for Indian professionals. 47+ roles, 7 sectors, salary scenarios, AI tools by profession, and a 90-day roadmap. ₹499.",
 };
 
 const INCLUDES = [
@@ -56,7 +56,7 @@ export default function ProEditionPage() {
           }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#0d9268", display: "inline-block" }} />
             <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#a8c4ff" }}>
-              Pro Edition · India 2026 · <s style={{ opacity: 0.55, fontWeight: 400 }}>₹1,999</s>&nbsp;₹999 Launch Price
+              Pro Edition · India 2026 · <s style={{ opacity: 0.55, fontWeight: 400 }}>₹999</s>&nbsp;₹499 Launch Price
             </span>
           </div>
           <h1 style={{
@@ -72,9 +72,9 @@ export default function ProEditionPage() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
             <CashfreeCheckout
               productName="AI Career Intelligence Report — Pro Edition"
-              amount={999}
+              amount={499}
               accentColor="#1a4fd6"
-              buttonLabel="Buy Now — ₹999 →"
+              buttonLabel="Buy Now — ₹499 →"
               buttonStyle={{
                 background: "#1a4fd6", color: "#ffffff", fontWeight: 700,
                 fontSize: 16, padding: "14px 32px", borderRadius: 10,
@@ -94,7 +94,7 @@ export default function ProEditionPage() {
             </Link>
           </div>
           <p style={{ marginTop: 20, fontSize: 13, color: "rgba(168,196,255,0.85)" }}>
-            Launch Price — was ₹1,999 · One-time purchase · Instant digital delivery · Quarterly updates included
+            Launch Price — was ₹999 · One-time purchase · Instant digital delivery · Quarterly updates included
           </p>
         </div>
       </section>
@@ -220,13 +220,13 @@ export default function ProEditionPage() {
             Know exactly where you stand
           </h2>
           <p style={{ fontSize: 17, color: "#5a6a8a", lineHeight: 1.6, marginBottom: 36 }}>
-            Launch price ₹999 (was ₹1,999). One-time purchase. Instant digital delivery. Includes two quarterly update editions through December 2026.
+            Launch price ₹499 (was ₹999). One-time purchase. Instant digital delivery. Includes two quarterly update editions through December 2026.
           </p>
           <CashfreeCheckout
             productName="AI Career Intelligence Report — Pro Edition"
-            amount={999}
+            amount={499}
             accentColor="#1a4fd6"
-            buttonLabel="Buy Pro Edition — ₹999 →"
+            buttonLabel="Buy Pro Edition — ₹499 →"
             buttonStyle={{
               background: "#1a4fd6", color: "#ffffff", fontWeight: 700,
               fontSize: 17, padding: "16px 40px", borderRadius: 10,

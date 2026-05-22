@@ -76,8 +76,8 @@ const TIERS = [
     badge: "Pro",
     badgeColor: "#ffffff",
     name: "SA-AIRS™ Score Report + Quarterly Re-Score",
-    price: "₹999",
-    strikePrice: "₹1,999",
+    price: "₹499",
+    strikePrice: "₹999",
     priceNote: "Includes two quarterly re-scores through 2026",
     desc: "Full score report with industry-level benchmarks, role-level market data, and two scheduled re-scores through December 2026.",
     includes: [
@@ -92,9 +92,9 @@ const TIERS = [
     bg: "linear-gradient(135deg, #f0faf5 0%, #e0f6ed 100%)",
     border: "#6ee7b7",
     cashfree: true,
-    amount: 999,
+    amount: 499,
     productName: "SA-AIRS Score Report — Pro",
-    cta: "Get Pro Report — ₹999 →",
+    cta: "Get Pro Report — ₹499 →",
     featured: true,
   },
   {

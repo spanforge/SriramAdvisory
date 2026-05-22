@@ -18,8 +18,8 @@ const PRODUCTS = [
     accentColor: "#1a4fd6",
     tag: "Includes 2 Quarterly Updates",
     title: "AI Career Insights Report",
-    price: "₹999",
-    strikePrice: "₹1,999",
+    price: "₹499",
+    strikePrice: "₹999",
     priceNote: "Pro Edition · Launch Price",
     tagline: "Research-backed. India-first. 47+ roles.",
     blurb:
@@ -32,7 +32,7 @@ const PRODUCTS = [
       "Top 10% Ladder™ guide (L1–L5 placement)",
       "Two quarterly update editions included",
     ],
-    cta: "Get Pro Edition — ₹999 →",
+    cta: "Get Pro Edition — ₹499 →",
     href: "/products/pro-edition",
     external: false,
     featured: true,
@@ -209,7 +209,7 @@ export default function ProductsPage() {
               <thead>
                 <tr style={{ background: "#0a1628", color: "#ffffff" }}>
                   <th style={{ padding: "14px 18px", textAlign: "left", borderRadius: "10px 0 0 0", fontWeight: 600 }}>Feature</th>
-                  <th style={{ padding: "14px 18px", textAlign: "center", fontWeight: 600, background: "#1a4fd6" }}>Pro Edition<br /><s style={{ fontWeight: 400, fontSize: 13, opacity: 0.7 }}>₹1,999</s> ₹999</th>
+                  <th style={{ padding: "14px 18px", textAlign: "center", fontWeight: 600, background: "#1a4fd6" }}>Pro Edition<br /><s style={{ fontWeight: 400, fontSize: 13, opacity: 0.7 }}>₹999</s> ₹499</th>
                   <th style={{ padding: "14px 18px", textAlign: "center", borderRadius: "0 10px 0 0", fontWeight: 600 }}>AIRS Score<br /><s style={{ fontWeight: 400, fontSize: 13, opacity: 0.6 }}>₹1,999</s> ₹999</th>
                 </tr>
               </thead>
