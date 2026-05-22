@@ -14,23 +14,6 @@ export const metadata: Metadata = {
 const GUIDES = [
   {
     badge: "New",
-    badgeBg: "#1a4fd6",
-    badgeColor: "#ffffff",
-    title: "AI Career Risk Guide — India 2026",
-    subtitle: "40+ roles scored. Salary data. GCC hiring map. Transition playbooks.",
-    blurb:
-      "The most comprehensive AI career risk guide built for Indian professionals. Covers SA-AIRS™ scores for 40+ roles, real salary benchmarks from GCCs and IT services, city-by-city career strategy, GCC interview playbooks, and role-specific 90-day action plans. Not adapted from US data — built from the ground up for India.",
-    price: "₹299",
-    strikePrice: "₹499",
-    tag: "Launch Price",
-    href: "/guides/ai-career-risk-guide-india-2026",
-    accentColor: "#1a4fd6",
-    bgGradient: "linear-gradient(135deg, #f0f5ff 0%, #e6eeff 100%)",
-    borderColor: "#c7d7ff",
-    available: true,
-  },
-  {
-    badge: "New",
     badgeBg: "#0d9268",
     badgeColor: "#ffffff",
     title: "QA Engineer Survival Guide 2026",
