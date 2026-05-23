@@ -68,7 +68,7 @@ export default function AIRiskRankingsPage() {
           }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#f87171", display: "inline-block" }} />
             <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fca5a5" }}>
-              India Labour Market Intelligence · May 2026 · v7.0
+              India Labour Market Intelligence · May 2026 · v1.0
             </span>
           </div>
           <h1 style={{
@@ -97,20 +97,10 @@ export default function AIRiskRankingsPage() {
                 border: "1px solid #ef4444", letterSpacing: "0.01em",
               }}
             />
-            <Link
-              href="/get-started"
-              style={{
-                display: "inline-flex", alignItems: "center",
-                background: "transparent", color: "#fca5a5", fontWeight: 600,
-                fontSize: 15, padding: "14px 28px", borderRadius: 10,
-                textDecoration: "none", border: "1px solid rgba(252,165,165,0.3)",
-              }}
-            >
-              Have a question? Talk to Sriram
-            </Link>
+
           </div>
           <p style={{ marginTop: 20, fontSize: 13, color: "rgba(252,165,165,0.75)" }}>
-            ₹499 · One-time purchase · Instant digital delivery · v7.0 May 2026
+            ₹499 · One-time purchase · Instant digital delivery · v1.0 May 2026
           </p>
         </div>
       </section>
@@ -123,7 +113,7 @@ export default function AIRiskRankingsPage() {
             { num: "4", label: "Risk exposure bands" },
             { num: "60%+", label: "Formal jobs at risk by 2030" },
             { num: "38M", label: "Indian jobs being transformed" },
-            { num: "v7.0", label: "May 2026 edition" },
+            { num: "v1.0", label: "May 2026 edition" },
           ].map(({ num, label }) => (
             <div key={label} style={{ textAlign: "center", minWidth: 120 }}>
               <div style={{ fontSize: 28, fontWeight: 800, color: "#dc2626", lineHeight: 1 }}>{num}</div>
@@ -285,7 +275,7 @@ export default function AIRiskRankingsPage() {
             ))}
           </div>
           <p style={{ marginTop: 20, fontSize: 13, color: "#8898b8" }}>
-            v7.0 (May 2026) — fully updated with the latest published data from India&apos;s leading research institutions.
+            v1.0 (May 2026) — fully updated with the latest published data from India&apos;s leading research institutions.
           </p>
         </div>
       </section>
