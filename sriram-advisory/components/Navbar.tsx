@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { label: "Tools", href: "/tools" },
   { label: "Methodology", href: "/methodology" },
   { label: "Blog", href: "/insights" },
+  { label: "Podcast", href: "https://open.spotify.com/show/0gFlEGspgZP7cxd4KQBsLC" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -55,12 +56,14 @@ export default function Navbar() {
           {/* Desktop nav */}
           <div style={{ alignItems: "center", gap: 4 }} className="hidden md:flex">
             {NAV_LINKS.map((link) => {
-              const active = pathname === link.href;
+              const isExternal = link.href.startsWith("http");
+              const active = !isExternal && pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
                   aria-current={active ? "page" : undefined}
+                  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   style={{
                     fontSize: 13, fontWeight: 500, textDecoration: "none",
                     padding: "6px 14px", borderRadius: 6,
@@ -115,12 +118,14 @@ export default function Navbar() {
               display: "flex", flexDirection: "column", gap: 4,
             }} className="md:hidden">
             {NAV_LINKS.map((link) => {
-              const active = pathname === link.href;
+              const isExternal = link.href.startsWith("http");
+              const active = !isExternal && pathname === link.href;
               return (
                 <Link key={link.href} href={link.href}
                   role="menuitem"
                   aria-current={active ? "page" : undefined}
                   onClick={() => setOpen(false)}
+                  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   style={{
                     fontSize: 15, fontWeight: 500, textDecoration: "none",
                     padding: "10px 14px", borderRadius: 8,
