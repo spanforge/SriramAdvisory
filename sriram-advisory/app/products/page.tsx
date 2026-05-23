@@ -11,6 +11,35 @@ export const metadata: Metadata = {
 
 const PRODUCTS = [
   {
+    badge: "New — May 2026",
+    badgeColor: "#ffffff",
+    badgeBg: "#dc2626",
+    badgeBorder: "#ef4444",
+    accentColor: "#dc2626",
+    tag: "v7.0 · India Labour Market Intelligence",
+    title: "AI Risk Rankings India 2026",
+    price: "₹499",
+    strikePrice: null,
+    priceNote: "Top 25 High-Risk Careers Report",
+    tagline: "25 ranked careers. 4 risk bands. 100+ pages.",
+    blurb:
+      "The definitive ranking of India's 25 highest-risk careers under AI displacement. Research-backed analysis with task-composition data, headcount figures, salary data, a full individual adaptation framework, and case studies. Sourced from NASSCOM 2026, NITI Aayog, WEF, EY India, and McKinsey.",
+    bullets: [
+      "Top 25 careers ranked — risk bands, headcounts & salary data",
+      "4-tier risk band framework (Extreme → High → Elevated → Moderate)",
+      "Deep-dive vulnerability profiles for 5 occupational clusters",
+      "Individual adaptation framework — 90-day plan by at-risk role",
+      "Career transition paths mapped for each high-risk occupation",
+      "4 Indian case studies: real transitions, illustrative profiles",
+    ],
+    cta: "Get the Report — ₹499 →",
+    href: "/products/ai-risk-rankings-india-2026",
+    external: false,
+    featured: false,
+    bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
+    borderColor: "#fecaca",
+  },
+  {
     badge: "Most Comprehensive",
     badgeColor: "#ffffff",
     badgeBg: "#1a4fd6",
