@@ -220,6 +220,88 @@ export default function CareerIntelligenceReportPage() {
         </div>
       </section>
 
+      {/* AI RISK RANKINGS REPORT */}
+      <section style={{ padding: "80px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div style={{
+            background: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
+            border: "1.5px solid #fecaca", borderRadius: 20,
+            padding: "40px 40px", position: "relative", overflow: "hidden",
+          }}>
+            <div style={{
+              position: "absolute", top: 20, right: 24,
+              background: "#dc2626", color: "#ffffff",
+              fontSize: 13, fontWeight: 700, letterSpacing: "0.08em",
+              textTransform: "uppercase", padding: "4px 12px", borderRadius: 12,
+            }}>
+              New — May 2026
+            </div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 32, alignItems: "flex-start" }}>
+              {/* Left */}
+              <div style={{ flex: "1 1 340px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+                  <span style={{
+                    fontSize: 13, fontWeight: 700, letterSpacing: "0.08em",
+                    textTransform: "uppercase", background: "#dc2626", color: "#ffffff",
+                    border: "1px solid #ef4444", padding: "3px 10px", borderRadius: 10,
+                  }}>
+                    Market Intelligence
+                  </span>
+                  <span style={{ fontSize: 13, color: "#5a6a8a" }}>v7.0 · India Labour Market</span>
+                </div>
+                <h2 style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 800, color: "#0a1628", marginBottom: 6, lineHeight: 1.2 }}>
+                  AI Risk Rankings India 2026
+                </h2>
+                <p style={{ fontSize: 15, color: "#dc2626", fontWeight: 600, marginBottom: 16 }}>
+                  The Top 25 High-Risk Careers · 100+ pages · Instant delivery
+                </p>
+                <p style={{ fontSize: 15, color: "#3a4a6a", lineHeight: 1.7, marginBottom: 24 }}>
+                  The definitive ranking of India&apos;s 25 highest-risk careers under AI displacement.
+                  4 risk bands, headcount data, salary figures, an individual adaptation framework,
+                  and 4 case studies. Sourced from NASSCOM, NITI Aayog, WEF, EY India, and McKinsey 2025–26.
+                </p>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 24, flexWrap: "wrap" }}>
+                  <span style={{ fontSize: 36, fontWeight: 800, color: "#dc2626" }}>₹499</span>
+                  <span style={{ fontSize: 13, color: "#8898b8" }}>One-time · Instant digital delivery</span>
+                </div>
+                <Link
+                  href="/products/ai-risk-rankings-india-2026"
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: 6,
+                    background: "#dc2626", color: "#ffffff",
+                    fontWeight: 700, fontSize: 15, padding: "13px 28px",
+                    borderRadius: 10, textDecoration: "none", letterSpacing: "0.01em",
+                  }}
+                >
+                  View Report — ₹499 →
+                </Link>
+              </div>
+              {/* Right — bullets */}
+              <div style={{ flex: "1 1 260px" }}>
+                <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5a6a8a", marginBottom: 14 }}>
+                  What&apos;s included
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {[
+                    "Top 25 careers ranked with risk bands (Extreme → Moderate)",
+                    "Indicative headcounts and salary data for each role",
+                    "Deep-dive vulnerability profiles for 5 occupational clusters",
+                    "Individual adaptation framework — 90-day plan by role",
+                    "Career transition paths mapped for each high-risk occupation",
+                    "4 Indian case studies: real transitions, illustrative profiles",
+                  ].map((bullet) => (
+                    <div key={bullet} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                      <span style={{ color: "#dc2626", fontWeight: 700, flexShrink: 0, fontSize: 14, marginTop: 2 }}>✓</span>
+                      <span style={{ fontSize: 14, color: "#2a3a5a", lineHeight: 1.5 }}>{bullet}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* BOTTOM CTA */}
       <section style={{
         padding: "120px 24px",
