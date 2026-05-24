@@ -48,6 +48,23 @@ const GUIDES = [
   },
   {
     badge: "New",
+    badgeBg: "#4f46e5",
+    badgeColor: "#ffffff",
+    title: "Selenium Engineer Upgrade Guide 2026",
+    subtitle: "SA-AIRS™ 7.2/10. 60-day plan. Playwright + AI stack. ₹28–42 LPA target.",
+    blurb:
+      "Selenium still has jobs, but the salary ceiling is real. This guide gives you the complete 60-day roadmap to upgrade from Selenium to Playwright + AI Quality Engineering — with a full skill translation table, the AI tool stack that commands ₹28+ LPA, GCC interview prep, and an illustrative case study: ₹16 LPA → ₹32 LPA at a Tier-1 GCC in 9 weeks.",
+    price: "₹499",
+    strikePrice: "",
+    tag: "",
+    href: "/guides/selenium-engineer-upgrade-guide-2026",
+    accentColor: "#4f46e5",
+    bgGradient: "linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)",
+    borderColor: "#c4b5fd",
+    available: true,
+  },
+  {
+    badge: "New",
     badgeBg: "#2563eb",
     badgeColor: "#ffffff",
     title: "Data Analyst Career Guide 2026",
