@@ -16,42 +16,32 @@ const WHAT_INSIDE = [
   {
     icon: "📊",
     label: "SA-AIRS™ Score 7.5 — Decoded",
-    desc: "What this score really means for Java in India: not the highest-risk role, but the most deceptively comfortable one as AI automates repetitive implementation work.",
+    desc: "What is actually at risk in Java, what is not, and where the salary premium is moving.",
   },
   {
     icon: "🧭",
     label: "The Java Career Transition Map",
-    desc: "A stage-by-stage path from traditional Java developer to AI-augmented engineer, Spring AI builder, AI-era architect, and Java AI platform lead — with salary bands and timelines.",
+    desc: "The shortest realistic path from Spring Boot implementation work to AI-era Java positioning.",
   },
   {
     icon: "🛡️",
     label: "Your Leverage Zones",
-    desc: "The five high-value areas AI cannot own for you: system design, production diagnosis, business-logic interpretation, AI-output evaluation, and stakeholder translation.",
+    desc: "The specific work AI cannot take from you: architecture, diagnosis, domain judgment, and technical leadership.",
   },
   {
     icon: "🤖",
     label: "The AI Tool Stack",
-    desc: "Exactly what to learn first: GitHub Copilot, ChatGPT or Claude, Spring AI, LangChain4j, observability, vector databases, and AI-aware security patterns for enterprise Java.",
+    desc: "Exactly what to learn first and what to ignore for now: Copilot, Spring AI, LangChain4j, and enterprise-ready Java AI patterns.",
   },
   {
     icon: "🗓️",
     label: "60-Day Upgrade Plan",
-    desc: "A concrete week-by-week transition plan with evening study focus, weekend deliverables, portfolio expectations, and the minimum viable path if you want momentum first.",
+    desc: "A week-by-week plan built for working professionals, with portfolio milestones that actually matter in hiring.",
   },
   {
     icon: "💰",
     label: "Salary Reality 2026",
-    desc: "How compensation changes across IT services, GCCs, and product teams once you move from Spring Boot-only execution into AI-integrated Java delivery and architecture.",
-  },
-  {
-    icon: "🏗️",
-    label: "AI-Integrated Java Architecture",
-    desc: "A reference stack covering Spring AI, LangChain4j, testing, observability, governance, resilience, and how to explain these design decisions in senior interviews.",
-  },
-  {
-    icon: "🎯",
-    label: "Hiring Manager Filters",
-    desc: "What recruiters and GCC interviewers actually inspect first: your GitHub, README, LinkedIn headline, outcomes, and whether your portfolio proves AI-era Java thinking.",
+    desc: "What Java + AI skills are really worth in IT services, GCCs, and product teams — and where the premium starts.",
   },
 ];
 
@@ -101,29 +91,6 @@ const TRANSITION_PATHS = [
     feasibility: "6.8 / 10",
     color: "#f97316",
     desc: "Lead teams and standards around AI governance, observability, architecture, and platform decisions.",
-  },
-];
-
-const LEVERAGE_ZONES = [
-  {
-    title: "System Architecture and Design Decisions",
-    desc: "AI can generate code, but it cannot decide the right architecture for your constraints, teams, regulators, timelines, and trade-offs. That judgment is still the premium skill.",
-  },
-  {
-    title: "Performance Diagnosis and Optimisation",
-    desc: "When a Spring Boot system slows down in production, the engineer who can correlate logs, query plans, business context, and release changes is still rare — and more valuable than ever.",
-  },
-  {
-    title: "Domain Logic Interpretation",
-    desc: "Enterprise Java lives inside real business rules. A Java engineer who understands lending, compliance, payments, or operations is harder to replace than one who only understands syntax.",
-  },
-  {
-    title: "AI Output Quality Evaluation",
-    desc: "As AI writes more code, someone must judge whether the output is secure, maintainable, compliant, and correct. Review quality becomes a differentiator, not a side task.",
-  },
-  {
-    title: "Stakeholder Translation and Leadership",
-    desc: "Explaining trade-offs, pushing back on unsafe requirements, and aligning teams around architecture is still deeply human work. AI does not own trust, politics, or consensus.",
   },
 ];
 
@@ -180,44 +147,6 @@ const PHASES = [
       "Week 3: Add retrieval or RAG to the project and document your design choices in the README",
       "Week 4: Add CI, read GCC role descriptions, and publish one thoughtful LinkedIn post about the build",
     ],
-  },
-  {
-    phase: "Phase 2 · Days 31–60",
-    title: "Architecture and Interview Readiness",
-    color: "#ea580c",
-    bg: "#fff4e6",
-    border: "#fdba74",
-    deliverable:
-      "Three public projects plus a 4–6 page AI-integrated Java system design document covering architecture, security, testing, observability, and the business problem.",
-    items: [
-      "Week 5: Learn LangChain4j and build a second Java AI project to show range",
-      "Week 6: Add AI-aware security and document the threat model",
-      "Week 7: Build one industry-specific project using your domain depth",
-      "Week 8: Complete the system design document and refresh LinkedIn around outcomes, not tasks",
-    ],
-  },
-];
-
-const HIRING_SIGNALS = [
-  {
-    item: "GitHub profile",
-    time: "15–30 sec",
-    desc: "Hiring managers first check whether your repos look like business-aware engineering work or tutorial leftovers.",
-  },
-  {
-    item: "Best README",
-    time: "60–90 sec",
-    desc: "A README that starts with the business problem and your reasoning does more work than another certification line.",
-  },
-  {
-    item: "LinkedIn headline",
-    time: "10 sec",
-    desc: "Your headline needs an AI-era Java signal, not just your title and years of experience.",
-  },
-  {
-    item: "About and experience sections",
-    time: "30–90 sec",
-    desc: "Outcome-based writing and project specificity determine whether you get screened in before the interview starts.",
   },
 ];
 
@@ -311,9 +240,8 @@ export default function JavaDeveloperAILeverageGuidePage() {
               margin: "0 auto 16px",
             }}
           >
-            Java is not the most exposed role in Indian IT. It is the most deceptively comfortable one.
-            This guide shows you how to stop competing on boilerplate and start winning on architecture,
-            AI integration, and domain leverage across GCC and product teams.
+            Java is not dying. But boilerplate-heavy Java careers are getting squeezed.
+            This guide shows you how to move into the higher-value layer: AI leverage, architecture, and premium GCC positioning.
           </p>
 
           <p
@@ -474,8 +402,8 @@ export default function JavaDeveloperAILeverageGuidePage() {
               </span>
             </h2>
             <p style={{ fontSize: 16, color: "rgba(255,230,200,0.72)", marginTop: 20, lineHeight: 1.7, position: "relative" }}>
-              The risk is not that Java disappears. The risk is that boilerplate-heavy Java work gets compressed,
-              while the premium shifts to architecture, production judgment, domain depth, and AI-system ownership.
+              The opportunity is not to switch stacks in panic.
+              The opportunity is to use AI to become more valuable than the engineers still competing on implementation speed alone.
             </p>
           </div>
 
@@ -580,39 +508,6 @@ export default function JavaDeveloperAILeverageGuidePage() {
                     <div style={{ fontSize: 11, color: "#9aa8c0", textTransform: "uppercase", letterSpacing: "0.06em" }}>GCC Salary</div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "72px 20px", background: "#fffaf5" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#b45309", display: "block", marginBottom: 12 }}>
-              Your Leverage
-            </span>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              The Five Zones AI Cannot Own for You
-            </h2>
-            <p style={{ fontSize: 15, color: "#5a6a8a", marginTop: 12 }}>
-              The guide reframes Java value around the work that becomes more important as AI takes the repetitive layer.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
-            {LEVERAGE_ZONES.map((zone) => (
-              <div
-                key={zone.title}
-                style={{
-                  background: "#ffffff",
-                  border: "1px solid #fde0c2",
-                  borderRadius: 14,
-                  padding: "22px 24px",
-                }}
-              >
-                <div style={{ fontSize: 15, fontWeight: 800, color: "#0a1628", marginBottom: 10 }}>{zone.title}</div>
-                <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.65 }}>{zone.desc}</div>
               </div>
             ))}
           </div>
@@ -761,65 +656,6 @@ export default function JavaDeveloperAILeverageGuidePage() {
         </div>
       </section>
 
-      <section style={{ padding: "72px 20px", background: "#fffaf5" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <div
-            className="case-study-card-pad"
-            style={{
-              background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
-              border: "1.5px solid #fdba74",
-              borderRadius: 20,
-            }}
-          >
-            <span
-              style={{
-                fontSize: 11,
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "#b45309",
-                display: "block",
-                marginBottom: 16,
-              }}
-            >
-              Hiring Reality — Included in the Guide
-            </span>
-            <h3 style={{ fontSize: "clamp(20px, 2.8vw, 30px)", fontWeight: 800, color: "#0a1628", marginBottom: 16, letterSpacing: "-0.02em" }}>
-              What hiring managers check before the interview even starts
-            </h3>
-            <p style={{ fontSize: 16, color: "#422006", lineHeight: 1.75, marginBottom: 24 }}>
-              The guide breaks down the exact screening sequence across GitHub, your README, LinkedIn headline,
-              About section, and outcome-driven experience bullets — because most Java developers overprepare for
-              interviews and underprepare for the filters that decide whether the interview happens.
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {HIRING_SIGNALS.map((signal) => (
-                <div
-                  key={signal.item}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: 18,
-                    background: "rgba(255,255,255,0.7)",
-                    border: "1px solid #fde0c2",
-                    borderRadius: 10,
-                    padding: "14px 16px",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <div style={{ flex: 1, minWidth: 220 }}>
-                    <div style={{ fontSize: 14, fontWeight: 800, color: "#0a1628" }}>{signal.item}</div>
-                    <div style={{ fontSize: 13, color: "#5a6a8a", marginTop: 4, lineHeight: 1.55 }}>{signal.desc}</div>
-                  </div>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: "#b45309" }}>{signal.time}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section
         style={{
           background: "linear-gradient(135deg, #1c0d05 0%, #5b2410 100%)",
@@ -834,8 +670,7 @@ export default function JavaDeveloperAILeverageGuidePage() {
             <span style={{ color: "#fdba74" }}>You just have to move up it.</span>
           </h2>
           <p style={{ fontSize: 16, color: "rgba(255,230,200,0.75)", lineHeight: 1.7, maxWidth: 500, margin: "0 auto 40px" }}>
-            The premium is no longer for the engineer who types the most code. It is for the one who uses AI,
-            understands systems, and can explain why the design should exist in the first place.
+            If you want the playbook for becoming more valuable, more visible, and harder to replace as a Java developer in 2026, this guide is built for that shift.
           </p>
 
           <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
