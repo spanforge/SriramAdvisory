@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "QA Engineer Survival Guide 2026 | Sriram Advisory",
   description:
-    "SA-AIRS™ score: 9.5/10. The Manual QA Engineer's complete guide to surviving AI — tool stack, 90-day plan, GCC interview prep, and the path to ₹48 LPA. India 2026. ₹299.",
+    "SA-AIRS™ score: 9.5/10. The Manual QA Engineer's complete guide to surviving AI — tool stack, 90-day plan, GCC interview prep, and the path to ₹48 LPA. India 2026. ₹499.",
 };
 
 const PERSONAL_DELIVERY_NOTE =
@@ -111,7 +111,7 @@ export default function QAEngineerSurvivalGuidePage() {
             borderRadius: 20,
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-              <span style={{ fontSize: 48, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹299</span>
+              <span style={{ fontSize: 48, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹499</span>
             </div>
             <span style={{
               fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
@@ -120,9 +120,9 @@ export default function QAEngineerSurvivalGuidePage() {
 
             <CashfreeCheckout
               productName="QA Engineer Survival Guide 2026"
-              amount={299}
+              amount={499}
               accentColor="#0d9268"
-              buttonLabel="Get the Guide Now — ₹299 →"
+              buttonLabel="Get the Guide Now — ₹499 →"
               buttonStyle={{
                 fontSize: 17, fontWeight: 700, padding: "16px 36px", borderRadius: 10,
                 background: "#0d9268", color: "#ffffff",
@@ -372,16 +372,16 @@ export default function QAEngineerSurvivalGuidePage() {
 
           <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 4 }}>
-              <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹299</span>
+              <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹499</span>
             </div>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6ee7b7", marginBottom: 20 }}>
               Personal Email Delivery
             </span>
             <CashfreeCheckout
               productName="QA Engineer Survival Guide 2026"
-              amount={299}
+              amount={499}
               accentColor="#0d9268"
-              buttonLabel="Get the Guide — ₹299 →"
+              buttonLabel="Get the Guide — ₹499 →"
               buttonStyle={{
                 fontSize: 16, fontWeight: 700, padding: "16px 40px", borderRadius: 10,
                 background: "#0d9268", color: "#ffffff",

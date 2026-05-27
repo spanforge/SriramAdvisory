@@ -23,7 +23,7 @@ const GUIDES = [
     subtitle: "SA-AIRS™ 9.5/10. 90-day plan. GCC interview playbook. ₹48 LPA target.",
     blurb:
       "Manual QA is the highest-exposure role in Indian IT. This guide tells you exactly what's being automated, the 4 survival zones AI can't touch, the full AI testing tool stack, a week-by-week 90-day plan, and how to land an AI Quality Architect role at a GCC for ₹42–60 LPA.",
-    price: "₹299",
+    price: "₹499",
     strikePrice: "",
     tag: "",
     href: "/guides/qa-engineer-survival-guide-2026",
