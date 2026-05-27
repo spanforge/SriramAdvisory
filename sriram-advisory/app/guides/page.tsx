@@ -51,6 +51,23 @@ const GUIDES = [
   },
   {
     badge: "New",
+    badgeBg: "#b45309",
+    badgeColor: "#ffffff",
+    title: "Java Developer AI Leverage Guide 2026",
+    subtitle: "SA-AIRS™ 7.5/10. 60-day upgrade. Spring AI + LangChain4j. ₹35+ LPA target.",
+    blurb:
+      "Java is not the highest-risk role in Indian IT, but it is the most deceptively comfortable one. This guide shows Java developers how to stop competing on Spring Boot boilerplate and start winning on architecture, AI integration, and domain leverage — with a 60-day plan, the right AI tool stack, and salary paths for GCC and product roles.",
+    price: "₹499",
+    strikePrice: "",
+    tag: "",
+    href: "/guides/java-developer-ai-leverage-guide-2026",
+    accentColor: "#b45309",
+    bgGradient: "linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%)",
+    borderColor: "#fdba74",
+    available: true,
+  },
+  {
+    badge: "New",
     badgeBg: "#4f46e5",
     badgeColor: "#ffffff",
     title: "Selenium Engineer Upgrade Guide 2026",
