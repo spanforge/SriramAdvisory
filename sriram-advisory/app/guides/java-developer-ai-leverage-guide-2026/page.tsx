@@ -66,7 +66,7 @@ const TRANSITION_PATHS = [
     salary: "₹18–26 LPA",
     feasibility: "9.1 / 10",
     color: "#b45309",
-    desc: "Use Copilot daily, redirect saved time into architecture, and prove the shift with a public repo.",
+    desc: "The first upgrade layer for Java developers who want to become faster, sharper, and more market-relevant immediately.",
   },
   {
     role: "Java + Spring AI Developer",
@@ -74,7 +74,7 @@ const TRANSITION_PATHS = [
     salary: "₹22–32 LPA",
     feasibility: "8.4 / 10",
     color: "#c2410c",
-    desc: "Build domain-specific AI features in Spring Boot and show recruiters you can bridge classic Java with AI delivery.",
+    desc: "The tier where your profile starts looking meaningfully different from a standard Spring Boot engineer.",
   },
   {
     role: "AI-Era Java Architect",
@@ -82,7 +82,7 @@ const TRANSITION_PATHS = [
     salary: "₹28–42 LPA",
     feasibility: "7.4 / 10",
     color: "#ea580c",
-    desc: "Own architecture, resilience, governance, and system design for AI-integrated Java applications.",
+    desc: "The premium tier for engineers trusted with higher-value technical decisions in AI-shaped teams.",
   },
   {
     role: "Java AI Platform Lead",
@@ -90,7 +90,7 @@ const TRANSITION_PATHS = [
     salary: "₹35–55 LPA",
     feasibility: "6.8 / 10",
     color: "#f97316",
-    desc: "Lead teams and standards around AI governance, observability, architecture, and platform decisions.",
+    desc: "A long-term positioning path for engineers who want to move into the top end of the market.",
   },
 ];
 
@@ -99,35 +99,35 @@ const SALARY_BANDS = [
     role: "Java Developer (Spring Boot only)",
     it: "₹8–16 LPA",
     gcc: "₹14–22 LPA",
-    note: "Ceiling is approaching as junior implementation work gets compressed by AI tooling.",
+    note: "Still viable today, but the ceiling is getting tighter.",
     color: "#9aa8c0",
   },
   {
     role: "Java Developer (Copilot + AI tools)",
     it: "₹12–20 LPA",
     gcc: "₹18–26 LPA",
-    note: "The first uplift comes from productivity plus stronger technical signaling.",
+    note: "This is usually where the first visible salary premium starts.",
     color: "#b45309",
   },
   {
     role: "Java + Spring AI Developer",
     it: "₹16–24 LPA",
     gcc: "₹22–30 LPA",
-    note: "Strong fit for engineers with 1–2 credible AI-integrated portfolio projects.",
+    note: "A strong repositioning tier for Java developers who move early.",
     color: "#c2410c",
   },
   {
     role: "AI-Era Java Architect",
     it: "₹22–32 LPA",
     gcc: "₹26–38 LPA",
-    note: "Architecture and system-design credibility matter more than just tool familiarity.",
+    note: "This is where the market starts rewarding deeper trust and stronger positioning.",
     color: "#ea580c",
   },
   {
     role: "Java Technical Lead + AI",
     it: "₹28–38 LPA",
     gcc: "₹32–48 LPA",
-    note: "Upper bands are real, but typically earned through execution, visibility, and company selection.",
+    note: "The upper band exists, but only for a smaller set of well-positioned profiles.",
     color: "#f97316",
   },
 ];
@@ -454,7 +454,7 @@ export default function JavaDeveloperAILeverageGuidePage() {
               The Java Transition Map
             </h2>
             <p style={{ fontSize: 15, color: "#5a6a8a", marginTop: 12 }}>
-              The guide shows how to move up the value chain without abandoning your Java base.
+              The guide shows the progression path — without forcing you to abandon your Java base.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -506,7 +506,7 @@ export default function JavaDeveloperAILeverageGuidePage() {
               Where the Premium Actually Appears
             </h2>
             <p style={{ fontSize: 14, color: "#9aa8c0", marginTop: 10 }}>
-              Source basis in the guide: Glassdoor India, AmbitionBox, Levels.fyi, and job-posting review notes.
+              The full guide breaks down where the meaningful pay jump starts — and where it usually does not.
             </p>
           </div>
 
