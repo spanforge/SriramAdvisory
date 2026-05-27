@@ -132,24 +132,6 @@ const SALARY_BANDS = [
   },
 ];
 
-const PHASES = [
-  {
-    phase: "Phase 1 · Days 1–30",
-    title: "From Parts Thinker to AI Director",
-    color: "#b45309",
-    bg: "#fff7ed",
-    border: "#fdba74",
-    deliverable:
-      "A public GitHub repo with three Copilot-assisted Spring Boot projects. The README explains what Copilot generated, what you changed, and what architectural judgment you applied.",
-    items: [
-      "Week 1: Install Copilot and rebuild one repeated Spring Boot endpoint using AI for boilerplate",
-      "Week 2: Learn Spring AI basics and ship a domain-specific Spring AI mini-project",
-      "Week 3: Add retrieval or RAG to the project and document your design choices in the README",
-      "Week 4: Add CI, read GCC role descriptions, and publish one thoughtful LinkedIn post about the build",
-    ],
-  },
-];
-
 export default function JavaDeveloperAILeverageGuidePage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
@@ -556,72 +538,6 @@ export default function JavaDeveloperAILeverageGuidePage() {
                     <div style={{ fontSize: 16, fontWeight: 800, color: s.color }}>{s.gcc}</div>
                     <div style={{ fontSize: 11, color: "#9aa8c0", textTransform: "uppercase", letterSpacing: "0.06em" }}>GCC / Product</div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "72px 20px", background: "#fff7ed" }}>
-        <div style={{ maxWidth: 780, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 44 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#b45309", display: "block", marginBottom: 12 }}>
-              The Plan
-            </span>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              60 Days. Two Phases. Public Proof.
-            </h2>
-            <p style={{ fontSize: 15, color: "#5a6a8a", marginTop: 12, maxWidth: 580, margin: "12px auto 0" }}>
-              The guide is built around public proof of work, not passive upskilling. The portfolio is the credential.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
-            {PHASES.map((phase) => (
-              <div
-                key={phase.phase}
-                style={{
-                  background: phase.bg,
-                  border: `1.5px solid ${phase.border}`,
-                  borderRadius: 16,
-                  padding: "28px 28px",
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: 11,
-                    fontWeight: 700,
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    color: phase.color,
-                    display: "block",
-                    marginBottom: 10,
-                  }}
-                >
-                  {phase.phase}
-                </span>
-                <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", marginBottom: 16 }}>{phase.title}</h3>
-                <ul style={{ listStyle: "none", padding: 0, margin: "0 0 20px", display: "flex", flexDirection: "column", gap: 10 }}>
-                  {phase.items.map((item) => (
-                    <li key={item} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                      <span style={{ color: phase.color, fontWeight: 700, flexShrink: 0 }}>→</span>
-                      <span style={{ fontSize: 14, color: "#2d3f5e", lineHeight: 1.5 }}>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div
-                  style={{
-                    background: "rgba(255,255,255,0.65)",
-                    border: `1px solid ${phase.border}`,
-                    borderRadius: 10,
-                    padding: "14px 16px",
-                  }}
-                >
-                  <span style={{ fontSize: 11, fontWeight: 700, color: phase.color, textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                    Phase Deliverable
-                  </span>
-                  <p style={{ fontSize: 13, color: "#2d3f5e", lineHeight: 1.6, marginTop: 8, marginBottom: 0 }}>{phase.deliverable}</p>
                 </div>
               </div>
             ))}
