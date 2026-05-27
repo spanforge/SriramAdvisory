@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "SA-AIRS™ score: 7.2/10. The complete Selenium-to-Playwright upgrade roadmap — 60-day plan, AI tool stack, GCC interview prep, and the path to ₹28–42 LPA. India 2026. ₹499.",
 };
 
+const PERSONAL_DELIVERY_NOTE =
+  "After your payment, Sriram personally emails the guide to you. This is a manual send by design so the delivery stays transparent and human.";
+
 const WHAT_INSIDE = [
   { icon: "📊", label: "SA-AIRS™ Score 7.2 — The Market Split Decoded", desc: "What 8,500 Selenium job postings vs 2,500 Playwright postings actually means — and why the 55% candidate gap is your window right now." },
   { icon: "⚙️", label: "Playwright vs Selenium: 5 Architectural Advantages", desc: "Auto-wait, multi-browser from one API, native mobile emulation, MCP/AI integration, and built-in tracing — explained for interview answers." },
@@ -121,7 +124,7 @@ export default function SeleniumEngineerUpgradeGuidePage() {
             <span style={{
               fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
               color: "#a5b4fc", marginBottom: 20, display: "block",
-            }}>Instant Digital Delivery</span>
+            }}>Personal Email Delivery</span>
 
             <CashfreeCheckout
               productName="Selenium Engineer Upgrade Guide 2026"
@@ -136,7 +139,7 @@ export default function SeleniumEngineerUpgradeGuidePage() {
               }}
             />
             <p style={{ fontSize: 13, color: "rgba(165,180,252,0.5)", marginTop: 12 }}>
-              Secure payment via Cashfree · Instant PDF delivery
+              Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>
         </div>
@@ -501,7 +504,7 @@ export default function SeleniumEngineerUpgradeGuidePage() {
               <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹499</span>
             </div>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#a5b4fc", marginBottom: 20 }}>
-              Instant Delivery
+              Personal Email Delivery
             </span>
             <CashfreeCheckout
               productName="Selenium Engineer Upgrade Guide 2026"
@@ -516,7 +519,7 @@ export default function SeleniumEngineerUpgradeGuidePage() {
               }}
             />
             <p style={{ fontSize: 13, color: "rgba(165,180,252,0.4)", marginTop: 14 }}>
-              Secure payment via Cashfree · PDF delivered instantly
+              Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>
         </div>

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "SA-AIRS™ score: 9.5/10. The Manual QA Engineer's complete guide to surviving AI — tool stack, 90-day plan, GCC interview prep, and the path to ₹48 LPA. India 2026. ₹299.",
 };
 
+const PERSONAL_DELIVERY_NOTE =
+  "After your payment, Sriram personally emails the guide to you. This is a manual send by design so the delivery stays transparent and human.";
+
 const WHAT_INSIDE = [
   { icon: "📊", label: "SA-AIRS™ Score 9.5 — Decoded", desc: "Exactly what this score means, what is being automated today, and what the data from Wipro and TCS actually shows about QA headcount." },
   { icon: "🛡️", label: "Your Survival Zone", desc: "The 4 zones of human-critical QA work that AI cannot touch — non-deterministic testing, risk architecture, quality governance, and edge case imagination." },
@@ -113,7 +116,7 @@ export default function QAEngineerSurvivalGuidePage() {
             <span style={{
               fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
               color: "#6ee7b7", marginBottom: 20,
-            }}>Instant Digital Delivery</span>
+            }}>Personal Email Delivery</span>
 
             <CashfreeCheckout
               productName="QA Engineer Survival Guide 2026"
@@ -128,7 +131,7 @@ export default function QAEngineerSurvivalGuidePage() {
               }}
             />
             <p style={{ fontSize: 13, color: "rgba(180,230,210,0.5)", marginTop: 12 }}>
-              Secure payment via Cashfree · Instant PDF delivery
+              Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>
         </div>
@@ -372,7 +375,7 @@ export default function QAEngineerSurvivalGuidePage() {
               <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹299</span>
             </div>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6ee7b7", marginBottom: 20 }}>
-              Instant Delivery
+              Personal Email Delivery
             </span>
             <CashfreeCheckout
               productName="QA Engineer Survival Guide 2026"
@@ -387,7 +390,7 @@ export default function QAEngineerSurvivalGuidePage() {
               }}
             />
             <p style={{ fontSize: 13, color: "rgba(180,230,210,0.4)", marginTop: 14 }}>
-              Secure payment via Cashfree · PDF delivered instantly
+              Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>
         </div>

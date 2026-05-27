@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "SA-AIRS™ score: 7.8/10. Reporting roles are being automated. Get the 90-day transformation blueprint, 3 sector paths (SaaS/FinTech/E-Commerce), SQL mastery progression, salary data, and a portfolio framework built for India's data analyst job market. ₹299.",
 };
 
+const PERSONAL_DELIVERY_NOTE =
+  "After your payment, Sriram personally emails the guide to you. This is a manual send by design so the delivery stays transparent and human.";
+
 const WHAT_INSIDE = [
   {
     icon: "📊",
@@ -260,7 +263,7 @@ export default function DataAnalystCareerGuidePage() {
                 marginBottom: 20,
               }}
             >
-              Launch Price · Instant Digital Delivery
+              Launch Price · Personal Email Delivery
             </span>
 
             <CashfreeCheckout
@@ -289,7 +292,7 @@ export default function DataAnalystCareerGuidePage() {
                 marginTop: 12,
               }}
             >
-              Secure payment via Cashfree · Instant PDF delivery
+              Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>
         </div>
@@ -1051,7 +1054,7 @@ export default function DataAnalystCareerGuidePage() {
                 marginBottom: 20,
               }}
             >
-              Launch Price · Instant Delivery
+              Launch Price · Personal Email Delivery
             </span>
             <CashfreeCheckout
               productName="Data Analyst Career Guide 2026"
@@ -1078,7 +1081,7 @@ export default function DataAnalystCareerGuidePage() {
                 marginTop: 14,
               }}
             >
-              Secure payment via Cashfree · PDF delivered instantly
+              Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>
         </div>

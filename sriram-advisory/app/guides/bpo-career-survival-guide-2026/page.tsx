@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "SA-AIRS™ score: 9.2/10. AI agents are handling Tier 1 & 2 BPO queries today. Get the 5 new AI-era roles, a 30-day repositioning plan, and resume strategy built for India's 6M+ BPO workforce. ₹299.",
 };
 
+const PERSONAL_DELIVERY_NOTE =
+  "After your payment, Sriram personally emails the guide to you. This is a manual send by design so the delivery stays transparent and human.";
+
 const WHAT_INSIDE = [
   { icon: "📊", label: "SA-AIRS™ Score 9.2 — Decoded", desc: "Exactly what this score means for your role, which tasks are being automated today by Salesforce Einstein, IBM watsonx, and LimeChat, and what the data shows about BPO headcount in India." },
   { icon: "🗺️", label: "The AI Risk Map — BPO Edition", desc: "Tier 1 scripted queries: fully automated. Tier 2 transactional support: 70% automated. Tier 3 complex exceptions: the only safe zone. Know where you stand right now." },
@@ -114,7 +117,7 @@ export default function BPOCareerSurvivalGuidePage() {
             <span style={{
               fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
               color: "#fcd34d", marginBottom: 20,
-            }}>Launch Price · Instant Digital Delivery</span>
+            }}>Launch Price · Personal Email Delivery</span>
 
             <CashfreeCheckout
               productName="BPO Career Survival Guide 2026"
@@ -129,7 +132,7 @@ export default function BPOCareerSurvivalGuidePage() {
               }}
             />
             <p style={{ fontSize: 13, color: "rgba(255,200,100,0.45)", marginTop: 12 }}>
-              Secure payment via Cashfree · Instant PDF delivery
+              Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>
         </div>
@@ -377,7 +380,7 @@ export default function BPOCareerSurvivalGuidePage() {
               <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹299</span>
             </div>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fcd34d", marginBottom: 20 }}>
-              Launch Price · Instant Delivery
+              Launch Price · Personal Email Delivery
             </span>
             <CashfreeCheckout
               productName="BPO Career Survival Guide 2026"
@@ -392,7 +395,7 @@ export default function BPOCareerSurvivalGuidePage() {
               }}
             />
             <p style={{ fontSize: 13, color: "rgba(255,200,100,0.4)", marginTop: 14 }}>
-              Secure payment via Cashfree · PDF delivered instantly
+              Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>
         </div>

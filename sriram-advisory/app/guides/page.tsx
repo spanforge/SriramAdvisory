@@ -11,6 +11,9 @@ export const metadata: Metadata = {
 
 // Hover is handled via CSS class .guide-card — see globals.css
 
+const GUIDE_DELIVERY_NOTE =
+  "After payment, Sriram personally emails the guide to you. No automated send, no surprise workflow.";
+
 const GUIDES = [
   {
     badge: "New",
@@ -157,6 +160,9 @@ export default function GuidesPage() {
                   </h3>
                   <p style={{ fontSize: 14, fontWeight: 600, color: g.accentColor, marginBottom: 12 }}>{g.subtitle}</p>
                   <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.7, marginBottom: 0 }}>{g.blurb}</p>
+                  <p style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.6, marginTop: 14, marginBottom: 0 }}>
+                    {GUIDE_DELIVERY_NOTE}
+                  </p>
                 </div>
                 <div className="guide-card-price-col">
                   <div style={{ fontSize: 13, color: "#9aa8c0", textDecoration: "line-through", marginBottom: 2 }}>{g.strikePrice}</div>
