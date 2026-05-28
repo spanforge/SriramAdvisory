@@ -16,6 +16,7 @@ export default function CashfreeCheckout({ productName, amount, buttonLabel, but
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [referredBy, setReferredBy] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -65,7 +66,14 @@ export default function CashfreeCheckout({ productName, amount, buttonLabel, but
       const res = await fetch("/api/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productName, amount, name: name.trim(), email: email.trim(), phone: phone.trim() }),
+        body: JSON.stringify({
+          productName,
+          amount,
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone.trim(),
+          referredBy: referredBy.trim(),
+        }),
       });
 
       const data = await res.json();
@@ -221,6 +229,29 @@ export default function CashfreeCheckout({ productName, amount, buttonLabel, but
                     fontFamily: "inherit",
                   }}
                 />
+              </div>
+
+              <div>
+                <label htmlFor="checkout-referred-by" style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#5a6a8a", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                  Referred By
+                </label>
+                <input
+                  id="checkout-referred-by"
+                  type="text"
+                  value={referredBy}
+                  onChange={(e) => setReferredBy(e.target.value)}
+                  placeholder="Name, company, or source"
+                  maxLength={100}
+                  style={{
+                    width: "100%", padding: "10px 14px", borderRadius: 8,
+                    border: "1.5px solid #dde3f0", fontSize: 15,
+                    outline: "none", boxSizing: "border-box",
+                    fontFamily: "inherit",
+                  }}
+                />
+                <p style={{ fontSize: 11, color: "#8898b8", marginTop: 5 }}>
+                  Optional. Helps us track referrals and partnerships.
+                </p>
               </div>
 
               {error && (

@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json();
-  const { productName, amount, name, email, phone } = body;
+  const { productName, amount, name, email, phone, referredBy } = body;
 
   if (!productName || !amount || !name || !email) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -28,6 +28,11 @@ export async function POST(req: NextRequest) {
   // Sanitise phone — strip non-digits, keep last 10 digits; fallback to dummy
   const rawPhone = String(phone ?? "").replace(/\D/g, "");
   const customerPhone = rawPhone.length >= 10 ? rawPhone.slice(-10) : "9000000000";
+
+  const referralSource = String(referredBy ?? "").trim().slice(0, 100);
+  const orderNote = referralSource
+    ? `${String(productName).trim()} | Referred by: ${referralSource}`.slice(0, 450)
+    : String(productName).trim().slice(0, 450);
 
   const orderId = `SA_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
 
@@ -60,7 +65,7 @@ export async function POST(req: NextRequest) {
         order_meta: {
           return_url: `${baseUrl}/payment-status?order_id={order_id}&product=${encodeURIComponent(productName)}`,
         },
-        order_note: productName,
+        order_note: orderNote,
       }),
     });
 
