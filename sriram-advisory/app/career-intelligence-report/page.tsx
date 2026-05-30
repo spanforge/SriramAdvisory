@@ -20,8 +20,8 @@ const REPORTS = [
     subtitle: "5-dimension AI risk score. 6-part diagnostic. 90-day re-assessment. India 2026.",
     blurb:
       "A structured diagnostic built on your self-reported inputs — scored across Task Repetition, Automation Feasibility, Market Saturation, Decision Complexity, and Human Dependency. Your SA-AIRS™ composite score, L1–L5 placement, role benchmarks, and a 90-day re-assessment included. All inputs transparent, all scores traceable.",
-    price: "₹499",
-    strikePrice: "₹999",
+    price: "₹999",
+    strikePrice: null,
     tag: "Analytical Scoring System",
     href: "/career-intelligence-report/sa-airs-pro",
     accentColor: "#1a4fd6",
