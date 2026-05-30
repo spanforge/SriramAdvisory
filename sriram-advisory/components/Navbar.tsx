@@ -5,15 +5,11 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Reports", href: "/career-intelligence-report" },
+  { label: "Research", href: "/research" },
+  { label: "Assessments", href: "/assessments" },
+  { label: "Reports", href: "/reports" },
   { label: "Guides", href: "/guides" },
-  { label: "Tools", href: "/tools" },
-  { label: "Methodology", href: "/methodology" },
-  { label: "Blog", href: "/insights" },
-  { label: "Podcast", href: "https://open.spotify.com/show/0gFlEGspgZP7cxd4KQBsLC" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -25,60 +21,114 @@ export default function Navbar() {
       <nav
         aria-label="Main navigation"
         style={{
-        position: "sticky", top: 0, zIndex: 100,
-        background: "rgba(255,255,255,0.97)",
-        backdropFilter: "blur(12px)",
-        borderBottom: "1px solid rgba(10,22,40,0.08)",
-      }}>
-        <div style={{
-          maxWidth: 1200, margin: "0 auto",
-          display: "flex", alignItems: "center", justifyContent: "space-between",
-          height: 68, padding: "0 20px",
-        }}>
-          {/* Logo */}
-          <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}>
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
+          background: "rgba(251,252,248,0.92)",
+          backdropFilter: "blur(16px)",
+          borderBottom: "1px solid rgba(19,32,51,0.08)",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            height: 74,
+            padding: "0 20px",
+            gap: 18,
+          }}
+        >
+          <Link
+            href="/"
+            style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}
+          >
             <img
               src="/sriram.png"
               alt="Sriram Advisory"
-              style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }}
+              style={{
+                width: 42,
+                height: 42,
+                borderRadius: "50%",
+                objectFit: "cover",
+                border: "2px solid #12846c",
+                flexShrink: 0,
+              }}
             />
             <div>
-              <div style={{
-                fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                fontSize: 22, letterSpacing: "0.08em", color: "#0a1628", lineHeight: 1,
-              }}>Sriram Advisory</div>
-              <div style={{ fontSize: 13, letterSpacing: "0.10em", color: "#1a4fd6", textTransform: "uppercase", lineHeight: 1.5, fontWeight: 600 }}>
-                Career Intelligence System
+              <div
+                style={{
+                  fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
+                  fontSize: 23,
+                  letterSpacing: "0.08em",
+                  color: "#132033",
+                  lineHeight: 1,
+                }}
+              >
+                Sriram Advisory
+              </div>
+              <div
+                style={{
+                  fontSize: 12,
+                  letterSpacing: "0.12em",
+                  color: "#12846c",
+                  textTransform: "uppercase",
+                  lineHeight: 1.5,
+                  fontWeight: 700,
+                }}
+              >
+                Career Intelligence for India
               </div>
             </div>
           </Link>
 
-          {/* Desktop nav */}
           <div style={{ alignItems: "center", gap: 4 }} className="hidden md:flex">
             {NAV_LINKS.map((link) => {
-              const isExternal = link.href.startsWith("http");
-              const active = !isExternal && pathname === link.href;
+              const active = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
                   aria-current={active ? "page" : undefined}
-                  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   style={{
-                    fontSize: 13, fontWeight: 500, textDecoration: "none",
-                    padding: "6px 14px", borderRadius: 6,
-                    color: active ? "#0a1628" : "#5a6a8a",
-                    background: active ? "rgba(10,22,40,0.06)" : "transparent",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    padding: "8px 14px",
+                    borderRadius: 999,
+                    color: active ? "#132033" : "#566274",
+                    background: active ? "rgba(19,32,51,0.08)" : "transparent",
                     transition: "color 0.15s, background 0.15s",
                     letterSpacing: "0.01em",
-                  }}>
+                  }}
+                >
                   {link.label}
                 </Link>
               );
             })}
+            <Link
+              href="/contact"
+              style={{
+                marginLeft: 10,
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#132033",
+                color: "#ffffff",
+                fontWeight: 700,
+                fontSize: 13,
+                padding: "10px 18px",
+                borderRadius: 999,
+                textDecoration: "none",
+                border: "1px solid #132033",
+              }}
+            >
+              Contact
+            </Link>
           </div>
 
-          {/* Hamburger */}
           <button
             className="flex md:hidden"
             onClick={() => setOpen(!open)}
@@ -86,74 +136,129 @@ export default function Navbar() {
             aria-expanded={open}
             aria-controls="mobile-nav"
             style={{
-              background: "none", border: "none", cursor: "pointer",
-              flexDirection: "column", gap: 5, padding: 6,
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              flexDirection: "column",
+              gap: 5,
+              padding: 6,
             }}
           >
-            <span style={{
-              display: "block", width: 22, height: 2, background: "#0a1628", borderRadius: 2,
-              transform: open ? "rotate(45deg) translate(5px,5px)" : "none", transition: "transform 0.2s",
-            }} />
-            <span style={{
-              display: "block", width: 22, height: 2, background: "#0a1628", borderRadius: 2,
-              opacity: open ? 0 : 1, transition: "opacity 0.2s",
-            }} />
-            <span style={{
-              display: "block", width: 22, height: 2, background: "#0a1628", borderRadius: 2,
-              transform: open ? "rotate(-45deg) translate(5px,-5px)" : "none", transition: "transform 0.2s",
-            }} />
+            <span
+              style={{
+                display: "block",
+                width: 22,
+                height: 2,
+                background: "#132033",
+                borderRadius: 2,
+                transform: open ? "rotate(45deg) translate(5px,5px)" : "none",
+                transition: "transform 0.2s",
+              }}
+            />
+            <span
+              style={{
+                display: "block",
+                width: 22,
+                height: 2,
+                background: "#132033",
+                borderRadius: 2,
+                opacity: open ? 0 : 1,
+                transition: "opacity 0.2s",
+              }}
+            />
+            <span
+              style={{
+                display: "block",
+                width: 22,
+                height: 2,
+                background: "#132033",
+                borderRadius: 2,
+                transform: open ? "rotate(-45deg) translate(5px,-5px)" : "none",
+                transition: "transform 0.2s",
+              }}
+            />
           </button>
         </div>
 
-        {/* Mobile menu */}
         {open && (
           <div
             id="mobile-nav"
             role="menu"
             aria-label="Mobile navigation"
             style={{
-              borderTop: "1px solid rgba(10,22,40,0.08)",
-              background: "rgba(255,255,255,0.99)",
+              borderTop: "1px solid rgba(19,32,51,0.08)",
+              background: "rgba(251,252,248,0.98)",
               padding: "12px 20px 20px",
-              display: "flex", flexDirection: "column", gap: 4,
-            }} className="md:hidden">
+              display: "flex",
+              flexDirection: "column",
+              gap: 4,
+            }}
+            className="md:hidden"
+          >
+            <Link
+              href="/"
+              role="menuitem"
+              onClick={() => setOpen(false)}
+              aria-current={pathname === "/" ? "page" : undefined}
+              style={{
+                fontSize: 15,
+                fontWeight: 600,
+                textDecoration: "none",
+                padding: "10px 14px",
+                borderRadius: 10,
+                color: pathname === "/" ? "#132033" : "#566274",
+                background: pathname === "/" ? "rgba(19,32,51,0.06)" : "transparent",
+              }}
+            >
+              Home
+            </Link>
             {NAV_LINKS.map((link) => {
-              const isExternal = link.href.startsWith("http");
-              const active = !isExternal && pathname === link.href;
+              const active = pathname === link.href;
               return (
-                <Link key={link.href} href={link.href}
+                <Link
+                  key={link.href}
+                  href={link.href}
                   role="menuitem"
                   aria-current={active ? "page" : undefined}
                   onClick={() => setOpen(false)}
-                  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   style={{
-                    fontSize: 15, fontWeight: 500, textDecoration: "none",
-                    padding: "10px 14px", borderRadius: 8,
-                    color: active ? "#0a1628" : "#5a6a8a",
-                    background: active ? "rgba(10,22,40,0.06)" : "transparent",
-                  }}>
+                    fontSize: 15,
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    padding: "10px 14px",
+                    borderRadius: 10,
+                    color: active ? "#132033" : "#566274",
+                    background: active ? "rgba(19,32,51,0.06)" : "transparent",
+                  }}
+                >
                   {link.label}
                 </Link>
               );
             })}
-            <Link href="/sa-airs-score-report"
+            <Link
+              href="/contact"
               role="menuitem"
               onClick={() => setOpen(false)}
               style={{
                 marginTop: 8,
-                display: "block", textAlign: "center",
-                fontSize: 15, fontWeight: 700, textDecoration: "none",
-                padding: "12px 18px", borderRadius: 8,
-                background: "#1a4fd6", color: "#ffffff",
-                border: "1px solid #3b6ef0",
-              }}>
-              Get Your Score →
+                display: "block",
+                textAlign: "center",
+                fontSize: 15,
+                fontWeight: 700,
+                textDecoration: "none",
+                padding: "12px 18px",
+                borderRadius: 10,
+                background: "#132033",
+                color: "#ffffff",
+                border: "1px solid #132033",
+              }}
+            >
+              Contact
             </Link>
           </div>
         )}
       </nav>
 
-      {/* Landmark anchor — skip link jumps here, to content start */}
       <div id="main-content" tabIndex={-1} style={{ outline: "none" }} />
     </>
   );

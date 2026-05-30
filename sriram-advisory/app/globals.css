@@ -522,6 +522,20 @@ select:focus-visible {
   }
 }
 
+.home-hero-grid,
+.home-two-col,
+.about-grid {
+  display: grid;
+}
+
+@media (max-width: 900px) {
+  .home-hero-grid,
+  .home-two-col,
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* ── Reduced Motion ──────────────────────────────────── */
 /* Respect OS-level "reduce motion" setting (WCAG 2.3.3) */
 @media (prefers-reduced-motion: reduce) {
