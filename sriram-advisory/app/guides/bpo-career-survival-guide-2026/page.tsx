@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "BPO & Customer Support Career Survival Guide 2026 | Sriram Advisory",
   description:
-    "SA-AIRS™ score: 9.2/10. AI agents are handling Tier 1 & 2 BPO queries today. Get the 5 new AI-era roles, a 30-day repositioning plan, and resume strategy built for India's 6M+ BPO workforce. ₹299.",
+    "SA-AIRS™ score: 9.2/10. AI agents are handling Tier 1 & 2 BPO queries today. Get the 5 new AI-era roles, a 30-day repositioning plan, and resume strategy built for India's 6M+ BPO workforce. ₹499.",
 };
 
 const PERSONAL_DELIVERY_NOTE =
@@ -111,19 +111,18 @@ export default function BPOCareerSurvivalGuidePage() {
             borderRadius: 20,
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-              <span style={{ fontSize: 22, color: "rgba(255,200,100,0.4)", textDecoration: "line-through", fontWeight: 500 }}>₹499</span>
-              <span style={{ fontSize: 48, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹299</span>
+              <span style={{ fontSize: 48, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹499</span>
             </div>
             <span style={{
               fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
               color: "#fcd34d", marginBottom: 20,
-            }}>Launch Price · Personal Email Delivery</span>
+            }}>Personal Email Delivery</span>
 
             <CashfreeCheckout
               productName="BPO Career Survival Guide 2026"
-              amount={299}
+              amount={499}
               accentColor="#d97706"
-              buttonLabel="Get the Guide Now — ₹299 →"
+              buttonLabel="Get the Guide Now — ₹499 →"
               buttonStyle={{
                 fontSize: 17, fontWeight: 700, padding: "16px 36px", borderRadius: 10,
                 background: "#d97706", color: "#ffffff",
@@ -376,17 +375,16 @@ export default function BPOCareerSurvivalGuidePage() {
 
           <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 4 }}>
-              <span style={{ fontSize: 18, color: "rgba(255,200,100,0.4)", textDecoration: "line-through", fontWeight: 500 }}>₹499</span>
-              <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹299</span>
+              <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹499</span>
             </div>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fcd34d", marginBottom: 20 }}>
-              Launch Price · Personal Email Delivery
+              Personal Email Delivery
             </span>
             <CashfreeCheckout
               productName="BPO Career Survival Guide 2026"
-              amount={299}
+              amount={499}
               accentColor="#d97706"
-              buttonLabel="Get the Guide — ₹299 →"
+              buttonLabel="Get the Guide — ₹499 →"
               buttonStyle={{
                 fontSize: 16, fontWeight: 700, padding: "16px 40px", borderRadius: 10,
                 background: "#d97706", color: "#ffffff",

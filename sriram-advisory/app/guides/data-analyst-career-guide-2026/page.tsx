@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Data Analyst Career Guide 2026 | Sriram Advisory",
   description:
-    "SA-AIRS™ score: 7.8/10. Reporting roles are being automated. Get the 90-day transformation blueprint, 3 sector paths (SaaS/FinTech/E-Commerce), SQL mastery progression, salary data, and a portfolio framework built for India's data analyst job market. ₹299.",
+    "SA-AIRS™ score: 7.8/10. Reporting roles are being automated. Get the 90-day transformation blueprint, 3 sector paths (SaaS/FinTech/E-Commerce), SQL mastery progression, salary data, and a portfolio framework built for India's data analyst job market. ₹499.",
 };
 
 const PERSONAL_DELIVERY_NOTE =
@@ -234,23 +234,13 @@ export default function DataAnalystCareerGuidePage() {
             <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
               <span
                 style={{
-                  fontSize: 22,
-                  color: "rgba(147,197,253,0.4)",
-                  textDecoration: "line-through",
-                  fontWeight: 500,
-                }}
-              >
-                ₹499
-              </span>
-              <span
-                style={{
                   fontSize: 48,
                   fontWeight: 900,
                   color: "#ffffff",
                   letterSpacing: "-0.03em",
                 }}
               >
-                ₹299
+                ₹499
               </span>
             </div>
             <span
@@ -263,14 +253,14 @@ export default function DataAnalystCareerGuidePage() {
                 marginBottom: 20,
               }}
             >
-              Launch Price · Personal Email Delivery
+              Personal Email Delivery
             </span>
 
             <CashfreeCheckout
               productName="Data Analyst Career Guide 2026"
-              amount={299}
+              amount={499}
               accentColor="#2563eb"
-              buttonLabel="Get the Guide Now — ₹299 →"
+              buttonLabel="Get the Guide Now — ₹499 →"
               buttonStyle={{
                 fontSize: 17,
                 fontWeight: 700,
@@ -1025,23 +1015,13 @@ export default function DataAnalystCareerGuidePage() {
             >
               <span
                 style={{
-                  fontSize: 18,
-                  color: "rgba(147,197,253,0.4)",
-                  textDecoration: "line-through",
-                  fontWeight: 500,
-                }}
-              >
-                ₹499
-              </span>
-              <span
-                style={{
                   fontSize: 44,
                   fontWeight: 900,
                   color: "#ffffff",
                   letterSpacing: "-0.03em",
                 }}
               >
-                ₹299
+                ₹499
               </span>
             </div>
             <span
@@ -1054,13 +1034,13 @@ export default function DataAnalystCareerGuidePage() {
                 marginBottom: 20,
               }}
             >
-              Launch Price · Personal Email Delivery
+              Personal Email Delivery
             </span>
             <CashfreeCheckout
               productName="Data Analyst Career Guide 2026"
-              amount={299}
+              amount={499}
               accentColor="#2563eb"
-              buttonLabel="Get the Guide — ₹299 →"
+              buttonLabel="Get the Guide — ₹499 →"
               buttonStyle={{
                 fontSize: 16,
                 fontWeight: 700,

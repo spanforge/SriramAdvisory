@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Career Intelligence Report — SA-AIRS™ Pro | Sriram Advisory",
   description:
-    "India's first analytical scoring system for AI career risk. 5 dimensions. One composite score. All inputs traceable. SA-AIRS™ Pro Report — ₹499.",
+    "India's first analytical scoring system for AI career risk. 5 dimensions. One composite score. All inputs traceable. SA-AIRS™ Pro Report — ₹999.",
 };
 
 const SIX_PARTS = [
@@ -111,8 +111,7 @@ export default function SaAirsProPage() {
             <div style={{ background: "rgba(26,79,214,0.06)", border: "1px solid rgba(26,79,214,0.45)", borderRadius: 10, padding: "20px 28px" }}>
               <div style={{ fontSize: 13, fontWeight: 700, color: "#1a4fd6", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>Pro Report</div>
               <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-                <div style={{ fontSize: 32, fontWeight: 800, color: "#0d9268" }}>₹499</div>
-                <div style={{ fontSize: 20, fontWeight: 600, color: "#6a7a9a", textDecoration: "line-through" }}>₹999</div>
+                <div style={{ fontSize: 32, fontWeight: 800, color: "#0d9268" }}>₹999</div>
               </div>
               <div style={{ fontSize: 14, color: "#5a6a8a", marginTop: 4 }}>Includes quarterly update assessment</div>
             </div>
@@ -121,9 +120,9 @@ export default function SaAirsProPage() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
             <CashfreeCheckout
               productName="Career Intelligence Report — Pro"
-              amount={499}
+              amount={999}
               accentColor="#0d9268"
-              buttonLabel="Get Pro Report — ₹499 →"
+              buttonLabel="Get Pro Report — ₹999 →"
               buttonStyle={{
                 background: "#1a4fd6", color: "#fff", fontWeight: 700,
                 fontSize: 16, padding: "15px 36px", borderRadius: 10,
@@ -247,9 +246,9 @@ export default function SaAirsProPage() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
             <CashfreeCheckout
               productName="Career Intelligence Report — Pro"
-              amount={499}
+              amount={999}
               accentColor="#0d9268"
-              buttonLabel="Get Pro Report — ₹499 →"
+              buttonLabel="Get Pro Report — ₹999 →"
               buttonStyle={{
                 background: "#1a4fd6", color: "#fff", fontWeight: 700,
                 fontSize: 17, padding: "16px 40px", borderRadius: 10,
