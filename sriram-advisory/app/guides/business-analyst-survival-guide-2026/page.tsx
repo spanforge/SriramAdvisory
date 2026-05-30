@@ -16,42 +16,42 @@ const WHAT_INSIDE = [
   {
     icon: "📊",
     label: "SA-AIRS™ Score 7.1 — Decoded",
-    desc: "What active risk means for Business Analysts in Indian IT services, why 70–80% of documentation work is already AI-automatable, and where the salary gap now opens up between traditional BA work and AI-era product analyst work.",
+    desc: "A clear breakdown of what your risk score means, where your current role is exposed, and what kind of BA work still compounds in the AI era.",
   },
   {
     icon: "🧭",
-    label: "The 5 Human-Critical BA Zones",
-    desc: "Business problem discovery, whole-system thinking, stakeholder conflict navigation, AI feature design for non-technical teams, and outcome ownership — the exact zones AI cannot replace and the market is paying more for.",
+    label: "A New Positioning Lens",
+    desc: "A practical way to stop presenting yourself like a documentation resource and start sounding like a higher-leverage analyst with business-side value.",
   },
   {
     icon: "🤖",
-    label: "AI Tool Stack for BAs",
-    desc: "Copilot, ChatGPT or Claude, Otter or Fireflies, Miro AI, Confluence AI, Jira AI, and prompt workflows for BRDs, user stories, meeting summaries, and problem statements — including governance and privacy caution for BFSI and healthcare.",
+    label: "AI-Era Workflow Guidance",
+    desc: "Which parts of your work should be accelerated with AI, which parts should stay human-led, and how to think about the workflow shift without damaging your credibility.",
   },
   {
     icon: "🗓️",
     label: "60-Day Upgrade Plan",
-    desc: "A week-by-week transition from documentation-heavy BA work to AI-augmented problem solving — with concrete deliverables, LinkedIn proof points, one AI feature case study, and targeted GCC applications.",
+    desc: "A structured transition plan that helps you build visible proof over the next 60 days instead of vaguely 'learning AI' and hoping the market notices.",
   },
   {
     icon: "🧾",
-    label: "Business Impact Statement Framework",
-    desc: "A reusable template that helps you speak like a product analyst, not a document writer. Includes a complete KYC example showing how to frame the problem, intervention point, business outcome, and human-in-the-loop guardrails.",
+    label: "Templates and Examples",
+    desc: "Reusable frameworks, examples, and positioning aids designed to help you communicate at a higher level in interviews, applications, and internal conversations.",
   },
   {
     icon: "🏦",
-    label: "GCC Target Map",
-    desc: "Where to aim first: BFSI GCCs, fintech, enterprise SaaS GCCs, and healthcare digital teams — with what each segment values, what AI work is growing there, and how your domain knowledge translates into hiring advantage.",
+    label: "Market Direction",
+    desc: "A clearer view of which kinds of roles, teams, and environments are moving toward higher-value BA work in India — and which ones are narrowing.",
   },
   {
     icon: "🎯",
-    label: "GCC Interview Prep",
-    desc: "The rejection patterns that keep BAs out of product-analyst roles, how to answer with metrics and ownership, and how to adapt the same AI feature case answer for a governance-heavy GCC room or a metric-driven product company room.",
+    label: "Interview and Positioning Support",
+    desc: "Guidance to help you show stronger ownership, sharper thinking, and better market awareness when you apply for higher-leverage roles.",
   },
   {
     icon: "💰",
     label: "Salary Reality 2026",
-    desc: "Why the move from ₹10–18 LPA BA work to ₹18–28 LPA GCC product analyst roles is not about title inflation — it is about a different type of work. Plus the realistic path to ₹30–42+ LPA over 12–18 months.",
+    desc: "A grounded salary view of what changes when you move from commodity BA work into stronger product, GCC, and AI-era analyst positioning.",
   },
 ];
 
@@ -71,141 +71,31 @@ const NOT_FOR_YOU = [
 
 const EVOLUTION_STAGES = [
   {
-    stage: "Now",
-    role: "IT Services BA / Senior BA",
-    skill: "BRDs, FRDs, user stories, sign-off cycles",
-    gccSalary: "₹10–18 LPA",
-    servicesSalary: "₹7–14 LPA",
-    deliverable: "Current job scope",
+    stage: "Stage 1",
+    role: "Commodity BA Work",
+    skill: "Documentation-heavy output with low strategic visibility",
+    gccSalary: "",
+    servicesSalary: "",
+    deliverable: "You are valued for what you produce, not what you frame",
     color: "#64748b",
   },
   {
-    stage: "Month 1–2",
+    stage: "Stage 2",
     role: "AI-Augmented BA",
-    skill: "Copilot for docs, AI meeting tools, prompt workflows",
-    gccSalary: "₹14–22 LPA",
-    servicesSalary: "₹10–16 LPA",
-    deliverable: "AI-drafted BRD plus one public proof point",
+    skill: "Faster execution plus visible signs of stronger thinking",
+    gccSalary: "",
+    servicesSalary: "",
+    deliverable: "You stop spending most of your energy on repeatable work",
     color: "#2563eb",
   },
   {
-    stage: "Month 3–6",
-    role: "Business Problem Analyst",
-    skill: "Systems thinking, customer problem framing, data literacy",
-    gccSalary: "₹18–26 LPA",
-    servicesSalary: "₹14–20 LPA",
-    deliverable: "Problem framing doc and insight portfolio",
+    stage: "Stage 3",
+    role: "Higher-Leverage Analyst",
+    skill: "Problem framing, feature thinking, and stronger outcome ownership",
+    gccSalary: "",
+    servicesSalary: "",
+    deliverable: "You are positioned closer to product and business outcomes",
     color: "#0d9268",
-  },
-  {
-    stage: "Month 6–12",
-    role: "AI-Era Product Analyst",
-    skill: "AI feature design, OKR thinking, outcome metrics",
-    gccSalary: "₹22–32 LPA",
-    servicesSalary: "₹18–26 LPA",
-    deliverable: "AI feature case study plus targeted GCC applications",
-    color: "#7c3aed",
-  },
-  {
-    stage: "12+ Months",
-    role: "Product Strategy Lead / AI BA Platform Owner",
-    skill: "AI governance, stakeholder strategy, prompt library ownership",
-    gccSalary: "₹28–42+ LPA",
-    servicesSalary: "₹24–36 LPA",
-    deliverable: "Offer plus measurable product outcome ownership",
-    color: "#d97706",
-  },
-];
-
-const LEVERAGE_ZONES = [
-  {
-    title: "Business Problem Discovery",
-    desc: "Spotting the real issue behind what stakeholders ask for. This is where experienced BAs outperform AI because the problem is often political, incentive-driven, or badly framed.",
-  },
-  {
-    title: "Whole-System Thinking",
-    desc: "Seeing upstream causes, downstream consequences, customer friction, and process dependencies at the same time — not just documenting one module in isolation.",
-  },
-  {
-    title: "Stakeholder Conflict Navigation",
-    desc: "Resolving what finance, operations, compliance, and delivery each want when they are all technically right and the timeline cannot satisfy everyone.",
-  },
-  {
-    title: "AI Feature Design",
-    desc: "Translating a real business problem into an AI-assisted workflow with guardrails, confidence thresholds, and business-side acceptance criteria that engineering can act on.",
-  },
-  {
-    title: "Outcome Ownership",
-    desc: "Owning the metric after launch. AI can produce documents; it cannot own completion rate, revenue recovery, compliance incidents, or customer satisfaction.",
-  },
-];
-
-const TOOL_STACK = [
-  {
-    tier: "Tier 1 — Learn First",
-    items: [
-      "Microsoft Copilot for BA documentation and meeting synthesis",
-      "ChatGPT or Claude for BRDs, user stories, and structured first drafts",
-      "Otter.ai or Fireflies for discovery-call capture",
-      "Miro AI or FigJam AI for journey maps and workshop facilitation",
-      "Confluence AI or Notion AI for knowledge-system leverage",
-    ],
-  },
-  {
-    tier: "Tier 2 — Add in Months 2–4",
-    items: [
-      "Power BI or Tableau basics for analyst-level data literacy",
-      "Jira plus AI plugins for backlog and story workflows",
-      "Prompt engineering for BA tasks and repeatable templates",
-      "OKR frameworks for shifting from deliverables to outcomes",
-      "Privacy and governance judgment for BFSI or healthcare contexts",
-    ],
-  },
-];
-
-const TARGET_MARKETS = [
-  {
-    title: "BFSI GCCs and Bank Captives",
-    desc: "High structure, high governance, and clear need for BAs who can design AI features with audit defensibility, human-in-the-loop routing, and compliance awareness.",
-    companies: "JPMorgan, Wells Fargo, Amex, HSBC, Standard Chartered, Citi, Goldman Sachs",
-    color: "#0f766e",
-  },
-  {
-    title: "Indian Fintech",
-    desc: "Faster product cycles, more experimentation, and huge upside for analysts who can connect AI use cases like KYC, fraud, collections, and risk scoring to business metrics.",
-    companies: "Razorpay, PhonePe, Zerodha, Groww, CRED, BharatPe, slice",
-    color: "#2563eb",
-  },
-  {
-    title: "Enterprise SaaS GCCs",
-    desc: "A strong path for BAs who can translate complex workflows into AI copilots, intelligent document processing, or AI-powered business flows inside structured product teams.",
-    companies: "SAP, Salesforce, Oracle, Adobe, ServiceNow, Microsoft IDC",
-    color: "#7c3aed",
-  },
-  {
-    title: "Healthcare and Life Sciences Digital Teams",
-    desc: "A high-moat segment for domain-aware BAs who can mix workflow design with regulation sensitivity and AI-assisted decision support thinking.",
-    companies: "Apollo Digital, Philips India, Optum India, GE Healthcare India, Manipal Digital",
-    color: "#d97706",
-  },
-];
-
-const INTERVIEW_FIXES = [
-  {
-    signal: "You lead with BRDs and FRDs",
-    fix: "Lead with the business problem and the measurable outcome first. Documentation is expected. Problem framing is what differentiates you.",
-  },
-  {
-    signal: "You describe projects without numbers",
-    fix: "Attach one metric to every story: drop-off rate, revenue leakage, time saved, volume reduced, or completion rate improved.",
-  },
-  {
-    signal: "You say you know AI tools but cannot show usage",
-    fix: "Name the tool, the task, the time saved, and what you did with that freed time. One concrete sentence beats ten vague ones.",
-  },
-  {
-    signal: "You describe what the team did, not what you owned",
-    fix: "Use lines like 'I decided', 'I framed', and 'I owned'. GCC and product roles are hiring for visible ownership, not passive participation.",
   },
 ];
 
@@ -597,38 +487,14 @@ export default function BusinessAnalystSurvivalGuidePage() {
         </div>
       </section>
 
-      <section style={{ padding: "72px 20px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 920, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 46 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#0f766e", display: "block", marginBottom: 12 }}>
-              Your Leverage Zone
-            </span>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              The 5 Types of BA Work AI Cannot Own
-            </h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20 }}>
-            {LEVERAGE_ZONES.map((zone, index) => (
-              <div key={zone.title} style={{ background: "#f8fafc", border: "1px solid #dbe5f0", borderRadius: 16, padding: "24px 24px" }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "#0f766e", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>
-                  Zone {index + 1}
-                </div>
-                <div style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", marginBottom: 10 }}>{zone.title}</div>
-                <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.7 }}>{zone.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section style={{ padding: "72px 20px", background: "#f8fafc" }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 46 }}>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#2563eb", display: "block", marginBottom: 12 }}>
-              Transition Path
+              The Shift
             </span>
             <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              Your BA Career Evolution Map
+              What Buyers Are Really Paying For
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
@@ -639,62 +505,7 @@ export default function BusinessAnalystSurvivalGuidePage() {
                 </div>
                 <div style={{ fontSize: 19, fontWeight: 800, color: "#0a1628", marginBottom: 10 }}>{item.role}</div>
                 <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.65, marginBottom: 14 }}>{item.skill}</div>
-                <div style={{ fontSize: 13, color: "#0a1628", fontWeight: 700 }}>GCC / Product: {item.gccSalary}</div>
-                <div style={{ fontSize: 13, color: "#5a6a8a", marginTop: 4 }}>IT Services: {item.servicesSalary}</div>
                 <div style={{ fontSize: 13, color: "#5a6a8a", marginTop: 10, lineHeight: 1.55 }}>{item.deliverable}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "72px 20px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#0f766e", display: "block", marginBottom: 12 }}>
-              AI Stack
-            </span>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              What You Need to Learn First
-            </h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
-            {TOOL_STACK.map((group) => (
-              <div key={group.tier} style={{ background: "#f8fafc", border: "1px solid #dbe5f0", borderRadius: 16, padding: "24px 26px" }}>
-                <div style={{ fontSize: 16, fontWeight: 800, color: "#0a1628", marginBottom: 14 }}>{group.tier}</div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                  {group.items.map((item) => (
-                    <div key={item} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                      <span style={{ color: "#0f766e", fontWeight: 700, marginTop: 1 }}>•</span>
-                      <span style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.65 }}>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "72px 20px", background: "#f0fdfa" }}>
-        <div style={{ maxWidth: 920, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 46 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#0f766e", display: "block", marginBottom: 12 }}>
-              Where to Target
-            </span>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              GCC and Product Segments That Reward This Shift
-            </h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20 }}>
-            {TARGET_MARKETS.map((market) => (
-              <div key={market.title} style={{ background: "#ffffff", border: "1px solid #d9f5f0", borderRadius: 16, padding: "24px 24px" }}>
-                <div style={{ fontSize: 17, fontWeight: 800, color: "#0a1628", marginBottom: 10 }}>{market.title}</div>
-                <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.7, marginBottom: 12 }}>{market.desc}</div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: market.color, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>
-                  Target Examples
-                </div>
-                <div style={{ fontSize: 13, color: "#4a5a7a", lineHeight: 1.65 }}>{market.companies}</div>
               </div>
             ))}
           </div>
@@ -734,26 +545,6 @@ export default function BusinessAnalystSurvivalGuidePage() {
         </div>
       </section>
 
-      <section style={{ padding: "72px 20px", background: "#f8fafc" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 46 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#2563eb", display: "block", marginBottom: 12 }}>
-              Interview Fixes
-            </span>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              Why BAs Miss GCC Roles
-            </h2>
-          </div>
-          <div style={{ display: "grid", gap: 16 }}>
-            {INTERVIEW_FIXES.map((item) => (
-              <div key={item.signal} style={{ background: "#ffffff", border: "1px solid #dbe5f0", borderRadius: 14, padding: "22px 24px" }}>
-                <div style={{ fontSize: 15, fontWeight: 800, color: "#0a1628", marginBottom: 8 }}>{item.signal}</div>
-                <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.7 }}>{item.fix}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section
         style={{
