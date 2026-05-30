@@ -24,9 +24,9 @@ export default function Navbar() {
           position: "sticky",
           top: 0,
           zIndex: 100,
-          background: "rgba(251,252,248,0.92)",
-          backdropFilter: "blur(16px)",
-          borderBottom: "1px solid rgba(19,32,51,0.08)",
+          background: "rgba(255,255,255,0.97)",
+          backdropFilter: "blur(12px)",
+          borderBottom: "1px solid rgba(10,22,40,0.08)",
         }}
       >
         <div
@@ -36,34 +36,23 @@ export default function Navbar() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: 74,
+            height: 68,
             padding: "0 20px",
-            gap: 18,
           }}
         >
-          <Link
-            href="/"
-            style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}
-          >
+          <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}>
             <img
               src="/sriram.png"
               alt="Sriram Advisory"
-              style={{
-                width: 42,
-                height: 42,
-                borderRadius: "50%",
-                objectFit: "cover",
-                border: "2px solid #12846c",
-                flexShrink: 0,
-              }}
+              style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }}
             />
             <div>
               <div
                 style={{
                   fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                  fontSize: 23,
+                  fontSize: 22,
                   letterSpacing: "0.08em",
-                  color: "#132033",
+                  color: "#0a1628",
                   lineHeight: 1,
                 }}
               >
@@ -71,12 +60,12 @@ export default function Navbar() {
               </div>
               <div
                 style={{
-                  fontSize: 12,
-                  letterSpacing: "0.12em",
-                  color: "#12846c",
+                  fontSize: 13,
+                  letterSpacing: "0.10em",
+                  color: "#1a4fd6",
                   textTransform: "uppercase",
                   lineHeight: 1.5,
-                  fontWeight: 700,
+                  fontWeight: 600,
                 }}
               >
                 Career Intelligence for India
@@ -94,12 +83,12 @@ export default function Navbar() {
                   aria-current={active ? "page" : undefined}
                   style={{
                     fontSize: 13,
-                    fontWeight: 600,
+                    fontWeight: 500,
                     textDecoration: "none",
-                    padding: "8px 14px",
-                    borderRadius: 999,
-                    color: active ? "#132033" : "#566274",
-                    background: active ? "rgba(19,32,51,0.08)" : "transparent",
+                    padding: "6px 14px",
+                    borderRadius: 6,
+                    color: active ? "#0a1628" : "#5a6a8a",
+                    background: active ? "rgba(10,22,40,0.06)" : "transparent",
                     transition: "color 0.15s, background 0.15s",
                     letterSpacing: "0.01em",
                   }}
@@ -108,6 +97,7 @@ export default function Navbar() {
                 </Link>
               );
             })}
+
             <Link
               href="/contact"
               style={{
@@ -115,14 +105,14 @@ export default function Navbar() {
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                background: "#132033",
+                background: "#1a4fd6",
                 color: "#ffffff",
                 fontWeight: 700,
                 fontSize: 13,
                 padding: "10px 18px",
-                borderRadius: 999,
+                borderRadius: 8,
                 textDecoration: "none",
-                border: "1px solid #132033",
+                border: "1px solid #3b6ef0",
               }}
             >
               Contact
@@ -149,7 +139,7 @@ export default function Navbar() {
                 display: "block",
                 width: 22,
                 height: 2,
-                background: "#132033",
+                background: "#0a1628",
                 borderRadius: 2,
                 transform: open ? "rotate(45deg) translate(5px,5px)" : "none",
                 transition: "transform 0.2s",
@@ -160,7 +150,7 @@ export default function Navbar() {
                 display: "block",
                 width: 22,
                 height: 2,
-                background: "#132033",
+                background: "#0a1628",
                 borderRadius: 2,
                 opacity: open ? 0 : 1,
                 transition: "opacity 0.2s",
@@ -171,7 +161,7 @@ export default function Navbar() {
                 display: "block",
                 width: 22,
                 height: 2,
-                background: "#132033",
+                background: "#0a1628",
                 borderRadius: 2,
                 transform: open ? "rotate(-45deg) translate(5px,-5px)" : "none",
                 transition: "transform 0.2s",
@@ -186,8 +176,8 @@ export default function Navbar() {
             role="menu"
             aria-label="Mobile navigation"
             style={{
-              borderTop: "1px solid rgba(19,32,51,0.08)",
-              background: "rgba(251,252,248,0.98)",
+              borderTop: "1px solid rgba(10,22,40,0.08)",
+              background: "rgba(255,255,255,0.99)",
               padding: "12px 20px 20px",
               display: "flex",
               flexDirection: "column",
@@ -198,16 +188,16 @@ export default function Navbar() {
             <Link
               href="/"
               role="menuitem"
-              onClick={() => setOpen(false)}
               aria-current={pathname === "/" ? "page" : undefined}
+              onClick={() => setOpen(false)}
               style={{
                 fontSize: 15,
-                fontWeight: 600,
+                fontWeight: 500,
                 textDecoration: "none",
                 padding: "10px 14px",
-                borderRadius: 10,
-                color: pathname === "/" ? "#132033" : "#566274",
-                background: pathname === "/" ? "rgba(19,32,51,0.06)" : "transparent",
+                borderRadius: 8,
+                color: pathname === "/" ? "#0a1628" : "#5a6a8a",
+                background: pathname === "/" ? "rgba(10,22,40,0.06)" : "transparent",
               }}
             >
               Home
@@ -223,12 +213,12 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   style={{
                     fontSize: 15,
-                    fontWeight: 600,
+                    fontWeight: 500,
                     textDecoration: "none",
                     padding: "10px 14px",
-                    borderRadius: 10,
-                    color: active ? "#132033" : "#566274",
-                    background: active ? "rgba(19,32,51,0.06)" : "transparent",
+                    borderRadius: 8,
+                    color: active ? "#0a1628" : "#5a6a8a",
+                    background: active ? "rgba(10,22,40,0.06)" : "transparent",
                   }}
                 >
                   {link.label}
@@ -247,10 +237,10 @@ export default function Navbar() {
                 fontWeight: 700,
                 textDecoration: "none",
                 padding: "12px 18px",
-                borderRadius: 10,
-                background: "#132033",
+                borderRadius: 8,
+                background: "#1a4fd6",
                 color: "#ffffff",
-                border: "1px solid #132033",
+                border: "1px solid #3b6ef0",
               }}
             >
               Contact

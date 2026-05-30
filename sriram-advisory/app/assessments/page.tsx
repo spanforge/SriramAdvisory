@@ -17,6 +17,9 @@ const ASSESSMENTS = [
     href: "/sa-airs-score-report",
     cta: "View Score Report",
     status: "Available Now",
+    accentColor: "#1a4fd6",
+    bgGradient: "linear-gradient(135deg, #f0f5ff 0%, #e6eeff 100%)",
+    borderColor: "#c7d7ff",
   },
   {
     title: "Am I Future-Proof? Audit",
@@ -25,6 +28,9 @@ const ASSESSMENTS = [
     href: "/am-i-future-proof",
     cta: "View Audit",
     status: "Available Now",
+    accentColor: "#dc2626",
+    bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
+    borderColor: "#fecaca",
   },
   {
     title: "Workforce Intelligence Benchmarks",
@@ -33,48 +39,138 @@ const ASSESSMENTS = [
     href: "/contact",
     cta: "Enquire",
     status: "Coming Soon",
+    accentColor: "#0d9268",
+    bgGradient: "linear-gradient(135deg, #effaf6 0%, #dff5ed 100%)",
+    borderColor: "#b7ead7",
   },
 ];
 
 export default function AssessmentsPage() {
   return (
-    <div style={{ background: "#fbfcf8", color: "#132033", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
 
-      <section style={{ padding: "120px 24px 84px", background: "linear-gradient(180deg, #f7f8ee 0%, #ffffff 100%)" }}>
-        <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#12846c" }}>
+      <section
+        style={{
+          background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 60%, #e6efff 100%)",
+          paddingTop: 100,
+          paddingBottom: 72,
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: 780, margin: "0 auto", padding: "0 20px" }}>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              background: "rgba(26,79,214,0.08)",
+              border: "1px solid rgba(26,79,214,0.2)",
+              borderRadius: 20,
+              padding: "6px 16px",
+              marginBottom: 28,
+            }}
+          >
+            <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#1a4fd6", display: "inline-block" }} />
+            <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a4fd6" }}>
+              Structured Frameworks
+            </span>
+          </div>
+          <h1
+            style={{
+              fontSize: "clamp(36px, 5vw, 60px)",
+              fontWeight: 800,
+              color: "#0a1628",
+              lineHeight: 1.1,
+              marginBottom: 20,
+              letterSpacing: "-0.02em",
+            }}
+          >
             Assessments
-          </span>
-          <h1 style={{ fontSize: "clamp(40px, 6vw, 82px)", lineHeight: 1, color: "#132033", marginTop: 18, marginBottom: 18 }}>
-            Frameworks for reading change, not just reacting to it.
           </h1>
-          <p style={{ maxWidth: 760, fontSize: "clamp(18px, 2.1vw, 22px)", lineHeight: 1.75, color: "#566274" }}>
-            Assessments are one part of the larger workforce intelligence system. They
-            help professionals translate broad market change into structured personal insight.
+          <p
+            style={{
+              fontSize: "clamp(16px, 2vw, 19px)",
+              color: "#5a6a8a",
+              lineHeight: 1.75,
+              maxWidth: 620,
+              margin: "0 auto",
+            }}
+          >
+            Structured assessment products sit inside the larger workforce intelligence
+            system and help professionals translate market change into personal clarity.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: "84px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 1040, margin: "0 auto", display: "grid", gap: 18 }}>
+      <section style={{ maxWidth: 980, margin: "0 auto", padding: "72px 20px 80px" }}>
+        <h2 style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", marginBottom: 32 }}>
+          Assessment Paths
+        </h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           {ASSESSMENTS.map((item) => (
-            <div key={item.title} style={{ padding: 26, borderRadius: 22, background: "#f7f8ee", border: "1px solid rgba(19,32,51,0.08)" }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14, flexWrap: "wrap", marginBottom: 12 }}>
-                <span style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: item.status === "Available Now" ? "#12846c" : "#7b8697" }}>
-                  {item.status}
-                </span>
-                <span style={{ fontSize: 13, color: "#566274", fontWeight: 600 }}>{item.subtitle}</span>
+            <div
+              key={item.title}
+              style={{
+                background: item.bgGradient,
+                border: `1.5px solid ${item.borderColor}`,
+                borderRadius: 16,
+                padding: "28px 28px",
+                display: "flex",
+                gap: 28,
+                alignItems: "flex-start",
+                flexWrap: "wrap",
+              }}
+            >
+              <div style={{ flex: 1, minWidth: 260 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                  <span
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 700,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      background: item.accentColor,
+                      color: "#ffffff",
+                      padding: "3px 10px",
+                      borderRadius: 20,
+                    }}
+                  >
+                    {item.status}
+                  </span>
+                  <span style={{ fontSize: 12, color: "#5a6a8a", fontWeight: 500 }}>
+                    {item.subtitle}
+                  </span>
+                </div>
+                <h3 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 800, color: "#0a1628", marginBottom: 12 }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.75, marginBottom: 0 }}>
+                  {item.body}
+                </p>
               </div>
-              <h2 style={{ fontSize: "clamp(24px, 3vw, 34px)", color: "#132033", marginBottom: 12 }}>
-                {item.title}
-              </h2>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: "#566274", marginBottom: 18 }}>
-                {item.body}
-              </p>
-              <Link href={item.href} style={{ color: "#132033", fontWeight: 700, textDecoration: "none", borderBottom: "1px solid rgba(19,32,51,0.24)", paddingBottom: 2 }}>
-                {item.cta}
-              </Link>
+
+              <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+                <Link
+                  href={item.href}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                    background: item.accentColor,
+                    color: "#fff",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    padding: "11px 22px",
+                    borderRadius: 8,
+                    textDecoration: "none",
+                    letterSpacing: "0.01em",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {item.cta}
+                </Link>
+              </div>
             </div>
           ))}
         </div>
