@@ -6,28 +6,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tools | Sriram Advisory",
   description:
-    "Career intelligence tools for Indian professionals — SA-AIRS™ Score Report and the Am I Future-Proof? Audit. Know your exact AI risk score and risk horizon.",
+    "Career intelligence tools for Indian professionals — including the Am I Future-Proof? Audit. Know your exact AI risk horizon and next moves.",
 };
 
 const TOOLS = [
-  {
-    badge: "Core Tool",
-    badgeBg: "#1a4fd6",
-    badgeColor: "#ffffff",
-    title: "SA-AIRS™ Score Report",
-    subtitle: "Your AI risk score across 5 dimensions. Ladder placed. Benchmarked.",
-    blurb:
-      "The foundational career risk assessment. Your role scored across 5 weighted dimensions — Task Repetition, Automation Feasibility, Market Saturation, Decision Complexity, Human Dependency — with confidence ratings, industry benchmarks, and a 90-day re-score. Rule-based logic. Every input traceable. No black boxes.",
-    price: "₹499",
-    strikePrice: "₹799",
-    tag: "Standard",
-    href: "/sa-airs-score-report",
-    accentColor: "#1a4fd6",
-    bgGradient: "linear-gradient(135deg, #f0f5ff 0%, #e6eeff 100%)",
-    borderColor: "#c7d7ff",
-    ctaLabel: "Get the Score Report →",
-    details: ["SA-AIRS™ composite score (0–10)", "5-dimension breakdown with confidence ratings", "Top 10% Ladder placement (L1–L5)", "Industry & role benchmarks", "90-day re-score included"],
-  },
   {
     badge: "Audit",
     badgeBg: "#dc2626",
@@ -117,9 +99,9 @@ export default function ToolsPage() {
               margin: "0 auto",
             }}
           >
-            Rule-based career risk scoring for Indian professionals. Know exactly where
-            you stand — your SA-AIRS™ score, your ladder position, and your risk horizon.
-            No AI-generated interpretations. Transparent, traceable logic.
+            Career intelligence for Indian professionals who want more than generic AI advice.
+            Know your likely risk horizon, your exposure level, and the next moves that matter
+            most for your role.
           </p>
         </div>
       </section>
@@ -329,30 +311,6 @@ export default function ToolsPage() {
               marginTop: 28,
             }}
           >
-            <div
-              style={{
-                background: "#fff",
-                border: "1.5px solid #c7d7ff",
-                borderRadius: 12,
-                padding: "24px 24px",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: 11,
-                  fontWeight: 700,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "#1a4fd6",
-                  marginBottom: 10,
-                }}
-              >
-                SA-AIRS™ Score Report
-              </div>
-              <p style={{ fontSize: 14, color: "#3d4f6e", lineHeight: 1.7 }}>
-                Best if you want to know your exact risk score and dimension breakdown — the data, your number, and where you sit on the ladder. Self-serve assessment.
-              </p>
-            </div>
             <div
               style={{
                 background: "#fff",

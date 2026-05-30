@@ -11,6 +11,10 @@ export const metadata: Metadata = {
 
 const PERSONAL_DELIVERY_NOTE =
   "After your payment, Sriram personally emails the guide to you. This is a manual send by design so the delivery stays transparent and human.";
+const BONUS_GUIDE_TITLE =
+  "With every purchase, get Sriram Advisory's Agentic AI Field Guide for free.";
+const BONUS_GUIDE_NOTE =
+  "A concise companion guide covering what AI agents are, how they reason, tool-use patterns, memory, guardrails, observability, and where the frontier is headed.";
 
 const WHAT_INSIDE = [
   {
@@ -254,6 +258,9 @@ export default function BusinessAnalystSurvivalGuidePage() {
             >
               Personal Email Delivery
             </span>
+            <p style={{ fontSize: 13, color: "rgba(190,235,240,0.82)", lineHeight: 1.6, margin: "0 0 18px" }}>
+              <strong>{BONUS_GUIDE_TITLE}</strong> {BONUS_GUIDE_NOTE}
+            </p>
 
             <CashfreeCheckout
               productName="Business Analyst Survival Guide 2026"
@@ -581,6 +588,9 @@ export default function BusinessAnalystSurvivalGuidePage() {
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#99f6e4", marginBottom: 20 }}>
               Personal Email Delivery
             </span>
+            <p style={{ fontSize: 13, color: "rgba(190,235,240,0.82)", lineHeight: 1.6, margin: "0 0 18px", maxWidth: 560 }}>
+              <strong>{BONUS_GUIDE_TITLE}</strong> {BONUS_GUIDE_NOTE}
+            </p>
             <CashfreeCheckout
               productName="Business Analyst Survival Guide 2026"
               amount={499}

@@ -6,130 +6,43 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Java Developer AI Leverage Guide 2026 | Sriram Advisory",
   description:
-    "SA-AIRS™ score: 7.5/10. The Java developer's AI leverage roadmap — Copilot, Spring AI, LangChain4j, salary reality, hiring signals, and a 60-day plan built for India's GCC and product market. ₹499.",
+    "SA-AIRS score: 7.5/10. A practical India-first guide for Java developers using AI to move into higher-leverage work. Includes role-risk clarity, positioning strategy, and a structured action plan. Rs 499.",
 };
 
 const PERSONAL_DELIVERY_NOTE =
   "After your payment, Sriram personally emails the guide to you. This is a manual send by design so the delivery stays transparent and human.";
+const BONUS_GUIDE_TITLE =
+  "With every purchase, get Sriram Advisory's Agentic AI Field Guide for free.";
+const BONUS_GUIDE_NOTE =
+  "A concise companion guide covering what AI agents are, how they reason, tool-use patterns, memory, guardrails, observability, and where the frontier is headed.";
 
 const WHAT_INSIDE = [
-  {
-    icon: "📊",
-    label: "SA-AIRS™ Score 7.5 — Decoded",
-    desc: "What is actually at risk in Java, what is not, and where the salary premium is moving.",
-  },
-  {
-    icon: "🧭",
-    label: "The Java Career Transition Map",
-    desc: "The shortest realistic path from Spring Boot implementation work to AI-era Java positioning.",
-  },
-  {
-    icon: "🛡️",
-    label: "Your Leverage Zones",
-    desc: "The specific work AI cannot take from you: architecture, diagnosis, domain judgment, and technical leadership.",
-  },
-  {
-    icon: "🤖",
-    label: "The AI Tool Stack",
-    desc: "Exactly what to learn first and what to ignore for now: Copilot, Spring AI, LangChain4j, and enterprise-ready Java AI patterns.",
-  },
-  {
-    icon: "🗓️",
-    label: "60-Day Upgrade Plan",
-    desc: "A week-by-week plan built for working professionals, with portfolio milestones that actually matter in hiring.",
-  },
-  {
-    icon: "💰",
-    label: "Salary Reality 2026",
-    desc: "What Java + AI skills are really worth in IT services, GCCs, and product teams — and where the premium starts.",
-  },
+  { icon: "JV", label: "SA-AIRS Score 7.5 Decoded", desc: "A clear breakdown of what is actually at risk in Java careers and what still compounds." },
+  { icon: "LZ", label: "Your Leverage Zones", desc: "A practical way to think about architecture, diagnosis, ownership, and domain judgment as your moat." },
+  { icon: "PS", label: "Positioning Strategy", desc: "How to stop sounding like a boilerplate implementation resource and start sounding like a higher-value engineer." },
+  { icon: "AP", label: "Structured Action Plan", desc: "A practical plan for building visible proof instead of vaguely trying to learn everything around AI." },
+  { icon: "MD", label: "Market Direction", desc: "A clearer view of where Java plus AI is creating stronger buyer interest in India." },
+  { icon: "HS", label: "Hiring Signal Guidance", desc: "What makes a Java profile feel more future-ready in GCC and product settings without revealing the full paid playbook here." },
 ];
 
 const FOR_YOU = [
-  "You are a Java or Spring Boot developer who feels your day is too dependent on repetitive implementation work",
-  "You want to use AI to increase your leverage without abandoning the Java ecosystem",
-  "You are targeting GCC or product roles where Java plus AI commands a meaningful salary premium",
-  "You want a concrete 60-day roadmap, not generic advice to 'learn AI' or switch to Python immediately",
-  "You have domain depth in BFSI, fintech, e-commerce, or enterprise systems and want to turn that into an advantage",
+  "You are a Java or Spring Boot developer who feels repetitive implementation work is becoming easier to automate",
+  "You want to use AI to increase leverage without abandoning the Java ecosystem",
+  "You are targeting stronger GCC or product roles and want better positioning",
+  "You want a practical roadmap instead of generic advice to just learn AI",
+  "You want to move up the value chain, not sideways into panic",
 ];
 
 const NOT_FOR_YOU = [
-  "You are already building production AI features with Spring AI or LangChain4j",
-  "You want a beginner Java course or a full tutorial on Spring Boot fundamentals",
+  "You are already building advanced production AI features in Java and mainly need deep technical implementation help",
+  "You want a beginner Java course or a full Spring Boot tutorial",
   "You are outside India and looking for a global Java market analysis",
 ];
 
-const TRANSITION_PATHS = [
-  {
-    role: "AI-Augmented Java Developer",
-    timeline: "Month 1–2",
-    salary: "₹18–26 LPA",
-    feasibility: "9.1 / 10",
-    color: "#b45309",
-    desc: "The first upgrade layer for Java developers who want to become faster, sharper, and more market-relevant immediately.",
-  },
-  {
-    role: "Java + Spring AI Developer",
-    timeline: "Month 3–6",
-    salary: "₹22–32 LPA",
-    feasibility: "8.4 / 10",
-    color: "#c2410c",
-    desc: "The tier where your profile starts looking meaningfully different from a standard Spring Boot engineer.",
-  },
-  {
-    role: "AI-Era Java Architect",
-    timeline: "Month 6–12",
-    salary: "₹28–42 LPA",
-    feasibility: "7.4 / 10",
-    color: "#ea580c",
-    desc: "The premium tier for engineers trusted with higher-value technical decisions in AI-shaped teams.",
-  },
-  {
-    role: "Java AI Platform Lead",
-    timeline: "Month 12+",
-    salary: "₹35–55 LPA",
-    feasibility: "6.8 / 10",
-    color: "#f97316",
-    desc: "A long-term positioning path for engineers who want to move into the top end of the market.",
-  },
-];
-
-const SALARY_BANDS = [
-  {
-    role: "Java Developer (Spring Boot only)",
-    it: "₹8–16 LPA",
-    gcc: "₹14–22 LPA",
-    note: "Still viable today, but the ceiling is getting tighter.",
-    color: "#9aa8c0",
-  },
-  {
-    role: "Java Developer (Copilot + AI tools)",
-    it: "₹12–20 LPA",
-    gcc: "₹18–26 LPA",
-    note: "This is usually where the first visible salary premium starts.",
-    color: "#b45309",
-  },
-  {
-    role: "Java + Spring AI Developer",
-    it: "₹16–24 LPA",
-    gcc: "₹22–30 LPA",
-    note: "A strong repositioning tier for Java developers who move early.",
-    color: "#c2410c",
-  },
-  {
-    role: "AI-Era Java Architect",
-    it: "₹22–32 LPA",
-    gcc: "₹26–38 LPA",
-    note: "This is where the market starts rewarding deeper trust and stronger positioning.",
-    color: "#ea580c",
-  },
-  {
-    role: "Java Technical Lead + AI",
-    it: "₹28–38 LPA",
-    gcc: "₹32–48 LPA",
-    note: "The upper band exists, but only for a smaller set of well-positioned profiles.",
-    color: "#f97316",
-  },
+const SHIFT_STAGES = [
+  { stage: "Stage 1", title: "Boilerplate Dependence", desc: "Your profile is too tightly tied to implementation speed and repeatable backend work.", color: "#78716c" },
+  { stage: "Stage 2", title: "AI-Augmented Delivery", desc: "You start signaling stronger output, better judgment, and improved technical leverage.", color: "#b45309" },
+  { stage: "Stage 3", title: "Higher-Leverage Java Positioning", desc: "You are seen as someone who owns design, trade-offs, and business-aware engineering decisions.", color: "#ea580c" },
 ];
 
 export default function JavaDeveloperAILeverageGuidePage() {
@@ -137,149 +50,50 @@ export default function JavaDeveloperAILeverageGuidePage() {
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
 
-      <section
-        style={{
-          background: "linear-gradient(135deg, #1c0d05 0%, #5b2410 55%, #b45309 100%)",
-          paddingTop: 100,
-          paddingBottom: 90,
-          textAlign: "center",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            opacity: 0.05,
-            backgroundImage:
-              "repeating-linear-gradient(0deg, #fff 0px, #fff 1px, transparent 1px, transparent 48px), repeating-linear-gradient(90deg, #fff 0px, #fff 1px, transparent 1px, transparent 48px)",
-            pointerEvents: "none",
-          }}
-        />
-
+      <section style={{ background: "linear-gradient(135deg, #1c0d05 0%, #5b2410 55%, #b45309 100%)", paddingTop: 100, paddingBottom: 90, textAlign: "center", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, opacity: 0.05, backgroundImage: "repeating-linear-gradient(0deg, #fff 0px, #fff 1px, transparent 1px, transparent 48px), repeating-linear-gradient(90deg, #fff 0px, #fff 1px, transparent 1px, transparent 48px)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 840, margin: "0 auto", padding: "0 20px", position: "relative" }}>
           <div style={{ display: "flex", justifyContent: "center", gap: 10, marginBottom: 28, flexWrap: "wrap" }}>
-            <span
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 7,
-                background: "rgba(239,68,68,0.18)",
-                border: "1px solid rgba(239,68,68,0.4)",
-                borderRadius: 20,
-                padding: "6px 16px",
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "#fecaca",
-              }}
-            >
-              SA-AIRS™ Score: 7.5 / 10 — High Risk
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "rgba(239,68,68,0.18)", border: "1px solid rgba(239,68,68,0.4)", borderRadius: 20, padding: "6px 16px", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fecaca" }}>
+              SA-AIRS Score: 7.5 / 10 - Active Risk
             </span>
-            <span
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 7,
-                background: "rgba(251,191,36,0.18)",
-                border: "1px solid rgba(251,191,36,0.38)",
-                borderRadius: 20,
-                padding: "6px 16px",
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "#fde68a",
-              }}
-            >
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "rgba(251,191,36,0.18)", border: "1px solid rgba(251,191,36,0.38)", borderRadius: 20, padding: "6px 16px", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fde68a" }}>
               India 2026 Edition
             </span>
           </div>
 
-          <h1
-            style={{
-              fontSize: "clamp(34px, 5.5vw, 64px)",
-              fontWeight: 800,
-              color: "#ffffff",
-              lineHeight: 1.08,
-              marginBottom: 22,
-              letterSpacing: "-0.03em",
-            }}
-          >
+          <h1 style={{ fontSize: "clamp(34px, 5.5vw, 64px)", fontWeight: 800, color: "#ffffff", lineHeight: 1.08, marginBottom: 22, letterSpacing: "-0.03em" }}>
             Java Developer
             <br />
             <span style={{ color: "#fdba74" }}>AI Leverage Guide 2026</span>
           </h1>
 
-          <p
-            style={{
-              fontSize: "clamp(16px, 2.2vw, 20px)",
-              color: "rgba(255,230,200,0.86)",
-              lineHeight: 1.65,
-              maxWidth: 660,
-              margin: "0 auto 16px",
-            }}
-          >
-            Java is not dying. But boilerplate-heavy Java careers are getting squeezed.
-            This guide shows you how to move into the higher-value layer: AI leverage, architecture, and premium GCC positioning.
+          <p style={{ fontSize: "clamp(16px, 2.2vw, 20px)", color: "rgba(255,230,200,0.86)", lineHeight: 1.65, maxWidth: 680, margin: "0 auto 16px" }}>
+            Java is not disappearing. But commodity Java work is getting squeezed. This guide helps you move toward
+            higher-leverage engineering identity built around judgment, architecture, and better AI-era positioning.
           </p>
 
-          <p
-            style={{
-              fontSize: 15,
-              color: "rgba(253,186,116,0.7)",
-              fontStyle: "italic",
-              marginBottom: 44,
-            }}
-          >
-            Let AI write what AI can write. Keep your time for what it cannot.
+          <p style={{ fontSize: 15, color: "rgba(253,186,116,0.7)", fontStyle: "italic", marginBottom: 44 }}>
+            Let AI handle the repeatable work. Keep your time for what compounds.
           </p>
 
-          <div
-            className="hero-price-box"
-            style={{
-              background: "rgba(255,255,255,0.07)",
-              border: "1px solid rgba(255,255,255,0.15)",
-              borderRadius: 20,
-            }}
-          >
+          <div className="hero-price-box" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 20 }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14 }}>
-              <span style={{ fontSize: 48, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹499</span>
+              <span style={{ fontSize: 48, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>Rs 499</span>
             </div>
-            <span
-              style={{
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "#fdba74",
-                marginBottom: 20,
-                display: "block",
-              }}
-            >
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fdba74", marginBottom: 20, display: "block" }}>
               Personal Email Delivery
             </span>
+            <p style={{ fontSize: 13, color: "rgba(255,235,210,0.82)", lineHeight: 1.6, margin: "0 0 18px" }}>
+              <strong>{BONUS_GUIDE_TITLE}</strong> {BONUS_GUIDE_NOTE}
+            </p>
 
             <CashfreeCheckout
               productName="Java Developer AI Leverage Guide 2026"
               amount={499}
               accentColor="#b45309"
-              buttonLabel="Get the Guide Now — ₹499 →"
-              buttonStyle={{
-                fontSize: 17,
-                fontWeight: 700,
-                padding: "16px 36px",
-                borderRadius: 10,
-                background: "#b45309",
-                color: "#ffffff",
-                border: "none",
-                cursor: "pointer",
-                letterSpacing: "0.01em",
-                width: "100%",
-                minWidth: 280,
-              }}
+              buttonLabel="Get the Guide Now - Rs 499 ->"
+              buttonStyle={{ fontSize: 17, fontWeight: 700, padding: "16px 36px", borderRadius: 10, background: "#b45309", color: "#ffffff", border: "none", cursor: "pointer", letterSpacing: "0.01em", width: "100%", minWidth: 280 }}
             />
             <p style={{ fontSize: 13, color: "rgba(255,220,190,0.6)", marginTop: 12 }}>
               Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
@@ -291,151 +105,51 @@ export default function JavaDeveloperAILeverageGuidePage() {
       <section style={{ background: "#ffffff", padding: "88px 20px" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <span
-              style={{
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "#dc2626",
-                display: "block",
-                marginBottom: 16,
-              }}
-            >
-              SA-AIRS™ Exposure Score
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#dc2626", display: "block", marginBottom: 16 }}>
+              SA-AIRS Exposure Score
             </span>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 20, marginBottom: 24 }}>
-              <span style={{ fontSize: "clamp(64px, 10vw, 96px)", fontWeight: 900, color: "#dc2626", lineHeight: 1, letterSpacing: "-0.04em" }}>
-                7.5
-              </span>
+              <span style={{ fontSize: "clamp(64px, 10vw, 96px)", fontWeight: 900, color: "#dc2626", lineHeight: 1, letterSpacing: "-0.04em" }}>7.5</span>
               <div style={{ textAlign: "left" }}>
-                <div style={{ fontSize: 14, fontWeight: 700, color: "#dc2626", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                  High Risk
-                </div>
-                <div style={{ fontSize: 13, color: "#5a6a8a", marginTop: 4 }}>
-                  Comfortable today, vulnerable in 24 months
-                </div>
+                <div style={{ fontSize: 14, fontWeight: 700, color: "#dc2626", textTransform: "uppercase", letterSpacing: "0.08em" }}>Active Risk</div>
+                <div style={{ fontSize: 13, color: "#5a6a8a", marginTop: 4 }}>Comfortable today, more compressed tomorrow</div>
               </div>
             </div>
             <div style={{ maxWidth: 480, margin: "0 auto", background: "#f0f4f8", borderRadius: 8, height: 12, overflow: "hidden" }}>
               <div style={{ width: "75%", height: "100%", background: "linear-gradient(90deg, #f59e0b, #dc2626)", borderRadius: 8 }} />
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between", maxWidth: 480, margin: "6px auto 0", fontSize: 11, color: "#9aa8c0" }}>
-              <span>Low Risk</span>
-              <span>High Exposure</span>
-            </div>
           </div>
 
-          <div
-            className="qa-score-card-pad"
-            style={{
-              background: "linear-gradient(135deg, #1c0d05 0%, #5b2410 100%)",
-              borderRadius: 20,
-              textAlign: "center",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                opacity: 0.06,
-                backgroundImage: "radial-gradient(#fff 1px, transparent 1px)",
-                backgroundSize: "24px 24px",
-                pointerEvents: "none",
-              }}
-            />
-            <p
-              style={{
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "#fdba74",
-                marginBottom: 20,
-                position: "relative",
-              }}
-            >
+          <div className="qa-score-card-pad" style={{ background: "linear-gradient(135deg, #1c0d05 0%, #5b2410 100%)", borderRadius: 20, textAlign: "center" }}>
+            <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#fdba74", marginBottom: 20 }}>
               What this score actually means
             </p>
-            <h2
-              style={{
-                fontSize: "clamp(20px, 3.2vw, 38px)",
-                fontWeight: 900,
-                color: "#ffffff",
-                lineHeight: 1.2,
-                letterSpacing: "-0.02em",
-                position: "relative",
-                marginBottom: 0,
-              }}
-            >
-              60–70% of repetitive Java implementation work
+            <h2 style={{ fontSize: "clamp(20px, 3.2vw, 38px)", fontWeight: 900, color: "#ffffff", lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: 0 }}>
+              Repetitive Java work is becoming cheaper.
               <br />
-              is{" "}
-              <span
-                style={{
-                  background: "linear-gradient(90deg, #fdba74, #fde68a)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                AI-automatable today.
-              </span>
+              Design judgment is becoming more valuable.
             </h2>
-            <p style={{ fontSize: 16, color: "rgba(255,230,200,0.72)", marginTop: 20, lineHeight: 1.7, position: "relative" }}>
-              The opportunity is not to switch stacks in panic.
-              The opportunity is to use AI to become more valuable than the engineers still competing on implementation speed alone.
+            <p style={{ fontSize: 16, color: "rgba(255,230,200,0.72)", marginTop: 20, lineHeight: 1.7 }}>
+              This guide is about using AI to become more valuable inside the Java ecosystem, not abandoning the stack in panic.
             </p>
           </div>
-
-          <div className="stats-grid-3" style={{ background: "#e8eef8", borderRadius: 14, overflow: "hidden", marginTop: 28 }}>
-            {[
-              { stat: "3.4M+", label: "Java developers in India competing in an increasingly AI-shaped market" },
-              { stat: "₹35 LPA+", label: "AI-era Java engineer path at strong GCC and product teams" },
-              { stat: "60 Days", label: "enough to build the first credible Java + AI portfolio signal" },
-            ].map((s) => (
-              <div key={s.stat} style={{ background: "#fff7ed", padding: "28px 20px", textAlign: "center" }}>
-                <div style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, color: "#0a1628", letterSpacing: "-0.03em" }}>{s.stat}</div>
-                <div style={{ fontSize: 13, color: "#5a6a8a", marginTop: 6, lineHeight: 1.5 }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <p style={{ fontSize: 16, color: "#5a6a8a", lineHeight: 1.8, textAlign: "center", marginTop: 32 }}>
-            The winning move is not abandoning Java.
-            <br />
-            <strong style={{ color: "#0a1628" }}>
-              It is using AI to multiply your Java experience while shifting your identity upward into design,
-              diagnosis, and business-aware engineering.
-            </strong>
-          </p>
         </div>
       </section>
 
       <section style={{ background: "#fff7ed", padding: "72px 20px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+        <div style={{ maxWidth: 920, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#b45309", display: "block", marginBottom: 12 }}>
               Inside the Guide
             </span>
             <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              Everything You Need to Make the Shift
+              What You Actually Get
             </h2>
           </div>
-
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20 }}>
             {WHAT_INSIDE.map((item) => (
-              <div
-                key={item.label}
-                style={{
-                  background: "#ffffff",
-                  border: "1px solid #fdba74",
-                  borderRadius: 14,
-                  padding: "24px 26px",
-                }}
-              >
-                <div style={{ fontSize: 28, marginBottom: 12 }}>{item.icon}</div>
+              <div key={item.label} style={{ background: "#ffffff", border: "1px solid #fdba74", borderRadius: 14, padding: "24px 26px" }}>
+                <div style={{ fontSize: 16, fontWeight: 800, color: "#b45309", marginBottom: 12 }}>{item.icon}</div>
                 <div style={{ fontSize: 15, fontWeight: 700, color: "#0a1628", marginBottom: 8 }}>{item.label}</div>
                 <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.65 }}>{item.desc}</div>
               </div>
@@ -445,51 +159,21 @@ export default function JavaDeveloperAILeverageGuidePage() {
       </section>
 
       <section style={{ padding: "72px 20px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 46 }}>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#b45309", display: "block", marginBottom: 12 }}>
-              Where You Can Go
+              The Shift
             </span>
             <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              The Java Transition Map
+              What Better Java Positioning Looks Like
             </h2>
-            <p style={{ fontSize: 15, color: "#5a6a8a", marginTop: 12 }}>
-              The guide shows the progression path — without forcing you to abandon your Java base.
-            </p>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            {TRANSITION_PATHS.map((p) => (
-              <div
-                key={p.role}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 20,
-                  background: "#fff7ed",
-                  border: "1px solid #fdba74",
-                  borderRadius: 12,
-                  padding: "20px 24px",
-                  flexWrap: "wrap",
-                }}
-              >
-                <div style={{ flex: 1, minWidth: 220 }}>
-                  <div style={{ fontSize: 16, fontWeight: 800, color: "#0a1628" }}>{p.role}</div>
-                  <div style={{ fontSize: 13, color: "#5a6a8a", marginTop: 4 }}>{p.desc}</div>
-                </div>
-                <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: p.color }}>{p.feasibility}</div>
-                    <div style={{ fontSize: 11, color: "#9aa8c0", textTransform: "uppercase", letterSpacing: "0.06em" }}>Feasibility</div>
-                  </div>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: p.color }}>{p.timeline}</div>
-                    <div style={{ fontSize: 11, color: "#9aa8c0", textTransform: "uppercase", letterSpacing: "0.06em" }}>Timeline</div>
-                  </div>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: 15, fontWeight: 800, color: p.color }}>{p.salary}</div>
-                    <div style={{ fontSize: 11, color: "#9aa8c0", textTransform: "uppercase", letterSpacing: "0.06em" }}>GCC Salary</div>
-                  </div>
-                </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
+            {SHIFT_STAGES.map((item) => (
+              <div key={item.title} style={{ background: "#fffaf5", border: "1px solid #fde0c2", borderRadius: 16, padding: "22px 22px" }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: item.color, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>{item.stage}</div>
+                <div style={{ fontSize: 19, fontWeight: 800, color: "#0a1628", marginBottom: 10 }}>{item.title}</div>
+                <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.65 }}>{item.desc}</div>
               </div>
             ))}
           </div>
@@ -497,124 +181,64 @@ export default function JavaDeveloperAILeverageGuidePage() {
       </section>
 
       <section style={{ padding: "72px 20px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#b45309", display: "block", marginBottom: 12 }}>
-              Salary Reality 2026
-            </span>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, color: "#0a1628", letterSpacing: "-0.02em" }}>
-              Where the Premium Actually Appears
-            </h2>
-            <p style={{ fontSize: 14, color: "#9aa8c0", marginTop: 10 }}>
-              The full guide breaks down where the meaningful pay jump starts — and where it usually does not.
-            </p>
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {SALARY_BANDS.map((s) => (
-              <div
-                key={s.role}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 20,
-                  background: "#fffaf5",
-                  border: "1px solid #fde0c2",
-                  borderRadius: 12,
-                  padding: "18px 24px",
-                  flexWrap: "wrap",
-                }}
-              >
-                <div style={{ flex: 1, minWidth: 220 }}>
-                  <div style={{ fontSize: 15, fontWeight: 800, color: "#0a1628" }}>{s.role}</div>
-                  <div style={{ fontSize: 13, color: "#5a6a8a", marginTop: 4 }}>{s.note}</div>
-                </div>
-                <div style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: 14, fontWeight: 700, color: "#5a6a8a" }}>{s.it}</div>
-                    <div style={{ fontSize: 11, color: "#9aa8c0", textTransform: "uppercase", letterSpacing: "0.06em" }}>IT Services</div>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48 }} className="grid-cols-1 md:grid-cols-2">
+            <div>
+              <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#b45309", display: "block", marginBottom: 24 }}>
+                This Is For You If
+              </span>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                {FOR_YOU.map((item) => (
+                  <div key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                    <span style={{ color: "#b45309", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>+</span>
+                    <span style={{ fontSize: 15, color: "#4a5a7a", lineHeight: 1.6 }}>{item}</span>
                   </div>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: 16, fontWeight: 800, color: s.color }}>{s.gcc}</div>
-                    <div style={{ fontSize: 11, color: "#9aa8c0", textTransform: "uppercase", letterSpacing: "0.06em" }}>GCC / Product</div>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div>
+              <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#dc2626", display: "block", marginBottom: 24 }}>
+                Not For You If
+              </span>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                {NOT_FOR_YOU.map((item) => (
+                  <div key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                    <span style={{ color: "#dc2626", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>x</span>
+                    <span style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.6 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "72px 20px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 840, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 40 }}>
-          <div>
-            <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", marginBottom: 22 }}>This guide is for you if…</h3>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14 }}>
-              {FOR_YOU.map((item) => (
-                <li key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                  <span style={{ color: "#b45309", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>✓</span>
-                  <span style={{ fontSize: 15, color: "#2d3f5e", lineHeight: 1.55 }}>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", marginBottom: 22 }}>This guide is NOT for you if…</h3>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14 }}>
-              {NOT_FOR_YOU.map((item) => (
-                <li key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                  <span style={{ color: "#dc2626", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>✕</span>
-                  <span style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.55 }}>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section
-        style={{
-          background: "linear-gradient(135deg, #1c0d05 0%, #5b2410 100%)",
-          padding: "80px 20px",
-          textAlign: "center",
-        }}
-      >
+      <section style={{ background: "linear-gradient(135deg, #1c0d05 0%, #5b2410 100%)", padding: "80px 20px", textAlign: "center" }}>
         <div style={{ maxWidth: 620, margin: "0 auto" }}>
           <h2 style={{ fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 800, color: "#ffffff", lineHeight: 1.15, marginBottom: 16, letterSpacing: "-0.02em" }}>
-            The Java moat still exists.
-            <br />
-            <span style={{ color: "#fdba74" }}>You just have to move up it.</span>
+            Move up the Java value chain.
           </h2>
           <p style={{ fontSize: 16, color: "rgba(255,230,200,0.75)", lineHeight: 1.7, maxWidth: 500, margin: "0 auto 40px" }}>
-            If you want the playbook for becoming more valuable, more visible, and harder to replace as a Java developer in 2026, this guide is built for that shift.
+            Use this guide to become more visible, more trusted, and more durable as a Java developer in an AI-shaped market.
           </p>
-
           <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 4 }}>
-              <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>₹499</span>
+              <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>Rs 499</span>
             </div>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fdba74", marginBottom: 20 }}>
               Personal Email Delivery
             </span>
+            <p style={{ fontSize: 13, color: "rgba(255,235,210,0.82)", lineHeight: 1.6, margin: "0 0 18px", maxWidth: 560 }}>
+              <strong>{BONUS_GUIDE_TITLE}</strong> {BONUS_GUIDE_NOTE}
+            </p>
             <CashfreeCheckout
               productName="Java Developer AI Leverage Guide 2026"
               amount={499}
               accentColor="#b45309"
-              buttonLabel="Get the Guide — ₹499 →"
-              buttonStyle={{
-                fontSize: 16,
-                fontWeight: 700,
-                padding: "16px 40px",
-                borderRadius: 10,
-                background: "#b45309",
-                color: "#ffffff",
-                border: "none",
-                cursor: "pointer",
-                letterSpacing: "0.01em",
-                minWidth: 260,
-              }}
+              buttonLabel="Get the Guide - Rs 499 ->"
+              buttonStyle={{ fontSize: 16, fontWeight: 700, padding: "16px 40px", borderRadius: 10, background: "#b45309", color: "#ffffff", border: "none", cursor: "pointer", letterSpacing: "0.01em", minWidth: 260 }}
             />
-            <p style={{ fontSize: 13, color: "rgba(255,220,190,0.48)", marginTop: 14 }}>
+            <p style={{ fontSize: 13, color: "rgba(255,235,210,0.5)", marginTop: 14 }}>
               Secure payment via Cashfree · {PERSONAL_DELIVERY_NOTE}
             </p>
           </div>

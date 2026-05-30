@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 
 const GUIDE_DELIVERY_NOTE =
   "After payment, Sriram personally emails the guide to you. No automated send, no surprise workflow.";
+const BONUS_GUIDE_NOTE =
+  "With every purchase, get Sriram Advisory's Agentic AI Field Guide for free — a concise primer on AI agents, tool use, memory, guardrails, observability, and where the frontier is headed.";
 
 const GUIDES = [
   {
@@ -196,6 +198,9 @@ export default function GuidesPage() {
                   <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.7, marginBottom: 0 }}>{g.blurb}</p>
                   <p style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.6, marginTop: 14, marginBottom: 0 }}>
                     {GUIDE_DELIVERY_NOTE}
+                  </p>
+                  <p style={{ fontSize: 13, color: g.accentColor, lineHeight: 1.6, marginTop: 8, marginBottom: 0, fontWeight: 600 }}>
+                    {BONUS_GUIDE_NOTE}
                   </p>
                 </div>
                 <div className="guide-card-price-col">
