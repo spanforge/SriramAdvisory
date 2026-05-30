@@ -17,6 +17,23 @@ const GUIDE_DELIVERY_NOTE =
 const GUIDES = [
   {
     badge: "New",
+    badgeBg: "#0f766e",
+    badgeColor: "#ffffff",
+    title: "Business Analyst Survival Guide 2026",
+    subtitle: "SA-AIRS™ 7.1/10. 60-day upgrade plan. GCC path. ₹42+ LPA target.",
+    blurb:
+      "The BA role is being squeezed where it is most repetitive. This guide shows Indian Business Analysts how to move from documentation-heavy work into AI-augmented problem framing, AI feature design, and GCC-ready product analyst positioning — with a 60-day upgrade plan, tool stack, interview prep, and salary map.",
+    price: "₹499",
+    strikePrice: "",
+    tag: "",
+    href: "/guides/business-analyst-survival-guide-2026",
+    accentColor: "#0f766e",
+    bgGradient: "linear-gradient(135deg, #ecfeff 0%, #ccfbf1 100%)",
+    borderColor: "#99f6e4",
+    available: true,
+  },
+  {
+    badge: "New",
     badgeBg: "#0d9268",
     badgeColor: "#ffffff",
     title: "QA Engineer Survival Guide 2026",
