@@ -76,8 +76,8 @@ export default function ResearchPage() {
               margin: "0 auto",
             }}
           >
-            Visible research is how Sriram Advisory signals the bigger category: studying
-            how work is changing across India, not just publishing role-specific products.
+            This page shows the research direction behind Sriram Advisory: tracking how
+            work, professions, and industries are changing across India in the age of AI.
           </p>
         </div>
       </section>
