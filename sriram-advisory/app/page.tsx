@@ -639,11 +639,11 @@ export default function HomePage() {
             Next Step
           </span>
           <h2 style={{ fontSize: "clamp(32px, 4.8vw, 56px)", color: "#0a1628", marginTop: 16, marginBottom: 18, letterSpacing: "-0.02em" }}>
-            Understand work change with research first, products second.
+            Explore workforce research and current offerings.
           </h2>
           <p style={{ fontSize: 18, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 34 }}>
-            Start with the research direction, then explore the current assessments, reports,
-            and guides already available today.
+            Explore the research direction behind Sriram Advisory, along with the assessments,
+            reports, and guides currently available.
           </p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
