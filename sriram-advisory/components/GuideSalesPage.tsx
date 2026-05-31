@@ -618,12 +618,9 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               >
                 "{content.testimonial.quote}"
               </p>
-              <div style={{ marginTop: 18, fontSize: 14, fontWeight: 700, color: theme.accent }}>
-                {content.testimonial.source}
-              </div>
-              {content.testimonial.context && (
-                <div style={{ marginTop: 6, fontSize: 13, color: "#6b7a96" }}>
-                  {content.testimonial.context}
+              {content.testimonial.source && (
+                <div style={{ marginTop: 18, fontSize: 14, fontWeight: 700, color: theme.accent }}>
+                  {content.testimonial.source}
                 </div>
               )}
             </div>
