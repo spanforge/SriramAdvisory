@@ -305,12 +305,11 @@ export default function HomePage() {
           <div style={{ marginBottom: 42 }}>
             <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>Research</span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Research builds trust before products do.
+              Research areas we are developing.
             </h2>
             <p style={{ fontSize: 17, color: "#5a6a8a", maxWidth: 760, lineHeight: 1.8 }}>
-              The category shift starts with visible research. Even before every report is launched,
-              the site should show that Sriram Advisory studies workforce change across roles,
-              sectors, and time horizons.
+              These research areas reflect the topics Sriram Advisory is studying across
+              professions, sectors, and the future of work in India.
             </p>
           </div>
 
@@ -591,7 +590,7 @@ export default function HomePage() {
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <div style={{ marginBottom: 28 }}>
             <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
-              Existing Revenue Proof
+              Current Offerings
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
               Existing guides and reports.
