@@ -351,7 +351,7 @@ export default function HomePage() {
               Industries We Track
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              The site should not read like an IT-only business.
+              Industries where we track workforce change.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", maxWidth: 560 }}>
               We analyze workforce trends across industries where automation, AI adoption,
@@ -483,11 +483,11 @@ export default function HomePage() {
               Workforce Intelligence
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Category first. Products next.
+              Workforce intelligence areas we are building toward.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              The products can ship later. The market should still see the direction now:
-              a company tracking how work changes across the Indian economy.
+              These upcoming focus areas reflect the broader direction of Sriram Advisory:
+              tracking how work is changing across professions and sectors in India.
             </p>
           </div>
 
@@ -594,11 +594,11 @@ export default function HomePage() {
               Existing Revenue Proof
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Guides and reports stay. Their position changes.
+              Existing guides and reports.
             </h2>
             <p style={{ maxWidth: 760, fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              These products remain live and visible. The shift is strategic: they move from
-              being the brand itself to being evidence that the research is already useful in the market.
+              These are the current products already available from Sriram Advisory,
+              covering role-specific guidance and career intelligence reports.
             </p>
           </div>
 
