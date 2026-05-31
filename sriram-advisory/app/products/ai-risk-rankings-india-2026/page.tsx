@@ -239,7 +239,7 @@ export default function AIRiskRankingsPage() {
               "25 ranked careers",
               "4 exposure bands",
               "100+ pages",
-              "Instant digital delivery",
+              "Manual email delivery within 30 minutes",
             ].map((item) => (
               <div
                 key={item}
@@ -283,7 +283,7 @@ export default function AIRiskRankingsPage() {
                 display: "block",
               }}
             >
-              Instant digital delivery
+              Manual email delivery within 30 minutes
             </span>
             <p style={{ fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.6, margin: "0 0 18px" }}>
               Built from NASSCOM, NITI Aayog, WEF, EY India, McKinsey, and related 2025-26 research.
@@ -292,8 +292,8 @@ export default function AIRiskRankingsPage() {
               productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
               amount={499}
               accentColor="#dc2626"
-              deliveryNote="Instant digital delivery after payment."
-              emailNote="Your report access and delivery details will be sent to this email."
+              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              emailNote="Your report will be delivered to this email."
               buttonLabel="Get the report now ->"
               buttonStyle={{
                 background: "#dc2626",
@@ -675,14 +675,14 @@ export default function AIRiskRankingsPage() {
                 marginBottom: 20,
               }}
             >
-              Instant digital delivery
+              Manual email delivery within 30 minutes
             </span>
             <CashfreeCheckout
               productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
               amount={499}
               accentColor="#dc2626"
-              deliveryNote="Instant digital delivery after payment."
-              emailNote="Your report access and delivery details will be sent to this email."
+              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              emailNote="Your report will be delivered to this email."
               buttonLabel="Get the report now ->"
               buttonStyle={{
                 background: "#dc2626",
