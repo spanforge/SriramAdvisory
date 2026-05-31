@@ -571,6 +571,66 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
         </div>
       </section>
 
+      {content.testimonial && (
+        <section style={{ padding: "72px 20px", background: "#ffffff" }}>
+          <div style={{ maxWidth: 860, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: 36 }}>
+              <span
+                style={{
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: theme.accent,
+                  display: "block",
+                  marginBottom: 12,
+                }}
+              >
+                Customer Feedback
+              </span>
+              <h2
+                style={{
+                  fontSize: "clamp(24px, 3.5vw, 36px)",
+                  fontWeight: 800,
+                  color: "#0a1628",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                What one buyer said after reading it
+              </h2>
+            </div>
+
+            <div
+              style={{
+                background: "#f8fafc",
+                border: `1px solid ${content.theme.sectionBorder}`,
+                borderRadius: 18,
+                padding: "28px 28px",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: 18,
+                  lineHeight: 1.8,
+                  color: "#24364d",
+                  margin: 0,
+                }}
+              >
+                "{content.testimonial.quote}"
+              </p>
+              <div style={{ marginTop: 18, fontSize: 14, fontWeight: 700, color: theme.accent }}>
+                {content.testimonial.source}
+              </div>
+              {content.testimonial.context && (
+                <div style={{ marginTop: 6, fontSize: 13, color: "#6b7a96" }}>
+                  {content.testimonial.context}
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section style={{ padding: "72px 20px", background: "#ffffff" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
