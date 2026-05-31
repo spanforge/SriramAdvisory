@@ -14,10 +14,10 @@ function PaymentStatusContent() {
   const isGuidePurchase = normalizedProduct.includes("guide");
   const homeLink = isGuidePurchase ? "/guides" : "/products";
   const successMessage = isGuidePurchase
-    ? "Sriram will personally email your guide to the email address you provided. This is a manual send by design, so please allow a little time and check your spam folder as well."
+    ? "Your guide will be manually emailed to the address you provided, usually within 30 minutes. Please check your spam folder as well."
     : "You will receive your digital report on the email address you provided within a few minutes. Check your spam folder if you do not see it.";
   const pendingMessage = isGuidePurchase
-    ? "Your payment is being processed. If it was successful, your guide will be emailed to you shortly. If you were charged and do not hear from us within 30 minutes, please contact us."
+    ? "Your payment is being processed. If it was successful, your guide should reach your email within 30 minutes. If you were charged and do not hear from us after that, please contact us."
     : "Your payment is being processed. If it was successful, you will receive your report by email shortly. If you were charged and do not receive it within 30 minutes, please contact us.";
 
   const [status, setStatus] = useState<"loading" | "success" | "pending" | "failed">("loading");

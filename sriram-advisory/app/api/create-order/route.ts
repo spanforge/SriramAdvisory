@@ -6,39 +6,29 @@ const CASHFREE_BASE_URL =
     : "https://sandbox.cashfree.com/pg/orders";
 
 export async function POST(req: NextRequest) {
-  // Guard: env vars must be present
   if (!process.env.CASHFREE_APP_ID || !process.env.CASHFREE_SECRET_KEY) {
-    console.error("Cashfree env vars missing — CASHFREE_APP_ID or CASHFREE_SECRET_KEY not set");
+    console.error("Cashfree env vars missing - CASHFREE_APP_ID or CASHFREE_SECRET_KEY not set");
     return NextResponse.json({ error: "Payment gateway not configured" }, { status: 500 });
   }
 
   const body = await req.json();
-  const { productName, amount, name, email, phone, referredBy } = body;
+  const { productName, amount, name, email, phone } = body;
 
   if (!productName || !amount || !name || !email) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  // Sanitise amount — must be a positive number
   const parsedAmount = parseFloat(amount);
   if (isNaN(parsedAmount) || parsedAmount <= 0) {
     return NextResponse.json({ error: "Invalid amount" }, { status: 400 });
   }
 
-  // Sanitise phone — strip non-digits, keep last 10 digits; fallback to dummy
   const rawPhone = String(phone ?? "").replace(/\D/g, "");
   const customerPhone = rawPhone.length >= 10 ? rawPhone.slice(-10) : "9000000000";
-
-  const referralSource = String(referredBy ?? "").trim().slice(0, 100);
-  const orderNote = referralSource
-    ? `${String(productName).trim()} | Referred by: ${referralSource}`.slice(0, 450)
-    : String(productName).trim().slice(0, 450);
-
+  const orderNote = String(productName).trim().slice(0, 450);
   const orderId = `SA_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
 
   try {
-    // Cashfree production requires HTTPS return URLs.
-    // Ensure the scheme is https when running in production mode.
     const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000").replace(
       /^http:\/\//,
       process.env.CASHFREE_ENV === "production" ? "https://" : "http://"
@@ -81,7 +71,6 @@ export async function POST(req: NextRequest) {
 
     if (!response.ok) {
       console.error("Cashfree order creation failed:", JSON.stringify(data, null, 2));
-      // Forward the Cashfree error message so the client can display it
       const cfMessage =
         (data.message as string) ||
         (data.error as string) ||
