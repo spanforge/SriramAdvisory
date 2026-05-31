@@ -19,6 +19,23 @@ const BONUS_GUIDE_NOTE =
 const GUIDES = [
   {
     badge: "New",
+    badgeBg: "#334155",
+    badgeColor: "#ffffff",
+    title: "DevOps Survival Guide 2026",
+    subtitle: "SA-AIRS 6.8/10. 60-day upgrade. Platform path. Rs 50+ LPA target.",
+    blurb:
+      "DevOps is not disappearing, but repetitive pipeline and config work is being compressed fast. This guide shows Indian DevOps engineers how to move from YAML-heavy execution into platform reliability, FinOps, AI infrastructure, and GCC-ready platform engineering positioning.",
+    price: "Rs 499",
+    strikePrice: "",
+    tag: "",
+    href: "/guides/devops-survival-guide-2026",
+    accentColor: "#334155",
+    bgGradient: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+    borderColor: "#cbd5e1",
+    available: true,
+  },
+  {
+    badge: "New",
     badgeBg: "#0f766e",
     badgeColor: "#ffffff",
     title: "Business Analyst Survival Guide 2026",

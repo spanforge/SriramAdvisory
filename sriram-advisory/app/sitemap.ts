@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/career-intelligence-report`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/sa-airs-score-report`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
     { url: `${base}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/guides/devops-survival-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/qa-engineer-survival-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/bpo-career-survival-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/java-developer-ai-leverage-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
