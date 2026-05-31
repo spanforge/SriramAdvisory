@@ -221,6 +221,8 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               productName={content.productName}
               amount={499}
               accentColor={theme.accent}
+              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              emailNote="Your guide will be delivered to this email."
               buttonLabel="Continue to secure payment ->"
               buttonStyle={{
                 fontSize: 17,
@@ -735,6 +737,8 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               productName={content.productName}
               amount={499}
               accentColor={theme.accent}
+              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              emailNote="Your guide will be delivered to this email."
               buttonLabel="Buy now ->"
               buttonStyle={{
                 fontSize: 16,

@@ -9,6 +9,9 @@ interface Props {
   buttonLabel: string;
   buttonStyle?: React.CSSProperties;
   accentColor: string;
+  deliveryNote?: string;
+  emailNote?: string;
+  footerNote?: string;
 }
 
 export default function CashfreeCheckout({
@@ -17,6 +20,9 @@ export default function CashfreeCheckout({
   buttonLabel,
   buttonStyle,
   accentColor,
+  deliveryNote = "Delivery details will be sent to your email after payment.",
+  emailNote = "Your purchase details will be sent to this email.",
+  footerNote = "Secured by Cashfree Payments. Your data is encrypted. One-time payment.",
 }: Props) {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -197,7 +203,7 @@ export default function CashfreeCheckout({
               </h2>
               <p style={{ fontSize: 28, fontWeight: 800, color: accentColor }}>Rs {amount}</p>
               <p style={{ fontSize: 12, color: "#6b7a96", marginTop: 8, lineHeight: 1.5 }}>
-                Manual email delivery usually lands within 30 minutes of payment.
+                {deliveryNote}
               </p>
             </div>
 
@@ -274,7 +280,7 @@ export default function CashfreeCheckout({
                   }}
                 />
                 <p style={{ fontSize: 11, color: "#8898b8", marginTop: 5 }}>
-                  Your guide will be delivered to this email.
+                  {emailNote}
                 </p>
               </div>
 
@@ -353,7 +359,7 @@ export default function CashfreeCheckout({
             </form>
 
             <p style={{ fontSize: 13, color: "#8898b8", marginTop: 16, lineHeight: 1.5, textAlign: "center" }}>
-              Secured by Cashfree Payments. Your data is encrypted. One-time payment.
+              {footerNote}
             </p>
           </div>
         </div>
