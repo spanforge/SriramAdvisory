@@ -11,6 +11,23 @@ export const metadata: Metadata = {
 
 const REPORTS = [
   {
+    badge: "New",
+    title: "AI Futures 2026",
+    subtitle: "India-first AI career scenarios. Strategic signals. Practical adaptation lens.",
+    blurb:
+      "A forward-looking intelligence report for professionals who want a clearer view of how AI may reshape work, careers, and leverage in India over the next phase.",
+    price: "Rs 799",
+    href: "/products/ai-futures-2026",
+    accentColor: "#0d9268",
+    bgGradient: "linear-gradient(135deg, #f2fbf8 0%, #dcfce7 100%)",
+    borderColor: "#bbf7d0",
+    bullets: [
+      "Signals and scenario framing, not recycled hype headlines",
+      "Built to help professionals think ahead without panic",
+      "A premium report with limited preview on-page",
+    ],
+  },
+  {
     badge: "Core Report",
     title: "Career Intelligence Report — SA-AIRS Pro",
     subtitle: "5-dimension AI risk score. Role benchmarks. 90-day reassessment.",
@@ -47,7 +64,6 @@ const REPORTS = [
 ];
 
 const UPCOMING_REPORTS = [
-  "AI Futures 2026",
   "State of QA Careers 2026",
   "State of Business Analysis 2026",
   "State of BPO Careers 2026",
