@@ -46,6 +46,11 @@ export type GuidePageContent = {
   ctaTitle: string;
   ctaBody: string;
   faqDelivery: string;
+  testimonials?: {
+    quote: string;
+    source: string;
+    context?: string;
+  }[];
   testimonial?: {
     quote: string;
     source: string;
@@ -424,11 +429,18 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     ctaBody:
       "Use this guide to replace vague fear with a clearer plan, stronger positioning, and a more future-proof QA story.",
     faqDelivery: DELIVERY_NOTE,
-    testimonial: {
-      quote:
-        "I highly recommend the QA Survival Guide by Sriram Advisory. It delivers practical insights and a structured approach that simplify complex QA concepts into actionable strategies. This guide is a valuable resource for both aspiring and experienced QA professionals, helping us stay confident and resilient in the real-world testing market. This guide is highly useful for manual testers at any experience level who want to upskill and transition into AI QA roles.",
-      source: "",
-    },
+    testimonials: [
+      {
+        quote:
+          "I highly recommend the QA Survival Guide by Sriram Advisory. It delivers practical insights and a structured approach that simplify complex QA concepts into actionable strategies. This guide is a valuable resource for both aspiring and experienced QA professionals, helping us stay confident and resilient in the real-world testing market.",
+        source: "",
+      },
+      {
+        quote:
+          "This guide is highly useful for manual testers at any experience level who want to upskill and transition into AI QA roles.",
+        source: "",
+      },
+    ],
     theme: {
       accent: "#0d9268",
       accentSoft: "#6ee7b7",

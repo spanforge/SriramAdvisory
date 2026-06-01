@@ -16,6 +16,7 @@ type GuideSalesPageProps = {
 
 export default function GuideSalesPage({ content }: GuideSalesPageProps) {
   const { theme } = content;
+  const testimonials = content.testimonials ?? (content.testimonial ? [content.testimonial] : []);
 
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
@@ -573,7 +574,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
         </div>
       </section>
 
-      {content.testimonial && (
+      {testimonials.length > 0 && (
         <section style={{ padding: "72px 20px", background: "#ffffff" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: 36 }}>
@@ -598,33 +599,43 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                   letterSpacing: "-0.02em",
                 }}
               >
-                What one buyer said after reading it
+                What buyers said after reading it
               </h2>
             </div>
 
             <div
               style={{
-                background: "#f8fafc",
-                border: `1px solid ${content.theme.sectionBorder}`,
-                borderRadius: 18,
-                padding: "28px 28px",
+                display: "grid",
+                gap: 18,
               }}
             >
-              <p
-                style={{
-                  fontSize: 18,
-                  lineHeight: 1.8,
-                  color: "#24364d",
-                  margin: 0,
-                }}
-              >
-                "{content.testimonial.quote}"
-              </p>
-              {content.testimonial.source && (
-                <div style={{ marginTop: 18, fontSize: 14, fontWeight: 700, color: theme.accent }}>
-                  {content.testimonial.source}
+              {testimonials.map((testimonial) => (
+                <div
+                  key={testimonial.quote}
+                  style={{
+                    background: "#f8fafc",
+                    border: `1px solid ${content.theme.sectionBorder}`,
+                    borderRadius: 18,
+                    padding: "28px 28px",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: 18,
+                      lineHeight: 1.8,
+                      color: "#24364d",
+                      margin: 0,
+                    }}
+                  >
+                    "{testimonial.quote}"
+                  </p>
+                  {testimonial.source && (
+                    <div style={{ marginTop: 18, fontSize: 14, fontWeight: 700, color: theme.accent }}>
+                      {testimonial.source}
+                    </div>
+                  )}
                 </div>
-              )}
+              ))}
             </div>
           </div>
         </section>
