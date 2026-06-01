@@ -281,22 +281,11 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                   fontWeight: 900,
                   color: "#0a1628",
                   letterSpacing: "-0.03em",
-                  marginBottom: 10,
+                  marginBottom: 0,
                 }}
               >
                 What buyers said after reading it
               </h2>
-              <p
-                style={{
-                  fontSize: 15,
-                  color: "#4a5a7a",
-                  lineHeight: 1.7,
-                  maxWidth: 680,
-                  margin: "0 auto",
-                }}
-              >
-                Early buyer feedback that helps new visitors quickly judge whether this guide feels practical, relevant, and worth acting on.
-              </p>
             </div>
 
             <div
