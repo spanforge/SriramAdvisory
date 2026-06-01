@@ -11,23 +11,6 @@ export const metadata: Metadata = {
 
 const REPORTS = [
   {
-    badge: "Flagship Report",
-    title: "AI Career Insights Report",
-    subtitle: "47+ roles. 7 sector deep dives. Salary outlook scenarios.",
-    blurb:
-      "A broader India-first intelligence report for professionals who want the market picture across roles, sectors, AI tooling, and adaptation options.",
-    price: "Rs 499",
-    href: "/products/pro-edition",
-    accentColor: "#0d9268",
-    bgGradient: "linear-gradient(135deg, #f2fbf8 0%, #dcfce7 100%)",
-    borderColor: "#bbf7d0",
-    bullets: [
-      "Cross-role market intelligence, not just a personal score",
-      "7 sector views with salary and transition scenarios",
-      "Built for professionals who want the wider AI shift mapped clearly",
-    ],
-  },
-  {
     badge: "Core Report",
     title: "Career Intelligence Report — SA-AIRS Pro",
     subtitle: "5-dimension AI risk score. Role benchmarks. 90-day reassessment.",
