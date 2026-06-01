@@ -426,7 +426,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     faqDelivery: DELIVERY_NOTE,
     testimonial: {
       quote:
-        "I highly recommend the QA Survival Guide by Sriram Advisory. It delivers practical insights and a structured approach that simplify complex QA concepts into actionable strategies. This guide is a valuable resource for both aspiring and experienced QA professionals, helping us stay confident and resilient in the real-world testing market.",
+        "I highly recommend the QA Survival Guide by Sriram Advisory. It delivers practical insights and a structured approach that simplify complex QA concepts into actionable strategies. This guide is a valuable resource for both aspiring and experienced QA professionals, helping us stay confident and resilient in the real-world testing market. This guide is highly useful for manual testers at any experience level who want to upskill and transition into AI QA roles.",
       source: "",
     },
     theme: {
