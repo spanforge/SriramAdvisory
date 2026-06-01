@@ -196,7 +196,7 @@ export default function AboutPage() {
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
             <Link
-              href="/research"
+              href="/reports"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -210,7 +210,7 @@ export default function AboutPage() {
                 border: "1px solid #3b6ef0",
               }}
             >
-              Research
+              Reports
             </Link>
             <Link
               href="/reports"

@@ -47,7 +47,7 @@ export default function Footer() {
               </div>
             </div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Workforce research, assessments, reports, and guides for understanding how work is changing across India.
+              Assessments, reports, and guides for understanding how work is changing across India.
             </p>
           </div>
 
@@ -58,7 +58,6 @@ export default function Footer() {
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
-                  { label: "Research", href: "/research" },
                   { label: "Assessments", href: "/assessments" },
                   { label: "Reports", href: "/reports" },
                   { label: "Guides", href: "/guides" },

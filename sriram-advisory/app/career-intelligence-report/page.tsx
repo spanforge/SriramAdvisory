@@ -11,6 +11,23 @@ export const metadata: Metadata = {
 
 const REPORTS = [
   {
+    badge: "Flagship Report",
+    title: "AI Career Insights Report",
+    subtitle: "47+ roles. 7 sector deep dives. Salary outlook scenarios.",
+    blurb:
+      "A broader India-first intelligence report for professionals who want the market picture across roles, sectors, AI tooling, and adaptation options.",
+    price: "Rs 499",
+    href: "/products/pro-edition",
+    accentColor: "#0d9268",
+    bgGradient: "linear-gradient(135deg, #f2fbf8 0%, #dcfce7 100%)",
+    borderColor: "#bbf7d0",
+    bullets: [
+      "Cross-role market intelligence, not just a personal score",
+      "7 sector views with salary and transition scenarios",
+      "Built for professionals who want the wider AI shift mapped clearly",
+    ],
+  },
+  {
     badge: "Core Report",
     title: "Career Intelligence Report — SA-AIRS Pro",
     subtitle: "5-dimension AI risk score. Role benchmarks. 90-day reassessment.",
@@ -44,6 +61,14 @@ const REPORTS = [
       "Adaptation direction for professionals who need next steps",
     ],
   },
+];
+
+const UPCOMING_REPORTS = [
+  "AI Futures 2026",
+  "State of QA Careers 2026",
+  "State of Business Analysis 2026",
+  "State of BPO Careers 2026",
+  "State of Indian Careers 2026",
 ];
 
 export default function ReportsPage() {
@@ -225,6 +250,64 @@ export default function ReportsPage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section style={{ maxWidth: 980, margin: "0 auto", padding: "0 20px 88px" }}>
+        <div
+          style={{
+            background: "#f7f9fc",
+            border: "1px solid rgba(26,79,214,0.12)",
+            borderRadius: 18,
+            padding: "32px 28px",
+          }}
+        >
+          <div style={{ marginBottom: 24 }}>
+            <span
+              style={{
+                fontSize: 12,
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "#1a4fd6",
+              }}
+            >
+              Upcoming Reports
+            </span>
+            <h2
+              style={{
+                fontSize: "clamp(24px, 3vw, 34px)",
+                fontWeight: 800,
+                color: "#0a1628",
+                marginTop: 12,
+                marginBottom: 12,
+                letterSpacing: "-0.02em",
+              }}
+            >
+              The next report lines in development
+            </h2>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.75, color: "#5a6a8a", maxWidth: 700 }}>
+              We&apos;re using the reports page as the single home for both current publications and the next titles in the pipeline.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+            {UPCOMING_REPORTS.map((item) => (
+              <div
+                key={item}
+                style={{
+                  background: "#ffffff",
+                  border: "1px solid rgba(26,79,214,0.12)",
+                  borderRadius: 14,
+                  padding: "20px 18px",
+                }}
+              >
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5a6a8a", marginBottom: 10 }}>
+                  In Development
+                </div>
+                <div style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", lineHeight: 1.35 }}>{item}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

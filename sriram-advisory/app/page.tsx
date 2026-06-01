@@ -189,12 +189,12 @@ export default function HomePage() {
               </p>
 
               <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.8, marginBottom: 40, maxWidth: 720 }}>
-                Researching how work is changing across industries, professions, and regions in the age of AI.
+                Publishing report-led intelligence on how work is changing across industries, professions, and regions in the age of AI.
               </p>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
                 <Link
-                  href="/research"
+                  href="/reports"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -209,7 +209,7 @@ export default function HomePage() {
                     border: "1px solid #3b6ef0",
                   }}
                 >
-                  Explore Research
+                  Browse Reports
                 </Link>
                 <Link
                   href="/assessments"
@@ -274,8 +274,8 @@ export default function HomePage() {
         >
           {[
             {
-              label: "Research",
-              body: "Industry and profession-level intelligence on how work is changing in India.",
+              label: "Report Strategy",
+              body: "Industry and profession-level intelligence packaged into current and upcoming report lines.",
             },
             {
               label: "Assessments",
@@ -303,12 +303,12 @@ export default function HomePage() {
       <section style={{ padding: "100px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <div style={{ marginBottom: 42 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>Research</span>
+            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>Upcoming Reports</span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Research areas we are developing.
+              Report lines we are developing.
             </h2>
             <p style={{ fontSize: 17, color: "#5a6a8a", maxWidth: 760, lineHeight: 1.8 }}>
-              These research areas reflect the topics Sriram Advisory is studying across
+              These upcoming reports reflect the topics Sriram Advisory is studying across
               professions, sectors, and the future of work in India.
             </p>
           </div>
@@ -638,15 +638,15 @@ export default function HomePage() {
             Next Step
           </span>
           <h2 style={{ fontSize: "clamp(32px, 4.8vw, 56px)", color: "#0a1628", marginTop: 16, marginBottom: 18, letterSpacing: "-0.02em" }}>
-            Explore workforce research and current offerings.
+            Explore current and upcoming reports.
           </h2>
           <p style={{ fontSize: 18, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 34 }}>
-            Explore the research direction behind Sriram Advisory, along with the assessments,
-            reports, and guides currently available.
+            Explore the report catalog behind Sriram Advisory, along with the assessments
+            and guides currently available.
           </p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
-              href="/research"
+              href="/reports"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -660,7 +660,7 @@ export default function HomePage() {
                 border: "1px solid #3b6ef0",
               }}
             >
-              See Research
+              See Reports
             </Link>
             <Link
               href="/reports"
