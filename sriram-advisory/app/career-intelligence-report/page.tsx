@@ -24,7 +24,24 @@ const REPORTS = [
     bullets: [
       "Signals and scenario framing, not recycled hype headlines",
       "Built to help professionals think ahead without panic",
-      "A premium report with limited preview on-page",
+      "A premium report built for strategic clarity",
+    ],
+  },
+  {
+    badge: "New",
+    title: "State of QA Careers India 2026",
+    subtitle: "Testing careers. AI pressure points. Strategic repositioning.",
+    blurb:
+      "A focused intelligence report for QA professionals who want a clearer reading of how testing roles are changing in India, where the pressure is rising, and what stronger positioning looks like next.",
+    price: "Rs 799",
+    href: "/products/state-of-qa-careers-india-2026",
+    accentColor: "#0f6cbd",
+    bgGradient: "linear-gradient(135deg, #f2f8ff 0%, #dbeafe 100%)",
+    borderColor: "#bfdbfe",
+    bullets: [
+      "Built for QA professionals, not general-tech audiences",
+      "Maps role shifts, pressure points, and adaptation direction",
+      "A premium report for people who want sharper career clarity",
     ],
   },
   {
@@ -61,13 +78,6 @@ const REPORTS = [
       "Adaptation direction for professionals who need next steps",
     ],
   },
-];
-
-const UPCOMING_REPORTS = [
-  "State of QA Careers 2026",
-  "State of Business Analysis 2026",
-  "State of BPO Careers 2026",
-  "State of Indian Careers 2026",
 ];
 
 export default function ReportsPage() {
@@ -249,64 +259,6 @@ export default function ReportsPage() {
               </div>
             </Link>
           ))}
-        </div>
-      </section>
-
-      <section style={{ maxWidth: 980, margin: "0 auto", padding: "0 20px 88px" }}>
-        <div
-          style={{
-            background: "#f7f9fc",
-            border: "1px solid rgba(26,79,214,0.12)",
-            borderRadius: 18,
-            padding: "32px 28px",
-          }}
-        >
-          <div style={{ marginBottom: 24 }}>
-            <span
-              style={{
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "#1a4fd6",
-              }}
-            >
-              Upcoming Reports
-            </span>
-            <h2
-              style={{
-                fontSize: "clamp(24px, 3vw, 34px)",
-                fontWeight: 800,
-                color: "#0a1628",
-                marginTop: 12,
-                marginBottom: 12,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              The next report lines in development
-            </h2>
-            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.75, color: "#5a6a8a", maxWidth: 700 }}>
-              We&apos;re using the reports page as the single home for both current publications and the next titles in the pipeline.
-            </p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
-            {UPCOMING_REPORTS.map((item) => (
-              <div
-                key={item}
-                style={{
-                  background: "#ffffff",
-                  border: "1px solid rgba(26,79,214,0.12)",
-                  borderRadius: 14,
-                  padding: "20px 18px",
-                }}
-              >
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5a6a8a", marginBottom: 10 }}>
-                  In Development
-                </div>
-                <div style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", lineHeight: 1.35 }}>{item}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

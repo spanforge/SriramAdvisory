@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/guides/data-analyst-career-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/products`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/products/ai-futures-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/products/state-of-qa-careers-india-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/get-started`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/cases`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/insights`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },

@@ -4,56 +4,56 @@ import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 
 export const metadata: Metadata = {
-  title: "AI Futures 2026 | Sriram Advisory",
+  title: "State of QA Careers India 2026 | Sriram Advisory",
   description:
-    "A premium India-first AI futures report for professionals who want a clearer view of coming career shifts, strategic signals, and adaptation paths. Rs 799 launch price.",
+    "A premium India-first report for QA professionals who want a clearer view of testing-career shifts, AI pressure points, and adaptation paths. Rs 799 launch price.",
 };
 
 const WHAT_YOU_GET = [
   {
-    title: "AI futures lens for Indian professionals",
-    desc: "A structured way to read where leverage, pressure, and career asymmetry may emerge next across the Indian market.",
+    title: "QA-specific career intelligence",
+    desc: "A focused lens on how testing careers are changing in India instead of broad AI commentary that treats every tech role the same.",
   },
   {
-    title: "Scenario framing, not vague futurism",
-    desc: "Multiple plausible directions, clearly explained, instead of one overconfident prediction pretending to be certainty.",
+    title: "Pressure points in the QA stack",
+    desc: "A structured reading of where workflow pressure is rising across manual testing, automation, tooling, and adjacent quality roles.",
   },
   {
-    title: "Decision support for career positioning",
-    desc: "Built for professionals who want to think ahead about exposure, leverage, positioning, and optionality.",
+    title: "Positioning and adaptation direction",
+    desc: "Built for professionals who need to think beyond task replacement and toward stronger leverage in the next phase of QA work.",
   },
   {
-    title: "Signals worth watching",
-    desc: "The report highlights the categories of shifts that matter in a structured, premium format.",
+    title: "Signals that matter",
+    desc: "A premium synthesis of the categories of change QA professionals should actually watch over the coming cycle.",
   },
 ];
 
 const FOR_WHOM = [
-  "Professionals trying to understand the next 12-24 months, not just today's headlines",
-  "Managers and leads who need a sharper AI-era reading of role change and value migration",
-  "People who want strategic clarity before making upskilling or career-direction decisions",
+  "QA engineers and test professionals trying to understand where the role is moving next",
+  "Automation testers and SDETs assessing how AI changes their future leverage",
+  "Team leads and managers who need sharper context on QA career evolution in India",
 ];
 
 const NOT_FOR = [
-  "People looking for a free summary of the report's full reasoning",
-  "Readers who want sensational predictions with no explanation behind them",
-  "Anyone expecting a generic global AI roundup repackaged for India",
+  "People looking for a generic free article on AI and testing",
+  "Readers who want a fear-heavy prediction with no practical framing",
+  "Anyone expecting broad software-industry commentary instead of QA-specific analysis",
 ];
 
-const PREVIEW_SIGNALS = [
-  "Where leverage may concentrate as AI becomes normal infrastructure",
-  "Which kinds of professionals may gain disproportionate advantage",
-  "How career moats may shift from execution volume toward judgment, systems, and trust",
+const QA_SIGNALS = [
+  "Where QA work may compress, evolve, or become more systems-oriented",
+  "How the value of judgment, architecture, and product context may change inside testing roles",
+  "Which forms of QA positioning may strengthen as AI tooling becomes normal",
 ];
 
-export default function AIFutures2026Page() {
+export default function StateOfQACareersIndia2026Page() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
 
       <section
         style={{
-          background: "linear-gradient(135deg, #031b16 0%, #0a3b2f 58%, #0d9268 100%)",
+          background: "linear-gradient(135deg, #07162c 0%, #0f2d52 58%, #0f6cbd 100%)",
           paddingTop: 100,
           paddingBottom: 84,
           position: "relative",
@@ -92,7 +92,7 @@ export default function AIFutures2026Page() {
                 fontWeight: 700,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#baf7e3",
+                color: "#cfe8ff",
               }}
             >
               Premium Report
@@ -101,15 +101,15 @@ export default function AIFutures2026Page() {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                background: "rgba(13,146,104,0.22)",
-                border: "1px solid rgba(186,247,227,0.28)",
+                background: "rgba(15,108,189,0.22)",
+                border: "1px solid rgba(191,219,254,0.3)",
                 borderRadius: 999,
                 padding: "6px 16px",
                 fontSize: 12,
                 fontWeight: 700,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#d7fff3",
+                color: "#dbeafe",
               }}
             >
               India 2026 Edition
@@ -128,7 +128,7 @@ export default function AIFutures2026Page() {
             <div>
               <h1
                 style={{
-                  fontSize: "clamp(36px, 5vw, 62px)",
+                  fontSize: "clamp(34px, 5vw, 60px)",
                   fontWeight: 800,
                   color: "#ffffff",
                   lineHeight: 1.06,
@@ -136,35 +136,36 @@ export default function AIFutures2026Page() {
                   letterSpacing: "-0.03em",
                 }}
               >
-                AI Futures 2026
+                State of QA Careers
                 <br />
-                <span style={{ color: "#9ef0cf" }}>A sharper map of what may come next</span>
+                <span style={{ color: "#93c5fd" }}>India 2026</span>
               </h1>
               <p
                 style={{
                   fontSize: "clamp(16px, 2vw, 20px)",
                   lineHeight: 1.75,
-                  color: "rgba(235,255,248,0.9)",
-                  maxWidth: 680,
+                  color: "rgba(239,246,255,0.9)",
+                  maxWidth: 700,
                   marginBottom: 16,
                 }}
               >
-                A premium intelligence report for professionals who want a clearer view of where AI may shift leverage, pressure, and career advantage in India over the next phase.
+                A premium intelligence report for QA professionals who want a clearer view of how testing careers are changing in India, where the pressure is rising, and what stronger positioning looks like next.
               </p>
               <p
                 style={{
                   fontSize: 15,
                   lineHeight: 1.8,
-                  color: "rgba(215,255,243,0.74)",
-                  maxWidth: 650,
+                  color: "rgba(219,234,254,0.78)",
+                  maxWidth: 660,
                   marginBottom: 30,
                 }}
               >
-                Built for professionals who want strategic clarity without recycled AI commentary.
+                Built for people who want sharper career clarity in QA without recycled generic AI takes.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                 {[
                   "Premium paid report",
+                  "QA-focused analysis",
                   "Designed for strategic clarity",
                 ].map((item) => (
                   <div
@@ -175,7 +176,7 @@ export default function AIFutures2026Page() {
                       borderRadius: 999,
                       padding: "10px 16px",
                       fontSize: 13,
-                      color: "#effff8",
+                      color: "#eff6ff",
                     }}
                   >
                     {item}
@@ -193,41 +194,41 @@ export default function AIFutures2026Page() {
                 backdropFilter: "blur(10px)",
               }}
             >
-              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#baf7e3", marginBottom: 10 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#cfe8ff", marginBottom: 10 }}>
                 Launch Price
               </div>
               <div style={{ display: "flex", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 8 }}>
-                <span style={{ fontSize: 26, color: "rgba(215,255,243,0.55)", textDecoration: "line-through", fontWeight: 700 }}>
+                <span style={{ fontSize: 26, color: "rgba(219,234,254,0.58)", textDecoration: "line-through", fontWeight: 700 }}>
                   Rs 999
                 </span>
                 <span style={{ fontSize: 46, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>
                   Rs 799
                 </span>
               </div>
-              <p style={{ fontSize: 13, color: "rgba(235,255,248,0.78)", lineHeight: 1.6, margin: "0 0 18px" }}>
+              <p style={{ fontSize: 13, color: "rgba(239,246,255,0.78)", lineHeight: 1.6, margin: "0 0 18px" }}>
                 Limited launch pricing for the first release.
               </p>
               <CashfreeCheckout
-                productName="AI Futures 2026 - Premium Report"
+                productName="State of QA Careers India 2026 - Premium Report"
                 amount={799}
-                accentColor="#0d9268"
+                accentColor="#0f6cbd"
                 deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
-                emailNote="Your AI Futures 2026 report will be delivered to this email."
-                buttonLabel="Get AI Futures 2026 ->"
+                emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
+                buttonLabel="Get State of QA Careers 2026 ->"
                 buttonStyle={{
-                  background: "#0d9268",
+                  background: "#0f6cbd",
                   color: "#ffffff",
                   fontWeight: 700,
                   fontSize: 17,
                   padding: "16px 32px",
                   borderRadius: 10,
-                  border: "1px solid #34d399",
+                  border: "1px solid #60a5fa",
                   width: "100%",
                   justifyContent: "center",
                 }}
               />
-              <p style={{ marginTop: 14, fontSize: 12, color: "rgba(215,255,243,0.6)", lineHeight: 1.6 }}>
-                One-time purchase via Cashfree. No subscription. No public download preview.
+              <p style={{ marginTop: 14, fontSize: 12, color: "rgba(219,234,254,0.62)", lineHeight: 1.6 }}>
+                One-time purchase via Cashfree. No subscription. Manual email delivery.
               </p>
             </div>
           </div>
@@ -236,16 +237,16 @@ export default function AIFutures2026Page() {
 
       <section style={{ background: "#ffffff", padding: "28px 20px 16px" }}>
         <div style={{ maxWidth: 980, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
-          {PREVIEW_SIGNALS.map((item) => (
+          {QA_SIGNALS.map((item) => (
             <div
               key={item}
               style={{
-                background: "#f2fbf8",
-                border: "1px solid #bbf7d0",
+                background: "#f2f8ff",
+                border: "1px solid #bfdbfe",
                 borderRadius: 14,
                 padding: "18px 18px",
                 fontSize: 14,
-                color: "#27443c",
+                color: "#24405f",
                 lineHeight: 1.65,
               }}
             >
@@ -255,10 +256,10 @@ export default function AIFutures2026Page() {
         </div>
       </section>
 
-      <section style={{ background: "#f7fffb", padding: "72px 20px" }}>
+      <section style={{ background: "#f8fbff", padding: "72px 20px" }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 42 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0f6cbd" }}>
               What You Get
             </span>
             <h2 style={{ fontSize: "clamp(24px, 3.5vw, 38px)", fontWeight: 800, color: "#0a1628", marginTop: 12, letterSpacing: "-0.02em" }}>
@@ -271,12 +272,12 @@ export default function AIFutures2026Page() {
                 key={item.title}
                 style={{
                   background: "#ffffff",
-                  border: "1px solid rgba(13,146,104,0.16)",
+                  border: "1px solid rgba(15,108,189,0.16)",
                   borderRadius: 16,
                   padding: "24px 22px",
                 }}
               >
-                <div style={{ fontSize: 16, fontWeight: 800, color: "#0d9268", marginBottom: 10 }}>{item.title}</div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: "#0f6cbd", marginBottom: 10 }}>{item.title}</div>
                 <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.7 }}>{item.desc}</div>
               </div>
             ))}
@@ -294,7 +295,7 @@ export default function AIFutures2026Page() {
               color: "#f8fbff",
             }}
           >
-            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9ef0cf", marginBottom: 12 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#93c5fd", marginBottom: 12 }}>
               For Whom
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -331,20 +332,20 @@ export default function AIFutures2026Page() {
       <section
         style={{
           padding: "104px 24px",
-          background: "linear-gradient(160deg, #031b16 0%, #0a3b2f 62%, #0d9268 100%)",
+          background: "linear-gradient(160deg, #07162c 0%, #0f2d52 62%, #0f6cbd 100%)",
           textAlign: "center",
         }}
       >
         <div style={{ maxWidth: 680, margin: "0 auto" }}>
           <h2 style={{ fontSize: "clamp(28px, 4vw, 50px)", fontWeight: 800, color: "#ffffff", lineHeight: 1.12, marginBottom: 16, letterSpacing: "-0.02em" }}>
-            Buy it if you want a better map before the market gets louder
+            Buy it if you want a sharper read on where QA careers are heading
           </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.75, color: "rgba(235,255,248,0.84)", marginBottom: 32 }}>
-            A premium report for professionals who want a better map before the market gets louder.
+          <p style={{ fontSize: 17, lineHeight: 1.75, color: "rgba(239,246,255,0.84)", marginBottom: 32 }}>
+            A premium report for QA professionals who want a better map before role expectations shift faster.
           </p>
           <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
             <div style={{ display: "flex", alignItems: "baseline", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
-              <span style={{ fontSize: 24, color: "rgba(215,255,243,0.55)", textDecoration: "line-through", fontWeight: 700 }}>
+              <span style={{ fontSize: 24, color: "rgba(219,234,254,0.58)", textDecoration: "line-through", fontWeight: 700 }}>
                 Rs 999
               </span>
               <span style={{ fontSize: 42, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>
@@ -352,25 +353,25 @@ export default function AIFutures2026Page() {
               </span>
             </div>
             <CashfreeCheckout
-              productName="AI Futures 2026 - Premium Report"
+              productName="State of QA Careers India 2026 - Premium Report"
               amount={799}
-              accentColor="#0d9268"
+              accentColor="#0f6cbd"
               deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
-              emailNote="Your AI Futures 2026 report will be delivered to this email."
+              emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
               buttonLabel="Secure My Copy ->"
               buttonStyle={{
-                background: "#0d9268",
+                background: "#0f6cbd",
                 color: "#ffffff",
                 fontWeight: 700,
                 fontSize: 16,
                 padding: "16px 40px",
                 borderRadius: 10,
-                border: "1px solid #34d399",
+                border: "1px solid #60a5fa",
                 minWidth: 260,
                 justifyContent: "center",
               }}
             />
-            <p style={{ marginTop: 12, fontSize: 12, color: "rgba(215,255,243,0.62)" }}>
+            <p style={{ marginTop: 12, fontSize: 12, color: "rgba(219,234,254,0.62)" }}>
               Cashfree checkout enabled. One-time payment. Manual email delivery.
             </p>
           </div>

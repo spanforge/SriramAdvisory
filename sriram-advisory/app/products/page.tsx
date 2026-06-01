@@ -69,6 +69,35 @@ const PRODUCTS = [
     borderColor: "#bbf7d0",
   },
   {
+    badge: "New Premium Report",
+    badgeColor: "#ffffff",
+    badgeBg: "#0f6cbd",
+    badgeBorder: "#60a5fa",
+    accentColor: "#0f6cbd",
+    tag: "Launch Price",
+    title: "State of QA Careers India 2026",
+    price: "Rs 799",
+    strikePrice: "Rs 999",
+    priceNote: "Premium Report",
+    tagline: "Testing careers. AI pressure. Strategic repositioning.",
+    blurb:
+      "A focused India-first intelligence report for QA professionals who want a clearer read on how testing careers are changing, where the pressure is rising, and what stronger positioning looks like next.",
+    bullets: [
+      "Built specifically for QA and test professionals",
+      "Maps role shifts, pressure points, and adaptation direction",
+      "Premium report for strategic career decision-making",
+      "India-first context instead of generic global commentary",
+      "Launch pricing before the full-price release",
+      "Cashfree checkout with manual email delivery",
+    ],
+    cta: "Get State of QA Careers 2026 ->",
+    href: "/products/state-of-qa-careers-india-2026",
+    external: false,
+    featured: false,
+    bgGradient: "linear-gradient(135deg, #f2f8ff 0%, #dbeafe 100%)",
+    borderColor: "#bfdbfe",
+  },
+  {
     badge: "Personalised",
     badgeColor: "#a78bfa",
     badgeBg: "rgba(167,139,250,0.12)",
@@ -142,7 +171,7 @@ export default function ProductsPage() {
             Know exactly where you stand
           </h1>
           <p style={{ fontSize: "clamp(16px, 2vw, 19px)", color: "#5a6a8a", lineHeight: 1.7, maxWidth: 580, margin: "0 auto 12px" }}>
-            Three products. One purpose: to give Indian professionals the clarity,
+            Four products. One purpose: to give Indian professionals the clarity,
             data, and frameworks they need to read the AI era and decide for themselves.
           </p>
           <p style={{ fontSize: 15, color: "#8898b8", fontStyle: "italic" }}>
