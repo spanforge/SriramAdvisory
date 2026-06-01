@@ -252,6 +252,115 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
         </div>
       </section>
 
+      {testimonials.length > 0 && (
+        <section
+          style={{
+            background: `linear-gradient(180deg, ${theme.sectionTint} 0%, #ffffff 100%)`,
+            padding: "42px 20px 36px",
+            borderBottom: `1px solid ${content.theme.sectionBorder}`,
+          }}
+        >
+          <div style={{ maxWidth: 980, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: 28 }}>
+              <span
+                style={{
+                  fontSize: 12,
+                  fontWeight: 800,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: theme.accent,
+                  display: "block",
+                  marginBottom: 10,
+                }}
+              >
+                Customer Feedback
+              </span>
+              <h2
+                style={{
+                  fontSize: "clamp(28px, 4vw, 42px)",
+                  fontWeight: 900,
+                  color: "#0a1628",
+                  letterSpacing: "-0.03em",
+                  marginBottom: 10,
+                }}
+              >
+                What buyers said after reading it
+              </h2>
+              <p
+                style={{
+                  fontSize: 15,
+                  color: "#4a5a7a",
+                  lineHeight: 1.7,
+                  maxWidth: 680,
+                  margin: "0 auto",
+                }}
+              >
+                Early buyer feedback that helps new visitors quickly judge whether this guide feels practical, relevant, and worth acting on.
+              </p>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: 20,
+              }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.quote}
+                  style={{
+                    background: index === 0 ? "#ffffff" : "#f8fafc",
+                    border: `1px solid ${content.theme.sectionBorder}`,
+                    boxShadow:
+                      index === 0
+                        ? "0 24px 60px rgba(10, 22, 40, 0.12)"
+                        : "0 14px 32px rgba(10, 22, 40, 0.08)",
+                    borderRadius: 22,
+                    padding: "28px 28px",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      background: theme.accent,
+                      color: "#ffffff",
+                      borderRadius: 999,
+                      padding: "7px 14px",
+                      fontSize: 11,
+                      fontWeight: 800,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      marginBottom: 18,
+                    }}
+                  >
+                    Verified Feedback
+                  </div>
+                  <p
+                    style={{
+                      fontSize: 18,
+                      lineHeight: 1.8,
+                      color: "#24364d",
+                      margin: 0,
+                    }}
+                  >
+                    "{testimonial.quote}"
+                  </p>
+                  {testimonial.source && (
+                    <div style={{ marginTop: 18, fontSize: 14, fontWeight: 700, color: theme.accent }}>
+                      {testimonial.source}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section style={{ background: "#ffffff", padding: "28px 20px 24px" }}>
         <div
           style={{
@@ -573,73 +682,6 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </div>
         </div>
       </section>
-
-      {testimonials.length > 0 && (
-        <section style={{ padding: "72px 20px", background: "#ffffff" }}>
-          <div style={{ maxWidth: 860, margin: "0 auto" }}>
-            <div style={{ textAlign: "center", marginBottom: 36 }}>
-              <span
-                style={{
-                  fontSize: 12,
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: theme.accent,
-                  display: "block",
-                  marginBottom: 12,
-                }}
-              >
-                Customer Feedback
-              </span>
-              <h2
-                style={{
-                  fontSize: "clamp(24px, 3.5vw, 36px)",
-                  fontWeight: 800,
-                  color: "#0a1628",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                What buyers said after reading it
-              </h2>
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gap: 18,
-              }}
-            >
-              {testimonials.map((testimonial) => (
-                <div
-                  key={testimonial.quote}
-                  style={{
-                    background: "#f8fafc",
-                    border: `1px solid ${content.theme.sectionBorder}`,
-                    borderRadius: 18,
-                    padding: "28px 28px",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: 18,
-                      lineHeight: 1.8,
-                      color: "#24364d",
-                      margin: 0,
-                    }}
-                  >
-                    "{testimonial.quote}"
-                  </p>
-                  {testimonial.source && (
-                    <div style={{ marginTop: 18, fontSize: 14, fontWeight: 700, color: theme.accent }}>
-                      {testimonial.source}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       <section style={{ padding: "72px 20px", background: "#ffffff" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
