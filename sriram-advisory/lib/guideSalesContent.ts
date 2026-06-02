@@ -78,6 +78,127 @@ export const DELIVERY_NOTE =
   "Manual email delivery, usually within 30 minutes of payment.";
 
 export const guideSalesContent: Record<string, GuidePageContent> = {
+  "ba-to-ai-pm-guide-2026": {
+    productName: "Business Analyst to AI Product Manager Career Transition Guide 2026",
+    title: "Business Analyst to",
+    accentTitle: "AI Product Manager Guide 2026",
+    score: "3.5 / 10",
+    riskLabel: "Low Replaceability When Repositioned Correctly",
+    editionLabel: "India 2026 Edition",
+    heroSummary:
+      "See how your BA strengths translate into AI product ownership, what skill gaps actually matter, and how to move toward AI PM roles with stronger market credibility instead of vague upskilling.",
+    heroNote:
+      "Your BA skills did not expire. They moved up the value chain.",
+    outcomeBullets: [
+      "A 90-day BA-to-AI PM transition direction",
+      "Clearer positioning around problem ownership and AI product judgment",
+      "India-first context for GCC, product, and AI transformation roles",
+    ],
+    promiseBullets: [
+      "Decode why BA problem-framing skills are becoming more valuable in AI teams",
+      "Understand the exact gap between BA execution and AI PM ownership",
+      "Build stronger proof, language, and career signal for AI PM-style roles",
+    ],
+    whatYouGet: [
+      {
+        title: "The BA-to-AI PM transition map",
+        desc: "A practical view of where traditional BA work gets squeezed, where AI PM value begins, and how to move across that gap credibly.",
+      },
+      {
+        title: "90-day transition playbook",
+        desc: "A staged plan to build evidence, reposition your profile, and move from requirements-heavy identity toward product ownership signal.",
+      },
+      {
+        title: "AI PM skill-gap clarity",
+        desc: "A focused breakdown of what you already have as a BA, what you need to add, and what you do not need to overlearn.",
+      },
+      {
+        title: "AI feasibility and product judgment lens",
+        desc: "A more useful way to evaluate AI product ideas, trade-offs, error costs, and human-in-the-loop decisions without needing to become an ML engineer.",
+      },
+      {
+        title: "Portfolio, resume, and LinkedIn direction",
+        desc: "Examples and frameworks to help you present yourself closer to outcomes, prioritization, and product thinking.",
+      },
+      {
+        title: "India-first market and compensation context",
+        desc: "Grounded context on GCC, product, and AI role demand so your transition decisions are tied to real market movement.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "Why BA work is being renamed rather than disappearing",
+          "What AI Product Managers actually own beyond documentation",
+          "Where the real transition gap sits for experienced BAs",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "A 90-day transition direction",
+          "A stronger market story for AI PM-style roles",
+          "A clearer sense of what proof to build next",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A generic PM certification substitute",
+          "A promise that every BA should switch titles immediately",
+          "A full public dump of the guide's frameworks and templates",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "Requirements Documenter",
+        desc: "Your profile is anchored to documentation, structured delivery, and lower-leverage execution work.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "Business Problem Owner",
+        desc: "You start defining the problem, shaping the options, and influencing what gets built before it reaches a backlog.",
+        color: "#2563eb",
+      },
+      {
+        stage: "Stage 3",
+        title: "AI Product Manager",
+        desc: "You are positioned around roadmap judgment, AI feasibility thinking, and measurable business outcomes.",
+        color: "#0f4c81",
+      },
+    ],
+    forYou: [
+      "You are a Business Analyst or Senior BA who wants to move closer to product ownership in the AI era.",
+      "You can already sense that documentation-heavy BA work is getting compressed and renamed.",
+      "You want an India-first bridge into AI PM, AI Product Owner, or adjacent product roles.",
+      "You need a concrete 90-day path, not generic advice to just learn product management.",
+      "You want to turn existing BA judgment into stronger market leverage and salary upside.",
+    ],
+    notForYou: [
+      "You want a full technical AI engineering curriculum or model-building course.",
+      "You already operate as an experienced AI PM and mainly need advanced execution tactics.",
+      "You want a broad global PM career overview instead of India-first transition guidance.",
+    ],
+    ctaTitle: "Move from BA execution to AI product ownership.",
+    ctaBody:
+      "Use this guide to build a sharper transition story, stronger proof of judgment, and a more credible path into AI PM-style roles.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#0f4c81",
+      accentSoft: "#93c5fd",
+      accentStrong: "#1d4ed8",
+      heroGradient: "linear-gradient(135deg, #08111f 0%, #0d2746 52%, #0f4c81 100%)",
+      heroText: "rgba(196,225,255,0.85)",
+      sectionTint: "#f4f9ff",
+      sectionBorder: "#bfdbfe",
+      panelTint: "#f8fbff",
+      finalGradient: "linear-gradient(160deg, #08111f 0%, #0d2746 60%, #0f4c81 100%)",
+    },
+  },
   "business-analyst-survival-guide-2026": {
     productName: "Business Analyst Survival Guide 2026",
     title: "Business Analyst",

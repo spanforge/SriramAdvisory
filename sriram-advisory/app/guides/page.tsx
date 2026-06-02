@@ -40,6 +40,18 @@ const GUIDES = [
   },
   {
     badge: "New",
+    title: "Business Analyst to AI Product Manager Guide 2026",
+    subtitle: "3.5/10 repositioned score. 90-day direction. AI PM transition path.",
+    blurb:
+      "For Business Analysts who want to move from documentation-heavy delivery into AI product ownership, stronger problem framing, and better outcome-led positioning.",
+    price: "Rs 499",
+    href: "/guides/ba-to-ai-pm-guide-2026",
+    accentColor: "#0f4c81",
+    bgGradient: "linear-gradient(135deg, #f4faff 0%, #dceeff 100%)",
+    borderColor: "#93c5fd",
+  },
+  {
+    badge: "New",
     title: "QA Engineer Survival Guide 2026",
     subtitle: "9.5/10 risk score. 90-day direction. Higher-value QA path.",
     blurb:
