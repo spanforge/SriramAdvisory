@@ -16,6 +16,18 @@ const BONUS_GUIDE_NOTE =
 const GUIDES = [
   {
     badge: "New",
+    title: "Project Manager / Delivery Manager Survival Guide 2026",
+    subtitle: "5.9/10 risk score. 60-day direction. Higher-leverage project/delivery path.",
+    blurb:
+      "For Project Managers and Delivery Managers who need to move beyond coordination-heavy work and build stronger positioning around prioritization, execution systems, and business judgment.",
+    price: "Rs 499",
+    href: "/guides/project-delivery-manager-survival-guide-2026",
+    accentColor: "#7c3aed",
+    bgGradient: "linear-gradient(135deg, #faf5ff 0%, #efe4ff 100%)",
+    borderColor: "#d8b4fe",
+  },
+  {
+    badge: "New",
     title: "DevOps Survival Guide 2026",
     subtitle: "6.8/10 risk score. 60-day direction. Platform and reliability path.",
     blurb:

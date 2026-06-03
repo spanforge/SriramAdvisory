@@ -160,7 +160,7 @@ export default function SaAirsProPage() {
           </div>
           <div style={{ marginTop: 40, padding: "28px 32px", background: "rgba(26,79,214,0.06)", border: "1px solid rgba(26,79,214,0.25)", borderRadius: 12 }}>
             <p style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", lineHeight: 1.6, margin: 0 }}>
-              The SA-AIRS™ Score Report gives you a diagnostic, not a prescription.
+              This report gives you a diagnostic, not a prescription.
               It shows you precisely where you score — and the causal chain that produced that score.
             </p>
           </div>

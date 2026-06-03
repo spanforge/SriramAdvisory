@@ -11,17 +11,6 @@ export const metadata: Metadata = {
 
 const ASSESSMENTS = [
   {
-    title: "SA-AIRS(TM) Score Report",
-    subtitle: "Structured individual assessment available now.",
-    body: "A current paid assessment for professionals who want a role-level reading through the SA-AIRS framework.",
-    href: "/sa-airs-score-report",
-    cta: "View Score Report",
-    status: "Available Now",
-    accentColor: "#1a4fd6",
-    bgGradient: "linear-gradient(135deg, #f0f5ff 0%, #e6eeff 100%)",
-    borderColor: "#c7d7ff",
-  },
-  {
     title: "Am I Future-Proof? Audit",
     subtitle: "48-hour audit for near-term decision clarity.",
     body: "For professionals who want a sharper interpretation layer on top of the underlying assessment logic.",

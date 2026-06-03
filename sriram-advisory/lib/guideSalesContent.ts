@@ -78,6 +78,127 @@ export const DELIVERY_NOTE =
   "Manual email delivery, usually within 30 minutes of payment.";
 
 export const guideSalesContent: Record<string, GuidePageContent> = {
+  "project-delivery-manager-survival-guide-2026": {
+    productName: "Project Manager / Delivery Manager Survival Guide 2026",
+    title: "Project Manager /",
+    accentTitle: "Delivery Manager Survival Guide 2026",
+    score: "5.9 / 10",
+    riskLabel: "Moderate Exposure",
+    editionLabel: "India 2026 Edition",
+    heroSummary:
+      "Understand what AI compresses in coordination-heavy project and delivery work, what higher-leverage judgment still compounds, and how to reposition around execution systems, cross-functional control, and business ownership instead of status reporting.",
+    heroNote:
+      "The market still needs orchestration. It pays more for judgment than for coordination theater.",
+    outcomeBullets: [
+      "A 60-day direction for stronger project and delivery positioning",
+      "Clearer movement beyond tracker-heavy coordination work",
+      "India-first guidance for GCC, SaaS, and transformation environments",
+    ],
+    promiseBullets: [
+      "Decode which project and delivery tasks AI makes cheaper first",
+      "Reframe your value around judgment, prioritization, and execution systems",
+      "Build stronger market signal without pretending to be more technical than you are",
+    ],
+    whatYouGet: [
+      {
+        title: "Role-risk clarity for project and delivery work",
+        desc: "A direct explanation of what is getting compressed in meeting-heavy, reporting-heavy coordination roles and what still compounds when you own trade-offs and outcomes.",
+      },
+      {
+        title: "60-day repositioning direction",
+        desc: "A practical next-step path to move from tracker ownership toward clearer roadmap, execution, and business-value signal.",
+      },
+      {
+        title: "AI-era project and delivery lens",
+        desc: "A grounded view of how AI changes planning, stakeholder updates, execution tracking, and delivery rhythm without removing the need for human judgment.",
+      },
+      {
+        title: "Hiring signal and narrative guidance",
+        desc: "Examples for sounding stronger in interviews, resumes, and LinkedIn when the market is filtering for sharper execution judgment and delivery control.",
+      },
+      {
+        title: "GCC and product-side market context",
+        desc: "India-first framing for how stronger project and delivery profiles are separating from generic coordination roles in the current hiring market.",
+      },
+      {
+        title: "Compensation and ceiling framing",
+        desc: "A more useful view of why your salary ceiling changes when you are seen as someone who drives decisions, not just someone who runs follow-ups.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "Which project and delivery tasks are becoming more automatable",
+          "Why status-chasing work is turning into a ceiling",
+          "What stronger execution and delivery signal looks like now",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "A 60-day repositioning direction",
+          "A sharper story for interviews and internal moves",
+          "A clearer sense of what proof to build next",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A generic project management certification substitute",
+          "A promise that every delivery manager should change titles overnight",
+          "US-market advice awkwardly copied into India realities",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "Coordination-Heavy Operator",
+        desc: "Your profile is anchored to follow-ups, trackers, and execution administration with limited visible decision ownership.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "Execution Systems Owner",
+        desc: "You start signaling better prioritization, cross-functional judgment, and clearer control over how work actually moves.",
+        color: "#7c3aed",
+      },
+      {
+        stage: "Stage 3",
+        title: "Higher-Leverage Project / Delivery Leader",
+        desc: "You are positioned around trade-offs, execution quality, delivery control, and business outcomes instead of coordination volume.",
+        color: "#be123c",
+      },
+    ],
+    forYou: [
+      "You are a Project Manager, Program Manager, Scrum Master, or Delivery Manager in India and more of your work feels coordination-heavy.",
+      "You can see AI shrinking the value of status reporting, documentation cleanup, and routine stakeholder updates.",
+      "You want a stronger market story around prioritization, execution systems, and business judgment.",
+      "You need a practical 60-day direction instead of vague advice to just become more strategic.",
+      "You want better GCC, SaaS, or transformation-role positioning without inventing experience you do not have.",
+    ],
+    notForYou: [
+      "You want a beginner project management course, Agile certification prep, or delivery framework tutorial.",
+      "You already operate at a senior transformation or portfolio-delivery level with strong decision ownership.",
+      "You want a broad global project-management market overview instead of India-first career positioning guidance.",
+    ],
+    ctaTitle: "Move beyond coordination-heavy project and delivery work.",
+    ctaBody:
+      "Use this guide to sharpen your market story, build stronger proof of judgment, and reposition toward roles that reward better execution and delivery leadership.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#7c3aed",
+      accentSoft: "#d8b4fe",
+      accentStrong: "#be123c",
+      heroGradient: "linear-gradient(135deg, #13071d 0%, #2e1065 52%, #7c3aed 100%)",
+      heroText: "rgba(233,213,255,0.85)",
+      sectionTint: "#faf5ff",
+      sectionBorder: "#d8b4fe",
+      panelTint: "#fcfaff",
+      finalGradient: "linear-gradient(160deg, #13071d 0%, #2e1065 60%, #7c3aed 100%)",
+    },
+  },
   "ba-to-ai-pm-guide-2026": {
     productName: "Business Analyst to AI Product Manager Career Transition Guide 2026",
     title: "Business Analyst to",

@@ -49,8 +49,8 @@ const FAQS = [
     a: "Reply to the report with the specific dimension you think is incorrect and it will be worked through directly. The confidence rating already flags where the model has lower certainty.",
   },
   {
-    q: "How is this different from the SA-AIRS™ Score Report?",
-    a: "The SA-AIRS™ Score Report is the core assessment. This audit adds a specific 12/36-month risk horizon, explicit Top 10% Ladder placement, and role-specific 90-day moves — for people who want the diagnosis and an immediate action plan in one report.",
+    q: "How is this different from the base SA-AIRS™ assessment?",
+    a: "This audit adds a specific 12/36-month risk horizon, explicit Top 10% Ladder placement, and role-specific 90-day moves — for people who want the diagnosis and an immediate action plan in one report.",
   },
   {
     q: "What is the refund policy?",
