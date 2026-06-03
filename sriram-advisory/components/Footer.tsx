@@ -61,6 +61,7 @@ export default function Footer() {
                   { label: "Assessments", href: "/assessments" },
                   { label: "Reports", href: "/reports" },
                   { label: "Guides", href: "/guides" },
+                  { label: "Services", href: "/services" },
                 ].map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>

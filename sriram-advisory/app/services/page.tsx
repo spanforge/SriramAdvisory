@@ -1,76 +1,59 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reports | Sriram Advisory",
+  title: "Services | Sriram Advisory",
   description:
-    "India-first intelligence reports on AI career risk, market shifts, and role diagnostics for working professionals.",
+    "Structured career positioning services for Indian tech professionals who want sharper market-facing profiles and clearer signal.",
 };
 
-const REPORTS = [
+const SERVICES = [
   {
-    badge: "New",
-    title: "AI Futures 2026",
-    subtitle: "India-first AI career scenarios. Strategic signals. Practical adaptation lens.",
+    badge: "Core Service",
+    title: "Career Intelligence Report - SA-AIRS Pro",
+    subtitle: "5-dimension AI risk score. Role benchmarks. 90-day reassessment.",
     blurb:
-      "A forward-looking intelligence report for professionals who want a clearer view of how AI may reshape work, careers, and leverage in India over the next phase.",
-    price: "Rs 799",
-    href: "/products/ai-futures-2026",
-    accentColor: "#0d9268",
-    bgGradient: "linear-gradient(135deg, #f2fbf8 0%, #dcfce7 100%)",
-    borderColor: "#bbf7d0",
-    bullets: [
-      "Signals and scenario framing, not recycled hype headlines",
-      "Built to help professionals think ahead without panic",
-      "A premium report built for strategic clarity",
-    ],
-  },
-  {
-    badge: "New",
-    title: "State of QA Careers India 2026",
-    subtitle: "Testing careers. AI pressure points. Strategic repositioning.",
-    blurb:
-      "A focused intelligence report for QA professionals who want a clearer reading of how testing roles are changing in India, where the pressure is rising, and what stronger positioning looks like next.",
-    price: "Rs 799",
-    href: "/products/state-of-qa-careers-india-2026",
-    accentColor: "#0f6cbd",
-    bgGradient: "linear-gradient(135deg, #f2f8ff 0%, #dbeafe 100%)",
+      "A structured diagnostic for professionals who want their own role scored across the SA-AIRS framework, with a transparent composite score, placement, and benchmarks.",
+    price: "Rs 999",
+    href: "/career-intelligence-report/sa-airs-pro",
+    accentColor: "#1a4fd6",
+    bgGradient: "linear-gradient(135deg, #f0f4ff 0%, #dbeafe 100%)",
     borderColor: "#bfdbfe",
     bullets: [
-      "Built for QA professionals, not general-tech audiences",
-      "Maps role shifts, pressure points, and adaptation direction",
-      "A premium report for people who want sharper career clarity",
+      "Personal role score, not just market commentary",
+      "5-dimension SA-AIRS framework applied to your case",
+      "Built for professionals who want diagnostic clarity",
     ],
   },
   {
-    badge: "New - May 2026",
-    title: "AI Risk Rankings India 2026",
-    subtitle: "Top 25 high-risk careers. 4 risk bands. 100+ pages.",
+    badge: "New",
+    title: "Career Positioning Audit",
+    subtitle: "Resume clarity. LinkedIn framing. Positioning gaps. Delivered as a concise PDF.",
     blurb:
-      "A market-intelligence report for professionals who want to understand which careers are under the most AI pressure in India, why, and what adaptation paths look like.",
-    price: "Rs 499",
-    href: "/products/ai-risk-rankings-india-2026",
-    accentColor: "#dc2626",
-    bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
-    borderColor: "#fecaca",
+      "A structured audit of how your career reads to the market today, including weak signals, positioning gaps, and the highest-leverage fixes for your resume and LinkedIn.",
+    price: "Rs 999",
+    href: "/services/career-positioning-audit",
+    accentColor: "#b45309",
+    bgGradient: "linear-gradient(135deg, #fff9f2 0%, #ffedd5 100%)",
+    borderColor: "#fed7aa",
     bullets: [
-      "Top 25 careers ranked with role-level context",
-      "Task exposure bands instead of hand-wavy predictions",
-      "Adaptation direction for professionals who need next steps",
+      "Positioning score with your top 3 gaps identified",
+      "Suggested headline and professional summary rewrites",
+      "1-page PDF findings report delivered in 48 to 72 hours",
     ],
   },
 ];
 
-export default function ReportsPage() {
+export default function ServicesPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
 
       <section
         style={{
-          background: "linear-gradient(135deg, #0a1628 0%, #102346 60%, #1a4fd6 100%)",
+          background: "linear-gradient(135deg, #0a1628 0%, #40210d 58%, #b45309 100%)",
           paddingTop: 96,
           paddingBottom: 72,
           textAlign: "center",
@@ -82,8 +65,8 @@ export default function ReportsPage() {
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              background: "rgba(59,110,240,0.18)",
-              border: "1px solid rgba(59,110,240,0.45)",
+              background: "rgba(245,158,11,0.16)",
+              border: "1px solid rgba(251,191,36,0.38)",
               borderRadius: 20,
               padding: "6px 16px",
               marginBottom: 28,
@@ -94,7 +77,7 @@ export default function ReportsPage() {
                 width: 7,
                 height: 7,
                 borderRadius: "50%",
-                background: "#3b6ef0",
+                background: "#f59e0b",
                 display: "inline-block",
               }}
             />
@@ -104,10 +87,10 @@ export default function ReportsPage() {
                 fontWeight: 600,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#93b4ff",
+                color: "#fde68a",
               }}
             >
-              Data-Driven Career Reports
+              Structured Career Services
             </span>
           </div>
           <h1
@@ -120,18 +103,18 @@ export default function ReportsPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Reports for professionals who want evidence, not noise
+            Services for professionals who need sharper market signal
           </h1>
           <p
             style={{
               fontSize: "clamp(15px, 2vw, 18px)",
-              color: "rgba(200,220,255,0.84)",
+              color: "rgba(255,239,213,0.86)",
               lineHeight: 1.75,
               maxWidth: 620,
               margin: "0 auto 24px",
             }}
           >
-            Structured market-intelligence products built for India-first career decisions. Use them when you want to understand the shift, read the pressure, and decide what to do next.
+            Practical, structured reviews for how your profile reads in today&apos;s market. Not generic coaching. Not vanity edits. Clear signal, honest gaps, and usable fixes.
           </p>
           <div
             style={{
@@ -142,9 +125,9 @@ export default function ReportsPage() {
             }}
           >
             {[
-              "India-specific, not global copy-paste",
-              "Built for decision-making, not doomscrolling",
-              "Focused on market intelligence and career context",
+              "Built for working professionals",
+              "Resume and LinkedIn focused",
+              "Delivered as concise findings, not fluff",
             ].map((item) => (
               <div
                 key={item}
@@ -152,7 +135,7 @@ export default function ReportsPage() {
                   background: "rgba(255,255,255,0.1)",
                   border: "1px solid rgba(255,255,255,0.12)",
                   borderRadius: 999,
-                  color: "#f8fbff",
+                  color: "#fff7ed",
                   padding: "10px 14px",
                   fontSize: 13,
                 }}
@@ -166,13 +149,13 @@ export default function ReportsPage() {
 
       <section style={{ maxWidth: 980, margin: "0 auto", padding: "64px 20px 80px" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          {REPORTS.map((report) => (
-            <Link key={report.href} href={report.href} style={{ textDecoration: "none" }}>
+          {SERVICES.map((service) => (
+            <Link key={service.href} href={service.href} style={{ textDecoration: "none" }}>
               <div
                 className="guide-card guide-card-body"
                 style={{
-                  background: report.bgGradient,
-                  border: `1.5px solid ${report.borderColor}`,
+                  background: service.bgGradient,
+                  border: `1.5px solid ${service.borderColor}`,
                   borderRadius: 18,
                   cursor: "pointer",
                 }}
@@ -185,13 +168,13 @@ export default function ReportsPage() {
                         fontWeight: 700,
                         letterSpacing: "0.08em",
                         textTransform: "uppercase",
-                        background: report.accentColor,
+                        background: service.accentColor,
                         color: "#ffffff",
                         padding: "3px 10px",
                         borderRadius: 20,
                       }}
                     >
-                      {report.badge}
+                      {service.badge}
                     </span>
                   </div>
                   <h2
@@ -203,16 +186,16 @@ export default function ReportsPage() {
                       letterSpacing: "-0.01em",
                     }}
                   >
-                    {report.title}
+                    {service.title} {"->"}
                   </h2>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: report.accentColor, marginBottom: 12 }}>
-                    {report.subtitle}
+                  <p style={{ fontSize: 14, fontWeight: 700, color: service.accentColor, marginBottom: 12 }}>
+                    {service.subtitle}
                   </p>
                   <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.7, marginBottom: 14 }}>
-                    {report.blurb}
+                    {service.blurb}
                   </p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {report.bullets.map((bullet) => (
+                    {service.bullets.map((bullet) => (
                       <div key={bullet} style={{ fontSize: 13, color: "#4b5d7b", lineHeight: 1.6 }}>
                         {bullet}
                       </div>
@@ -220,14 +203,14 @@ export default function ReportsPage() {
                   </div>
                 </div>
                 <div className="guide-card-price-col">
-                  <div style={{ fontSize: 28, fontWeight: 800, color: report.accentColor }}>{report.price}</div>
+                  <div style={{ fontSize: 28, fontWeight: 800, color: service.accentColor }}>{service.price}</div>
                   <div
                     style={{
                       marginTop: 16,
                       display: "inline-flex",
                       alignItems: "center",
                       gap: 6,
-                      background: report.accentColor,
+                      background: service.accentColor,
                       color: "#fff",
                       fontSize: 13,
                       fontWeight: 700,
@@ -236,7 +219,7 @@ export default function ReportsPage() {
                       letterSpacing: "0.01em",
                     }}
                   >
-                    View report {"->"}
+                    View service {"->"}
                   </div>
                 </div>
               </div>
