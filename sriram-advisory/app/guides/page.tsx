@@ -16,6 +16,22 @@ const BONUS_GUIDE_NOTE =
 const GUIDES = [
   {
     badge: "New",
+    title: "Data Engineer AI Survival Guide 2026",
+    subtitle: "4.0/10 repositioned score. 90-day direction. AI-native data engineering path.",
+    blurb:
+      "For Data Engineers who want to move from traditional pipeline work into AI-native data engineering, model data reliability, GenAI data systems, and stronger AI team positioning.",
+    price: "Rs 499",
+    href: "/guides/data-engineer-ai-survival-guide-2026",
+    accentColor: "#0891b2",
+    bgGradient: "linear-gradient(135deg, #f0fdff 0%, #cffafe 100%)",
+    borderColor: "#67e8f9",
+    role: "Data Engineer",
+    timeline: "90-day direction",
+    riskScore: "Repositioned score 4.0/10",
+    focus: "AI data reliability",
+  },
+  {
+    badge: "New",
     title: "Project Manager / Delivery Manager Survival Guide 2026",
     subtitle: "5.9/10 risk score. 60-day direction. Higher-leverage project/delivery path.",
     blurb:
