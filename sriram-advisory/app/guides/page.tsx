@@ -80,6 +80,22 @@ const GUIDES = [
   },
   {
     badge: "New",
+    title: "FDE Career Transition Guide 2026",
+    subtitle: "4.4/10 repositioned score. 90-day direction. Higher-leverage FDE path.",
+    blurb:
+      "For FDEs who want to move beyond execution-only delivery and build stronger positioning around product judgment, systems thinking, and AI-era engineering leverage.",
+    price: "Rs 499",
+    href: "/guides/fde-career-transition-guide-2026",
+    accentColor: "#be185d",
+    bgGradient: "linear-gradient(135deg, #fff6fb 0%, #ffe3f0 100%)",
+    borderColor: "#f9a8d4",
+    role: "FDE",
+    timeline: "90-day direction",
+    riskScore: "Repositioned score 4.4/10",
+    focus: "Career transition",
+  },
+  {
+    badge: "New",
     title: "QA Engineer Survival Guide 2026",
     subtitle: "9.5/10 risk score. 90-day direction. Higher-value QA path.",
     blurb:

@@ -320,6 +320,127 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       finalGradient: "linear-gradient(160deg, #08111f 0%, #0d2746 60%, #0f4c81 100%)",
     },
   },
+  "fde-career-transition-guide-2026": {
+    productName: "FDE Career Transition Guide 2026",
+    title: "FDE Career",
+    accentTitle: "Transition Guide 2026",
+    score: "4.4 / 10",
+    riskLabel: "Lower Risk When Repositioned Deliberately",
+    editionLabel: "India 2026 Edition",
+    heroSummary:
+      "Understand how FDE work is changing in an AI-shaped market, which execution-heavy patterns are becoming cheaper, and how to transition toward stronger engineering, product, and business-value signal without discarding your existing base.",
+    heroNote:
+      "The goal is not to abandon your background. The goal is to move it up the value chain.",
+    outcomeBullets: [
+      "A 90-day FDE transition direction built for working professionals",
+      "Clearer movement beyond execution-only delivery",
+      "India-first guidance for stronger GCC, product, and AI-era engineering positioning",
+    ],
+    promiseBullets: [
+      "Decode which parts of FDE work are getting commoditized fastest",
+      "Reframe your experience around systems judgment, ownership, and product value",
+      "Build stronger market signal without forcing a random stack or role pivot",
+    ],
+    whatYouGet: [
+      {
+        title: "A clearer FDE transition map",
+        desc: "A practical breakdown of where execution-heavy FDE work loses leverage and where stronger demand starts rewarding judgment, architecture awareness, and sharper ownership.",
+      },
+      {
+        title: "90-day career transition direction",
+        desc: "A staged path to help you move from delivery-heavy identity toward a more durable and higher-upside engineering story.",
+      },
+      {
+        title: "AI-era leverage lens",
+        desc: "A grounded view of how to use AI to increase output while keeping your credibility anchored in real problem-solving and decision quality.",
+      },
+      {
+        title: "Resume, LinkedIn, and interview positioning",
+        desc: "Examples for sounding closer to outcomes, trade-offs, and business relevance instead of task completion alone.",
+      },
+      {
+        title: "India-first market context",
+        desc: "A sharper read on how GCC, SaaS, and product teams are separating commodity implementation from stronger engineering profiles.",
+      },
+      {
+        title: "Ceiling and compensation framing",
+        desc: "A more useful way to understand why salary upside changes when your profile signals better judgment, ownership, and leverage.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "What AI makes cheaper inside execution-heavy FDE work",
+          "Why pure delivery throughput is becoming a weaker moat",
+          "What stronger FDE signal looks like in the current market",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "A 90-day transition direction",
+          "A sharper market story for better roles",
+          "A clearer sense of what proof to build next",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A generic software engineering tutorial",
+          "A fake promise that every FDE should switch titles immediately",
+          "Hype-heavy AI career advice detached from India realities",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "Execution-Only FDE Identity",
+        desc: "Your profile is valued mainly for implementation speed, delivery throughput, and completing assigned work.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "Higher-Signal FDE Positioning",
+        desc: "You begin to show stronger product awareness, systems thinking, and more visible ownership of trade-offs and outcomes.",
+        color: "#db2777",
+      },
+      {
+        stage: "Stage 3",
+        title: "Higher-Leverage Career Transition",
+        desc: "You are positioned for roles that reward better judgment, stronger engineering leverage, and closer alignment to business value.",
+        color: "#9d174d",
+      },
+    ],
+    forYou: [
+      "You work as an FDE and can feel execution-heavy work becoming easier to compress with AI.",
+      "You want a stronger path into higher-leverage engineering, product-adjacent, or AI-shaped roles without discarding your current experience.",
+      "You need a practical 90-day transition direction instead of generic advice to just learn more tools.",
+      "You want your resume and interviews to signal ownership, judgment, and systems thinking more clearly.",
+      "You are targeting stronger GCC, SaaS, or product-team positioning in India.",
+    ],
+    notForYou: [
+      "You want a beginner programming course or full-stack engineering tutorial.",
+      "You already operate in a high-leverage engineering role with strong architecture and product ownership signal.",
+      "You want a broad global software market overview instead of India-first career transition guidance.",
+    ],
+    ctaTitle: "Move beyond execution-only FDE work.",
+    ctaBody:
+      "Use this guide to sharpen your career transition story, build stronger proof of leverage, and reposition toward work that rewards better judgment and ownership.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#be185d",
+      accentSoft: "#f9a8d4",
+      accentStrong: "#9d174d",
+      heroGradient: "linear-gradient(135deg, #2a0718 0%, #5b1234 52%, #be185d 100%)",
+      heroText: "rgba(255,220,235,0.86)",
+      sectionTint: "#fff5f8",
+      sectionBorder: "#f9a8d4",
+      panelTint: "#fff9fb",
+      finalGradient: "linear-gradient(160deg, #2a0718 0%, #5b1234 60%, #be185d 100%)",
+    },
+  },
   "business-analyst-survival-guide-2026": {
     productName: "Business Analyst Survival Guide 2026",
     title: "Business Analyst",
