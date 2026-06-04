@@ -77,6 +77,15 @@ export const BONUS_GUIDE_NOTE =
 export const DELIVERY_NOTE =
   "Manual email delivery, usually within 30 minutes of payment.";
 
+export const LIFETIME_UPDATES_TITLE =
+  "Free lifetime updates included.";
+
+export const LIFETIME_UPDATES_SHORT_NOTE =
+  "Every Sriram Advisory guide comes with free lifetime upgrades for every buyer. No repurchase. No upgrade fee. Ever.";
+
+export const LIFETIME_UPDATES_BODY =
+  "A commitment, made publicly and permanently: every Sriram Advisory guide comes with free lifetime upgrades for every buyer, from the first to the last. When the market shifts, when data changes, when a better framework emerges, you get the updated version automatically. No repurchase. No upgrade fee. Ever.";
+
 export const guideSalesContent: Record<string, GuidePageContent> = {
   "data-engineer-ai-survival-guide-2026": {
     productName: "Data Engineer AI Survival Guide 2026",
@@ -1425,6 +1434,10 @@ export const SHARED_FAQ = [
   {
     question: "Why pay for this instead of reading free AI career content?",
     answer: SHARED_FAQ_TRUST,
+  },
+  {
+    question: "Do I get future updates?",
+    answer: LIFETIME_UPDATES_BODY,
   },
   {
     question: "When do I receive the guide?",
