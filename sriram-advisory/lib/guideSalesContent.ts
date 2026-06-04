@@ -445,7 +445,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     productName: "FDE Career Transition Guide 2026",
     title: "FDE Career",
     accentTitle: "Transition Guide 2026",
-    score: "4.4 / 10",
+    score: "2.5 / 10",
     riskLabel: "Lower Risk When Repositioned Deliberately",
     editionLabel: "India 2026 Edition",
     heroSummary:

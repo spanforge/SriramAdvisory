@@ -97,7 +97,7 @@ const GUIDES = [
   {
     badge: "New",
     title: "FDE Career Transition Guide 2026",
-    subtitle: "4.4/10 repositioned score. 90-day direction. Higher-leverage FDE path.",
+    subtitle: "2.5/10 repositioned score. 90-day direction. Higher-leverage FDE path.",
     blurb:
       "For FDEs who want to move beyond execution-only delivery and build stronger positioning around product judgment, systems thinking, and AI-era engineering leverage.",
     price: "Rs 499",
@@ -107,7 +107,7 @@ const GUIDES = [
     borderColor: "#f9a8d4",
     role: "FDE",
     timeline: "90-day direction",
-    riskScore: "Repositioned score 4.4/10",
+    riskScore: "Repositioned score 2.5/10",
     focus: "Career transition",
   },
   {
