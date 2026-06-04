@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GuidesCatalog from "@/components/GuidesCatalog";
 
 export const metadata: Metadata = {
   title: "Guides | Sriram Advisory",
@@ -25,6 +25,10 @@ const GUIDES = [
     accentColor: "#7c3aed",
     bgGradient: "linear-gradient(135deg, #faf5ff 0%, #efe4ff 100%)",
     borderColor: "#d8b4fe",
+    role: "Project / Delivery",
+    timeline: "60-day direction",
+    riskScore: "Risk score 5.9/10",
+    focus: "Execution systems",
   },
   {
     badge: "New",
@@ -37,6 +41,10 @@ const GUIDES = [
     accentColor: "#1d4ed8",
     bgGradient: "linear-gradient(135deg, #f8fbff 0%, #e6efff 100%)",
     borderColor: "#bfdbfe",
+    role: "DevOps",
+    timeline: "60-day direction",
+    riskScore: "Risk score 6.8/10",
+    focus: "Platform and reliability",
   },
   {
     badge: "New",
@@ -49,6 +57,10 @@ const GUIDES = [
     accentColor: "#0f766e",
     bgGradient: "linear-gradient(135deg, #f4fffd 0%, #dffaf3 100%)",
     borderColor: "#99f6e4",
+    role: "Business Analyst",
+    timeline: "60-day direction",
+    riskScore: "Risk score 7.1/10",
+    focus: "Problem framing",
   },
   {
     badge: "New",
@@ -61,6 +73,10 @@ const GUIDES = [
     accentColor: "#0f4c81",
     bgGradient: "linear-gradient(135deg, #f4faff 0%, #dceeff 100%)",
     borderColor: "#93c5fd",
+    role: "Business Analyst",
+    timeline: "90-day direction",
+    riskScore: "Repositioned score 3.5/10",
+    focus: "AI product transition",
   },
   {
     badge: "New",
@@ -73,6 +89,10 @@ const GUIDES = [
     accentColor: "#0d9268",
     bgGradient: "linear-gradient(135deg, #f5fff9 0%, #e3faec 100%)",
     borderColor: "#bbf7d0",
+    role: "QA",
+    timeline: "90-day direction",
+    riskScore: "Risk score 9.5/10",
+    focus: "Quality ownership",
   },
   {
     badge: "New",
@@ -85,6 +105,10 @@ const GUIDES = [
     accentColor: "#d97706",
     bgGradient: "linear-gradient(135deg, #fffdf4 0%, #fef1c8 100%)",
     borderColor: "#fde68a",
+    role: "BPO / Support",
+    timeline: "30-day direction",
+    riskScore: "Risk score 9.2/10",
+    focus: "AI-era support paths",
   },
   {
     badge: "New",
@@ -97,6 +121,10 @@ const GUIDES = [
     accentColor: "#b45309",
     bgGradient: "linear-gradient(135deg, #fff8f0 0%, #ffe0b8 100%)",
     borderColor: "#fdba74",
+    role: "Java Developer",
+    timeline: "60-day direction",
+    riskScore: "Risk score 7.5/10",
+    focus: "AI leverage",
   },
   {
     badge: "New",
@@ -109,6 +137,10 @@ const GUIDES = [
     accentColor: "#4f46e5",
     bgGradient: "linear-gradient(135deg, #f8f6ff 0%, #ede9fe 100%)",
     borderColor: "#c7d2fe",
+    role: "Selenium / Automation",
+    timeline: "60-day direction",
+    riskScore: "Risk score 7.2/10",
+    focus: "Modern automation",
   },
   {
     badge: "New",
@@ -121,6 +153,10 @@ const GUIDES = [
     accentColor: "#2563eb",
     bgGradient: "linear-gradient(135deg, #f7faff 0%, #e2eeff 100%)",
     borderColor: "#bfdbfe",
+    role: "Data Analyst",
+    timeline: "90-day direction",
+    riskScore: "Risk score 7.8/10",
+    focus: "Insight and business value",
   },
 ];
 
@@ -225,93 +261,12 @@ export default function GuidesPage() {
         </div>
       </section>
 
-      <section style={{ maxWidth: 980, margin: "0 auto", padding: "64px 20px 80px" }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          {GUIDES.map((guide) => (
-            <Link key={guide.href} href={guide.href} style={{ textDecoration: "none" }}>
-              <div
-                className="guide-card guide-card-body"
-                style={{
-                  background: guide.bgGradient,
-                  border: `1.5px solid ${guide.borderColor}`,
-                  borderRadius: 18,
-                  cursor: "pointer",
-                }}
-              >
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
-                    <span
-                      style={{
-                        fontSize: 11,
-                        fontWeight: 700,
-                        letterSpacing: "0.08em",
-                        textTransform: "uppercase",
-                        background: guide.accentColor,
-                        color: "#ffffff",
-                        padding: "3px 10px",
-                        borderRadius: 20,
-                      }}
-                    >
-                      {guide.badge}
-                    </span>
-                  </div>
-                  <h2
-                    style={{
-                      fontSize: "clamp(20px, 2.5vw, 26px)",
-                      fontWeight: 800,
-                      color: "#0a1628",
-                      marginBottom: 6,
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
-                    {guide.title}
-                  </h2>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: guide.accentColor, marginBottom: 12 }}>
-                    {guide.subtitle}
-                  </p>
-                  <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.7, marginBottom: 14 }}>
-                    {guide.blurb}
-                  </p>
-                  <p style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.6, margin: 0 }}>
-                    {GUIDE_DELIVERY_NOTE}
-                  </p>
-                  <p
-                    style={{
-                      fontSize: 13,
-                      color: guide.accentColor,
-                      lineHeight: 1.6,
-                      marginTop: 8,
-                      marginBottom: 0,
-                      fontWeight: 600,
-                    }}
-                  >
-                    {BONUS_GUIDE_NOTE}
-                  </p>
-                </div>
-                <div className="guide-card-price-col">
-                  <div style={{ fontSize: 28, fontWeight: 800, color: guide.accentColor }}>{guide.price}</div>
-                  <div
-                    style={{
-                      marginTop: 16,
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 6,
-                      background: guide.accentColor,
-                      color: "#fff",
-                      fontSize: 13,
-                      fontWeight: 700,
-                      padding: "10px 20px",
-                      borderRadius: 8,
-                      letterSpacing: "0.01em",
-                    }}
-                  >
-                    View details {"->"}
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 20px 80px" }}>
+        <GuidesCatalog
+          guides={GUIDES}
+          deliveryNote={GUIDE_DELIVERY_NOTE}
+          bonusNote={BONUS_GUIDE_NOTE}
+        />
       </section>
 
       <Footer />

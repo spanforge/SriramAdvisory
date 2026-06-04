@@ -528,11 +528,65 @@ select:focus-visible {
   display: grid;
 }
 
+.guides-toolbar-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.guides-jump-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.guides-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.guides-catalog-card {
+  min-height: 100%;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 18px 40px rgba(10,22,40,0.06);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.guides-catalog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 46px rgba(10,22,40,0.1);
+}
+
 @media (max-width: 900px) {
   .home-hero-grid,
   .home-two-col,
   .about-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  .guides-toolbar-grid,
+  .guides-catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guides-jump-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .guides-jump-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guides-catalog-card {
+    padding: 20px;
   }
 }
 
