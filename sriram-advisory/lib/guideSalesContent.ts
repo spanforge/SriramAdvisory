@@ -78,6 +78,127 @@ export const DELIVERY_NOTE =
   "Manual email delivery, usually within 30 minutes of payment.";
 
 export const guideSalesContent: Record<string, GuidePageContent> = {
+  "data-engineer-ai-survival-guide-2026": {
+    productName: "Data Engineer AI Survival Guide 2026",
+    title: "Data Engineer",
+    accentTitle: "AI Survival Guide 2026",
+    score: "4.0 / 10",
+    riskLabel: "Low Replaceability When Repositioned Correctly",
+    editionLabel: "India 2026 Edition",
+    heroSummary:
+      "Move from traditional pipeline work into AI-native data engineering by understanding what AI teams actually need: trusted data, reliable features, embedding pipelines, feedback loops, drift monitoring, and data architecture that models can depend on.",
+    heroNote:
+      "Your pipeline skills did not expire. They became the reliability layer every serious AI team needs.",
+    outcomeBullets: [
+      "A 90-day direction toward AI-native data engineering",
+      "Clearer positioning around data reliability for AI systems",
+      "India-first guidance for GCC, product, and AI platform teams",
+    ],
+    promiseBullets: [
+      "Decode why traditional DE work is being squeezed and where premium demand is moving",
+      "Reframe your experience around model-ready data, feature quality, and production AI reliability",
+      "Build stronger portfolio, resume, and interview signal for AI data engineering roles",
+    ],
+    whatYouGet: [
+      {
+        title: "Role-risk clarity for Data Engineers",
+        desc: "A plain-English view of why routine ETL and warehouse work is getting compressed while AI-native data judgment is becoming more valuable.",
+      },
+      {
+        title: "90-day transition playbook",
+        desc: "A practical path to move from traditional data engineering identity toward stronger AI data engineering positioning.",
+      },
+      {
+        title: "AI data systems lens",
+        desc: "Guidance on training-serving skew, data leakage, label quality, feature stores, embedding pipelines, drift, and feedback-loop data engineering.",
+      },
+      {
+        title: "GenAI data engineering layer",
+        desc: "A focused view of chunking strategy, retrieval quality, document freshness, metadata filtering, and access control for GenAI systems.",
+      },
+      {
+        title: "Portfolio and proof direction",
+        desc: "A structure for showing data quality contracts, leakage audits, monitoring designs, success metrics, and baseline improvements.",
+      },
+      {
+        title: "Resume, LinkedIn, and interview signal",
+        desc: "Positioning approaches, hiring-manager evaluation criteria, red flags, and question-bank preparation for AI data roles.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "Why traditional pipeline skills are still valuable but need a new AI-system frame",
+          "What AI Data Engineers actually own beyond warehouses and dashboards",
+          "Where feature stores, embeddings, drift, leakage, and feedback data fit into the role",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "A 90-day transition direction",
+          "A clearer AI data engineering portfolio structure",
+          "A stronger market story for GCC, product, and AI platform environments",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A beginner data engineering course",
+          "A full ML engineering curriculum",
+          "Generic AI hype detached from production data reliability",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "Traditional Pipeline Owner",
+        desc: "Your profile is anchored to ETL, orchestration, warehouse maintenance, and repeatable data delivery patterns.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "AI Data Reliability Builder",
+        desc: "You begin to signal stronger judgment around model-ready data, quality contracts, leakage, drift, and feedback loops.",
+        color: "#0891b2",
+      },
+      {
+        stage: "Stage 3",
+        title: "AI-Native Data Engineer",
+        desc: "You are positioned as the bridge between data systems and AI systems, owning the data layer where production models succeed or fail.",
+        color: "#0f766e",
+      },
+    ],
+    forYou: [
+      "You are a Data Engineer in India and can see routine pipeline work becoming more automated or commoditized.",
+      "You want to move toward AI Data Engineer, ML data platform, GenAI data systems, or adjacent AI platform roles.",
+      "You already understand data systems and want to apply that depth where AI teams have real reliability problems.",
+      "You need a practical 90-day direction instead of vague advice to just learn AI.",
+      "You want stronger resume, LinkedIn, portfolio, and interview positioning for AI data roles.",
+    ],
+    notForYou: [
+      "You want a beginner SQL, Python, Spark, or data engineering tutorial.",
+      "You want a model-building or deep ML research curriculum.",
+      "You already operate as a senior AI platform or ML infrastructure engineer with production feature-store, embedding, and feedback-loop ownership.",
+    ],
+    ctaTitle: "Move into the data layer where AI systems succeed or fail.",
+    ctaBody:
+      "Use this guide to turn data engineering experience into stronger AI-native positioning, clearer proof, and a more durable market story.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#0891b2",
+      accentSoft: "#a5f3fc",
+      accentStrong: "#0f766e",
+      heroGradient: "linear-gradient(135deg, #06141a 0%, #083344 52%, #0891b2 100%)",
+      heroText: "rgba(207,250,254,0.86)",
+      sectionTint: "#ecfeff",
+      sectionBorder: "#67e8f9",
+      panelTint: "#f7feff",
+      finalGradient: "linear-gradient(160deg, #06141a 0%, #083344 60%, #0f766e 100%)",
+    },
+  },
   "project-delivery-manager-survival-guide-2026": {
     productName: "Project Manager / Delivery Manager Survival Guide 2026",
     title: "Project Manager /",
