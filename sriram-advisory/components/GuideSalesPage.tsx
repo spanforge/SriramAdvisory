@@ -6,6 +6,9 @@ import {
   BONUS_GUIDE_TITLE,
   DELIVERY_NOTE,
   FOUNDER_TRUST_NOTE,
+  LIFETIME_UPDATES_BODY,
+  LIFETIME_UPDATES_SHORT_NOTE,
+  LIFETIME_UPDATES_TITLE,
   SHARED_FAQ,
   type GuidePageContent,
 } from "@/lib/guideSalesContent";
@@ -212,11 +215,44 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                 fontSize: 13,
                 color: "rgba(255,255,255,0.72)",
                 lineHeight: 1.6,
-                margin: "0 0 20px",
+                margin: "0 0 14px",
               }}
             >
               {FOUNDER_TRUST_NOTE}
             </p>
+            <div
+              style={{
+                background: "rgba(255,255,255,0.08)",
+                border: "1px solid rgba(255,255,255,0.14)",
+                borderRadius: 14,
+                padding: "14px 16px",
+                margin: "0 0 20px",
+                textAlign: "left",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 12,
+                  fontWeight: 800,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: theme.accentSoft,
+                  marginBottom: 8,
+                }}
+              >
+                {LIFETIME_UPDATES_TITLE}
+              </div>
+              <p
+                style={{
+                  fontSize: 13,
+                  color: "rgba(255,255,255,0.84)",
+                  lineHeight: 1.65,
+                  margin: 0,
+                }}
+              >
+                {LIFETIME_UPDATES_SHORT_NOTE}
+              </p>
+            </div>
 
             <CashfreeCheckout
               productName={content.productName}
@@ -672,6 +708,52 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
         </div>
       </section>
 
+      <section
+        style={{
+          padding: "72px 20px",
+          background: `linear-gradient(180deg, ${theme.sectionTint} 0%, #ffffff 100%)`,
+        }}
+      >
+        <div style={{ maxWidth: 860, margin: "0 auto" }}>
+          <div
+            style={{
+              background: "#ffffff",
+              border: `1px solid ${theme.sectionBorder}`,
+              borderRadius: 20,
+              padding: "30px 28px",
+              boxShadow: "0 18px 40px rgba(10, 22, 40, 0.06)",
+            }}
+          >
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 800,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: theme.accent,
+                marginBottom: 10,
+              }}
+            >
+              Public Commitment
+            </div>
+            <h2
+              style={{
+                fontSize: "clamp(24px, 3.4vw, 34px)",
+                fontWeight: 900,
+                color: "#0a1628",
+                letterSpacing: "-0.03em",
+                marginBottom: 12,
+              }}
+            >
+              {LIFETIME_UPDATES_TITLE}
+            </h2>
+            <p style={{ fontSize: 15, color: "#4a5a7a", lineHeight: 1.8, margin: 0 }}>
+              {LIFETIME_UPDATES_BODY}
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: "72px 20px", background: "#ffffff" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
@@ -769,11 +851,22 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                 fontSize: 13,
                 color: "rgba(255,255,255,0.82)",
                 lineHeight: 1.6,
-                margin: "0 0 18px",
+                margin: "0 0 12px",
                 maxWidth: 560,
               }}
             >
               <strong>{BONUS_GUIDE_TITLE}</strong> {BONUS_GUIDE_NOTE}
+            </p>
+            <p
+              style={{
+                fontSize: 13,
+                color: "rgba(255,255,255,0.82)",
+                lineHeight: 1.6,
+                margin: "0 0 18px",
+                maxWidth: 560,
+              }}
+            >
+              <strong>{LIFETIME_UPDATES_TITLE}</strong> {LIFETIME_UPDATES_SHORT_NOTE}
             </p>
             <CashfreeCheckout
               productName={content.productName}

@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GuidesCatalog from "@/components/GuidesCatalog";
+import {
+  LIFETIME_UPDATES_BODY,
+  LIFETIME_UPDATES_TITLE,
+} from "@/lib/guideSalesContent";
 
 export const metadata: Metadata = {
   title: "Guides | Sriram Advisory",
@@ -93,6 +97,22 @@ const GUIDES = [
     timeline: "90-day direction",
     riskScore: "Repositioned score 3.5/10",
     focus: "AI product transition",
+  },
+  {
+    badge: "New",
+    title: "FDE Career Transition Guide 2026",
+    subtitle: "2.5/10 repositioned score. 90-day direction. Higher-leverage FDE path.",
+    blurb:
+      "For FDEs who want to move beyond execution-only delivery and build stronger positioning around product judgment, systems thinking, and AI-era engineering leverage.",
+    price: "Rs 499",
+    href: "/guides/fde-career-transition-guide-2026",
+    accentColor: "#be185d",
+    bgGradient: "linear-gradient(135deg, #fff6fb 0%, #ffe3f0 100%)",
+    borderColor: "#f9a8d4",
+    role: "FDE",
+    timeline: "90-day direction",
+    riskScore: "Repositioned score 2.5/10",
+    focus: "Career transition",
   },
   {
     badge: "New",
@@ -278,6 +298,53 @@ export default function GuidesPage() {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 20px 80px" }}>
+        <div
+          style={{
+            background: "linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%)",
+            border: "1px solid #c7d7ff",
+            borderRadius: 24,
+            padding: "28px 24px",
+            marginBottom: 28,
+            boxShadow: "0 20px 50px rgba(10, 22, 40, 0.06)",
+          }}
+        >
+          <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+            <span
+              style={{
+                fontSize: 12,
+                fontWeight: 800,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "#1a4fd6",
+                display: "block",
+                marginBottom: 10,
+              }}
+            >
+              Public Commitment
+            </span>
+            <h2
+              style={{
+                fontSize: "clamp(24px, 3.5vw, 36px)",
+                fontWeight: 900,
+                color: "#0a1628",
+                letterSpacing: "-0.03em",
+                marginBottom: 12,
+              }}
+            >
+              {LIFETIME_UPDATES_TITLE}
+            </h2>
+            <p
+              style={{
+                fontSize: 15,
+                color: "#40526b",
+                lineHeight: 1.8,
+                margin: 0,
+              }}
+            >
+              {LIFETIME_UPDATES_BODY}
+            </p>
+          </div>
+        </div>
         <GuidesCatalog
           guides={GUIDES}
           deliveryNote={GUIDE_DELIVERY_NOTE}
