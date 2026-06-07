@@ -16,7 +16,7 @@ export default function FreeGuideLeadForm({
   buttonLabel = "Get this free guide ->",
 }: FreeGuideLeadFormProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -45,7 +45,7 @@ export default function FreeGuideLeadForm({
           width: "100%",
         }}
       >
-        {isOpen ? "Hide form" : buttonLabel}
+        {isOpen ? "Hide form" : hasSubmitted ? "Details submitted" : buttonLabel}
       </button>
 
       {isOpen && (
@@ -56,7 +56,7 @@ export default function FreeGuideLeadForm({
             event.preventDefault();
             setIsSubmitting(true);
             setErrorMessage("");
-            setIsSubmitted(false);
+            setHasSubmitted(false);
 
             const form = event.currentTarget;
             const formData = new FormData(form);
@@ -71,13 +71,23 @@ export default function FreeGuideLeadForm({
               });
 
               if (!response.ok) {
-                throw new Error("Form submission failed.");
+                const payload = (await response.json().catch(() => null)) as
+                  | { errors?: { message?: string }[] }
+                  | null;
+                const message =
+                  payload?.errors?.[0]?.message ?? "Something went wrong while sending the form. Please try again.";
+                throw new Error(message);
               }
 
               form.reset();
-              setIsSubmitted(true);
-            } catch {
-              setErrorMessage("Something went wrong while sending the form. Please try again.");
+              setHasSubmitted(true);
+              setIsOpen(false);
+            } catch (error) {
+              setErrorMessage(
+                error instanceof Error
+                  ? error.message
+                  : "Something went wrong while sending the form. Please try again."
+              );
             } finally {
               setIsSubmitting(false);
             }
@@ -118,6 +128,7 @@ export default function FreeGuideLeadForm({
           </div>
 
           <input type="hidden" name="guide" value={guideTitle} />
+          <input type="hidden" name="_subject" value={`${guideTitle} free guide request`} />
 
           <label style={{ display: "grid", gap: 6 }}>
             <span style={{ fontSize: 13, fontWeight: 700, color: "#ffffff" }}>Name</span>
@@ -169,19 +180,6 @@ export default function FreeGuideLeadForm({
           >
             {isSubmitting ? "Submitting..." : "Submit details"}
           </button>
-
-          {isSubmitted && (
-            <p
-              style={{
-                margin: 0,
-                fontSize: 13,
-                color: "#dcfce7",
-                lineHeight: 1.6,
-              }}
-            >
-              Details received. The Formspree integration is live for this free guide form.
-            </p>
-          )}
 
           {errorMessage && (
             <p
