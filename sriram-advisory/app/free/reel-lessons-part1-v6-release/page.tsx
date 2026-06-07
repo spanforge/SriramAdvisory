@@ -196,7 +196,7 @@ export default function ReelLessonsPart1Page() {
                 display: "block",
               }}
             >
-              Free access, delivered through the signup form
+              Manual delivery, usually within 30 minutes
             </span>
             <p
               style={{
