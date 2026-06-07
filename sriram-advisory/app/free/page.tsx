@@ -15,16 +15,16 @@ const FREE_RESOURCES = [
     title: "Reel Lessons Part 1",
     subtitle: "Short lessons and reflections collected into a free downloadable guide.",
     blurb:
-      "A free entry in the Sriram Advisory library. This page is where free downloads, public notes, and lightweight resources will keep getting added over time.",
+      "A compact collection of practical reel lessons, reflections, and sharp career observations designed to give readers quick clarity, stronger perspective, and useful takeaways without the fluff.",
     price: "Free",
     href: "/free/reel-lessons-part1-v6-release",
     accentColor: "#0f766e",
     bgGradient: "linear-gradient(135deg, #f3fffb 0%, #dcfce7 100%)",
     borderColor: "#86efac",
     bullets: [
-      "Free access flow instead of paid checkout",
-      "Lead form ready for future Formspree integration",
-      "First resource in the free library",
+      "Short, direct lessons you can consume quickly",
+      "Built to be useful, practical, and easy to revisit",
+      "A strong first entry in the free Sriram Advisory library",
     ],
   },
 ];
