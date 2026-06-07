@@ -11,6 +11,23 @@ export const metadata: Metadata = {
 
 const REPORTS = [
   {
+    badge: "New - June 2026",
+    title: "Why Expertise Becomes a Trap",
+    subtitle: "AI displacement. Competency traps. Professional reinvention.",
+    blurb:
+      "The first Sriram Advisory Intelligence Series report on why skilled professionals can become vulnerable during technological transitions, and why AI is making that pattern faster and broader.",
+    price: "Rs 499",
+    href: "/products/why-expertise-becomes-a-trap",
+    accentColor: "#7c3aed",
+    bgGradient: "linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%)",
+    borderColor: "#d8b4fe",
+    bullets: [
+      "Explains why expertise alone is not a durable AI-era moat",
+      "Connects historical disruption patterns with current AI pressure",
+      "Built for senior professionals, managers, HR/L&D, founders, and consultants",
+    ],
+  },
+  {
     badge: "New",
     title: "AI Futures 2026",
     subtitle: "India-first AI career scenarios. Strategic signals. Practical adaptation lens.",
