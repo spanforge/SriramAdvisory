@@ -6,7 +6,7 @@ import FreeGuideLeadForm from "@/components/FreeGuideLeadForm";
 export const metadata: Metadata = {
   title: "Reel Lessons Part 1 | Free Guide | Sriram Advisory",
   description:
-    "Free Sriram Advisory guide landing page for Reel Lessons Part 1, with frontend lead capture for name, email, and optional phone.",
+    "Free Sriram Advisory landing page for Reel Lessons Part 1, a compact collection of lessons, reflections, and practical career observations.",
 };
 
 const THEME = {
@@ -73,7 +73,7 @@ export default function ReelLessonsPart1Page() {
                 color: THEME.accentSoft,
               }}
             >
-              Free Download
+              Free Report
             </span>
             <span
               style={{
@@ -91,7 +91,7 @@ export default function ReelLessonsPart1Page() {
                 color: THEME.accentSoft,
               }}
             >
-              Reel Lessons Collection
+              Career Lessons Collection
             </span>
           </div>
 
@@ -107,7 +107,7 @@ export default function ReelLessonsPart1Page() {
           >
             Reel Lessons Part 1
             <br />
-            <span style={{ color: THEME.accentSoft }}>Free Release Guide</span>
+            <span style={{ color: THEME.accentSoft }}>Free Release Report</span>
           </h1>
 
           <p
@@ -119,7 +119,7 @@ export default function ReelLessonsPart1Page() {
               margin: "0 auto 16px",
             }}
           >
-            A free landing page for the Reel Lessons Part 1 release. This is designed as a lightweight public resource with a simple lead-capture flow instead of paid checkout.
+            A compact free report built from short lessons, reflections, and sharp observations on work, careers, judgment, and positioning. It is designed to give readers quick clarity they can actually use.
           </p>
 
           <p
@@ -130,7 +130,7 @@ export default function ReelLessonsPart1Page() {
               marginBottom: 28,
             }}
           >
-            This is where readers can discover the guide, understand what it is, and leave their details to receive access once the form integration is connected.
+            Not motivational fluff. Not recycled career advice. Just concise, practical thinking collected into one readable resource.
           </p>
 
           <div
@@ -143,9 +143,9 @@ export default function ReelLessonsPart1Page() {
             }}
           >
             {[
-              "Free guide access flow",
-              "Name and email required",
-              "Phone field optional",
+              "Short lessons with practical takeaways",
+              "Fast to read, easy to revisit",
+              "Free access with simple signup",
             ].map((item) => (
               <div
                 key={item}
@@ -181,9 +181,9 @@ export default function ReelLessonsPart1Page() {
                   color: "#ffffff",
                   letterSpacing: "-0.03em",
                 }}
-              >
-                Free
-              </span>
+            >
+              Free
+            </span>
             </div>
             <span
               style={{
@@ -196,7 +196,7 @@ export default function ReelLessonsPart1Page() {
                 display: "block",
               }}
             >
-              Lead capture flow ready for Formspree
+              Free access, delivered through the signup form
             </span>
             <p
               style={{
@@ -206,7 +206,7 @@ export default function ReelLessonsPart1Page() {
                 margin: "0 0 14px",
               }}
             >
-              This page intentionally uses a form instead of payment, so you can collect details before sharing the guide.
+              Enter your details below to get access to Reel Lessons Part 1, a short free report for readers who want compact, useful perspective instead of long generic content.
             </p>
             <p
               style={{
@@ -216,7 +216,7 @@ export default function ReelLessonsPart1Page() {
                 margin: "0 0 20px",
               }}
             >
-              Once you wire Formspree, this same UI can become the live delivery entry point for the document.
+              It is built for quick reading, quick insight, and easy sharing with professionals who may benefit from the ideas inside it.
             </p>
 
             <FreeGuideLeadForm
@@ -239,9 +239,9 @@ export default function ReelLessonsPart1Page() {
           }}
         >
           {[
-            "A dedicated free-resource page that matches the rest of the site design language.",
-            "A simple lead form with name, email, and optional phone so the experience is ready for later integration.",
-            "A clean way to separate free resources from paid guides and services in the main navigation.",
+            "A free report made from short lessons and reflections that do not waste the reader's time.",
+            "Useful for readers who want sharper perspective on work, careers, and positioning in a quick format.",
+            "A simple signup flow so readers can request access without going through checkout.",
           ].map((item) => (
             <div
               key={item}
@@ -275,7 +275,7 @@ export default function ReelLessonsPart1Page() {
                 marginBottom: 12,
               }}
             >
-              What This Page Does
+              What This Report Offers
             </span>
             <h2
               style={{
@@ -285,7 +285,7 @@ export default function ReelLessonsPart1Page() {
                 letterSpacing: "-0.02em",
               }}
             >
-              A proper landing page for a free guide
+              Why readers may want this free report
             </h2>
           </div>
           <div
@@ -297,16 +297,16 @@ export default function ReelLessonsPart1Page() {
           >
             {[
               {
-                title: "Sets expectations clearly",
-                desc: "Readers immediately understand this is a free resource and that details are being collected through a simple access form.",
+                title: "Quick lessons, not heavy reading",
+                desc: "The report is built from concise lessons and reflections, so readers can take away useful ideas without committing to a long-form guide.",
               },
               {
-                title: "Matches existing site patterns",
-                desc: "The page borrows the same premium landing-page structure used elsewhere, so it feels native to the rest of the website.",
+                title: "Practical career perspective",
+                desc: "It focuses on real observations, judgment, and positioning rather than generic productivity advice or empty inspiration.",
               },
               {
-                title: "Stays easy to evolve",
-                desc: "You can later connect Formspree, change copy, or add direct delivery logic without redesigning the page.",
+                title: "Easy entry into Sriram Advisory",
+                desc: "It gives new readers a free way to experience the tone, quality, and usefulness of Sriram Advisory's work before exploring paid reports, guides, or services.",
               },
             ].map((item) => (
               <div
@@ -351,7 +351,7 @@ export default function ReelLessonsPart1Page() {
                 marginBottom: 12,
               }}
             >
-              Reader Journey
+              Inside The Report
             </span>
             <h2
               style={{
@@ -361,7 +361,7 @@ export default function ReelLessonsPart1Page() {
                 letterSpacing: "-0.02em",
               }}
             >
-              From discovery to access request
+              What readers can expect from Reel Lessons Part 1
             </h2>
           </div>
           <div
@@ -373,27 +373,27 @@ export default function ReelLessonsPart1Page() {
           >
             {[
               {
-                title: "1. Discover the guide",
+                title: "1. Short-form clarity",
                 bullets: [
-                  "Find it from the new Free menu",
-                  "See it listed on the free resources landing page",
-                  "Understand quickly that it is not part of paid checkout",
+                  "Quick lessons that are easy to consume in one sitting",
+                  "Compact writing that respects the reader's time",
+                  "A format built for clarity rather than overload",
                 ],
               },
               {
-                title: "2. Open the form",
+                title: "2. Practical reflections",
                 bullets: [
-                  "Click the main call-to-action button",
-                  "Reveal the free-access form inline",
-                  "Enter name, email, and optional phone",
+                  "Observations on careers, judgment, and professional positioning",
+                  "Ideas readers can reflect on and apply immediately",
+                  "A sharper alternative to generic free internet advice",
                 ],
               },
               {
-                title: "3. Prepare for handoff",
+                title: "3. A strong free starting point",
                 bullets: [
-                  "Keep the visual flow production-ready",
-                  "Swap the submit handler to Formspree later",
-                  "Use the same page as the long-term free download entry point",
+                  "A simple way to discover Sriram Advisory's voice and quality",
+                  "A useful resource to share with friends or colleagues",
+                  "A first step before diving into deeper paid reports and guides",
                 ],
               },
             ].map((item) => (
@@ -448,10 +448,10 @@ export default function ReelLessonsPart1Page() {
               letterSpacing: "-0.02em",
             }}
           >
-            Keep this ready for live free distribution
+            Get the free report and start with something genuinely useful
           </h2>
           <p style={{ fontSize: 17, color: "rgba(240,250,255,0.78)", lineHeight: 1.7, marginBottom: 32 }}>
-            The page is already structured for a clean free-resource flow. Once Formspree is connected, the existing interface can start collecting real submissions without another redesign pass.
+            Reel Lessons Part 1 is meant to be a clean, practical entry point into Sriram Advisory. If you want short lessons with real signal, request access below.
           </p>
           <div style={{ maxWidth: 420, margin: "0 auto" }}>
             <FreeGuideLeadForm
