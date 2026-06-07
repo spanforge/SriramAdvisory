@@ -457,7 +457,7 @@ export default function ReelLessonsPart1Page() {
             <FreeGuideLeadForm
               guideTitle="Reel Lessons Part 1"
               accentColor={THEME.accent}
-              buttonLabel="Open free access form ->"
+              buttonLabel="Get this free guide ->"
             />
           </div>
         </div>
