@@ -17,7 +17,7 @@ const FREE_RESOURCES = [
     blurb:
       "A compact collection of lessons drawn from Hollywood movies, paired with reflections and practical takeaways. Here, 'Reel' means cinema, stories, characters, and scenes that leave behind something useful to think about.",
     price: "Free",
-    href: "/free/reel-lessons-part1-v6-release",
+    href: "/free/reel-lessons-part1-v1-release",
     accentColor: "#0f766e",
     bgGradient: "linear-gradient(135deg, #f3fffb 0%, #dcfce7 100%)",
     borderColor: "#86efac",
