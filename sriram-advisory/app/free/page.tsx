@@ -13,17 +13,17 @@ const FREE_RESOURCES = [
   {
     badge: "Free Guide",
     title: "Reel Lessons Part 1",
-    subtitle: "Short lessons and reflections collected into a free downloadable guide.",
+    subtitle: "Lessons and reflections drawn from Hollywood movies, collected into a free downloadable guide.",
     blurb:
-      "A compact collection of practical reel lessons, reflections, and sharp career observations designed to give readers quick clarity, stronger perspective, and useful takeaways without the fluff.",
+      "A compact collection of lessons drawn from Hollywood movies, paired with reflections and practical takeaways. Here, 'Reel' means cinema, stories, characters, and scenes that leave behind something useful to think about.",
     price: "Free",
     href: "/free/reel-lessons-part1-v6-release",
     accentColor: "#0f766e",
     bgGradient: "linear-gradient(135deg, #f3fffb 0%, #dcfce7 100%)",
     borderColor: "#86efac",
     bullets: [
-      "Short, direct lessons you can consume quickly",
-      "Built to be useful, practical, and easy to revisit",
+      "Lessons inspired by Hollywood movies and memorable scenes",
+      "Short reflections with practical takeaways you can revisit",
       "A strong first entry in the free Sriram Advisory library",
     ],
   },
