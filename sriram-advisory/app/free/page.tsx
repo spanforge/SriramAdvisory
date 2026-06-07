@@ -157,6 +157,101 @@ export default function FreePage() {
           </p>
         </div>
 
+        <div
+          style={{
+            background: "linear-gradient(135deg, #0a1628 0%, #102346 55%, #0f766e 100%)",
+            border: "1px solid rgba(15,118,110,0.28)",
+            borderRadius: 24,
+            padding: "32px 24px",
+            marginBottom: 32,
+            boxShadow: "0 24px 60px rgba(10, 22, 40, 0.12)",
+          }}
+        >
+          <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 800,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "#a7f3d0",
+                marginBottom: 10,
+              }}
+            >
+              Support The Mission
+            </div>
+            <h2
+              style={{
+                fontSize: "clamp(28px, 4vw, 42px)",
+                fontWeight: 900,
+                color: "#ffffff",
+                letterSpacing: "-0.03em",
+                marginBottom: 16,
+                lineHeight: 1.15,
+              }}
+            >
+              If this free work helps you, support Sriram Advisory so Sriram can keep making more
+            </h2>
+            <p
+              style={{
+                fontSize: 16,
+                color: "rgba(220,252,231,0.86)",
+                lineHeight: 1.8,
+                margin: "0 auto 16px",
+                maxWidth: 700,
+              }}
+            >
+              Free resources take real time, thought, and care to create. When you buy a report, a guide, or a service, you are not just buying something for yourself. You are helping Sriram keep publishing honest, useful, India-first career intelligence that more people can access for free.
+            </p>
+            <p
+              style={{
+                fontSize: 15,
+                color: "rgba(255,255,255,0.74)",
+                lineHeight: 1.8,
+                margin: "0 auto 26px",
+                maxWidth: 680,
+              }}
+            >
+              If you want this free library to grow into something genuinely valuable, the best way to support it is by backing the paid work that funds the research, writing, and time behind it.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                gap: 12,
+              }}
+            >
+              {[
+                { label: "Buy Reports", href: "/reports", background: "#1a4fd6" },
+                { label: "Buy Guides", href: "/guides", background: "#0f766e" },
+                { label: "Explore Services", href: "/services", background: "#b45309" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textDecoration: "none",
+                    background: item.background,
+                    color: "#ffffff",
+                    fontSize: 14,
+                    fontWeight: 800,
+                    padding: "12px 18px",
+                    borderRadius: 10,
+                    minWidth: 170,
+                  }}
+                >
+                  {item.label} {"->"}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           {FREE_RESOURCES.map((resource) => (
             <Link key={resource.href} href={resource.href} style={{ textDecoration: "none" }}>
