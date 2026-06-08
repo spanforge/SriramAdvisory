@@ -87,6 +87,127 @@ export const LIFETIME_UPDATES_BODY =
   "A commitment, made publicly and permanently: every Sriram Advisory guide comes with free lifetime upgrades for every buyer, from the first to the last. When the market shifts, when data changes, when a better framework emerges, you get the updated version automatically. No repurchase. No upgrade fee. Ever.";
 
 export const guideSalesContent: Record<string, GuidePageContent> = {
+  "cloud-engineer-ai-survival-guide-2026": {
+    productName: "Cloud Engineer AI Survival Guide 2026",
+    title: "Cloud Engineer",
+    accentTitle: "AI Survival Guide 2026",
+    score: "3.8 / 10",
+    riskLabel: "Low Replaceability When Repositioned Correctly",
+    editionLabel: "India 2026 Edition",
+    heroSummary:
+      "Move from traditional cloud infrastructure work into AI-native cloud engineering by understanding what production AI systems actually need: GPU platform design, model-serving reliability, AI cost observability, vector infrastructure, and cloud architectures that can scale securely under real inference load.",
+    heroNote:
+      "Your infrastructure skills did not expire. They became the foundation every production AI system depends on.",
+    outcomeBullets: [
+      "A 90-day direction toward AI-native cloud engineering",
+      "Clearer positioning around AI infrastructure reliability and scale",
+      "India-first guidance for GCC, product, and AI platform teams",
+    ],
+    promiseBullets: [
+      "Decode why traditional provisioning-heavy cloud work is being compressed and where premium demand is moving",
+      "Reframe your experience around GPU platforms, model serving, cost engineering, and AI observability",
+      "Build stronger portfolio, resume, and interview signal for AI cloud engineering roles",
+    ],
+    whatYouGet: [
+      {
+        title: "Role-risk clarity for Cloud Engineers",
+        desc: "A plain-English view of why routine infrastructure provisioning is getting cheaper while AI cloud engineering judgment is becoming more valuable.",
+      },
+      {
+        title: "90-day transition playbook",
+        desc: "A practical path to move from standard cloud engineering identity toward stronger AI-native infrastructure positioning.",
+      },
+      {
+        title: "AI infrastructure lens",
+        desc: "Guidance on GPU cluster sizing, model serving architecture, inference latency, autoscaling, AI platform security, and reliability design.",
+      },
+      {
+        title: "GenAI infrastructure layer",
+        desc: "A focused view of vector database deployment, LLM gateway design, token economics, prompt-serving infrastructure, and FinOps for AI workloads.",
+      },
+      {
+        title: "Portfolio and proof direction",
+        desc: "A structure for showing AI infrastructure design docs, cost-per-query thinking, observability plans, and production-readiness judgment.",
+      },
+      {
+        title: "Resume, LinkedIn, and interview signal",
+        desc: "Positioning approaches, hiring-manager evaluation criteria, red flags, and question-bank preparation for AI cloud engineering roles.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "Why traditional cloud engineering is still valuable but needs an AI infrastructure frame",
+          "What AI Cloud Engineers actually own beyond application hosting and Terraform modules",
+          "Where GPUs, model serving, AI observability, vector systems, and AI cost engineering fit into the role",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "A 90-day transition direction",
+          "A clearer AI cloud engineering portfolio structure",
+          "A stronger market story for GCC, product, and AI platform environments",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A beginner cloud or Kubernetes course",
+          "A full machine learning engineering curriculum",
+          "Generic AI hype detached from production infrastructure reality",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "Infrastructure Provisioner",
+        desc: "Your profile is anchored to templated provisioning, standard cloud deployments, and repeatable platform execution.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "Cloud Reliability / Platform Owner",
+        desc: "You begin to signal stronger judgment around SLAs, platform reliability, cost controls, and infrastructure trade-offs.",
+        color: "#0f766e",
+      },
+      {
+        stage: "Stage 3",
+        title: "AI-Native Cloud Engineer",
+        desc: "You are positioned as the bridge between cloud platforms and AI systems, owning the infrastructure layer where production AI succeeds or fails.",
+        color: "#0f4c81",
+      },
+    ],
+    forYou: [
+      "You are a Cloud Engineer in India and can see routine provisioning, platform setup, and maintenance work getting more automated.",
+      "You want to move toward AI Cloud Engineer, MLOps platform, GenAI infrastructure, or adjacent AI platform roles.",
+      "You already understand cloud infrastructure and want to apply that depth where AI teams have real scale, latency, and cost problems.",
+      "You need a practical 90-day direction instead of vague advice to just learn AI.",
+      "You want stronger resume, LinkedIn, portfolio, and interview positioning for AI infrastructure roles.",
+    ],
+    notForYou: [
+      "You want a beginner AWS, Azure, Terraform, Kubernetes, or networking tutorial.",
+      "You want a model-building, data science, or deep ML research curriculum.",
+      "You already operate as a senior AI platform or MLOps lead with production GPU, model-serving, and AI cost governance ownership.",
+    ],
+    ctaTitle: "Move into the infrastructure layer where AI systems scale or fail.",
+    ctaBody:
+      "Use this guide to turn cloud engineering experience into stronger AI-native positioning, clearer proof, and a more durable market story.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#0f766e",
+      accentSoft: "#99f6e4",
+      accentStrong: "#0f4c81",
+      heroGradient: "linear-gradient(135deg, #061713 0%, #0b3b36 52%, #0f766e 100%)",
+      heroText: "rgba(214,255,244,0.86)",
+      sectionTint: "#ecfdf5",
+      sectionBorder: "#99f6e4",
+      panelTint: "#f7fffb",
+      finalGradient: "linear-gradient(160deg, #061713 0%, #0b3b36 60%, #0f4c81 100%)",
+    },
+  },
   "data-engineer-ai-survival-guide-2026": {
     productName: "Data Engineer AI Survival Guide 2026",
     title: "Data Engineer",

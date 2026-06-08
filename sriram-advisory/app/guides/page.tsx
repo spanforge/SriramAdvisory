@@ -20,6 +20,22 @@ const BONUS_GUIDE_NOTE =
 const GUIDES = [
   {
     badge: "New",
+    title: "Cloud Engineer AI Survival Guide 2026",
+    subtitle: "3.8/10 repositioned score. 90-day direction. AI cloud infrastructure path.",
+    blurb:
+      "For Cloud Engineers who want to move from traditional infrastructure provisioning into AI-native cloud engineering, GPU platform design, model-serving reliability, and stronger AI infrastructure positioning.",
+    price: "Rs 499",
+    href: "/guides/cloud-engineer-ai-survival-guide-2026",
+    accentColor: "#0f766e",
+    bgGradient: "linear-gradient(135deg, #f0fdf9 0%, #d9fbe8 100%)",
+    borderColor: "#99f6e4",
+    role: "Cloud Engineer",
+    timeline: "90-day direction",
+    riskScore: "Repositioned score 3.8/10",
+    focus: "AI infrastructure",
+  },
+  {
+    badge: "New",
     title: "Data Engineer AI Survival Guide 2026",
     subtitle: "4.0/10 repositioned score. 90-day direction. AI-native data engineering path.",
     blurb:
