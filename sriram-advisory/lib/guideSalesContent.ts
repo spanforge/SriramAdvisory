@@ -1430,6 +1430,127 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       finalGradient: "linear-gradient(160deg, #1c0a00 0%, #3b1a00 60%, #78350f 100%)",
     },
   },
+  "hr-recruiter-survival-guide-2026": {
+    productName: "HR Recruiter Survival Guide 2026",
+    title: "HR Recruiter",
+    accentTitle: "Survival Guide 2026",
+    score: "8.6 / 10",
+    riskLabel: "High Risk",
+    editionLabel: "India 2026 Edition",
+    heroSummary:
+      "Understand which recruiting tasks AI is already automating, why the real danger is role narrowing rather than total elimination, and how to reposition toward judgment-heavy recruiting work that remains difficult to replace.",
+    heroNote:
+      "The defensible future in recruiting moves away from throughput and toward judgment, calibration, influence, and strategic partnership.",
+    outcomeBullets: [
+      "An 18-month repositioning path for HR Recruiters",
+      "Clearer movement beyond transactional recruiting work",
+      "India-first guidance for AI-shaped IT recruiting environments",
+    ],
+    promiseBullets: [
+      "Decode what AI is already automating across screening, scheduling, matching, and offer workflows",
+      "Reframe your value around stakeholder management, recruiter judgment, and recruiting-system calibration",
+      "Build a stronger market story for higher-leverage HR and talent roles",
+    ],
+    whatYouGet: [
+      {
+        title: "SA-AIRS risk clarity for HR Recruiters",
+        desc: "A direct explanation of why the HR Recruiter role scores 8.6/10 on the SA-AIRS framework and which parts of the work are under the most pressure.",
+      },
+      {
+        title: "18-month repositioning playbook",
+        desc: "A structured path to move from transactional recruiter identity toward more strategic, defensible recruiting work.",
+      },
+      {
+        title: "AI recruiting workflow lens",
+        desc: "A practical view of where resume screening, JD writing, candidate matching, scheduling, and offer processing are already being automated.",
+      },
+      {
+        title: "Human judgment moat",
+        desc: "Guidance on how to strengthen your signal around stakeholder negotiation, candidate quality judgment, hiring-manager advisory work, and exception handling.",
+      },
+      {
+        title: "HR tech ecosystem orientation",
+        desc: "A clearer picture of the vendor and workflow layer that modern recruiters must understand well enough to audit, calibrate, and use strategically.",
+      },
+      {
+        title: "Career and salary positioning",
+        desc: "India-first framing for how recruiter career ceilings change when you move from volume execution into higher-leverage talent intelligence and advisory work.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "Which recruiter tasks are already widely automated and which still require human judgment",
+          "Why the bigger risk is getting stuck in a lower-leverage version of the same role",
+          "How AI changes recruiter value inside Indian IT hiring environments",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "An 18-month repositioning direction",
+          "A sharper recruiting story for interviews and internal movement",
+          "A clearer view of what proof, tools, and judgment signals to build next",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A generic HR certification substitute",
+          "A hype-heavy claim that all recruiting disappears overnight",
+          "Global HR advice copied into India without context",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "Transactional Recruiter",
+        desc: "Your profile is dominated by high-volume coordination, screening, follow-ups, and throughput work that AI systems increasingly compress.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "Judgment-Led Recruiter",
+        desc: "You begin to signal better evaluation judgment, stronger stakeholder handling, and more visible ownership over edge cases AI struggles with.",
+        color: "#be185d",
+      },
+      {
+        stage: "Stage 3",
+        title: "Strategic Recruiting Advisor",
+        desc: "You are positioned around advisory judgment, workflow calibration, influence, and business-aware talent decision support rather than pure process throughput.",
+        color: "#831843",
+      },
+    ],
+    forYou: [
+      "You are an HR Recruiter in an Indian IT company and can already see AI changing sourcing, screening, shortlisting, scheduling, or offer workflows.",
+      "You want to understand how to move up the value chain instead of being trapped in a narrowed version of the same role.",
+      "You need a practical repositioning path toward stronger judgment, stakeholder management, and strategic recruiting signal.",
+      "You want a sharper market read for the HR tech and talent acquisition layer rather than generic advice to just learn AI.",
+      "You want better internal-growth and external-market positioning without pretending to be more technical than you are.",
+    ],
+    notForYou: [
+      "You want a beginner HR operations course or ATS tool tutorial.",
+      "You already operate at a senior talent advisory, people analytics, or HR transformation level and mainly need specialized execution help.",
+      "You want a global HR market overview instead of India-first recruiting guidance.",
+    ],
+    ctaTitle: "Move beyond throughput before the role narrows around you.",
+    ctaBody:
+      "Use this guide to replace vague anxiety with a clearer recruiting strategy, stronger judgment signal, and a more defensible career path in an AI-shaped HR market.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#be185d",
+      accentSoft: "#f9a8d4",
+      accentStrong: "#831843",
+      heroGradient: "linear-gradient(135deg, #260918 0%, #5e1132 55%, #be185d 100%)",
+      heroText: "rgba(255,228,238,0.86)",
+      sectionTint: "#fff1f7",
+      sectionBorder: "#f9a8d4",
+      panelTint: "#fff8fb",
+      finalGradient: "linear-gradient(160deg, #260918 0%, #5e1132 60%, #831843 100%)",
+    },
+  },
   "devops-survival-guide-2026": {
     productName: "DevOps Survival Guide 2026",
     title: "DevOps",
