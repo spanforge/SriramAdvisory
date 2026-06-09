@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "HR Sector Guides | Sriram Advisory",
   description:
-    "India-first HR career intelligence guides for recruiters navigating AI automation, role compression, and repositioning into higher-leverage work.",
+    "India-first HR career intelligence guides for HR professionals navigating AI automation, role compression, and repositioning into higher-leverage work.",
 };
 
 const HR_GUIDE = {
@@ -24,10 +24,10 @@ const HR_GUIDE = {
   accentColor: "#be185d",
   bgGradient: "linear-gradient(135deg, #fff6fb 0%, #ffe4f0 100%)",
   borderColor: "#f9a8d4",
-  role: "HR Recruiter",
+  role: "HR / Talent",
   timeline: "18-month repositioning path",
   riskScore: "SA-AIRS score 8.6/10",
-  focus: "AI-era recruiting leverage",
+  focus: "AI-era HR leverage",
 };
 
 export default function HRGuidesPage() {
@@ -87,7 +87,7 @@ export default function HRGuidesPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Guides for HR Recruiters
+            Guides for HR Professionals
           </h1>
           <p
             style={{
@@ -98,7 +98,7 @@ export default function HRGuidesPage() {
               margin: "0 auto 24px",
             }}
           >
-            The recruiting function is being re-engineered by AI. These guides help HR professionals understand what is already automated, where their leverage shifts next, and how to reposition toward more defensible, higher-value work.
+            HR is being asked to manage AI's impact on the workforce while being disrupted by AI itself. These guides help HR professionals understand what is already being automated, where judgment starts compounding, and how to reposition toward more defensible, higher-value work.
           </p>
           <div
             style={{
@@ -110,6 +110,7 @@ export default function HRGuidesPage() {
           >
             {[
               "Built for India-first HR realities",
+              "For recruiters, HRBPs, L&D, and talent teams",
               "Focus on judgment, not generic upskilling",
               "Manual delivery usually within 30 minutes",
             ].map((item) => (
