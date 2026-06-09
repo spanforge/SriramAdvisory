@@ -28,18 +28,18 @@ const GUIDE_SECTORS = [
   },
   {
     badge: "HR Sector",
-    title: "HR Recruiter Guides",
+    title: "HR Career Guides",
     blurb:
-      "AI systems are already handling resume screening, JD writing, shortlisting, scheduling, and offer-letter workflows. These guides help recruiters move toward judgment, stakeholder management, and strategic partnership.",
+      "AI systems are already handling repeatable HR work across recruiting, coordination, documentation, and workforce operations. These guides help HR professionals move toward judgment, business context, stakeholder influence, and higher-leverage strategic value.",
     href: "/guides/hr",
     cta: "Explore HR guides",
     accentColor: "#be185d",
     borderColor: "#f9a8d4",
     background: "linear-gradient(135deg, #fff6fb 0%, #ffe6f1 100%)",
     highlights: [
-      "Built for Indian IT recruiting realities",
+      "Built for Indian HR market realities",
       "Focus on defensible human judgment",
-      "Practical repositioning, not generic AI advice",
+      "Practical repositioning across the HR profession",
     ],
   },
 ];
