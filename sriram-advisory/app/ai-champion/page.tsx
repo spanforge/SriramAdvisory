@@ -2,19 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import CashfreeCheckout from "@/components/CashfreeCheckout";
 
 export const metadata: Metadata = {
   title: "AI Champion | Sriram Advisory",
   description:
-    "Practitioner intelligence for the individual accountable for making AI reach production. Field notes, templates, frameworks, and assessments built from the inside.",
+    "Practitioner intelligence for the individual accountable for making AI reach production. Field notes, templates, frameworks, and assessments for real organisational delivery.",
 };
 
 const audienceSignals = [
-  "You raised your hand to lead an AI initiative inside your organisation - or got volunteered",
+  "You are leading an AI initiative inside your organisation",
   "You won the pilot. You are now fighting to reach production",
   "You are managing governance, infosec, legal, and stakeholder resistance simultaneously",
-  "You are accountable for AI outcomes without full authority over budget or headcount",
+  "You are accountable for AI outcomes across teams, functions, and review gates",
   "You have not found a resource that was actually built for your situation",
 ];
 
@@ -56,6 +55,8 @@ const maturityLevels = [
     body: "Shapes the organisation's AI strategy. Accountable for enterprise-wide AI outcomes. Operates at board or C-suite level.",
   },
 ];
+
+const PRODUCT_HREF = "/products/ai-champion-field-notes";
 
 const primaryButtonStyle = {
   background: "#1a4fd6",
@@ -117,22 +118,15 @@ export default function AIChampionPage() {
               Built for the person carrying the AI initiative
             </h1>
             <p style={{ fontSize: "clamp(18px, 2.4vw, 24px)", lineHeight: 1.55, color: "#e7efff", maxWidth: 760, marginBottom: 18 }}>
-              Not the builder. Not the buyer. The one in the middle - accountable for outcomes they don&apos;t fully control.
+              For the practitioner responsible for turning an AI pilot into a trusted production system.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "rgba(231,239,255,0.82)", maxWidth: 760, marginBottom: 30 }}>
-              The AI Champion vertical is the first practitioner intelligence series built specifically for the individual who is responsible for making AI actually reach production inside a real organisation.
+              The AI Champion series is built for the individual responsible for moving AI through governance, stakeholder trust, operational readiness, and real organisational adoption.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-              <CashfreeCheckout
-                productName="AI Champion Field Notes"
-                amount={499}
-                buttonLabel={"Get Field Notes - \u20b9499"}
-                accentColor="#1a4fd6"
-                buttonStyle={primaryButtonStyle}
-                deliveryNote="Manual email delivery usually lands within 30 minutes after payment."
-                emailNote="Your field notes and templates will be sent to this email."
-                footerNote="Secured by Cashfree Payments. One-time purchase. Manual email delivery."
-              />
+              <Link href={PRODUCT_HREF} style={primaryButtonStyle}>
+                Get Field Notes - Rs 499
+              </Link>
               <Link href="#resources" style={secondaryButtonStyle}>
                 See all resources {"\u2192"}
               </Link>
@@ -183,7 +177,7 @@ export default function AIChampionPage() {
           ))}
         </div>
         <p style={{ fontSize: 18, lineHeight: 1.7, color: "#344766", maxWidth: 830 }}>
-          This vertical is not for AI builders or AI buyers. It is for the practitioner in the middle - the one who owns delivery.
+          This series is for the person who has to coordinate the work, manage the review process, and keep the initiative moving toward production.
         </p>
       </section>
 
@@ -198,7 +192,7 @@ export default function AIChampionPage() {
                 AI Champion intelligence series
               </h2>
               <p style={{ fontSize: 17, lineHeight: 1.75, color: "#425472", maxWidth: 620 }}>
-                Practitioner IP - templates, frameworks, war stories, and scored assessments built from the inside.
+                Practical templates, frameworks, war stories, and scored assessments for AI delivery work inside real organisations.
               </p>
             </div>
             <article
@@ -212,7 +206,7 @@ export default function AIChampionPage() {
             >
               <div style={{ display: "flex", justifyContent: "space-between", gap: 18, alignItems: "flex-start", marginBottom: 14 }}>
                 <h3 style={{ fontSize: 24, lineHeight: 1.18, margin: 0 }}>AI Champion Field Notes</h3>
-                <strong style={{ fontSize: 24, color: "#1a4fd6", whiteSpace: "nowrap" }}>{"\u20b9499"}</strong>
+                <strong style={{ fontSize: 24, color: "#1a4fd6", whiteSpace: "nowrap" }}>Rs 499</strong>
               </div>
               <p style={{ fontSize: 16, lineHeight: 1.7, color: "#31435f", marginBottom: 14 }}>
                 What nobody tells you about taking AI from pilot to production.
@@ -220,16 +214,9 @@ export default function AIChampionPage() {
               <p style={{ fontSize: 14, lineHeight: 1.7, color: "#5a6a8a", marginBottom: 22 }}>
                 7 field notes. 4 working templates. 3 war stories. A production readiness scorecard. A maturity model. 22 pages.
               </p>
-              <CashfreeCheckout
-                productName="AI Champion Field Notes"
-                amount={499}
-                buttonLabel="Get Field Notes"
-                accentColor="#1a4fd6"
-                buttonStyle={primaryButtonStyle}
-                deliveryNote="Manual email delivery usually lands within 30 minutes after payment."
-                emailNote="Your field notes and templates will be sent to this email."
-                footerNote="Secured by Cashfree Payments. One-time purchase. Manual email delivery."
-              />
+              <Link href={PRODUCT_HREF} style={primaryButtonStyle}>
+                Get Field Notes
+              </Link>
             </article>
           </div>
         </div>
@@ -301,10 +288,10 @@ export default function AIChampionPage() {
               Start Here
             </p>
             <h2 style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.08, marginBottom: 16 }}>
-              AI Champion Field Notes - {"\u20b9499"}
+              AI Champion Field Notes - Rs 499
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.75, color: "rgba(231,239,255,0.86)" }}>
-              The entry product. 22 pages. Written from the inside. No hype. No theory.
+              The entry product. 22 pages. Practical, direct, and built around the realities of enterprise AI delivery.
             </p>
           </div>
           <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.14)", borderRadius: 8, padding: "26px" }}>
@@ -316,16 +303,9 @@ export default function AIChampionPage() {
                 </div>
               ))}
             </div>
-            <CashfreeCheckout
-              productName="AI Champion Field Notes"
-              amount={499}
-              buttonLabel={"Get it for \u20b9499"}
-              accentColor="#1a4fd6"
-              buttonStyle={primaryButtonStyle}
-              deliveryNote="Manual email delivery usually lands within 30 minutes after payment."
-              emailNote="Your field notes and templates will be sent to this email."
-              footerNote="Secured by Cashfree Payments. One-time purchase. Manual email delivery."
-            />
+            <Link href={PRODUCT_HREF} style={primaryButtonStyle}>
+              Get it for Rs 499
+            </Link>
             <p style={{ fontSize: 13, color: "rgba(231,239,255,0.68)", lineHeight: 1.7, marginTop: 16 }}>
               {"Manual email delivery within 30 minutes \u00b7 Individual use \u00b7 Free updates included"}
             </p>
@@ -336,7 +316,7 @@ export default function AIChampionPage() {
       <section style={{ background: "#f8fbff", padding: "34px 20px" }}>
         <div style={{ maxWidth: 1060, margin: "0 auto", color: "#52627e", lineHeight: 1.7, fontSize: 14 }}>
           <p style={{ fontStyle: "italic", marginBottom: 12 }}>
-            This vertical is part of Sriram Advisory&apos;s workforce intelligence platform. The AI Champion series covers delivery intelligence - what it takes to carry an AI initiative from pilot to production inside a real organisation.
+            The AI Champion series is part of Sriram Advisory&apos;s workforce intelligence platform. It covers delivery intelligence - what it takes to carry an AI initiative from pilot to production inside a real organisation.
           </p>
           <p style={{ fontStyle: "italic" }}>
             {"\u00a9 2026 Sriram Advisory. Educational and analytical commentary only."}
