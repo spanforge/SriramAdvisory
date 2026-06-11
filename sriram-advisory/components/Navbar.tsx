@@ -68,7 +68,7 @@ export default function Navbar() {
                   fontWeight: 600,
                 }}
               >
-                Career Intelligence for India
+                Workforce Intelligence for the AI Era
               </div>
             </div>
           </Link>

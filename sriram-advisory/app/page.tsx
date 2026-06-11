@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | Career Intelligence for India",
+  title: "Sriram Advisory | Workforce Intelligence for the AI Era",
   description:
     "Sriram Advisory studies how work is changing in India through workforce research, assessments, reports, and structured intelligence frameworks.",
 };

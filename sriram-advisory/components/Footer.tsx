@@ -42,7 +42,7 @@ export default function Footer() {
                     marginTop: 2,
                   }}
                 >
-                  Career Intelligence for India
+                  Workforce Intelligence for the AI Era
                 </div>
               </div>
             </div>
