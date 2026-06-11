@@ -21,17 +21,6 @@ const ASSESSMENTS = [
     bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
     borderColor: "#fecaca",
   },
-  {
-    title: "Workforce Intelligence Benchmarks",
-    subtitle: "Comparative benchmarking across professions and sectors.",
-    body: "A future assessment direction that expands from single-role scoring into broader workforce intelligence.",
-    href: "/contact",
-    cta: "Enquire",
-    status: "Coming Soon",
-    accentColor: "#0d9268",
-    bgGradient: "linear-gradient(135deg, #effaf6 0%, #dff5ed 100%)",
-    borderColor: "#b7ead7",
-  },
 ];
 
 export default function AssessmentsPage() {

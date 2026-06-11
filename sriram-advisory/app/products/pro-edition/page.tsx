@@ -200,7 +200,7 @@ export default function ProEditionPage() {
       {/* FOUNDER QUOTE */}
       <section style={{ padding: "80px 20px", background: "#0a1628" }}>
         <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
-          <div style={{ fontSize: 48, color: "#1a4fd6", marginBottom: 16, lineHeight: 1 }}>"</div>
+          <div style={{ fontSize: 48, color: "#1a4fd6", marginBottom: 16, lineHeight: 1 }}>&quot;</div>
           <p style={{ fontSize: "clamp(18px, 2.5vw, 24px)", color: "#e8eef8", lineHeight: 1.7, fontStyle: "italic", marginBottom: 28 }}>
             I built this report after a pattern I kept seeing. Quiet anxiety about AI — with nowhere specific to go for answers.
             This is India-specific. Every dimension, every weighting, every role assessment is filtered through

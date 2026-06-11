@@ -119,7 +119,7 @@ export default function SystemPage() {
             ))}
           </div>
           <p style={{ marginTop: 32, fontSize: 14, color: "#8898b8", fontFamily: "var(--font-dm-mono), monospace", lineHeight: 1.8 }}>
-            // Exact dimension weights, scoring rubrics, and calibration data are proprietary.
+            {"// Exact dimension weights, scoring rubrics, and calibration data are proprietary."}
             Full methodology is shared with clients who complete a Full Report or Deep Dive engagement.
           </p>
         </div>

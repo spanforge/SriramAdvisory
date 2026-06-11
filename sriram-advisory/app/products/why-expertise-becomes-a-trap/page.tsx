@@ -374,7 +374,7 @@ export default function WhyExpertiseBecomesATrapPage() {
               }}
             />
             <p style={{ marginTop: 12, fontSize: 12, color: "rgba(243,232,255,0.62)" }}>
-              Cashfree checkout enabled. One-time payment. Manual email delivery.
+              Secure payment via Cashfree. One-time payment. Manual email delivery.
             </p>
           </div>
         </div>

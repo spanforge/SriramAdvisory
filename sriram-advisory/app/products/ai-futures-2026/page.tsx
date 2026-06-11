@@ -371,7 +371,7 @@ export default function AIFutures2026Page() {
               }}
             />
             <p style={{ marginTop: 12, fontSize: 12, color: "rgba(215,255,243,0.62)" }}>
-              Cashfree checkout enabled. One-time payment. Manual email delivery.
+              Secure payment via Cashfree. One-time payment. Manual email delivery.
             </p>
           </div>
         </div>

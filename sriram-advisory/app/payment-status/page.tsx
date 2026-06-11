@@ -26,11 +26,12 @@ function PaymentStatusContent() {
       ? "Your payment is being processed. If it was successful, we will contact you on your email with next steps for submitting your resume and LinkedIn profile."
       : "Your payment is being processed. If it was successful, you will receive your report by email shortly. If you were charged and do not receive it within 30 minutes, please contact us.";
 
-  const [status, setStatus] = useState<"loading" | "success" | "pending" | "failed">("loading");
+  const [status, setStatus] = useState<"loading" | "success" | "pending" | "failed">(
+    orderId ? "loading" : "failed"
+  );
 
   useEffect(() => {
     if (!orderId) {
-      setStatus("failed");
       return;
     }
 

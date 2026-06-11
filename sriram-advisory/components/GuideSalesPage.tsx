@@ -320,7 +320,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                   marginBottom: 0,
                 }}
               >
-                What buyers said after reading it
+                What readers said after using it
               </h2>
             </div>
 
@@ -372,7 +372,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                       margin: 0,
                     }}
                   >
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
                   {testimonial.source && (
                     <div style={{ marginTop: 18, fontSize: 14, fontWeight: 700, color: theme.accent }}>
@@ -702,7 +702,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               {FOUNDER_TRUST_NOTE}
             </p>
             <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75 }}>
-              These pages deliberately tell you who the guide is not for, because the goal is not to push everyone through checkout. The goal is to help the right buyer make a sharper career decision faster.
+              These pages deliberately tell you who the guide is not for, because the goal is not to push everyone through checkout. The goal is to help the right professional make a sharper career decision faster.
             </p>
           </div>
         </div>

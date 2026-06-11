@@ -372,7 +372,7 @@ export default function StateOfQACareersIndia2026Page() {
               }}
             />
             <p style={{ marginTop: 12, fontSize: 12, color: "rgba(219,234,254,0.62)" }}>
-              Cashfree checkout enabled. One-time payment. Manual email delivery.
+              Secure payment via Cashfree. One-time payment. Manual email delivery.
             </p>
           </div>
         </div>

@@ -599,7 +599,7 @@ export default function AIRiskRankingsPage() {
               padding: "28px 28px",
             }}
           >
-            <p style={{ fontSize: 18, lineHeight: 1.8, color: "#24364d", margin: 0 }}>"{TESTIMONIAL}"</p>
+            <p style={{ fontSize: 18, lineHeight: 1.8, color: "#24364d", margin: 0 }}>&quot;{TESTIMONIAL}&quot;</p>
           </div>
         </div>
       </section>

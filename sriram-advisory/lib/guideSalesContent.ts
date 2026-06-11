@@ -81,10 +81,10 @@ export const LIFETIME_UPDATES_TITLE =
   "Free lifetime updates included.";
 
 export const LIFETIME_UPDATES_SHORT_NOTE =
-  "Every Sriram Advisory guide comes with free lifetime upgrades for every buyer. No repurchase. No upgrade fee. Ever.";
+  "Every Sriram Advisory guide comes with free lifetime upgrades for every customer. No repurchase. No upgrade fee. Ever.";
 
 export const LIFETIME_UPDATES_BODY =
-  "A commitment, made publicly and permanently: every Sriram Advisory guide comes with free lifetime upgrades for every buyer, from the first to the last. When the market shifts, when data changes, when a better framework emerges, you get the updated version automatically. No repurchase. No upgrade fee. Ever.";
+  "A commitment, made publicly and permanently: every Sriram Advisory guide comes with free lifetime upgrades for every customer, from the first to the last. When the market shifts, when data changes, when a better framework emerges, you get the updated version automatically. No repurchase. No upgrade fee. Ever.";
 
 export const guideSalesContent: Record<string, GuidePageContent> = {
   "cloud-engineer-ai-survival-guide-2026": {

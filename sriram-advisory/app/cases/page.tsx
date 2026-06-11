@@ -143,7 +143,7 @@ export default function CasesPage() {
 
                 {/* RIGHT */}
                 <div>
-                  <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, letterSpacing: "0.08em", color: "#4fc3f7", marginBottom: 16, textTransform: "uppercase", fontWeight: 700 }}>// Top 3 Moves They Made</div>
+                  <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, letterSpacing: "0.08em", color: "#4fc3f7", marginBottom: 16, textTransform: "uppercase", fontWeight: 700 }}>{"// Top 3 Moves They Made"}</div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                     {c.moves.map((move, mi) => (
                       <div key={mi} style={{ display: "flex", gap: 16, padding: "14px 16px", background: "rgba(248,250,255,0.03)", border: "1px solid rgba(248,250,255,0.07)", borderRadius: 10, alignItems: "flex-start" }}>

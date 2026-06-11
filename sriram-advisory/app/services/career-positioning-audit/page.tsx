@@ -324,7 +324,7 @@ export default function CareerPositioningAuditPage() {
               }}
             />
             <p style={{ marginTop: 12, fontSize: 12, color: "rgba(255,237,213,0.64)" }}>
-              Cashfree checkout enabled. Introductory rate. Manual audit delivery.
+              Secure payment via Cashfree. Introductory rate. Manual audit delivery.
             </p>
           </div>
         </div>

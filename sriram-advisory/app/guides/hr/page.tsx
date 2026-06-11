@@ -98,7 +98,7 @@ export default function HRGuidesPage() {
               margin: "0 auto 24px",
             }}
           >
-            HR is being asked to manage AI's impact on the workforce while being disrupted by AI itself. These guides help HR professionals understand what is already being automated, where judgment starts compounding, and how to reposition toward more defensible, higher-value work.
+            HR is being asked to manage AI&apos;s impact on the workforce while being disrupted by AI itself. These guides help HR professionals understand what is already being automated, where judgment starts compounding, and how to reposition toward more defensible, higher-value work.
           </p>
           <div
             style={{

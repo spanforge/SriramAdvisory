@@ -10,23 +10,6 @@ export const metadata: Metadata = {
     "Frameworks, data, and honest analysis on AI career displacement. What is actually true about AI and your career.",
 };
 
-const COMING_SOON = [
-  {
-    type: "Analysis",
-    title: "AI Exposure by Function: Where the Risk Actually Lives",
-    teaser: "The most exposed roles in 2026 are not where most people think. A task-level breakdown of which functions are genuinely at risk — and which are not.",
-    tag: "Mid-Market, Enterprise",
-    eta: "May 2026",
-  },
-  {
-    type: "Framework",
-    title: "The Four Career Archetypes in the AI Transition",
-    teaser: "How you position relative to AI is not one choice — it is a posture that shows up across four identifiable archetypes. Understanding yours is the first strategic decision.",
-    tag: "All Professionals",
-    eta: "May 2026",
-  },
-];
-
 const TYPE_COLOURS: Record<string, { bg: string; text: string }> = {
   Analysis: { bg: "rgba(26,79,214,0.08)", text: "#1a4fd6" },
   Framework: { bg: "rgba(79,195,247,0.1)", text: "#0991c5" },
@@ -76,9 +59,7 @@ export default function InsightsPage() {
                     background: c.bg, color: c.text,
                     fontSize: 13, fontWeight: 700, letterSpacing: "0.08em",
                     padding: "3px 10px", borderRadius: 20,
-                  }}>{type}</span>
-                  type label
-                </div>
+                  }}>{type}</span>                </div>
               );
             })}
           </div>
@@ -136,88 +117,6 @@ export default function InsightsPage() {
           </div>
         </section>
       )}
-
-      {/* LAUNCH NOTICE */}
-      <section className="px-5 md:px-10" style={{ background: "#f7f9fc", borderBottom: "1px solid rgba(10,22,40,0.07)", paddingTop: 28, paddingBottom: 28 }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-          <span style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "rgba(79,195,247,0.1)", border: "1px solid rgba(79,195,247,0.25)",
-            color: "#0991c5", borderRadius: 8, padding: "8px 16px",
-            fontSize: 13, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase",
-          }}>
-            <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#4fc3f7", display: "inline-block" }} />
-            More Coming Soon
-          </span>
-          <p style={{ fontSize: 14, color: "#5a6a8a", margin: 0 }}>
-            More pieces publish over May–July 2026. Get your Risk Score to stay ahead.
-          </p>
-        </div>
-      </section>
-
-      {/* COMING SOON GRID */}
-      <section className="px-5 md:px-10" style={{ background: "#ffffff", paddingTop: 72, paddingBottom: 72 }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{
-            fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
-            fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
-            color: "#1a4fd6", marginBottom: 16,
-          }}>Coming at Launch</div>
-          <h2 style={{
-            fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-            fontSize: "clamp(30px, 3.5vw, 46px)", letterSpacing: "0.02em",
-            color: "#0a1628", margin: "0 0 48px", lineHeight: 1,
-          }}>What We Are Publishing</h2>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 28 }}>
-            {COMING_SOON.map((piece) => {
-              const c = TYPE_COLOURS[piece.type] ?? TYPE_COLOURS["Analysis"];
-              return (
-                <div key={piece.title} style={{
-                  background: "#f9fafc",
-                  border: "1px solid rgba(10,22,40,0.08)",
-                  borderRadius: 14,
-                  padding: "32px 28px",
-                  display: "flex", flexDirection: "column", gap: 14,
-                  position: "relative", overflow: "hidden",
-                }}>
-                  {/* Coming soon overlay badge */}
-                  <div style={{
-                    position: "absolute", top: 18, right: 18,
-                    background: "rgba(10,22,40,0.06)", borderRadius: 20,
-                    fontSize: 13, fontWeight: 600, color: "#5a6a8a",
-                    letterSpacing: "0.08em", padding: "3px 10px",
-                  }}>{piece.eta}</div>
-
-                  <span style={{
-                    display: "inline-flex", alignSelf: "flex-start",
-                    background: c.bg, color: c.text,
-                    fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
-                    padding: "4px 12px", borderRadius: 20,
-                  }}>{piece.type}</span>
-
-                  <h3 style={{
-                    fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                    fontSize: 20, letterSpacing: "0.03em", color: "#0a1628",
-                    margin: 0, lineHeight: 1.15,
-                  }}>{piece.title}</h3>
-
-                  <p style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>
-                    {piece.teaser}
-                  </p>
-
-                  <div style={{ marginTop: "auto", paddingTop: 12, borderTop: "1px solid rgba(10,22,40,0.06)" }}>
-                    <span style={{ fontSize: 13, color: "#5a6a8a", letterSpacing: "0.06em", fontWeight: 500 }}>
-                      {piece.tag}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </>
   );

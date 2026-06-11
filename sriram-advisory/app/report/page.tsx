@@ -98,7 +98,7 @@ export default function ReportPage() {
                 </div>
               </div>
               <div style={{ marginTop: 16, padding: "14px 18px", background: "rgba(248,250,255,0.03)", border: "1px solid rgba(248,250,255,0.08)", borderRadius: 10, fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "#5a6a8a", lineHeight: 1.8 }}>
-                <span style={{ color: "#4fc3f7" }}>// Top 3 Moves</span><br />
+                <span style={{ color: "#4fc3f7" }}>{"// Top 3 Moves"}</span><br />
                 1. Transition 30% of output to AI-augmented delivery<br />
                 2. Build one visible system or framework in your domain<br />
                 3. Create one repeatable process that others depend on

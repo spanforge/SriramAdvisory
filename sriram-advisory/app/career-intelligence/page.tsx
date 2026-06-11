@@ -173,7 +173,7 @@ export default function CareerIntelligencePage() {
             Choose Your Path
           </p>
           <h2 style={{ fontSize: "clamp(30px, 4vw, 44px)", lineHeight: 1.12, marginBottom: 12 }}>
-            One vertical, four buying paths
+            One advisory path, four ways to start
           </h2>
           <p style={{ fontSize: 16, lineHeight: 1.75, color: "#425472", maxWidth: 720 }}>
             Start with a personal assessment if you need clarity about yourself. Use reports for market context, guides for role-specific action, and services when you want direct profile review.
