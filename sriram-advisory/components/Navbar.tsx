@@ -5,12 +5,10 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV_LINKS = [
-  { label: "Assessments", href: "/assessments" },
-  { label: "Reports", href: "/reports" },
-  { label: "Guides", href: "/guides" },
+  { label: "Career Intelligence", href: "/career-intelligence" },
   { label: "AI Champion", href: "/ai-champion" },
+  { label: "Free Resources", href: "/free" },
   { label: "Services", href: "/services" },
-  { label: "Free", href: "/free" },
   { label: "About", href: "/about" },
 ];
 
