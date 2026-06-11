@@ -6,33 +6,33 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | Sriram Advisory",
   description:
-    "Sriram Advisory studies how work is changing in India through workforce research, market intelligence, automation analysis, and structured assessment frameworks.",
+    "Sriram Advisory is a workforce intelligence and advisory firm for the AI era, helping professionals and AI initiative owners make clearer decisions.",
 };
 
 const PILLARS = [
   {
-    title: "Workforce Research",
-    body: "We study how professions, sectors, and labor-market signals are changing in India rather than treating careers as isolated personal decisions.",
+    title: "Career Intelligence",
+    body: "For professionals who need to understand AI exposure, market pressure, role durability, and practical repositioning options.",
   },
   {
-    title: "Market Intelligence",
-    body: "We translate role-level and industry-level change into structured observations professionals can actually use.",
+    title: "AI Delivery Intelligence",
+    body: "For practitioners responsible for moving AI initiatives through governance, stakeholder trust, operational readiness, and production.",
   },
   {
-    title: "Automation Analysis",
-    body: "We focus on how technology changes work design, demand, and leverage instead of reducing the conversation to hype or panic.",
+    title: "Structured Diagnostics",
+    body: "Assessments, scorecards, audits, and frameworks that make career risk or delivery friction visible enough to act on.",
   },
   {
-    title: "Structured Frameworks",
-    body: "Our assessments and reports are designed to make career change legible through visible dimensions, categories, and tradeoffs.",
+    title: "Practical Advisory Outputs",
+    body: "Reports, guides, field notes, and services designed to turn uncertainty into a next decision, not just more information.",
   },
 ];
 
 const DIFFERENTIATORS = [
-  "Not coaching. We are building a research and intelligence company.",
-  "Not generic motivational advice. We work with labor, role, and market change.",
-  "Not only IT. We track professions and industries across the Indian economy.",
-  "Not only products. Reports and guides are outputs of a broader research direction.",
+  "Advisory-first, not motivation-first. The work is built around decisions, tradeoffs, and next moves.",
+  "Two clear paths: Career Intelligence for professionals and AI Champion for initiative owners.",
+  "Framework-led. Products and services are built around structured diagnostics, not generic advice.",
+  "Practical enough to use. Reports, guides, templates, and audits are designed for real decisions.",
 ];
 
 export default function AboutPage() {
@@ -54,16 +54,14 @@ export default function AboutPage() {
             About Sriram Advisory
           </span>
           <h1 style={{ fontSize: "clamp(38px, 5.5vw, 70px)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, marginBottom: 24, letterSpacing: "-0.02em" }}>
-            Studying how work is
+            Advisory for work,
             <br />
             <span style={{ background: "linear-gradient(90deg, #1a4fd6, #22d3a0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              changing in India.
+              careers, and AI delivery.
             </span>
           </h1>
           <p style={{ fontSize: "clamp(17px, 2.2vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 700 }}>
-            Sriram Advisory combines workforce research, market intelligence,
-            automation analysis, and structured assessment frameworks to help
-            professionals make better career decisions.
+            Sriram Advisory is a workforce intelligence and advisory firm for the AI era. We help professionals make sharper career decisions and help AI Champions move initiatives from pilot to production.
           </p>
         </div>
       </section>
@@ -99,8 +97,7 @@ export default function AboutPage() {
                 Founder
               </div>
               <p style={{ marginTop: 16, marginBottom: 0, fontSize: 15, color: "#5a6a8a", lineHeight: 1.8 }}>
-                Building a workforce intelligence company for India, starting from the real
-                questions professionals ask when work begins to change faster than institutions do.
+                Building Sriram Advisory as a workforce intelligence and advisory firm for the AI era.
               </p>
             </div>
           </div>
@@ -111,16 +108,16 @@ export default function AboutPage() {
             </span>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                Sriram Advisory was built around a simple observation: most public conversation about AI and careers is too narrow for the scale of change underway in India. It tends to focus on tools, panic, or one profession at a time.
+                Sriram Advisory was built around a simple observation: most conversations about AI and work are either too abstract or too tactical. They talk about tools, panic, or isolated use cases, but not enough about the decisions people actually need to make.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                But professionals are responding to something larger. They are trying to understand how automation, market shifts, employer expectations, and changing work design affect their future over years, not just weeks.
+                Professionals need to know how AI changes role durability, market demand, and positioning. AI Champions need to know how to move pilots through governance, stakeholder confidence, operating readiness, and production friction.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                That is why the company is being positioned as a workforce intelligence business. The guides and reports matter, and they will stay, but they are outputs of a broader research direction rather than the whole identity.
+                That is why the firm now has two clear paths: Career Intelligence for people making career decisions, and AI Champion for practitioners carrying AI initiatives inside organisations.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                The long-term goal is to help make work change in India more legible through structured frameworks, visible research, and better analytical language for professionals, teams, and industries.
+                The long-term goal is to make AI-era work change more legible through structured frameworks, practical diagnostics, and advisory products that help people choose their next move with more confidence.
               </p>
             </div>
           </div>
@@ -133,7 +130,7 @@ export default function AboutPage() {
             What We Combine
           </span>
           <h2 style={{ fontSize: "clamp(26px, 3.5vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 40, letterSpacing: "-0.02em" }}>
-            A broader category than career advice.
+            A broader advisory system than career advice.
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
             {PILLARS.map((pillar) => (
@@ -189,14 +186,14 @@ export default function AboutPage() {
       <section style={{ padding: "96px 24px", background: "#ffffff", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <h2 style={{ fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 800, color: "#0a1628", marginBottom: 20, letterSpacing: "-0.02em" }}>
-            Explore the public-facing work.
+            Start with the path that fits your situation.
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 32 }}>
-            Start with research and assessments, then move into the existing guides and reports that are already live.
+            Use Career Intelligence if you are making a personal career decision. Use AI Champion if you are responsible for moving an AI initiative toward production.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
             <Link
-              href="/reports"
+              href="/career-intelligence"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -210,10 +207,10 @@ export default function AboutPage() {
                 border: "1px solid #3b6ef0",
               }}
             >
-              Reports
+              Career Intelligence
             </Link>
             <Link
-              href="/reports"
+              href="/ai-champion"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -227,9 +224,20 @@ export default function AboutPage() {
                 border: "1px solid rgba(126,179,255,0.25)",
               }}
             >
-              Reports
+              AI Champion
             </Link>
           </div>
+          <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 26 }}>
+            Prefer to ask directly? Email{" "}
+            <a href="mailto:sriram@sriramadvisory.com" style={{ color: "#1a4fd6", fontWeight: 700, textDecoration: "none" }}>
+              sriram@sriramadvisory.com
+            </a>{" "}
+            or WhatsApp{" "}
+            <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{ color: "#1a4fd6", fontWeight: 700, textDecoration: "none" }}>
+              +91 93422 29420
+            </a>
+            .
+          </p>
         </div>
       </section>
 
