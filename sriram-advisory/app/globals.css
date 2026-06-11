@@ -99,7 +99,11 @@
 
 /* ── Base ────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 body {
   background: #ffffff;
@@ -109,6 +113,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1 {
@@ -210,6 +215,32 @@ h2, h3 {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .nav-inner { padding: 0 20px; }
+}
+
+@media (max-width: 520px) {
+  .site-nav-brand img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .site-nav-title {
+    font-size: 20px !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  .site-nav-tagline {
+    display: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-nav-brand {
+    gap: 8px !important;
+  }
+
+  .site-nav-title {
+    font-size: 18px !important;
+  }
 }
 
 /* ── Hero ────────────────────────────────────────────── */

@@ -32,22 +32,37 @@ export default function Navbar() {
         <div
           style={{
             maxWidth: 1200,
+            width: "100%",
             margin: "0 auto",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             height: 68,
             padding: "0 20px",
+            gap: 12,
+            minWidth: 0,
           }}
         >
-          <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}>
+          <Link
+            href="/"
+            className="site-nav-brand"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              textDecoration: "none",
+              flexShrink: 1,
+              minWidth: 0,
+            }}
+          >
             <img
               src="/sriram.png"
               alt="Sriram Advisory"
               style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }}
             />
-            <div>
+            <div style={{ minWidth: 0 }}>
               <div
+                className="site-nav-title"
                 style={{
                   fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
                   fontSize: 22,
@@ -59,6 +74,7 @@ export default function Navbar() {
                 Sriram Advisory
               </div>
               <div
+                className="site-nav-tagline"
                 style={{
                   fontSize: 13,
                   letterSpacing: "0.10em",
@@ -66,6 +82,9 @@ export default function Navbar() {
                   textTransform: "uppercase",
                   lineHeight: 1.5,
                   fontWeight: 600,
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  whiteSpace: "nowrap",
                 }}
               >
                 Workforce Intelligence for the AI Era
@@ -132,6 +151,7 @@ export default function Navbar() {
               flexDirection: "column",
               gap: 5,
               padding: 6,
+              flexShrink: 0,
             }}
           >
             <span
