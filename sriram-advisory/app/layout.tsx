@@ -22,16 +22,17 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | Clarity. Strategy. Growth.",
+  title: "Sriram Advisory | Workforce Intelligence for the AI Era",
   description:
-    "Sriram Advisory helps everyone learn, adapt, and thrive in the AI era. Strategic advisory for career navigation, business readiness, and growth.",
+    "Sriram Advisory is a workforce intelligence and advisory firm for the AI era, helping professionals and AI initiative owners make clearer decisions.",
   icons: {
     icon: "/sriram.png",
     apple: "/sriram.png",
   },
   openGraph: {
-    title: "Sriram Advisory | Clarity. Strategy. Growth.",
-    description: "Learn to thrive in the AI era. Advisory for everyone willing to grow.",
+    title: "Sriram Advisory | Workforce Intelligence for the AI Era",
+    description:
+      "Workforce intelligence, career advisory, and AI delivery resources for professionals and AI initiative owners navigating the AI era.",
     type: "website",
   },
 };
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,   // Allow users to zoom up to 5× (WCAG 1.4.4)
+  maximumScale: 5, // Allow users to zoom up to 5x (WCAG 1.4.4)
   userScalable: true,
 };
 

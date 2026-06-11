@@ -185,23 +185,6 @@ export default function Navbar() {
             }}
             className="md:hidden"
           >
-            <Link
-              href="/"
-              role="menuitem"
-              aria-current={pathname === "/" ? "page" : undefined}
-              onClick={() => setOpen(false)}
-              style={{
-                fontSize: 15,
-                fontWeight: 500,
-                textDecoration: "none",
-                padding: "10px 14px",
-                borderRadius: 8,
-                color: pathname === "/" ? "#0a1628" : "#5a6a8a",
-                background: pathname === "/" ? "rgba(10,22,40,0.06)" : "transparent",
-              }}
-            >
-              Home
-            </Link>
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href;
               return (

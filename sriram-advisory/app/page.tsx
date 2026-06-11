@@ -97,6 +97,27 @@ const ENGAGEMENT_PATHS = [
   },
 ];
 
+const TRUST_SIGNALS = [
+  {
+    title: "Founder-led advisory",
+    body: "The frameworks, products, and advisory language are built directly by Sriram, so buyers know who is accountable for the point of view.",
+    href: "/about",
+    cta: "About Sriram",
+  },
+  {
+    title: "Public thinking",
+    body: "The advisory point of view is visible through published insights and the Sriram Advisory LinkedIn newsletter.",
+    href: "/insights",
+    cta: "Read insights",
+  },
+  {
+    title: "Direct contact before you buy",
+    body: "Professionals and AI initiative owners can reach Sriram directly by email or WhatsApp when they need fit clarification.",
+    href: "/contact",
+    cta: "Contact Sriram",
+  },
+];
+
 const FRAMEWORK_DIMENSIONS = [
   "Automation Exposure",
   "Market Saturation",
@@ -109,21 +130,21 @@ const PROOF_LINKS = [
   {
     title: "QA Guide",
     description:
-      "A role-level example of how Sriram Advisory turns research into practical guidance for working professionals.",
+      "For QA professionals who want a clearer view of AI pressure, role risk, and practical upgrade direction.",
     href: "/guides/qa-engineer-survival-guide-2026",
     cta: "View QA Guide",
   },
   {
     title: "BA Guide",
     description:
-      "A practical example of our approach to business analysis careers in an AI-driven market.",
+      "For Business Analysts who need to reposition toward higher-leverage product, AI, and stakeholder work.",
     href: "/guides/business-analyst-survival-guide-2026",
     cta: "View BA Guide",
   },
   {
     title: "Java Guide",
     description:
-      "A role-specific intelligence product showing how the broader research translates into action.",
+      "For Java developers who want to use AI as leverage while protecting seniority, depth, and market signal.",
     href: "/guides/java-developer-ai-leverage-guide-2026",
     cta: "View Java Guide",
   },
@@ -545,6 +566,51 @@ export default function HomePage() {
                 Explore Career Intelligence
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 760, marginBottom: 30 }}>
+            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
+              Credibility Signals
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", marginTop: 16, marginBottom: 14, letterSpacing: "-0.02em", lineHeight: 1.12 }}>
+              A clear point of view, visible method, and direct accountability.
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
+              Advisory firms earn trust through judgment, transparency, and delivery discipline. These are the signals available today while the testimonial layer is built out.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 18 }}>
+            {TRUST_SIGNALS.map((item) => (
+              <article
+                key={item.title}
+                style={{
+                  background: "#ffffff",
+                  border: "1px solid rgba(26,79,214,0.12)",
+                  borderRadius: 12,
+                  padding: "24px 22px",
+                }}
+              >
+                <h3 style={{ fontSize: 21, color: "#0a1628", marginBottom: 10 }}>{item.title}</h3>
+                <p style={{ fontSize: 15, color: "#425472", lineHeight: 1.75, margin: "0 0 16px" }}>{item.body}</p>
+                <Link
+                  href={item.href}
+                  style={{
+                    color: "#1a4fd6",
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    borderBottom: "1px solid rgba(126,179,255,0.3)",
+                    paddingBottom: 2,
+                  }}
+                >
+                  {item.cta}
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
