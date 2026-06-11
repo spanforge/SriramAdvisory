@@ -47,8 +47,16 @@ export default function Footer() {
               </div>
             </div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Assessments, reports, and guides for understanding how work is changing across India.
+              Workforce intelligence, career advisory, and AI delivery resources for the AI era.
             </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <a href="mailto:sriram@sriramadvisory.com" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>
+                sriram@sriramadvisory.com
+              </a>
+              <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>
+                WhatsApp: +91 93422 29420
+              </a>
+            </div>
           </div>
 
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -58,9 +66,9 @@ export default function Footer() {
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
-                  { label: "Assessments", href: "/assessments" },
-                  { label: "Reports", href: "/reports" },
-                  { label: "Guides", href: "/guides" },
+                  { label: "Career Intelligence", href: "/career-intelligence" },
+                  { label: "AI Champion", href: "/ai-champion" },
+                  { label: "Free Resources", href: "/free" },
                   { label: "Services", href: "/services" },
                 ].map((item) => (
                   <li key={item.href}>

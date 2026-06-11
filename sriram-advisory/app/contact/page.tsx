@@ -40,7 +40,7 @@ export default function ContactPage() {
           <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 20 }}>Get in Touch</span>
           <h1 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, marginBottom: 20, letterSpacing: "-0.02em" }}>Contact</h1>
           <p style={{ fontSize: 18, color: "#5a6a8a", lineHeight: 1.7 }}>
-            Questions about the assessment, methodology, or refund policy — we respond within 24 hours.
+            Questions about career intelligence, AI Champion resources, services, or delivery? Contact Sriram directly.
           </p>
         </div>
       </section>
@@ -60,8 +60,8 @@ export default function ContactPage() {
               </div>
               <div style={{ background: "rgba(10,22,40,0.025)", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 12, padding: "20px 24px" }}>
                 <div style={{ fontSize: 13, fontWeight: 700, color: "#0d9268", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>WhatsApp</div>
-                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" style={{ color: "#1a4fd6", textDecoration: "none", fontSize: 15, fontWeight: 600 }}>
-                  Message on WhatsApp →
+                <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{ color: "#1a4fd6", textDecoration: "none", fontSize: 15, fontWeight: 600 }}>
+                  +91 93422 29420
                 </a>
                 <p style={{ fontSize: 15, color: "#5a6a8a", marginTop: 6 }}>For quick queries</p>
               </div>

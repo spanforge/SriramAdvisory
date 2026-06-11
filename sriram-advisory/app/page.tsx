@@ -6,43 +6,95 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sriram Advisory | Workforce Intelligence for the AI Era",
   description:
-    "Sriram Advisory studies how work is changing in India through workforce research, assessments, reports, and structured intelligence frameworks.",
+    "Sriram Advisory builds workforce intelligence for the AI era across career intelligence and AI initiative delivery.",
 };
 
-const MISSION_METRICS = [
-  { value: "100 Crore", label: "Working-Age Indians" },
-  { value: "100+", label: "Professions Tracked" },
-  { value: "20+", label: "Industries Covered" },
-  { value: "1,000s", label: "Career Pathways Modeled" },
+const ADVISORY_FOCUS = [
+  { value: "Career Risk", label: "Role exposure, market pressure, and next-position decisions" },
+  { value: "AI Delivery", label: "Governance, readiness, stakeholder trust, and production movement" },
+  { value: "Market Signal", label: "Reports and role intelligence for clearer judgment" },
+  { value: "Positioning", label: "Resume, LinkedIn, and market-facing narrative clarity" },
 ];
 
-const RESEARCH_ITEMS = [
-  "State of QA Careers 2026",
-  "State of Business Analysis 2026",
-  "State of BPO Careers 2026",
-  "State of Indian Careers 2026",
+const VERTICALS = [
+  {
+    label: "Career Intelligence",
+    title: "For professionals navigating AI-era career change",
+    body: "Assess your role risk, understand market pressure, and choose practical next moves through assessments, reports, guides, and positioning services.",
+    href: "/career-intelligence",
+    cta: "Explore Career Intelligence",
+    accent: "#1a4fd6",
+    background: "linear-gradient(135deg, #f8fbff 0%, #e8f1ff 100%)",
+    border: "#bfdbfe",
+  },
+  {
+    label: "AI Champion",
+    title: "For practitioners carrying AI initiatives to production",
+    body: "Use field notes, templates, readiness scorecards, and governance language to move AI pilots through review, trust, and delivery.",
+    href: "/ai-champion",
+    cta: "Explore AI Champion",
+    accent: "#b45309",
+    background: "linear-gradient(135deg, #fff9f2 0%, #ffedd5 100%)",
+    border: "#fed7aa",
+  },
 ];
 
-const INDUSTRIES = [
-  "Technology",
-  "Banking",
-  "Insurance",
-  "Healthcare",
-  "Retail",
-  "Manufacturing",
-  "Education",
-  "Customer Support",
-  "Finance",
-  "Human Resources",
+const DECISIONS = [
+  {
+    title: "What is changing around my role?",
+    body: "For professionals who need a grounded read on automation exposure, market saturation, and role durability before making their next career move.",
+  },
+  {
+    title: "How should I reposition?",
+    body: "For people who need stronger language, profile signal, and practical next steps instead of generic career advice.",
+  },
+  {
+    title: "Why is our AI pilot not reaching production?",
+    body: "For AI Champions dealing with governance reviews, stakeholder resistance, operational readiness, and unclear ownership.",
+  },
+  {
+    title: "What should we do next?",
+    body: "For decision-makers who need a sharper framework before spending time, budget, or political capital on the wrong move.",
+  },
 ];
 
-const WORKFORCE_INTELLIGENCE = [
-  "Banking Careers 2026",
-  "HR Careers 2026",
-  "Sales Careers 2026",
-  "Finance Careers 2026",
-  "Operations Careers 2026",
-  "Education Careers 2026",
+const ADVISORY_SYSTEM = [
+  {
+    step: "01",
+    title: "Diagnose the situation",
+    body: "Use assessments, scorecards, and structured frameworks to make the risk or delivery problem visible.",
+  },
+  {
+    step: "02",
+    title: "Interpret the signal",
+    body: "Turn market pressure, role exposure, stakeholder friction, or governance concerns into a clear decision frame.",
+  },
+  {
+    step: "03",
+    title: "Choose the next move",
+    body: "Move into the right product, guide, report, audit, or advisory path based on the decision the client is actually trying to make.",
+  },
+];
+
+const ENGAGEMENT_PATHS = [
+  {
+    title: "Self-Serve Intelligence",
+    body: "Reports, guides, and field notes for professionals and teams who want structured insight and can act independently.",
+    href: "/career-intelligence",
+    cta: "Browse intelligence products",
+  },
+  {
+    title: "Diagnostic Review",
+    body: "Assessments and audits for people who want their own role, profile, or initiative interpreted through a sharper framework.",
+    href: "/services",
+    cta: "View services",
+  },
+  {
+    title: "AI Champion Resources",
+    body: "Templates, scorecards, and field notes for practitioners responsible for getting AI through production barriers.",
+    href: "/ai-champion",
+    cta: "Explore AI Champion",
+  },
 ];
 
 const FRAMEWORK_DIMENSIONS = [
@@ -76,11 +128,11 @@ const PROOF_LINKS = [
     cta: "View Java Guide",
   },
   {
-    title: "AI Risk Rankings India 2026",
+    title: "AI Champion Field Notes",
     description:
-      "A flagship market-facing report already available today for professionals who want structured evidence.",
-    href: "/products/ai-risk-rankings-india-2026",
-    cta: "View Report",
+      "A practical field guide for people responsible for moving AI initiatives from pilot to production.",
+    href: "/products/ai-champion-field-notes",
+    cta: "View Field Notes",
   },
 ];
 
@@ -107,18 +159,6 @@ export default function HomePage() {
             backgroundSize: "64px 64px",
           }}
         />
-        <div
-          style={{
-            position: "absolute",
-            top: -120,
-            right: "5%",
-            width: 700,
-            height: 700,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(26,79,214,0.07) 0%, transparent 65%)",
-            pointerEvents: "none",
-          }}
-        />
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px", position: "relative" }}>
           <div
             style={{
@@ -134,7 +174,7 @@ export default function HomePage() {
           >
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#0d9268", display: "inline-block" }} />
             <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1a4fd6" }}>
-              Workforce Intelligence · India 2026
+              Workforce Intelligence for the AI Era
             </span>
           </div>
 
@@ -159,7 +199,7 @@ export default function HomePage() {
                   maxWidth: 820,
                 }}
               >
-                Career Intelligence{" "}
+                Workforce Intelligence{" "}
                 <span
                   style={{
                     background: "linear-gradient(90deg, #1a4fd6, #22d3a0)",
@@ -167,7 +207,7 @@ export default function HomePage() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  for India
+                  for the AI Era
                 </span>
               </h1>
 
@@ -180,21 +220,20 @@ export default function HomePage() {
                   maxWidth: 700,
                 }}
               >
-                We help working professionals understand how technology, AI, automation,
-                and market shifts are changing work and what to do next.
+                We help professionals and AI initiative owners make clearer decisions as AI changes careers, teams, governance, and delivery.
               </p>
 
               <p style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 16 }}>
-                We don&apos;t guess your future. We model it.
+                Two clear paths: Career Intelligence and AI Champion.
               </p>
 
               <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.8, marginBottom: 40, maxWidth: 720 }}>
-                Publishing report-led intelligence on how work is changing across industries, professions, and regions in the age of AI.
+                Use Career Intelligence when you are making personal career decisions. Use AI Champion when you are responsible for moving AI from pilot to production inside an organisation.
               </p>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
                 <Link
-                  href="/reports"
+                  href="/career-intelligence"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -209,10 +248,10 @@ export default function HomePage() {
                     border: "1px solid #3b6ef0",
                   }}
                 >
-                  Browse Reports
+                  Explore Career Intelligence
                 </Link>
                 <Link
-                  href="/assessments"
+                  href="/ai-champion"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -226,7 +265,7 @@ export default function HomePage() {
                     border: "1px solid rgba(126,179,255,0.25)",
                   }}
                 >
-                  View Assessments
+                  Explore AI Champion
                 </Link>
               </div>
             </div>
@@ -241,12 +280,12 @@ export default function HomePage() {
               }}
             >
               <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 18 }}>
-                Our Mission
+                Advisory Focus
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-                {MISSION_METRICS.map((item) => (
+                {ADVISORY_FOCUS.map((item) => (
                   <div key={item.label} style={{ padding: "16px 14px", background: "rgba(10,22,40,0.025)", border: "1px solid rgba(26,79,214,0.12)", borderRadius: 12 }}>
-                    <div style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 800, color: "#1a4fd6", lineHeight: 1, marginBottom: 8 }}>
+                    <div style={{ fontSize: "clamp(18px, 2.4vw, 24px)", fontWeight: 800, color: "#1a4fd6", lineHeight: 1.15, marginBottom: 8 }}>
                       {item.value}
                     </div>
                     <div style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.55 }}>{item.label}</div>
@@ -268,66 +307,111 @@ export default function HomePage() {
             borderRadius: 18,
             padding: "26px 28px",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
             gap: 18,
           }}
         >
-          {[
-            {
-              label: "Report Strategy",
-              body: "Industry and profession-level intelligence packaged into current and upcoming report lines.",
-            },
-            {
-              label: "Assessments",
-              body: "Structured frameworks that help professionals understand exposure, demand, and strategic options.",
-            },
-            {
-              label: "Reports",
-              body: "Revenue-generating intelligence products built from the same research backbone.",
-            },
-            {
-              label: "Guides",
-              body: "Role-specific applications of the broader category, kept as proof rather than the front door.",
-            },
-          ].map((item) => (
-            <div key={item.label}>
-              <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", marginBottom: 8 }}>
-                {item.label}
-              </div>
-              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.75, color: "#5a6a8a" }}>{item.body}</p>
-            </div>
+          {VERTICALS.map((item) => (
+            <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
+              <article
+                style={{
+                  minHeight: "100%",
+                  background: item.background,
+                  border: `1.5px solid ${item.border}`,
+                  borderRadius: 12,
+                  padding: "24px 22px",
+                }}
+              >
+                <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: item.accent, marginBottom: 10 }}>
+                  {item.label}
+                </div>
+                <h2 style={{ fontSize: 24, lineHeight: 1.15, color: "#0a1628", marginBottom: 10 }}>{item.title}</h2>
+                <p style={{ margin: "0 0 18px", fontSize: 15, lineHeight: 1.75, color: "#425472" }}>{item.body}</p>
+                <span
+                  style={{
+                    display: "inline-flex",
+                    background: item.accent,
+                    color: "#ffffff",
+                    borderRadius: 8,
+                    padding: "10px 14px",
+                    fontSize: 13,
+                    fontWeight: 800,
+                  }}
+                >
+                  {item.cta} {"->"}
+                </span>
+              </article>
+            </Link>
           ))}
         </div>
       </section>
 
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <div style={{ marginBottom: 42 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>Upcoming Reports</span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Report lines we are developing.
+          <div style={{ maxWidth: 780, marginBottom: 38 }}>
+            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#0d9268" }}>
+              Advisory Questions
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.5vw, 52px)", color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em", lineHeight: 1.1 }}>
+              We help clients make decisions when AI changes the rules around work.
             </h2>
-            <p style={{ fontSize: 17, color: "#5a6a8a", maxWidth: 760, lineHeight: 1.8 }}>
-              These upcoming reports reflect the topics Sriram Advisory is studying across
-              professions, sectors, and the future of work in India.
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
+              Sriram Advisory sits at the point where career risk, workforce change, and AI delivery pressure become practical decisions. The work is not motivation or trend commentary. It is structured judgment for what to do next.
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18 }}>
-            {RESEARCH_ITEMS.map((item) => (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 18 }}>
+            {DECISIONS.map((item) => (
               <div
-                key={item}
+                key={item.title}
                 style={{
-                  background: "rgba(10,22,40,0.025)",
-                  border: "1px solid rgba(26,79,214,0.15)",
-                  borderRadius: 16,
+                  background: "#f8fbff",
+                  border: "1px solid #dbe5f5",
+                  borderRadius: 12,
                   padding: "24px 22px",
                 }}
               >
-                <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5a6a8a", marginBottom: 12 }}>
-                  Coming Soon
+                <h3 style={{ fontSize: 20, color: "#0a1628", lineHeight: 1.2, marginBottom: 10 }}>{item.title}</h3>
+                <p style={{ fontSize: 15, color: "#425472", lineHeight: 1.75, margin: 0 }}>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "88px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 0.85fr) minmax(0, 1.15fr)", gap: 32 }} className="home-two-col">
+          <div>
+            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#93b4ff" }}>
+              Advisory System
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.5vw, 50px)", lineHeight: 1.1, marginTop: 16, marginBottom: 16, color: "#ffffff" }}>
+              A simple system for moving from uncertainty to action.
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "rgba(231,239,255,0.78)" }}>
+              Every product and service exists to support one of three advisory moves: diagnose the situation, interpret the signal, and choose the next move.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gap: 14 }}>
+            {ADVISORY_SYSTEM.map((item) => (
+              <div
+                key={item.step}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "58px 1fr",
+                  gap: 16,
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  borderRadius: 12,
+                  padding: "18px",
+                }}
+              >
+                <div style={{ color: "#93b4ff", fontSize: 18, fontWeight: 900 }}>{item.step}</div>
+                <div>
+                  <h3 style={{ fontSize: 19, color: "#ffffff", marginBottom: 6 }}>{item.title}</h3>
+                  <p style={{ fontSize: 15, color: "rgba(231,239,255,0.74)", lineHeight: 1.7, margin: 0 }}>{item.body}</p>
                 </div>
-                <div style={{ fontSize: 20, fontWeight: 800, color: "#0a1628", lineHeight: 1.3 }}>{item}</div>
               </div>
             ))}
           </div>
@@ -340,40 +424,39 @@ export default function HomePage() {
             maxWidth: 1180,
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "minmax(0, 0.95fr) minmax(0, 1.05fr)",
+            gridTemplateColumns: "minmax(0, 0.8fr) minmax(0, 1.2fr)",
             gap: 30,
           }}
           className="home-two-col"
         >
           <div>
             <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
-              Industries We Track
+              Engagement Paths
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Industries where we track workforce change.
+              Choose the level of help that matches the decision.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", maxWidth: 560 }}>
-              We analyze workforce trends across industries where automation, AI adoption,
-              market saturation, and role redesign are reshaping professional careers.
+              Some decisions need a report or guide. Some need a diagnostic. Some need a practical AI delivery resource. Choose the path that fits the decision in front of you.
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14 }}>
-            {INDUSTRIES.map((industry) => (
-              <div
-                key={industry}
+          <div style={{ display: "grid", gap: 16 }}>
+            {ENGAGEMENT_PATHS.map((path) => (
+              <Link key={path.href} href={path.href} style={{ textDecoration: "none" }}>
+                <article
                 style={{
-                  padding: "18px 18px",
-                  borderRadius: 14,
                   background: "#ffffff",
                   border: "1px solid rgba(26,79,214,0.12)",
-                  fontSize: 15,
-                  fontWeight: 700,
-                  color: "#0a1628",
+                    borderRadius: 12,
+                    padding: "20px",
                 }}
               >
-                {industry}
-              </div>
+                  <h3 style={{ fontSize: 21, color: "#0a1628", marginBottom: 8 }}>{path.title}</h3>
+                  <p style={{ fontSize: 15, color: "#425472", lineHeight: 1.7, margin: "0 0 12px" }}>{path.body}</p>
+                  <span style={{ color: "#1a4fd6", fontSize: 14, fontWeight: 800 }}>{path.cta} {"->"}</span>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -450,7 +533,7 @@ export default function HomePage() {
             </div>
             <div style={{ marginTop: 22 }}>
               <Link
-                href="/assessments"
+                href="/career-intelligence"
                 style={{
                   color: "#1a4fd6",
                   fontWeight: 700,
@@ -459,129 +542,9 @@ export default function HomePage() {
                   paddingBottom: 2,
                 }}
               >
-                See current assessments
+                Explore Career Intelligence
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "100px 24px", background: "#f7f9fc" }}>
-        <div
-          style={{
-            maxWidth: 1180,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)",
-            gap: 28,
-          }}
-          className="home-two-col"
-        >
-          <div>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
-              Workforce Intelligence
-            </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Workforce intelligence areas we are building toward.
-            </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              These upcoming focus areas reflect the broader direction of Sriram Advisory:
-              tracking how work is changing across professions and sectors in India.
-            </p>
-          </div>
-
-          <div
-            style={{
-              background: "#ffffff",
-              borderRadius: 16,
-              border: "1px solid rgba(26,79,214,0.12)",
-              padding: 28,
-            }}
-          >
-            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#5a6a8a", marginBottom: 18 }}>
-              Coming Soon
-            </div>
-            <div style={{ display: "grid", gap: 12 }}>
-              {WORKFORCE_INTELLIGENCE.map((item) => (
-                <div
-                  key={item}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: 14,
-                    padding: "14px 0",
-                    borderBottom: "1px solid rgba(26,79,214,0.12)",
-                  }}
-                >
-                  <span style={{ fontSize: 16, fontWeight: 700, color: "#0a1628" }}>{item}</span>
-                  <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268" }}>
-                    Coming Soon
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
-        <div
-          style={{
-            maxWidth: 1180,
-            margin: "0 auto",
-            background: "linear-gradient(135deg, #0a1628 0%, #0f2040 100%)",
-            color: "#f8faff",
-            borderRadius: 20,
-            padding: "36px 30px",
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.1fr)",
-            gap: 28,
-          }}
-          className="home-two-col"
-        >
-          <div>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#93b4ff" }}>
-              Flagship Report
-            </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#ffffff", marginTop: 14, marginBottom: 14, letterSpacing: "-0.02em" }}>
-              State of Indian Careers 2026
-            </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#dbe3ea" }}>
-              India&apos;s annual workforce intelligence report. Visible now to establish category
-              perception, even before launch.
-            </p>
-          </div>
-
-          <div
-            style={{
-              alignSelf: "center",
-              padding: 24,
-              borderRadius: 16,
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-            }}
-          >
-            <div
-              style={{
-                display: "inline-flex",
-                padding: "6px 12px",
-                borderRadius: 999,
-                background: "rgba(59,110,240,0.18)",
-                color: "#93b4ff",
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                marginBottom: 14,
-              }}
-            >
-              Coming Soon
-            </div>
-            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#dbe3ea" }}>
-              Annual report framing career change through automation exposure, labor demand,
-              profession-level transitions, and sector-level shifts across India.
-            </p>
           </div>
         </div>
       </section>
@@ -593,11 +556,10 @@ export default function HomePage() {
               Current Offerings
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Existing guides and reports.
+              Current products across both product paths.
             </h2>
             <p style={{ maxWidth: 760, fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              These are the current products already available from Sriram Advisory,
-              covering role-specific guidance and career intelligence reports.
+              These are the current products already available from Sriram Advisory, covering career decisions and AI delivery work.
             </p>
           </div>
 
@@ -638,15 +600,14 @@ export default function HomePage() {
             Next Step
           </span>
           <h2 style={{ fontSize: "clamp(32px, 4.8vw, 56px)", color: "#0a1628", marginTop: 16, marginBottom: 18, letterSpacing: "-0.02em" }}>
-            Explore current and upcoming reports.
+            Choose the path that matches your situation.
           </h2>
           <p style={{ fontSize: 18, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 34 }}>
-            Explore the report catalog behind Sriram Advisory, along with the assessments
-            and guides currently available.
+            Start with Career Intelligence if you are making a personal career decision. Start with AI Champion if you are carrying an AI initiative through production.
           </p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
-              href="/reports"
+              href="/career-intelligence"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -660,10 +621,10 @@ export default function HomePage() {
                 border: "1px solid #3b6ef0",
               }}
             >
-              See Reports
+              Career Intelligence
             </Link>
             <Link
-              href="/reports"
+              href="/ai-champion"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -677,9 +638,20 @@ export default function HomePage() {
                 border: "1px solid rgba(126,179,255,0.25)",
               }}
             >
-              Browse Reports
+              AI Champion
             </Link>
           </div>
+          <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 24 }}>
+            Prefer to ask directly? Email{" "}
+            <a href="mailto:sriram@sriramadvisory.com" style={{ color: "#1a4fd6", fontWeight: 700, textDecoration: "none" }}>
+              sriram@sriramadvisory.com
+            </a>{" "}
+            or WhatsApp{" "}
+            <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{ color: "#1a4fd6", fontWeight: 700, textDecoration: "none" }}>
+              +91 93422 29420
+            </a>
+            .
+          </p>
         </div>
       </section>
 
