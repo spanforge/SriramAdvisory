@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NAV_ITEMS } from "@/lib/siteCatalog";
 
 export default function Footer() {
   return (
@@ -47,7 +48,7 @@ export default function Footer() {
               </div>
             </div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Workforce intelligence, career advisory, and AI delivery resources for the AI era.
+              Buyer-facing research, role guides, and services for professionals navigating AI-driven career change.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <a href="mailto:sriram@sriramadvisory.com" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>
@@ -65,12 +66,7 @@ export default function Footer() {
                 Explore
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
-                {[
-                  { label: "Career Intelligence", href: "/career-intelligence" },
-                  { label: "AI Champion", href: "/ai-champion" },
-                  { label: "Free Resources", href: "/free" },
-                  { label: "Services", href: "/services" },
-                ].map((item) => (
+                {NAV_ITEMS.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>
                       {item.label}
@@ -88,8 +84,8 @@ export default function Footer() {
                 {[
                   { label: "About", href: "/about" },
                   { label: "Contact", href: "/contact" },
-                  { label: "FAQ", href: "/faq" },
-                  { label: "Insights", href: "/insights" },
+                  { label: "Reports", href: "/reports" },
+                  { label: "Guides", href: "/guides" },
                 ].map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>

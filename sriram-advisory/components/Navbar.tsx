@@ -3,14 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
-const NAV_LINKS = [
-  { label: "Career Intelligence", href: "/career-intelligence" },
-  { label: "AI Champion", href: "/ai-champion" },
-  { label: "Free Resources", href: "/free" },
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-];
+import { NAV_ITEMS } from "@/lib/siteCatalog";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -93,8 +86,10 @@ export default function Navbar() {
           </Link>
 
           <div style={{ alignItems: "center", gap: 4 }} className="hidden md:flex">
-            {NAV_LINKS.map((link) => {
-              const active = pathname === link.href;
+            {NAV_ITEMS.map((link) => {
+              const active =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(`${link.href}/`));
               return (
                 <Link
                   key={link.href}
@@ -116,26 +111,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-
-            <Link
-              href="/contact"
-              style={{
-                marginLeft: 10,
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#1a4fd6",
-                color: "#ffffff",
-                fontWeight: 700,
-                fontSize: 13,
-                padding: "10px 18px",
-                borderRadius: 8,
-                textDecoration: "none",
-                border: "1px solid #3b6ef0",
-              }}
-            >
-              Contact
-            </Link>
           </div>
 
           <button
@@ -205,8 +180,10 @@ export default function Navbar() {
             }}
             className="md:hidden"
           >
-            {NAV_LINKS.map((link) => {
-              const active = pathname === link.href;
+            {NAV_ITEMS.map((link) => {
+              const active =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(`${link.href}/`));
               return (
                 <Link
                   key={link.href}
@@ -228,26 +205,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
-              role="menuitem"
-              onClick={() => setOpen(false)}
-              style={{
-                marginTop: 8,
-                display: "block",
-                textAlign: "center",
-                fontSize: 15,
-                fontWeight: 700,
-                textDecoration: "none",
-                padding: "12px 18px",
-                borderRadius: 8,
-                background: "#1a4fd6",
-                color: "#ffffff",
-                border: "1px solid #3b6ef0",
-              }}
-            >
-              Contact
-            </Link>
           </div>
         )}
       </nav>

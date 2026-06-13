@@ -1,48 +1,19 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GuidesCatalog from "@/components/GuidesCatalog";
+import { GUIDES } from "@/lib/siteCatalog";
+import { LIFETIME_UPDATES_BODY, LIFETIME_UPDATES_TITLE } from "@/lib/guideSalesContent";
 
 export const metadata: Metadata = {
   title: "Guides | Sriram Advisory",
   description:
-    "Choose between IT and HR sector guide collections built for India-first career intelligence and AI-era repositioning.",
+    "Role-specific AI career guides for professionals who want clear repositioning paths, honest risk framing, and buyer-ready next steps.",
 };
 
-const GUIDE_SECTORS = [
-  {
-    badge: "IT Sector",
-    title: "IT Career Guides",
-    blurb:
-      "Role-specific guides on AI risk, repositioning, and salary upside. Each guide is built to help you understand what is changing, what to do next, and how to present yourself more strongly.",
-    href: "/guides/it",
-    cta: "Explore IT guides",
-    accentColor: "#1d4ed8",
-    borderColor: "#bfdbfe",
-    background: "linear-gradient(135deg, #f8fbff 0%, #e8f1ff 100%)",
-    highlights: [
-      "Engineering, QA, data, product, and support roles",
-      "India-first market realities and repositioning paths",
-      "Role-specific, not generic",
-    ],
-  },
-  {
-    badge: "HR Sector",
-    title: "HR Career Guides",
-    blurb:
-      "AI systems are already handling repeatable HR work across recruiting, coordination, documentation, and workforce operations. These guides help HR professionals move toward judgment, business context, stakeholder influence, and higher-leverage strategic value.",
-    href: "/guides/hr",
-    cta: "Explore HR guides",
-    accentColor: "#be185d",
-    borderColor: "#f9a8d4",
-    background: "linear-gradient(135deg, #fff6fb 0%, #ffe6f1 100%)",
-    highlights: [
-      "Built for Indian HR market realities",
-      "Focus on defensible human judgment",
-      "Practical repositioning across the HR profession",
-    ],
-  },
-];
+const GUIDE_DELIVERY_NOTE = "Manual email delivery, usually within 30 minutes of payment.";
+const BONUS_GUIDE_NOTE =
+  "Every guide includes the Agentic AI Field Guide bonus at no extra cost.";
 
 export default function GuidesPage() {
   return (
@@ -57,7 +28,7 @@ export default function GuidesPage() {
           textAlign: "center",
         }}
       >
-        <div style={{ maxWidth: 780, margin: "0 auto", padding: "0 20px" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 20px" }}>
           <div
             style={{
               display: "inline-flex",
@@ -88,7 +59,7 @@ export default function GuidesPage() {
                 color: "#93b4ff",
               }}
             >
-              India-First Career Intelligence
+              All Role Guides
             </span>
           </div>
           <h1
@@ -101,18 +72,18 @@ export default function GuidesPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Choose Your Guide Collection
+            Buyer-facing guides for AI-era career decisions
           </h1>
           <p
             style={{
               fontSize: "clamp(15px, 2vw, 18px)",
               color: "rgba(200,220,255,0.84)",
               lineHeight: 1.75,
-              maxWidth: 660,
+              maxWidth: 680,
               margin: "0 auto 24px",
             }}
           >
-            Browse by sector first. We now organize guides into dedicated IT and HR collections so the landing pages, positioning, and guide catalogs match the market reality of each audience.
+            Every guide is visible here. Pick the role that matches your current market pressure, review the price, and go straight to checkout without navigating through extra collections.
           </p>
         </div>
       </section>
@@ -120,99 +91,57 @@ export default function GuidesPage() {
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 20px 80px" }}>
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: 24,
+            background: "linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%)",
+            border: "1px solid #c7d7ff",
+            borderRadius: 24,
+            padding: "28px 24px",
+            marginBottom: 28,
+            boxShadow: "0 20px 50px rgba(10, 22, 40, 0.06)",
           }}
         >
-          {GUIDE_SECTORS.map((sector) => (
-            <article
-              key={sector.href}
+          <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+            <span
               style={{
-                background: sector.background,
-                border: `1.5px solid ${sector.borderColor}`,
-                borderRadius: 28,
-                padding: "30px clamp(20px, 4vw, 32px)",
-                boxShadow: "0 24px 60px rgba(10, 22, 40, 0.08)",
-                display: "flex",
-                flexDirection: "column",
-                gap: 18,
+                fontSize: 12,
+                fontWeight: 800,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "#1a4fd6",
+                display: "block",
+                marginBottom: 10,
               }}
             >
-              <span
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  width: "fit-content",
-                  fontSize: 11,
-                  fontWeight: 800,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  background: sector.accentColor,
-                  color: "#ffffff",
-                  padding: "6px 10px",
-                  borderRadius: 999,
-                }}
-              >
-                {sector.badge}
-              </span>
-
-              <div>
-                <h2
-                  style={{
-                    fontSize: "clamp(28px, 4vw, 38px)",
-                    lineHeight: 1.12,
-                    color: "#0a1628",
-                    marginBottom: 12,
-                    letterSpacing: "-0.03em",
-                  }}
-                >
-                  {sector.title}
-                </h2>
-                <p style={{ fontSize: 15, color: "#425472", lineHeight: 1.8, margin: 0 }}>{sector.blurb}</p>
-              </div>
-
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                {sector.highlights.map((item) => (
-                  <span
-                    key={item}
-                    style={{
-                      fontSize: 12,
-                      fontWeight: 700,
-                      color: "#38506f",
-                      background: "rgba(255,255,255,0.72)",
-                      border: "1px solid rgba(10,22,40,0.08)",
-                      borderRadius: 999,
-                      padding: "8px 11px",
-                    }}
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-
-              <Link
-                href={sector.href}
-                style={{
-                  marginTop: "auto",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "fit-content",
-                  textDecoration: "none",
-                  background: sector.accentColor,
-                  color: "#ffffff",
-                  borderRadius: 10,
-                  padding: "13px 18px",
-                  fontSize: 14,
-                  fontWeight: 800,
-                }}
-              >
-                {sector.cta} {"->"}
-              </Link>
-            </article>
-          ))}
+              Public Commitment
+            </span>
+            <h2
+              style={{
+                fontSize: "clamp(24px, 3.5vw, 36px)",
+                fontWeight: 900,
+                color: "#0a1628",
+                letterSpacing: "-0.03em",
+                marginBottom: 12,
+              }}
+            >
+              {LIFETIME_UPDATES_TITLE}
+            </h2>
+            <p
+              style={{
+                fontSize: 15,
+                color: "#40526b",
+                lineHeight: 1.8,
+                margin: 0,
+              }}
+            >
+              {LIFETIME_UPDATES_BODY}
+            </p>
+          </div>
         </div>
+
+        <GuidesCatalog
+          guides={GUIDES}
+          deliveryNote={GUIDE_DELIVERY_NOTE}
+          bonusNote={BONUS_GUIDE_NOTE}
+        />
       </section>
 
       <Footer />

@@ -11,28 +11,28 @@ export const metadata: Metadata = {
 
 const PILLARS = [
   {
-    title: "Career Intelligence",
-    body: "For professionals who need to understand AI exposure, market pressure, role durability, and practical repositioning options.",
+    title: "Reports",
+    body: "Research products for buyers who want clearer market context before making career, learning, or positioning decisions.",
   },
   {
-    title: "AI Delivery Intelligence",
-    body: "For practitioners responsible for moving AI initiatives through governance, stakeholder trust, operational readiness, and production.",
+    title: "Guides",
+    body: "Role-specific buyer products that explain AI pressure, adaptation paths, and sharper market-facing positioning.",
   },
   {
-    title: "Structured Diagnostics",
-    body: "Assessments, scorecards, audits, and frameworks that make career risk or delivery friction visible enough to act on.",
+    title: "Services",
+    body: "Direct assessments for professionals who want their role risk or market positioning reviewed through a structured lens.",
   },
   {
-    title: "Practical Advisory Outputs",
-    body: "Reports, guides, field notes, and services designed to turn uncertainty into a next decision, not just more information.",
+    title: "SA-AIRS Framework",
+    body: "The diagnostic layer that turns scattered AI anxiety into a more structured read on exposure, leverage, and next moves.",
   },
 ];
 
 const DIFFERENTIATORS = [
+  "Buyer-first, not maze-first. Core offers are organized cleanly into Reports, Guides, and Services.",
   "Advisory-first, not motivation-first. The work is built around decisions, tradeoffs, and next moves.",
-  "Two clear paths: Career Intelligence for professionals and AI Champion for initiative owners.",
   "Framework-led. Products and services are built around structured diagnostics, not generic advice.",
-  "Practical enough to use. Reports, guides, templates, and audits are designed for real decisions.",
+  "Practical enough to use. Reports, guides, and services are designed for real decisions, not abstract commentary.",
 ];
 
 export default function AboutPage() {
@@ -54,14 +54,14 @@ export default function AboutPage() {
             About Sriram Advisory
           </span>
           <h1 style={{ fontSize: "clamp(38px, 5.5vw, 70px)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, marginBottom: 24, letterSpacing: "-0.02em" }}>
-            Advisory for work,
+            Buyer-facing advisory for work,
             <br />
             <span style={{ background: "linear-gradient(90deg, #1a4fd6, #22d3a0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              careers, and AI delivery.
+              careers, and AI market pressure.
             </span>
           </h1>
           <p style={{ fontSize: "clamp(17px, 2.2vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 700 }}>
-            Sriram Advisory is a workforce intelligence and advisory firm for the AI era. We help professionals make sharper career decisions and help AI Champions move initiatives from pilot to production.
+            Sriram Advisory is a workforce intelligence and advisory firm for the AI era. We help professionals read role risk more clearly, choose sharper positioning moves, and buy the right level of help.
           </p>
         </div>
       </section>
@@ -111,10 +111,10 @@ export default function AboutPage() {
                 Sriram Advisory was built around a simple observation: most conversations about AI and work are either too abstract or too tactical. They talk about tools, panic, or isolated use cases, but not enough about the decisions people actually need to make.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                Professionals need to know how AI changes role durability, market demand, and positioning. AI Champions need to know how to move pilots through governance, stakeholder confidence, operating readiness, and production friction.
+                Professionals need to know how AI changes role durability, market demand, and positioning. They do not need a confusing product tree. They need a clear path to the right report, guide, or service.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                That is why the firm now has two clear paths: Career Intelligence for people making career decisions, and AI Champion for practitioners carrying AI initiatives inside organisations.
+                That is why the firm is organized around three simple buyer-facing offer types: Reports for market intelligence, Guides for role-specific direction, and Services for direct diagnostic help.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
                 The long-term goal is to make AI-era work change more legible through structured frameworks, practical diagnostics, and advisory products that help people choose their next move with more confidence.
@@ -186,14 +186,14 @@ export default function AboutPage() {
       <section style={{ padding: "96px 24px", background: "#ffffff", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <h2 style={{ fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 800, color: "#0a1628", marginBottom: 20, letterSpacing: "-0.02em" }}>
-            Start with the path that fits your situation.
+            Start with the format that fits your decision.
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 32 }}>
-            Use Career Intelligence if you are making a personal career decision. Use AI Champion if you are responsible for moving an AI initiative toward production.
+            Browse guides if you want role-specific direction, reports if you want broader market intelligence, and services if you want your own case assessed directly.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
             <Link
-              href="/career-intelligence"
+              href="/guides"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -207,10 +207,10 @@ export default function AboutPage() {
                 border: "1px solid #3b6ef0",
               }}
             >
-              Career Intelligence
+              Browse Guides
             </Link>
             <Link
-              href="/ai-champion"
+              href="/reports"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 border: "1px solid rgba(126,179,255,0.25)",
               }}
             >
-              AI Champion
+              View Reports
             </Link>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 26 }}>

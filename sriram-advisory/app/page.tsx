@@ -1,38 +1,48 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | Workforce Intelligence for the AI Era",
+  title: "Sriram Advisory | Reports, Guides, and Services for the AI Era",
   description:
-    "Sriram Advisory builds workforce intelligence for the AI era across career intelligence and AI initiative delivery.",
+    "Buyer-facing reports, guides, and services for professionals navigating AI-driven career change.",
 };
 
 const ADVISORY_FOCUS = [
   { value: "Career Risk", label: "Role exposure, market pressure, and next-position decisions" },
-  { value: "AI Delivery", label: "Governance, readiness, stakeholder trust, and production movement" },
   { value: "Market Signal", label: "Reports and role intelligence for clearer judgment" },
   { value: "Positioning", label: "Resume, LinkedIn, and market-facing narrative clarity" },
+  { value: "Next Move", label: "Guides and services that help buyers act with more confidence" },
 ];
 
-const VERTICALS = [
+const OFFER_PILLARS = [
   {
-    label: "Career Intelligence",
-    title: "For professionals navigating AI-era career change",
-    body: "Assess your role risk, understand market pressure, and choose practical next moves through assessments, reports, guides, and positioning services.",
-    href: "/career-intelligence",
-    cta: "Explore Career Intelligence",
+    label: "Reports",
+    title: "Research products for professionals who need clearer market context",
+    body: "Use reports when you want a broader read on AI pressure, role shifts, and market signals before deciding what to do next.",
+    href: "/reports",
+    cta: "Explore reports",
     accent: "#1a4fd6",
     background: "linear-gradient(135deg, #f8fbff 0%, #e8f1ff 100%)",
     border: "#bfdbfe",
   },
   {
-    label: "AI Champion",
-    title: "For practitioners carrying AI initiatives to production",
-    body: "Use field notes, templates, readiness scorecards, and governance language to move AI pilots through review, trust, and delivery.",
-    href: "/ai-champion",
-    cta: "Explore AI Champion",
+    label: "Guides",
+    title: "Role-specific direction for buyers who want practical repositioning help",
+    body: "Choose guides when you want a role-by-role breakdown of risk, positioning, and the most useful path forward in the AI era.",
+    href: "/guides",
+    cta: "Browse guides",
+    accent: "#0d9268",
+    background: "linear-gradient(135deg, #f4fffb 0%, #dcfce7 100%)",
+    border: "#86efac",
+  },
+  {
+    label: "Services",
+    title: "Direct diagnostic help when you want your own case assessed",
+    body: "Use services when a self-serve product is not enough and you want direct clarity on your role risk or market positioning.",
+    href: "/services",
+    cta: "View services",
     accent: "#b45309",
     background: "linear-gradient(135deg, #fff9f2 0%, #ffedd5 100%)",
     border: "#fed7aa",
@@ -42,19 +52,19 @@ const VERTICALS = [
 const DECISIONS = [
   {
     title: "What is changing around my role?",
-    body: "For professionals who need a grounded read on automation exposure, market saturation, and role durability before making their next career move.",
+    body: "For professionals who need a grounded read on automation exposure, market saturation, and role durability before making their next move.",
   },
   {
     title: "How should I reposition?",
     body: "For people who need stronger language, profile signal, and practical next steps instead of generic career advice.",
   },
   {
-    title: "Why is our AI pilot not reaching production?",
-    body: "For AI Champions dealing with governance reviews, stakeholder resistance, operational readiness, and unclear ownership.",
+    title: "What should I buy first?",
+    body: "For buyers who need a cleaner path into the right report, guide, or service without wasting time or money.",
   },
   {
-    title: "What should we do next?",
-    body: "For decision-makers who need a sharper framework before spending time, budget, or political capital on the wrong move.",
+    title: "What should I do next?",
+    body: "For decision-makers who need a sharper framework before spending time, budget, or attention on the wrong move.",
   },
 ];
 
@@ -62,45 +72,45 @@ const ADVISORY_SYSTEM = [
   {
     step: "01",
     title: "Diagnose the situation",
-    body: "Use assessments, scorecards, and structured frameworks to make the risk or delivery problem visible.",
+    body: "Use structured frameworks to make role risk, market pressure, and positioning gaps visible enough to act on.",
   },
   {
     step: "02",
     title: "Interpret the signal",
-    body: "Turn market pressure, role exposure, stakeholder friction, or governance concerns into a clear decision frame.",
+    body: "Turn role exposure, market friction, and profile weaknesses into a clearer decision frame.",
   },
   {
     step: "03",
     title: "Choose the next move",
-    body: "Move into the right product, guide, report, audit, or advisory path based on the decision the client is actually trying to make.",
+    body: "Move into the right report, guide, or service based on the decision you are actually trying to make.",
   },
 ];
 
 const ENGAGEMENT_PATHS = [
   {
-    title: "Self-Serve Intelligence",
-    body: "Reports, guides, and field notes for professionals and teams who want structured insight and can act independently.",
-    href: "/career-intelligence",
-    cta: "Browse intelligence products",
+    title: "Start with a report",
+    body: "Best when you want broader market intelligence and a stronger frame for what AI is changing around careers and role categories.",
+    href: "/reports",
+    cta: "View reports",
   },
   {
-    title: "Diagnostic Review",
-    body: "Assessments and audits for people who want their own role, profile, or initiative interpreted through a sharper framework.",
+    title: "Go role-specific with a guide",
+    body: "Best when you already know your role and want direct, buyer-friendly positioning guidance tied to your career situation.",
+    href: "/guides",
+    cta: "Browse guides",
+  },
+  {
+    title: "Use a service for direct clarity",
+    body: "Best when you want your own role risk or market positioning assessed rather than reading a self-serve product first.",
     href: "/services",
-    cta: "View services",
-  },
-  {
-    title: "AI Champion Resources",
-    body: "Templates, scorecards, and field notes for practitioners responsible for getting AI through production barriers.",
-    href: "/ai-champion",
-    cta: "Explore AI Champion",
+    cta: "Explore services",
   },
 ];
 
 const TRUST_SIGNALS = [
   {
     title: "Founder-led advisory",
-    body: "The frameworks, products, and advisory language are built directly by Sriram, so buyers know who is accountable for the point of view.",
+    body: "The frameworks, products, and positioning language are built directly by Sriram, so buyers know who is accountable for the point of view.",
     href: "/about",
     cta: "About Sriram",
   },
@@ -112,7 +122,7 @@ const TRUST_SIGNALS = [
   },
   {
     title: "Direct contact before you buy",
-    body: "Professionals and AI initiative owners can reach Sriram directly by email or WhatsApp when they need fit clarification.",
+    body: "Professionals can reach Sriram directly by email or WhatsApp when they need product-fit clarification before purchasing.",
     href: "/contact",
     cta: "Contact Sriram",
   },
@@ -124,37 +134,6 @@ const FRAMEWORK_DIMENSIONS = [
   "Decision Complexity",
   "Human Dependency",
   "Future Demand",
-];
-
-const PROOF_LINKS = [
-  {
-    title: "QA Guide",
-    description:
-      "For QA professionals who want a clearer view of AI pressure, role risk, and practical upgrade direction.",
-    href: "/guides/qa-engineer-survival-guide-2026",
-    cta: "View QA Guide",
-  },
-  {
-    title: "BA Guide",
-    description:
-      "For Business Analysts who need to reposition toward higher-leverage product, AI, and stakeholder work.",
-    href: "/guides/business-analyst-survival-guide-2026",
-    cta: "View BA Guide",
-  },
-  {
-    title: "Java Guide",
-    description:
-      "For Java developers who want to use AI as leverage while protecting seniority, depth, and market signal.",
-    href: "/guides/java-developer-ai-leverage-guide-2026",
-    cta: "View Java Guide",
-  },
-  {
-    title: "AI Champion Field Notes",
-    description:
-      "A practical field guide for people responsible for moving AI initiatives from pilot to production.",
-    href: "/products/ai-champion-field-notes",
-    cta: "View Field Notes",
-  },
 ];
 
 export default function HomePage() {
@@ -241,20 +220,20 @@ export default function HomePage() {
                   maxWidth: 700,
                 }}
               >
-                We help professionals and AI initiative owners make clearer decisions as AI changes careers, teams, governance, and delivery.
+                We help professionals make clearer decisions as AI changes roles, career durability, and market positioning.
               </p>
 
               <p style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 16 }}>
-                Two clear paths: Career Intelligence and AI Champion.
+                Start with the format that matches your situation: report, guide, or service.
               </p>
 
               <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.8, marginBottom: 40, maxWidth: 720 }}>
-                Use Career Intelligence when you are making personal career decisions. Use AI Champion when you are responsible for moving AI from pilot to production inside an organisation.
+                Use reports for broader context, guides for role-specific direction, and services when you want your own situation interpreted directly through the SA-AIRS framework.
               </p>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
                 <Link
-                  href="/career-intelligence"
+                  href="/guides"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -269,10 +248,10 @@ export default function HomePage() {
                     border: "1px solid #3b6ef0",
                   }}
                 >
-                  Explore Career Intelligence
+                  Browse Guides
                 </Link>
                 <Link
-                  href="/ai-champion"
+                  href="/reports"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -286,7 +265,7 @@ export default function HomePage() {
                     border: "1px solid rgba(126,179,255,0.25)",
                   }}
                 >
-                  Explore AI Champion
+                  Explore Reports
                 </Link>
               </div>
             </div>
@@ -332,7 +311,7 @@ export default function HomePage() {
             gap: 18,
           }}
         >
-          {VERTICALS.map((item) => (
+          {OFFER_PILLARS.map((item) => (
             <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
               <article
                 style={{
@@ -377,7 +356,7 @@ export default function HomePage() {
               We help clients make decisions when AI changes the rules around work.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Sriram Advisory sits at the point where career risk, workforce change, and AI delivery pressure become practical decisions. The work is not motivation or trend commentary. It is structured judgment for what to do next.
+              Sriram Advisory sits at the point where career risk, workforce change, and market positioning pressure become practical decisions. The work is not motivation or trend commentary. It is structured judgment for what to do next.
             </p>
           </div>
 
@@ -458,7 +437,7 @@ export default function HomePage() {
               Choose the level of help that matches the decision.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", maxWidth: 560 }}>
-              Some decisions need a report or guide. Some need a diagnostic. Some need a practical AI delivery resource. Choose the path that fits the decision in front of you.
+              Some decisions need a report. Some need a role-specific guide. Some need a direct diagnostic. Choose the path that fits the decision in front of you.
             </p>
           </div>
 
@@ -466,13 +445,13 @@ export default function HomePage() {
             {ENGAGEMENT_PATHS.map((path) => (
               <Link key={path.href} href={path.href} style={{ textDecoration: "none" }}>
                 <article
-                style={{
-                  background: "#ffffff",
-                  border: "1px solid rgba(26,79,214,0.12)",
+                  style={{
+                    background: "#ffffff",
+                    border: "1px solid rgba(26,79,214,0.12)",
                     borderRadius: 12,
                     padding: "20px",
-                }}
-              >
+                  }}
+                >
                   <h3 style={{ fontSize: 21, color: "#0a1628", marginBottom: 8 }}>{path.title}</h3>
                   <p style={{ fontSize: 15, color: "#425472", lineHeight: 1.7, margin: "0 0 12px" }}>{path.body}</p>
                   <span style={{ color: "#1a4fd6", fontSize: 14, fontWeight: 800 }}>{path.cta} {"->"}</span>
@@ -509,8 +488,7 @@ export default function HomePage() {
               SA-AIRS(TM) Workforce Intelligence Framework
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: "#8898b8" }}>
-              Reframed from a single score into a platform for interpreting how work is
-              changing across professions, sectors, and career stages.
+              A framework for interpreting how work is changing across professions, sectors, and career stages so buyers can make clearer next decisions.
             </p>
           </div>
 
@@ -554,7 +532,7 @@ export default function HomePage() {
             </div>
             <div style={{ marginTop: 22 }}>
               <Link
-                href="/career-intelligence"
+                href="/services"
                 style={{
                   color: "#1a4fd6",
                   fontWeight: 700,
@@ -563,7 +541,7 @@ export default function HomePage() {
                   paddingBottom: 2,
                 }}
               >
-                Explore Career Intelligence
+                Explore SA-AIRS-based services
               </Link>
             </div>
           </div>
@@ -616,51 +594,6 @@ export default function HomePage() {
       </section>
 
       <section style={{ padding: "100px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <div style={{ marginBottom: 28 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
-              Current Offerings
-            </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Current products across both product paths.
-            </h2>
-            <p style={{ maxWidth: 760, fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              These are the current products already available from Sriram Advisory, covering career decisions and AI delivery work.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18 }}>
-            {PROOF_LINKS.map((item) => (
-              <div
-                key={item.title}
-                style={{
-                  background: "#ffffff",
-                  borderRadius: 16,
-                  border: "1px solid rgba(26,79,214,0.12)",
-                  padding: 24,
-                }}
-              >
-                <div style={{ fontSize: 20, fontWeight: 800, color: "#0a1628", marginBottom: 10 }}>{item.title}</div>
-                <p style={{ fontSize: 15, lineHeight: 1.75, color: "#5a6a8a", marginBottom: 18 }}>{item.description}</p>
-                <Link
-                  href={item.href}
-                  style={{
-                    color: "#1a4fd6",
-                    fontWeight: 700,
-                    textDecoration: "none",
-                    borderBottom: "1px solid rgba(126,179,255,0.3)",
-                    paddingBottom: 2,
-                  }}
-                >
-                  {item.cta}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
           <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
             Next Step
@@ -669,11 +602,11 @@ export default function HomePage() {
             Choose the path that matches your situation.
           </h2>
           <p style={{ fontSize: 18, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 34 }}>
-            Start with Career Intelligence if you are making a personal career decision. Start with AI Champion if you are carrying an AI initiative through production.
+            Start with a guide if you want role-specific direction, a report if you want broader context, or a service if you want a direct diagnostic.
           </p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
-              href="/career-intelligence"
+              href="/guides"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -687,10 +620,10 @@ export default function HomePage() {
                 border: "1px solid #3b6ef0",
               }}
             >
-              Career Intelligence
+              Browse Guides
             </Link>
             <Link
-              href="/ai-champion"
+              href="/services"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -704,7 +637,7 @@ export default function HomePage() {
                 border: "1px solid rgba(126,179,255,0.25)",
               }}
             >
-              AI Champion
+              Explore Services
             </Link>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 24 }}>
