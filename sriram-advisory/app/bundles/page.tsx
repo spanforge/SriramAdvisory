@@ -108,49 +108,6 @@ export default function BundlesPage() {
         </div>
       </section>
 
-      <section className="bundles-highlights" style={{ padding: "24px 20px 8px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <div
-            style={{
-              background: "linear-gradient(135deg, #f2fbf8 0%, #eef8ff 100%)",
-              border: "1px solid #d9e2ec",
-              borderRadius: 22,
-              padding: "18px 18px",
-            }}
-          >
-            <div
-              className="bundles-highlights-grid"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: 12,
-              }}
-            >
-              {[
-                "Mobile-first bundle checkout flow",
-                "Every card shows bundle price and savings",
-                "Clean aligned bundle cards across every tier",
-              ].map((item) => (
-                <div
-                  key={item}
-                  style={{
-                    background: "#ffffff",
-                    border: "1px solid #d9e2ec",
-                    borderRadius: 14,
-                    padding: "14px 14px",
-                    fontSize: 13,
-                    color: "#334155",
-                    lineHeight: 1.55,
-                  }}
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {BUNDLE_SECTIONS.map((section) => (
         <section
           key={section.id}
@@ -448,15 +405,6 @@ export default function BundlesPage() {
           .bundles-hero-note {
             padding: 14px 14px !important;
             border-radius: 18px !important;
-          }
-
-          .bundles-highlights {
-            padding: 16px 16px 4px !important;
-          }
-
-          .bundles-highlights-grid {
-            grid-template-columns: 1fr !important;
-            gap: 10px !important;
           }
 
           .bundle-tier-section {
