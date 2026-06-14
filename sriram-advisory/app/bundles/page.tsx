@@ -5,6 +5,7 @@ import CashfreeCheckout from "@/components/CashfreeCheckout";
 import {
   BUNDLE_DELIVERY_NOTE,
   BUNDLE_PAGE_SUBTITLE,
+  BUNDLE_ROLE_JUMPS,
   BUNDLE_SECTIONS,
 } from "@/lib/bundlesCatalog";
 
@@ -108,6 +109,70 @@ export default function BundlesPage() {
         </div>
       </section>
 
+      <section className="bundles-role-nav" style={{ padding: "22px 20px 10px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div
+            style={{
+              background: "linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%)",
+              border: "1px solid #d9e2ec",
+              borderRadius: 22,
+              padding: "18px 18px 16px",
+            }}
+          >
+            <div style={{ marginBottom: 14 }}>
+              <p
+                style={{
+                  fontSize: 12,
+                  fontWeight: 800,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#1a4fd6",
+                  margin: "0 0 8px",
+                }}
+              >
+                Jump to your role
+              </p>
+              <p style={{ fontSize: 14, color: "#51627f", lineHeight: 1.65, margin: 0 }}>
+                Use direct links from posts or jump straight to the bundle that matches your role.
+              </p>
+            </div>
+
+            <div
+              className="bundles-role-nav-grid"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+                gap: 10,
+              }}
+            >
+              {BUNDLE_ROLE_JUMPS.map((item) => (
+                <a
+                  key={item.slug}
+                  href={`#${item.slug}`}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                    minHeight: 46,
+                    padding: "10px 14px",
+                    borderRadius: 999,
+                    border: "1px solid #cfe0ff",
+                    background: "#ffffff",
+                    color: "#0f274f",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    textDecoration: "none",
+                  }}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {BUNDLE_SECTIONS.map((section) => (
         <section
           key={section.id}
@@ -159,11 +224,13 @@ export default function BundlesPage() {
               {section.bundles.map((bundle) => (
                 <article
                   key={bundle.name}
+                  id={bundle.slug}
                   className="bundle-card"
                   style={{
                     display: "flex",
                     flexDirection: "column",
                     height: "100%",
+                    scrollMarginTop: 104,
                     background: section.tint,
                     border: `1.5px solid ${section.borderColor}`,
                     borderRadius: 24,
@@ -179,6 +246,18 @@ export default function BundlesPage() {
                   }}
                 >
                   <div className="bundle-card-title-wrap" style={{ paddingRight: 0 }}>
+                    <p
+                      style={{
+                        fontSize: 11,
+                        fontWeight: 800,
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        color: section.accentColor,
+                        margin: "0 0 10px",
+                      }}
+                    >
+                      {bundle.role}
+                    </p>
                     <h3
                       className="bundle-card-title"
                       style={{
@@ -192,6 +271,21 @@ export default function BundlesPage() {
                     >
                       {bundle.name}
                     </h3>
+                    <a
+                      href={`#${bundle.slug}`}
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 6,
+                        fontSize: 12,
+                        fontWeight: 700,
+                        color: "#1a4fd6",
+                        textDecoration: "none",
+                        marginBottom: 12,
+                      }}
+                    >
+                      Direct link
+                    </a>
                   </div>
 
                   <div className="bundle-card-pricing" style={{ marginBottom: 14 }}>
@@ -207,17 +301,6 @@ export default function BundlesPage() {
                     >
                       {bundle.priceLabel}
                     </div>
-                    <div
-                      className="bundle-card-savings"
-                      style={{
-                        fontSize: 14,
-                        fontWeight: 800,
-                        color: "#15803d",
-                        marginTop: 8,
-                      }}
-                    >
-                      {bundle.savingsLabel}
-                    </div>
                   </div>
 
                   <p
@@ -230,6 +313,17 @@ export default function BundlesPage() {
                     }}
                   >
                     {bundle.description}
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 800,
+                      color: "#0f274f",
+                      lineHeight: 1.45,
+                      margin: "0 0 16px",
+                    }}
+                  >
+                    {bundle.outcome}
                   </p>
 
                   <div
@@ -407,6 +501,14 @@ export default function BundlesPage() {
             border-radius: 18px !important;
           }
 
+          .bundles-role-nav {
+            padding: 16px 16px 8px !important;
+          }
+
+          .bundles-role-nav-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          }
+
           .bundle-tier-section {
             padding: 26px 16px 18px !important;
           }
@@ -437,11 +539,6 @@ export default function BundlesPage() {
 
           .bundle-card-price {
             font-size: 30px !important;
-          }
-
-          .bundle-card-savings {
-            font-size: 13px !important;
-            margin-top: 6px !important;
           }
 
           .bundle-card-description {
