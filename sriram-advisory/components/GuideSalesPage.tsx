@@ -141,6 +141,38 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
 
           <div
             style={{
+              maxWidth: 360,
+              margin: "0 auto 28px",
+            }}
+          >
+            <CashfreeCheckout
+              productName={content.productName}
+              amount={499}
+              accentColor={theme.accent}
+              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              emailNote="Your guide will be delivered to this email."
+              buttonLabel="Get the Guide — ₹499"
+              buttonStyle={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "100%",
+                fontSize: 17,
+                fontWeight: 700,
+                padding: "16px 20px",
+                borderRadius: 10,
+                background: theme.accent,
+                color: "#ffffff",
+                border: "none",
+                cursor: "pointer",
+                letterSpacing: "0.01em",
+                boxShadow: "0 14px 32px rgba(10, 22, 40, 0.22)",
+              }}
+            />
+          </div>
+
+          <div
+            style={{
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "center",

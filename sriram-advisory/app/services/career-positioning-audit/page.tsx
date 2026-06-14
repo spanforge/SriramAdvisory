@@ -116,10 +116,36 @@ export default function CareerPositioningAuditPage() {
                   color: "rgba(255,237,213,0.82)",
                   maxWidth: 670,
                   marginBottom: 28,
+                  fontStyle: "italic",
                 }}
               >
                 This is not a resume writing service. It is a structured audit of how your career is positioned in the current market, delivered as a concise intelligence report.
               </p>
+              <div style={{ maxWidth: 360, marginBottom: 28 }}>
+                <CashfreeCheckout
+                  productName="Career Positioning Audit - Service"
+                  amount={999}
+                  accentColor="#b45309"
+                  deliveryNote="Use your best email. We will use it to coordinate your resume and LinkedIn submission after payment."
+                  emailNote="Your audit coordination and delivery updates will go to this email."
+                  footerNote="Secured by Cashfree Payments. One-time payment for a manual audit service."
+                  buttonLabel="Book the Audit — ₹999"
+                  buttonStyle={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    background: "#b45309",
+                    color: "#ffffff",
+                    fontWeight: 700,
+                    fontSize: 17,
+                    padding: "16px 20px",
+                    borderRadius: 10,
+                    border: "1px solid #f59e0b",
+                    boxShadow: "0 14px 32px rgba(28, 18, 5, 0.22)",
+                  }}
+                />
+              </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                 {[
                   "Resume + LinkedIn review",
@@ -168,7 +194,7 @@ export default function CareerPositioningAuditPage() {
                 deliveryNote="Use your best email. We will use it to coordinate your resume and LinkedIn submission after payment."
                 emailNote="Your audit coordination and delivery updates will go to this email."
                 footerNote="Secured by Cashfree Payments. One-time payment for a manual audit service."
-                buttonLabel="Reserve My Audit ->"
+                buttonLabel="Book the Audit — ₹999"
                 buttonStyle={{
                   background: "#b45309",
                   color: "#ffffff",
@@ -310,7 +336,7 @@ export default function CareerPositioningAuditPage() {
               deliveryNote="Use your best email. We will use it to coordinate your resume and LinkedIn submission after payment."
               emailNote="Your audit coordination and delivery updates will go to this email."
               footerNote="Secured by Cashfree Payments. One-time payment for a manual audit service."
-              buttonLabel="Start My Audit ->"
+              buttonLabel="Book the Audit — ₹999"
               buttonStyle={{
                 background: "#b45309",
                 color: "#ffffff",

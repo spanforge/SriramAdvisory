@@ -162,6 +162,30 @@ export default function StateOfQACareersIndia2026Page() {
               >
                 Built for people who want sharper career clarity in QA without recycled generic AI takes.
               </p>
+              <div style={{ maxWidth: 360, marginBottom: 28 }}>
+                <CashfreeCheckout
+                  productName="State of QA Careers India 2026 - Premium Report"
+                  amount={799}
+                  accentColor="#0f6cbd"
+                  deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+                  emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
+                  buttonLabel="Get the Report — ₹799"
+                  buttonStyle={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    background: "#0f6cbd",
+                    color: "#ffffff",
+                    fontWeight: 700,
+                    fontSize: 17,
+                    padding: "16px 20px",
+                    borderRadius: 10,
+                    border: "1px solid #60a5fa",
+                    boxShadow: "0 14px 32px rgba(7, 22, 44, 0.22)",
+                  }}
+                />
+              </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                 {[
                   "Premium paid report",
