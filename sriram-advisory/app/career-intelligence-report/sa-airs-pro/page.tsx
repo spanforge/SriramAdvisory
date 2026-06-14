@@ -76,17 +76,6 @@ export default function SaAirsProPage() {
     <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
 
-      <div style={{ background: "#f7f9fc", borderBottom: "1px solid rgba(26,79,214,0.1)", padding: "12px 24px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <Link
-            href="/career-intelligence-report"
-            style={{ fontSize: 13, color: "#1a4fd6", textDecoration: "none", fontWeight: 500 }}
-          >
-            {"<-"} All Reports
-          </Link>
-        </div>
-      </div>
-
       <section
         style={{
           background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 60%, #e6efff 100%)",

@@ -141,9 +141,10 @@ export default function CashfreeCheckout({
             zIndex: 9999,
             background: "rgba(10,22,40,0.75)",
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "center",
-            padding: 20,
+            padding: "20px 16px",
+            overflowY: "auto",
           }}
           onClick={(e) => {
             if (e.target === e.currentTarget) setOpen(false);
@@ -157,8 +158,11 @@ export default function CashfreeCheckout({
               padding: "36px 32px",
               maxWidth: 440,
               width: "100%",
+              maxHeight: "min(820px, calc(100vh - 40px))",
+              overflowY: "auto",
               boxShadow: "0 24px 60px rgba(0,0,0,0.3)",
               position: "relative",
+              margin: "auto 0",
             }}
             role="dialog"
             aria-modal="true"
@@ -361,6 +365,16 @@ export default function CashfreeCheckout({
             <p style={{ fontSize: 13, color: "#8898b8", marginTop: 16, lineHeight: 1.5, textAlign: "center" }}>
               {footerNote}
             </p>
+
+            <style>{`
+              @media (max-width: 640px) {
+                [role="dialog"][aria-labelledby="checkout-title"] {
+                  border-radius: 14px !important;
+                  padding: 24px 18px 20px !important;
+                  max-height: calc(100vh - 24px) !important;
+                }
+              }
+            `}</style>
           </div>
         </div>
       )}
