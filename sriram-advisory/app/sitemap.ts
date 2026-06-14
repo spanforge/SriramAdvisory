@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/career-intelligence-report`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/bundles`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/guides/it`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/guides/hr`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/guides/data-engineer-ai-survival-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
