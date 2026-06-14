@@ -26,6 +26,8 @@ const GUIDE_CHECKOUT_COPY = {
 export default function GuideSalesPage({ content }: GuideSalesPageProps) {
   const { theme } = content;
   const testimonials = content.testimonials ?? (content.testimonial ? [content.testimonial] : []);
+  const combinedHeroTitle = `${content.title} ${content.accentTitle}`;
+  const hasLongHeroTitle = combinedHeroTitle.length > 42;
 
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
@@ -34,8 +36,8 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
       <section
         style={{
           background: theme.heroGradient,
-          paddingTop: 100,
-          paddingBottom: 90,
+          paddingTop: hasLongHeroTitle ? 88 : 100,
+          paddingBottom: hasLongHeroTitle ? 72 : 90,
           textAlign: "center",
           position: "relative",
           overflow: "hidden",
@@ -65,7 +67,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               display: "flex",
               justifyContent: "center",
               gap: 10,
-              marginBottom: 28,
+              marginBottom: hasLongHeroTitle ? 22 : 28,
               flexWrap: "wrap",
             }}
           >
@@ -109,11 +111,11 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
 
           <h1
             style={{
-              fontSize: "clamp(34px, 5.5vw, 66px)",
+              fontSize: hasLongHeroTitle ? "clamp(30px, 4.6vw, 54px)" : "clamp(34px, 5.5vw, 66px)",
               fontWeight: 800,
               color: "#ffffff",
-              lineHeight: 1.08,
-              marginBottom: 22,
+              lineHeight: hasLongHeroTitle ? 1.02 : 1.08,
+              marginBottom: hasLongHeroTitle ? 16 : 22,
               letterSpacing: "-0.03em",
             }}
           >
@@ -126,9 +128,9 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
             style={{
               fontSize: "clamp(17px, 2.2vw, 21px)",
               color: theme.heroText,
-              lineHeight: 1.65,
-              maxWidth: 740,
-              margin: "0 auto 16px",
+              lineHeight: hasLongHeroTitle ? 1.55 : 1.65,
+              maxWidth: hasLongHeroTitle ? 700 : 740,
+              margin: hasLongHeroTitle ? "0 auto 12px" : "0 auto 16px",
             }}
           >
             {content.heroSummary}
@@ -139,7 +141,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               fontSize: 15,
               color: "rgba(255,255,255,0.65)",
               fontStyle: "italic",
-              marginBottom: 28,
+              marginBottom: hasLongHeroTitle ? 20 : 28,
             }}
           >
             {content.heroNote}
@@ -148,7 +150,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           <div
             style={{
               maxWidth: 360,
-              margin: "0 auto 28px",
+              margin: hasLongHeroTitle ? "0 auto 22px" : "0 auto 28px",
             }}
           >
             <CashfreeCheckout
@@ -183,7 +185,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               flexWrap: "wrap",
               justifyContent: "center",
               gap: 12,
-              marginBottom: 36,
+              marginBottom: hasLongHeroTitle ? 28 : 36,
             }}
           >
             {content.outcomeBullets.map((item) => (
