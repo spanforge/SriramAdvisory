@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import { load } from "@cashfreepayments/cashfree-js";
 
 interface Props {
@@ -30,9 +31,14 @@ export default function CashfreeCheckout({
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [mounted, setMounted] = useState(false);
 
   const firstInputRef = useRef<HTMLInputElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (open) {
@@ -133,7 +139,9 @@ export default function CashfreeCheckout({
         {buttonLabel}
       </button>
 
-      {open && (
+      {mounted &&
+        open &&
+        createPortal(
         <div
           style={{
             position: "fixed",
@@ -376,7 +384,8 @@ export default function CashfreeCheckout({
               }
             `}</style>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
