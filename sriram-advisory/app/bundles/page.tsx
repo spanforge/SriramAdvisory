@@ -271,21 +271,6 @@ export default function BundlesPage() {
                     >
                       {bundle.name}
                     </h3>
-                    <a
-                      href={`#${bundle.slug}`}
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: 6,
-                        fontSize: 12,
-                        fontWeight: 700,
-                        color: "#1a4fd6",
-                        textDecoration: "none",
-                        marginBottom: 12,
-                      }}
-                    >
-                      Direct link
-                    </a>
                   </div>
 
                   <div className="bundle-card-pricing" style={{ marginBottom: 14 }}>
@@ -300,6 +285,17 @@ export default function BundlesPage() {
                       }}
                     >
                       {bundle.priceLabel}
+                    </div>
+                    <div
+                      className="bundle-card-savings"
+                      style={{
+                        fontSize: 14,
+                        fontWeight: 800,
+                        color: "#15803d",
+                        marginTop: 8,
+                      }}
+                    >
+                      {bundle.savingsLabel}
                     </div>
                   </div>
 
@@ -539,6 +535,11 @@ export default function BundlesPage() {
 
           .bundle-card-price {
             font-size: 30px !important;
+          }
+
+          .bundle-card-savings {
+            font-size: 13px !important;
+            margin-top: 6px !important;
           }
 
           .bundle-card-description {

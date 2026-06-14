@@ -22,6 +22,7 @@ export type BundleCard = {
   name: string;
   price: number;
   priceLabel: string;
+  savingsLabel: string;
   description: string;
   outcome: string;
   items: BundleItem[];
@@ -74,6 +75,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Quality Modernization Bundle",
         price: 799,
         priceLabel: "Rs 799",
+        savingsLabel: "You save Rs 199",
         description: "Move from manual execution pressure to stronger automation and AI-era quality positioning.",
         outcome: "See where QA work is shifting and what to strengthen next.",
         items: [
@@ -87,6 +89,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Data Career Bundle",
         price: 799,
         priceLabel: "Rs 799",
+        savingsLabel: "You save Rs 199",
         description: "Get a cleaner view of analyst risk and the data engineering direction that matters now.",
         outcome: "Know which data path fits your next move before you waste effort.",
         items: [
@@ -100,6 +103,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Java Modernization Bundle",
         price: 799,
         priceLabel: "Rs 799",
+        savingsLabel: "You save Rs 199",
         description: "Bridge core Java experience into platform, DevOps, and higher-leverage AI-era work.",
         outcome: "Turn Java experience into a stronger modernization story.",
         items: [
@@ -113,6 +117,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Analyst to Product Bundle",
         price: 799,
         priceLabel: "Rs 799",
+        savingsLabel: "You save Rs 199",
         description: "Understand your BA risk now and the practical path toward AI product ownership.",
         outcome: "Know your risk and your transition path in one purchase.",
         items: [
@@ -126,6 +131,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Platform Engineering Bundle",
         price: 799,
         priceLabel: "Rs 799",
+        savingsLabel: "You save Rs 199",
         description: "Connect cloud infrastructure experience to the platform work AI teams increasingly need.",
         outcome: "See how to reposition from infra support into platform leverage.",
         items: [
@@ -139,6 +145,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The HR Transition Bundle",
         price: 799,
         priceLabel: "Rs 799",
+        savingsLabel: "You save Rs 199",
         description: "Pair HR market context with direct positioning guidance before your role gets squeezed.",
         outcome: "Get clarity on both role risk and how you present yourself next.",
         items: [
@@ -164,6 +171,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The QA Intelligence Bundle",
         price: 999,
         priceLabel: "Rs 999",
+        savingsLabel: "You save Rs 299",
         description: "Pair role-specific QA guidance with the market data behind the pressure you're feeling.",
         outcome: "Know what is changing in QA and what to do about it.",
         items: [
@@ -178,6 +186,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Java Intelligence Bundle",
         price: 999,
         priceLabel: "Rs 999",
+        savingsLabel: "You save Rs 299",
         description: "Combine Java-specific repositioning guidance with a broader read on India IT risk.",
         outcome: "Understand your role risk and the leverage points worth building.",
         items: [
@@ -191,6 +200,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Data Intelligence Bundle",
         price: 999,
         priceLabel: "Rs 999",
+        savingsLabel: "You save Rs 299",
         description: "See both your career path and where data roles sit in the broader AI risk landscape.",
         outcome: "Get direction for your next move with market context behind it.",
         items: [
@@ -204,6 +214,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The BA Strategy Bundle",
         price: 999,
         priceLabel: "Rs 999",
+        savingsLabel: "You save Rs 299",
         description: "Go beyond current BA execution and understand where AI is moving enterprise decision work.",
         outcome: "Get a sharper view of both present risk and future direction.",
         items: [
@@ -217,6 +228,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The BPO Transition Bundle",
         price: 999,
         priceLabel: "Rs 999",
+        savingsLabel: "You save Rs 299",
         description: "Use urgent risk clarity to make a practical next-step decision instead of staying stuck.",
         outcome: "See the pressure clearly and choose your next move faster.",
         items: [
@@ -230,6 +242,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The FDE Intelligence Bundle",
         price: 999,
         priceLabel: "Rs 999",
+        savingsLabel: "You save Rs 299",
         description: "Understand your transition path as client-facing engineering roles change under AI pressure.",
         outcome: "Know your risk. Know your next move. In one purchase.",
         items: [
@@ -254,6 +267,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The QA Deep Dive",
         price: 1299,
         priceLabel: "Rs 1,299",
+        savingsLabel: "You save Rs 497",
         description: "Get role risk, transition direction, automation modernization, and market context in one QA stack.",
         outcome: "Stop piecing QA answers together and get the full picture at once.",
         items: [
@@ -269,6 +283,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Data Deep Dive",
         price: 1299,
         priceLabel: "Rs 1,299",
+        savingsLabel: "You save Rs 497",
         description: "Bring analyst positioning, engineering transition, and India market risk into one data view.",
         outcome: "Get a more complete data-career decision before you commit time elsewhere.",
         items: [
@@ -283,6 +298,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Java Deep Dive",
         price: 1299,
         priceLabel: "Rs 1,299",
+        savingsLabel: "You save Rs 497",
         description: "Pull together role leverage, platform direction, and market risk so your Java next step is clearer.",
         outcome: "See the bigger Java transition picture before you make the wrong upgrade bet.",
         items: [
@@ -297,6 +313,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The BA Deep Dive",
         price: 1299,
         priceLabel: "Rs 1,299",
+        savingsLabel: "You save Rs 497",
         description: "Combine current-role risk, transition planning, and future AI product context in one BA stack.",
         outcome: "Get a sharper BA-to-product decision without buying three times.",
         items: [
@@ -322,6 +339,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Complete QA Stack",
         price: 1999,
         priceLabel: "Rs 1,999",
+        savingsLabel: "You save Rs 1,296",
         description: "Bring together role guidance, market intelligence, rankings, and personal positioning for QA.",
         outcome: "Get the complete QA intelligence stack in one decision.",
         items: [
@@ -338,6 +356,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Complete Data Stack",
         price: 1999,
         priceLabel: "Rs 1,999",
+        savingsLabel: "You save Rs 1,096",
         description: "Combine role guidance, market context, future scenarios, and a personal score in one data stack.",
         outcome: "Get the full data-career picture before your next commitment.",
         items: [
@@ -354,6 +373,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Complete Java Stack",
         price: 1999,
         priceLabel: "Rs 1,999",
+        savingsLabel: "You save Rs 1,296",
         description: "Bring leverage, platform direction, cloud context, market risk data, and a personal score together.",
         outcome: "Get a full Java modernization view instead of guessing piece by piece.",
         items: [
@@ -370,6 +390,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         name: "The Full SA Library",
         price: 3999,
         priceLabel: "Rs 3,999",
+        savingsLabel: "You save Rs 3,496",
         description: "Get every currently published SA guide and report in one purchase for the widest possible view.",
         outcome: "Buy once and access the complete published SA intelligence library.",
         items: [
