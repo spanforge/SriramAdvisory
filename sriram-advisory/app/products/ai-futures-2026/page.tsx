@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
+import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 
 export const metadata: Metadata = {
   title: "AI Futures 2026 | Sriram Advisory",
@@ -400,6 +401,15 @@ export default function AIFutures2026Page() {
           </div>
         </div>
       </section>
+
+      <MobileStickyCheckoutBar
+        productName="AI Futures 2026 - Premium Report"
+        amount={799}
+        accentColor="#0d9268"
+        deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+        emailNote="Your AI Futures 2026 report will be delivered to this email."
+        buttonLabel="Get the Report — ₹799"
+      />
 
       <Footer />
     </div>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
+import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 
 export const metadata: Metadata = {
   title: "Career Intelligence Report - SA-AIRS Pro | Sriram Advisory",
@@ -569,6 +570,13 @@ export default function SaAirsProPage() {
           </div>
         </div>
       </section>
+
+      <MobileStickyCheckoutBar
+        productName="Career Intelligence Report - Pro"
+        amount={999}
+        accentColor="#1a4fd6"
+        buttonLabel="Get My Score — ₹999"
+      />
 
       <Footer />
     </div>

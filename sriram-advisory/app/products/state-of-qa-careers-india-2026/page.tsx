@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
+import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 
 export const metadata: Metadata = {
   title: "State of QA Careers India 2026 | Sriram Advisory",
@@ -401,6 +402,15 @@ export default function StateOfQACareersIndia2026Page() {
           </div>
         </div>
       </section>
+
+      <MobileStickyCheckoutBar
+        productName="State of QA Careers India 2026 - Premium Report"
+        amount={799}
+        accentColor="#0f6cbd"
+        deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+        emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
+        buttonLabel="Get the Report — ₹799"
+      />
 
       <Footer />
     </div>

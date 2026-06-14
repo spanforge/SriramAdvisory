@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
+import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 
 export const metadata: Metadata = {
   title: "Why Expertise Becomes a Trap | Sriram Advisory",
@@ -379,6 +380,15 @@ export default function WhyExpertiseBecomesATrapPage() {
           </div>
         </div>
       </section>
+
+      <MobileStickyCheckoutBar
+        productName="Why Expertise Becomes a Trap - SA Intelligence Report"
+        amount={499}
+        accentColor="#7c3aed"
+        deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+        emailNote="Your Why Expertise Becomes a Trap report will be delivered to this email."
+        buttonLabel="Get the Report — ₹499"
+      />
 
       <Footer />
     </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
+import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 
 export const metadata: Metadata = {
   title: "AI Risk Rankings India 2026 | Sriram Advisory",
@@ -736,6 +737,15 @@ export default function AIRiskRankingsPage() {
           </p>
         </div>
       </section>
+
+      <MobileStickyCheckoutBar
+        productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
+        amount={799}
+        accentColor="#dc2626"
+        deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+        emailNote="Your report will be delivered to this email."
+        buttonLabel="Get the Report — ₹799"
+      />
 
       <Footer />
     </div>
