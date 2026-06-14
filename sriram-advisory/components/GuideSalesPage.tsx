@@ -17,6 +17,12 @@ type GuideSalesPageProps = {
   content: GuidePageContent;
 };
 
+const GUIDE_CHECKOUT_COPY = {
+  deliveryNote: "Manual email delivery usually lands within 30 minutes of payment.",
+  emailNote: "Your guide will be delivered to this email.",
+  buttonLabel: "Get the Guide - Rs 499",
+} as const;
+
 export default function GuideSalesPage({ content }: GuideSalesPageProps) {
   const { theme } = content;
   const testimonials = content.testimonials ?? (content.testimonial ? [content.testimonial] : []);
@@ -149,9 +155,9 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               productName={content.productName}
               amount={499}
               accentColor={theme.accent}
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
-              emailNote="Your guide will be delivered to this email."
-              buttonLabel="Get the Guide — ₹499"
+              deliveryNote={GUIDE_CHECKOUT_COPY.deliveryNote}
+              emailNote={GUIDE_CHECKOUT_COPY.emailNote}
+              buttonLabel={GUIDE_CHECKOUT_COPY.buttonLabel}
               buttonStyle={{
                 display: "flex",
                 alignItems: "center",
@@ -290,9 +296,9 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               productName={content.productName}
               amount={499}
               accentColor={theme.accent}
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
-              emailNote="Your guide will be delivered to this email."
-              buttonLabel="Continue to secure payment ->"
+              deliveryNote={GUIDE_CHECKOUT_COPY.deliveryNote}
+              emailNote={GUIDE_CHECKOUT_COPY.emailNote}
+              buttonLabel={GUIDE_CHECKOUT_COPY.buttonLabel}
               buttonStyle={{
                 fontSize: 17,
                 fontWeight: 700,
@@ -904,9 +910,9 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               productName={content.productName}
               amount={499}
               accentColor={theme.accent}
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
-              emailNote="Your guide will be delivered to this email."
-              buttonLabel="Buy now ->"
+              deliveryNote={GUIDE_CHECKOUT_COPY.deliveryNote}
+              emailNote={GUIDE_CHECKOUT_COPY.emailNote}
+              buttonLabel={GUIDE_CHECKOUT_COPY.buttonLabel}
               buttonStyle={{
                 fontSize: 16,
                 fontWeight: 700,
