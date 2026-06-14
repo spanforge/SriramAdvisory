@@ -35,6 +35,9 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
       <Navbar />
 
       <section
+        className={`guide-hero${hasLongHeroTitle ? " guide-hero-long" : ""}${
+          hasVeryLongHeroTitle ? " guide-hero-very-long" : ""
+        }`}
         style={{
           background: theme.heroGradient,
           paddingTop: hasVeryLongHeroTitle ? 72 : hasLongHeroTitle ? 82 : 100,
@@ -64,6 +67,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           }}
         >
           <div
+            className="guide-hero-badges"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -73,6 +77,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
             }}
           >
             <span
+              className="guide-hero-badge guide-hero-badge-score"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -91,6 +96,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               SA-AIRS Score: {content.score} - {content.riskLabel}
             </span>
             <span
+              className="guide-hero-badge guide-hero-badge-edition"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -111,6 +117,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </div>
 
           <h1
+            className="guide-hero-title"
             style={{
               fontSize: hasVeryLongHeroTitle
                 ? "clamp(24px, 4vw, 46px)"
@@ -130,6 +137,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </h1>
 
           <p
+            className="guide-hero-summary"
             style={{
               fontSize: hasVeryLongHeroTitle
                 ? "clamp(14px, 1.9vw, 18px)"
@@ -146,6 +154,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </p>
 
           <p
+            className="guide-hero-note"
             style={{
               fontSize: hasVeryLongHeroTitle ? 14 : 15,
               color: "rgba(255,255,255,0.65)",
@@ -157,6 +166,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </p>
 
           <div
+            className="guide-hero-primary-cta"
             style={{
               maxWidth: 360,
               margin: hasVeryLongHeroTitle ? "0 auto 18px" : hasLongHeroTitle ? "0 auto 20px" : "0 auto 28px",
@@ -189,6 +199,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </div>
 
           <div
+            className="guide-hero-outcomes"
             style={{
               display: "flex",
               flexWrap: "wrap",
@@ -199,6 +210,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           >
             {content.outcomeBullets.map((item) => (
               <div
+                className="guide-hero-outcome-chip"
                 key={item}
                 style={{
                   background: "rgba(255,255,255,0.1)",
@@ -336,6 +348,87 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </div>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .guide-hero {
+            padding-top: 44px !important;
+            padding-bottom: 40px !important;
+          }
+
+          .guide-hero-badges {
+            gap: 8px !important;
+            margin-bottom: 14px !important;
+          }
+
+          .guide-hero-badge {
+            font-size: 10px !important;
+            line-height: 1.35 !important;
+            padding: 6px 12px !important;
+            max-width: 100% !important;
+            justify-content: center !important;
+          }
+
+          .guide-hero-title {
+            font-size: 42px !important;
+            line-height: 0.98 !important;
+            margin-bottom: 10px !important;
+          }
+
+          .guide-hero-summary {
+            font-size: 13px !important;
+            line-height: 1.42 !important;
+            margin: 0 auto 8px !important;
+            max-width: 92% !important;
+          }
+
+          .guide-hero-note {
+            font-size: 12px !important;
+            line-height: 1.35 !important;
+            margin-bottom: 12px !important;
+          }
+
+          .guide-hero-primary-cta {
+            max-width: 320px !important;
+            margin: 0 auto 14px !important;
+          }
+
+          .guide-hero-primary-cta button {
+            font-size: 15px !important;
+            padding: 13px 16px !important;
+          }
+
+          .guide-hero-outcomes {
+            gap: 8px !important;
+            margin-bottom: 18px !important;
+          }
+
+          .guide-hero-outcome-chip {
+            font-size: 11px !important;
+            line-height: 1.3 !important;
+            padding: 7px 12px !important;
+          }
+
+          .guide-hero.guide-hero-long .guide-hero-title {
+            font-size: 34px !important;
+          }
+
+          .guide-hero.guide-hero-very-long .guide-hero-title {
+            font-size: 30px !important;
+          }
+
+          .guide-hero.guide-hero-long .guide-hero-summary,
+          .guide-hero.guide-hero-very-long .guide-hero-summary {
+            font-size: 12px !important;
+            line-height: 1.36 !important;
+          }
+
+          .guide-hero.guide-hero-long .guide-hero-note,
+          .guide-hero.guide-hero-very-long .guide-hero-note {
+            display: none !important;
+          }
+        }
+      `}</style>
 
       {testimonials.length > 0 && (
         <section
