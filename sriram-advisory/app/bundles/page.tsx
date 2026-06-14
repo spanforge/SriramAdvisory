@@ -129,7 +129,7 @@ export default function BundlesPage() {
               {[
                 "Mobile-first bundle checkout flow",
                 "Every card shows bundle price and savings",
-                "Recommended bundles are clearly badged",
+                "Clean aligned bundle cards across every tier",
               ].map((item) => (
                 <div
                   key={item}
@@ -204,6 +204,9 @@ export default function BundlesPage() {
                   key={bundle.name}
                   className="bundle-card"
                   style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%",
                     background: section.tint,
                     border: `1.5px solid ${section.borderColor}`,
                     borderRadius: 24,
@@ -218,27 +221,7 @@ export default function BundlesPage() {
                     overflow: "hidden",
                   }}
                 >
-                  {bundle.badge && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: 14,
-                        right: 14,
-                        background: bundle.badge === "Best Value" ? "#b45309" : "#1a4fd6",
-                        color: "#ffffff",
-                        fontSize: 11,
-                        fontWeight: 800,
-                        letterSpacing: "0.08em",
-                        textTransform: "uppercase",
-                        padding: "6px 10px",
-                        borderRadius: 999,
-                      }}
-                    >
-                      {bundle.badge}
-                    </div>
-                  )}
-
-                  <div className="bundle-card-title-wrap" style={{ paddingRight: bundle.badge ? 88 : 0 }}>
+                  <div className="bundle-card-title-wrap" style={{ paddingRight: 0 }}>
                     <h3
                       className="bundle-card-title"
                       style={{
@@ -295,6 +278,7 @@ export default function BundlesPage() {
                   <div
                     className="bundle-card-items"
                     style={{
+                      flex: 1,
                       background: "rgba(255,255,255,0.68)",
                       border: "1px solid rgba(10,22,40,0.08)",
                       borderRadius: 18,
@@ -323,11 +307,11 @@ export default function BundlesPage() {
                             display: "flex",
                             justifyContent: "space-between",
                             gap: 12,
-                            alignItems: "flex-start",
+                            alignItems: "baseline",
                             fontSize: 13,
                           }}
                         >
-                          <span style={{ color: "#1e293b", lineHeight: 1.55 }}>{item.name}</span>
+                          <span style={{ color: "#1e293b", lineHeight: 1.55, flex: 1, minWidth: 0 }}>{item.name}</span>
                           <span
                             style={{
                               color: "#475569",
@@ -357,7 +341,7 @@ export default function BundlesPage() {
                     </p>
                   )}
 
-                  <div className="bundle-card-cta" style={{ marginBottom: 10 }}>
+                  <div className="bundle-card-cta" style={{ marginTop: "auto", marginBottom: 10 }}>
                     <CashfreeCheckout
                       productName={bundle.name}
                       amount={bundle.price}
@@ -525,6 +509,7 @@ export default function BundlesPage() {
           }
 
           .bundle-card-item-row {
+            flex-wrap: wrap !important;
             gap: 10px !important;
           }
 

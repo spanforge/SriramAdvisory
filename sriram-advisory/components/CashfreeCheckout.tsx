@@ -143,6 +143,7 @@ export default function CashfreeCheckout({
         open &&
         createPortal(
         <div
+          className="checkout-overlay"
           style={{
             position: "fixed",
             inset: 0,
@@ -160,6 +161,7 @@ export default function CashfreeCheckout({
         >
           <div
             ref={dialogRef}
+            className="checkout-dialog"
             style={{
               background: "#fff",
               borderRadius: 16,
@@ -219,7 +221,7 @@ export default function CashfreeCheckout({
               </p>
             </div>
 
-            <form onSubmit={handlePay} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            <form onSubmit={handlePay} className="checkout-form" style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <div>
                 <label
                   htmlFor="checkout-name"
@@ -350,6 +352,7 @@ export default function CashfreeCheckout({
 
               <button
                 type="submit"
+                className="checkout-submit"
                 disabled={loading}
                 style={{
                   background: accentColor,
@@ -376,10 +379,27 @@ export default function CashfreeCheckout({
 
             <style>{`
               @media (max-width: 640px) {
+                .checkout-overlay {
+                  padding: 12px !important;
+                  align-items: flex-end !important;
+                }
+
                 [role="dialog"][aria-labelledby="checkout-title"] {
-                  border-radius: 14px !important;
-                  padding: 24px 18px 20px !important;
-                  max-height: calc(100vh - 24px) !important;
+                  border-radius: 18px 18px 0 0 !important;
+                  padding: 24px 18px 18px !important;
+                  max-height: calc(100vh - 12px) !important;
+                  max-width: none !important;
+                  margin: 0 !important;
+                }
+
+                .checkout-form {
+                  gap: 12px !important;
+                }
+
+                .checkout-submit {
+                  width: 100% !important;
+                  min-height: 52px !important;
+                  font-size: 15px !important;
                 }
               }
             `}</style>
