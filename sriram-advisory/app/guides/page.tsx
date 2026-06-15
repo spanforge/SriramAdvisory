@@ -72,7 +72,7 @@ export default function GuidesPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Buyer-facing guides for AI-era career decisions
+            Guides for AI-era career decisions
           </h1>
           <p
             style={{
@@ -83,7 +83,7 @@ export default function GuidesPage() {
               margin: "0 auto 24px",
             }}
           >
-            Every guide is visible here. Pick the role that matches your current market pressure, review the price, and go straight to checkout without navigating through extra collections.
+            Pick the role that matches your current market pressure, review the price, and go straight to checkout without navigating through extra collections.
           </p>
         </div>
       </section>
