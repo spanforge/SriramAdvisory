@@ -457,8 +457,7 @@ export default function BundlesPage() {
             </h2>
             <p style={{ fontSize: 15, color: "rgba(219,234,254,0.82)", lineHeight: 1.75, margin: 0 }}>
               All bundle contents are delivered manually by email after payment confirmation. Guides and
-              reports usually land within 30 minutes. Services inside a bundle keep their standard delivery
-              terms where specified on the card.
+              reports usually land within 30 minutes.
             </p>
           </div>
         </div>
