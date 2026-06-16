@@ -42,7 +42,7 @@ export default function TermsPage() {
               heading: "2. Services Offered",
               body: `Sriram Advisory offers the following products and services:
 • AI Career Risk Score (₹999) — a personalised 1-page SA-AIRS™ assessment of your specific role, scored by Sriram and delivered within 24 hours
-• Pro Edition (₹1,999) — a comprehensive intelligence report including full SA-AIRS™ methodology, industry deep dives, salary outlook, and two quarterly updates
+• Career Intelligence Report - SA-AIRS Pro (₹999) — a comprehensive intelligence report including full SA-AIRS™ methodology, industry deep dives, salary outlook, and quarterly update coverage
 • Clarity Call (₹3,999 – ₹7,499) — a 30-minute 1:1 strategy session with Sriram, including a full SA-AIRS™ audit and session notes
 • Domain Deep Dive Program (₹9,999 – ₹24,999+) — a custom 90-day transition program from your current role to its AI-era equivalent`,
             },
@@ -55,7 +55,7 @@ The accuracy of the assessment depends on the accuracy and completeness of the i
             {
               heading: "4. Delivery",
               body: `• AI Career Risk Score: Delivered by email within 24 hours of confirmed payment (Indian business days)
-• Pro Edition: Delivered by email within 48 hours of confirmed payment
+• Career Intelligence Report - SA-AIRS Pro: Delivered by email within 48 hours of confirmed payment
 • Clarity Call: Session scheduled within 5 business days of payment; session notes delivered within 24 hours after the call
 • Domain Deep Dive Program: Onboarding plan delivered within 48 hours; weekly check-ins conducted as agreed
 

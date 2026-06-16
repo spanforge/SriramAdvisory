@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const FEATURES = [
   { tier: "AI Career Risk Score", price: "\u20b9999", featured: true, desc: "Personalised 1-page assessment of your specific role.", items: ["Role-specific AI exposure analysis", "SA-AIRS\u2122 5-dimension score", "Risk tier placement", "Top 3 priority actions", "Delivered within 24 hours"] },
-  { tier: "Pro Edition", price: "\u20b91,999", desc: "Complete intelligence report + quarterly updates.", items: ["Everything in Risk Score", "Full SA-AIRS\u2122 methodology explained", "Visual data & charts", "7 industry deep dives", "Salary outlook scenarios", "AI tools by profession", "90-day roadmap (detailed)", "2 quarterly updates included"] },
+  { tier: "Pro Edition", price: "\u20b9999", desc: "Complete intelligence report + quarterly updates.", items: ["Everything in Risk Score", "Full SA-AIRS\u2122 methodology explained", "Visual data & charts", "7 industry deep dives", "Salary outlook scenarios", "AI tools by profession", "90-day roadmap (detailed)", "2 quarterly updates included"] },
 ];
 
 export default function ReportPage() {
@@ -230,7 +230,7 @@ export default function ReportPage() {
                   and 4 case studies. Sourced from NASSCOM, NITI Aayog, WEF, EY India, and McKinsey 2025–26.
                 </p>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 24, flexWrap: "wrap" }}>
-                  <span style={{ fontSize: 36, fontWeight: 800, color: "#dc2626" }}>₹499</span>
+                  <span style={{ fontSize: 36, fontWeight: 800, color: "#dc2626" }}>₹999</span>
                   <span style={{ fontSize: 13, color: "#8898b8" }}>One-time · Instant digital delivery</span>
                 </div>
                 <Link
@@ -242,7 +242,7 @@ export default function ReportPage() {
                     borderRadius: 10, textDecoration: "none", letterSpacing: "0.01em",
                   }}
                 >
-                  View Report — ₹499 →
+                  View Report — ₹999 →
                 </Link>
               </div>
               {/* Right — bullets */}

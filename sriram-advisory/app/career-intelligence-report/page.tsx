@@ -67,7 +67,7 @@ const REPORTS = [
     subtitle: "Top 25 high-risk careers. 4 risk bands. 100+ pages.",
     blurb:
       "A market-intelligence report for professionals who want to understand which careers are under the most AI pressure in India, why, and what adaptation paths look like.",
-    price: "Rs 499",
+    price: "Rs 999",
     href: "/products/ai-risk-rankings-india-2026",
     accentColor: "#dc2626",
     bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",

@@ -62,8 +62,8 @@ If you believe the report was not delivered, was materially incomplete, or did n
 Refund requests submitted more than 7 days after delivery will not be processed.`,
             },
             {
-              heading: "2. Pro Edition (₹1,999)",
-              body: `If your Pro Edition report was delivered and is complete, it is considered delivered in full. If you believe the report was materially incomplete or did not reflect your submission, email us within 7 days of delivery for a re-do or full refund.`,
+              heading: "2. Career Intelligence Report - SA-AIRS Pro (₹999)",
+              body: `If your Career Intelligence Report - SA-AIRS Pro was delivered and is complete, it is considered delivered in full. If you believe the report was materially incomplete or did not reflect your submission, email us within 7 days of delivery for a re-do or full refund.`,
             },
             {
               heading: "3. Clarity Call (₹3,999 – ₹7,499)",

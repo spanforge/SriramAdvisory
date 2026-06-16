@@ -18,7 +18,7 @@ const PRODUCTS = [
     accentColor: "#dc2626",
     tag: "v7.0 - India Labour Market Intelligence",
     title: "AI Risk Rankings India 2026",
-    price: "Rs 499",
+    price: "Rs 999",
     strikePrice: null,
     priceNote: "Top 25 High-Risk Careers Report",
     tagline: "25 ranked careers. 4 risk bands. 100+ pages.",
@@ -32,7 +32,7 @@ const PRODUCTS = [
       "Career transition paths mapped for each high-risk occupation",
       "4 Indian case studies with illustrative transition profiles",
     ],
-    cta: "Get the Report - Rs 499 ->",
+    cta: "Get the Report - Rs 999 ->",
     href: "/products/ai-risk-rankings-india-2026",
     external: false,
     featured: false,
@@ -310,7 +310,7 @@ export default function ProductsPage() {
                     <br />
                     <s style={{ fontWeight: 400, fontSize: 13, opacity: 0.7 }}>Rs 999</s> Rs 799
                   </th>
-                  <th style={{ padding: "14px 18px", textAlign: "center", fontWeight: 600 }}>AI Risk Rankings<br />Rs 499</th>
+                  <th style={{ padding: "14px 18px", textAlign: "center", fontWeight: 600 }}>AI Risk Rankings<br />Rs 999</th>
                   <th style={{ padding: "14px 18px", textAlign: "center", borderRadius: "0 10px 0 0", fontWeight: 600 }}>
                     AIRS Score
                     <br />

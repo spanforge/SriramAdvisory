@@ -7,7 +7,7 @@ import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 export const metadata: Metadata = {
   title: "AI Risk Rankings India 2026 | Sriram Advisory",
   description:
-    "India-first AI career risk rankings report covering the top 25 high-risk careers, 4 exposure bands, adaptation paths, and 100+ pages of research-backed market intelligence. Rs 799.",
+    "India-first AI career risk rankings report covering the top 25 high-risk careers, 4 exposure bands, adaptation paths, and 100+ pages of research-backed market intelligence. Rs 999.",
 };
 
 const TOP5_PREVIEW = [
@@ -230,11 +230,11 @@ export default function AIRiskRankingsPage() {
           <div style={{ maxWidth: 360, margin: "0 auto 28px" }}>
             <CashfreeCheckout
               productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
-              amount={799}
+              amount={999}
               accentColor="#dc2626"
               deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report — ₹799"
+              buttonLabel="Get the Report — ₹999"
               buttonStyle={{
                 display: "flex",
                 alignItems: "center",
@@ -296,7 +296,7 @@ export default function AIRiskRankingsPage() {
           >
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 14 }}>
               <span style={{ fontSize: 48, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>
-                Rs 799
+                Rs 999
               </span>
             </div>
             <span
@@ -317,11 +317,11 @@ export default function AIRiskRankingsPage() {
             </p>
             <CashfreeCheckout
               productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
-              amount={799}
+              amount={999}
               accentColor="#dc2626"
               deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report — ₹799"
+              buttonLabel="Get the Report — ₹999"
               buttonStyle={{
                 background: "#dc2626",
                 color: "#ffffff",
@@ -689,7 +689,7 @@ export default function AIRiskRankingsPage() {
           <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 4 }}>
               <span style={{ fontSize: 44, fontWeight: 900, color: "#ffffff", letterSpacing: "-0.03em" }}>
-                Rs 799
+                Rs 999
               </span>
             </div>
             <span
@@ -706,11 +706,11 @@ export default function AIRiskRankingsPage() {
             </span>
             <CashfreeCheckout
               productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
-              amount={799}
+              amount={999}
               accentColor="#dc2626"
               deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report — ₹799"
+              buttonLabel="Get the Report — ₹999"
               buttonStyle={{
                 background: "#dc2626",
                 color: "#ffffff",
@@ -740,11 +740,11 @@ export default function AIRiskRankingsPage() {
 
       <MobileStickyCheckoutBar
         productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
-        amount={799}
+        amount={999}
         accentColor="#dc2626"
         deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
         emailNote="Your report will be delivered to this email."
-        buttonLabel="Get the Report — ₹799"
+        buttonLabel="Get the Report — ₹999"
       />
 
       <Footer />

@@ -24,7 +24,7 @@ const PRODUCTS = [
   },
   {
     tier: "Pro Edition",
-    price: "₹1,999",
+    price: "₹999",
     tag: "Full intelligence",
     desc: "Complete intelligence report + quarterly updates for serious professionals.",
     items: [
@@ -38,7 +38,7 @@ const PRODUCTS = [
       "Resume & LinkedIn positioning guide",
       "Two quarterly updates included",
     ],
-    cta: "Get Pro Edition — ₹1,999",
+    cta: "Get Pro Edition — ₹999",
     href: "https://rzp.io/sriramadvisory",
     external: true,
     highlight: false,
@@ -378,7 +378,7 @@ export default function GetStartedPage() {
           {[
             {
               q: "What does the Pro Edition add over the Risk Score?",
-              a: "The Pro Edition (₹1,999) includes everything in the Risk Score plus detailed industry deep dives across 7 sectors, salary outlook scenarios, AI tools curated by profession, a dedicated Top 10% Ladder™ section, a 90-day roadmap, LinkedIn positioning guide, and two quarterly updates.",
+              a: "The Pro Edition (₹999) includes everything in the Risk Score plus detailed industry deep dives across 7 sectors, salary outlook scenarios, AI tools curated by profession, a dedicated Top 10% Ladder™ section, a 90-day roadmap, LinkedIn positioning guide, and two quarterly updates.",
             },
             {
               q: "How does the Clarity Call work?",
