@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/guides/hr-recruiter-survival-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/qa-engineer-survival-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/bpo-career-survival-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/guides/python-developer-ai-leverage-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/java-developer-ai-leverage-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/selenium-engineer-upgrade-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/data-analyst-career-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

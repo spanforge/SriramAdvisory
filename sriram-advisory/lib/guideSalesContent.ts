@@ -1188,6 +1188,127 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       finalGradient: "linear-gradient(135deg, #0a0a2e 0%, #1e1b4b 100%)",
     },
   },
+  "python-developer-ai-leverage-guide-2026": {
+    productName: "Python Developer AI Leverage Guide 2026",
+    title: "Python Developer",
+    accentTitle: "AI Leverage Guide 2026",
+    score: "7.0 / 10",
+    riskLabel: "Active Risk",
+    editionLabel: "India 2026 Edition",
+    heroSummary:
+      "Understand which parts of Python development are getting cheaper, where Python still compounds in AI-era teams, and how to reposition beyond script-heavy execution toward automation judgment, backend ownership, data workflow reliability, and AI-assisted engineering leverage.",
+    heroNote:
+      "Python did not become less valuable. Low-context Python execution did.",
+    outcomeBullets: [
+      "A 60-day direction toward higher-leverage Python work",
+      "Clearer positioning around automation, systems judgment, and AI tooling",
+      "India-first guidance for GCC, product, data, and AI-adjacent teams",
+    ],
+    promiseBullets: [
+      "Decode what is actually at risk in Python developer careers",
+      "Move beyond script delivery into stronger engineering and automation ownership",
+      "Use AI to increase leverage while building proof that hiring teams can trust",
+    ],
+    whatYouGet: [
+      {
+        title: "Role-risk clarity for Python work",
+        desc: "A direct explanation of why routine scripting, glue code, and simple CRUD work are easier to compress, and where Python judgment still matters.",
+      },
+      {
+        title: "60-day leverage direction",
+        desc: "A practical next-step path for building more visible proof around automation quality, backend reliability, data workflow thinking, and AI-assisted delivery.",
+      },
+      {
+        title: "AI-era Python positioning",
+        desc: "Guidance on how to frame Python experience around tool use, workflow design, API integration, evaluation thinking, and production usefulness.",
+      },
+      {
+        title: "Automation and systems lens",
+        desc: "A clearer way to move from one-off scripts toward maintainable automation, observability, error handling, and business-aware engineering outcomes.",
+      },
+      {
+        title: "Portfolio and proof direction",
+        desc: "Examples of stronger proof assets: automation case studies, AI-assisted refactors, data pipeline reliability notes, and backend design decisions.",
+      },
+      {
+        title: "Resume, LinkedIn, and interview signal",
+        desc: "Positioning approaches that help your profile read as higher-leverage Python engineering, not only fast implementation or tool familiarity.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "Why basic Python scripting and repeatable implementation are under pressure",
+          "What Python judgment is worth more now across automation, backend, data, and AI workflows",
+          "How to use AI tools without sounding like someone who only prompts code into existence",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "A 60-day leverage direction",
+          "A stronger story for GCC, product, data, and AI-adjacent roles",
+          "A clearer sense of what proof to build next",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A beginner Python tutorial",
+          "A full machine learning or data science curriculum",
+          "Generic advice to just learn AI tools",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "Script-Heavy Execution",
+        desc: "Your profile is too tightly tied to quick scripts, simple automation, and repeatable implementation that AI can increasingly accelerate.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "AI-Augmented Python Delivery",
+        desc: "You start using AI to increase output while signaling better review judgment, workflow design, test thinking, and maintainability.",
+        color: "#0f766e",
+      },
+      {
+        stage: "Stage 3",
+        title: "Higher-Leverage Python Positioning",
+        desc: "You are seen as someone who owns automation outcomes, backend trade-offs, data reliability, and AI-era engineering decisions.",
+        color: "#0f4c81",
+      },
+    ],
+    forYou: [
+      "You are a Python developer in India and routine scripts, APIs, or automation tasks feel easier to generate with AI.",
+      "You want to use AI to increase leverage without abandoning Python or pretending to become an AI researcher overnight.",
+      "You are targeting stronger GCC, product, data, automation, or AI-adjacent engineering roles.",
+      "You need a practical 60-day direction instead of vague advice to just learn more tools.",
+      "You want stronger resume, LinkedIn, portfolio, and interview positioning for Python work in an AI-shaped market.",
+    ],
+    notForYou: [
+      "You want a beginner Python programming course.",
+      "You want a deep ML research, data science, or model-building curriculum.",
+      "You already operate as a senior AI platform, ML infrastructure, or staff-level Python engineering leader and mainly need specialized implementation depth.",
+    ],
+    ctaTitle: "Move up the Python value chain.",
+    ctaBody:
+      "Use this guide to turn Python experience into stronger AI-era positioning, clearer proof, and a more durable market story.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#0f766e",
+      accentSoft: "#99f6e4",
+      accentStrong: "#0f4c81",
+      heroGradient: "linear-gradient(135deg, #051916 0%, #0b3b36 52%, #0f766e 100%)",
+      heroText: "rgba(214,255,244,0.86)",
+      sectionTint: "#ecfdf5",
+      sectionBorder: "#99f6e4",
+      panelTint: "#f7fffb",
+      finalGradient: "linear-gradient(160deg, #051916 0%, #0b3b36 60%, #0f4c81 100%)",
+    },
+  },
   "java-developer-ai-leverage-guide-2026": {
     productName: "Java Developer AI Leverage Guide 2026",
     title: "Java Developer",

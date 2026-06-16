@@ -285,6 +285,22 @@ export const GUIDES: GuideItem[] = [
   },
   {
     badge: "New",
+    title: "Python Developer AI Leverage Guide 2026",
+    subtitle: "7.0/10 risk score. 60-day direction. Higher-leverage Python path.",
+    blurb:
+      "For Python developers who want to use AI to move beyond script-heavy execution and build stronger positioning around automation, backend judgment, data workflows, and AI-assisted engineering leverage.",
+    price: "Rs 499",
+    href: "/guides/python-developer-ai-leverage-guide-2026",
+    accentColor: "#0f766e",
+    bgGradient: "linear-gradient(135deg, #f2fffb 0%, #d8f5ec 100%)",
+    borderColor: "#99f6e4",
+    role: "Python Developer",
+    timeline: "60-day direction",
+    riskScore: "Risk score 7.0/10",
+    focus: "AI leverage",
+  },
+  {
+    badge: "New",
     title: "Java Developer AI Leverage Guide 2026",
     subtitle: "7.5/10 risk score. 60-day direction. Higher-leverage Java path.",
     blurb:

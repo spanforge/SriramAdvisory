@@ -31,14 +31,9 @@ export default function CashfreeCheckout({
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [mounted, setMounted] = useState(false);
 
   const firstInputRef = useRef<HTMLInputElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     if (open) {
@@ -139,7 +134,7 @@ export default function CashfreeCheckout({
         {buttonLabel}
       </button>
 
-      {mounted &&
+      {typeof document !== "undefined" &&
         open &&
         createPortal(
         <div
