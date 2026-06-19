@@ -1,6 +1,24 @@
 import Link from "next/link";
 import { NAV_ITEMS } from "@/lib/siteCatalog";
 
+const SOCIAL_LINKS = [
+  {
+    label: "LinkedIn Newsletter",
+    href: "https://www.linkedin.com/newsletters/sriram-advisory-7461301611261284352/",
+    color: "#0a66c2",
+  },
+  {
+    label: "Medium",
+    href: "https://medium.com/@sriramadvisory",
+    color: "#0a1628",
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/sriramadvisory/",
+    color: "#1877f2",
+  },
+];
+
 export default function Footer() {
   return (
     <footer
@@ -132,22 +150,35 @@ export default function Footer() {
           <p style={{ fontSize: 13, color: "rgba(10,22,40,0.6)", margin: 0 }}>
             © {new Date().getFullYear()} Sriram Advisory. Educational and analytical commentary only.
           </p>
-          <a
-            href="https://www.linkedin.com/newsletters/sriram-advisory-7461301611261284352/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <div
+            aria-label="Social media links"
             style={{
-              display: "inline-flex",
+              display: "flex",
               alignItems: "center",
-              gap: 6,
-              fontSize: 13,
-              color: "#0a66c2",
-              textDecoration: "none",
-              fontWeight: 500,
+              flexWrap: "wrap",
+              gap: 14,
             }}
           >
-            LinkedIn Newsletter
-          </a>
+            {SOCIAL_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                  fontSize: 13,
+                  color: link.color,
+                  textDecoration: "none",
+                  fontWeight: 500,
+                }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
