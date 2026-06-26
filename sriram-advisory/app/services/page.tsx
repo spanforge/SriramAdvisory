@@ -10,6 +10,12 @@ export const metadata: Metadata = {
     "Structured advisory services for professionals who want diagnostic clarity, better market signal, and sharper positioning.",
 };
 
+const AUDIT_OUTCOMES = [
+  "A positioning score that makes the strongest and weakest signals visible.",
+  "The three highest-leverage changes for your resume and LinkedIn profile.",
+  "Suggested headline and professional-summary rewrites you can act on immediately.",
+];
+
 export default function ServicesPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
@@ -161,6 +167,50 @@ export default function ServicesPage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section style={{ padding: "84px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <div style={{ maxWidth: 720, marginBottom: 30 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#b45309" }}>
+              Career Positioning Audit
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", margin: "14px 0" }}>
+              Leave with a sharper market story, not a generic review.
+            </h2>
+            <p style={{ margin: 0, fontSize: 16, color: "#4a5a7a", lineHeight: 1.8 }}>
+              The audit is built to show how your profile reads today, what it fails to signal, and what to change first.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18, marginBottom: 22 }}>
+            {AUDIT_OUTCOMES.map((outcome) => (
+              <div key={outcome} style={{ background: "#ffffff", border: "1px solid #fed7aa", borderRadius: 8, padding: "20px", fontSize: 15, color: "#40526b", lineHeight: 1.7 }}>
+                {outcome}
+              </div>
+            ))}
+          </div>
+
+          <div style={{ background: "#ffffff", border: "1px solid #fed7aa", borderRadius: 8, padding: "24px" }}>
+            <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "#b45309", marginBottom: 16 }}>
+              Illustrative Before / After
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 22 }}>
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: "#b91c1c", marginBottom: 8 }}>Before</div>
+                <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#5a6a8a" }}>
+                  &quot;Experienced QA professional seeking a challenging opportunity.&quot;
+                </p>
+              </div>
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: "#0d9268", marginBottom: 8 }}>After</div>
+                <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#40526b" }}>
+                  &quot;QA professional focused on automation, risk-based testing, and quality ownership for AI-shaped delivery teams.&quot;
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

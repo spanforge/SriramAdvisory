@@ -35,6 +35,12 @@ const DIFFERENTIATORS = [
   "Practical enough to use. Reports, guides, templates, and audits are designed for real decisions.",
 ];
 
+const FOUNDER_FACTS = [
+  "AI Champion at Wipro",
+  "100+ guide orders in the first 28 days",
+  "SA-AIRS built from direct observation of how AI changes Indian IT work",
+];
+
 export default function AboutPage() {
   return (
     <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
@@ -54,14 +60,14 @@ export default function AboutPage() {
             About Sriram Advisory
           </span>
           <h1 style={{ fontSize: "clamp(38px, 5.5vw, 70px)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, marginBottom: 24, letterSpacing: "-0.02em" }}>
-            Advisory for work,
+            Built for the career questions
             <br />
             <span style={{ background: "linear-gradient(90deg, #1a4fd6, #22d3a0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              careers, and AI delivery.
+              AI makes impossible to ignore.
             </span>
           </h1>
           <p style={{ fontSize: "clamp(17px, 2.2vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 700 }}>
-            Sriram Advisory is a workforce intelligence and advisory firm for the AI era. We help professionals make sharper career decisions and help AI Champions move initiatives from pilot to production.
+            Sriram Advisory helps Indian IT professionals read AI pressure clearly, strengthen their market story, and choose a practical next move.
           </p>
         </div>
       </section>
@@ -97,7 +103,7 @@ export default function AboutPage() {
                 Founder
               </div>
               <p style={{ marginTop: 16, marginBottom: 0, fontSize: 15, color: "#5a6a8a", lineHeight: 1.8 }}>
-                Building Sriram Advisory as a workforce intelligence and advisory firm for the AI era.
+                Former AI Champion at Wipro. Building practical career intelligence from the signals professionals see before the market names them.
               </p>
             </div>
           </div>
@@ -108,18 +114,25 @@ export default function AboutPage() {
             </span>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                Sriram Advisory was built around a simple observation: most conversations about AI and work are either too abstract or too tactical. They talk about tools, panic, or isolated use cases, but not enough about the decisions people actually need to make.
+                Sriram Advisory began with a simple observation from AI delivery work: the market changes before job titles, career advice, and company messaging catch up. Professionals can feel the pressure long before they have language for it.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                Professionals need to know how AI changes role durability, market demand, and positioning. AI Champions need to know how to move pilots through governance, stakeholder confidence, operating readiness, and production friction.
+                SA-AIRS was built to make that pressure legible: how exposed a role is, where market demand is shifting, and what kind of work still compounds. The guides translate those signals into role-specific decisions for Indian IT professionals.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                That is why the firm now has two clear paths: Career Intelligence for people making career decisions, and AI Champion for practitioners carrying AI initiatives inside organisations.
+                The response has been clear. More than 100 guide orders arrived in the first 28 days, from people who were not looking for generic motivation; they were looking for an honest read and a usable next step.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
                 The long-term goal is to make AI-era work change more legible through structured frameworks, practical diagnostics, and advisory products that help people choose their next move with more confidence.
               </p>
             </div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 14, marginTop: 32 }}>
+            {FOUNDER_FACTS.map((fact) => (
+              <div key={fact} style={{ background: "#ffffff", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 8, padding: "18px", color: "#304159", fontSize: 14, fontWeight: 700, lineHeight: 1.6 }}>
+                {fact}
+              </div>
+            ))}
           </div>
         </div>
       </section>

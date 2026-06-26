@@ -82,6 +82,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
           { name: "QA Engineer Survival Guide 2026", price: "Rs 499" },
           { name: "Selenium Engineer Upgrade Guide 2026", price: "Rs 499" },
         ],
+        badge: "Most Popular",
       },
       {
         slug: "data-career",

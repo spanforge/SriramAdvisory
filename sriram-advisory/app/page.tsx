@@ -157,6 +157,9 @@ const PROOF_LINKS = [
   },
 ];
 
+const FEATURED_READER_FEEDBACK =
+  "I highly recommend the QA Survival Guide by Sriram Advisory. It delivers practical insights and a structured approach that simplify complex QA concepts into actionable strategies.";
+
 export default function HomePage() {
   return (
     <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
@@ -243,6 +246,22 @@ export default function HomePage() {
               >
                 We help professionals and AI initiative owners make clearer decisions as AI changes careers, teams, governance, and delivery.
               </p>
+
+              <Link
+                href="/guides"
+                style={{
+                  display: "inline-block",
+                  maxWidth: 700,
+                  marginBottom: 20,
+                  color: "#1a4fd6",
+                  fontSize: 15,
+                  fontWeight: 700,
+                  lineHeight: 1.7,
+                  textDecoration: "none",
+                }}
+              >
+                14 Indian IT roles. SA-AIRS scores from 3.5 to 9.5. If your role is above 7.0, the market is already moving.
+              </Link>
 
               <p style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 16 }}>
                 Two clear paths: Career Intelligence and AI Champion.
@@ -414,6 +433,24 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <blockquote
+            style={{
+              margin: "28px 0 0",
+              maxWidth: 840,
+              background: "#ffffff",
+              borderLeft: "4px solid #0d9268",
+              padding: "24px 26px",
+              color: "#304159",
+              fontSize: 17,
+              lineHeight: 1.75,
+            }}
+          >
+            &quot;{FEATURED_READER_FEEDBACK}&quot;
+            <footer style={{ marginTop: 12, color: "#0d9268", fontSize: 13, fontWeight: 800 }}>
+              QA Survival Guide reader
+            </footer>
+          </blockquote>
         </div>
       </section>
 
