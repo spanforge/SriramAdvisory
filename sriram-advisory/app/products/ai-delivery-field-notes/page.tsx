@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 
 export const metadata: Metadata = {
-  title: "AI Champion Field Notes | Sriram Advisory",
+  title: "AI Delivery Field Notes | Sriram Advisory",
   description:
     "A practical field guide for the person carrying an AI initiative from pilot to production. Includes field notes, templates, scorecards, war stories, and maturity model guidance. Rs 499.",
 };
@@ -51,7 +51,7 @@ const CONTENTS = [
   "When AI Goes Wrong in Production",
   "AI Incident Log Template",
   "Field Patterns: Three War Stories",
-  "AI Champion Maturity Model",
+  "AI Delivery Maturity Model",
 ];
 
 const FOR_YOU = [
@@ -142,7 +142,7 @@ export default function AIChampionFieldNotesPage() {
                   background: "rgba(255,255,255,0.08)",
                 }}
               >
-                AI Champion Series
+                AI Delivery Intelligence Series
               </span>
               <span
                 style={{
@@ -172,7 +172,7 @@ export default function AIChampionFieldNotesPage() {
                 letterSpacing: "-0.03em",
               }}
             >
-              AI Champion Field Notes
+              AI Delivery Field Notes
               <br />
               <span style={{ color: "#fbbf24" }}>From pilot to production</span>
             </h1>
@@ -229,11 +229,11 @@ export default function AIChampionFieldNotesPage() {
               One-time purchase. Email delivery usually lands within 30 minutes.
             </p>
             <CashfreeCheckout
-              productName="AI Champion Field Notes"
+              productName="AI Delivery Field Notes"
               amount={499}
               accentColor="#1a4fd6"
               deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
-              emailNote="Your AI Champion Field Notes guide will be delivered to this email."
+              emailNote="Your AI Delivery Field Notes guide will be delivered to this email."
               footerNote="Secured by Cashfree Payments. One-time payment. Delivered to your inbox, typically within 30 minutes."
               buttonLabel="Continue to secure payment ->"
               buttonStyle={primaryButtonStyle}
@@ -306,7 +306,7 @@ export default function AIChampionFieldNotesPage() {
               Built around the work that decides whether AI reaches production
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: "#425472" }}>
-              The guide helps AI Champions prepare for governance reviews, stakeholder questions, production readiness, and incident planning before those issues slow the initiative down.
+              The guide helps AI Delivery practitioners prepare for governance reviews, stakeholder questions, production readiness, and incident planning before those issues slow the initiative down.
             </p>
           </div>
 
@@ -405,11 +405,11 @@ export default function AIChampionFieldNotesPage() {
           <div style={{ maxWidth: 420, margin: "0 auto" }}>
             <div style={{ fontSize: 42, fontWeight: 900, color: "#ffffff", marginBottom: 14 }}>Rs 499</div>
             <CashfreeCheckout
-              productName="AI Champion Field Notes"
+              productName="AI Delivery Field Notes"
               amount={499}
               accentColor="#1a4fd6"
               deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
-              emailNote="Your AI Champion Field Notes guide will be delivered to this email."
+              emailNote="Your AI Delivery Field Notes guide will be delivered to this email."
               footerNote="Secured by Cashfree Payments. One-time payment. Delivered to your inbox, typically within 30 minutes."
               buttonLabel="Buy now ->"
               buttonStyle={primaryButtonStyle}

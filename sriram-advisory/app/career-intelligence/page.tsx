@@ -86,7 +86,7 @@ export default function CareerIntelligencePage() {
               marginBottom: 22,
             }}
           >
-            Sriram Advisory · Career Intelligence
+            Sriram Advisory Â· Career Intelligence
           </p>
           <h1
             style={{
@@ -249,7 +249,7 @@ export default function CareerIntelligencePage() {
             Not sure where to begin?
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.75, color: "rgba(231,239,255,0.82)", marginBottom: 24 }}>
-            If you are making a personal career decision, begin with the assessment. If you are carrying an AI initiative inside your organisation, use the AI Champion path instead.
+            If you are making a personal career decision, begin with the assessment. If you are carrying an AI initiative inside your organisation, use the AI Delivery path instead.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             <Link
@@ -267,7 +267,7 @@ export default function CareerIntelligencePage() {
               Start career assessment
             </Link>
             <Link
-              href="/ai-champion"
+              href="/ai-delivery-intelligence"
               style={{
                 background: "rgba(255,255,255,0.1)",
                 color: "#ffffff",
@@ -279,7 +279,7 @@ export default function CareerIntelligencePage() {
                 border: "1px solid rgba(255,255,255,0.18)",
               }}
             >
-              Explore AI Champion
+              Explore AI Delivery
             </Link>
           </div>
         </div>

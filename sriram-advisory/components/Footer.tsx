@@ -69,7 +69,7 @@ export default function Footer() {
                 {NAV_ITEMS.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>
-                      {item.label}
+                      {item.footerLabel ?? item.label}
                     </Link>
                   </li>
                 ))}

@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "AI Champion | Sriram Advisory",
+  title: "AI Delivery Intelligence | Sriram Advisory",
   description:
-    "Practitioner intelligence for the individual accountable for making AI reach production. Field notes, templates, frameworks, and assessments for real organisational delivery.",
+    "Delivery intelligence for the individual accountable for moving AI from pilot to production. Field notes, templates, frameworks, and assessments for real organisational delivery.",
 };
 
 const audienceSignals = [
@@ -24,7 +24,7 @@ const fieldNotesIncludes = [
   "Production Readiness Scorecard - score your initiative before governance does",
   "AI Incident Log Template - ready to populate before your next deployment",
   "Three war stories - the Governance Delay, the Infosec Surprise, the Business Case Failure",
-  "AI Champion Maturity Model - Levels 1 to 5",
+  "AI Delivery Maturity Model - Levels 1 to 5",
 ];
 
 const maturityLevels = [
@@ -40,7 +40,7 @@ const maturityLevels = [
   },
   {
     level: "3",
-    title: "AI Champion",
+    title: "AI Delivery Practitioner",
     note: "This series is built for you",
     body: "Drives an AI initiative from concept through governance to production. Manages stakeholders. Owns outcomes.",
   },
@@ -56,7 +56,7 @@ const maturityLevels = [
   },
 ];
 
-const PRODUCT_HREF = "/products/ai-champion-field-notes";
+const PRODUCT_HREF = "/products/ai-delivery-field-notes";
 
 const primaryButtonStyle = {
   background: "#1a4fd6",
@@ -81,7 +81,7 @@ const secondaryButtonStyle = {
   border: "1px solid rgba(255,255,255,0.2)",
 } as const;
 
-export default function AIChampionPage() {
+export default function AIDeliveryIntelligencePage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
@@ -105,7 +105,7 @@ export default function AIChampionPage() {
                 marginBottom: 22,
               }}
             >
-              {"Sriram Advisory \u00b7 AI Champion"}
+              {"Sriram Advisory \u00b7 AI Delivery Intelligence"}
             </p>
             <h1
               style={{
@@ -121,7 +121,7 @@ export default function AIChampionPage() {
               For the practitioner responsible for turning an AI pilot into a trusted production system.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "rgba(231,239,255,0.82)", maxWidth: 760, marginBottom: 30 }}>
-              The AI Champion series is built for the individual responsible for moving AI through governance, stakeholder trust, operational readiness, and real organisational adoption.
+              The AI Delivery Intelligence series is built for the individual responsible for moving AI through governance, stakeholder trust, operational readiness, and real organisational adoption.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
               <Link href={PRODUCT_HREF} style={primaryButtonStyle}>
@@ -155,7 +155,7 @@ export default function AIChampionPage() {
           Who This Is For
         </p>
         <h2 style={{ fontSize: "clamp(30px, 4vw, 44px)", lineHeight: 1.12, marginBottom: 28 }}>
-          You are an AI Champion if -
+          You are an AI Delivery practitioner if -
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 14, marginBottom: 28 }}>
           {audienceSignals.map((item) => (
@@ -189,7 +189,7 @@ export default function AIChampionPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: 28, alignItems: "stretch" }}>
             <div>
               <h2 style={{ fontSize: "clamp(30px, 4vw, 44px)", lineHeight: 1.12, marginBottom: 16 }}>
-                AI Champion intelligence series
+                AI Delivery Intelligence series
               </h2>
               <p style={{ fontSize: 17, lineHeight: 1.75, color: "#425472", maxWidth: 620 }}>
                 Practical templates, frameworks, war stories, and scored assessments for AI delivery work inside real organisations.
@@ -205,7 +205,7 @@ export default function AIChampionPage() {
               }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", gap: 18, alignItems: "flex-start", marginBottom: 14 }}>
-                <h3 style={{ fontSize: 24, lineHeight: 1.18, margin: 0 }}>AI Champion Field Notes</h3>
+                <h3 style={{ fontSize: 24, lineHeight: 1.18, margin: 0 }}>AI Delivery Field Notes</h3>
                 <strong style={{ fontSize: 24, color: "#1a4fd6", whiteSpace: "nowrap" }}>Rs 499</strong>
               </div>
               <p style={{ fontSize: 16, lineHeight: 1.7, color: "#31435f", marginBottom: 14 }}>
@@ -224,13 +224,13 @@ export default function AIChampionPage() {
 
       <section style={{ maxWidth: 1060, margin: "0 auto", padding: "72px 20px" }}>
         <p style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", marginBottom: 12 }}>
-          The AI Champion Maturity Model
+          The AI Delivery Maturity Model
         </p>
         <h2 style={{ fontSize: "clamp(30px, 4vw, 44px)", lineHeight: 1.12, marginBottom: 16 }}>
           Where do you sit?
         </h2>
         <p style={{ fontSize: 17, lineHeight: 1.75, color: "#425472", maxWidth: 850, marginBottom: 28 }}>
-          Understanding your current level is the first step to deliberate growth. The AI Champion series is designed to move you from Level 2 to confident Level 3 - and give you the language and frameworks to build toward Level 4.
+          Understanding your current level is the first step to deliberate growth. The AI Delivery Intelligence series is designed to move you from Level 2 to confident Level 3 - and give you the language and frameworks to build toward Level 4.
         </p>
         <div style={{ display: "grid", gap: 12 }}>
           {maturityLevels.map((item) => {
@@ -288,7 +288,7 @@ export default function AIChampionPage() {
               Start Here
             </p>
             <h2 style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.08, marginBottom: 16 }}>
-              AI Champion Field Notes - Rs 499
+              AI Delivery Field Notes - Rs 499
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.75, color: "rgba(231,239,255,0.86)" }}>
               The entry product. 22 pages. Practical, direct, and built around the realities of enterprise AI delivery.
@@ -316,7 +316,7 @@ export default function AIChampionPage() {
       <section style={{ background: "#f8fbff", padding: "34px 20px" }}>
         <div style={{ maxWidth: 1060, margin: "0 auto", color: "#52627e", lineHeight: 1.7, fontSize: 14 }}>
           <p style={{ fontStyle: "italic", marginBottom: 12 }}>
-            The AI Champion series is part of Sriram Advisory&apos;s workforce intelligence platform. It covers delivery intelligence - what it takes to carry an AI initiative from pilot to production inside a real organisation.
+            The AI Delivery Intelligence series is part of Sriram Advisory&apos;s workforce intelligence platform. It covers what it takes to carry an AI initiative from pilot to production inside a real organisation.
           </p>
           <p style={{ fontStyle: "italic" }}>
             {"\u00a9 2026 Sriram Advisory. Educational and analytical commentary only."}

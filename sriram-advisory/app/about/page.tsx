@@ -30,7 +30,7 @@ const PILLARS = [
 
 const DIFFERENTIATORS = [
   "Advisory-first, not motivation-first. The work is built around decisions, tradeoffs, and next moves.",
-  "Two clear paths: Career Intelligence for professionals and AI Champion for initiative owners.",
+  "Two clear paths: Career Intelligence for professionals and AI Delivery Intelligence for initiative owners.",
   "Framework-led. Products and services are built around structured diagnostics, not generic advice.",
   "Practical enough to use. Reports, guides, templates, and audits are designed for real decisions.",
 ];
@@ -202,7 +202,7 @@ export default function AboutPage() {
             Start with the path that fits your situation.
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 32 }}>
-            Use Career Intelligence if you are making a personal career decision. Use AI Champion if you are responsible for moving an AI initiative toward production.
+            Use Career Intelligence if you are making a personal career decision. Use AI Delivery if you are responsible for moving an AI initiative toward production.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
             <Link
@@ -223,7 +223,7 @@ export default function AboutPage() {
               Career Intelligence
             </Link>
             <Link
-              href="/ai-champion"
+              href="/ai-delivery-intelligence"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -237,7 +237,7 @@ export default function AboutPage() {
                 border: "1px solid rgba(126,179,255,0.25)",
               }}
             >
-              AI Champion
+              AI Delivery
             </Link>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 26 }}>

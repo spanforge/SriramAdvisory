@@ -28,11 +28,11 @@ const VERTICALS = [
     border: "#bfdbfe",
   },
   {
-    label: "AI Champion",
+    label: "AI Delivery",
     title: "For practitioners carrying AI initiatives to production",
     body: "Use field notes, templates, readiness scorecards, and governance language to move AI pilots through review, trust, and delivery.",
-    href: "/ai-champion",
-    cta: "Explore AI Champion",
+    href: "/ai-delivery-intelligence",
+    cta: "Explore AI Delivery",
     accent: "#b45309",
     background: "linear-gradient(135deg, #fff9f2 0%, #ffedd5 100%)",
     border: "#fed7aa",
@@ -50,7 +50,7 @@ const DECISIONS = [
   },
   {
     title: "Why is our AI pilot not reaching production?",
-    body: "For AI Champions dealing with governance reviews, stakeholder resistance, operational readiness, and unclear ownership.",
+    body: "For AI Delivery practitioners dealing with governance reviews, stakeholder resistance, operational readiness, and unclear ownership.",
   },
   {
     title: "What should we do next?",
@@ -90,10 +90,10 @@ const ENGAGEMENT_PATHS = [
     cta: "View services",
   },
   {
-    title: "AI Champion Resources",
+    title: "AI Delivery Intelligence Resources",
     body: "Templates, scorecards, and field notes for practitioners responsible for getting AI through production barriers.",
-    href: "/ai-champion",
-    cta: "Explore AI Champion",
+    href: "/ai-delivery-intelligence",
+    cta: "Explore AI Delivery",
   },
 ];
 
@@ -149,10 +149,10 @@ const PROOF_LINKS = [
     cta: "View Java Guide",
   },
   {
-    title: "AI Champion Field Notes",
+    title: "AI Delivery Field Notes",
     description:
       "A practical field guide for people responsible for moving AI initiatives from pilot to production.",
-    href: "/products/ai-champion-field-notes",
+    href: "/products/ai-delivery-field-notes",
     cta: "View Field Notes",
   },
 ];
@@ -264,11 +264,11 @@ export default function HomePage() {
               </Link>
 
               <p style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 16 }}>
-                Two clear paths: Career Intelligence and AI Champion.
+                Two clear paths: Career Intelligence and AI Delivery.
               </p>
 
               <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.8, marginBottom: 40, maxWidth: 720 }}>
-                Use Career Intelligence when you are making personal career decisions. Use AI Champion when you are responsible for moving AI from pilot to production inside an organisation.
+                Use Career Intelligence when you are making personal career decisions. Use AI Delivery when you are responsible for moving AI from pilot to production inside an organisation.
               </p>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
@@ -291,7 +291,7 @@ export default function HomePage() {
                   Explore Career Intelligence
                 </Link>
                 <Link
-                  href="/ai-champion"
+                  href="/ai-delivery-intelligence"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -305,7 +305,7 @@ export default function HomePage() {
                     border: "1px solid rgba(126,179,255,0.25)",
                   }}
                 >
-                  Explore AI Champion
+                  Explore AI Delivery
                 </Link>
               </div>
 
@@ -723,7 +723,7 @@ export default function HomePage() {
             Choose the path that matches your situation.
           </h2>
           <p style={{ fontSize: 18, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 34 }}>
-            Start with Career Intelligence if you are making a personal career decision. Start with AI Champion if you are carrying an AI initiative through production.
+            Start with Career Intelligence if you are making a personal career decision. Start with AI Delivery if you are carrying an AI initiative through production.
           </p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
@@ -744,7 +744,7 @@ export default function HomePage() {
               Career Intelligence
             </Link>
             <Link
-              href="/ai-champion"
+              href="/ai-delivery-intelligence"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -758,7 +758,7 @@ export default function HomePage() {
                 border: "1px solid rgba(126,179,255,0.25)",
               }}
             >
-              AI Champion
+              AI Delivery
             </Link>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 24 }}>

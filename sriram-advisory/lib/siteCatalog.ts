@@ -1,5 +1,6 @@
 export type NavItem = {
   label: string;
+  footerLabel?: string;
   href: string;
 };
 
@@ -63,6 +64,11 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Guides", href: "/guides" },
   { label: "Bundles", href: "/bundles" },
   { label: "Services", href: "/services" },
+  {
+    label: "AI Delivery",
+    footerLabel: "AI Delivery Intelligence",
+    href: "/ai-delivery-intelligence",
+  },
   { label: "Free Resources", href: "/free" },
   { label: "About", href: "/about" },
 ];
