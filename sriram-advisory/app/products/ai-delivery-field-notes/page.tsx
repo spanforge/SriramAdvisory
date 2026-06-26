@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 
 export const metadata: Metadata = {
@@ -421,6 +422,7 @@ export default function AIChampionFieldNotesPage() {
         </div>
       </section>
 
+      <ProductRecommendations />
       <Footer />
     </div>
   );

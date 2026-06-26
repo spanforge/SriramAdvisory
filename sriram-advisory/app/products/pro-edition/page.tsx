@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import type { Metadata } from "next";
 
@@ -245,6 +246,7 @@ export default function ProEditionPage() {
         </div>
       </section>
 
+      <ProductRecommendations />
       <Footer />
     </div>
   );

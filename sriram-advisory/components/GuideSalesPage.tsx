@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
+import ProductRecommendations from "@/components/ProductRecommendations";
 import {
   BONUS_GUIDE_NOTE,
   BONUS_GUIDE_TITLE,
@@ -907,6 +908,8 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </div>
         </div>
       </section>
+
+      <ProductRecommendations />
 
       <Footer />
     </div>

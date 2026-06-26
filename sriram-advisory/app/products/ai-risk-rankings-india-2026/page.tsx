@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 
@@ -747,6 +748,7 @@ export default function AIRiskRankingsPage() {
         buttonLabel="Get the Report â€” â‚¹999"
       />
 
+      <ProductRecommendations />
       <Footer />
     </div>
   );

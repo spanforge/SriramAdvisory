@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 
 const DIMENSIONS = [
@@ -248,6 +249,7 @@ export default function AIRSPage() {
         </Link>
       </section>
 
+      <ProductRecommendations />
       <Footer />
     </div>
   );

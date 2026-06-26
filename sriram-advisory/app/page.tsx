@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import ExitNewsletterPrompt from "@/components/ExitNewsletterPrompt";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -160,10 +162,18 @@ const PROOF_LINKS = [
 const FEATURED_READER_FEEDBACK =
   "I subscribed to the newsletter and bought the QA Survival Guide. Both have given me real clarity about what to do next in my career. The guidance is practical enough that I am planning to pick up more guides for my professional journey.";
 
+const START_HERE = [
+  { role: "QA Engineer", recommendation: "Quality Modernization Bundle", href: "/bundles#qa-modernization" },
+  { role: "Business Analyst", recommendation: "BA Survival Guide", href: "/guides/business-analyst-survival-guide-2026" },
+  { role: "Java Developer", recommendation: "Java Modernization Bundle", href: "/bundles#java-modernization" },
+  { role: "HR Professional", recommendation: "HR Recruiter Survival Guide", href: "/guides/hr-recruiter-survival-guide-2026" },
+];
+
 export default function HomePage() {
   return (
     <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
+      <ExitNewsletterPrompt />
 
       <section
         style={{
@@ -223,7 +233,7 @@ export default function HomePage() {
                   maxWidth: 820,
                 }}
               >
-                Workforce Intelligence{" "}
+                Workforce intelligence for professionals
                 <span
                   style={{
                     background: "linear-gradient(90deg, #1a4fd6, #22d3a0)",
@@ -231,7 +241,7 @@ export default function HomePage() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  for the AI Era
+                  navigating the AI era.
                 </span>
               </h1>
 
@@ -244,7 +254,7 @@ export default function HomePage() {
                   maxWidth: 700,
                 }}
               >
-                We help professionals and AI initiative owners make clearer decisions as AI changes careers, teams, governance, and delivery.
+                We study work, measure AI exposure, and help you position yourself before the market forces you to.
               </p>
 
               <Link
@@ -273,7 +283,7 @@ export default function HomePage() {
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
                 <Link
-                  href="/career-intelligence"
+                  href="/career-intelligence-report/sa-airs-pro"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -288,10 +298,10 @@ export default function HomePage() {
                     border: "1px solid #3b6ef0",
                   }}
                 >
-                  Explore Career Intelligence
+                  Get My SA-AIRS(TM) Score
                 </Link>
                 <Link
-                  href="/ai-delivery-intelligence"
+                  href="/guides"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -305,7 +315,7 @@ export default function HomePage() {
                     border: "1px solid rgba(126,179,255,0.25)",
                   }}
                 >
-                  Explore AI Delivery
+                  Browse Career Guides
                 </Link>
               </div>
 
@@ -323,7 +333,7 @@ export default function HomePage() {
                 }}
               >
                 <span style={{ color: "#0d9268", fontSize: 20, fontWeight: 800 }}>Rs 499</span>
-                role-specific AI career guides
+                role-specific AI career guides - early supporter pricing
               </Link>
 
               <blockquote
@@ -371,6 +381,28 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "30px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 22 }}>
+            <div style={{ fontSize: 20, fontWeight: 800, marginBottom: 6 }}>Trusted by professionals navigating the AI era</div>
+            <div style={{ fontSize: 14, color: "#b9c8e7" }}>Independent workforce intelligence for clearer career decisions.</div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: 12 }}>
+            {[
+              "100+ Orders Delivered",
+              "4,200+ LinkedIn Followers",
+              "Readers across IT services, GCCs, and product companies",
+              "New reports and customer updates added continuously",
+            ].map((item) => (
+              <div key={item} style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 14px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 6, fontSize: 14, color: "#e7efff", lineHeight: 1.5 }}>
+                <span style={{ color: "#6ee7b7", fontWeight: 900 }}>+</span>
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -776,6 +808,89 @@ export default function HomePage() {
             </a>
             .
           </p>
+        </div>
+      </section>
+
+      <section style={{ padding: "88px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto 56px", display: "grid", gridTemplateColumns: "minmax(220px, 0.7fr) minmax(0, 1.3fr)", gap: 34, alignItems: "center" }} className="home-two-col">
+          <div style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: 20, textAlign: "center" }}>
+            <img src="/sriram.png" alt="Sriram Srinivasan" style={{ width: 150, height: 150, objectFit: "cover", borderRadius: "50%", border: "3px solid #1a4fd6" }} />
+          </div>
+          <div>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6" }}>Founder-Led</span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", margin: "14px 0", color: "#0a1628" }}>Why trust Sriram Advisory?</h2>
+            <p style={{ margin: "0 0 18px", fontSize: 16, lineHeight: 1.75, color: "#52627e" }}>Sriram Srinivasan brings enterprise technology experience into practical workforce intelligence for professionals facing AI-shaped market change.</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 10 }}>
+              {[
+                "30 years in enterprise technology",
+                "AI Champion supporting 800+ engineers",
+                "Founder of Sriram Advisory",
+                "Building India-first workforce intelligence for professionals",
+              ].map((item) => <div key={item} style={{ padding: "13px 14px", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 6, color: "#304159", fontSize: 14, fontWeight: 700, lineHeight: 1.5 }}>{item}</div>)}
+            </div>
+          </div>
+        </div>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 720, marginBottom: 28 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Start Here</span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", margin: "14px 0", color: "#0a1628" }}>Choose the first move that matches your role.</h2>
+            <p style={{ margin: 0, color: "#52627e", fontSize: 16, lineHeight: 1.75 }}>Start with a focused guide or bundle. Not sure where you stand? Begin with a personal SA-AIRS score.</p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
+            {START_HERE.map((item) => (
+              <Link key={item.role} href={item.href} style={{ textDecoration: "none", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "20px" }}>
+                <div style={{ fontSize: 13, fontWeight: 800, color: "#1a4fd6", marginBottom: 8 }}>{item.role}</div>
+                <div style={{ color: "#0a1628", fontWeight: 800, fontSize: 18, lineHeight: 1.35 }}>{item.recommendation}</div>
+              </Link>
+            ))}
+            <Link href="/career-intelligence-report/sa-airs-pro" style={{ textDecoration: "none", background: "#0a1628", border: "1px solid #0a1628", borderRadius: 8, padding: "20px" }}>
+              <div style={{ fontSize: 13, fontWeight: 800, color: "#93b4ff", marginBottom: 8 }}>Not sure?</div>
+              <div style={{ color: "#ffffff", fontWeight: 800, fontSize: 18, lineHeight: 1.35 }}>Get a SA-AIRS(TM) Career Intelligence Report</div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "84px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto 32px" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Simple Process</span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", margin: "14px 0" }}>From question to next move.</h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14 }}>
+            {["Browse", "Purchase", "Receive PDF", "Start repositioning"].map((step, index) => (
+              <div key={step} style={{ padding: "22px 18px", background: index % 2 === 0 ? "#f8fbff" : "#f0fdf8", border: "1px solid #dbe5f5", borderRadius: 8, textAlign: "center" }}>
+                <div style={{ fontSize: 12, color: "#1a4fd6", fontWeight: 900, marginBottom: 10 }}>0{index + 1}</div>
+                <div style={{ fontSize: 17, fontWeight: 800, color: "#0a1628" }}>{step}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "84px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <div style={{ maxWidth: 720, marginBottom: 28 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6" }}>Purchase FAQ</span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", margin: "14px 0" }}>Know what happens next.</h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
+            {[
+              ["How do I receive my guide?", "Delivered to your inbox, typically within 30 minutes of payment."],
+              ["Are updates included?", "Yes. Existing guide customers receive future updates free."],
+              ["What format is it?", "Guides and reports are delivered as PDFs."],
+              ["What if I need help?", "Review the published refund policy or contact Sriram directly before buying."],
+            ].map(([question, answer]) => <div key={question} style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "20px" }}><h3 style={{ margin: "0 0 8px", color: "#0a1628", fontSize: 17 }}>{question}</h3><p style={{ margin: 0, color: "#52627e", fontSize: 14, lineHeight: 1.7 }}>{answer}</p></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter" style={{ padding: "84px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#93b4ff" }}>Weekly Workforce Intelligence</span>
+          <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", margin: "14px 0", color: "#ffffff" }}>Stay ahead of the market signal.</h2>
+          <p style={{ maxWidth: 620, margin: "0 auto 22px", color: "#dbeafe", fontSize: 16, lineHeight: 1.75 }}>Get practical observations on AI, work, and career positioning. No hype, no generic upskilling advice.</p>
+          <div style={{ maxWidth: 560, margin: "0 auto" }}><NewsletterSignup compact /></div>
         </div>
       </section>
 
