@@ -191,7 +191,7 @@ export default function AIChampionFieldNotesPage() {
               Built for the person coordinating governance, stakeholder confidence, operational readiness, and delivery momentum across the organisation.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-              {["22 pages", "Templates included", "Manual email delivery"].map((item) => (
+              {["22 pages", "Templates included", "Email delivery"].map((item) => (
                 <span
                   key={item}
                   style={{
@@ -226,15 +226,15 @@ export default function AIChampionFieldNotesPage() {
               Rs 499
             </div>
             <p style={{ fontSize: 13, color: "rgba(231,239,255,0.74)", lineHeight: 1.6, marginBottom: 18 }}>
-              One-time purchase. Manual email delivery usually lands within 30 minutes.
+              One-time purchase. Email delivery usually lands within 30 minutes.
             </p>
             <CashfreeCheckout
               productName="AI Champion Field Notes"
               amount={499}
               accentColor="#1a4fd6"
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your AI Champion Field Notes guide will be delivered to this email."
-              footerNote="Secured by Cashfree Payments. One-time payment. Manual email delivery."
+              footerNote="Secured by Cashfree Payments. One-time payment. Delivered to your inbox, typically within 30 minutes."
               buttonLabel="Continue to secure payment ->"
               buttonStyle={primaryButtonStyle}
             />
@@ -408,14 +408,14 @@ export default function AIChampionFieldNotesPage() {
               productName="AI Champion Field Notes"
               amount={499}
               accentColor="#1a4fd6"
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your AI Champion Field Notes guide will be delivered to this email."
-              footerNote="Secured by Cashfree Payments. One-time payment. Manual email delivery."
+              footerNote="Secured by Cashfree Payments. One-time payment. Delivered to your inbox, typically within 30 minutes."
               buttonLabel="Buy now ->"
               buttonStyle={primaryButtonStyle}
             />
             <p style={{ fontSize: 13, color: "rgba(231,239,255,0.58)", marginTop: 14 }}>
-              Secure payment via Cashfree. Manual email delivery usually lands within 30 minutes.
+              Secure payment via Cashfree. Email delivery usually lands within 30 minutes.
             </p>
           </div>
         </div>

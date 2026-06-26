@@ -1,23 +1,4 @@
 import Link from "next/link";
-import { NAV_ITEMS } from "@/lib/siteCatalog";
-
-const SOCIAL_LINKS = [
-  {
-    label: "LinkedIn Newsletter",
-    href: "https://www.linkedin.com/newsletters/sriram-advisory-7461301611261284352/",
-    color: "#0a66c2",
-  },
-  {
-    label: "Medium",
-    href: "https://medium.com/@sriramadvisory",
-    color: "#0a1628",
-  },
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/sriramadvisory/",
-    color: "#1877f2",
-  },
-];
 
 export default function Footer() {
   return (
@@ -66,7 +47,7 @@ export default function Footer() {
               </div>
             </div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Buyer-facing research, role guides, and services for professionals navigating AI-driven career change.
+              Workforce intelligence, career advisory, and AI delivery resources for the AI era.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <a href="mailto:sriram@sriramadvisory.com" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>
@@ -84,7 +65,12 @@ export default function Footer() {
                 Explore
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
-                {NAV_ITEMS.map((item) => (
+                {[
+                  { label: "Career Intelligence", href: "/career-intelligence" },
+                  { label: "AI Champion", href: "/ai-champion" },
+                  { label: "Free Resources", href: "/free" },
+                  { label: "Services", href: "/services" },
+                ].map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>
                       {item.label}
@@ -102,8 +88,8 @@ export default function Footer() {
                 {[
                   { label: "About", href: "/about" },
                   { label: "Contact", href: "/contact" },
-                  { label: "Reports", href: "/reports" },
-                  { label: "Guides", href: "/guides" },
+                  { label: "FAQ", href: "/faq" },
+                  { label: "Insights", href: "/insights" },
                 ].map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>
@@ -150,35 +136,22 @@ export default function Footer() {
           <p style={{ fontSize: 13, color: "rgba(10,22,40,0.6)", margin: 0 }}>
             © {new Date().getFullYear()} Sriram Advisory. Educational and analytical commentary only.
           </p>
-          <div
-            aria-label="Social media links"
+          <a
+            href="https://www.linkedin.com/newsletters/sriram-advisory-7461301611261284352/"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
-              display: "flex",
+              display: "inline-flex",
               alignItems: "center",
-              flexWrap: "wrap",
-              gap: 14,
+              gap: 6,
+              fontSize: 13,
+              color: "#0a66c2",
+              textDecoration: "none",
+              fontWeight: 500,
             }}
           >
-            {SOCIAL_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                  fontSize: 13,
-                  color: link.color,
-                  textDecoration: "none",
-                  fontWeight: 500,
-                }}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+            LinkedIn Newsletter
+          </a>
         </div>
       </div>
     </footer>

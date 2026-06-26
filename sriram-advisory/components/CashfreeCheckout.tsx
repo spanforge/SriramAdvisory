@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { createPortal } from "react-dom";
 import { load } from "@cashfreepayments/cashfree-js";
 
 interface Props {
@@ -134,21 +133,17 @@ export default function CashfreeCheckout({
         {buttonLabel}
       </button>
 
-      {typeof document !== "undefined" &&
-        open &&
-        createPortal(
+      {open && (
         <div
-          className="checkout-overlay"
           style={{
             position: "fixed",
             inset: 0,
             zIndex: 9999,
             background: "rgba(10,22,40,0.75)",
             display: "flex",
-            alignItems: "flex-start",
+            alignItems: "center",
             justifyContent: "center",
-            padding: "20px 16px",
-            overflowY: "auto",
+            padding: 20,
           }}
           onClick={(e) => {
             if (e.target === e.currentTarget) setOpen(false);
@@ -156,18 +151,14 @@ export default function CashfreeCheckout({
         >
           <div
             ref={dialogRef}
-            className="checkout-dialog"
             style={{
               background: "#fff",
               borderRadius: 16,
               padding: "36px 32px",
               maxWidth: 440,
               width: "100%",
-              maxHeight: "min(820px, calc(100vh - 40px))",
-              overflowY: "auto",
               boxShadow: "0 24px 60px rgba(0,0,0,0.3)",
               position: "relative",
-              margin: "auto 0",
             }}
             role="dialog"
             aria-modal="true"
@@ -216,7 +207,7 @@ export default function CashfreeCheckout({
               </p>
             </div>
 
-            <form onSubmit={handlePay} className="checkout-form" style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            <form onSubmit={handlePay} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <div>
                 <label
                   htmlFor="checkout-name"
@@ -347,7 +338,6 @@ export default function CashfreeCheckout({
 
               <button
                 type="submit"
-                className="checkout-submit"
                 disabled={loading}
                 style={{
                   background: accentColor,
@@ -371,36 +361,8 @@ export default function CashfreeCheckout({
             <p style={{ fontSize: 13, color: "#8898b8", marginTop: 16, lineHeight: 1.5, textAlign: "center" }}>
               {footerNote}
             </p>
-
-            <style>{`
-              @media (max-width: 640px) {
-                .checkout-overlay {
-                  padding: 12px !important;
-                  align-items: flex-end !important;
-                }
-
-                [role="dialog"][aria-labelledby="checkout-title"] {
-                  border-radius: 18px 18px 0 0 !important;
-                  padding: 24px 18px 18px !important;
-                  max-height: calc(100vh - 12px) !important;
-                  max-width: none !important;
-                  margin: 0 !important;
-                }
-
-                .checkout-form {
-                  gap: 12px !important;
-                }
-
-                .checkout-submit {
-                  width: 100% !important;
-                  min-height: 52px !important;
-                  font-size: 15px !important;
-                }
-              }
-            `}</style>
           </div>
-        </div>,
-        document.body
+        </div>
       )}
     </>
   );

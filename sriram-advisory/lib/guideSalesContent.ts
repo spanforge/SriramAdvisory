@@ -75,7 +75,7 @@ export const BONUS_GUIDE_NOTE =
   "A concise companion covering AI agents, tool use, memory, guardrails, observability, and where the frontier is headed.";
 
 export const DELIVERY_NOTE =
-  "Manual email delivery, usually within 30 minutes of payment.";
+  "Delivered to your inbox, typically within 30 minutes of payment.";
 
 export const LIFETIME_UPDATES_TITLE =
   "Free lifetime updates included.";

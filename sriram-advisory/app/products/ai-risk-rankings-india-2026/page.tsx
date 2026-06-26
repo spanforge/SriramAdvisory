@@ -232,9 +232,9 @@ export default function AIRiskRankingsPage() {
               productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
               amount={999}
               accentColor="#dc2626"
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report — ₹999"
+              buttonLabel="Get the Report â€” â‚¹999"
               buttonStyle={{
                 display: "flex",
                 alignItems: "center",
@@ -266,7 +266,7 @@ export default function AIRiskRankingsPage() {
               "25 ranked careers",
               "4 exposure bands",
               "100+ pages",
-              "Manual email delivery within 30 minutes",
+              "Delivered to your inbox, typically within 30 minutes",
             ].map((item) => (
               <div
                 key={item}
@@ -310,7 +310,7 @@ export default function AIRiskRankingsPage() {
                 display: "block",
               }}
             >
-              Manual email delivery within 30 minutes
+              Delivered to your inbox, typically within 30 minutes
             </span>
             <p style={{ fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.6, margin: "0 0 18px" }}>
               Built from NASSCOM, NITI Aayog, WEF, EY India, McKinsey, and related 2025-26 research.
@@ -319,9 +319,9 @@ export default function AIRiskRankingsPage() {
               productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
               amount={999}
               accentColor="#dc2626"
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report — ₹999"
+              buttonLabel="Get the Report â€” â‚¹999"
               buttonStyle={{
                 background: "#dc2626",
                 color: "#ffffff",
@@ -702,15 +702,15 @@ export default function AIRiskRankingsPage() {
                 marginBottom: 20,
               }}
             >
-              Manual email delivery within 30 minutes
+              Delivered to your inbox, typically within 30 minutes
             </span>
             <CashfreeCheckout
               productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
               amount={999}
               accentColor="#dc2626"
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report — ₹999"
+              buttonLabel="Get the Report â€” â‚¹999"
               buttonStyle={{
                 background: "#dc2626",
                 color: "#ffffff",
@@ -742,9 +742,9 @@ export default function AIRiskRankingsPage() {
         productName="AI Risk Rankings India 2026 - Top 25 High-Risk Careers Report"
         amount={999}
         accentColor="#dc2626"
-        deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+        deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your report will be delivered to this email."
-        buttonLabel="Get the Report — ₹999"
+        buttonLabel="Get the Report â€” â‚¹999"
       />
 
       <Footer />

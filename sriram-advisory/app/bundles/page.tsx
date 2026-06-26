@@ -453,7 +453,7 @@ export default function BundlesPage() {
                 marginBottom: 12,
               }}
             >
-              Simple purchase flow, manual delivery
+              Simple purchase flow, delivery
             </h2>
             <p style={{ fontSize: 15, color: "rgba(219,234,254,0.82)", lineHeight: 1.75, margin: 0 }}>
               All bundle contents are delivered manually by email after payment confirmation. Guides and

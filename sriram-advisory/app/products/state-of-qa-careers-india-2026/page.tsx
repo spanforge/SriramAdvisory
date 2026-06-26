@@ -168,9 +168,9 @@ export default function StateOfQACareersIndia2026Page() {
                   productName="State of QA Careers India 2026 - Premium Report"
                   amount={799}
                   accentColor="#0f6cbd"
-                  deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+                  deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                   emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
-                  buttonLabel="Get the Report — ₹799"
+                  buttonLabel="Get the Report â€” â‚¹799"
                   buttonStyle={{
                     display: "flex",
                     alignItems: "center",
@@ -237,7 +237,7 @@ export default function StateOfQACareersIndia2026Page() {
                 productName="State of QA Careers India 2026 - Premium Report"
                 amount={799}
                 accentColor="#0f6cbd"
-                deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+                deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                 emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
                 buttonLabel="Get State of QA Careers 2026 ->"
                 buttonStyle={{
@@ -253,7 +253,7 @@ export default function StateOfQACareersIndia2026Page() {
                 }}
               />
               <p style={{ marginTop: 14, fontSize: 12, color: "rgba(219,234,254,0.62)", lineHeight: 1.6 }}>
-                One-time purchase via Cashfree. No subscription. Manual email delivery.
+                One-time purchase via Cashfree. No subscription. Delivered to your inbox, typically within 30 minutes.
               </p>
             </div>
           </div>
@@ -381,7 +381,7 @@ export default function StateOfQACareersIndia2026Page() {
               productName="State of QA Careers India 2026 - Premium Report"
               amount={799}
               accentColor="#0f6cbd"
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
               buttonLabel="Secure My Copy ->"
               buttonStyle={{
@@ -397,7 +397,7 @@ export default function StateOfQACareersIndia2026Page() {
               }}
             />
             <p style={{ marginTop: 12, fontSize: 12, color: "rgba(219,234,254,0.62)" }}>
-              Secure payment via Cashfree. One-time payment. Manual email delivery.
+              Secure payment via Cashfree. One-time payment. Delivered to your inbox, typically within 30 minutes.
             </p>
           </div>
         </div>
@@ -407,9 +407,9 @@ export default function StateOfQACareersIndia2026Page() {
         productName="State of QA Careers India 2026 - Premium Report"
         amount={799}
         accentColor="#0f6cbd"
-        deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+        deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
-        buttonLabel="Get the Report — ₹799"
+        buttonLabel="Get the Report â€” â‚¹799"
       />
 
       <Footer />

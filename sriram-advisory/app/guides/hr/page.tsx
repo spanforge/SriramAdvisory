@@ -112,7 +112,7 @@ export default function HRGuidesPage() {
               "Built for India-first HR realities",
               "For recruiters, HRBPs, L&D, and talent teams",
               "Focus on judgment, not generic upskilling",
-              "Manual delivery usually within 30 minutes",
+              "Delivered to your inbox, typically within 30 minutes",
             ].map((item) => (
               <div
                 key={item}

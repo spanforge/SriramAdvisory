@@ -196,7 +196,7 @@ export default function ReelLessonsPart1Page() {
                 display: "block",
               }}
             >
-              Manual delivery, usually within 30 minutes
+              Delivered to your inbox, typically within 30 minutes
             </span>
             <p
               style={{

@@ -17,31 +17,19 @@ type GuideSalesPageProps = {
   content: GuidePageContent;
 };
 
-const GUIDE_CHECKOUT_COPY = {
-  deliveryNote: "Manual email delivery usually lands within 30 minutes of payment.",
-  emailNote: "Your guide will be delivered to this email.",
-  buttonLabel: "Get the Guide - Rs 499",
-} as const;
-
 export default function GuideSalesPage({ content }: GuideSalesPageProps) {
   const { theme } = content;
   const testimonials = content.testimonials ?? (content.testimonial ? [content.testimonial] : []);
-  const combinedHeroTitle = `${content.title} ${content.accentTitle}`;
-  const hasLongHeroTitle = combinedHeroTitle.length > 42;
-  const hasVeryLongHeroTitle = combinedHeroTitle.length > 50;
 
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
 
       <section
-        className={`guide-hero${hasLongHeroTitle ? " guide-hero-long" : ""}${
-          hasVeryLongHeroTitle ? " guide-hero-very-long" : ""
-        }`}
         style={{
           background: theme.heroGradient,
-          paddingTop: hasVeryLongHeroTitle ? 72 : hasLongHeroTitle ? 82 : 100,
-          paddingBottom: hasVeryLongHeroTitle ? 56 : hasLongHeroTitle ? 64 : 90,
+          paddingTop: 100,
+          paddingBottom: 90,
           textAlign: "center",
           position: "relative",
           overflow: "hidden",
@@ -67,17 +55,15 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           }}
         >
           <div
-            className="guide-hero-badges"
             style={{
               display: "flex",
               justifyContent: "center",
               gap: 10,
-              marginBottom: hasVeryLongHeroTitle ? 16 : hasLongHeroTitle ? 20 : 28,
+              marginBottom: 28,
               flexWrap: "wrap",
             }}
           >
             <span
-              className="guide-hero-badge guide-hero-badge-score"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -96,7 +82,6 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               SA-AIRS Score: {content.score} - {content.riskLabel}
             </span>
             <span
-              className="guide-hero-badge guide-hero-badge-edition"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -117,17 +102,12 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </div>
 
           <h1
-            className="guide-hero-title"
             style={{
-              fontSize: hasVeryLongHeroTitle
-                ? "clamp(24px, 4vw, 46px)"
-                : hasLongHeroTitle
-                  ? "clamp(28px, 4.4vw, 52px)"
-                  : "clamp(34px, 5.5vw, 66px)",
+              fontSize: "clamp(34px, 5.5vw, 66px)",
               fontWeight: 800,
               color: "#ffffff",
-              lineHeight: hasVeryLongHeroTitle ? 0.98 : hasLongHeroTitle ? 1 : 1.08,
-              marginBottom: hasVeryLongHeroTitle ? 12 : hasLongHeroTitle ? 14 : 22,
+              lineHeight: 1.08,
+              marginBottom: 22,
               letterSpacing: "-0.03em",
             }}
           >
@@ -137,87 +117,46 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </h1>
 
           <p
-            className="guide-hero-summary"
             style={{
-              fontSize: hasVeryLongHeroTitle
-                ? "clamp(14px, 1.9vw, 18px)"
-                : hasLongHeroTitle
-                  ? "clamp(15px, 2vw, 19px)"
-                  : "clamp(17px, 2.2vw, 21px)",
+              fontSize: "clamp(17px, 2.2vw, 21px)",
               color: theme.heroText,
-              lineHeight: hasVeryLongHeroTitle ? 1.45 : hasLongHeroTitle ? 1.5 : 1.65,
-              maxWidth: hasVeryLongHeroTitle ? 640 : hasLongHeroTitle ? 680 : 740,
-              margin: hasVeryLongHeroTitle ? "0 auto 10px" : hasLongHeroTitle ? "0 auto 12px" : "0 auto 16px",
+              lineHeight: 1.65,
+              maxWidth: 740,
+              margin: "0 auto 16px",
             }}
           >
             {content.heroSummary}
           </p>
 
           <p
-            className="guide-hero-note"
             style={{
-              fontSize: hasVeryLongHeroTitle ? 14 : 15,
+              fontSize: 15,
               color: "rgba(255,255,255,0.65)",
               fontStyle: "italic",
-              marginBottom: hasVeryLongHeroTitle ? 16 : hasLongHeroTitle ? 18 : 28,
+              marginBottom: 28,
             }}
           >
             {content.heroNote}
           </p>
 
           <div
-            className="guide-hero-primary-cta"
-            style={{
-              maxWidth: 360,
-              margin: hasVeryLongHeroTitle ? "0 auto 18px" : hasLongHeroTitle ? "0 auto 20px" : "0 auto 28px",
-            }}
-          >
-            <CashfreeCheckout
-              productName={content.productName}
-              amount={499}
-              accentColor={theme.accent}
-              deliveryNote={GUIDE_CHECKOUT_COPY.deliveryNote}
-              emailNote={GUIDE_CHECKOUT_COPY.emailNote}
-              buttonLabel={GUIDE_CHECKOUT_COPY.buttonLabel}
-              buttonStyle={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "100%",
-                fontSize: hasVeryLongHeroTitle ? 16 : 17,
-                fontWeight: 700,
-                padding: hasVeryLongHeroTitle ? "14px 18px" : "16px 20px",
-                borderRadius: 10,
-                background: theme.accent,
-                color: "#ffffff",
-                border: "none",
-                cursor: "pointer",
-                letterSpacing: "0.01em",
-                boxShadow: "0 14px 32px rgba(10, 22, 40, 0.22)",
-              }}
-            />
-          </div>
-
-          <div
-            className="guide-hero-outcomes"
             style={{
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "center",
               gap: 12,
-              marginBottom: hasVeryLongHeroTitle ? 22 : hasLongHeroTitle ? 26 : 36,
+              marginBottom: 36,
             }}
           >
             {content.outcomeBullets.map((item) => (
               <div
-                className="guide-hero-outcome-chip"
                 key={item}
                 style={{
                   background: "rgba(255,255,255,0.1)",
                   border: "1px solid rgba(255,255,255,0.15)",
                   borderRadius: 999,
-                  padding: hasVeryLongHeroTitle ? "8px 14px" : "10px 16px",
-                  fontSize: hasVeryLongHeroTitle ? 12 : 13,
+                  padding: "10px 16px",
+                  fontSize: 13,
                   color: "#f8fbff",
                 }}
               >
@@ -319,9 +258,9 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               productName={content.productName}
               amount={499}
               accentColor={theme.accent}
-              deliveryNote={GUIDE_CHECKOUT_COPY.deliveryNote}
-              emailNote={GUIDE_CHECKOUT_COPY.emailNote}
-              buttonLabel={GUIDE_CHECKOUT_COPY.buttonLabel}
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
+              emailNote="Your guide will be delivered to this email."
+              buttonLabel="Continue to secure payment ->"
               buttonStyle={{
                 fontSize: 17,
                 fontWeight: 700,
@@ -348,87 +287,6 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </div>
         </div>
       </section>
-
-      <style>{`
-        @media (max-width: 640px) {
-          .guide-hero {
-            padding-top: 44px !important;
-            padding-bottom: 40px !important;
-          }
-
-          .guide-hero-badges {
-            gap: 8px !important;
-            margin-bottom: 14px !important;
-          }
-
-          .guide-hero-badge {
-            font-size: 10px !important;
-            line-height: 1.35 !important;
-            padding: 6px 12px !important;
-            max-width: 100% !important;
-            justify-content: center !important;
-          }
-
-          .guide-hero-title {
-            font-size: 42px !important;
-            line-height: 0.98 !important;
-            margin-bottom: 10px !important;
-          }
-
-          .guide-hero-summary {
-            font-size: 13px !important;
-            line-height: 1.42 !important;
-            margin: 0 auto 8px !important;
-            max-width: 92% !important;
-          }
-
-          .guide-hero-note {
-            font-size: 12px !important;
-            line-height: 1.35 !important;
-            margin-bottom: 12px !important;
-          }
-
-          .guide-hero-primary-cta {
-            max-width: 320px !important;
-            margin: 0 auto 14px !important;
-          }
-
-          .guide-hero-primary-cta button {
-            font-size: 15px !important;
-            padding: 13px 16px !important;
-          }
-
-          .guide-hero-outcomes {
-            gap: 8px !important;
-            margin-bottom: 18px !important;
-          }
-
-          .guide-hero-outcome-chip {
-            font-size: 11px !important;
-            line-height: 1.3 !important;
-            padding: 7px 12px !important;
-          }
-
-          .guide-hero.guide-hero-long .guide-hero-title {
-            font-size: 34px !important;
-          }
-
-          .guide-hero.guide-hero-very-long .guide-hero-title {
-            font-size: 30px !important;
-          }
-
-          .guide-hero.guide-hero-long .guide-hero-summary,
-          .guide-hero.guide-hero-very-long .guide-hero-summary {
-            font-size: 12px !important;
-            line-height: 1.36 !important;
-          }
-
-          .guide-hero.guide-hero-long .guide-hero-note,
-          .guide-hero.guide-hero-very-long .guide-hero-note {
-            display: none !important;
-          }
-        }
-      `}</style>
 
       {testimonials.length > 0 && (
         <section
@@ -504,7 +362,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                       marginBottom: 18,
                     }}
                   >
-                    Verified Feedback
+                    Reader Feedback
                   </div>
                   <p
                     style={{
@@ -617,6 +475,19 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               </div>
             ))}
           </div>
+          <p
+            style={{
+              margin: "32px auto 0",
+              maxWidth: 680,
+              textAlign: "center",
+              fontSize: 16,
+              fontWeight: 700,
+              color: "#304159",
+              lineHeight: 1.7,
+            }}
+          >
+            If none of those describe you, this guide was written for your next move.
+          </p>
         </div>
       </section>
 
@@ -1014,9 +885,9 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               productName={content.productName}
               amount={499}
               accentColor={theme.accent}
-              deliveryNote={GUIDE_CHECKOUT_COPY.deliveryNote}
-              emailNote={GUIDE_CHECKOUT_COPY.emailNote}
-              buttonLabel={GUIDE_CHECKOUT_COPY.buttonLabel}
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
+              emailNote="Your guide will be delivered to this email."
+              buttonLabel="Buy now ->"
               buttonStyle={{
                 fontSize: 16,
                 fontWeight: 700,
@@ -1031,7 +902,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               }}
             />
             <p style={{ fontSize: 13, color: "rgba(255,255,255,0.56)", marginTop: 14 }}>
-              Secure payment via Cashfree. Manual email delivery usually lands within 30 minutes.
+              Secure payment via Cashfree. Delivered to your inbox, typically within 30 minutes.
             </p>
           </div>
         </div>

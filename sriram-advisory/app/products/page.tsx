@@ -59,7 +59,7 @@ const PRODUCTS = [
       "Limited preview on-page so the insight stays inside the paid report",
       "Built for professionals making strategic career decisions",
       "Launch pricing before the full-price release",
-      "Cashfree checkout with manual email delivery",
+      "Cashfree checkout with email delivery",
     ],
     cta: "Get AI Futures 2026 ->",
     href: "/products/ai-futures-2026",
@@ -88,7 +88,7 @@ const PRODUCTS = [
       "Premium report for strategic career decision-making",
       "India-first context instead of generic global commentary",
       "Launch pricing before the full-price release",
-      "Cashfree checkout with manual email delivery",
+      "Cashfree checkout with email delivery",
     ],
     cta: "Get State of QA Careers 2026 ->",
     href: "/products/state-of-qa-careers-india-2026",
@@ -327,7 +327,7 @@ export default function ProductsPage() {
                   ["Strategic adaptation lens", "Yes", "Yes", "Yes"],
                   ["Detailed market signals", "Yes", "Yes", "No"],
                   ["Best for", "Thinking ahead", "Understanding risk", "Getting your score"],
-                  ["Delivery", "Manual email", "Manual email", "Within 24h"],
+                  ["Delivery", "Email", "Email", "Within 24h"],
                 ].map(([feature, futures, rankings, airs], i) => (
                   <tr key={feature} style={{ background: i % 2 === 0 ? "#ffffff" : "#f8faff" }}>
                     <td style={{ padding: "12px 18px", color: "#2a3a5a", fontWeight: 500 }}>{feature}</td>

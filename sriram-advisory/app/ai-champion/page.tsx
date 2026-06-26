@@ -307,7 +307,7 @@ export default function AIChampionPage() {
               Get it for Rs 499
             </Link>
             <p style={{ fontSize: 13, color: "rgba(231,239,255,0.68)", lineHeight: 1.7, marginTop: 16 }}>
-              {"Manual email delivery within 30 minutes \u00b7 Individual use \u00b7 Free updates included"}
+              {"Delivered to your inbox, typically within 30 minutes \u00b7 Individual use \u00b7 Free updates included"}
             </p>
           </div>
         </div>

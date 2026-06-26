@@ -168,9 +168,9 @@ export default function AIFutures2026Page() {
                   productName="AI Futures 2026 - Premium Report"
                   amount={799}
                   accentColor="#0d9268"
-                  deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+                  deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                   emailNote="Your AI Futures 2026 report will be delivered to this email."
-                  buttonLabel="Get the Report — ₹799"
+                  buttonLabel="Get the Report â€” â‚¹799"
                   buttonStyle={{
                     display: "flex",
                     alignItems: "center",
@@ -236,7 +236,7 @@ export default function AIFutures2026Page() {
                 productName="AI Futures 2026 - Premium Report"
                 amount={799}
                 accentColor="#0d9268"
-                deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+                deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                 emailNote="Your AI Futures 2026 report will be delivered to this email."
                 buttonLabel="Get AI Futures 2026 ->"
                 buttonStyle={{
@@ -380,7 +380,7 @@ export default function AIFutures2026Page() {
               productName="AI Futures 2026 - Premium Report"
               amount={799}
               accentColor="#0d9268"
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your AI Futures 2026 report will be delivered to this email."
               buttonLabel="Secure My Copy ->"
               buttonStyle={{
@@ -396,7 +396,7 @@ export default function AIFutures2026Page() {
               }}
             />
             <p style={{ marginTop: 12, fontSize: 12, color: "rgba(215,255,243,0.62)" }}>
-              Secure payment via Cashfree. One-time payment. Manual email delivery.
+              Secure payment via Cashfree. One-time payment. Delivered to your inbox, typically within 30 minutes.
             </p>
           </div>
         </div>
@@ -406,9 +406,9 @@ export default function AIFutures2026Page() {
         productName="AI Futures 2026 - Premium Report"
         amount={799}
         accentColor="#0d9268"
-        deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+        deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your AI Futures 2026 report will be delivered to this email."
-        buttonLabel="Get the Report — ₹799"
+        buttonLabel="Get the Report â€” â‚¹799"
       />
 
       <Footer />

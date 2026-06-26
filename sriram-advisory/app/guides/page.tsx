@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Role-specific AI career guides for professionals who want clear repositioning paths, honest risk framing, and buyer-ready next steps.",
 };
 
-const GUIDE_DELIVERY_NOTE = "Manual email delivery, usually within 30 minutes of payment.";
+const GUIDE_DELIVERY_NOTE = "Delivered to your inbox, typically within 30 minutes of payment.";
 const BONUS_GUIDE_NOTE =
   "Every guide includes the Agentic AI Field Guide bonus at no extra cost.";
 

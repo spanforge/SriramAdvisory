@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 export type GuideCatalogItem = {
-  badge: string;
+  badge?: string;
   title: string;
   subtitle: string;
   blurb: string;
@@ -311,20 +311,22 @@ export default function GuidesCatalog({
                 }}
               >
                 <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "flex-start" }}>
-                  <span
-                    style={{
-                      fontSize: 11,
-                      fontWeight: 800,
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                      background: guide.accentColor,
-                      color: "#ffffff",
-                      padding: "4px 10px",
-                      borderRadius: 999,
-                    }}
-                  >
-                    {guide.badge}
-                  </span>
+                  {guide.badge && (
+                    <span
+                      style={{
+                        fontSize: 11,
+                        fontWeight: 800,
+                        letterSpacing: "0.08em",
+                        textTransform: "uppercase",
+                        background: guide.accentColor,
+                        color: "#ffffff",
+                        padding: "4px 10px",
+                        borderRadius: 999,
+                      }}
+                    >
+                      {guide.badge}
+                    </span>
+                  )}
                   <div style={{ textAlign: "right" }}>
                     <div style={{ fontSize: 11, color: "#5f7291", textTransform: "uppercase", fontWeight: 700 }}>
                       Price

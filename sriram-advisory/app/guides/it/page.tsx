@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "India-first career intelligence guides for IT professionals navigating AI risk, market shifts, and role repositioning.",
 };
 
-const GUIDE_DELIVERY_NOTE = "Manual email delivery, usually within 30 minutes of payment.";
+const GUIDE_DELIVERY_NOTE = "Delivered to your inbox, typically within 30 minutes of payment.";
 const BONUS_GUIDE_NOTE =
   "Every guide includes the Agentic AI Field Guide bonus at no extra cost.";
 
@@ -309,7 +309,7 @@ export default function ITGuidesPage() {
             {[
               "Role-specific, not generic",
               "Built for India-first market realities",
-              "Manual delivery usually within 30 minutes",
+              "Delivered to your inbox, typically within 30 minutes",
             ].map((item) => (
               <div
                 key={item}

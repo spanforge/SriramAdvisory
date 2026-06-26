@@ -17,7 +17,7 @@ export type ReportItem = {
 };
 
 export type GuideItem = {
-  badge: string;
+  badge?: string;
   title: string;
   subtitle: string;
   blurb: string;
@@ -140,7 +140,6 @@ export const REPORTS: ReportItem[] = [
 
 export const GUIDES: GuideItem[] = [
   {
-    badge: "New",
     title: "Cloud Engineer AI Survival Guide 2026",
     subtitle: "3.8/10 repositioned score. 90-day direction. AI cloud infrastructure path.",
     blurb:
@@ -204,7 +203,6 @@ export const GUIDES: GuideItem[] = [
     focus: "Platform and reliability",
   },
   {
-    badge: "New",
     title: "Business Analyst Survival Guide 2026",
     subtitle: "7.1/10 risk score. 60-day direction. GCC and product-side path.",
     blurb:
@@ -252,7 +250,6 @@ export const GUIDES: GuideItem[] = [
     focus: "Career transition",
   },
   {
-    badge: "New",
     title: "QA Engineer Survival Guide 2026",
     subtitle: "9.5/10 risk score. 90-day direction. Higher-value QA path.",
     blurb:
@@ -284,7 +281,6 @@ export const GUIDES: GuideItem[] = [
     focus: "AI-era support paths",
   },
   {
-    badge: "New",
     title: "Python Developer AI Leverage Guide 2026",
     subtitle: "7.0/10 risk score. 60-day direction. Higher-leverage Python path.",
     blurb:
@@ -300,7 +296,6 @@ export const GUIDES: GuideItem[] = [
     focus: "AI leverage",
   },
   {
-    badge: "New",
     title: "Java Developer AI Leverage Guide 2026",
     subtitle: "7.5/10 risk score. 60-day direction. Higher-leverage Java path.",
     blurb:
@@ -316,7 +311,6 @@ export const GUIDES: GuideItem[] = [
     focus: "AI leverage",
   },
   {
-    badge: "New",
     title: "Selenium Engineer Upgrade Guide 2026",
     subtitle: "7.2/10 risk score. 60-day direction. Modern automation path.",
     blurb:

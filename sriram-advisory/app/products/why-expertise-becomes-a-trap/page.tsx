@@ -214,13 +214,13 @@ export default function WhyExpertiseBecomesATrapPage() {
                 </span>
               </div>
               <p style={{ fontSize: 13, color: "rgba(250,245,255,0.78)", lineHeight: 1.6, margin: "0 0 18px" }}>
-                Manual email delivery usually lands within 30 minutes of payment.
+                Delivered to your inbox, typically within 30 minutes of payment.
               </p>
               <CashfreeCheckout
                 productName="Why Expertise Becomes a Trap - SA Intelligence Report"
                 amount={499}
                 accentColor="#7c3aed"
-                deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+                deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                 emailNote="Your Why Expertise Becomes a Trap report will be delivered to this email."
                 buttonLabel="Get the report ->"
                 buttonStyle={{
@@ -236,7 +236,7 @@ export default function WhyExpertiseBecomesATrapPage() {
                 }}
               />
               <p style={{ marginTop: 14, fontSize: 12, color: "rgba(243,232,255,0.62)", lineHeight: 1.6 }}>
-                One-time purchase via Cashfree. No subscription. Manual email delivery.
+                One-time purchase via Cashfree. No subscription. Delivered to your inbox, typically within 30 minutes.
               </p>
             </div>
           </div>
@@ -359,7 +359,7 @@ export default function WhyExpertiseBecomesATrapPage() {
               productName="Why Expertise Becomes a Trap - SA Intelligence Report"
               amount={499}
               accentColor="#7c3aed"
-              deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+              deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your Why Expertise Becomes a Trap report will be delivered to this email."
               buttonLabel="Secure My Copy ->"
               buttonStyle={{
@@ -375,7 +375,7 @@ export default function WhyExpertiseBecomesATrapPage() {
               }}
             />
             <p style={{ marginTop: 12, fontSize: 12, color: "rgba(243,232,255,0.62)" }}>
-              Secure payment via Cashfree. One-time payment. Manual email delivery.
+              Secure payment via Cashfree. One-time payment. Delivered to your inbox, typically within 30 minutes.
             </p>
           </div>
         </div>
@@ -385,9 +385,9 @@ export default function WhyExpertiseBecomesATrapPage() {
         productName="Why Expertise Becomes a Trap - SA Intelligence Report"
         amount={499}
         accentColor="#7c3aed"
-        deliveryNote="Manual email delivery usually lands within 30 minutes of payment."
+        deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your Why Expertise Becomes a Trap report will be delivered to this email."
-        buttonLabel="Get the Report — ₹499"
+        buttonLabel="Get the Report â€” â‚¹499"
       />
 
       <Footer />
