@@ -127,7 +127,15 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 14, marginTop: 32 }}>
+          <div
+            style={{
+              gridColumn: "1 / -1",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
+              gap: 14,
+              marginTop: 32,
+            }}
+          >
             {FOUNDER_FACTS.map((fact) => (
               <div key={fact} style={{ background: "#ffffff", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 8, padding: "18px", color: "#304159", fontSize: 14, fontWeight: 700, lineHeight: 1.6 }}>
                 {fact}

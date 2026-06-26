@@ -343,7 +343,7 @@ export default function HomePage() {
               >
                 &quot;{FEATURED_READER_FEEDBACK}&quot;
                 <footer style={{ marginTop: 10, color: "#0d9268", fontSize: 12, fontWeight: 800, letterSpacing: "0.04em" }}>
-                  ANONYMOUS NEWSLETTER SUBSCRIBER AND QA GUIDE READER
+                  QA ENGINEER, 6 YEARS EXPERIENCE
                 </footer>
               </blockquote>
             </div>

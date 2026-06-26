@@ -1047,7 +1047,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       {
         quote:
           "I subscribed to the newsletter and bought the QA Survival Guide. Both have given me real clarity about what to do next in my career. The guidance is practical enough that I am planning to pick up more guides for my professional journey.",
-        source: "Anonymous newsletter subscriber and QA Guide reader",
+        source: "QA Engineer, 6 years experience",
       },
       {
         quote:
