@@ -1046,6 +1046,11 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     testimonials: [
       {
         quote:
+          "I subscribed to the newsletter and bought the QA Survival Guide. Both have given me real clarity about what to do next in my career. The guidance is practical enough that I am planning to pick up more guides for my professional journey.",
+        source: "Anonymous newsletter subscriber and QA Guide reader",
+      },
+      {
+        quote:
           "I highly recommend the QA Survival Guide by Sriram Advisory. It delivers practical insights and a structured approach that simplify complex QA concepts into actionable strategies. This guide is a valuable resource for both aspiring and experienced QA professionals, helping us stay confident and resilient in the real-world testing market.",
         source: "",
       },

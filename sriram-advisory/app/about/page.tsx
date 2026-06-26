@@ -36,7 +36,7 @@ const DIFFERENTIATORS = [
 ];
 
 const FOUNDER_FACTS = [
-  "AI Champion at Wipro",
+  "Active in enterprise AI delivery at Wipro",
   "100+ guide orders in the first 28 days",
   "SA-AIRS built from direct observation of how AI changes Indian IT work",
 ];
@@ -103,7 +103,7 @@ export default function AboutPage() {
                 Founder
               </div>
               <p style={{ marginTop: 16, marginBottom: 0, fontSize: 15, color: "#5a6a8a", lineHeight: 1.8 }}>
-                Former AI Champion at Wipro. Building practical career intelligence from the signals professionals see before the market names them.
+                Active in enterprise AI delivery at Wipro. Building practical career intelligence from the signals professionals see before the market names them.
               </p>
             </div>
           </div>

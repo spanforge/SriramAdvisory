@@ -158,7 +158,7 @@ const PROOF_LINKS = [
 ];
 
 const FEATURED_READER_FEEDBACK =
-  "I highly recommend the QA Survival Guide by Sriram Advisory. It delivers practical insights and a structured approach that simplify complex QA concepts into actionable strategies.";
+  "I subscribed to the newsletter and bought the QA Survival Guide. Both have given me real clarity about what to do next in my career. The guidance is practical enough that I am planning to pick up more guides for my professional journey.";
 
 export default function HomePage() {
   return (
@@ -325,6 +325,27 @@ export default function HomePage() {
                 <span style={{ color: "#0d9268", fontSize: 20, fontWeight: 800 }}>Rs 499</span>
                 role-specific AI career guides
               </Link>
+
+              <blockquote
+                style={{
+                  margin: "26px 0 0",
+                  maxWidth: 610,
+                  background: "#ffffff",
+                  border: "1px solid rgba(13,146,104,0.28)",
+                  borderLeft: "4px solid #0d9268",
+                  borderRadius: 8,
+                  padding: "18px 20px",
+                  color: "#304159",
+                  fontSize: 16,
+                  lineHeight: 1.7,
+                  boxShadow: "0 10px 24px rgba(10,22,40,0.06)",
+                }}
+              >
+                &quot;{FEATURED_READER_FEEDBACK}&quot;
+                <footer style={{ marginTop: 10, color: "#0d9268", fontSize: 12, fontWeight: 800, letterSpacing: "0.04em" }}>
+                  ANONYMOUS NEWSLETTER SUBSCRIBER AND QA GUIDE READER
+                </footer>
+              </blockquote>
             </div>
 
             <div
@@ -434,23 +455,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          <blockquote
-            style={{
-              margin: "28px 0 0",
-              maxWidth: 840,
-              background: "#ffffff",
-              borderLeft: "4px solid #0d9268",
-              padding: "24px 26px",
-              color: "#304159",
-              fontSize: 17,
-              lineHeight: 1.75,
-            }}
-          >
-            &quot;{FEATURED_READER_FEEDBACK}&quot;
-            <footer style={{ marginTop: 12, color: "#0d9268", fontSize: 13, fontWeight: 800 }}>
-              QA Survival Guide reader
-            </footer>
-          </blockquote>
         </div>
       </section>
 
