@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NAV_ITEMS } from "@/lib/siteCatalog";
 
 export default function Footer() {
   return (
@@ -65,12 +66,7 @@ export default function Footer() {
                 Explore
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
-                {[
-                  { label: "Career Intelligence", href: "/career-intelligence" },
-                  { label: "AI Champion", href: "/ai-champion" },
-                  { label: "Free Resources", href: "/free" },
-                  { label: "Services", href: "/services" },
-                ].map((item) => (
+                {NAV_ITEMS.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>
                       {item.label}
@@ -86,7 +82,6 @@ export default function Footer() {
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
-                  { label: "About", href: "/about" },
                   { label: "Contact", href: "/contact" },
                   { label: "FAQ", href: "/faq" },
                   { label: "Insights", href: "/insights" },
