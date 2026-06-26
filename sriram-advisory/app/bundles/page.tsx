@@ -246,6 +246,26 @@ export default function BundlesPage() {
                   }}
                 >
                   <div className="bundle-card-title-wrap" style={{ paddingRight: 0 }}>
+                    {bundle.badge && (
+                      <span
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          minHeight: 28,
+                          padding: "5px 10px",
+                          marginBottom: 12,
+                          borderRadius: 6,
+                          background: bundle.badge === "Best Value" ? "#b45309" : "#1a4fd6",
+                          color: "#ffffff",
+                          fontSize: 11,
+                          fontWeight: 800,
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        {bundle.badge}
+                      </span>
+                    )}
                     <p
                       style={{
                         fontSize: 11,
