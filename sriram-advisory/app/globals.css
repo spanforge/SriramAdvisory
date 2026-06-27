@@ -649,3 +649,53 @@ select:focus-visible {
 @media (max-width: 640px) {
   footer { padding: 40px 20px 28px !important; }
 }
+
+.mobile-card-action {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .mobile-card-action {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 10px 0 14px;
+  }
+
+  .desktop-card-action {
+    display: none !important;
+  }
+
+  .report-card-body {
+    padding: 18px 16px !important;
+    gap: 12px !important;
+  }
+
+  .report-card-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .report-card-body > div:first-child > div:last-child {
+    display: none !important;
+  }
+
+  .guides-catalog-card {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .guides-card-copy p:last-child {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .guides-card-tags {
+    display: none !important;
+  }
+}

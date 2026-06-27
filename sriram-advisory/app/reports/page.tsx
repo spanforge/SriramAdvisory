@@ -88,7 +88,7 @@ export default function ReportsPage() {
           {REPORTS.map((report) => (
             <Link key={report.href} href={report.href} style={{ textDecoration: "none" }}>
               <div
-                className="guide-card guide-card-body"
+                className="guide-card guide-card-body report-card-body"
                 style={{
                   background: report.bgGradient,
                   border: `1.5px solid ${report.borderColor}`,
@@ -127,6 +127,27 @@ export default function ReportsPage() {
                   <p style={{ fontSize: 14, fontWeight: 700, color: report.accentColor, marginBottom: 12 }}>
                     {report.subtitle}
                   </p>
+                  <div className="mobile-card-action">
+                    <div style={{ fontSize: 24, fontWeight: 800, color: report.accentColor }}>{report.price}</div>
+                    <div
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: 6,
+                        background: report.accentColor,
+                        color: "#fff",
+                        fontSize: 13,
+                        fontWeight: 800,
+                        padding: "11px 18px",
+                        borderRadius: 8,
+                        letterSpacing: "0.01em",
+                        minWidth: 140,
+                      }}
+                    >
+                      View report {"->"}
+                    </div>
+                  </div>
                   <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.7, marginBottom: 14 }}>
                     {report.blurb}
                   </p>
@@ -138,7 +159,7 @@ export default function ReportsPage() {
                     ))}
                   </div>
                 </div>
-                <div className="guide-card-price-col">
+                <div className="guide-card-price-col desktop-card-action">
                   <div style={{ fontSize: 28, fontWeight: 800, color: report.accentColor }}>{report.price}</div>
                   <div
                     style={{

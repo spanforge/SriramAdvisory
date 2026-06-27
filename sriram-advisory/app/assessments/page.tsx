@@ -123,12 +123,32 @@ export default function AssessmentsPage() {
                 <h3 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 800, color: "#0a1628", marginBottom: 12 }}>
                   {item.title}
                 </h3>
+                <Link
+                  href={item.href}
+                  className="mobile-card-action"
+                  style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 6,
+                    background: item.accentColor,
+                    color: "#fff",
+                    fontSize: 13,
+                    fontWeight: 800,
+                    padding: "11px 18px",
+                    borderRadius: 8,
+                    textDecoration: "none",
+                    letterSpacing: "0.01em",
+                    width: "100%",
+                  }}
+                >
+                  {item.cta}
+                </Link>
                 <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.75, marginBottom: 0 }}>
                   {item.body}
                 </p>
               </div>
 
-              <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+              <div className="desktop-card-action" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                 <Link
                   href={item.href}
                   style={{

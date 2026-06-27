@@ -60,17 +60,13 @@ export type FreeResourceItem = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Reports", href: "/reports" },
+  { label: "Home", href: "/" },
+  { label: "Assessments", href: "/assessments" },
   { label: "Guides", href: "/guides" },
-  { label: "Bundles", href: "/bundles" },
-  { label: "Services", href: "/services" },
-  {
-    label: "AI Delivery",
-    footerLabel: "AI Delivery Intelligence",
-    href: "/ai-delivery-intelligence",
-  },
-  { label: "Free Resources", href: "/free" },
+  { label: "Reports", href: "/reports" },
+  { label: "Newsletter", href: "/#newsletter" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const REPORTS: ReportItem[] = [

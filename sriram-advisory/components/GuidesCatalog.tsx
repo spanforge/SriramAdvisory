@@ -310,7 +310,7 @@ export default function GuidesCatalog({
                   border: `1.5px solid ${guide.borderColor}`,
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "flex-start" }}>
+                <div className="guides-card-header" style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "flex-start" }}>
                   {guide.badge && (
                     <span
                       style={{
@@ -335,7 +335,7 @@ export default function GuidesCatalog({
                   </div>
                 </div>
 
-                <div>
+                <div className="guides-card-copy">
                   <h3
                     style={{
                       fontSize: "clamp(20px, 2.2vw, 24px)",
@@ -349,10 +349,26 @@ export default function GuidesCatalog({
                   <p style={{ fontSize: 14, fontWeight: 700, color: guide.accentColor, marginBottom: 12 }}>
                     {guide.subtitle}
                   </p>
+                  <Link
+                    href={guide.href}
+                    className="mobile-card-action"
+                    style={{
+                      textDecoration: "none",
+                      background: guide.accentColor,
+                      color: "#ffffff",
+                      borderRadius: 10,
+                      padding: "12px 16px",
+                      fontSize: 14,
+                      fontWeight: 800,
+                      textAlign: "center",
+                    }}
+                  >
+                    View guide {"->"}
+                  </Link>
                   <p style={{ fontSize: 14, color: "#425472", lineHeight: 1.7, margin: 0 }}>{guide.blurb}</p>
                 </div>
 
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                <div className="guides-card-tags" style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {[guide.role, guide.timeline, guide.riskScore, guide.focus].map((item) => (
                     <span
                       key={item}
@@ -373,6 +389,7 @@ export default function GuidesCatalog({
 
                 <Link
                   href={guide.href}
+                  className="desktop-card-action"
                   style={{
                     marginTop: "auto",
                     display: "inline-flex",

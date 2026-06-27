@@ -57,7 +57,7 @@ export default function NewsletterSignup({ compact = false }: NewsletterSignupPr
         disabled={status === "submitting"}
         style={{ minHeight: 48, padding: "0 18px", border: "none", borderRadius: 8, background: compact ? "#ffffff" : "#1a4fd6", color: compact ? "#0a1628" : "#ffffff", fontSize: 14, fontWeight: 800, cursor: status === "submitting" ? "wait" : "pointer" }}
       >
-        {status === "submitting" ? "Joining..." : "Subscribe"}
+        {status === "submitting" ? "Joining..." : compact ? "Download Free Book" : "Subscribe"}
       </button>
       {status === "error" && <p style={{ width: "100%", margin: 0, fontSize: 13, color: compact ? "#fecaca" : "#b91c1c" }}>Could not subscribe. Please try again.</p>}
     </form>

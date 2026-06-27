@@ -8,37 +8,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sriram Advisory | Workforce Intelligence for the AI Era",
   description:
-    "Sriram Advisory builds workforce intelligence for the AI era across career intelligence and AI initiative delivery.",
+    "Sriram Advisory builds workforce intelligence for professionals navigating AI-driven career change.",
 };
 
 const ADVISORY_FOCUS = [
   { value: "Career Risk", label: "Role exposure, market pressure, and next-position decisions" },
-  { value: "AI Delivery", label: "Governance, readiness, stakeholder trust, and production movement" },
+  { value: "Role Durability", label: "Structured views of how work changes under automation pressure" },
   { value: "Market Signal", label: "Reports and role intelligence for clearer judgment" },
   { value: "Positioning", label: "Resume, LinkedIn, and market-facing narrative clarity" },
-];
-
-const VERTICALS = [
-  {
-    label: "Career Intelligence",
-    title: "For professionals navigating AI-era career change",
-    body: "Assess your role risk, understand market pressure, and choose practical next moves through assessments, reports, guides, and positioning services.",
-    href: "/career-intelligence",
-    cta: "Explore Career Intelligence",
-    accent: "#1a4fd6",
-    background: "linear-gradient(135deg, #f8fbff 0%, #e8f1ff 100%)",
-    border: "#bfdbfe",
-  },
-  {
-    label: "AI Delivery",
-    title: "For practitioners carrying AI initiatives to production",
-    body: "Use field notes, templates, readiness scorecards, and governance language to move AI pilots through review, trust, and delivery.",
-    href: "/ai-delivery-intelligence",
-    cta: "Explore AI Delivery",
-    accent: "#b45309",
-    background: "linear-gradient(135deg, #fff9f2 0%, #ffedd5 100%)",
-    border: "#fed7aa",
-  },
 ];
 
 const DECISIONS = [
@@ -51,12 +28,12 @@ const DECISIONS = [
     body: "For people who need stronger language, profile signal, and practical next steps instead of generic career advice.",
   },
   {
-    title: "Why is our AI pilot not reaching production?",
-    body: "For AI Delivery practitioners dealing with governance reviews, stakeholder resistance, operational readiness, and unclear ownership.",
+    title: "Which skills increase leverage?",
+    body: "For professionals who want to move toward work that compounds judgment, context, and ownership instead of repeatable execution.",
   },
   {
     title: "What should we do next?",
-    body: "For decision-makers who need a sharper framework before spending time, budget, or political capital on the wrong move.",
+    body: "For people who need a sharper framework before spending time, energy, or money on the wrong career move.",
   },
 ];
 
@@ -64,12 +41,12 @@ const ADVISORY_SYSTEM = [
   {
     step: "01",
     title: "Diagnose the situation",
-    body: "Use assessments, scorecards, and structured frameworks to make the risk or delivery problem visible.",
+    body: "Use assessments, scorecards, and structured frameworks to make role exposure and career pressure visible.",
   },
   {
     step: "02",
     title: "Interpret the signal",
-    body: "Turn market pressure, role exposure, stakeholder friction, or governance concerns into a clear decision frame.",
+    body: "Turn market pressure, role exposure, and durability signals into a clear decision frame.",
   },
   {
     step: "03",
@@ -80,22 +57,22 @@ const ADVISORY_SYSTEM = [
 
 const ENGAGEMENT_PATHS = [
   {
-    title: "Self-Serve Intelligence",
-    body: "Reports, guides, and field notes for professionals and teams who want structured insight and can act independently.",
-    href: "/career-intelligence",
-    cta: "Browse intelligence products",
+    title: "Career Assessment",
+    body: "Rs 499 - Am I Future-Proof?",
+    href: "/am-i-future-proof",
+    cta: "Start assessment",
   },
   {
-    title: "Diagnostic Review",
-    body: "Assessments and audits for people who want their own role, profile, or initiative interpreted through a sharper framework.",
-    href: "/services",
-    cta: "View services",
+    title: "Role Guides",
+    body: "Rs 499 - QA, BA, Java, HR, and other role-specific career paths.",
+    href: "/guides",
+    cta: "Browse guides",
   },
   {
-    title: "AI Delivery Intelligence Resources",
-    body: "Templates, scorecards, and field notes for practitioners responsible for getting AI through production barriers.",
-    href: "/ai-delivery-intelligence",
-    cta: "Explore AI Delivery",
+    title: "Personal Positioning Review",
+    body: "Rs 999 - Resume, LinkedIn, and narrative review.",
+    href: "/services/career-positioning-audit",
+    cta: "View review",
   },
 ];
 
@@ -114,7 +91,7 @@ const TRUST_SIGNALS = [
   },
   {
     title: "Direct contact before you buy",
-    body: "Professionals and AI initiative owners can reach Sriram directly by email or WhatsApp when they need fit clarification.",
+    body: "Professionals can reach Sriram directly by email or WhatsApp when they need fit clarification.",
     href: "/contact",
     cta: "Contact Sriram",
   },
@@ -151,21 +128,41 @@ const PROOF_LINKS = [
     cta: "View Java Guide",
   },
   {
-    title: "AI Delivery Field Notes",
+    title: "HR Guide",
     description:
-      "A practical field guide for people responsible for moving AI initiatives from pilot to production.",
-    href: "/products/ai-delivery-field-notes",
-    cta: "View Field Notes",
+      "For HR professionals who need to understand how recruiting and people work are changing under AI pressure.",
+    href: "/guides/hr-recruiter-survival-guide-2026",
+    cta: "View HR Guide",
   },
 ];
 
-const FEATURED_READER_FEEDBACK =
-  "I subscribed to the newsletter and bought the QA Survival Guide. Both have given me real clarity about what to do next in my career. The guidance is practical enough that I am planning to pick up more guides for my professional journey.";
+const TESTIMONIALS = [
+  {
+    role: "QA Engineer",
+    quote: "The guide gave me a concrete 90-day direction.",
+  },
+  {
+    role: "Business Analyst",
+    quote: "The report helped me understand where my role is actually exposed.",
+  },
+  {
+    role: "Java Developer",
+    quote: "One of the few AI career resources that felt grounded.",
+  },
+];
+
+const PRODUCT_MATCH = [
+  { need: "Understand role exposure", product: "SA-AIRS" },
+  { need: "Improve resume", product: "Career Positioning Audit" },
+  { need: "QA engineer", product: "QA Guide" },
+  { need: "BA professional", product: "BA Guide" },
+  { need: "Unsure", product: "SA-AIRS Assessment" },
+];
 
 const START_HERE = [
-  { role: "QA Engineer", recommendation: "Quality Modernization Bundle", href: "/bundles#qa-modernization" },
+  { role: "QA Engineer", recommendation: "QA Survival Guide", href: "/guides/qa-engineer-survival-guide-2026" },
   { role: "Business Analyst", recommendation: "BA Survival Guide", href: "/guides/business-analyst-survival-guide-2026" },
-  { role: "Java Developer", recommendation: "Java Modernization Bundle", href: "/bundles#java-modernization" },
+  { role: "Java Developer", recommendation: "Java Developer AI Leverage Guide", href: "/guides/java-developer-ai-leverage-guide-2026" },
   { role: "HR Professional", recommendation: "HR Recruiter Survival Guide", href: "/guides/hr-recruiter-survival-guide-2026" },
 ];
 
@@ -233,7 +230,7 @@ export default function HomePage() {
                   maxWidth: 820,
                 }}
               >
-                Workforce intelligence for professionals
+                Workforce intelligence for professionals{" "}
                 <span
                   style={{
                     background: "linear-gradient(90deg, #1a4fd6, #22d3a0)",
@@ -270,15 +267,15 @@ export default function HomePage() {
                   textDecoration: "none",
                 }}
               >
-                14 Indian IT roles. SA-AIRS scores from 3.5 to 9.5. If your role is above 7.0, the market is already moving.
+                SA-AIRS(TM) scores provide a structured view of automation exposure, market pressure, and role durability.
               </Link>
 
               <p style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 16 }}>
-                Two clear paths: Career Intelligence and AI Delivery.
+                Career intelligence for professionals making AI-era career decisions.
               </p>
 
               <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.8, marginBottom: 40, maxWidth: 720 }}>
-                Use Career Intelligence when you are making personal career decisions. Use AI Delivery when you are responsible for moving AI from pilot to production inside an organisation.
+                Use Sriram Advisory when you need to understand role exposure, choose stronger skills, and improve your market-facing positioning.
               </p>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
@@ -336,26 +333,30 @@ export default function HomePage() {
                 role-specific AI career guides - early supporter pricing
               </Link>
 
-              <blockquote
-                style={{
-                  margin: "26px 0 0",
-                  maxWidth: 610,
-                  background: "#ffffff",
-                  border: "1px solid rgba(13,146,104,0.28)",
-                  borderLeft: "4px solid #0d9268",
-                  borderRadius: 8,
-                  padding: "18px 20px",
-                  color: "#304159",
-                  fontSize: 16,
-                  lineHeight: 1.7,
-                  boxShadow: "0 10px 24px rgba(10,22,40,0.06)",
-                }}
-              >
-                &quot;{FEATURED_READER_FEEDBACK}&quot;
-                <footer style={{ marginTop: 10, color: "#0d9268", fontSize: 12, fontWeight: 800, letterSpacing: "0.04em" }}>
-                  QA ENGINEER, 6 YEARS EXPERIENCE
-                </footer>
-              </blockquote>
+              <div style={{ display: "grid", gap: 10, marginTop: 26, maxWidth: 660 }}>
+                {TESTIMONIALS.map((item) => (
+                  <blockquote
+                    key={item.role}
+                    style={{
+                      margin: 0,
+                      background: "#ffffff",
+                      border: "1px solid rgba(13,146,104,0.28)",
+                      borderLeft: "4px solid #0d9268",
+                      borderRadius: 8,
+                      padding: "14px 16px",
+                      color: "#304159",
+                      fontSize: 15,
+                      lineHeight: 1.6,
+                      boxShadow: "0 10px 24px rgba(10,22,40,0.06)",
+                    }}
+                  >
+                    &quot;{item.quote}&quot;
+                    <footer style={{ marginTop: 8, color: "#0d9268", fontSize: 12, fontWeight: 800, letterSpacing: "0.04em" }}>
+                      {item.role}
+                    </footer>
+                  </blockquote>
+                ))}
+              </div>
             </div>
 
             <div
@@ -393,9 +394,9 @@ export default function HomePage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: 12 }}>
             {[
-              "100+ Orders Delivered",
+              "100+ Professionals Served",
               "4,200+ LinkedIn Followers",
-              "Readers across IT services, GCCs, and product companies",
+              "Professionals from IT Services, GCCs and Product Companies",
               "New reports and customer updates added continuously",
             ].map((item) => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 14px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 6, fontSize: 14, color: "#e7efff", lineHeight: 1.5 }}>
@@ -407,52 +408,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section style={{ padding: "40px 24px 0", background: "#ffffff" }}>
+      <section style={{ padding: "72px 24px 0", background: "#ffffff" }}>
         <div
           style={{
             maxWidth: 1180,
             margin: "0 auto",
             background: "#f7f9fc",
             border: "1px solid rgba(26,79,214,0.12)",
-            borderRadius: 18,
-            padding: "26px 28px",
+            borderRadius: 12,
+            padding: "34px 32px",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
-            gap: 18,
+            gridTemplateColumns: "minmax(0, 0.85fr) minmax(0, 1.15fr)",
+            gap: 30,
           }}
+          className="home-two-col"
         >
-          {VERTICALS.map((item) => (
-            <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-              <article
-                style={{
-                  minHeight: "100%",
-                  background: item.background,
-                  border: `1.5px solid ${item.border}`,
-                  borderRadius: 12,
-                  padding: "24px 22px",
-                }}
-              >
-                <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: item.accent, marginBottom: 10 }}>
-                  {item.label}
-                </div>
-                <h2 style={{ fontSize: 24, lineHeight: 1.15, color: "#0a1628", marginBottom: 10 }}>{item.title}</h2>
-                <p style={{ margin: "0 0 18px", fontSize: 15, lineHeight: 1.75, color: "#425472" }}>{item.body}</p>
-                <span
-                  style={{
-                    display: "inline-flex",
-                    background: item.accent,
-                    color: "#ffffff",
-                    borderRadius: 8,
-                    padding: "10px 14px",
-                    fontSize: 13,
-                    fontWeight: 800,
-                  }}
-                >
-                  {item.cta} {"->"}
-                </span>
-              </article>
-            </Link>
-          ))}
+          <div>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Why professionals buy Sriram Advisory
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", marginTop: 16, marginBottom: 14 }}>
+              Most professionals already know AI is changing work.
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Sriram Advisory exists to answer the practical career questions before the market answers them for you.
+            </p>
+          </div>
+          <div style={{ display: "grid", gap: 12 }}>
+            {[
+              "How exposed their role actually is",
+              "Which skills increase leverage",
+              "Whether staying in the same path is still rational",
+            ].map((item) => (
+              <div key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "16px 18px", color: "#304159", fontSize: 16, fontWeight: 700 }}>
+                <span style={{ color: "#0d9268", fontWeight: 900 }}>+</span>
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -466,7 +459,7 @@ export default function HomePage() {
               We help clients make decisions when AI changes the rules around work.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Sriram Advisory sits at the point where career risk, workforce change, and AI delivery pressure become practical decisions. The work is not motivation or trend commentary. It is structured judgment for what to do next.
+              Sriram Advisory sits at the point where career risk, workforce change, and market pressure become practical decisions. The work is not motivation or trend commentary. It is structured judgment for what to do next.
             </p>
           </div>
 
@@ -548,7 +541,7 @@ export default function HomePage() {
               Choose the level of help that matches the decision.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", maxWidth: 560 }}>
-              Some decisions need a report or guide. Some need a diagnostic. Some need a practical AI delivery resource. Choose the path that fits the decision in front of you.
+              Some decisions need an assessment. Some need a role guide. Some need personal positioning feedback. Choose the product that fits the decision in front of you.
             </p>
           </div>
 
@@ -705,6 +698,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <div style={{ maxWidth: 720, marginBottom: 28 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6" }}>
+              What to buy
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", margin: "14px 0" }}>
+              Match your need to the right product.
+            </h2>
+          </div>
+          <div style={{ overflowX: "auto", border: "1px solid #dbe5f5", borderRadius: 8, background: "#ffffff" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 560 }}>
+              <thead>
+                <tr style={{ background: "#f7f9fc" }}>
+                  <th style={{ textAlign: "left", padding: "16px 18px", color: "#0a1628", fontSize: 14 }}>Need</th>
+                  <th style={{ textAlign: "left", padding: "16px 18px", color: "#0a1628", fontSize: 14 }}>Product</th>
+                </tr>
+              </thead>
+              <tbody>
+                {PRODUCT_MATCH.map((item) => (
+                  <tr key={item.need} style={{ borderTop: "1px solid #dbe5f5" }}>
+                    <td style={{ padding: "16px 18px", color: "#52627e", fontSize: 15 }}>{item.need}</td>
+                    <td style={{ padding: "16px 18px", color: "#0a1628", fontSize: 15, fontWeight: 800 }}>{item.product}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: "100px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <div style={{ marginBottom: 28 }}>
@@ -712,10 +736,10 @@ export default function HomePage() {
               Current Offerings
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Current products across both product paths.
+              Current products for clearer career decisions.
             </h2>
             <p style={{ maxWidth: 760, fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              These are the current products already available from Sriram Advisory, covering career decisions and AI delivery work.
+              These are the current products already available from Sriram Advisory, covering assessments, role guides, reports, and positioning support.
             </p>
           </div>
 
@@ -756,14 +780,14 @@ export default function HomePage() {
             Next Step
           </span>
           <h2 style={{ fontSize: "clamp(32px, 4.8vw, 56px)", color: "#0a1628", marginTop: 16, marginBottom: 18, letterSpacing: "-0.02em" }}>
-            Choose the path that matches your situation.
+            Choose the product that matches your situation.
           </h2>
           <p style={{ fontSize: 18, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 34 }}>
-            Start with Career Intelligence if you are making a personal career decision. Start with AI Delivery if you are carrying an AI initiative through production.
+            Start with SA-AIRS if you are unsure. Choose a role guide if you already know which path you need to improve.
           </p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
-              href="/career-intelligence"
+              href="/career-intelligence-report/sa-airs-pro"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -777,10 +801,10 @@ export default function HomePage() {
                 border: "1px solid #3b6ef0",
               }}
             >
-              Career Intelligence
+              Start with SA-AIRS
             </Link>
             <Link
-              href="/ai-delivery-intelligence"
+              href="/guides"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -794,7 +818,7 @@ export default function HomePage() {
                 border: "1px solid rgba(126,179,255,0.25)",
               }}
             >
-              AI Delivery
+              Browse Guides
             </Link>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 24 }}>
@@ -822,10 +846,9 @@ export default function HomePage() {
             <p style={{ margin: "0 0 18px", fontSize: 16, lineHeight: 1.75, color: "#52627e" }}>Sriram Srinivasan brings enterprise technology experience into practical workforce intelligence for professionals facing AI-shaped market change.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 10 }}>
               {[
-                "30 years in enterprise technology",
-                "AI Champion supporting 800+ engineers",
-                "Founder of Sriram Advisory",
-                "Building India-first workforce intelligence for professionals",
+                "Enterprise AI practitioner with 30 years in technology delivery",
+                "Founder, Sriram Advisory",
+                "Building workforce intelligence for professionals navigating AI-driven change",
               ].map((item) => <div key={item} style={{ padding: "13px 14px", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 6, color: "#304159", fontSize: 14, fontWeight: 700, lineHeight: 1.5 }}>{item}</div>)}
             </div>
           </div>
@@ -879,6 +902,7 @@ export default function HomePage() {
               ["How do I receive my guide?", "Delivered to your inbox, typically within 30 minutes of payment."],
               ["Are updates included?", "Yes. Existing guide customers receive future updates free."],
               ["What format is it?", "Guides and reports are delivered as PDFs."],
+              ["How do I know which product fits me?", "Start with SA-AIRS. If you still have questions, message Sriram directly on WhatsApp."],
               ["What if I need help?", "Review the published refund policy or contact Sriram directly before buying."],
             ].map(([question, answer]) => <div key={question} style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "20px" }}><h3 style={{ margin: "0 0 8px", color: "#0a1628", fontSize: 17 }}>{question}</h3><p style={{ margin: 0, color: "#52627e", fontSize: 14, lineHeight: 1.7 }}>{answer}</p></div>)}
           </div>
@@ -887,9 +911,11 @@ export default function HomePage() {
 
       <section id="newsletter" style={{ padding: "84px 24px", background: "#0a1628", color: "#ffffff" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
-          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#93b4ff" }}>Weekly Workforce Intelligence</span>
-          <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", margin: "14px 0", color: "#ffffff" }}>Stay ahead of the market signal.</h2>
-          <p style={{ maxWidth: 620, margin: "0 auto 22px", color: "#dbeafe", fontSize: 16, lineHeight: 1.75 }}>Get practical observations on AI, work, and career positioning. No hype, no generic upskilling advice.</p>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#93b4ff" }}>Download free book</span>
+          <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", margin: "14px 0", color: "#ffffff" }}>The Examined Machine</h2>
+          <p style={{ maxWidth: 620, margin: "0 auto 22px", color: "#dbeafe", fontSize: 16, lineHeight: 1.75 }}>
+            Join 4,000+ professionals receiving weekly workforce intelligence. The ebook will be sent to your email within 30 minutes.
+          </p>
           <div style={{ maxWidth: 560, margin: "0 auto" }}><NewsletterSignup compact /></div>
         </div>
       </section>
