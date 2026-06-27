@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -934,6 +935,11 @@ export default function HomePage() {
       </section>
 
       <section id="newsletter" style={{ padding: "84px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <Script
+          id="beehiiv-attribution"
+          src="https://subscribe-forms.beehiiv.com/attribution.js"
+          strategy="afterInteractive"
+        />
         <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
           <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#93b4ff" }}>Download free book</span>
           <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", margin: "14px 0", color: "#ffffff" }}>The Examined Machine</h2>
