@@ -251,8 +251,34 @@ export default function HomePage() {
                   maxWidth: 700,
                 }}
               >
-                We study work, measure AI exposure, and help you position yourself before the market forces you to.
+                We study work, measure AI exposure, and help professionals reposition before the market forces them to.
               </p>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "8px 12px",
+                  maxWidth: 700,
+                  marginBottom: 20,
+                  color: "#0a1628",
+                  fontSize: 14,
+                  fontWeight: 800,
+                  lineHeight: 1.5,
+                }}
+              >
+                {[
+                  "100+ Professionals Served",
+                  "4,200+ Followers",
+                  "20+ Industries Covered",
+                  "100+ Roles Studied",
+                ].map((item, index) => (
+                  <span key={item} style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
+                    {index > 0 && <span style={{ color: "#93a4bf" }}>{"•"}</span>}
+                    {item}
+                  </span>
+                ))}
+              </div>
 
               <Link
                 href="/guides"
