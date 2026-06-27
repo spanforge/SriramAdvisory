@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/guides/java-developer-ai-leverage-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/selenium-engineer-upgrade-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/guides/data-analyst-career-guide-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/guides/fresher-ai-survival-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/services/career-positioning-audit`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/products`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

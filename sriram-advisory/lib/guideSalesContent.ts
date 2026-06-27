@@ -1677,6 +1677,127 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       finalGradient: "linear-gradient(160deg, #260918 0%, #5e1132 60%, #831843 100%)",
     },
   },
+  "fresher-ai-survival-guide": {
+    productName: "Fresher AI Survival Guide",
+    title: "Fresher",
+    accentTitle: "AI Survival Guide",
+    score: "Entry-Level",
+    riskLabel: "High Competition, High Repositioning Upside",
+    editionLabel: "India 2026 Edition",
+    heroSummary:
+      "Understand how AI is changing entry-level hiring, why generic fresher positioning is becoming weaker, and how to build a sharper first-job story around skills, proof, tools, projects, and business awareness.",
+    heroNote:
+      "The goal is not to compete as one more fresher with a copied resume. The goal is to look like someone already learning how modern work gets done.",
+    outcomeBullets: [
+      "A 90-day direction for first-job readiness",
+      "Clearer positioning beyond generic fresher claims",
+      "India-first guidance for AI-era entry-level hiring",
+    ],
+    promiseBullets: [
+      "Decode what AI changes in fresher hiring, screening, and expectations",
+      "Build stronger proof through projects, tools, communication, and role clarity",
+      "Create a sharper resume, LinkedIn, and interview story for early opportunities",
+    ],
+    whatYouGet: [
+      {
+        title: "AI-era fresher hiring clarity",
+        desc: "A direct explanation of why entry-level roles are becoming more selective and what employers now expect from freshers who want to stand out.",
+      },
+      {
+        title: "90-day readiness direction",
+        desc: "A practical path for building visible proof, role understanding, and market signal without getting lost in endless courses.",
+      },
+      {
+        title: "First-job positioning guidance",
+        desc: "Help turning projects, internships, academic work, certifications, and self-learning into a clearer career story.",
+      },
+      {
+        title: "AI tool-use advantage",
+        desc: "Guidance on using AI tools responsibly for learning, research, documentation, coding support, job search preparation, and better communication.",
+      },
+      {
+        title: "Resume and LinkedIn signal",
+        desc: "A practical view of what makes an early-career profile look sharper than a generic template-based fresher profile.",
+      },
+      {
+        title: "Interview and role-readiness lens",
+        desc: "How to talk about what you know, what you built, how you learn, and where you can contribute without overclaiming.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "Why entry-level hiring is getting tougher in the AI era",
+          "What makes a fresher profile look generic or credible",
+          "How to use AI as a learning and execution advantage without sounding fake",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "A 90-day first-job readiness direction",
+          "A clearer resume and LinkedIn positioning lens",
+          "A stronger way to explain projects, internships, and self-learning",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A guaranteed job promise",
+          "A technical course or certification substitute",
+          "Generic motivation that ignores the Indian fresher market",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "Generic Fresher",
+        desc: "Your profile depends on degree, keywords, copied projects, and broad claims that many other candidates also use.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "Proof-Building Candidate",
+        desc: "You begin to show projects, tool fluency, communication, role understanding, and clearer evidence of learning speed.",
+        color: "#0f4c81",
+      },
+      {
+        stage: "Stage 3",
+        title: "AI-Ready Early Professional",
+        desc: "You are positioned as someone who can learn faster, use modern tools well, and contribute with better clarity from day one.",
+        color: "#0f766e",
+      },
+    ],
+    forYou: [
+      "You are a fresher, final-year student, recent graduate, or early-career professional in India.",
+      "You are worried that AI is reducing entry-level openings or making basic skills less valuable.",
+      "You want a practical direction for building proof instead of collecting random courses.",
+      "You need a stronger resume, LinkedIn, project, and interview story for your first serious opportunity.",
+      "You want to understand how to use AI tools without becoming dependent on shortcuts.",
+    ],
+    notForYou: [
+      "You want a guaranteed placement promise or job referral service.",
+      "You want a full technical training program in coding, data, testing, cloud, or AI engineering.",
+      "You already have a strong specialized portfolio and only need advanced senior-level career strategy.",
+    ],
+    ctaTitle: "Stop looking like every other fresher.",
+    ctaBody:
+      "Use this guide to build a clearer first-job story, stronger proof, and a practical AI-era direction for entering the market.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#0f4c81",
+      accentSoft: "#93c5fd",
+      accentStrong: "#0f766e",
+      heroGradient: "linear-gradient(135deg, #06111f 0%, #0f2f4d 55%, #0f4c81 100%)",
+      heroText: "rgba(220,238,255,0.86)",
+      sectionTint: "#eff6ff",
+      sectionBorder: "#93c5fd",
+      panelTint: "#f8fbff",
+      finalGradient: "linear-gradient(160deg, #06111f 0%, #0f2f4d 60%, #0f766e 100%)",
+    },
+  },
   "devops-survival-guide-2026": {
     productName: "DevOps Survival Guide 2026",
     title: "DevOps",

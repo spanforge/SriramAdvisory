@@ -359,6 +359,22 @@ export const GUIDES: GuideItem[] = [
     riskScore: "SA-AIRS score 8.6/10",
     focus: "AI-era HR leverage",
   },
+  {
+    badge: "New",
+    title: "Fresher AI Survival Guide",
+    subtitle: "Entry-level AI-era career clarity. 90-day direction. First-job positioning.",
+    blurb:
+      "For freshers and early-career professionals who want to understand what AI changes in entry-level hiring, how to avoid generic fresher positioning, and how to build stronger proof for the first serious opportunity.",
+    price: "Rs 499",
+    href: "/guides/fresher-ai-survival-guide",
+    accentColor: "#0f4c81",
+    bgGradient: "linear-gradient(135deg, #f4faff 0%, #dceeff 100%)",
+    borderColor: "#93c5fd",
+    role: "Fresher / Early Career",
+    timeline: "90-day direction",
+    riskScore: "Entry-level exposure",
+    focus: "First-job positioning",
+  },
 ];
 
 export const SERVICES: ServiceItem[] = [
