@@ -40,7 +40,7 @@ export default function ContactPage() {
           <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 20 }}>Get in Touch</span>
           <h1 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, marginBottom: 20, letterSpacing: "-0.02em" }}>Contact</h1>
           <p style={{ fontSize: 18, color: "#5a6a8a", lineHeight: 1.7 }}>
-            Questions about career intelligence, AI Delivery resources, services, or delivery? Contact Sriram directly.
+            Questions about assessments, guides, reports, or career positioning? Contact Sriram directly.
           </p>
         </div>
       </section>

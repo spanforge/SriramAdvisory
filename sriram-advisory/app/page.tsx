@@ -267,7 +267,7 @@ export default function HomePage() {
               >
                 {[
                   "100+ Professionals Served",
-                  "4,200+ Followers",
+                  "4,400+ Followers",
                   "20+ Industries Covered",
                   "100+ Roles Studied",
                 ].map((item, index) => (
@@ -419,7 +419,7 @@ export default function HomePage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: 12 }}>
             {[
               "100+ Professionals Served",
-              "4,200+ LinkedIn Followers",
+              "4,400+ LinkedIn Followers",
               "Professionals from IT Services, GCCs and Product Companies",
               "New reports and customer updates added continuously",
             ].map((item) => (
@@ -661,7 +661,7 @@ export default function HomePage() {
             </div>
             <div style={{ marginTop: 22 }}>
               <Link
-                href="/career-intelligence"
+                href="/assessments"
                 style={{
                   color: "#1a4fd6",
                   fontWeight: 700,
@@ -670,7 +670,7 @@ export default function HomePage() {
                   paddingBottom: 2,
                 }}
               >
-                Explore Career Intelligence
+                Explore Assessments
               </Link>
             </div>
           </div>
