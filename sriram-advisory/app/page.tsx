@@ -2,7 +2,6 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import ExitNewsletterPrompt from "@/components/ExitNewsletterPrompt";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -170,7 +169,6 @@ export default function HomePage() {
   return (
     <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
-      <ExitNewsletterPrompt />
 
       <section
         style={{
