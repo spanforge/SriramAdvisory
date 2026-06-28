@@ -68,6 +68,12 @@ const ENGAGEMENT_PATHS = [
     cta: "Browse guides",
   },
   {
+    title: "Career Bundles",
+    body: "Rs 799+ - Role guide, report, and deep-dive stacks for stronger decisions.",
+    href: "/bundles",
+    cta: "View bundles",
+  },
+  {
     title: "Personal Positioning Review",
     body: "Rs 999 - Resume, LinkedIn, and narrative review.",
     href: "/services/career-positioning-audit",
@@ -155,13 +161,14 @@ const PRODUCT_MATCH = [
   { need: "Improve resume", product: "Career Positioning Audit" },
   { need: "QA engineer", product: "QA Guide" },
   { need: "BA professional", product: "BA Guide" },
+  { need: "Need more than one asset", product: "Role or intelligence bundle" },
   { need: "Unsure", product: "SA-AIRS Assessment" },
 ];
 
 const START_HERE = [
-  { role: "QA Engineer", recommendation: "QA Survival Guide", href: "/guides/qa-engineer-survival-guide-2026" },
+  { role: "QA Engineer", recommendation: "QA Survival Guide or QA Bundle", href: "/bundles#qa-modernization" },
   { role: "Business Analyst", recommendation: "BA Survival Guide", href: "/guides/business-analyst-survival-guide-2026" },
-  { role: "Java Developer", recommendation: "Java Developer AI Leverage Guide", href: "/guides/java-developer-ai-leverage-guide-2026" },
+  { role: "Java Developer", recommendation: "Java Guide or Java Bundle", href: "/bundles#java-modernization" },
   { role: "HR Professional", recommendation: "HR Recruiter Survival Guide", href: "/guides/hr-recruiter-survival-guide-2026" },
 ];
 
@@ -322,7 +329,7 @@ export default function HomePage() {
                   Get My SA-AIRS(TM) Score
                 </Link>
                 <Link
-                  href="/guides"
+                  href="/bundles"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -336,12 +343,12 @@ export default function HomePage() {
                     border: "1px solid rgba(126,179,255,0.25)",
                   }}
                 >
-                  Browse Career Guides
+                  Browse Bundles
                 </Link>
               </div>
 
               <Link
-                href="/guides"
+                href="/bundles"
                 style={{
                   display: "inline-flex",
                   alignItems: "baseline",
@@ -353,8 +360,8 @@ export default function HomePage() {
                   fontWeight: 600,
                 }}
               >
-                <span style={{ color: "#0d9268", fontSize: 20, fontWeight: 800 }}>Rs 499</span>
-                role-specific AI career guides - early supporter pricing
+                <span style={{ color: "#0d9268", fontSize: 20, fontWeight: 800 }}>Rs 799+</span>
+                role bundles combine guides and reports for fuller context
               </Link>
 
               <div style={{ display: "grid", gap: 10, marginTop: 26, maxWidth: 660 }}>
@@ -565,7 +572,7 @@ export default function HomePage() {
               Choose the level of help that matches the decision.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", maxWidth: 560 }}>
-              Some decisions need an assessment. Some need a role guide. Some need personal positioning feedback. Choose the product that fits the decision in front of you.
+              Some decisions need an assessment. Some need a role guide. Some need a bundle with guide-and-report context. Some need personal positioning feedback. Choose the product that fits the decision in front of you.
             </p>
           </div>
 
@@ -763,7 +770,7 @@ export default function HomePage() {
               Current products for clearer career decisions.
             </h2>
             <p style={{ maxWidth: 760, fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              These are the current products already available from Sriram Advisory, covering assessments, role guides, reports, and positioning support.
+              These are the current products already available from Sriram Advisory, covering assessments, role guides, bundles, reports, and positioning support.
             </p>
           </div>
 
@@ -828,7 +835,7 @@ export default function HomePage() {
               Start with SA-AIRS
             </Link>
             <Link
-              href="/guides"
+              href="/bundles"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -842,7 +849,7 @@ export default function HomePage() {
                 border: "1px solid rgba(126,179,255,0.25)",
               }}
             >
-              Browse Guides
+              Browse Bundles
             </Link>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 24 }}>

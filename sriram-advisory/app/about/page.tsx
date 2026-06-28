@@ -24,7 +24,7 @@ const PILLARS = [
   },
   {
     title: "Practical Advisory Outputs",
-    body: "Reports, guides, field notes, and services designed to turn uncertainty into a next decision, not just more information.",
+    body: "Reports, guides, bundles, field notes, and services designed to turn uncertainty into a next decision, not just more information.",
   },
 ];
 
@@ -32,7 +32,7 @@ const DIFFERENTIATORS = [
   "Advisory-first, not motivation-first. The work is built around decisions, tradeoffs, and next moves.",
   "Two clear paths: Career Intelligence for professionals and AI Delivery Intelligence for initiative owners.",
   "Framework-led. Products and services are built around structured diagnostics, not generic advice.",
-  "Practical enough to use. Reports, guides, templates, and audits are designed for real decisions.",
+  "Practical enough to use. Reports, guides, bundles, templates, and audits are designed for real decisions.",
 ];
 
 const FOUNDER_FACTS = [
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 Sriram Advisory began with a simple observation from AI delivery work: the market changes before job titles, career advice, and company messaging catch up. Professionals can feel the pressure long before they have language for it.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                SA-AIRS was built to make that pressure legible: how exposed a role is, where market demand is shifting, and what kind of work still compounds. The guides translate those signals into role-specific decisions for Indian IT professionals.
+                SA-AIRS was built to make that pressure legible: how exposed a role is, where market demand is shifting, and what kind of work still compounds. The guides and bundles translate those signals into role-specific decisions for Indian IT professionals.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
                 The response has been clear. More than 100 guide orders arrived in the first 28 days, from people who were not looking for generic motivation; they were looking for an honest read and a usable next step.
@@ -229,6 +229,23 @@ export default function AboutPage() {
               }}
             >
               Career Intelligence
+            </Link>
+            <Link
+              href="/bundles"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "15px 28px",
+                borderRadius: 10,
+                background: "transparent",
+                color: "#1a4fd6",
+                textDecoration: "none",
+                fontWeight: 700,
+                border: "1px solid rgba(126,179,255,0.25)",
+              }}
+            >
+              Browse Bundles
             </Link>
             <Link
               href="/ai-delivery-intelligence"

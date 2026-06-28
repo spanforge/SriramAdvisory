@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GuidesCatalog from "@/components/GuidesCatalog";
@@ -85,6 +86,24 @@ export default function GuidesPage() {
           >
             Pick the role that matches your current market pressure, review the price, and go straight to checkout without navigating through extra collections.
           </p>
+          <Link
+            href="/bundles"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "13px 24px",
+              borderRadius: 10,
+              background: "#ffffff",
+              color: "#102346",
+              textDecoration: "none",
+              fontSize: 14,
+              fontWeight: 800,
+              border: "1px solid rgba(255,255,255,0.2)",
+            }}
+          >
+            Need more context? Browse bundles
+          </Link>
         </div>
       </section>
 
@@ -133,6 +152,16 @@ export default function GuidesPage() {
               }}
             >
               {LIFETIME_UPDATES_BODY}
+            </p>
+            <p
+              style={{
+                fontSize: 15,
+                color: "#40526b",
+                lineHeight: 1.8,
+                margin: "14px 0 0",
+              }}
+            >
+              If you need a guide plus market context, the bundles page combines related guides and reports into role-specific stacks.
             </p>
           </div>
         </div>

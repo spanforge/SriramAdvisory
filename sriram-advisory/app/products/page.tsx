@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Products | Sriram Advisory",
   description:
-    "AI career intelligence products for Indian professionals including AI Futures 2026, AI Risk Rankings India 2026, and the SA-AIRS personal risk assessment.",
+    "AI career intelligence products for Indian professionals including AI Futures 2026, AI Risk Rankings India 2026, bundles, and the SA-AIRS personal risk assessment.",
 };
 
 const PRODUCTS = [
@@ -172,7 +172,7 @@ export default function ProductsPage() {
           </h1>
           <p style={{ fontSize: "clamp(16px, 2vw, 19px)", color: "#5a6a8a", lineHeight: 1.7, maxWidth: 580, margin: "0 auto 12px" }}>
             Four products. One purpose: to give Indian professionals the clarity,
-            data, and frameworks they need to read the AI era and decide for themselves.
+            data, bundles, and frameworks they need to read the AI era and decide for themselves.
           </p>
           <p style={{ fontSize: 15, color: "#8898b8", fontStyle: "italic" }}>
             &quot;We don&apos;t guess your future. We model it.&quot; - Sriram
@@ -292,6 +292,53 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      <section style={{ padding: "0 20px 80px", background: "#ffffff" }}>
+        <div
+          style={{
+            maxWidth: 1080,
+            margin: "0 auto",
+            background: "linear-gradient(135deg, #0a1628 0%, #102346 58%, #1a4fd6 100%)",
+            borderRadius: 20,
+            padding: "32px 28px",
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 1fr) auto",
+            gap: 20,
+            alignItems: "center",
+          }}
+          className="home-two-col"
+        >
+          <div>
+            <span style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "#93b4ff" }}>
+              Bundles
+            </span>
+            <h2 style={{ fontSize: "clamp(24px, 3.4vw, 36px)", color: "#ffffff", margin: "10px 0", letterSpacing: "-0.02em" }}>
+              Need more than one product?
+            </h2>
+            <p style={{ fontSize: 15, color: "rgba(219,234,254,0.86)", lineHeight: 1.75, margin: 0, maxWidth: 680 }}>
+              Bundles combine related guides and reports into role-specific intelligence stacks, starting at Rs 799.
+            </p>
+          </div>
+          <Link
+            href="/bundles"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#ffffff",
+              color: "#102346",
+              fontWeight: 800,
+              fontSize: 14,
+              padding: "13px 22px",
+              borderRadius: 10,
+              textDecoration: "none",
+              whiteSpace: "nowrap",
+            }}
+          >
+            View Bundles {"->"}
+          </Link>
+        </div>
+      </section>
+
       <section style={{ padding: "80px 20px", background: "#f8faff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -349,6 +396,7 @@ export default function ProductsPage() {
           </h2>
           <p style={{ fontSize: 16, color: "#8898b8", lineHeight: 1.7, marginBottom: 32 }}>
             Start with AI Futures 2026 if you want a sharper map of what may change next. Choose AI Risk Rankings if you want occupational risk context, or the AIRS Assessment if you want your own role scored directly.
+            Choose bundles when you want role guidance and market context together.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             <Link
@@ -366,7 +414,7 @@ export default function ProductsPage() {
               Get AI Futures 2026 {"->"}
             </Link>
             <Link
-              href="/get-started"
+              href="/bundles"
               style={{
                 background: "transparent",
                 color: "#8898b8",
@@ -378,7 +426,7 @@ export default function ProductsPage() {
                 border: "1px solid rgba(136,152,184,0.3)",
               }}
             >
-              Talk to Sriram
+              Browse Bundles
             </Link>
           </div>
         </div>
