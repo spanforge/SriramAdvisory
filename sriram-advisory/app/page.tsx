@@ -209,8 +209,8 @@ export default function HomePage() {
             }}
           >
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#0d9268", display: "inline-block" }} />
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1a4fd6" }}>
-              Workforce Intelligence for the AI Era
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", lineHeight: 1.5 }}>
+              Workforce Intelligence & Transformation for the AI Era
             </span>
           </div>
 

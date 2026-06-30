@@ -43,7 +43,7 @@ export default function Footer() {
                     marginTop: 2,
                   }}
                 >
-                  Workforce Intelligence for the AI Era
+                  Workforce Intelligence & Transformation for the AI Era
                 </div>
               </div>
             </div>
