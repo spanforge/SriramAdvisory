@@ -69,18 +69,17 @@ export default function Navbar() {
               <div
                 className="site-nav-tagline"
                 style={{
-                  fontSize: 12,
-                  letterSpacing: "0.08em",
+                  fontSize: 11,
+                  letterSpacing: "0.06em",
                   color: "#1a4fd6",
                   textTransform: "uppercase",
                   lineHeight: 1.5,
                   fontWeight: 600,
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
                   whiteSpace: "nowrap",
                 }}
               >
-                Workforce Intelligence & Transformation for the AI Era
+                <span className="site-nav-tagline-full">Workforce Intelligence & Transformation for the AI Era</span>
+                <span className="site-nav-tagline-compact">Workforce Intelligence & Transformation</span>
               </div>
             </div>
           </Link>

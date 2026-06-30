@@ -217,6 +217,20 @@ h2, h3 {
   .nav-inner { padding: 0 20px; }
 }
 
+.site-nav-tagline-compact {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .site-nav-tagline-full {
+    display: none;
+  }
+
+  .site-nav-tagline-compact {
+    display: inline;
+  }
+}
+
 @media (max-width: 520px) {
   .site-nav-brand img {
     width: 36px !important;
