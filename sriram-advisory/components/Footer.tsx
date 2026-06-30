@@ -48,7 +48,7 @@ export default function Footer() {
               </div>
             </div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Workforce intelligence for professionals navigating AI-driven career change.
+              Workforce intelligence and transformation for professionals navigating AI-driven career change.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <a href="mailto:sriram@sriramadvisory.com" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>

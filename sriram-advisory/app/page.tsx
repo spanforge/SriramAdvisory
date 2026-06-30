@@ -5,9 +5,9 @@ import BeehiivSubscribeForm from "@/components/BeehiivSubscribeForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | Workforce Intelligence for the AI Era",
+  title: "Sriram Advisory | Workforce Intelligence & Transformation for the AI Era",
   description:
-    "Sriram Advisory builds workforce intelligence for professionals navigating AI-driven career change.",
+    "Sriram Advisory builds workforce intelligence and transformation for professionals navigating AI-driven career change.",
 };
 
 const ADVISORY_FOCUS = [
@@ -235,7 +235,7 @@ export default function HomePage() {
                   maxWidth: 820,
                 }}
               >
-                Workforce intelligence for professionals{" "}
+                Workforce intelligence that leads to real transformation — for professionals{" "}
                 <span
                   style={{
                     background: "linear-gradient(90deg, #1a4fd6, #22d3a0)",
@@ -549,6 +549,9 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+            <p style={{ fontSize: 16, color: "rgba(231,239,255,0.82)", lineHeight: 1.75, margin: "4px 0 0" }}>
+              Together, these three moves are how workforce intelligence becomes workforce transformation.
+            </p>
           </div>
         </div>
       </section>
@@ -879,7 +882,7 @@ export default function HomePage() {
               {[
                 "Enterprise AI practitioner with 30 years in technology delivery",
                 "Founder, Sriram Advisory",
-                "Building workforce intelligence for professionals navigating AI-driven change",
+                "Building workforce intelligence and transformation pathways for professionals navigating AI-driven change",
               ].map((item) => <div key={item} style={{ padding: "13px 14px", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 6, color: "#304159", fontSize: 14, fontWeight: 700, lineHeight: 1.5 }}>{item}</div>)}
             </div>
           </div>

@@ -23,17 +23,17 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | Workforce Intelligence for the AI Era",
+  title: "Sriram Advisory | Workforce Intelligence & Transformation for the AI Era",
   description:
-    "Sriram Advisory is a workforce intelligence firm for professionals navigating AI-driven career change.",
+    "Sriram Advisory is a workforce intelligence and transformation firm for professionals navigating AI-driven career change.",
   icons: {
     icon: "/sriram.png",
     apple: "/sriram.png",
   },
   openGraph: {
-    title: "Sriram Advisory | Workforce Intelligence for the AI Era",
+    title: "Sriram Advisory | Workforce Intelligence & Transformation for the AI Era",
     description:
-      "Workforce intelligence for professionals navigating AI-driven career change.",
+      "Workforce intelligence and transformation for professionals navigating AI-driven career change.",
     type: "website",
   },
 };
