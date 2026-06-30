@@ -214,7 +214,7 @@ export default function AboutPage() {
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
             <Link
-              href="/career-intelligence"
+              href="/assessments"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

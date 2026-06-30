@@ -52,7 +52,6 @@ app/
   privacy/              # Privacy policy
   refund/               # Refund policy
   report/               # Full Report product page
-  snapshot/             # Redirects to /get-started
   system/               # Methodology overview (public-safe — no IP weights)
   terms/                # Terms of service
   robots.ts             # Robots.txt (generated)
@@ -74,7 +73,6 @@ public/
 | `/` | Home — hero, SA-AIRS™ intro, social proof |
 | `/about` | Founder bio, philosophy, differentiators |
 | `/report` | Full Report product page |
-| `/snapshot` | Redirect → /get-started |
 | `/get-started` | Pricing + intake page (Razorpay) |
 | `/cases` | Case studies (4 real anonymised assessments) |
 | `/insights` | Insights index page |
@@ -90,7 +88,7 @@ public/
 
 - **IP protection:** `/system` shows the 5-dimension framework at a high level. Exact weights, scoring rubrics, and calibration data are never exposed publicly.
 - **Paid-only model:** All products purchased via Razorpay (`/get-started`). No free tier.
-- **Client pages with metadata:** `snapshot/layout.tsx` and `get-started/layout.tsx` export metadata because the page files are `"use client"` components.
+- **Client page with metadata:** `get-started/layout.tsx` exports metadata because the page file is a `"use client"` component.
 - **Insights articles:** Defined in `app/insights/[slug]/page.tsx` as the `ARTICLES` array. Add new articles there — both the index and sitemap pick them up automatically.
 
 ---
