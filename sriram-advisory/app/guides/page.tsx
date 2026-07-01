@@ -118,6 +118,23 @@ export default function GuidesPage() {
             boxShadow: "0 20px 50px rgba(10, 22, 40, 0.06)",
           }}
         >
+          <p
+            style={{
+              fontSize: 15,
+              color: "#40526b",
+              lineHeight: 1.7,
+              margin: "0 auto 24px",
+              maxWidth: 860,
+              textAlign: "center",
+            }}
+          >
+            New to AI? Start with{" "}
+            <Link href="/ai-literacy" style={{ color: "#1a4fd6", fontWeight: 800, textDecoration: "none" }}>
+              AI Literacy
+            </Link>{" "}
+            before choosing a role guide.
+          </p>
+
           <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
             <span
               style={{

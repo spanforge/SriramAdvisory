@@ -84,7 +84,10 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <div style={{ alignItems: "center", gap: 4 }} className="hidden md:flex">
+          <div
+            style={{ alignItems: "center", gap: 2, flexShrink: 0 }}
+            className="hidden lg:flex"
+          >
             {NAV_ITEMS.map((link) => {
               const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
               return (
@@ -93,15 +96,16 @@ export default function Navbar() {
                   href={link.href}
                   aria-current={active ? "page" : undefined}
                   style={{
-                    fontSize: 13,
+                    fontSize: 12,
                     fontWeight: 500,
                     textDecoration: "none",
-                    padding: "6px 14px",
+                    padding: "6px 8px",
                     borderRadius: 6,
                     color: active ? "#0a1628" : "#5a6a8a",
                     background: active ? "rgba(10,22,40,0.06)" : "transparent",
                     transition: "color 0.15s, background 0.15s",
                     letterSpacing: "0.01em",
+                    whiteSpace: "nowrap",
                   }}
                 >
                   {link.label}
@@ -112,7 +116,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="flex md:hidden"
+            className="flex lg:hidden"
             onClick={() => setOpen(!open)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
@@ -176,7 +180,7 @@ export default function Navbar() {
               flexDirection: "column",
               gap: 4,
             }}
-            className="md:hidden"
+            className="lg:hidden"
           >
             {NAV_ITEMS.map((link) => {
               const active = pathname === link.href || pathname.startsWith(`${link.href}/`);

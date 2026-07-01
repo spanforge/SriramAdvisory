@@ -33,6 +33,15 @@ export type GuideItem = {
   focus: string;
 };
 
+export type AiLiteracyItem = {
+  title: string;
+  description: string;
+  price: string | null;
+  badge: "New" | "Bestseller" | null;
+  ctaLabel: "View guide";
+  href: string;
+};
+
 export type ServiceItem = {
   badge: string;
   title: string;
@@ -60,14 +69,13 @@ export type FreeResourceItem = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
+  { label: "AI Literacy", href: "/ai-literacy" },
   { label: "Assessments", href: "/assessments" },
   { label: "Guides", href: "/guides" },
   { label: "Bundles", href: "/bundles" },
   { label: "Reports", href: "/reports" },
-  { label: "Newsletter", href: "/#newsletter" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export const REPORTS: ReportItem[] = [
@@ -375,6 +383,18 @@ export const GUIDES: GuideItem[] = [
     timeline: "90-day direction",
     riskScore: "Entry-level exposure",
     focus: "First-job positioning",
+  },
+];
+
+export const AI_LITERACY_PRODUCTS: AiLiteracyItem[] = [
+  {
+    title: "AI Literacy for Absolute Beginners",
+    description:
+      "The complete foundations handbook - 37 pages, 100 ready-to-use prompts, 6 tool tutorials, 7 role playbooks.",
+    price: "Rs 499",
+    badge: "New",
+    ctaLabel: "View guide",
+    href: "/ai-literacy/absolute-beginners",
   },
 ];
 

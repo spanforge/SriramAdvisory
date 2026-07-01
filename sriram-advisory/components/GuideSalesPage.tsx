@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import ProductRecommendations from "@/components/ProductRecommendations";
+import Link from "next/link";
 import {
   BONUS_GUIDE_NOTE,
   BONUS_GUIDE_TITLE,
@@ -21,6 +22,7 @@ type GuideSalesPageProps = {
 export default function GuideSalesPage({ content }: GuideSalesPageProps) {
   const { theme } = content;
   const testimonials = content.testimonials ?? (content.testimonial ? [content.testimonial] : []);
+  const isAiLiteracy = content.category === "ai-literacy";
 
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
@@ -64,24 +66,26 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               flexWrap: "wrap",
             }}
           >
-            <span
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 7,
-                background: "rgba(220,38,38,0.2)",
-                border: "1px solid rgba(220,38,38,0.45)",
-                borderRadius: 20,
-                padding: "6px 16px",
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "#fca5a5",
-              }}
-            >
-              SA-AIRS Score: {content.score} - {content.riskLabel}
-            </span>
+            {!isAiLiteracy && (
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 7,
+                  background: "rgba(220,38,38,0.2)",
+                  border: "1px solid rgba(220,38,38,0.45)",
+                  borderRadius: 20,
+                  padding: "6px 16px",
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "#fca5a5",
+                }}
+              >
+                SA-AIRS Score: {content.score} - {content.riskLabel}
+              </span>
+            )}
             <span
               style={{
                 display: "inline-flex",
@@ -908,6 +912,61 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           </div>
         </div>
       </section>
+
+      {!isAiLiteracy && (
+        <section style={{ padding: "36px 20px", background: "#ffffff" }}>
+          <div
+            style={{
+              maxWidth: 860,
+              margin: "0 auto",
+              background: "#f7fffb",
+              border: "1px solid #bbf7d0",
+              borderRadius: 18,
+              padding: "24px 26px",
+              display: "flex",
+              justifyContent: "space-between",
+              gap: 18,
+              flexWrap: "wrap",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  fontSize: 12,
+                  fontWeight: 800,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#0d9268",
+                  marginBottom: 8,
+                }}
+              >
+                New to AI?
+              </div>
+              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#304159" }}>
+                Start with AI Literacy for Absolute Beginners before choosing a role guide.
+              </p>
+            </div>
+            <Link
+              href="/ai-literacy/absolute-beginners"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textDecoration: "none",
+                background: "#0d9268",
+                color: "#ffffff",
+                borderRadius: 10,
+                padding: "12px 16px",
+                fontSize: 14,
+                fontWeight: 800,
+              }}
+            >
+              Start with AI Literacy {"->"}
+            </Link>
+          </div>
+        </section>
+      )}
 
       <ProductRecommendations />
 

@@ -28,6 +28,7 @@ export type GuideTheme = {
 };
 
 export type GuidePageContent = {
+  category?: "role-guide" | "ai-literacy";
   productName: string;
   title: string;
   accentTitle: string;
@@ -87,6 +88,128 @@ export const LIFETIME_UPDATES_BODY =
   "A commitment, made publicly and permanently: every Sriram Advisory guide comes with free lifetime upgrades for every customer, from the first to the last. When the market shifts, when data changes, when a better framework emerges, you get the updated version automatically. No repurchase. No upgrade fee. Ever.";
 
 export const guideSalesContent: Record<string, GuidePageContent> = {
+  "ai-literacy-absolute-beginners": {
+    category: "ai-literacy",
+    productName: "AI Literacy for Absolute Beginners",
+    title: "AI Literacy for",
+    accentTitle: "Absolute Beginners",
+    score: "",
+    riskLabel: "",
+    editionLabel: "Foundations Handbook",
+    heroSummary:
+      "A plain-language AI foundations handbook for working professionals who want to understand AI before deciding what to do with it.",
+    heroNote:
+      "No coding, no jargon, no hype - just the mental models, tools, prompts, and workplace examples that make AI easier to use.",
+    outcomeBullets: [
+      "37 pages of practical AI foundations",
+      "100 ready-to-use prompts",
+      "6 tool tutorials and 7 role playbooks",
+    ],
+    promiseBullets: [
+      "Understand what AI is, what it can do, and where the hype starts",
+      "Learn how to use everyday AI tools without needing to code",
+      "Translate AI literacy into practical workflows across HR, finance, sales, legal, and operations",
+    ],
+    whatYouGet: [
+      {
+        title: "Plain-language AI foundations",
+        desc: "A clear explanation of modern AI concepts, written for working professionals instead of engineers.",
+      },
+      {
+        title: "Prompting starter system",
+        desc: "100 practical prompts you can adapt for writing, analysis, planning, research, and workplace decisions.",
+      },
+      {
+        title: "Tool tutorials",
+        desc: "Step-by-step guidance for using common AI tools with better judgment and less guesswork.",
+      },
+      {
+        title: "Role playbooks",
+        desc: "Workplace examples for HR, finance, sales, legal, operations, and other non-technical functions.",
+      },
+      {
+        title: "AI without panic",
+        desc: "A grounded view of what AI changes at work, what it does not replace, and how to learn without overwhelm.",
+      },
+      {
+        title: "Beginner-friendly next steps",
+        desc: "A practical path from basic understanding to confident experimentation in everyday work.",
+      },
+    ],
+    preview: [
+      {
+        title: "You will get clarity on",
+        bullets: [
+          "What AI tools are actually doing in plain English",
+          "How prompts work and why better context improves results",
+          "Where AI helps at work and where human judgment still matters",
+        ],
+      },
+      {
+        title: "You will leave with",
+        bullets: [
+          "A practical AI vocabulary",
+          "Reusable prompts for common work situations",
+          "A calmer way to evaluate AI tools and advice",
+        ],
+      },
+      {
+        title: "You will not get",
+        bullets: [
+          "A coding course",
+          "A machine-learning curriculum",
+          "Hype-heavy predictions detached from real workplace use",
+        ],
+      },
+    ],
+    stages: [
+      {
+        stage: "Stage 1",
+        title: "AI Feels Abstract",
+        desc: "You hear AI everywhere, but the terms, tools, and claims blur together.",
+        color: "#64748b",
+      },
+      {
+        stage: "Stage 2",
+        title: "AI Becomes Usable",
+        desc: "You understand the basics well enough to test tools, write better prompts, and judge outputs.",
+        color: "#0d9268",
+      },
+      {
+        stage: "Stage 3",
+        title: "AI Fits Your Work",
+        desc: "You can spot practical use cases in your own function without outsourcing your judgment to the tool.",
+        color: "#0f4c81",
+      },
+    ],
+    forYou: [
+      "You are a working professional who wants to understand AI without learning to code.",
+      "You work in HR, finance, sales, legal, operations, or another non-technical function.",
+      "You want practical examples, prompts, and tool guidance instead of buzzwords.",
+      "You feel behind on AI and want a calm, structured starting point.",
+      "You want enough literacy to make better decisions before buying deeper role guides or services.",
+    ],
+    notForYou: [
+      "You want a technical machine-learning or AI engineering course.",
+      "You already build production AI systems and need advanced architecture guidance.",
+      "You want hype, shortcuts, or guaranteed career outcomes.",
+    ],
+    ctaTitle: "Start with AI foundations before choosing your next move.",
+    ctaBody:
+      "Use this handbook to build practical AI literacy, then decide which tools, workflows, or career moves deserve your attention.",
+    faqDelivery: DELIVERY_NOTE,
+    theme: {
+      accent: "#0d9268",
+      accentSoft: "#86efac",
+      accentStrong: "#0f4c81",
+      heroGradient: "linear-gradient(135deg, #071713 0%, #0f2f4d 52%, #0d9268 100%)",
+      heroText: "rgba(222,247,239,0.88)",
+      sectionTint: "#f0fdf4",
+      sectionBorder: "#bbf7d0",
+      panelTint: "#f7fffb",
+      finalGradient: "linear-gradient(160deg, #071713 0%, #0f2f4d 58%, #0d9268 100%)",
+    },
+  },
   "cloud-engineer-ai-survival-guide-2026": {
     productName: "Cloud Engineer AI Survival Guide 2026",
     title: "Cloud Engineer",
