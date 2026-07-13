@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +8,7 @@ import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 export const metadata: Metadata = {
   title: "Career Intelligence Report - SA-AIRS Pro | Sriram Advisory",
   description:
-    "India's first analytical scoring system for AI career risk. 5 dimensions. One composite score. All inputs traceable. SA-AIRS Pro Report - Rs 999.",
+    "India's first analytical scoring system for career and workforce risk. 5 dimensions. One composite score. All inputs traceable. SA-AIRS Pro Report - Rs 999.",
 };
 
 const SIX_PARTS = [
@@ -51,7 +51,7 @@ const SIX_PARTS = [
 ];
 
 const FOR_YOU = [
-  "You are a working professional wondering exactly where you stand in the AI era",
+  "You are a working professional wondering exactly where you stand in the future-of-work shift",
   "You want to understand your actual thinking pattern - not just be told to learn AI",
   "You are mid-career and sense something is shifting but cannot name what",
   "You want a score you can verify and re-measure over time",
@@ -201,7 +201,7 @@ export default function SaAirsProPage() {
               productName="Career Intelligence Report - Pro"
               amount={999}
               accentColor="#0d9268"
-              buttonLabel="Get My Score — ₹999"
+              buttonLabel="Get My Score - Rs 999"
               buttonStyle={{
                 display: "flex",
                 alignItems: "center",
@@ -255,7 +255,7 @@ export default function SaAirsProPage() {
               productName="Career Intelligence Report - Pro"
               amount={999}
               accentColor="#0d9268"
-              buttonLabel="Get My Score — ₹999"
+              buttonLabel="Get My Score - Rs 999"
               buttonStyle={{
                 background: "#1a4fd6",
                 color: "#fff",
@@ -513,7 +513,7 @@ export default function SaAirsProPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Know exactly where you stand.
+            Understand your current position.
           </h2>
           <p style={{ fontSize: 17, color: "rgba(248,250,255,0.75)", lineHeight: 1.7, marginBottom: 48 }}>
             Delivered within 24 hours. 90-day re-assessment included. Full refund if you do not get
@@ -524,7 +524,7 @@ export default function SaAirsProPage() {
               productName="Career Intelligence Report - Pro"
               amount={999}
               accentColor="#0d9268"
-              buttonLabel="Get My Score — ₹999"
+              buttonLabel="Get My Score - Rs 999"
               buttonStyle={{
                 background: "#1a4fd6",
                 color: "#fff",
@@ -564,7 +564,7 @@ export default function SaAirsProPage() {
         productName="Career Intelligence Report - Pro"
         amount={999}
         accentColor="#1a4fd6"
-        buttonLabel="Get My Score — ₹999"
+        buttonLabel="Get My Score - Rs 999"
       />
 
       <Footer />

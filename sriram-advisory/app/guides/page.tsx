@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,9 +7,9 @@ import { GUIDES } from "@/lib/siteCatalog";
 import { LIFETIME_UPDATES_BODY, LIFETIME_UPDATES_TITLE } from "@/lib/guideSalesContent";
 
 export const metadata: Metadata = {
-  title: "Guides | Sriram Advisory",
+  title: "Career Intelligence Guides | Sriram Advisory",
   description:
-    "Role-specific AI career guides for professionals who want clear repositioning paths, honest risk framing, and buyer-ready next steps.",
+    "Future of Work career guides for professionals who want role-specific intelligence, clear skill direction, and practical next steps.",
 };
 
 const GUIDE_DELIVERY_NOTE = "Delivered to your inbox, typically within 30 minutes of payment.";
@@ -60,7 +60,7 @@ export default function GuidesPage() {
                 color: "#93b4ff",
               }}
             >
-              All Role Guides
+              Career Intelligence Guides
             </span>
           </div>
           <h1
@@ -73,7 +73,7 @@ export default function GuidesPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Guides for AI-era career decisions
+            Career Intelligence Guides
           </h1>
           <p
             style={{
@@ -84,7 +84,7 @@ export default function GuidesPage() {
               margin: "0 auto 24px",
             }}
           >
-            Pick the role that matches your current market pressure, review the price, and go straight to checkout without navigating through extra collections.
+            Role-specific guides that translate Future of Work research into practical next steps for professionals.
           </p>
           <Link
             href="/bundles"
@@ -128,7 +128,7 @@ export default function GuidesPage() {
               textAlign: "center",
             }}
           >
-            New to AI? Start with{" "}
+            New to AI as one part of the Future of Work? Start with{" "}
             <Link href="/ai-literacy" style={{ color: "#1a4fd6", fontWeight: 800, textDecoration: "none" }}>
               AI Literacy
             </Link>{" "}

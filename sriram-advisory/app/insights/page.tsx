@@ -1,13 +1,13 @@
-import Navbar from "@/components/Navbar";
+﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ARTICLES } from "./[slug]/page";
 
 export const metadata: Metadata = {
-  title: "Blog | Sriram Advisory",
+  title: "Publications | Sriram Advisory",
   description:
-    "Frameworks, data, and honest analysis on AI career displacement. What is actually true about AI and your career.",
+    "Future of Work notes, essays, and briefings from Sriram Advisory.",
 };
 
 const TYPE_COLOURS: Record<string, { bg: string; text: string }> = {
@@ -28,22 +28,21 @@ export default function InsightsPage() {
             fontFamily: "var(--font-dm-mono, 'DM Mono', monospace)",
             fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase",
             color: "#4fc3f7", marginBottom: 24,
-          }}>Blog</div>
+          }}>Publications</div>
           <h1 style={{
             fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
             fontSize: "clamp(42px, 6vw, 80px)",
             lineHeight: 1, letterSpacing: "0.02em",
             color: "#f8faff", margin: "0 0 28px",
           }}>
-            Frameworks, Data,<br />
-            <span style={{ color: "#1a4fd6" }}>and Honest Analysis.</span>
+            Future of Work Notes,<br />
+            <span style={{ color: "#1a4fd6" }}>essays, and briefings.</span>
           </h1>
           <p style={{
             fontSize: "clamp(16px, 2vw, 19px)", color: "rgba(248,250,255,0.7)",
             lineHeight: 1.75, margin: "0 0 36px", maxWidth: 620,
           }}>
-            Not content for its own sake. Every piece here connects back to a question we hear from clients:
-            &ldquo;What is actually true about AI and my career?&rdquo;
+            A public record of the questions behind the research: what is changing, why it matters, and what professionals should notice next.
           </p>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
             {["Analysis", "Framework", "Data"].map((type) => {
@@ -79,7 +78,7 @@ export default function InsightsPage() {
               fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
               fontSize: "clamp(28px, 3.5vw, 42px)", letterSpacing: "0.02em",
               color: "#0a1628", margin: "0 0 40px", lineHeight: 1,
-            }}>Latest from Sriram</h2>
+            }}>Latest Publications</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 1, border: "1px solid rgba(10,22,40,0.08)", borderRadius: 14, overflow: "hidden" }}>
               {ARTICLES.map((article) => {
                 const c = TYPE_COLOURS[article.type] ?? TYPE_COLOURS["Analysis"];
@@ -100,7 +99,7 @@ export default function InsightsPage() {
                           padding: "3px 10px", borderRadius: 20,
                         }}>{article.type}</span>
                         <span style={{ fontSize: 13, color: "#5a6a8a" }}>{article.tag}</span>
-                        <span style={{ fontSize: 13, color: "#5a6a8a" }}>· {article.readTime}</span>
+                        <span style={{ fontSize: 13, color: "#5a6a8a" }}> -  {article.readTime}</span>
                       </div>
                       <h3 style={{
                         fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
@@ -109,7 +108,7 @@ export default function InsightsPage() {
                       }}>{article.title}</h3>
                       <p style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.7, margin: 0 }}>{article.teaser}</p>
                     </div>
-                    <span style={{ fontSize: 20, color: "#1a4fd6", flexShrink: 0 }}>→</span>
+                      <span style={{ fontSize: 20, color: "#1a4fd6", flexShrink: 0 }}>{"->"}</span>
                   </Link>
                 );
               })}

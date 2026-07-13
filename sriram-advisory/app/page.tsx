@@ -1,175 +1,215 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BeehiivSubscribeForm from "@/components/BeehiivSubscribeForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | Workforce Intelligence & Transformation for the AI Era",
+  title: "Sriram Advisory | Future of Work Research and Advisory",
   description:
-    "Sriram Advisory builds workforce intelligence and transformation for professionals navigating AI-driven career change.",
+    "Sriram Advisory studies how work is changing across AI, automation, careers, GCCs, leadership, and organizational design.",
 };
 
-const ADVISORY_FOCUS = [
-  { value: "Career Risk", label: "Role exposure, market pressure, and next-position decisions" },
-  { value: "Role Durability", label: "Structured views of how work changes under automation pressure" },
-  { value: "Market Signal", label: "Reports and role intelligence for clearer judgment" },
-  { value: "Positioning", label: "Resume, LinkedIn, and market-facing narrative clarity" },
+const STUDY_AREAS = [
+  "Future of Work",
+  "AI & Automation",
+  "Career Longevity",
+  "GCCs & Indian IT",
+  "Skills & Employability",
+  "Leadership & Management",
+  "Organizational Change",
+  "Human Judgment & Decision-Making",
 ];
 
-const DECISIONS = [
-  {
-    title: "What is changing around my role?",
-    body: "For professionals who need a grounded read on automation exposure, market saturation, and role durability before making their next career move.",
-  },
-  {
-    title: "How should I reposition?",
-    body: "For people who need stronger language, profile signal, and practical next steps instead of generic career advice.",
-  },
-  {
-    title: "Which skills increase leverage?",
-    body: "For professionals who want to move toward work that compounds judgment, context, and ownership instead of repeatable execution.",
-  },
-  {
-    title: "What should we do next?",
-    body: "For people who need a sharper framework before spending time, energy, or money on the wrong career move.",
-  },
+const PROOF_POINTS = [
+  { value: "4", label: "Research frameworks developed" },
+  { value: "20+", label: "Industries and work functions monitored" },
+  { value: "Weekly", label: "Future of Work research rhythm" },
+  { value: "30 years", label: "Interpreting technology shifts and enterprise work" },
 ];
 
-const ADVISORY_SYSTEM = [
+const FRAMEWORKS = [
   {
-    step: "01",
-    title: "Diagnose the situation",
-    body: "Use assessments, scorecards, and structured frameworks to make role exposure and career pressure visible.",
+    title: "SA-AIRS(TM)",
+    href: "/frameworks/sa-airs",
+    body: "A structured lens for understanding role exposure, market pressure, and career durability.",
   },
   {
-    step: "02",
-    title: "Interpret the signal",
-    body: "Turn market pressure, role exposure, and durability signals into a clear decision frame.",
+    title: "Replaceability Curve(TM)",
+    href: "/frameworks/replaceability-curve",
+    body: "A way to think about which parts of work become cheaper, compressed, or more valuable over time.",
   },
   {
-    step: "03",
-    title: "Choose the next move",
-    body: "Move into the right product, guide, report, audit, or advisory path based on the decision the client is actually trying to make.",
+    title: "AI Leverage Ladder(TM)",
+    href: "/frameworks/ai-leverage-ladder",
+    body: "A practical model for moving from tool use to higher-value judgment, ownership, and decision leverage.",
+  },
+  {
+    title: "Career Positioning Audit",
+    href: "/frameworks/career-positioning-audit",
+    body: "A diagnostic view of how a professional profile reads to the market and where the signal needs strengthening.",
   },
 ];
 
-const ENGAGEMENT_PATHS = [
+const CHANGED_MIND = [
   {
-    title: "Career Assessment",
-    body: "Rs 499 - Am I Future-Proof?",
-    href: "/am-i-future-proof",
-    cta: "Start assessment",
+    before: "AI risk is mostly about which tasks can be automated.",
+    after:
+      "Role value erodes when automation, management pressure, hiring filters, and weak professional signal move together.",
   },
   {
-    title: "Role Guides",
-    body: "Rs 499 - QA, BA, Java, HR, and other role-specific career paths.",
+    before: "Upskilling is enough if professionals learn the right tools.",
+    after:
+      "Tools matter, but durable careers depend more on judgment, context, ownership, and visible proof of value.",
+  },
+  {
+    before: "Experience is a natural career moat.",
+    after:
+      "Experience only protects a career when the market can clearly see how that experience applies to new work.",
+  },
+];
+
+const WORKFLOW = [
+  {
+    step: "Research",
+    body: "Study workforce shifts across roles, industries, technology adoption, and organizational change.",
+    href: "/reports",
+  },
+  {
+    step: "Frameworks",
+    body: "Use named models to interpret pressure, durability, leverage, and professional positioning.",
+    href: "/frameworks",
+  },
+  {
+    step: "Reports",
+    body: "Turn the research into focused intelligence on roles, sectors, and future-of-work themes.",
+    href: "/reports",
+  },
+  {
+    step: "Guides",
+    body: "Translate findings into practical next steps for professionals who need career direction.",
     href: "/guides",
-    cta: "Browse guides",
   },
   {
-    title: "Career Bundles",
-    body: "Rs 799+ - Role guide, report, and deep-dive stacks for stronger decisions.",
-    href: "/bundles",
-    cta: "View bundles",
+    step: "Advisory",
+    body: "Apply the research lens to specific career, team, and workforce decisions.",
+    href: "/contact",
+  },
+];
+
+const FLAGSHIP_RESEARCH = [
+  {
+    title: "Future of Indian IT Careers 2026",
+    label: "Flagship outlook",
+    body: "A developing research track on how Indian technology careers are being reshaped by AI, GCCs, delivery models, and changing skill demand.",
+    href: "/reports",
   },
   {
-    title: "Personal Positioning Review",
-    body: "Rs 999 - Resume, LinkedIn, and narrative review.",
-    href: "/services/career-positioning-audit",
-    cta: "View review",
+    title: "AI Risk Rankings India 2026",
+    label: "Career risk index",
+    body: "A role-level view of where automation pressure is rising, which careers feel it first, and what adaptation paths look like.",
+    href: "/products/ai-risk-rankings-india-2026",
+  },
+  {
+    title: "State of QA Careers India 2026",
+    label: "Role outlook",
+    body: "A focused report on how testing careers are changing and what stronger quality-work positioning looks like next.",
+    href: "/products/state-of-qa-careers-india-2026",
+  },
+];
+
+const RESEARCH_PRODUCTS = [
+  {
+    title: "Career Intelligence Reports",
+    body: "Role-specific outlooks for professionals who need a clearer view of market pressure, skill shifts, and career durability.",
+    href: "/reports",
+  },
+  {
+    title: "Future of Work Briefings",
+    body: "Short research notes on major workforce shifts across AI, automation, GCCs, management, skills, and organizational change.",
+    href: "/insights",
+  },
+  {
+    title: "Research Method",
+    body: "A structured approach for interpreting workforce signals without turning complex career and organizational change into simple predictions.",
+    href: "/methodology",
+  },
+  {
+    title: "Learning & Career Guides",
+    body: "Practical next-step guides for professionals who want to strengthen relevance, judgment, and market positioning.",
+    href: "/guides",
+  },
+];
+
+const FEATURED_RESEARCH = [
+  { title: "AI Risk Rankings India 2026", href: "/products/ai-risk-rankings-india-2026" },
+  { title: "State of QA Careers India 2026", href: "/products/state-of-qa-careers-india-2026" },
+  { title: "Global Java Careers Outlook 2026", href: "/guides/java-developer-ai-leverage-guide-2026" },
+  { title: "AI Literacy for Absolute Beginners", href: "/ai-literacy/absolute-beginners" },
+  { title: "Future of Indian IT Careers 2026", href: "/reports" },
+  { title: "Career Positioning Audit", href: "/services/career-positioning-audit" },
+];
+
+const AUDIENCES = [
+  {
+    title: "For Professionals",
+    body: "Understand how your role is changing, what companies may value next, and what to learn before the shift becomes obvious.",
+  },
+  {
+    title: "For Managers",
+    body: "Understand how teams, skills, productivity expectations, and leadership judgment are shifting in AI-shaped work.",
+  },
+  {
+    title: "For Organizations",
+    body: "Understand workforce risk, capability gaps, future skill needs, and the management choices behind durable performance.",
   },
 ];
 
 const TRUST_SIGNALS = [
   {
-    title: "Founder-led advisory",
-    body: "The frameworks, products, and advisory language are built directly by Sriram, so buyers know who is accountable for the point of view.",
-    href: "/about",
-    cta: "About Sriram",
+    title: "Three decades of technology perspective",
+    body: "Sriram Advisory is built on three decades of observing how technology reshapes careers, organizations, and professional value.",
   },
   {
-    title: "Public thinking",
-    body: "The advisory point of view is visible through published insights and the Sriram Advisory LinkedIn newsletter.",
-    href: "/insights",
-    cta: "Read insights",
+    title: "India lens, global context",
+    body: "Research connects Indian IT, GCCs, global delivery models, AI capability shifts, and changing organizational expectations.",
   },
   {
-    title: "Direct contact before you buy",
-    body: "Professionals can reach Sriram directly by email or WhatsApp when they need fit clarification.",
-    href: "/contact",
-    cta: "Contact Sriram",
+    title: "Practical outputs",
+    body: "The work is translated into reports, briefings, guides, and assessments that help people decide what to learn, monitor, or change.",
+  },
+  {
+    title: "Clear boundaries",
+    body: "Research products are analytical commentary, not guarantees. Methods, limitations, policies, and contact routes are visible.",
   },
 ];
 
-const FRAMEWORK_DIMENSIONS = [
-  "Automation Exposure",
-  "Market Saturation",
-  "Decision Complexity",
-  "Human Dependency",
-  "Future Demand",
+const VISITOR_PATHS = [
+  { label: "Professional", action: "Explore Career Guides", href: "/guides" },
+  { label: "Manager", action: "Read Research", href: "/reports" },
+  { label: "Organization", action: "Contact Sriram", href: "/contact" },
+  { label: "Journalist or Recruiter", action: "About the Work", href: "/about" },
 ];
 
-const PROOF_LINKS = [
+const LATEST_PUBLICATIONS = [
   {
-    title: "QA Guide",
-    description:
-      "For QA professionals who want a clearer view of AI pressure, role risk, and practical upgrade direction.",
-    href: "/guides/qa-engineer-survival-guide-2026",
-    cta: "View QA Guide",
+    date: "July 2026",
+    title: "The Seniority Trap: Why Mid-Career Professionals Are Vulnerable",
+    body: "An essay on why experience can become fragile when work changes faster than assumptions.",
+    href: "/insights/seniority-trap-mid-career-ai-risk",
   },
   {
-    title: "BA Guide",
-    description:
-      "For Business Analysts who need to reposition toward higher-leverage product, AI, and stakeholder work.",
-    href: "/guides/business-analyst-survival-guide-2026",
-    cta: "View BA Guide",
+    date: "June 2026",
+    title: "Why Expertise Becomes a Trap",
+    body: "A research report on competency traps, reinvention, and professional value during technology shifts.",
+    href: "/products/why-expertise-becomes-a-trap",
   },
   {
-    title: "Java Guide",
-    description:
-      "For Java developers who want to use AI as leverage while protecting seniority, depth, and market signal.",
-    href: "/guides/java-developer-ai-leverage-guide-2026",
-    cta: "View Java Guide",
+    date: "June 2026",
+    title: "AI Futures 2026",
+    body: "Signals and scenarios for professionals who want a clearer map of what may change next.",
+    href: "/products/ai-futures-2026",
   },
-  {
-    title: "HR Guide",
-    description:
-      "For HR professionals who need to understand how recruiting and people work are changing under AI pressure.",
-    href: "/guides/hr-recruiter-survival-guide-2026",
-    cta: "View HR Guide",
-  },
-];
-
-const TESTIMONIALS = [
-  {
-    role: "QA Engineer",
-    quote: "The guide gave me a concrete 90-day direction.",
-  },
-  {
-    role: "Business Analyst",
-    quote: "The report helped me understand where my role is actually exposed.",
-  },
-  {
-    role: "Java Developer",
-    quote: "One of the few AI career resources that felt grounded.",
-  },
-];
-
-const PRODUCT_MATCH = [
-  { need: "Understand role exposure", product: "SA-AIRS" },
-  { need: "Improve resume", product: "Career Positioning Audit" },
-  { need: "QA engineer", product: "QA Guide" },
-  { need: "BA professional", product: "BA Guide" },
-  { need: "Need more than one asset", product: "Role or intelligence bundle" },
-  { need: "Unsure", product: "SA-AIRS Assessment" },
-];
-
-const START_HERE = [
-  { role: "QA Engineer", recommendation: "QA Survival Guide or QA Bundle", href: "/bundles#qa-modernization" },
-  { role: "Business Analyst", recommendation: "BA Survival Guide", href: "/guides/business-analyst-survival-guide-2026" },
-  { role: "Java Developer", recommendation: "Java Guide or Java Bundle", href: "/bundles#java-modernization" },
-  { role: "HR Professional", recommendation: "HR Recruiter Survival Guide", href: "/guides/hr-recruiter-survival-guide-2026" },
 ];
 
 export default function HomePage() {
@@ -179,420 +219,125 @@ export default function HomePage() {
 
       <section
         style={{
-          background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 50%, #e6efff 100%)",
-          paddingTop: 120,
-          paddingBottom: 100,
-          position: "relative",
-          overflow: "hidden",
+          background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 54%, #edf7f2 100%)",
+          paddingTop: 112,
+          paddingBottom: 92,
+          borderBottom: "1px solid rgba(26,79,214,0.12)",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(26,79,214,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(26,79,214,0.04) 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-          }}
-        />
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px", position: "relative" }}>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              background: "rgba(26,79,214,0.07)",
-              border: "1px solid rgba(26,79,214,0.35)",
-              borderRadius: 4,
-              padding: "5px 14px",
-              marginBottom: 36,
-            }}
-          >
-            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#0d9268", display: "inline-block" }} />
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", lineHeight: 1.5 }}>
-              Workforce Intelligence & Transformation for the AI Era
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px" }}>
+          <div style={{ maxWidth: 900 }}>
+            <span
+              style={{
+                display: "inline-flex",
+                fontSize: 12,
+                fontWeight: 800,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "#0d9268",
+                marginBottom: 28,
+              }}
+            >
+              Careers do not disappear overnight. Their value erodes quietly.
             </span>
-          </div>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "minmax(0, 1.05fr) minmax(300px, 0.95fr)",
-              gap: 36,
-              alignItems: "start",
-            }}
-            className="home-hero-grid"
-          >
-            <div>
-              <h1
+            <h1
+              style={{
+                fontSize: "clamp(40px, 6vw, 78px)",
+                lineHeight: 1.04,
+                fontWeight: 900,
+                letterSpacing: "-0.02em",
+                color: "#0a1628",
+                margin: "0 0 24px",
+                maxWidth: 860,
+              }}
+            >
+              The biggest career risk is not AI.
+              <br />
+              It is preparing for tomorrow with yesterday&apos;s map.
+            </h1>
+            <p
+              style={{
+                fontSize: "clamp(18px, 2.2vw, 24px)",
+                lineHeight: 1.65,
+                color: "#4a5a7a",
+                margin: "0 0 38px",
+                maxWidth: 760,
+              }}
+            >
+              Sriram Advisory studies how careers, organizations, and industries are changing - and turns that research into practical intelligence for professionals and teams.
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
+              <Link
+                href="/reports"
                 style={{
-                  fontSize: "clamp(36px, 5.5vw, 72px)",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "15px 28px",
+                  borderRadius: 8,
+                  background: "#1a4fd6",
+                  color: "#ffffff",
+                  textDecoration: "none",
                   fontWeight: 800,
-                  color: "#0a1628",
-                  lineHeight: 1.06,
-                  marginBottom: 28,
-                  letterSpacing: "-0.02em",
-                  maxWidth: 820,
+                  border: "1px solid #3b6ef0",
                 }}
               >
-                Workforce intelligence that leads to real transformation — for professionals{" "}
-                <span
-                  style={{
-                    background: "linear-gradient(90deg, #1a4fd6, #22d3a0)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  navigating the AI era.
-                </span>
-              </h1>
-
-              <p
-                style={{
-                  fontSize: "clamp(17px, 2.2vw, 22px)",
-                  color: "#4a5a7a",
-                  lineHeight: 1.7,
-                  marginBottom: 20,
-                  maxWidth: 700,
-                }}
-              >
-                We study work, measure AI exposure, and help professionals reposition before the market forces them to.
-              </p>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "8px 12px",
-                  maxWidth: 700,
-                  marginBottom: 20,
-                  color: "#0a1628",
-                  fontSize: 14,
-                  fontWeight: 800,
-                  lineHeight: 1.5,
-                }}
-              >
-                {[
-                  "100+ Professionals Served",
-                  "4,400+ Followers",
-                  "20+ Industries Covered",
-                  "100+ Roles Studied",
-                ].map((item, index) => (
-                  <span key={item} style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
-                    {index > 0 && <span style={{ color: "#93a4bf" }}>{"•"}</span>}
-                    {item}
-                  </span>
-                ))}
-              </div>
-
+                Read Our Research
+              </Link>
               <Link
                 href="/guides"
                 style={{
-                  display: "inline-block",
-                  maxWidth: 700,
-                  marginBottom: 20,
-                  color: "#1a4fd6",
-                  fontSize: 15,
-                  fontWeight: 700,
-                  lineHeight: 1.7,
-                  textDecoration: "none",
-                }}
-              >
-                SA-AIRS(TM) scores provide a structured view of automation exposure, market pressure, and role durability.
-              </Link>
-
-              <p style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 16 }}>
-                Career intelligence for professionals making AI-era career decisions.
-              </p>
-
-              <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.8, marginBottom: 40, maxWidth: 720 }}>
-                Use Sriram Advisory when you need to understand role exposure, choose stronger skills, and improve your market-facing positioning.
-              </p>
-
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
-                <Link
-                  href="/career-intelligence-report/sa-airs-pro"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                    background: "#1a4fd6",
-                    color: "#fff",
-                    fontWeight: 700,
-                    fontSize: 16,
-                    padding: "15px 32px",
-                    borderRadius: 10,
-                    textDecoration: "none",
-                    border: "1px solid #3b6ef0",
-                  }}
-                >
-                  Get My SA-AIRS(TM) Score
-                </Link>
-                <Link
-                  href="/bundles"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    background: "transparent",
-                    color: "#1a4fd6",
-                    fontWeight: 600,
-                    fontSize: 15,
-                    padding: "15px 28px",
-                    borderRadius: 10,
-                    textDecoration: "none",
-                    border: "1px solid rgba(126,179,255,0.25)",
-                  }}
-                >
-                  Browse Bundles
-                </Link>
-              </div>
-
-              <Link
-                href="/bundles"
-                style={{
                   display: "inline-flex",
-                  alignItems: "baseline",
-                  gap: 8,
-                  marginTop: 22,
-                  color: "#0a1628",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "15px 28px",
+                  borderRadius: 8,
+                  color: "#1a4fd6",
                   textDecoration: "none",
-                  fontSize: 14,
-                  fontWeight: 600,
+                  fontWeight: 800,
+                  border: "1px solid rgba(26,79,214,0.22)",
+                  background: "#ffffff",
                 }}
               >
-                <span style={{ color: "#0d9268", fontSize: 20, fontWeight: 800 }}>Rs 799+</span>
-                role bundles combine guides and reports for fuller context
+                Explore Career Guides
               </Link>
-
-              <div style={{ display: "grid", gap: 10, marginTop: 26, maxWidth: 660 }}>
-                {TESTIMONIALS.map((item) => (
-                  <blockquote
-                    key={item.role}
-                    style={{
-                      margin: 0,
-                      background: "#ffffff",
-                      border: "1px solid rgba(13,146,104,0.28)",
-                      borderLeft: "4px solid #0d9268",
-                      borderRadius: 8,
-                      padding: "14px 16px",
-                      color: "#304159",
-                      fontSize: 15,
-                      lineHeight: 1.6,
-                      boxShadow: "0 10px 24px rgba(10,22,40,0.06)",
-                    }}
-                  >
-                    &quot;{item.quote}&quot;
-                    <footer style={{ marginTop: 8, color: "#0d9268", fontSize: 12, fontWeight: 800, letterSpacing: "0.04em" }}>
-                      {item.role}
-                    </footer>
-                  </blockquote>
-                ))}
-              </div>
-            </div>
-
-            <div
-              style={{
-                background: "#ffffff",
-                border: "1px solid rgba(26,79,214,0.15)",
-                borderRadius: 16,
-                padding: "28px 28px",
-                boxShadow: "0 10px 30px rgba(26,79,214,0.08)",
-              }}
-            >
-              <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 18 }}>
-                Advisory Focus
-              </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-                {ADVISORY_FOCUS.map((item) => (
-                  <div key={item.label} style={{ padding: "16px 14px", background: "rgba(10,22,40,0.025)", border: "1px solid rgba(26,79,214,0.12)", borderRadius: 12 }}>
-                    <div style={{ fontSize: "clamp(18px, 2.4vw, 24px)", fontWeight: 800, color: "#1a4fd6", lineHeight: 1.15, marginBottom: 8 }}>
-                      {item.value}
-                    </div>
-                    <div style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.55 }}>{item.label}</div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "30px 24px", background: "#0a1628", color: "#ffffff" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 22 }}>
-            <div style={{ fontSize: 20, fontWeight: 800, marginBottom: 6 }}>Trusted by professionals navigating the AI era</div>
-            <div style={{ fontSize: 14, color: "#b9c8e7" }}>Independent workforce intelligence for clearer career decisions.</div>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: 12 }}>
-            {[
-              "100+ Professionals Served",
-              "4,400+ LinkedIn Followers",
-              "Professionals from IT Services, GCCs and Product Companies",
-              "New reports and customer updates added continuously",
-            ].map((item) => (
-              <div key={item} style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 14px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 6, fontSize: 14, color: "#e7efff", lineHeight: 1.5 }}>
-                <span style={{ color: "#6ee7b7", fontWeight: 900 }}>+</span>
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "72px 24px 0", background: "#ffffff" }}>
-        <div
-          style={{
-            maxWidth: 1180,
-            margin: "0 auto",
-            background: "#f7f9fc",
-            border: "1px solid rgba(26,79,214,0.12)",
-            borderRadius: 12,
-            padding: "34px 32px",
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 0.85fr) minmax(0, 1.15fr)",
-            gap: 30,
-          }}
-          className="home-two-col"
-        >
-          <div>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
-              Why professionals buy Sriram Advisory
-            </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", marginTop: 16, marginBottom: 14 }}>
-              Most professionals already know AI is changing work.
-            </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
-              Sriram Advisory exists to answer the practical career questions before the market answers them for you.
-            </p>
-          </div>
-          <div style={{ display: "grid", gap: 12 }}>
-            {[
-              "How exposed their role actually is",
-              "Which skills increase leverage",
-              "Whether staying in the same path is still rational",
-            ].map((item) => (
-              <div key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "16px 18px", color: "#304159", fontSize: 16, fontWeight: 700 }}>
-                <span style={{ color: "#0d9268", fontWeight: 900 }}>+</span>
-                {item}
-              </div>
-            ))}
-          </div>
+      <section style={{ padding: "28px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: 14 }}>
+          {PROOF_POINTS.map((point) => (
+            <div key={point.label} style={{ border: "1px solid rgba(255,255,255,0.12)", borderRadius: 8, padding: "18px 16px", background: "rgba(255,255,255,0.05)" }}>
+              <div style={{ fontSize: 24, fontWeight: 900, color: "#93b4ff", marginBottom: 6 }}>{point.value}</div>
+              <div style={{ fontSize: 13, lineHeight: 1.55, color: "#dbe7ff", fontWeight: 700 }}>{point.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <div style={{ maxWidth: 780, marginBottom: 38 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#0d9268" }}>
-              Advisory Questions
+          <div style={{ maxWidth: 780, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+              Flagship Research
             </span>
-            <h2 style={{ fontSize: "clamp(30px, 4.5vw, 52px)", color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-              We help clients make decisions when AI changes the rules around work.
+            <h2 style={{ fontSize: "clamp(30px, 4.4vw, 52px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              Cornerstone publications for the work shift ahead.
             </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Sriram Advisory sits at the point where career risk, workforce change, and market pressure become practical decisions. The work is not motivation or trend commentary. It is structured judgment for what to do next.
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Research companies are remembered by their point of view. These tracks define how Sriram Advisory reads the future of work in India.
             </p>
           </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 18 }}>
-            {DECISIONS.map((item) => (
-              <div
-                key={item.title}
-                style={{
-                  background: "#f8fbff",
-                  border: "1px solid #dbe5f5",
-                  borderRadius: 12,
-                  padding: "24px 22px",
-                }}
-              >
-                <h3 style={{ fontSize: 20, color: "#0a1628", lineHeight: 1.2, marginBottom: 10 }}>{item.title}</h3>
-                <p style={{ fontSize: 15, color: "#425472", lineHeight: 1.75, margin: 0 }}>{item.body}</p>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      <section style={{ padding: "88px 24px", background: "#0a1628", color: "#ffffff" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 0.85fr) minmax(0, 1.15fr)", gap: 32 }} className="home-two-col">
-          <div>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#93b4ff" }}>
-              Advisory System
-            </span>
-            <h2 style={{ fontSize: "clamp(30px, 4.5vw, 50px)", lineHeight: 1.1, marginTop: 16, marginBottom: 16, color: "#ffffff" }}>
-              A simple system for moving from uncertainty to action.
-            </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.8, color: "rgba(231,239,255,0.78)" }}>
-              Every product and service exists to support one of three advisory moves: diagnose the situation, interpret the signal, and choose the next move.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gap: 14 }}>
-            {ADVISORY_SYSTEM.map((item) => (
-              <div
-                key={item.step}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "58px 1fr",
-                  gap: 16,
-                  background: "rgba(255,255,255,0.06)",
-                  border: "1px solid rgba(255,255,255,0.12)",
-                  borderRadius: 12,
-                  padding: "18px",
-                }}
-              >
-                <div style={{ color: "#93b4ff", fontSize: 18, fontWeight: 900 }}>{item.step}</div>
-                <div>
-                  <h3 style={{ fontSize: 19, color: "#ffffff", marginBottom: 6 }}>{item.title}</h3>
-                  <p style={{ fontSize: 15, color: "rgba(231,239,255,0.74)", lineHeight: 1.7, margin: 0 }}>{item.body}</p>
-                </div>
-              </div>
-            ))}
-            <p style={{ fontSize: 16, color: "rgba(231,239,255,0.82)", lineHeight: 1.75, margin: "4px 0 0" }}>
-              Together, these three moves are how workforce intelligence becomes workforce transformation.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "100px 24px", background: "#f7f9fc" }}>
-        <div
-          style={{
-            maxWidth: 1180,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 0.8fr) minmax(0, 1.2fr)",
-            gap: 30,
-          }}
-          className="home-two-col"
-        >
-          <div>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
-              Engagement Paths
-            </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Choose the level of help that matches the decision.
-            </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", maxWidth: 560 }}>
-              Some decisions need an assessment. Some need a role guide. Some need a bundle with guide-and-report context. Some need personal positioning feedback. Choose the product that fits the decision in front of you.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gap: 16 }}>
-            {ENGAGEMENT_PATHS.map((path) => (
-              <Link key={path.href} href={path.href} style={{ textDecoration: "none" }}>
-                <article
-                style={{
-                  background: "#ffffff",
-                  border: "1px solid rgba(26,79,214,0.12)",
-                    borderRadius: 12,
-                    padding: "20px",
-                }}
-              >
-                  <h3 style={{ fontSize: 21, color: "#0a1628", marginBottom: 8 }}>{path.title}</h3>
-                  <p style={{ fontSize: 15, color: "#425472", lineHeight: 1.7, margin: "0 0 12px" }}>{path.body}</p>
-                  <span style={{ color: "#1a4fd6", fontSize: 14, fontWeight: 800 }}>{path.cta} {"->"}</span>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18 }}>
+            {FLAGSHIP_RESEARCH.map((item) => (
+              <Link key={item.title} href={item.href} style={{ textDecoration: "none" }}>
+                <article style={{ height: "100%", border: "1px solid rgba(26,79,214,0.14)", borderRadius: 8, padding: "26px 24px", background: "#f8fbff" }}>
+                  <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 12 }}>{item.label}</div>
+                  <h3 style={{ fontSize: 24, lineHeight: 1.18, color: "#0a1628", margin: "0 0 12px" }}>{item.title}</h3>
+                  <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: "0 0 18px" }}>{item.body}</p>
+                  <span style={{ color: "#1a4fd6", fontSize: 14, fontWeight: 900 }}>Read overview {"->"}</span>
                 </article>
               </Link>
             ))}
@@ -600,132 +345,128 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
-        <div
-          style={{
-            maxWidth: 1180,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 0.95fr) minmax(0, 1.05fr)",
-            gap: 30,
-          }}
-          className="home-two-col"
-        >
-          <div
-            style={{
-              background: "#0a1628",
-              color: "#f8faff",
-              borderRadius: 18,
-              padding: 32,
-            }}
-          >
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#93b4ff" }}>
-              SA-AIRS Framework
+      <section style={{ padding: "88px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 740, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              What We Study
             </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 42px)", marginTop: 14, marginBottom: 14, color: "#ffffff", letterSpacing: "-0.02em" }}>
-              SA-AIRS(TM) Workforce Intelligence Framework
+            <h2 style={{ fontSize: "clamp(30px, 4.4vw, 52px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              The forces reshaping careers, teams, and organizations.
             </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.8, color: "#8898b8" }}>
-              Reframed from a single score into a platform for interpreting how work is
-              changing across professions, sectors, and career stages.
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Future of work is not one story. It is a combination of technology, economic pressure, demographics, management choices, and changing ideas of value.
             </p>
           </div>
-
-          <div>
-            <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5a6a8a", marginBottom: 16 }}>
-              Dimensions Analyzed
-            </div>
-            <div style={{ display: "grid", gap: 14 }}>
-              {FRAMEWORK_DIMENSIONS.map((dimension, index) => (
-                <div
-                  key={dimension}
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "56px 1fr",
-                    gap: 16,
-                    alignItems: "center",
-                    padding: "16px 18px",
-                    borderRadius: 16,
-                    border: "1px solid rgba(26,79,214,0.15)",
-                    background: "rgba(10,22,40,0.025)",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: 40,
-                      height: 40,
-                      borderRadius: 10,
-                      background: "rgba(26,79,214,0.06)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontWeight: 800,
-                      color: "#1a4fd6",
-                    }}
-                  >
-                    0{index + 1}
-                  </div>
-                  <div style={{ fontSize: 17, fontWeight: 700, color: "#0a1628" }}>{dimension}</div>
-                </div>
-              ))}
-            </div>
-            <div style={{ marginTop: 22 }}>
-              <Link
-                href="/assessments"
-                style={{
-                  color: "#1a4fd6",
-                  fontWeight: 700,
-                  textDecoration: "none",
-                  borderBottom: "1px solid rgba(126,179,255,0.3)",
-                  paddingBottom: 2,
-                }}
-              >
-                Explore Assessments
-              </Link>
-            </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
+            {STUDY_AREAS.map((area) => (
+              <div key={area} style={{ border: "1px solid #dbe5f5", borderRadius: 8, padding: "18px 18px", background: "#f8fbff", fontSize: 16, fontWeight: 800, color: "#0a1628" }}>
+                {area}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <div style={{ maxWidth: 760, marginBottom: 30 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
-              Credibility Signals
+          <div style={{ maxWidth: 780, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Research Frameworks
             </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", marginTop: 16, marginBottom: 14, letterSpacing: "-0.02em", lineHeight: 1.12 }}>
-              A clear point of view, visible method, and direct accountability.
+            <h2 style={{ fontSize: "clamp(30px, 4.4vw, 52px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              Named models for making work change easier to understand.
             </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Advisory firms earn trust through judgment, transparency, and delivery discipline. These are the signals available today while the testimonial layer is built out.
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              The frameworks are not public formulas. They are the research lenses used to explain role pressure, career durability, and human leverage.
             </p>
           </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18 }}>
+            {FRAMEWORKS.map((framework) => (
+              <Link key={framework.title} href={framework.href} style={{ textDecoration: "none" }}>
+                <article style={{ height: "100%", border: "1px solid #dbe5f5", borderRadius: 8, padding: "24px 22px", background: "#ffffff" }}>
+                  <h3 style={{ fontSize: 22, color: "#0a1628", margin: "0 0 10px" }}>{framework.title}</h3>
+                  <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: "0 0 16px" }}>{framework.body}</p>
+                  <span style={{ color: "#1a4fd6", fontSize: 14, fontWeight: 900 }}>View framework {"->"}</span>
+                </article>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 18 }}>
-            {TRUST_SIGNALS.map((item) => (
-              <article
-                key={item.title}
-                style={{
-                  background: "#ffffff",
-                  border: "1px solid rgba(26,79,214,0.12)",
-                  borderRadius: 12,
-                  padding: "24px 22px",
-                }}
-              >
-                <h3 style={{ fontSize: 21, color: "#0a1628", marginBottom: 10 }}>{item.title}</h3>
-                <p style={{ fontSize: 15, color: "#425472", lineHeight: 1.75, margin: "0 0 16px" }}>{item.body}</p>
-                <Link
-                  href={item.href}
-                  style={{
-                    color: "#1a4fd6",
-                    fontWeight: 700,
-                    textDecoration: "none",
-                    borderBottom: "1px solid rgba(126,179,255,0.3)",
-                    paddingBottom: 2,
-                  }}
-                >
-                  {item.cta}
-                </Link>
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 780, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+              Research Pathway
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              The work moves from questions to practical decisions.
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Sriram Advisory is organized as a connected research system: public thinking, named frameworks, paid reports, practical guides, and applied advisory conversations.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: 14 }}>
+            {WORKFLOW.map((item, index) => (
+              <Link key={item.step} href={item.href} style={{ textDecoration: "none" }}>
+                <article style={{ minHeight: 210, border: "1px solid #dbe5f5", borderRadius: 8, padding: "22px 20px", background: "#f8fbff" }}>
+                  <div style={{ width: 32, height: 32, borderRadius: 8, background: "#1a4fd6", color: "#ffffff", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 900, marginBottom: 18 }}>
+                    {index + 1}
+                  </div>
+                  <h3 style={{ fontSize: 21, color: "#0a1628", margin: "0 0 10px" }}>{item.step}</h3>
+                  <p style={{ fontSize: 14, lineHeight: 1.7, color: "#52627e", margin: 0 }}>{item.body}</p>
+                </article>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+            Why Sriram Advisory Exists
+          </span>
+          <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0 24px", color: "#0a1628" }}>
+            Most professionals are trying to prepare for the future using outdated maps.
+          </h2>
+          <div style={{ display: "grid", gap: 18 }}>
+            <p style={{ fontSize: 17, lineHeight: 1.85, color: "#4a5a7a", margin: 0 }}>
+              The future of work is not being shaped by one force alone. AI, automation, demographics, global delivery models, economic pressure, and changing organizational structures are all reshaping what companies value.
+            </p>
+            <p style={{ fontSize: 17, lineHeight: 1.85, color: "#4a5a7a", margin: 0 }}>
+              We study these shifts and translate them into clear, practical intelligence for professionals and organizations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 780, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              What We Have Changed Our Mind About
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              Good research should update when the evidence changes.
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              The future of work is still moving. The public point of view is strongest when it shows what has become clearer over time.
+            </p>
+          </div>
+          <div style={{ display: "grid", gap: 16 }}>
+            {CHANGED_MIND.map((item) => (
+              <article key={item.before} style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.85fr) minmax(0, 1.15fr)", gap: 18, border: "1px solid #dbe5f5", borderRadius: 8, padding: "22px 20px", background: "#f8fbff" }} className="home-two-col">
+                <div>
+                  <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7a879c", marginBottom: 8 }}>Earlier view</div>
+                  <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: 0 }}>{item.before}</p>
+                </div>
+                <div>
+                  <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 8 }}>Current view</div>
+                  <p style={{ fontSize: 16, lineHeight: 1.75, color: "#0a1628", margin: 0, fontWeight: 750 }}>{item.after}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -733,219 +474,193 @@ export default function HomePage() {
       </section>
 
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <div style={{ maxWidth: 720, marginBottom: 28 }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6" }}>
-              What to buy
-            </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", margin: "14px 0" }}>
-              Match your need to the right product.
-            </h2>
-          </div>
-          <div style={{ overflowX: "auto", border: "1px solid #dbe5f5", borderRadius: 8, background: "#ffffff" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 560 }}>
-              <thead>
-                <tr style={{ background: "#f7f9fc" }}>
-                  <th style={{ textAlign: "left", padding: "16px 18px", color: "#0a1628", fontSize: 14 }}>Need</th>
-                  <th style={{ textAlign: "left", padding: "16px 18px", color: "#0a1628", fontSize: 14 }}>Product</th>
-                </tr>
-              </thead>
-              <tbody>
-                {PRODUCT_MATCH.map((item) => (
-                  <tr key={item.need} style={{ borderTop: "1px solid #dbe5f5" }}>
-                    <td style={{ padding: "16px 18px", color: "#52627e", fontSize: 15 }}>{item.need}</td>
-                    <td style={{ padding: "16px 18px", color: "#0a1628", fontSize: 15, fontWeight: 800 }}>{item.product}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <div style={{ marginBottom: 28 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
-              Current Offerings
+          <div style={{ maxWidth: 760, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Why Trust The Work
             </span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-              Current products for clearer career decisions.
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              Research should make uncertainty easier to handle.
             </h2>
-            <p style={{ maxWidth: 760, fontSize: 17, lineHeight: 1.8, color: "#5a6a8a" }}>
-              These are the current products already available from Sriram Advisory, covering assessments, role guides, bundles, reports, and positioning support.
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Sriram Advisory is designed to give professionals and organizations a clearer read on work change without panic, generic motivation, or black-box predictions.
             </p>
           </div>
-
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18 }}>
-            {PROOF_LINKS.map((item) => (
-              <div
-                key={item.title}
-                style={{
-                  background: "#ffffff",
-                  borderRadius: 16,
-                  border: "1px solid rgba(26,79,214,0.12)",
-                  padding: 24,
-                }}
-              >
-                <div style={{ fontSize: 20, fontWeight: 800, color: "#0a1628", marginBottom: 10 }}>{item.title}</div>
-                <p style={{ fontSize: 15, lineHeight: 1.75, color: "#5a6a8a", marginBottom: 18 }}>{item.description}</p>
-                <Link
-                  href={item.href}
-                  style={{
-                    color: "#1a4fd6",
-                    fontWeight: 700,
-                    textDecoration: "none",
-                    borderBottom: "1px solid rgba(126,179,255,0.3)",
-                    paddingBottom: 2,
-                  }}
-                >
-                  {item.cta}
-                </Link>
-              </div>
+            {TRUST_SIGNALS.map((signal) => (
+              <article key={signal.title} style={{ border: "1px solid #dbe5f5", borderRadius: 8, padding: "24px 22px", background: "#f8fbff" }}>
+                <h3 style={{ fontSize: 20, color: "#0a1628", margin: "0 0 10px" }}>{signal.title}</h3>
+                <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: 0 }}>{signal.body}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
-          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0d9268" }}>
-            Next Step
-          </span>
-          <h2 style={{ fontSize: "clamp(32px, 4.8vw, 56px)", color: "#0a1628", marginTop: 16, marginBottom: 18, letterSpacing: "-0.02em" }}>
-            Choose the product that matches your situation.
-          </h2>
-          <p style={{ fontSize: 18, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 34 }}>
-            Start with SA-AIRS if you are unsure. Choose a role guide if you already know which path you need to improve.
-          </p>
-          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link
-              href="/career-intelligence-report/sa-airs-pro"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "15px 28px",
-                borderRadius: 10,
-                background: "#1a4fd6",
-                color: "#ffffff",
-                textDecoration: "none",
-                fontWeight: 700,
-                border: "1px solid #3b6ef0",
-              }}
-            >
-              Start with SA-AIRS
-            </Link>
-            <Link
-              href="/bundles"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "15px 28px",
-                borderRadius: 10,
-                background: "transparent",
-                color: "#1a4fd6",
-                textDecoration: "none",
-                fontWeight: 700,
-                border: "1px solid rgba(126,179,255,0.25)",
-              }}
-            >
-              Browse Bundles
-            </Link>
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 760, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Our Research Products
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              Research formats for different decisions.
+            </h2>
           </div>
-          <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 24 }}>
-            Prefer to ask directly? Email{" "}
-            <a href="mailto:sriram@sriramadvisory.com" style={{ color: "#1a4fd6", fontWeight: 700, textDecoration: "none" }}>
-              sriram@sriramadvisory.com
-            </a>{" "}
-            or WhatsApp{" "}
-            <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{ color: "#1a4fd6", fontWeight: 700, textDecoration: "none" }}>
-              +91 93422 29420
-            </a>
-            .
-          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 18 }}>
+            {RESEARCH_PRODUCTS.map((product) => (
+              <Link key={product.title} href={product.href} style={{ textDecoration: "none" }}>
+                <article style={{ height: "100%", border: "1px solid rgba(26,79,214,0.14)", borderRadius: 8, padding: "24px 22px", background: "#ffffff" }}>
+                  <h3 style={{ fontSize: 21, lineHeight: 1.25, color: "#0a1628", margin: "0 0 10px" }}>{product.title}</h3>
+                  <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: "0 0 16px" }}>{product.body}</p>
+                  <span style={{ color: "#1a4fd6", fontSize: 14, fontWeight: 800 }}>Explore</span>
+                </article>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       <section style={{ padding: "88px 24px", background: "#f7f9fc" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto 56px", display: "grid", gridTemplateColumns: "minmax(220px, 0.7fr) minmax(0, 1.3fr)", gap: 34, alignItems: "center" }} className="home-two-col">
-          <div style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: 20, textAlign: "center" }}>
-            <img src="/sriram.png" alt="Sriram Srinivasan" style={{ width: 150, height: 150, objectFit: "cover", borderRadius: "50%", border: "3px solid #1a4fd6" }} />
-          </div>
+        <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 0.85fr) minmax(0, 1.15fr)", gap: 34, alignItems: "start" }} className="home-two-col">
           <div>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6" }}>Founder-Led</span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", margin: "14px 0", color: "#0a1628" }}>Why trust Sriram Advisory?</h2>
-            <p style={{ margin: "0 0 18px", fontSize: 16, lineHeight: 1.75, color: "#52627e" }}>Sriram Srinivasan brings enterprise technology experience into practical workforce intelligence for professionals facing AI-shaped market change.</p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 10 }}>
-              {[
-                "Enterprise AI practitioner with 30 years in technology delivery",
-                "Founder, Sriram Advisory",
-                "Building workforce intelligence and transformation pathways for professionals navigating AI-driven change",
-              ].map((item) => <div key={item} style={{ padding: "13px 14px", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 6, color: "#304159", fontSize: 14, fontWeight: 700, lineHeight: 1.5 }}>{item}</div>)}
-            </div>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+              Start Here
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
+              Different visitors need different entry points.
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Choose the route that matches the decision you are trying to make today.
+            </p>
           </div>
-        </div>
-        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <div style={{ maxWidth: 720, marginBottom: 28 }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Start Here</span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", margin: "14px 0", color: "#0a1628" }}>Choose the first move that matches your role.</h2>
-            <p style={{ margin: 0, color: "#52627e", fontSize: 16, lineHeight: 1.75 }}>Start with a focused guide or bundle. Not sure where you stand? Begin with a personal SA-AIRS score.</p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
-            {START_HERE.map((item) => (
-              <Link key={item.role} href={item.href} style={{ textDecoration: "none", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "20px" }}>
-                <div style={{ fontSize: 13, fontWeight: 800, color: "#1a4fd6", marginBottom: 8 }}>{item.role}</div>
-                <div style={{ color: "#0a1628", fontWeight: 800, fontSize: 18, lineHeight: 1.35 }}>{item.recommendation}</div>
+          <div style={{ display: "grid", gap: 12 }}>
+            {VISITOR_PATHS.map((path) => (
+              <Link key={path.label} href={path.href} style={{ textDecoration: "none" }}>
+                <article style={{ display: "grid", gridTemplateColumns: "minmax(130px, 0.6fr) minmax(0, 1fr)", gap: 16, alignItems: "center", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "18px 20px" }}>
+                  <div style={{ fontSize: 14, color: "#52627e", fontWeight: 800 }}>{path.label}</div>
+                  <div style={{ fontSize: 16, color: "#1a4fd6", fontWeight: 900 }}>{path.action} {"->"}</div>
+                </article>
               </Link>
             ))}
-            <Link href="/career-intelligence-report/sa-airs-pro" style={{ textDecoration: "none", background: "#0a1628", border: "1px solid #0a1628", borderRadius: 8, padding: "20px" }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#93b4ff", marginBottom: 8 }}>Not sure?</div>
-              <div style={{ color: "#ffffff", fontWeight: 800, fontSize: 18, lineHeight: 1.35 }}>Get a SA-AIRS(TM) Career Intelligence Report</div>
-            </Link>
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "84px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto 32px" }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Simple Process</span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", margin: "14px 0" }}>From question to next move.</h2>
+      <section style={{ padding: "92px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 760, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#93b4ff" }}>
+              Featured Research
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#ffffff" }}>
+              Current work from the research shelf.
+            </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14 }}>
-            {["Browse", "Purchase", "Receive PDF", "Start repositioning"].map((step, index) => (
-              <div key={step} style={{ padding: "22px 18px", background: index % 2 === 0 ? "#f8fbff" : "#f0fdf8", border: "1px solid #dbe5f5", borderRadius: 8, textAlign: "center" }}>
-                <div style={{ fontSize: 12, color: "#1a4fd6", fontWeight: 900, marginBottom: 10 }}>0{index + 1}</div>
-                <div style={{ fontSize: 17, fontWeight: 800, color: "#0a1628" }}>{step}</div>
-              </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 16 }}>
+            {FEATURED_RESEARCH.map((item) => (
+              <Link key={item.title} href={item.href} style={{ textDecoration: "none" }}>
+                <article style={{ minHeight: 124, border: "1px solid rgba(255,255,255,0.14)", borderRadius: 8, padding: "22px 20px", background: "rgba(255,255,255,0.06)" }}>
+                  <h3 style={{ fontSize: 20, lineHeight: 1.3, color: "#ffffff", margin: "0 0 18px" }}>{item.title}</h3>
+                  <span style={{ color: "#93b4ff", fontSize: 14, fontWeight: 800 }}>Read more</span>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "84px 24px", background: "#f7f9fc" }}>
-        <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <div style={{ maxWidth: 720, marginBottom: 28 }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6" }}>Purchase FAQ</span>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", color: "#0a1628", margin: "14px 0" }}>Know what happens next.</h2>
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 760, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+              Latest Publications
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              The research heartbeat.
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Essays, reports, and briefings that make the changing world of work easier to interpret.
+            </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
-            {[
-              ["How do I receive my guide?", "Delivered to your inbox, typically within 30 minutes of payment."],
-              ["Are updates included?", "Yes. Existing guide customers receive future updates free."],
-              ["What format is it?", "Guides and reports are delivered as PDFs."],
-              ["How do I know which product fits me?", "Start with SA-AIRS. If you still have questions, message Sriram directly on WhatsApp."],
-              ["What if I need help?", "Review the published refund policy or contact Sriram directly before buying."],
-            ].map(([question, answer]) => <div key={question} style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "20px" }}><h3 style={{ margin: "0 0 8px", color: "#0a1628", fontSize: 17 }}>{question}</h3><p style={{ margin: 0, color: "#52627e", fontSize: 14, lineHeight: 1.7 }}>{answer}</p></div>)}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
+            {LATEST_PUBLICATIONS.map((item) => (
+              <Link key={item.title} href={item.href} style={{ textDecoration: "none" }}>
+                <article style={{ height: "100%", border: "1px solid #dbe5f5", borderRadius: 8, padding: "24px 22px", background: "#f8fbff" }}>
+                  <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 10 }}>
+                    {item.date}
+                  </div>
+                  <h3 style={{ fontSize: 21, color: "#0a1628", lineHeight: 1.25, margin: "0 0 10px" }}>{item.title}</h3>
+                  <p style={{ fontSize: 15, color: "#52627e", lineHeight: 1.75, margin: "0 0 16px" }}>{item.body}</p>
+                  <span style={{ color: "#1a4fd6", fontSize: 14, fontWeight: 900 }}>Open {"->"}</span>
+                </article>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      <section id="newsletter" style={{ padding: "84px 24px", background: "#0a1628", color: "#ffffff" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 720, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Who It Is For
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              Intelligence for people making workforce decisions.
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
+            {AUDIENCES.map((audience) => (
+              <article key={audience.title} style={{ border: "1px solid #dbe5f5", borderRadius: 8, padding: "26px 24px", background: "#f8fbff" }}>
+                <h3 style={{ fontSize: 22, color: "#0a1628", margin: "0 0 10px" }}>{audience.title}</h3>
+                <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: 0 }}>{audience.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter" style={{ padding: "88px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 920, margin: "0 auto", textAlign: "center" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+            Newsletter
+          </span>
+          <h2 style={{ fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.14, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+            Get Future of Work intelligence in your inbox.
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5a6a8a", maxWidth: 680, margin: "0 auto 28px" }}>
+            Clear, practical research on careers, skills, AI, automation, and the changing world of work.
+          </p>
           <BeehiivSubscribeForm />
+        </div>
+      </section>
+
+      <section style={{ padding: "96px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 820, margin: "0 auto", textAlign: "center" }}>
+          <h2 style={{ fontSize: "clamp(32px, 4.8vw, 56px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "#0a1628", margin: "0 0 18px" }}>
+            Work is changing faster than most careers are prepared for.
+          </h2>
+          <p style={{ fontSize: 18, lineHeight: 1.75, color: "#5a6a8a", margin: "0 0 32px" }}>
+            Sriram Advisory helps you understand the shift before it becomes obvious.
+          </p>
+          <Link
+            href="/reports"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "15px 30px",
+              borderRadius: 8,
+              background: "#1a4fd6",
+              color: "#ffffff",
+              textDecoration: "none",
+              fontWeight: 800,
+              border: "1px solid #3b6ef0",
+            }}
+          >
+            Explore the Research
+          </Link>
         </div>
       </section>
 

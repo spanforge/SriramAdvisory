@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -14,7 +14,7 @@ const ASSESSMENTS = [
     title: "Am I Future-Proof? Audit",
     subtitle: "48-hour audit for near-term decision clarity.",
     body: "For professionals who want a sharper interpretation layer on top of the underlying assessment logic.",
-    href: "/am-i-future-proof",
+    href: "/am-i-more durable",
     cta: "View Audit",
     status: "Available Now",
     accentColor: "#dc2626",
@@ -51,7 +51,7 @@ export default function AssessmentsPage() {
           >
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#1a4fd6", display: "inline-block" }} />
             <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a4fd6" }}>
-              Structured Frameworks
+              Structured Research
             </span>
           </div>
           <h1

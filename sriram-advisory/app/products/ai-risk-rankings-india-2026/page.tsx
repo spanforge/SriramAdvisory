@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
@@ -8,7 +8,7 @@ import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
 export const metadata: Metadata = {
   title: "AI Risk Rankings India 2026 | Sriram Advisory",
   description:
-    "India-first AI career risk rankings report covering the top 25 high-risk careers, 4 exposure bands, adaptation paths, and 100+ pages of research-backed market intelligence. Rs 999.",
+    "India-first career and workforce risk rankings report covering the top 25 high-risk careers, 4 exposure bands, adaptation paths, and 100+ pages of research-backed market intelligence. Rs 999.",
 };
 
 const TOP5_PREVIEW = [
@@ -115,7 +115,7 @@ const SOURCES = [
 ];
 
 const TESTIMONIAL =
-  "The AI Career Risk report provided by Sriram Advisory is really good and comprehensive. Sriram Srinivasan has put in efforts to study the risks faced by professionals role-wise across the spectrum of the industry from service companies, GCCs, botique IT firms, startups. This gives an idea to the professionals at different stages of their career to assess themselves and how to stay relevant in the industry. I had a look at the report, it looked impressive with the kind of detailing. I urge people to try it.";
+  "The career intelligence report provided by Sriram Advisory is really good and comprehensive. Sriram Srinivasan has put in efforts to study the risks faced by professionals role-wise across the spectrum of the industry from service companies, GCCs, botique IT firms, startups. This gives an idea to the professionals at different stages of their career to assess themselves and how to stay relevant in the industry. I had a look at the report, it looked impressive with the kind of detailing. I urge people to try it.";
 
 export default function AIRiskRankingsPage() {
   return (
@@ -235,7 +235,7 @@ export default function AIRiskRankingsPage() {
               accentColor="#dc2626"
               deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report â€” â‚¹999"
+              buttonLabel="Get the Report - Rs 999"
               buttonStyle={{
                 display: "flex",
                 alignItems: "center",
@@ -322,7 +322,7 @@ export default function AIRiskRankingsPage() {
               accentColor="#dc2626"
               deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report â€” â‚¹999"
+              buttonLabel="Get the Report - Rs 999"
               buttonStyle={{
                 background: "#dc2626",
                 color: "#ffffff",
@@ -711,7 +711,7 @@ export default function AIRiskRankingsPage() {
               accentColor="#dc2626"
               deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your report will be delivered to this email."
-              buttonLabel="Get the Report â€” â‚¹999"
+              buttonLabel="Get the Report - Rs 999"
               buttonStyle={{
                 background: "#dc2626",
                 color: "#ffffff",
@@ -745,7 +745,7 @@ export default function AIRiskRankingsPage() {
         accentColor="#dc2626"
         deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your report will be delivered to this email."
-        buttonLabel="Get the Report â€” â‚¹999"
+              buttonLabel="Get the Report - Rs 999"
       />
 
       <ProductRecommendations />

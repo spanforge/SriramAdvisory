@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
@@ -36,34 +36,34 @@ export default function PrivacyPage() {
           {[
             {
               heading: "1. Who We Are",
-              body: `Sriram Advisory ("we", "our", "us") is a solo advisory practice operated by Sriram, based in India. We provide AI career risk assessments and strategic advisory services. Our contact email is sriram@sriramadvisory.com.`,
+              body: `Sriram Advisory ("we", "our", "us") is a solo advisory practice operated by Sriram, based in India. We provide career and workforce risk assessments and strategic advisory services. Our contact email is sriram@sriramadvisory.com.`,
             },
             {
               heading: "2. What Information We Collect",
               body: `We collect information you provide directly when you:
-• Purchase or enquire about a product or service (name, professional role, industry, years of experience, concern, email address)
-• Complete a contact form or submit a service request via the website
-• Make a payment (name, email — payment is processed by Razorpay and we do not store card details)
-• Contact us via email or WhatsApp
+- Purchase or enquire about a product or service (name, professional role, industry, years of experience, concern, email address)
+- Complete a contact form or submit a service request via the website
+- Make a payment (name, email - payment is processed by Razorpay and we do not store card details)
+- Contact us via email or WhatsApp
 
 We do not collect sensitive personal data (health, financial account details, biometric data).`,
             },
             {
               heading: "3. How We Use Your Information",
               body: `We use your information to:
-• Deliver the assessment or service you requested
-• Send your report or snapshot results
-• Follow up on your engagement (only if you have an active service request)
-• Improve our assessment methodology (using aggregated, anonymised data)
+- Deliver the assessment or service you requested
+- Send your report or snapshot results
+- Follow up on your engagement (only if you have an active service request)
+- Improve our assessment methodology (using aggregated, anonymised data)
 
 We do not sell, rent, or share your personal data with third parties for marketing purposes.`,
             },
             {
               heading: "4. Legal Basis for Processing",
               body: `Our legal bases for processing your personal data are:
-• Contract performance — processing necessary to deliver the service you purchased or requested
-• Legitimate interests — improving our services using anonymised aggregate data
-• Consent — where you have explicitly opted in (e.g., requesting launch updates)`,
+- Contract performance - processing necessary to deliver the service you purchased or requested
+- Legitimate interests - improving our services using anonymised aggregate data
+- Consent - where you have explicitly opted in (e.g., requesting launch updates)`,
             },
             {
               heading: "5. Data Retention",
@@ -72,20 +72,20 @@ We do not sell, rent, or share your personal data with third parties for marketi
             {
               heading: "6. Third-Party Services",
               body: `We use the following third-party services that may process your data:
-• Razorpay — payment processing (governed by Razorpay's privacy policy)
-• Formspree — form submission handling (governed by Formspree's privacy policy)
-• Vercel — website hosting (governed by Vercel's privacy policy)
-• Neon — database infrastructure (governed by Neon's privacy policy)
+- Razorpay - payment processing (governed by Razorpay's privacy policy)
+- Formspree - form submission handling (governed by Formspree's privacy policy)
+- Vercel - website hosting (governed by Vercel's privacy policy)
+- Neon - database infrastructure (governed by Neon's privacy policy)
 
 Each of these services operates under their own privacy policies and data processing agreements.`,
             },
             {
               heading: "7. Your Rights",
               body: `You have the right to:
-• Access the personal data we hold about you
-• Request correction of inaccurate data
-• Request deletion of your data (subject to legal retention requirements)
-• Withdraw consent where consent is the legal basis for processing
+- Access the personal data we hold about you
+- Request correction of inaccurate data
+- Request deletion of your data (subject to legal retention requirements)
+- Withdraw consent where consent is the legal basis for processing
 
 To exercise any of these rights, email sriram@sriramadvisory.com with the subject line "Privacy Request".`,
             },

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import GuideSalesPage from "@/components/GuideSalesPage";
 import { guideSalesContent } from "@/lib/guideSalesContent";
 

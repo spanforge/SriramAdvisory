@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
@@ -129,7 +129,7 @@ export default function CareerPositioningAuditPage() {
                   deliveryNote="Use your best email. We will use it to coordinate your resume and LinkedIn submission after payment."
                   emailNote="Your audit coordination and delivery updates will go to this email."
                   footerNote="Secured by Cashfree Payments. One-time payment for a manual audit service."
-                  buttonLabel="Book the Audit — ₹999"
+                  buttonLabel="Book the Audit - Rs 999"
                   buttonStyle={{
                     display: "flex",
                     alignItems: "center",
@@ -194,7 +194,7 @@ export default function CareerPositioningAuditPage() {
                 deliveryNote="Use your best email. We will use it to coordinate your resume and LinkedIn submission after payment."
                 emailNote="Your audit coordination and delivery updates will go to this email."
                 footerNote="Secured by Cashfree Payments. One-time payment for a manual audit service."
-                buttonLabel="Book the Audit — ₹999"
+                buttonLabel="Book the Audit - Rs 999"
                 buttonStyle={{
                   background: "#b45309",
                   color: "#ffffff",
@@ -336,7 +336,7 @@ export default function CareerPositioningAuditPage() {
               deliveryNote="Use your best email. We will use it to coordinate your resume and LinkedIn submission after payment."
               emailNote="Your audit coordination and delivery updates will go to this email."
               footerNote="Secured by Cashfree Payments. One-time payment for a manual audit service."
-              buttonLabel="Book the Audit — ₹999"
+              buttonLabel="Book the Audit - Rs 999"
               buttonStyle={{
                 background: "#b45309",
                 color: "#ffffff",

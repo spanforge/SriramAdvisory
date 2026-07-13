@@ -1,4 +1,4 @@
-export type GuideCard = {
+﻿export type GuideCard = {
   title: string;
   desc: string;
 };
@@ -483,7 +483,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         desc: "A practical next-step path to move from tracker ownership toward clearer roadmap, execution, and business-value signal.",
       },
       {
-        title: "AI-era project and delivery lens",
+        title: "future-of-work project and delivery lens",
         desc: "A grounded view of how AI changes planning, stakeholder updates, execution tracking, and delivery rhythm without removing the need for human judgment.",
       },
       {
@@ -667,7 +667,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       },
     ],
     forYou: [
-      "You are a Business Analyst or Senior BA who wants to move closer to product ownership in the AI era.",
+      "You are a Business Analyst or Senior BA who wants to move closer to product ownership in the future-of-work shift.",
       "You can already sense that documentation-heavy BA work is getting compressed and renamed.",
       "You want an India-first bridge into AI PM, AI Product Owner, or adjacent product roles.",
       "You need a concrete 90-day path, not generic advice to just learn product management.",
@@ -708,7 +708,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     outcomeBullets: [
       "A 90-day FDE transition direction built for working professionals",
       "Clearer movement beyond execution-only delivery",
-      "India-first guidance for stronger GCC, product, and AI-era engineering positioning",
+      "India-first guidance for stronger GCC, product, and future-of-work engineering positioning",
     ],
     promiseBullets: [
       "Decode which parts of FDE work are getting commoditized fastest",
@@ -725,7 +725,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         desc: "A staged path to help you move from delivery-heavy identity toward a more durable and higher-upside engineering story.",
       },
       {
-        title: "AI-era leverage lens",
+        title: "future-of-work leverage lens",
         desc: "A grounded view of how to use AI to increase output while keeping your credibility anchored in real problem-solving and decision quality.",
       },
       {
@@ -846,7 +846,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         desc: "A structured path to build stronger proof, not just consume more AI content.",
       },
       {
-        title: "AI-era workflow guidance",
+        title: "future-of-work workflow guidance",
         desc: "Where AI should accelerate your work, where judgment should stay human-led, and how to use both without hurting credibility.",
       },
       {
@@ -968,7 +968,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       },
       {
         title: "Portfolio direction",
-        desc: "Guidance on what kind of analyst proof feels stronger in the AI era.",
+        desc: "Guidance on what kind of analyst proof feels stronger in the future-of-work shift.",
       },
       {
         title: "Positioning strategy",
@@ -1101,7 +1101,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       },
       {
         title: "Examples and messaging support",
-        desc: "Frameworks to make your next move clearer in applications, interviews, and internal conversations.",
+        desc: "Research tools to make your next move clearer in applications, interviews, and internal conversations.",
       },
     ],
     preview: [
@@ -1164,7 +1164,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     ],
     ctaTitle: "Move before the role narrows further.",
     ctaBody:
-      "Use this guide to replace vague fear with a clearer plan, stronger positioning, and a more future-proof QA story.",
+      "Use this guide to replace vague fear with a clearer plan, stronger positioning, and a more more durable QA story.",
     faqDelivery: DELIVERY_NOTE,
     testimonials: [
       {
@@ -1226,7 +1226,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         desc: "A practical plan to move toward modern automation relevance instead of collecting disconnected tutorials.",
       },
       {
-        title: "Playwright and AI-era positioning lens",
+        title: "Playwright and future-of-work positioning lens",
         desc: "A clearer way to present your background as a foundation for stronger automation work.",
       },
       {
@@ -1324,7 +1324,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     riskLabel: "Active Risk",
     editionLabel: "India 2026 Edition",
     heroSummary:
-      "Understand which parts of Python development are getting cheaper, where Python still compounds in AI-era teams, and how to reposition beyond script-heavy execution toward automation judgment, backend ownership, data workflow reliability, and AI-assisted engineering leverage.",
+      "Understand which parts of Python development are getting cheaper, where Python still compounds in future-of-work teams, and how to reposition beyond script-heavy execution toward automation judgment, backend ownership, data workflow reliability, and AI-assisted engineering leverage.",
     heroNote:
       "Python did not become less valuable. Low-context Python execution did.",
     outcomeBullets: [
@@ -1347,7 +1347,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         desc: "A practical next-step path for building more visible proof around automation quality, backend reliability, data workflow thinking, and AI-assisted delivery.",
       },
       {
-        title: "AI-era Python positioning",
+        title: "future-of-work Python positioning",
         desc: "Guidance on how to frame Python experience around tool use, workflow design, API integration, evaluation thinking, and production usefulness.",
       },
       {
@@ -1405,7 +1405,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       {
         stage: "Stage 3",
         title: "Higher-Leverage Python Positioning",
-        desc: "You are seen as someone who owns automation outcomes, backend trade-offs, data reliability, and AI-era engineering decisions.",
+        desc: "You are seen as someone who owns automation outcomes, backend trade-offs, data reliability, and future-of-work engineering decisions.",
         color: "#0f4c81",
       },
     ],
@@ -1423,7 +1423,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     ],
     ctaTitle: "Move up the Python value chain.",
     ctaBody:
-      "Use this guide to turn Python experience into stronger AI-era positioning, clearer proof, and a more durable market story.",
+      "Use this guide to turn Python experience into stronger future-of-work positioning, clearer proof, and a more durable market story.",
     faqDelivery: DELIVERY_NOTE,
     theme: {
       accent: "#0f766e",
@@ -1473,7 +1473,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       },
       {
         title: "AI integration positioning",
-        desc: "Guidance on how to sound stronger around AI-era engineering without pretending to be an AI researcher.",
+        desc: "Guidance on how to sound stronger around future-of-work engineering without pretending to be an AI researcher.",
       },
       {
         title: "Hiring signal guidance",
@@ -1589,7 +1589,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         desc: "A focused next-step direction for working professionals who need clarity, not panic.",
       },
       {
-        title: "Five new AI-era role directions",
+        title: "Five new future-of-work role directions",
         desc: "A practical view of where support experience can evolve as AI handles more tier-1 and tier-2 work.",
       },
       {
@@ -1814,7 +1814,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     outcomeBullets: [
       "A 90-day direction for first-job readiness",
       "Clearer positioning beyond generic fresher claims",
-      "India-first guidance for AI-era entry-level hiring",
+      "India-first guidance for future-of-work entry-level hiring",
     ],
     promiseBullets: [
       "Decode what AI changes in fresher hiring, screening, and expectations",
@@ -1823,7 +1823,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     ],
     whatYouGet: [
       {
-        title: "AI-era fresher hiring clarity",
+        title: "future-of-work fresher hiring clarity",
         desc: "A direct explanation of why entry-level roles are becoming more selective and what employers now expect from freshers who want to stand out.",
       },
       {
@@ -1851,7 +1851,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       {
         title: "You will get clarity on",
         bullets: [
-          "Why entry-level hiring is getting tougher in the AI era",
+          "Why entry-level hiring is getting tougher in the future-of-work shift",
           "What makes a fresher profile look generic or credible",
           "How to use AI as a learning and execution advantage without sounding fake",
         ],
@@ -1907,7 +1907,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     ],
     ctaTitle: "Stop looking like every other fresher.",
     ctaBody:
-      "Use this guide to build a clearer first-job story, stronger proof, and a practical AI-era direction for entering the market.",
+      "Use this guide to build a clearer first-job story, stronger proof, and a practical future-of-work direction for entering the market.",
     faqDelivery: DELIVERY_NOTE,
     theme: {
       accent: "#0f4c81",

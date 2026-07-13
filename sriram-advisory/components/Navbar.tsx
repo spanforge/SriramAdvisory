@@ -1,6 +1,7 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { NAV_ITEMS } from "@/lib/siteCatalog";
@@ -48,9 +49,11 @@ export default function Navbar() {
               minWidth: 0,
             }}
           >
-            <img
+            <Image
               src="/sriram.png"
               alt="Sriram Advisory"
+              width={40}
+              height={40}
               style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }}
             />
             <div style={{ minWidth: 0 }}>
@@ -78,8 +81,8 @@ export default function Navbar() {
                   whiteSpace: "nowrap",
                 }}
               >
-                <span className="site-nav-tagline-full">Workforce Intelligence & Transformation for the AI Era</span>
-                <span className="site-nav-tagline-compact">Workforce Intelligence & Transformation</span>
+                <span className="site-nav-tagline-full">Future of Work Research and Advisory</span>
+                <span className="site-nav-tagline-compact">Research and Advisory</span>
               </div>
             </div>
           </Link>

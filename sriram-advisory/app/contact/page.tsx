@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -74,7 +74,7 @@ export default function ContactPage() {
             <h2 style={{ fontSize: 22, fontWeight: 800, color: "#0a1628", marginBottom: 32 }}>Send a Message</h2>
             {status === "sent" ? (
               <div style={{ background: "rgba(34,211,160,0.08)", border: "1px solid rgba(34,211,160,0.25)", borderRadius: 12, padding: "36px 32px", textAlign: "center" }}>
-                <div style={{ fontSize: 32, marginBottom: 16 }}>âœ“</div>
+                <div style={{ fontSize: 14, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 16 }}>Sent</div>
                 <div style={{ fontSize: 18, fontWeight: 700, color: "#0d9268", marginBottom: 8 }}>Message sent.</div>
                 <p style={{ fontSize: 15, color: "#5a6a8a" }}>We&apos;ll get back to you within 24 hours.</p>
               </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                     alignSelf: "flex-start",
                   }}
                 >
-                  {status === "sending" ? "Sending..." : "Send Message â†’"}
+                  {status === "sending" ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}

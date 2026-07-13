@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
@@ -41,23 +41,23 @@ export default function TermsPage() {
             {
               heading: "2. Services Offered",
               body: `Sriram Advisory offers the following products and services:
-• AI Career Risk Score (₹999) — a personalised 1-page SA-AIRS™ assessment of your specific role, scored by Sriram and delivered within 24 hours
-• Career Intelligence Report - SA-AIRS Pro (₹999) — a comprehensive intelligence report including full SA-AIRS™ methodology, industry deep dives, salary outlook, and quarterly update coverage
-• Clarity Call (₹3,999 – ₹7,499) — a 30-minute 1:1 strategy session with Sriram, including a full SA-AIRS™ audit and session notes
-• Domain Deep Dive Program (₹9,999 – ₹24,999+) — a custom 90-day transition program from your current role to its AI-era equivalent`,
+- Career Intelligence Assessment (Rs 999) - a personalised 1-page SA-AIRS(TM) assessment of your specific role, scored by Sriram and delivered within 24 hours
+- Career Intelligence Report - SA-AIRS Pro (Rs 999) - a comprehensive intelligence report including full SA-AIRS(TM) methodology, industry deep dives, salary outlook, and quarterly update coverage
+- Clarity Call (Rs 3,999 - Rs 7,499) - a 30-minute 1:1 strategy session with Sriram, including a full SA-AIRS(TM) audit and session notes
+- Domain Deep Dive Program (Rs 9,999 - Rs 24,999+) - a custom 90-day transition program from your current role to its future-of-work equivalent`,
             },
             {
               heading: "3. Nature of the Service",
-              body: `SA-AIRS™ assessments are structured analytical opinions based on the information you provide and Sriram Advisory's proprietary methodology. They are not financial advice, legal advice, or a guarantee of any employment outcome.
+              body: `SA-AIRS(TM) assessments are structured analytical opinions based on the information you provide and Sriram Advisory's proprietary methodology. They are not financial advice, legal advice, or a guarantee of any employment outcome.
 
 The accuracy of the assessment depends on the accuracy and completeness of the information you provide. Providing false or incomplete information will affect the quality of your results.`,
             },
             {
               heading: "4. Delivery",
-              body: `• AI Career Risk Score: Delivered by email within 24 hours of confirmed payment (Indian business days)
-• Career Intelligence Report - SA-AIRS Pro: Delivered by email within 48 hours of confirmed payment
-• Clarity Call: Session scheduled within 5 business days of payment; session notes delivered within 24 hours after the call
-• Domain Deep Dive Program: Onboarding plan delivered within 48 hours; weekly check-ins conducted as agreed
+              body: `- Career Intelligence Assessment: Delivered by email within 24 hours of confirmed payment (Indian business days)
+- Career Intelligence Report - SA-AIRS Pro: Delivered by email within 48 hours of confirmed payment
+- Clarity Call: Session scheduled within 5 business days of payment; session notes delivered within 24 hours after the call
+- Domain Deep Dive Program: Onboarding plan delivered within 48 hours; weekly check-ins conducted as agreed
 
 Delivery timelines may be extended during high-volume periods. You will be notified if this applies to your order.`,
             },
@@ -67,7 +67,7 @@ Delivery timelines may be extended during high-volume periods. You will be notif
             },
             {
               heading: "6. Intellectual Property",
-              body: `The SA-AIRS™ methodology, scoring rubrics, dimension weights, and all content on this website are the intellectual property of Sriram Advisory. You may not reproduce, redistribute, or create derivative works from any assessment output without explicit written permission.
+              body: `The SA-AIRS(TM) methodology, scoring rubrics, dimension weights, and all content on this website are the intellectual property of Sriram Advisory. You may not reproduce, redistribute, or create derivative works from any assessment output without explicit written permission.
 
 You may share your own personal assessment results for your personal career purposes.`,
             },
@@ -75,7 +75,7 @@ You may share your own personal assessment results for your personal career purp
               heading: "7. Limitation of Liability",
               body: `Sriram Advisory's liability in connection with any service is limited to the amount paid for that specific service. We are not liable for indirect, consequential, or incidental damages arising from use of our services or reliance on assessment results.
 
-Career decisions are yours to make. The assessment is a tool — not a directive.`,
+Career decisions are yours to make. The assessment is a tool - not a directive.`,
             },
             {
               heading: "8. Governing Law",

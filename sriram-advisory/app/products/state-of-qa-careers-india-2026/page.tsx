@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
@@ -171,7 +171,7 @@ export default function StateOfQACareersIndia2026Page() {
                   accentColor="#0f6cbd"
                   deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                   emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
-                  buttonLabel="Get the Report â€” â‚¹799"
+                  buttonLabel="Get the Report - Rs 799"
                   buttonStyle={{
                     display: "flex",
                     alignItems: "center",
@@ -410,7 +410,7 @@ export default function StateOfQACareersIndia2026Page() {
         accentColor="#0f6cbd"
         deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your State of QA Careers India 2026 report will be delivered to this email."
-        buttonLabel="Get the Report â€” â‚¹799"
+                  buttonLabel="Get the Report - Rs 799"
       />
 
       <ProductRecommendations />

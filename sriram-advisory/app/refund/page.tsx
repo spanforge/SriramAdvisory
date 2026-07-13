@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
@@ -47,44 +47,44 @@ export default function RefundPage() {
             }}>THE SHORT VERSION</div>
             <p style={{ fontSize: 15, color: "#0a1628", lineHeight: 1.75, margin: 0 }}>
               If your Full Report or Deep Dive is delivered and you genuinely feel it did not meet the standard described, email us within 7 days.
-              We will either re-do the assessment or issue a full refund — no questions asked.
-              We have issued ₹0 in refunds to date because we stand behind the work.
+              We will either re-do the assessment or issue a full refund - no questions asked.
+              We have issued Rs 0 in refunds to date because we stand behind the work.
             </p>
           </div>
 
           {[
             {
-              heading: "1. AI Career Risk Score (₹999)",
-              body: `If your AI Career Risk Score was delivered within the promised timeframe and contains a complete SA-AIRS™ score, dimension breakdown, and Top 3 Moves, the report is considered delivered in full.
+              heading: "1. Career Intelligence Assessment (Rs 999)",
+              body: `If your Career Intelligence Assessment was delivered within the promised timeframe and contains a complete SA-AIRS(TM) score, dimension breakdown, and Top 3 Moves, the report is considered delivered in full.
 
 If you believe the report was not delivered, was materially incomplete, or did not reflect the information you provided, email sriram@sriramadvisory.com within 7 days of delivery. We will either re-do the assessment at no charge or issue a full refund.
 
 Refund requests submitted more than 7 days after delivery will not be processed.`,
             },
             {
-              heading: "2. Career Intelligence Report - SA-AIRS Pro (₹999)",
+              heading: "2. Career Intelligence Report - SA-AIRS Pro (Rs 999)",
               body: `If your Career Intelligence Report - SA-AIRS Pro was delivered and is complete, it is considered delivered in full. If you believe the report was materially incomplete or did not reflect your submission, email us within 7 days of delivery for a re-do or full refund.`,
             },
             {
-              heading: "3. Clarity Call (₹3,999 – ₹7,499)",
+              heading: "3. Clarity Call (Rs 3,999 - Rs 7,499)",
               body: `If the call does not occur within 5 business days of your confirmed availability and this is our fault, you are entitled to a full refund. If you cancel after scheduling but before the call, a partial refund may be issued at our discretion. Session notes are delivered within 24 hours of the call and are considered part of the deliverable.`,
             },
             {
-              heading: "4. Domain Deep Dive Program (₹9,999 – ₹24,999+)",
+              heading: "4. Domain Deep Dive Program (Rs 9,999 - Rs 24,999+)",
               body: `If the onboarding plan is not delivered within 48 hours of confirmed payment and this is our fault, you are entitled to a full refund. Once the program is underway, partial refunds may be issued on a pro-rata basis at our discretion, based on what has been delivered.`,
             },
             {
               heading: "5. How to Request a Refund",
               body: `Email sriram@sriramadvisory.com with:
-• Subject line: "Refund Request — [your name]"
-• Brief description of the issue
-• Your order confirmation or payment reference
+- Subject line: "Refund Request - [your name]"
+- Brief description of the issue
+- Your order confirmation or payment reference
 
-We will respond within 2 business days. Approved refunds are processed back to the original payment method within 5–7 business days via Razorpay.`,
+We will respond within 2 business days. Approved refunds are processed back to the original payment method within 5-7 business days via Razorpay.`,
             },
             {
               heading: "6. Our Commitment",
-              body: `We do not hide behind fine print. If the work was not what was described, we fix it or refund it. This is not marketing — it is how we operate.`,
+              body: `We do not hide behind fine print. If the work was not what was described, we fix it or refund it. This is not marketing - it is how we operate.`,
             },
           ].map((section) => (
             <div key={section.heading} style={{ marginBottom: 40 }}>

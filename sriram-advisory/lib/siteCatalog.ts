@@ -1,4 +1,4 @@
-export type NavItem = {
+﻿export type NavItem = {
   label: string;
   footerLabel?: string;
   href: string;
@@ -9,6 +9,10 @@ export type ReportItem = {
   title: string;
   subtitle: string;
   blurb: string;
+  publicationDate: string;
+  format: string;
+  methodologyNote: string;
+  keyFindings: string[];
   price: string;
   href: string;
   accentColor: string;
@@ -69,29 +73,37 @@ export type FreeResourceItem = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "AI Literacy", href: "/ai-literacy" },
-  { label: "Assessments", href: "/assessments" },
-  { label: "Guides", href: "/guides" },
-  { label: "Bundles", href: "/bundles" },
-  { label: "Reports", href: "/reports" },
-  { label: "Services", href: "/services" },
+  { label: "Home", href: "/" },
+  { label: "Research", href: "/reports" },
+  { label: "Publications", href: "/insights" },
+  { label: "Career Guides", href: "/guides" },
+  { label: "Newsletter", href: "/#newsletter" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const REPORTS: ReportItem[] = [
   {
     badge: "New - June 2026",
     title: "Why Expertise Becomes a Trap",
-    subtitle: "AI displacement. Competency traps. Professional reinvention.",
+    subtitle: "automation pressure. Competency traps. Professional reinvention.",
     blurb:
       "The first Sriram Advisory Intelligence Series report on why skilled professionals can become vulnerable during technological transitions, and why AI is making that pattern faster and broader.",
+    publicationDate: "June 2026",
+    format: "Research Report",
+    methodologyNote: "Built from historical technology-shift patterns, current AI capability signals, and professional reinvention analysis.",
+    keyFindings: [
+      "Expertise can become fragile when the market changes what it rewards",
+      "AI accelerates older disruption patterns rather than replacing them entirely",
+      "Reinvention requires new proof of value, not just more experience",
+    ],
     price: "Rs 499",
     href: "/products/why-expertise-becomes-a-trap",
     accentColor: "#7c3aed",
     bgGradient: "linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%)",
     borderColor: "#d8b4fe",
     bullets: [
-      "Explains why expertise alone is not a durable AI-era moat",
+      "Explains why expertise alone is not a durable future-of-work moat",
       "Connects historical disruption patterns with current AI pressure",
       "Built for senior professionals, managers, HR/L&D, founders, and consultants",
     ],
@@ -102,6 +114,14 @@ export const REPORTS: ReportItem[] = [
     subtitle: "India-first AI career scenarios. Strategic signals. Practical adaptation lens.",
     blurb:
       "A forward-looking intelligence report for professionals who want a clearer view of how AI may reshape work, careers, and leverage in India over the next phase.",
+    publicationDate: "June 2026",
+    format: "Future Outlook",
+    methodologyNote: "Uses scenario framing, technology capability signals, and India-focused career-market interpretation.",
+    keyFindings: [
+      "AI impact will differ sharply by role context and organizational adoption",
+      "Professionals need scenario awareness, not one-line predictions",
+      "Career leverage depends on judgment, workflow ownership, and visible adaptability",
+    ],
     price: "Rs 799",
     href: "/products/ai-futures-2026",
     accentColor: "#0d9268",
@@ -119,6 +139,14 @@ export const REPORTS: ReportItem[] = [
     subtitle: "Testing careers. AI pressure points. Strategic repositioning.",
     blurb:
       "A focused intelligence report for QA professionals who want a clearer reading of how testing roles are changing in India, where the pressure is rising, and what stronger positioning looks like next.",
+    publicationDate: "June 2026",
+    format: "Role Outlook",
+    methodologyNote: "Combines QA task analysis, automation pressure, AI testing capability shifts, and Indian technology-career context.",
+    keyFindings: [
+      "Execution-heavy QA work faces stronger compression pressure",
+      "Quality judgment, product context, and automation strategy remain valuable",
+      "Repositioning depends on moving from testing tasks to quality ownership",
+    ],
     price: "Rs 799",
     href: "/products/state-of-qa-careers-india-2026",
     accentColor: "#0f6cbd",
@@ -136,6 +164,14 @@ export const REPORTS: ReportItem[] = [
     subtitle: "Top 25 high-risk careers. 4 risk bands. 100+ pages.",
     blurb:
       "A market-intelligence report for professionals who want to understand which careers are under the most AI pressure in India, why, and what adaptation paths look like.",
+    publicationDate: "May 2026",
+    format: "Career Risk Index",
+    methodologyNote: "Uses role-level exposure analysis, task patterns, AI capability signals, and practical adaptation pathways.",
+    keyFindings: [
+      "AI pressure is uneven across roles, tasks, seniority, and market context",
+      "Repeatable execution is more exposed than judgment-heavy ownership",
+      "Risk rankings are useful only when paired with adaptation direction",
+    ],
     price: "Rs 999",
     href: "/products/ai-risk-rankings-india-2026",
     accentColor: "#dc2626",
@@ -249,7 +285,7 @@ export const GUIDES: GuideItem[] = [
     title: "FDE Career Transition Guide 2026",
     subtitle: "2.5/10 repositioned score. 90-day direction. Higher-leverage FDE path.",
     blurb:
-      "For FDEs who want to move beyond execution-only delivery and build stronger positioning around product judgment, systems thinking, and AI-era engineering leverage.",
+      "For FDEs who want to move beyond execution-only delivery and build stronger positioning around product judgment, systems thinking, and future-of-work engineering leverage.",
     price: "Rs 499",
     href: "/guides/fde-career-transition-guide-2026",
     accentColor: "#be185d",
@@ -264,7 +300,7 @@ export const GUIDES: GuideItem[] = [
     title: "QA Engineer Survival Guide 2026",
     subtitle: "9.5/10 risk score. 90-day direction. Higher-value QA path.",
     blurb:
-      "For QA professionals under the sharpest AI pressure who want a clearer path toward stronger quality ownership and future-proof relevance.",
+      "For QA professionals under the sharpest AI pressure who want a clearer path toward stronger quality ownership and more durable relevance.",
     price: "Rs 499",
     href: "/guides/qa-engineer-survival-guide-2026",
     accentColor: "#0d9268",
@@ -278,7 +314,7 @@ export const GUIDES: GuideItem[] = [
   {
     badge: "New",
     title: "BPO & Customer Support Career Survival Guide 2026",
-    subtitle: "9.2/10 risk score. 30-day direction. AI-era support paths.",
+    subtitle: "9.2/10 risk score. 30-day direction. future-of-work support paths.",
     blurb:
       "For support professionals who want to understand what AI compresses first and how to reposition toward more durable human-value work.",
     price: "Rs 499",
@@ -289,7 +325,7 @@ export const GUIDES: GuideItem[] = [
     role: "BPO / Support",
     timeline: "30-day direction",
     riskScore: "Risk score 9.2/10",
-    focus: "AI-era support paths",
+    focus: "future-of-work support paths",
   },
   {
     title: "Python Developer AI Leverage Guide 2026",
@@ -366,12 +402,12 @@ export const GUIDES: GuideItem[] = [
     role: "HR / Talent",
     timeline: "18-month repositioning path",
     riskScore: "SA-AIRS score 8.6/10",
-    focus: "AI-era HR leverage",
+    focus: "future-of-work HR leverage",
   },
   {
     badge: "New",
     title: "Fresher AI Survival Guide",
-    subtitle: "Entry-level AI-era career clarity. 90-day direction. First-job positioning.",
+    subtitle: "Entry-level future-of-work career clarity. 90-day direction. First-job positioning.",
     blurb:
       "For freshers and early-career professionals who want to understand what AI changes in entry-level hiring, how to avoid generic fresher positioning, and how to build stronger proof for the first serious opportunity.",
     price: "Rs 499",

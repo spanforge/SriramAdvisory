@@ -1,4 +1,4 @@
-export type BundleBadge = "Most Popular" | "Best Value";
+﻿export type BundleBadge = "Most Popular" | "Best Value";
 
 export type BundleItem = {
   name: string;
@@ -76,7 +76,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         price: 799,
         priceLabel: "Rs 799",
         savingsLabel: "You save Rs 199",
-        description: "Move from manual execution pressure to stronger automation and AI-era quality positioning.",
+        description: "Move from manual execution pressure to stronger automation and future-of-work quality positioning.",
         outcome: "See where QA work is shifting and what to strengthen next.",
         items: [
           { name: "QA Engineer Survival Guide 2026", price: "Rs 499" },
@@ -105,7 +105,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
         price: 799,
         priceLabel: "Rs 799",
         savingsLabel: "You save Rs 199",
-        description: "Bridge core Java experience into platform, DevOps, and higher-leverage AI-era work.",
+        description: "Bridge core Java experience into platform, DevOps, and higher-leverage future-of-work work.",
         outcome: "Turn Java experience into a stronger modernization story.",
         items: [
           { name: "Java Developer AI Leverage Guide 2026", price: "Rs 499" },

@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -6,28 +6,28 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Case Studies | Sriram Advisory",
   description:
-    "Real SA-AIRS™ assessments and outcomes. See how professionals have repositioned their careers in response to AI displacement risk.",
+    "Real SA-AIRS(TM) assessments and outcomes. See how professionals have repositioned their careers in response to automation pressure risk.",
 };
 
 const CASES = [
   {
     id: "case-01",
-    title: "Backend Engineer → Platform Architect",
-    industry: "Fintech · SaaS",
+    title: "Backend Engineer -> Platform Architect",
+    industry: "Fintech  -  SaaS",
     role: "Senior Backend Engineer",
     exp: "7 years",
     before: 7.8,
     after: 4.2,
     delta: -3.6,
     horizon: "12 months",
-    tier: ["L2 → L3", "badge-safe"],
-    quote: "I was writing the same boilerplate in different projects for years. The report made it concrete — I was replaceable on paper. Switched focus to distributed systems design. Score dropped 3.6 points in 11 months.",
-    moves: ["Designed and documented 3 internal systems from scratch", "Took ownership of architecture decisions across 2 teams", "Stopped taking sprint tasks — started writing technical specs"],
+    tier: ["L2 -> L3", "badge-safe"],
+    quote: "I was writing the same boilerplate in different projects for years. The report made it concrete - I was replaceable on paper. Switched focus to distributed systems design. Score dropped 3.6 points in 11 months.",
+    moves: ["Designed and documented 3 internal systems from scratch", "Took ownership of architecture decisions across 2 teams", "Stopped taking sprint tasks - started writing technical specs"],
     tags: ["Backend", "Architecture", "SaaS"],
   },
   {
     id: "case-02",
-    title: "QA Engineer → Automation Systems Lead",
+    title: "QA Engineer -> Automation Systems Lead",
     industry: "Healthcare Tech",
     role: "QA Engineer",
     exp: "5 years",
@@ -35,38 +35,38 @@ const CASES = [
     after: 5.1,
     delta: -3.3,
     horizon: "9 months",
-    tier: ["L2 → L3", "badge-safe"],
-    quote: "My whole job was writing test cases and running them. The score was 8.4 — I already knew it was bad. But seeing it in a formula helped me stop avoiding the conversation and start building automation systems instead of running them.",
+    tier: ["L2 -> L3", "badge-safe"],
+    quote: "My whole job was writing test cases and running them. The score was 8.4 - I already knew it was bad. But seeing it in a formula helped me stop avoiding the conversation and start building automation systems instead of running them.",
     moves: ["Built the company's first AI-assisted test generation framework", "Became the technical owner of test infrastructure", "Documented framework decisions so others depended on the system"],
     tags: ["QA", "Testing", "Healthcare"],
   },
   {
     id: "case-03",
-    title: "Marketing Manager → Growth Systems Designer",
-    industry: "D2C · Consumer",
+    title: "Marketing Manager -> Growth Systems Designer",
+    industry: "D2C  -  Consumer",
     role: "Marketing Manager",
     exp: "6 years",
     before: 7.1,
     after: 4.8,
     delta: -2.3,
     horizon: "14 months",
-    tier: ["L2 → L3", "badge-safe"],
-    quote: "My score was 7.1 and honestly lower than I expected. But the breakdown was uncomfortable — D1 and D2 were both above 7. I was running campaigns, not designing systems. Spent the next year building playbooks, not decks.",
+    tier: ["L2 -> L3", "badge-safe"],
+    quote: "My score was 7.1 and honestly lower than I expected. But the breakdown was uncomfortable - D1 and D2 were both above 7. I was running campaigns, not designing systems. Spent the next year building playbooks, not decks.",
     moves: ["Created repeatable campaign playbooks adopted by the entire team", "Shifted from individual contributor to system designer", "Moved budget ownership from expense to strategy layer"],
     tags: ["Marketing", "Growth", "D2C"],
   },
   {
     id: "case-04",
-    title: "Data Analyst → Decision Intelligence Lead",
-    industry: "BFSI · Insurance",
+    title: "Data Analyst -> Decision Intelligence Lead",
+    industry: "BFSI  -  Insurance",
     role: "Senior Data Analyst",
     exp: "8 years",
     before: 7.5,
     after: 3.9,
     delta: -3.6,
     horizon: "16 months",
-    tier: ["L3 → L4", "badge-safe"],
-    quote: "I was producing dashboards. Good ones — but dashboards. My D2 was 8.0 because everything I made could be replicated by a BI tool. Moved into decision design — framing what questions leaders should be asking.",
+    tier: ["L3 -> L4", "badge-safe"],
+    quote: "I was producing dashboards. Good ones - but dashboards. My D2 was 8.0 because everything I made could be replicated by a BI tool. Moved into decision design - framing what questions leaders should be asking.",
     moves: ["Shifted from producing reports to defining the decision logic behind them", "Built the insurance risk scoring model from the ground up", "Now owns the intelligence framework, not just the data pipeline"],
     tags: ["Data", "Analytics", "BFSI"],
   },
@@ -88,7 +88,7 @@ export default function CasesPage() {
             Engineers Who<br />Changed Their Score
           </h1>
           <p className="section-sub" style={{ margin: "0 auto 24px", textAlign: "center" }}>
-            4 audited professionals. Score before, score after, and exactly what they did in between. Anonymised — the data is real.
+            4 audited professionals. Score before, score after, and exactly what they did in between. Anonymised - the data is real.
           </p>
           <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, color: "#5a6a8a", letterSpacing: "0.08em", textTransform: "uppercase", fontWeight: 600 }}>
             Composite scores based on SA-AIRS&#8482; v4 methodology &middot; All names anonymised
@@ -158,7 +158,7 @@ export default function CasesPage() {
                     <span style={{ color: "#f8faff", fontSize: 13 }}>What changed the score:</span><br />
                     D1 dropped as work became less repeatable.<br />
                     D4 rose as decision ownership expanded.<br />
-                    Market Saturation (D3) unchanged — but now offset.
+                    Market Saturation (D3) unchanged - but now offset.
                   </div>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function CasesPage() {
           <div className="proof-item"><span className="proof-number">31</span><p className="proof-desc">Engineers audited in Phase 1</p></div>
           <div className="proof-item"><span className="proof-number">74%</span><p className="proof-desc">Had scores above 6.5 on first audit</p></div>
           <div className="proof-item"><span className="proof-number">&#8209;3.1</span><p className="proof-desc">Average score delta over 12 months</p></div>
-          <div className="proof-item"><span className="proof-number">₹0</span><p className="proof-desc">Refunds issued</p></div>
+          <div className="proof-item"><span className="proof-number">Rs 0</span><p className="proof-desc">Refunds issued</p></div>
         </div>
       </div>
 
@@ -183,7 +183,7 @@ export default function CasesPage() {
           <span className="section-label">Start Your Audit</span>
           <h2 className="section-title">Get Your Baseline Score</h2>
           <p className="section-sub" style={{ textAlign: "center", marginBottom: 32 }}>
-            Before you can change the score, you need to know it. Get your AI Career Risk Score — your number in 24 hours.
+            Before you can change the score, you need to know it. Get your Career Intelligence Assessment - your number in 24 hours.
           </p>
           <Link href="/get-started" className="btn-primary" style={{ display: "inline-flex" }}>
             Get Your Risk Score &rarr;

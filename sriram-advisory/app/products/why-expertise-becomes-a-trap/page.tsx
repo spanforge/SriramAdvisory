@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
@@ -25,7 +25,7 @@ const WHAT_YOU_GET = [
     desc: "Why smart people often read change too late, defend the old model too long, and mistake past competence for future safety.",
   },
   {
-    title: "AI-era interpretation",
+    title: "future-of-work interpretation",
     desc: "How AI changes the equation by compressing knowledge work, documentation, analysis, testing, coordination, and repeatable expert routines.",
   },
   {
@@ -150,7 +150,7 @@ export default function WhyExpertiseBecomesATrapPage() {
               >
                 Why Expertise Becomes a Trap
                 <br />
-                <span style={{ color: "#d8b4fe" }}>The hidden pattern behind AI displacement</span>
+                <span style={{ color: "#d8b4fe" }}>The hidden pattern behind automation pressure</span>
               </h1>
               <p
                 style={{
@@ -388,7 +388,7 @@ export default function WhyExpertiseBecomesATrapPage() {
         accentColor="#7c3aed"
         deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your Why Expertise Becomes a Trap report will be delivered to this email."
-        buttonLabel="Get the Report â€” â‚¹499"
+        buttonLabel="Get the Report - Rs 499"
       />
 
       <ProductRecommendations />

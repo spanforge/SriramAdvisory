@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tools | Sriram Advisory",
   description:
-    "Career intelligence tools for Indian professionals — including the Am I Future-Proof? Audit. Know your exact AI risk horizon and next moves.",
+    "Career intelligence tools for Indian professionals - including the Am I Future-Proof? Audit. Know your exact AI risk horizon and next moves.",
 };
 
 const TOOLS = [
@@ -15,18 +15,18 @@ const TOOLS = [
     badgeBg: "#dc2626",
     badgeColor: "#ffffff",
     title: "Am I Future-Proof? Audit",
-    subtitle: "48-hour personal audit — risk horizon at 12 and 36 months. Top 3 Moves.",
+    subtitle: "48-hour personal audit - risk horizon at 12 and 36 months. Top 3 Moves.",
     blurb:
-      "Everything in the Score Report, plus a specific 12-month and 36-month risk horizon and a role-specific 90-day action plan (Top 3 Moves). A human-reviewed audit — not a generic output. For professionals who want the diagnosis and an immediate action plan delivered in one report within 48 hours.",
-    price: "₹499",
+      "Everything in the Score Report, plus a specific 12-month and 36-month risk horizon and a role-specific 90-day action plan (Top 3 Moves). A human-reviewed audit - not a generic output. For professionals who want the diagnosis and an immediate action plan delivered in one report within 48 hours.",
+    price: "Rs 499",
     strikePrice: null,
     tag: "48-Hour Turnaround",
-    href: "/am-i-future-proof",
+    href: "/am-i-more durable",
     accentColor: "#dc2626",
     bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
     borderColor: "#fecaca",
-    ctaLabel: "Book the Audit →",
-    details: ["Full SA-AIRS™ score (all 5 dimensions)", "12-month and 36-month risk horizon", "Top 10% Ladder placement", "Top 3 Moves (90-day action plan)"],
+    ctaLabel: "Book the Audit ->",
+    details: ["Full SA-AIRS(TM) score (all 5 dimensions)", "12-month and 36-month risk horizon", "Top 10% Ladder placement", "Top 3 Moves (90-day action plan)"],
   },
 ];
 
@@ -75,7 +75,7 @@ export default function ToolsPage() {
                 color: "#93b4ff",
               }}
             >
-              SA-AIRS™ Career Intelligence
+              SA-AIRS(TM) Career Intelligence
             </span>
           </div>
           <h1
@@ -215,7 +215,7 @@ export default function ToolsPage() {
                           marginTop: 1,
                         }}
                       >
-                        —
+                        -
                       </span>
                       {d}
                     </li>

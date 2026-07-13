@@ -1,12 +1,12 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Products | Sriram Advisory",
+  title: "Research Products | Sriram Advisory",
   description:
-    "AI career intelligence products for Indian professionals including AI Futures 2026, AI Risk Rankings India 2026, bundles, and the SA-AIRS personal risk assessment.",
+    "Research products from Sriram Advisory, including Future of Work reports, role guides, and career intelligence assessments.",
 };
 
 const PRODUCTS = [
@@ -16,23 +16,23 @@ const PRODUCTS = [
     badgeBg: "#dc2626",
     badgeBorder: "#ef4444",
     accentColor: "#dc2626",
-    tag: "v7.0 - India Labour Market Intelligence",
+    tag: "India Workforce Intelligence",
     title: "AI Risk Rankings India 2026",
     price: "Rs 999",
     strikePrice: null,
     priceNote: "Top 25 High-Risk Careers Report",
     tagline: "25 ranked careers. 4 risk bands. 100+ pages.",
     blurb:
-      "The definitive ranking of India's 25 highest-risk careers under AI displacement. Research-backed analysis with task-composition data, headcount figures, salary data, a full individual adaptation framework, and case studies. Sourced from NASSCOM 2026, NITI Aayog, WEF, EY India, and McKinsey.",
+      "A structured analysis of careers facing rising automation and market pressure in India, with role-level context, adaptation direction, and supporting market signals.",
     bullets: [
       "Top 25 careers ranked with risk bands, headcounts, and salary data",
-      "4-tier risk band framework from Extreme to Moderate",
+      "Clear risk bands with practical interpretation",
       "Deep-dive vulnerability profiles for 5 occupational clusters",
       "Individual adaptation framework with 90-day direction by role",
       "Career transition paths mapped for each high-risk occupation",
       "4 Indian case studies with illustrative transition profiles",
     ],
-    cta: "Get the Report - Rs 999 ->",
+    cta: "View report - Rs 999 ->",
     href: "/products/ai-risk-rankings-india-2026",
     external: false,
     featured: false,
@@ -104,21 +104,21 @@ const PRODUCTS = [
     badgeBorder: "rgba(167,139,250,0.3)",
     accentColor: "#7c3aed",
     tag: "Delivered Within 24 Hours",
-    title: "SA-AIRS Personal Risk Assessment",
+    title: "Career Intelligence Assessment",
     price: "Rs 999",
     strikePrice: "Rs 1,999",
     priceNote: "Launch Price - Personalised",
-    tagline: "Your score. Your tier. Your benchmark.",
+    tagline: "Your role. Your context. Your next decision.",
     blurb:
-      "Not a quiz - a structured analytical framework applied to your specific role. Scored across all 5 SA-AIRS dimensions with a composite risk score, ladder position, and dimension benchmarks.",
+      "A structured assessment for professionals who want an independent reading of role exposure, market pressure, and practical next moves.",
     bullets: [
-      "All 5 SA-AIRS dimensions scored for your exact role",
-      "Composite risk score from 0-10 plus tier placement",
-      "12-month and 36-month forward risk horizon",
-      "Top 10 percent Ladder placement",
-      "Dimension benchmarks against role averages",
+      "Role-specific interpretation delivered as a concise report",
+      "Clear explanation of exposure, pressure, and confidence level",
+      "Short-term and medium-term watch areas",
+      "Practical next moves for learning and positioning",
+      "Delivered directly by email",
     ],
-    cta: "Order My Assessment - Rs 999 ->",
+    cta: "Order assessment - Rs 999 ->",
     href: "/products/airs-assessment",
     external: false,
     featured: false,
@@ -155,7 +155,7 @@ export default function ProductsPage() {
           >
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#1a4fd6", display: "inline-block" }} />
             <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a4fd6" }}>
-              AI Career Intelligence - India 2026
+              Research Products
             </span>
           </div>
           <h1
@@ -168,14 +168,13 @@ export default function ProductsPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Know exactly where you stand
+            Choose the research format that fits the decision
           </h1>
           <p style={{ fontSize: "clamp(16px, 2vw, 19px)", color: "#5a6a8a", lineHeight: 1.7, maxWidth: 580, margin: "0 auto 12px" }}>
-            Four products. One purpose: to give Indian professionals the clarity,
-            data, bundles, and frameworks they need to read the AI era and decide for themselves.
+            Reports, guides, and assessments for professionals and teams trying to understand how work is changing.
           </p>
           <p style={{ fontSize: 15, color: "#8898b8", fontStyle: "italic" }}>
-            &quot;We don&apos;t guess your future. We model it.&quot; - Sriram
+            Built to create clearer judgment, not louder predictions.
           </p>
         </div>
       </section>
@@ -395,8 +394,7 @@ export default function ProductsPage() {
             Not sure where to start?
           </h2>
           <p style={{ fontSize: 16, color: "#8898b8", lineHeight: 1.7, marginBottom: 32 }}>
-            Start with AI Futures 2026 if you want a sharper map of what may change next. Choose AI Risk Rankings if you want occupational risk context, or the AIRS Assessment if you want your own role scored directly.
-            Choose bundles when you want role guidance and market context together.
+            Start with Future of Work research if you want a wider map. Choose a role guide when you need practical next steps, or an assessment when you want your own role interpreted directly.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             <Link

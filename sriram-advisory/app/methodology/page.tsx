@@ -1,36 +1,121 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Methodology | Sriram Advisory",
+  title: "Research Method | Sriram Advisory",
   description:
-    "How the Career Intelligence System works. Rule-based scoring, transparent logic, and honest confidence ratings.",
+    "How Sriram Advisory studies workforce change and turns research into practical intelligence for professionals, teams, and organizations.",
 };
 
-const FRAMES_OVERVIEW = [
-  { num: "Frame 1", label: "Source of Value", teaser: "Where does your relevance actually come from?" },
-  { num: "Frame 2", label: "Learning Path", teaser: "How do you move from where you are to where you need to be?" },
-  { num: "Frame 3", label: "AI Relationship", teaser: "Are you positioning defensively or offensively?" },
-  { num: "Frame 4", label: "Security Source", teaser: "What is your actual moat in a fast-changing market?" },
-  { num: "Frame 5", label: "Knowledge vs Thinking", teaser: "Are you accumulating data or generating insight?" },
+const METHOD_PRINCIPLES = [
+  {
+    title: "Work is studied in context",
+    body: "Roles are interpreted through the surrounding system: industry pressure, team structure, technology adoption, delivery model, incentives, and customer expectations.",
+  },
+  {
+    title: "Signals matter more than hype",
+    body: "We separate durable workforce signals from short-lived technology excitement, social media panic, and broad claims that are not useful for decisions.",
+  },
+  {
+    title: "Judgment is part of the analysis",
+    body: "Career and workforce risk cannot be reduced to a single trend. We look at where human judgment, accountability, trust, and context still matter.",
+  },
+  {
+    title: "Outputs must be usable",
+    body: "Research is translated into reports, briefings, guides, and advisory notes that help people decide what to learn, monitor, change, or question next.",
+  },
 ];
 
-const AIRS_DIMENSIONS = [
-  { name: "Task Repetition", weight: "High" },
-  { name: "Automation Feasibility", weight: "High" },
-  { name: "Market Saturation", weight: "Medium" },
-  { name: "Decision Complexity", weight: "High" },
-  { name: "Human Dependency", weight: "Medium" },
+const RESEARCH_INPUTS = [
+  "Role and task patterns",
+  "Hiring and skill-demand signals",
+  "AI and automation capability shifts",
+  "Indian IT, GCC, and global delivery trends",
+  "Management and organizational design changes",
+  "Professional positioning and employability patterns",
 ];
 
-const LADDER = [
-  { level: "L5", label: "Expert", thinking: "I define what problems matter", risk: "Highly differentiated" },
-  { level: "L4", label: "Strategic", thinking: "I see patterns others miss", risk: "Low exposure" },
-  { level: "L3", label: "Applied", thinking: "I solve real problems", risk: "Minimum strategic threshold", highlight: true },
-  { level: "L2", label: "Functional", thinking: "I execute what's specified", risk: "Growing exposure" },
-  { level: "L1", label: "Surface", thinking: "I know tools. I follow instructions.", risk: "High — AI has largely replaced this" },
+const QUESTION_SELECTION = [
+  "A workforce shift is visible across multiple roles, not only one isolated anecdote.",
+  "The question affects career durability, employability, management, or organizational capability.",
+  "The topic is being discussed loudly, but professionals lack a useful decision frame.",
+  "There is enough public evidence to explain the issue without relying on private or unverifiable data.",
+];
+
+const RESEARCH_CYCLE = [
+  {
+    title: "Observe signals",
+    body: "Track shifts in role language, hiring demand, technology capability, delivery models, organization design, and professional anxiety.",
+  },
+  {
+    title: "Form hypotheses",
+    body: "Convert repeated patterns into testable questions about where work is being compressed, upgraded, redistributed, or revalued.",
+  },
+  {
+    title: "Compare across roles",
+    body: "Check whether the pattern appears only in one occupation or across adjacent roles, industries, seniority levels, and team structures.",
+  },
+  {
+    title: "Publish practical intelligence",
+    body: "Turn the analysis into reports, briefings, guides, and advisory notes written for decisions rather than academic completeness.",
+  },
+  {
+    title: "Revise as evidence changes",
+    body: "Update the point of view when new signals show that a role, market, or capability shift is moving differently than expected.",
+  },
+];
+
+const DATA_USED = [
+  "Public hiring signals and role descriptions",
+  "Observable changes in tools, workflows, and delivery expectations",
+  "Published industry commentary, market signals, and technology capability shifts",
+  "Patterns from professional positioning, resumes, LinkedIn profiles, and career questions",
+  "Comparative analysis across Indian IT, GCCs, business functions, and global work models",
+];
+
+const DATA_NOT_USED = [
+  "Private employer data without permission",
+  "Individual career data published as identifiable examples",
+  "Black-box claims that cannot be explained in plain language",
+  "One-factor predictions that reduce workforce change to AI alone",
+];
+
+const FRAMEWORK_EVOLUTION = [
+  "Frameworks begin as working models used to organize repeated observations.",
+  "They are refined when new reports reveal stronger or weaker explanatory power.",
+  "Public pages describe the purpose, examples, and limits of each framework.",
+  "Detailed rubrics remain proprietary so they can be applied responsibly in reports, assessments, and advisory work.",
+];
+
+const CONFIDENCE_LEVELS = [
+  {
+    level: "Observed Signal",
+    body: "A pattern is visible in public language, tools, role expectations, or market behavior, but may still be early.",
+  },
+  {
+    level: "Developing Pattern",
+    body: "The signal appears across multiple sources, roles, or industries and is strong enough for practical interpretation.",
+  },
+  {
+    level: "Established Shift",
+    body: "The pattern is durable enough to shape reports, frameworks, guides, and advisory conversations.",
+  },
+];
+
+const REVIEW_PRACTICE = [
+  "Flagship reports are revisited when market signals, tool capability, or role language materially changes.",
+  "Framework pages are updated when repeated research makes a concept clearer or reveals a limitation.",
+  "Briefings and essays preserve a timestamped point of view rather than pretending every conclusion is permanent.",
+  "Older conclusions may be revised publicly when the evidence changes.",
+];
+
+const EXPECTATIONS = [
+  "Research is written to support better judgment, not to promise certainty.",
+  "Reports and guides explain what is changing, why it matters, and what practical options are available.",
+  "Assessments and rankings are analytical views based on available signals, not guarantees or professional advice.",
+  "The research is updated as markets, technologies, and organizational behavior change.",
 ];
 
 export default function MethodologyPage() {
@@ -38,201 +123,277 @@ export default function MethodologyPage() {
     <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
 
-      {/* HERO */}
-      <section style={{ background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 60%, #e6efff 100%)", paddingTop: 120, paddingBottom: 80, position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(26,79,214,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(26,79,214,0.04) 1px, transparent 1px)", backgroundSize: "64px 64px" }} />
-        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 24px", position: "relative" }}>
-          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 28 }}>How We Score</span>
-          <h1 style={{ fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, marginBottom: 24, letterSpacing: "-0.02em" }}>
-            Methodology
+      <section
+        style={{
+          background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 58%, #edf7f2 100%)",
+          paddingTop: 112,
+          paddingBottom: 88,
+          borderBottom: "1px solid rgba(26,79,214,0.12)",
+        }}
+      >
+        <div style={{ maxWidth: 920, margin: "0 auto", padding: "0 24px" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 26 }}>
+            Research Method
+          </span>
+          <h1 style={{ fontSize: "clamp(38px, 5.4vw, 68px)", fontWeight: 900, color: "#0a1628", lineHeight: 1.08, margin: "0 0 24px", letterSpacing: "-0.02em" }}>
+            How we study work before turning it into advice.
           </h1>
-          <p style={{ fontSize: "clamp(17px, 2.2vw, 20px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 620 }}>
-            Rule-based. Transparent. Confidence-rated.<br />
-            The full scoring logic is revealed inside your report — not before.
+          <p style={{ fontSize: "clamp(17px, 2.1vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 760, margin: 0 }}>
+            Sriram Advisory uses structured research, professional judgment, and practical interpretation to understand how careers, skills, teams, and organizations are changing.
           </p>
         </div>
       </section>
 
-      {/* OVERVIEW */}
-      <section style={{ padding: "80px 24px", background: "#f7f9fc" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 20 }}>
-            {[
-              { label: "Rule-Based", desc: "Not AI-generated. Every score is calculated from defined, documented logic." },
-              { label: "Transparent", desc: "The scoring method is built on 5 dimensions. Each score includes a confidence level." },
-              { label: "Confidence Rated", desc: "Every assessment comes with a confidence level. Honest uncertainty = trust." },
-              { label: "Re-assessable", desc: "90-day re-assessment included. Your thinking is not static — we track evolution." },
-            ].map((m) => (
-              <div key={m.label} style={{ background: "rgba(10,22,40,0.025)", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 12, padding: "24px" }}>
-                <div style={{ fontSize: 14, fontWeight: 800, color: "#1a4fd6", marginBottom: 8 }}>{m.label}</div>
-                <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.65 }}>{m.desc}</div>
-              </div>
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <div style={{ maxWidth: 760, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Principles
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0 0" }}>
+              The method is designed to create clarity, not false certainty.
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18 }}>
+            {METHOD_PRINCIPLES.map((principle) => (
+              <article key={principle.title} style={{ background: "#f8fbff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "24px 22px" }}>
+                <h3 style={{ fontSize: 20, color: "#0a1628", lineHeight: 1.25, margin: "0 0 10px" }}>{principle.title}</h3>
+                <p style={{ fontSize: 15, color: "#52627e", lineHeight: 1.75, margin: 0 }}>{principle.body}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 5 THINKING FRAMES */}
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Section 1</span>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-            The 5 Thinking Frames
-          </h2>
-          <p style={{ fontSize: 16, color: "#5a6a8a", marginBottom: 48, lineHeight: 1.7, maxWidth: 680 }}>
-            Each frame measures a mental model that determines whether you become easier to commoditize
-            or more highly differentiated. The exact questions, scoring logic, and frame-to-risk causal chain
-            are inside your report — not published here.
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {FRAMES_OVERVIEW.map((f) => (
-              <div key={f.num} style={{
-                display: "grid", gridTemplateColumns: "120px 1fr",
-                gap: 24, padding: "22px 28px",
-                background: "rgba(10,22,40,0.025)", border: "1px solid rgba(26,79,214,0.15)",
-                borderRadius: 12, alignItems: "center",
-              }}>
-                <div>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: "#1a4fd6", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>{f.num}</div>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: "#0a1628" }}>{f.label}</div>
-                </div>
-                <div style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.6, fontStyle: "italic" }}>{f.teaser}</div>
-              </div>
-            ))}
-          </div>
-          <div style={{ marginTop: 32, padding: "20px 24px", background: "rgba(26,79,214,0.05)", border: "1px solid rgba(26,79,214,0.2)", borderRadius: 10 }}>
-            <p style={{ fontSize: 14, color: "#5a6a8a", margin: 0, lineHeight: 1.7 }}>
-              The full frame scoring rubric — what each answer signals and why — is part of the Career Intelligence Report.
-              It is not published publicly. Order the assessment to see exactly how you score and why.
+      <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 0.8fr) minmax(0, 1.2fr)", gap: 34 }} className="home-two-col">
+          <div>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+              Research Inputs
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
+              We look across the work system, not only at tools.
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              AI matters, but it is one part of a wider set of workforce shifts. Useful research has to connect technology change with roles, economics, organizations, and human judgment.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* SA-AIRS SCORING */}
-      <section style={{ padding: "100px 24px", background: "#f7f9fc" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Section 2</span>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 16, letterSpacing: "-0.02em" }}>
-            SA-AIRS™ Scoring
-          </h2>
-          <p style={{ fontSize: 16, color: "#5a6a8a", marginBottom: 48, lineHeight: 1.7, maxWidth: 680 }}>
-            SA-AIRS™ (Sriram Advisory AI Risk Score) measures your AI displacement risk across 5 weighted dimensions.
-            Your frame profile is one input. Role context, market conditions, and decision complexity also factor in.
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {AIRS_DIMENSIONS.map((d, i) => (
-              <div key={d.name} style={{
-                display: "grid", gridTemplateColumns: "36px 1fr auto",
-                gap: 20, padding: "20px 24px",
-                background: "rgba(10,22,40,0.025)", border: "1px solid rgba(26,79,214,0.15)",
-                borderRadius: 12, alignItems: "center",
-              }}>
-                <div style={{ fontSize: 24, fontWeight: 800, color: "rgba(26,79,214,0.3)", lineHeight: 1 }}>{i + 1}</div>
-                <div style={{ fontSize: 15, fontWeight: 700, color: "#0a1628" }}>{d.name}</div>
-                <div style={{
-                  background: d.weight === "High" ? "rgba(255,80,80,0.12)" : "rgba(255,180,0,0.1)",
-                  border: `1px solid ${d.weight === "High" ? "rgba(255,80,80,0.25)" : "rgba(255,180,0,0.2)"}`,
-                  borderRadius: 6, padding: "4px 10px",
-                  fontSize: 13, fontWeight: 700,
-                  color: d.weight === "High" ? "#dc2626" : "#fbbf24",
-                  letterSpacing: "0.08em", textTransform: "uppercase", whiteSpace: "nowrap",
-                }}>{d.weight} Weight</div>
+          <div style={{ display: "grid", gap: 12 }}>
+            {RESEARCH_INPUTS.map((input) => (
+              <div key={input} style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "16px 18px", color: "#304159", fontSize: 15, fontWeight: 800 }}>
+                {input}
               </div>
             ))}
           </div>
-          <div style={{ marginTop: 32, padding: "20px 24px", background: "rgba(26,79,214,0.05)", border: "1px solid rgba(26,79,214,0.2)", borderRadius: 10 }}>
-            <p style={{ fontSize: 14, color: "#5a6a8a", margin: 0, lineHeight: 1.7 }}>
-              How these dimensions are scored, weighted, and combined — and why your specific thinking patterns
-              drive your score in each — is explained in your personalised report. Not here.
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 0.8fr) minmax(0, 1.2fr)", gap: 34 }} className="home-two-col">
+          <div>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Question Selection
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
+              How research questions are chosen.
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Not every trend deserves a report. We prioritize questions where professionals or organizations need a clearer map for decisions.
             </p>
           </div>
+          <div style={{ display: "grid", gap: 12 }}>
+            {QUESTION_SELECTION.map((item) => (
+              <div key={item} style={{ background: "#f8fbff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "16px 18px", color: "#304159", fontSize: 15, lineHeight: 1.7, fontWeight: 750 }}>
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 10% LADDER */}
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Section 3</span>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 48, letterSpacing: "-0.02em" }}>
-            The 10% Ladder
-          </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-            {LADDER.map((l, i) => (
-              <div key={l.level} style={{
-                display: "grid", gridTemplateColumns: "80px 1fr auto",
-                gap: 24, padding: "24px 28px",
-                background: l.highlight ? "rgba(26,79,214,0.07)" : "rgba(10,22,40,0.025)",
-                border: l.highlight ? "1px solid rgba(26,79,214,0.4)" : "1px solid rgba(26,79,214,0.1)",
-                borderRadius: i === 0 ? "14px 14px 0 0" : i === LADDER.length - 1 ? "0 0 14px 14px" : "0",
-                borderTop: i > 0 ? "none" : undefined,
-                alignItems: "center",
-              }}>
-                <div>
-                  <div style={{ fontSize: 20, fontWeight: 800, color: l.highlight ? "#1a4fd6" : "#8a9ab8" }}>{l.level}</div>
-                  <div style={{ fontSize: 13, color: l.highlight ? "#0d9268" : "#5a6a8a", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em" }}>{l.label}</div>
+      <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <div style={{ maxWidth: 780, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Research Cycle
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
+              Ideas move from signals to hypotheses to useful public work.
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              The method is iterative. Sriram Advisory does not treat a first conclusion as final when the market is still changing.
+            </p>
+          </div>
+          <div style={{ display: "grid", gap: 14 }}>
+            {RESEARCH_CYCLE.map((step, index) => (
+              <article key={step.title} style={{ display: "grid", gridTemplateColumns: "72px minmax(0, 1fr)", gap: 18, alignItems: "start", border: "1px solid #dbe5f5", borderRadius: 8, padding: "20px", background: "#ffffff" }}>
+                <div style={{ width: 44, height: 44, borderRadius: 8, background: "#1a4fd6", color: "#ffffff", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 900 }}>
+                  {index + 1}
                 </div>
-                <div style={{ fontSize: 14, fontWeight: 700, color: "#0a1628", fontStyle: "italic" }}>&quot;{l.thinking}&quot;</div>
-                <div style={{
-                  fontSize: 13, fontWeight: 600, color: "#5a6a8a",
-                  textAlign: "right", maxWidth: 160, lineHeight: 1.4,
-                }}>{l.risk}</div>
-              </div>
+                <div>
+                  <h3 style={{ fontSize: 21, color: "#0a1628", margin: "0 0 8px" }}>{step.title}</h3>
+                  <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: 0 }}>{step.body}</p>
+                </div>
+              </article>
             ))}
-          </div>
-          <div style={{ marginTop: 24, display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{ width: 16, height: 16, background: "rgba(26,79,214,0.3)", border: "1px solid rgba(26,79,214,0.5)", borderRadius: 3 }} />
-            <span style={{ fontSize: 13, color: "#7a8aaa" }}>Level 3 is the minimum strategic threshold — goal of the first 90-day challenge sequence</span>
           </div>
         </div>
       </section>
 
-      {/* LIMITATIONS */}
-      <section style={{ padding: "80px 24px", background: "#f7f9fc" }}>
-        <div style={{ maxWidth: 780, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>Honest Limitations</span>
-          <h2 style={{ fontSize: "clamp(24px, 3.5vw, 38px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 32, letterSpacing: "-0.02em" }}>
-            What This Is Not
+      <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: 24 }} className="home-two-col">
+          <div style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "28px 26px" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              What We Use
+            </span>
+            <h2 style={{ fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.18, color: "#0a1628", margin: "14px 0 20px" }}>
+              Evidence from the visible work system.
+            </h2>
+            <div style={{ display: "grid", gap: 12 }}>
+              {DATA_USED.map((item) => (
+                <div key={item} style={{ fontSize: 15, lineHeight: 1.7, color: "#52627e", borderBottom: "1px solid #edf2f7", paddingBottom: 12 }}>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ background: "#0a1628", borderRadius: 8, padding: "28px 26px", color: "#ffffff" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#93b4ff" }}>
+              What We Avoid
+            </span>
+            <h2 style={{ fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.18, color: "#ffffff", margin: "14px 0 20px" }}>
+              Boundaries protect trust.
+            </h2>
+            <div style={{ display: "grid", gap: 12 }}>
+              {DATA_NOT_USED.map((item) => (
+                <div key={item} style={{ fontSize: 15, lineHeight: 1.7, color: "#dbe7ff", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: 12 }}>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <div style={{ maxWidth: 780, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              Confidence Levels
+            </span>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
+              We separate early signals from stronger conclusions.
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.8, color: "#5a6a8a", margin: 0 }}>
+              Workforce research should show how strongly a conclusion is held. A signal, a pattern, and an established shift should not be written with the same level of certainty.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
+            {CONFIDENCE_LEVELS.map((item) => (
+              <article key={item.level} style={{ border: "1px solid #dbe5f5", borderRadius: 8, padding: "24px 22px", background: "#f8fbff" }}>
+                <h3 style={{ fontSize: 21, color: "#0a1628", margin: "0 0 10px" }}>{item.level}</h3>
+                <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: 0 }}>{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            Interpretation
+          </span>
+          <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0 18px" }}>
+            How we interpret workforce signals.
           </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {[
-              "SA-AIRS™ scores are based on your self-reported inputs only — they reflect your perception, not an objective audit of your role.",
-              "Thinking frame scores are directional, not clinical. They suggest patterns, not diagnoses.",
-              "This assessment is not a substitute for professional career counselling, legal advice, financial advice, or mental health support.",
-              "Career outcomes depend on many factors beyond thinking patterns: market conditions, organisational context, actual skill set, timing, and external circumstances.",
-            ].map((lim, i) => (
-              <div key={i} style={{ display: "flex", gap: 16, padding: "18px 22px", background: "rgba(255,80,80,0.05)", border: "1px solid rgba(255,80,80,0.12)", borderRadius: 10 }}>
-                <span style={{ color: "#dc2626", fontWeight: 700, flexShrink: 0 }}>!</span>
-                <span style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.7 }}>{lim}</span>
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#4a5a7a", margin: "0 0 18px" }}>
+            Sriram Advisory uses structured research to connect workforce signals with practical decisions. We look at role change, skill demand, technology adoption, organizational pressure, and the kinds of human judgment that remain valuable.
+          </p>
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#4a5a7a", margin: 0 }}>
+            The goal is not to publish a formula. The goal is to help professionals and teams understand what is changing, why it matters, and what to do next.
+          </p>
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+            Framework Evolution
+          </span>
+          <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0 18px" }}>
+            Frameworks are public concepts, not open templates.
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#4a5a7a", margin: "0 0 24px" }}>
+            SA-AIRS(TM), Replaceability Curve(TM), AI Leverage Ladder(TM), and the Career Positioning Audit are used to structure analysis and make findings easier to explain. The public site explains what each framework is for while protecting the deeper rubrics used in applied work.
+          </p>
+          <div style={{ display: "grid", gap: 12 }}>
+            {FRAMEWORK_EVOLUTION.map((item) => (
+              <div key={item} style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "16px 18px", fontSize: 15, lineHeight: 1.75, color: "#52627e" }}>
+                {item}
               </div>
             ))}
           </div>
-          <div style={{ marginTop: 32 }}>
-            <Link href="/disclaimer" style={{ color: "#1a4fd6", fontWeight: 600, fontSize: 14, textDecoration: "none", borderBottom: "1px solid rgba(126,179,255,0.3)", paddingBottom: 2 }}>
-              Read the full legal disclaimer →
+          <div style={{ marginTop: 26 }}>
+            <Link href="/frameworks" style={{ color: "#1a4fd6", fontSize: 15, fontWeight: 900, textDecoration: "none" }}>
+              View public framework pages {"->"}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{ padding: "100px 24px", background: "#ffffff", textAlign: "center" }}>
-        <div style={{ maxWidth: 600, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 800, color: "#0a1628", marginBottom: 20, letterSpacing: "-0.02em" }}>
-            The rest is inside your report.
+      <section style={{ padding: "92px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            Review Cycle
+          </span>
+          <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0 18px" }}>
+            Research is updated when the work system changes.
           </h2>
-          <p style={{ fontSize: 17, color: "#5a6a8a", marginBottom: 40, lineHeight: 1.7 }}>
-            The full scoring logic, your frame-to-risk causal chain, and your 90-day challenge set
-            are revealed only after your assessment. That&apos;s by design.
+          <div style={{ display: "grid", gap: 12 }}>
+            {REVIEW_PRACTICE.map((item) => (
+              <div key={item} style={{ background: "#f8fbff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "16px 18px", fontSize: 15, lineHeight: 1.75, color: "#52627e" }}>
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#93b4ff" }}>
+            What To Expect
+          </span>
+          <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#ffffff", margin: "16px 0 28px" }}>
+            Clear research, practical guidance, and honest limits.
+          </h2>
+          <div style={{ display: "grid", gap: 14 }}>
+            {EXPECTATIONS.map((item) => (
+              <div key={item} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", padding: "0 0 14px", fontSize: 16, lineHeight: 1.75, color: "#dbe3ea" }}>
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "92px 24px", background: "#ffffff", textAlign: "center" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "0 0 18px" }}>
+            The useful output is not the formula. It is the judgment.
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: "0 0 32px" }}>
+            Start with the research library for public intelligence, or use a career guide when you need a practical next step for your role.
           </p>
-          <Link href="/career-intelligence-report" style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "#1a4fd6", color: "#fff", fontWeight: 700,
-            fontSize: 16, padding: "15px 36px", borderRadius: 10,
-            textDecoration: "none", border: "1px solid #3b6ef0",
-          }}>
-            Get Your Assessment →
-          </Link>
+          <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
+            <Link href="/reports" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 800, border: "1px solid #3b6ef0" }}>
+              Read Research
+            </Link>
+            <Link href="/guides" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#ffffff", color: "#1a4fd6", textDecoration: "none", fontWeight: 800, border: "1px solid rgba(26,79,214,0.22)" }}>
+              Career Guides
+            </Link>
+          </div>
         </div>
       </section>
 

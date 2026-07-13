@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -6,14 +6,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Reports | Sriram Advisory",
   description:
-    "India-first intelligence reports on AI career risk, market shifts, and role diagnostics for working professionals.",
+    "India-first intelligence reports on career and workforce risk, market shifts, and role diagnostics for working professionals.",
 };
 
 const REPORTS = [
   {
     badge: "New - June 2026",
     title: "Why Expertise Becomes a Trap",
-    subtitle: "AI displacement. Competency traps. Professional reinvention.",
+    subtitle: "automation pressure. Competency traps. Professional reinvention.",
     blurb:
       "The first Sriram Advisory Intelligence Series report on why skilled professionals can become vulnerable during technological transitions, and why AI is making that pattern faster and broader.",
     price: "Rs 499",
@@ -22,7 +22,7 @@ const REPORTS = [
     bgGradient: "linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%)",
     borderColor: "#d8b4fe",
     bullets: [
-      "Explains why expertise alone is not a durable AI-era moat",
+      "Explains why expertise alone is not a durable future-of-work moat",
       "Connects historical disruption patterns with current AI pressure",
       "Built for senior professionals, managers, HR/L&D, founders, and consultants",
     ],

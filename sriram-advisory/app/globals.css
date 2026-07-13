@@ -1,9 +1,9 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
-/* ═══════════════════════════════════════════════════════════════
-   SRIRAM ADVISORY — Intelligence Terminal Design System
-   Spec v1.0 · Deep Navy + Electric Blue + Data Terminal
-   ═══════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   SRIRAM ADVISORY - Intelligence Terminal Design System
+   Spec v1.0  -  Deep Navy + Electric Blue + Data Terminal
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 @theme {
   --color-navy:        #0a1628;
@@ -22,7 +22,7 @@
   --font-mono:    var(--font-dm-mono);
 }
 
-/* ── Guide card hover ───────────────────────────────── */
+/* â”€â”€ Guide card hover â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .guide-card {
   transition: box-shadow 0.18s, transform 0.18s;
 }
@@ -31,7 +31,7 @@
   transform: translateY(-2px);
 }
 
-/* ── Guides listing — responsive card layout ─────────── */
+/* â”€â”€ Guides listing - responsive card layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .guide-card-body {
   padding: 36px 40px;
   display: flex;
@@ -54,7 +54,7 @@
   }
 }
 
-/* ── Guide detail pages — responsive elements ────────── */
+/* â”€â”€ Guide detail pages - responsive elements â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-price-box {
   display: inline-flex;
   flex-direction: column;
@@ -97,7 +97,7 @@
   }
 }
 
-/* ── Base ────────────────────────────────────────────── */
+/* â”€â”€ Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after { box-sizing: border-box; }
 html {
   scroll-behavior: smooth;
@@ -132,11 +132,11 @@ h2, h3 {
 .font-body    { font-family: var(--font-dm-sans), 'DM Sans', sans-serif; }
 .font-mono    { font-family: var(--font-dm-mono), 'DM Mono', monospace; }
 
-/* ── Layout ──────────────────────────────────────────── */
+/* â”€â”€ Layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .container { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
 @media (max-width: 768px) { .container { padding: 0 20px; } }
 
-/* ── Nav ─────────────────────────────────────────────── */
+/* â”€â”€ Nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   border-bottom: 1px solid transparent;
@@ -257,7 +257,7 @@ h2, h3 {
   }
 }
 
-/* ── Hero ────────────────────────────────────────────── */
+/* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero {
   min-height: 100vh; display: flex; align-items: center;
   padding: 120px 40px 80px; position: relative; overflow: hidden; background: #f0f5ff;
@@ -325,7 +325,7 @@ h2, h3 {
 @media (max-width: 900px) { .hero { padding: 100px 20px 60px; min-height: auto; } .hero-content { grid-template-columns: 1fr; gap: 48px; } .hero-glow { display: none; } }
 @media (max-width: 600px) { .hero-h1 { font-size: 52px; } .hero-actions { flex-direction: column; align-items: stretch; } .btn-primary, .btn-secondary { text-align: center; justify-content: center; } }
 
-/* ── Score Card ──────────────────────────────────────── */
+/* â”€â”€ Score Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .score-card {
   background: #f7f9fc; border: 1px solid rgba(10,22,40,0.1);
   border-radius: 14px; overflow: hidden; font-family: var(--font-dm-mono), monospace;
@@ -351,7 +351,7 @@ h2, h3 {
 .score-bar-fill { height: 100%; border-radius: 3px; background: #ff4d4d; transition: width 0.8s ease; }
 .score-bar-fill.low { background: #22d3a0; } .score-bar-fill.mid { background: #f59e0b; }
 
-/* ── Sections ────────────────────────────────────────── */
+/* â”€â”€ Sections â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section { padding: 96px 40px; }
 .section-sm { padding: 64px 40px; }
 .section-dark { background: #f0f4f8; }
@@ -364,7 +364,7 @@ h2, h3 {
 .dim-row { display: grid; grid-template-columns: 220px 1fr; gap: 32px; }
 @media (max-width: 600px) { .dim-row { grid-template-columns: 1fr; gap: 10px; } }
 
-/* ── Proof Strip ─────────────────────────────────────── */
+/* â”€â”€ Proof Strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .proof-strip { border-top: 1px solid rgba(10,22,40,0.08); border-bottom: 1px solid rgba(10,22,40,0.08); background: #eef2fb; padding: 40px; }
 .proof-strip-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); }
 .proof-item { padding: 0 32px; border-right: 1px solid rgba(10,22,40,0.1); text-align: center; }
@@ -374,7 +374,7 @@ h2, h3 {
 @media (max-width: 768px) { .proof-strip { padding: 32px 20px; } .proof-strip-inner { grid-template-columns: repeat(2,1fr); gap: 28px 0; } .proof-item { border-right: none; padding: 0 20px 28px; border-bottom: 1px solid rgba(248,250,255,0.08); } .proof-item:nth-child(odd) { border-right: 1px solid rgba(248,250,255,0.08); } .proof-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 0; } }
 @media (max-width: 480px) { .proof-strip-inner { grid-template-columns: 1fr; gap: 0; } .proof-item { border-right: none !important; padding: 0 0 24px !important; border-bottom: 1px solid rgba(248,250,255,0.08) !important; } .proof-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; } }
 
-/* ── Ladder ──────────────────────────────────────────── */
+/* â”€â”€ Ladder â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ladder { display: flex; flex-direction: column; }
 .ladder-item { display: flex; align-items: stretch; }
 .ladder-line-col { display: flex; flex-direction: column; align-items: center; width: 40px; flex-shrink: 0; }
@@ -400,7 +400,7 @@ h2, h3 {
 .badge-safe { background: rgba(34,211,160,0.1); color: #22d3a0; border: 1px solid rgba(34,211,160,0.2); }
 .badge-accent { background: rgba(79,195,247,0.1); color: #4fc3f7; border: 1px solid rgba(79,195,247,0.2); }
 
-/* ── Dimension Cards ─────────────────────────────────── */
+/* â”€â”€ Dimension Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .dim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
 .dim-card { background: #f7f9fc; border: 1px solid rgba(10,22,40,0.08); border-radius: 10px; padding: 20px; transition: border-color 0.15s; }
 .dim-card:hover { border-color: rgba(59,110,240,0.3); }
@@ -409,7 +409,7 @@ h2, h3 {
 .dim-name { font-size: 15px; font-weight: 600; color: #0a1628; margin-bottom: 4px; }
 .dim-desc { font-size: 15px; color: #5a6a8a; line-height: 1.7; }
 
-/* ── CTA Block ───────────────────────────────────────── */
+/* â”€â”€ CTA Block â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .cta-block {
   background: linear-gradient(135deg, #f0f4f8 0%, #e8eef8 100%);
   border: 1px solid rgba(10,22,40,0.08); border-radius: 16px;
@@ -419,7 +419,7 @@ h2, h3 {
 .cta-title { font-family: var(--font-bebas), sans-serif; font-size: clamp(36px, 4vw, 52px); letter-spacing: 0.04em; color: #0a1628; margin-bottom: 14px; }
 .cta-sub { font-size: 16px; color: #5a6a8a; max-width: 480px; margin: 0 auto 32px; line-height: 1.7; }
 
-/* ── Form ────────────────────────────────────────────── */
+/* â”€â”€ Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .form-card { background: #ffffff; border: 1px solid rgba(10,22,40,0.1); border-radius: 14px; padding: 32px; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-full { grid-column: 1 / -1; }
@@ -435,7 +435,7 @@ h2, h3 {
 .form-trust { display: flex; align-items: center; gap: 6px; justify-content: center; margin-top: 14px; font-size: 13px; color: #6a7a9a; font-family: var(--font-dm-sans), sans-serif; letter-spacing: 0.02em; }
 @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } .form-card { padding: 24px 20px; } .cta-block { padding: 40px 24px; } }
 
-/* ── Process Steps ───────────────────────────────────── */
+/* â”€â”€ Process Steps â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .steps { display: flex; flex-direction: column; }
 .step { display: flex; gap: 24px; align-items: flex-start; }
 .step-num-col { display: flex; flex-direction: column; align-items: center; }
@@ -445,7 +445,7 @@ h2, h3 {
 .step-title { font-size: 16px; font-weight: 700; color: #0a1628; margin-bottom: 4px; }
 .step-desc { font-size: 15px; color: #5a6a8a; line-height: 1.7; }
 
-/* ── Case Study Card ─────────────────────────────────── */
+/* â”€â”€ Case Study Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .case-card { background: #f7f9fc; border: 1px solid rgba(10,22,40,0.08); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 20px; }
 .case-card-tag { display: inline-flex; padding: 4px 10px; border-radius: 4px; font-family: var(--font-dm-sans), sans-serif; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(79,195,247,0.08); color: #4fc3f7; border: 1px solid rgba(79,195,247,0.2); font-weight: 700; }
 .case-role { font-size: 16px; font-weight: 700; color: #0a1628; }
@@ -459,10 +459,10 @@ h2, h3 {
 .delta-arrow { color: #8898b8; font-size: 16px; }
 .case-moves { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
 .case-moves li { font-size: 15px; color: #5a6a8a; padding-left: 20px; position: relative; line-height: 1.65; }
-.case-moves li::before { content: '→'; position: absolute; left: 0; color: #3b6ef0; }
+.case-moves li::before { content: '->'; position: absolute; left: 0; color: #3b6ef0; }
 .case-outcome { padding: 14px 16px; border-radius: 8px; background: rgba(34,211,160,0.06); border: 1px solid rgba(34,211,160,0.15); font-size: 15px; color: #22d3a0; line-height: 1.65; }
 
-/* ── Pricing ─────────────────────────────────────────── */
+/* â”€â”€ Pricing â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
 .price-card { background: #ffffff; border: 1px solid rgba(10,22,40,0.1); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; position: relative; transition: border-color 0.2s, transform 0.15s; }
 .price-card:hover { transform: translateY(-2px); border-color: rgba(59,110,240,0.3); }
@@ -473,26 +473,26 @@ h2, h3 {
 .price-desc { font-size: 15px; color: #5a6a8a; line-height: 1.65; margin-bottom: 24px; flex: 1; }
 .price-features { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-direction: column; gap: 8px; }
 .price-features li { font-size: 15px; color: #5a6a8a; padding-left: 18px; position: relative; }
-.price-features li::before { content: '✓'; position: absolute; left: 0; color: #22d3a0; font-weight: 700; }
+.price-features li::before { content: 'Done'; position: absolute; left: 0; color: #22d3a0; font-weight: 700; }
 @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } }
 
-/* ── Formula ─────────────────────────────────────────── */
+/* â”€â”€ Formula â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .formula-block { background: rgba(248,250,255,0.03); border: 1px solid rgba(248,250,255,0.08); border-radius: 12px; padding: 28px 32px; font-family: var(--font-dm-mono), monospace; }
 .formula-eq { font-size: clamp(12px, 1.8vw, 15px); color: #4fc3f7; line-height: 2.2; letter-spacing: 0.02em; }
 .formula-term { color: #f8faff; }
 .formula-weight { color: #8898b8; }
 .formula-inv { color: #22d3a0; }
 
-/* ── Guarantee ───────────────────────────────────────── */
+/* â”€â”€ Guarantee â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .guarantee-box { display: flex; gap: 16px; align-items: flex-start; background: rgba(34,211,160,0.05); border: 1px solid rgba(34,211,160,0.15); border-radius: 12px; padding: 24px 28px; }
 .guarantee-title { font-size: 16px; font-weight: 700; color: #22d3a0; margin-bottom: 4px; }
 .guarantee-desc { font-size: 15px; color: #5a6a8a; line-height: 1.7; }
 
-/* ── Animations ──────────────────────────────────────── */
+/* â”€â”€ Animations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ── Utilities ───────────────────────────────────────── */
+/* â”€â”€ Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .text-accent { color: #4fc3f7; }
 .text-success { color: #22d3a0; }
 .text-danger { color: #ff4d4d; }
@@ -504,9 +504,9 @@ h2, h3 {
 .tag-success { background: rgba(34,211,160,0.1); color: #22d3a0; border: 1px solid rgba(34,211,160,0.2); }
 .tag-danger { background: rgba(255,77,77,0.1); color: #ff4d4d; border: 1px solid rgba(255,77,77,0.2); }
 
-/* ── Accessibility ───────────────────────────────────── */
+/* â”€â”€ Accessibility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-/* Skip-to-content link — visually hidden until focused */
+/* Skip-to-content link - visually hidden until focused */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -540,7 +540,7 @@ select:focus-visible {
   border-radius: 8px;
 }
 
-/* ── Responsive Layouts ──────────────────────────────── */
+/* â”€â”€ Responsive Layouts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
@@ -635,7 +635,7 @@ select:focus-visible {
   }
 }
 
-/* ── Reduced Motion ──────────────────────────────────── */
+/* â”€â”€ Reduced Motion â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Respect OS-level "reduce motion" setting (WCAG 2.3.3) */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -647,8 +647,8 @@ select:focus-visible {
   html { scroll-behavior: auto; }
 }
 
-/* ── Touch Targets ───────────────────────────────────── */
-/* Minimum 44×44 px interactive targets (WCAG 2.5.5) */
+/* â”€â”€ Touch Targets â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* Minimum 44x44 px interactive targets (WCAG 2.5.5) */
 @media (pointer: coarse) {
   button, [role="button"], a, input[type="checkbox"], input[type="radio"] {
     min-height: 44px;
@@ -659,7 +659,7 @@ select:focus-visible {
   }
 }
 
-/* ── Footer responsiveness ───────────────────────────── */
+/* â”€â”€ Footer responsiveness â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 640px) {
   footer { padding: 40px 20px 28px !important; }
 }

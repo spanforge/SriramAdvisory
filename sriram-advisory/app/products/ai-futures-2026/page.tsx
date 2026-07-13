@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
@@ -32,7 +32,7 @@ const WHAT_YOU_GET = [
 
 const FOR_WHOM = [
   "Professionals trying to understand the next 12-24 months, not just today's headlines",
-  "Managers and leads who need a sharper AI-era reading of role change and value migration",
+  "Managers and leads who need a sharper future-of-work reading of role change and value migration",
   "People who want strategic clarity before making upskilling or career-direction decisions",
 ];
 
@@ -171,7 +171,7 @@ export default function AIFutures2026Page() {
                   accentColor="#0d9268"
                   deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                   emailNote="Your AI Futures 2026 report will be delivered to this email."
-                  buttonLabel="Get the Report â€” â‚¹799"
+                  buttonLabel="Get the Report - Rs 799"
                   buttonStyle={{
                     display: "flex",
                     alignItems: "center",
@@ -409,7 +409,7 @@ export default function AIFutures2026Page() {
         accentColor="#0d9268"
         deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your AI Futures 2026 report will be delivered to this email."
-        buttonLabel="Get the Report â€” â‚¹799"
+                  buttonLabel="Get the Report - Rs 799"
       />
 
       <ProductRecommendations />

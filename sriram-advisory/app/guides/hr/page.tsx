@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -27,7 +27,7 @@ const HR_GUIDE = {
   role: "HR / Talent",
   timeline: "18-month repositioning path",
   riskScore: "SA-AIRS score 8.6/10",
-  focus: "AI-era HR leverage",
+  focus: "future-of-work HR leverage",
 };
 
 export default function HRGuidesPage() {

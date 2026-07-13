@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GuidesCatalog from "@/components/GuidesCatalog";
@@ -119,7 +119,7 @@ const GUIDES = [
     title: "FDE Career Transition Guide 2026",
     subtitle: "2.5/10 repositioned score. 90-day direction. Higher-leverage FDE path.",
     blurb:
-      "For FDEs who want to move beyond execution-only delivery and build stronger positioning around product judgment, systems thinking, and AI-era engineering leverage.",
+      "For FDEs who want to move beyond execution-only delivery and build stronger positioning around product judgment, systems thinking, and future-of-work engineering leverage.",
     price: "Rs 499",
     href: "/guides/fde-career-transition-guide-2026",
     accentColor: "#be185d",
@@ -135,7 +135,7 @@ const GUIDES = [
     title: "QA Engineer Survival Guide 2026",
     subtitle: "9.5/10 risk score. 90-day direction. Higher-value QA path.",
     blurb:
-      "For QA professionals under the sharpest AI pressure who want a clearer path toward stronger quality ownership and future-proof relevance.",
+      "For QA professionals under the sharpest AI pressure who want a clearer path toward stronger quality ownership and more durable relevance.",
     price: "Rs 499",
     href: "/guides/qa-engineer-survival-guide-2026",
     accentColor: "#0d9268",
@@ -149,7 +149,7 @@ const GUIDES = [
   {
     badge: "New",
     title: "BPO & Customer Support Career Survival Guide 2026",
-    subtitle: "9.2/10 risk score. 30-day direction. AI-era support paths.",
+    subtitle: "9.2/10 risk score. 30-day direction. future-of-work support paths.",
     blurb:
       "For support professionals who want to understand what AI compresses first and how to reposition toward more durable human-value work.",
     price: "Rs 499",
@@ -160,7 +160,7 @@ const GUIDES = [
     role: "BPO / Support",
     timeline: "30-day direction",
     riskScore: "Risk score 9.2/10",
-    focus: "AI-era support paths",
+    focus: "future-of-work support paths",
   },
   {
     badge: "New",

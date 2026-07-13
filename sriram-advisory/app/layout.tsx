@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Bebas_Neue, DM_Sans, DM_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -23,17 +23,17 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | Workforce Intelligence & Transformation for the AI Era",
+  title: "Sriram Advisory | Future of Work Research and Advisory",
   description:
-    "Sriram Advisory is a workforce intelligence and transformation firm for professionals navigating AI-driven career change.",
+    "Sriram Advisory studies how work is changing across technology, AI, automation, careers, skills, leadership, and organizations.",
   icons: {
     icon: "/sriram.png",
     apple: "/sriram.png",
   },
   openGraph: {
-    title: "Sriram Advisory | Workforce Intelligence & Transformation for the AI Era",
+    title: "Sriram Advisory | Future of Work Research and Advisory",
     description:
-      "Workforce intelligence and transformation for professionals navigating AI-driven career change.",
+      "Future of Work intelligence for professionals and organizations.",
     type: "website",
   },
 };

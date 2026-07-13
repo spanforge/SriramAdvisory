@@ -1,13 +1,13 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { REPORTS } from "@/lib/siteCatalog";
 
 export const metadata: Metadata = {
-  title: "Reports | Sriram Advisory",
+  title: "Research | Sriram Advisory",
   description:
-    "India-first intelligence reports on AI career risk, market shifts, and role diagnostics for working professionals.",
+    "Future of Work research reports on careers, skills, AI, automation, GCCs, Indian IT, and workforce change.",
 };
 
 export default function ReportsPage() {
@@ -54,7 +54,7 @@ export default function ReportsPage() {
                 color: "#93b4ff",
               }}
             >
-              Research Products
+              Research Library
             </span>
           </div>
           <h1
@@ -67,7 +67,7 @@ export default function ReportsPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Reports for buyers who want evidence, not AI noise
+            Research for people making workforce decisions
           </h1>
           <p
             style={{
@@ -78,63 +78,122 @@ export default function ReportsPage() {
               margin: "0 auto 24px",
             }}
           >
-            Structured research products built for professionals who need a sharper market read before making role, learning, or positioning decisions.
+            Reports and briefings on how work is changing across technology, skills, careers, organizations, and the Indian talent market.
           </p>
         </div>
       </section>
 
       <section style={{ maxWidth: 980, margin: "0 auto", padding: "64px 20px 80px" }}>
+        <div style={{ maxWidth: 820, margin: "0 auto 34px", textAlign: "center" }}>
+          <h2 style={{ fontSize: "clamp(26px, 3.6vw, 40px)", color: "#0a1628", marginBottom: 12 }}>
+            Start with the question you need answered.
+          </h2>
+          <p style={{ fontSize: 16, color: "#52627e", lineHeight: 1.8, margin: 0 }}>
+            Each report is designed to help professionals, managers, and teams understand a specific workforce shift before it becomes obvious in the market.
+          </p>
+        </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           {REPORTS.map((report) => (
             <Link key={report.href} href={report.href} style={{ textDecoration: "none" }}>
               <div
-                className="guide-card guide-card-body report-card-body"
                 style={{
-                  background: report.bgGradient,
-                  border: `1.5px solid ${report.borderColor}`,
-                  borderRadius: 18,
+                  background: "#ffffff",
+                  border: "1px solid #dbe5f5",
+                  borderLeft: `5px solid ${report.accentColor}`,
+                  borderRadius: 8,
                   cursor: "pointer",
+                  padding: "28px 26px",
                 }}
               >
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
-                    <span
+                <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) 180px", gap: 26, alignItems: "start" }} className="home-two-col">
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12, flexWrap: "wrap" }}>
+                      <span
+                        style={{
+                          fontSize: 11,
+                          fontWeight: 800,
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                          background: "#f1f5f9",
+                          color: "#304159",
+                          padding: "4px 10px",
+                          borderRadius: 999,
+                        }}
+                      >
+                        {report.publicationDate}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: 11,
+                          fontWeight: 800,
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                          background: report.accentColor,
+                          color: "#ffffff",
+                          padding: "4px 10px",
+                          borderRadius: 999,
+                        }}
+                      >
+                        {report.format}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: 11,
+                          fontWeight: 800,
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                          color: report.accentColor,
+                        }}
+                      >
+                        {report.badge}
+                      </span>
+                    </div>
+                    <h2
                       style={{
-                        fontSize: 11,
-                        fontWeight: 700,
-                        letterSpacing: "0.08em",
-                        textTransform: "uppercase",
-                        background: report.accentColor,
-                        color: "#ffffff",
-                        padding: "3px 10px",
-                        borderRadius: 20,
+                        fontSize: "clamp(22px, 2.8vw, 31px)",
+                        fontWeight: 900,
+                        color: "#0a1628",
+                        margin: "0 0 8px",
+                        letterSpacing: "-0.01em",
+                        lineHeight: 1.18,
                       }}
                     >
-                      {report.badge}
-                    </span>
+                      {report.title}
+                    </h2>
+                    <p style={{ fontSize: 14, fontWeight: 800, color: report.accentColor, margin: "0 0 14px" }}>
+                      {report.subtitle}
+                    </p>
+                    <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.75, margin: "0 0 18px" }}>
+                      {report.blurb}
+                    </p>
+                    <div style={{ background: "#f8fbff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "16px 18px", marginBottom: 16 }}>
+                      <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", marginBottom: 8 }}>
+                        Methodology
+                      </div>
+                      <p style={{ fontSize: 14, color: "#52627e", lineHeight: 1.7, margin: 0 }}>{report.methodologyNote}</p>
+                    </div>
+                    <div style={{ display: "grid", gap: 8 }}>
+                      <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268" }}>
+                        Key Findings
+                      </div>
+                      {report.keyFindings.map((finding) => (
+                        <div key={finding} style={{ fontSize: 14, color: "#4b5d7b", lineHeight: 1.65 }}>
+                          {finding}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <h2
-                    style={{
-                      fontSize: "clamp(20px, 2.5vw, 26px)",
-                      fontWeight: 800,
-                      color: "#0a1628",
-                      marginBottom: 6,
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
-                    {report.title}
-                  </h2>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: report.accentColor, marginBottom: 12 }}>
-                    {report.subtitle}
-                  </p>
-                  <div className="mobile-card-action">
-                    <div style={{ fontSize: 24, fontWeight: 800, color: report.accentColor }}>{report.price}</div>
+                  <div style={{ border: `1px solid ${report.borderColor}`, borderRadius: 8, padding: "18px 16px", background: report.bgGradient }}>
+                    <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: report.accentColor, marginBottom: 12 }}>
+                      Extended Edition
+                    </div>
+                    <div style={{ fontSize: 28, fontWeight: 900, color: report.accentColor, marginBottom: 12 }}>{report.price}</div>
                     <div
                       style={{
                         display: "inline-flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        gap: 6,
+                        width: "100%",
                         background: report.accentColor,
                         color: "#fff",
                         fontSize: 13,
@@ -142,41 +201,13 @@ export default function ReportsPage() {
                         padding: "11px 18px",
                         borderRadius: 8,
                         letterSpacing: "0.01em",
-                        minWidth: 140,
                       }}
                     >
-                      View report {"->"}
+                      Read overview {"->"}
                     </div>
-                  </div>
-                  <p style={{ fontSize: 15, color: "#3d4f6e", lineHeight: 1.7, marginBottom: 14 }}>
-                    {report.blurb}
-                  </p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {report.bullets.map((bullet) => (
-                      <div key={bullet} style={{ fontSize: 13, color: "#4b5d7b", lineHeight: 1.6 }}>
-                        {bullet}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="guide-card-price-col desktop-card-action">
-                  <div style={{ fontSize: 28, fontWeight: 800, color: report.accentColor }}>{report.price}</div>
-                  <div
-                    style={{
-                      marginTop: 16,
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 6,
-                      background: report.accentColor,
-                      color: "#fff",
-                      fontSize: 13,
-                      fontWeight: 700,
-                      padding: "10px 20px",
-                      borderRadius: 8,
-                      letterSpacing: "0.01em",
-                    }}
-                  >
-                    View report {"->"}
+                    <p style={{ fontSize: 12, color: "#52627e", lineHeight: 1.65, margin: "14px 0 0" }}>
+                      Public overview with paid extended edition where available.
+                    </p>
                   </div>
                 </div>
               </div>

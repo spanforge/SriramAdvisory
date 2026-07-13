@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -20,23 +20,23 @@ export const ARTICLES: Article[] = [
     slug: "seniority-trap-mid-career-ai-risk",
     type: "Analysis",
     title: "The Seniority Trap: Why Mid-Career Professionals Face the Highest AI Risk",
-    teaser: "Junior employees adapt. Senior executives are insulated. It is the 8–18 year professional who is most exposed — here is why, and what to do about it.",
+    teaser: "Junior employees adapt. Senior executives are insulated. It is the 8-18 year professional who is most exposed - here is why, and what to do about it.",
     tag: "Career Strategy",
     date: "14 May 2026",
     readTime: "6 min read",
     body: `There is a pattern that shows up repeatedly across the professionals I assess.
 
-Junior employees — the 0–5 year cohort — are anxious, but they adapt. They have not built an identity around a specific way of doing things. They are used to learning. They pick up tools fast. Their risk is real, but so is their flexibility.
+Junior employees - the 0-5 year cohort - are anxious, but they adapt. They have not built an identity around a specific way of doing things. They are used to learning. They pick up tools fast. Their risk is real, but so is their flexibility.
 
-Senior executives — the 20+ year cohort — are largely insulated. Not because they are irreplaceable (many are not), but because their work is wrapped in relationship capital, institutional trust, and decision authority that AI cannot replicate. They are also expensive enough that companies are reluctant to restructure around them.
+Senior executives - the 20+ year cohort - are largely insulated. Not because they are irreplaceable (many are not), but because their work is wrapped in relationship capital, institutional trust, and decision authority that AI cannot replicate. They are also expensive enough that companies are reluctant to restructure around them.
 
-The professionals with the highest structural risk are in the middle. The 8–18 year band. Mid-level managers. Senior individual contributors. Functional specialists. People who have built genuine expertise — but in a domain where that expertise is increasingly replicable.
+The professionals with the highest structural risk are in the middle. The 8-18 year band. Mid-level managers. Senior individual contributors. Functional specialists. People who have built genuine expertise - but in a domain where that expertise is increasingly replicable.
 
 **Why the middle gets squeezed**
 
 Here is what happens when AI increases productivity for a given function:
 
-The junior work disappears first — it is the easiest to automate. But companies do not hire fewer juniors and keep the same number of seniors. They restructure the entire layer. The senior specialist who used to manage a team of five analysts now manages one — or none. Their output is still needed, but the organisational justification for their cost is weaker.
+The junior work disappears first - it is the easiest to automate. But companies do not hire fewer juniors and keep the same number of seniors. They restructure the entire layer. The senior specialist who used to manage a team of five analysts now manages one - or none. Their output is still needed, but the organisational justification for their cost is weaker.
 
 At the same time, the executive above them is not going anywhere. So the mid-senior professional is caught: they cannot move up (the executive layer has not thinned), and they cannot justify the support structure they were built around.
 
@@ -44,9 +44,9 @@ This is the seniority trap. The expertise is real. The vulnerability is structur
 
 **The four signals to watch**
 
-In SA-AIRS™ assessments, mid-career professionals who score in the High or Very High risk tier tend to share four characteristics:
+In SA-AIRS(TM) assessments, mid-career professionals who score in the High or Very High risk tier tend to share four characteristics:
 
-1. Their core deliverables are digital and text-based — reports, analyses, decks, recommendations
+1. Their core deliverables are digital and text-based - reports, analyses, decks, recommendations
 2. Their seniority comes from depth in one domain, not breadth across the organisation
 3. Their direct reports are in roles with high automation feasibility
 4. Their relationship capital is internal (cross-functional influence) rather than external (client trust, market reputation)
@@ -59,19 +59,19 @@ The professionals who successfully reposition in this window share one common st
 
 That sounds abstract. Here is what it looks like in practice:
 
-The senior data analyst who repositions stops being the one who builds the model and starts being the one who defines which questions the model should answer — and whose judgment is trusted when the model is wrong.
+The senior data analyst who repositions stops being the one who builds the model and starts being the one who defines which questions the model should answer - and whose judgment is trusted when the model is wrong.
 
-The mid-level marketing manager who repositions stops being the one who produces campaigns and starts being the one who owns the relationship with the agency, the brief, the brand guardrails — the judgment layer that AI cannot replace.
+The mid-level marketing manager who repositions stops being the one who produces campaigns and starts being the one who owns the relationship with the agency, the brief, the brand guardrails - the judgment layer that AI cannot replace.
 
 This is not reskilling in the conventional sense. You are not learning a new tool. You are changing what you are accountable for.
 
 **The 90-day window**
 
-The professionals I have seen successfully navigate this had one thing in common: they moved before the pressure was visible. They did not wait for a restructure announcement. They read the signals early — in how their work was being discussed, in what their managers were starting to do themselves with AI tools, in where budget was flowing — and they began repositioning quietly.
+The professionals I have seen successfully navigate this had one thing in common: they moved before the pressure was visible. They did not wait for a restructure announcement. They read the signals early - in how their work was being discussed, in what their managers were starting to do themselves with AI tools, in where budget was flowing - and they began repositioning quietly.
 
 Ninety days is enough time to shift your role's centre of gravity if you know what to move toward. But it requires an honest read of where you actually sit on the risk spectrum first.
 
-That is what the SA-AIRS™ assessment is designed to give you.`,
+That is what the SA-AIRS(TM) assessment is designed to give you.`,
   },
 ];
 
@@ -118,7 +118,7 @@ export default async function ArticlePage({ params }: Props) {
             fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em",
             marginBottom: 32,
           }}>
-            ← Back to Insights
+            {"<-"} Back to Insights
           </Link>
 
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
@@ -147,7 +147,7 @@ export default async function ArticlePage({ params }: Props) {
             fontSize: 13, color: "rgba(248,250,255,0.65)",
           }}>
             <span>{article.date}</span>
-            <span style={{ color: "rgba(136,152,184,0.3)" }}>·</span>
+            <span style={{ color: "rgba(136,152,184,0.3)" }}> - </span>
             <span>{article.readTime}</span>
           </div>
         </div>
@@ -196,7 +196,7 @@ export default async function ArticlePage({ params }: Props) {
             color: "#0a1628", margin: "0 0 16px", lineHeight: 1,
           }}>Know Where You Actually Stand</h2>
           <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 32px" }}>
-            Get your AI Career Risk Score — personalised to your specific role. Delivered within 24 hours.
+            Get your Career Intelligence Assessment - personalised to your specific role. Delivered within 24 hours.
           </p>
           <Link href="/get-started" style={{
             display: "inline-flex", alignItems: "center", gap: 8,
@@ -204,7 +204,7 @@ export default async function ArticlePage({ params }: Props) {
             padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 15,
             border: "1px solid #3b6ef0",
           }}>
-            Get Your Risk Score →
+            Get Your Risk Score {"->"}
           </Link>
         </div>
       </section>

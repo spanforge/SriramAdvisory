@@ -1,44 +1,52 @@
-import Navbar from "@/components/Navbar";
+﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Sriram Advisory",
+  title: "About Sriram Advisory | Future of Work Research and Advisory",
   description:
-    "Sriram Advisory is a workforce intelligence and advisory firm for the AI era, helping professionals and AI initiative owners make clearer decisions.",
+    "Sriram Advisory is a Future of Work research and advisory practice studying careers, skills, organizations, and industries.",
 };
 
-const PILLARS = [
+const RESEARCH_PILLARS = [
   {
-    title: "Career Intelligence",
-    body: "For professionals who need to understand AI exposure, market pressure, role durability, and practical repositioning options.",
+    title: "Careers & Skills",
+    body: "How roles change, which skills retain value, and how professionals can build more durable market positioning.",
   },
   {
-    title: "AI Delivery Intelligence",
-    body: "For practitioners responsible for moving AI initiatives through governance, stakeholder trust, operational readiness, and production.",
+    title: "AI & Automation",
+    body: "How AI and automation reshape tasks, teams, hiring, management expectations, and the value of human judgment.",
   },
   {
-    title: "Structured Diagnostics",
-    body: "Assessments, scorecards, audits, and frameworks that make career risk or delivery friction visible enough to act on.",
+    title: "GCCs & Indian IT",
+    body: "How global delivery models, Indian technology work, and enterprise operating models are changing career pathways.",
   },
   {
-    title: "Practical Advisory Outputs",
-    body: "Reports, guides, bundles, field notes, and services designed to turn uncertainty into a next decision, not just more information.",
+    title: "Organizations & Leadership",
+    body: "How teams, structures, decision rights, and management work evolve as technology and economic pressure shift.",
   },
 ];
 
 const DIFFERENTIATORS = [
-  "Advisory-first, not motivation-first. The work is built around decisions, tradeoffs, and next moves.",
-  "Two clear paths: Career Intelligence for professionals and AI Delivery Intelligence for initiative owners.",
-  "Framework-led. Products and services are built around structured diagnostics, not generic advice.",
-  "Practical enough to use. Reports, guides, bundles, templates, and audits are designed for real decisions.",
+  "Future of Work research with a practical India lens, not generic global trend commentary.",
+  "AI is one research area, alongside automation, demographics, GCCs, careers, skills, leadership, and organizational design.",
+  "Structured analysis built to make workforce shifts easier to understand and act on.",
+  "Practical outputs for professionals, managers, and teams who need clearer next decisions.",
 ];
 
 const FOUNDER_FACTS = [
-  "Active in enterprise AI delivery at Wipro",
-  "100+ guide orders in the first 28 days",
-  "SA-AIRS built from direct observation of how AI changes Indian IT work",
+  "Three decades observing technology shifts and enterprise work",
+  "Enterprise technology and AI delivery experience",
+  "Creator of structured career and workforce intelligence products",
+];
+
+const MISSION_BELIEFS = [
+  "Most professionals are not short of effort. They are short of updated maps.",
+  "Career advice often lags the market because job titles change slower than the work inside them.",
+  "The future of work is not only an AI story. It is also a story about organizations, economics, delivery models, and judgment.",
+  "Useful research should help people make clearer decisions before the pressure becomes obvious.",
 ];
 
 export default function AboutPage() {
@@ -48,31 +56,26 @@ export default function AboutPage() {
 
       <section
         style={{
-          background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 60%, #e6efff 100%)",
+          background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 58%, #edf7f2 100%)",
           paddingTop: 120,
-          paddingBottom: 100,
-          position: "relative",
-          overflow: "hidden",
+          paddingBottom: 96,
+          borderBottom: "1px solid rgba(26,79,214,0.12)",
         }}
       >
         <div style={{ maxWidth: 980, margin: "0 auto", padding: "0 24px" }}>
-          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 28 }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 28 }}>
             About Sriram Advisory
           </span>
-          <h1 style={{ fontSize: "clamp(38px, 5.5vw, 70px)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, marginBottom: 24, letterSpacing: "-0.02em" }}>
-            Built for the career questions
-            <br />
-            <span style={{ background: "linear-gradient(90deg, #1a4fd6, #22d3a0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              AI makes impossible to ignore.
-            </span>
+          <h1 style={{ fontSize: "clamp(40px, 5.5vw, 70px)", fontWeight: 900, color: "#0a1628", lineHeight: 1.08, margin: "0 0 24px", letterSpacing: "-0.02em" }}>
+            Most professionals are preparing for the future with outdated assumptions.
           </h1>
-          <p style={{ fontSize: "clamp(17px, 2.2vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 700 }}>
-            Sriram Advisory helps Indian IT professionals read AI pressure clearly, strengthen their market story, and choose a practical next move.
+          <p style={{ fontSize: "clamp(17px, 2.2vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 760, margin: 0 }}>
+            Sriram Advisory exists to change that. We study how work is being rewritten and turn the research into practical intelligence for professionals, managers, and teams.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: "100px 24px", background: "#f7f9fc" }}>
+      <section style={{ padding: "96px 24px", background: "#ffffff" }}>
         <div
           style={{
             maxWidth: 1120,
@@ -86,58 +89,52 @@ export default function AboutPage() {
         >
           <div
             style={{
-              background: "#ffffff",
+              background: "#f8fbff",
               border: "1px solid rgba(26,79,214,0.15)",
-              borderRadius: 16,
+              borderRadius: 12,
               padding: 24,
             }}
           >
-            <img
-              src="/sriram.png"
-              alt="Sriram Srinivasan"
-              style={{ width: "100%", maxWidth: 220, borderRadius: 16, objectFit: "cover", border: "2px solid #1a4fd6" }}
-            />
+            <Image src="/sriram.png" alt="Sriram Srinivasan" width={220} height={220} style={{ width: "100%", maxWidth: 220, borderRadius: 12, objectFit: "cover", border: "2px solid #1a4fd6" }} />
             <div style={{ marginTop: 24 }}>
               <div style={{ fontSize: 24, fontWeight: 800, color: "#0a1628", marginBottom: 4 }}>Sriram Srinivasan</div>
-              <div style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.6, textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 600 }}>
+              <div style={{ fontSize: 13, color: "#5a6a8a", lineHeight: 1.6, textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 700 }}>
                 Founder
               </div>
               <p style={{ marginTop: 16, marginBottom: 0, fontSize: 15, color: "#5a6a8a", lineHeight: 1.8 }}>
-                Active in enterprise AI delivery at Wipro. Building practical career intelligence from the signals professionals see before the market names them.
+                Sriram Advisory is built on three decades of observing how technology reshapes careers, organizations, and professional value.
               </p>
             </div>
           </div>
 
           <div>
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#0d9268", letterSpacing: "0.14em", textTransform: "uppercase", display: "block", marginBottom: 24 }}>
-              The Story
+            <span style={{ fontSize: 13, fontWeight: 800, color: "#0d9268", letterSpacing: "0.16em", textTransform: "uppercase", display: "block", marginBottom: 24 }}>
+              Why This Exists
             </span>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                Sriram Advisory began with a simple observation from AI delivery work: the market changes before job titles, career advice, and company messaging catch up. Professionals can feel the pressure long before they have language for it.
+                Sriram Advisory began from a simple frustration: the market was changing faster than the language professionals were using to understand it.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                SA-AIRS was built to make that pressure legible: how exposed a role is, where market demand is shifting, and what kind of work still compounds. The guides and bundles translate those signals into role-specific decisions for Indian IT professionals.
+                People could sense that AI, automation, global delivery models, GCCs, and organizational pressure were reshaping work. But most guidance still reduced the answer to tools, courses, or generic upskilling.
               </p>
               <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                The response has been clear. More than 100 guide orders arrived in the first 28 days, from people who were not looking for generic motivation; they were looking for an honest read and a usable next step.
-              </p>
-              <p style={{ fontSize: 16, color: "#4a5a7a", lineHeight: 1.85, margin: 0 }}>
-                The long-term goal is to make AI-era work change more legible through structured frameworks, practical diagnostics, and advisory products that help people choose their next move with more confidence.
+                The purpose of Sriram Advisory is to build a clearer map: one that helps professionals understand what companies may value next, what parts of work are changing, and how to prepare with better judgment.
               </p>
             </div>
           </div>
+
           <div
             style={{
               gridColumn: "1 / -1",
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
               gap: 14,
-              marginTop: 32,
+              marginTop: 28,
             }}
           >
             {FOUNDER_FACTS.map((fact) => (
-              <div key={fact} style={{ background: "#ffffff", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 8, padding: "18px", color: "#304159", fontSize: 14, fontWeight: 700, lineHeight: 1.6 }}>
+              <div key={fact} style={{ background: "#f8fbff", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 8, padding: "18px", color: "#304159", fontSize: 14, fontWeight: 800, lineHeight: 1.6 }}>
                 {fact}
               </div>
             ))}
@@ -145,45 +142,62 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={{ padding: "100px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0d9268" }}>
-            What We Combine
+      <section style={{ padding: "96px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#93b4ff" }}>
+            What We Believe
           </span>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 46px)", fontWeight: 800, color: "#0a1628", marginTop: 16, marginBottom: 40, letterSpacing: "-0.02em" }}>
-            A broader advisory system than career advice.
+          <h2 style={{ fontSize: "clamp(28px, 3.8vw, 46px)", fontWeight: 900, color: "#ffffff", margin: "16px 0 28px", letterSpacing: "-0.02em", lineHeight: 1.12 }}>
+            The point of view behind the research.
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
-            {PILLARS.map((pillar) => (
-              <div
-                key={pillar.title}
-                style={{ background: "rgba(10,22,40,0.025)", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 14, padding: "28px 24px" }}
-              >
-                <div style={{ width: 32, height: 3, background: "#1a4fd6", borderRadius: 2, marginBottom: 20 }} />
-                <div style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", marginBottom: 12 }}>{pillar.title}</div>
-                <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>{pillar.body}</p>
+          <div style={{ display: "grid", gap: 14 }}>
+            {MISSION_BELIEFS.map((belief) => (
+              <div key={belief} style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", padding: "0 0 14px", fontSize: 16, lineHeight: 1.8, color: "#dbe3ea" }}>
+                {belief}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "100px 24px", background: "#f7f9fc" }}>
+      <section style={{ padding: "96px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            What We Study
+          </span>
+          <h2 style={{ fontSize: "clamp(28px, 3.8vw, 46px)", fontWeight: 900, color: "#0a1628", margin: "16px 0 36px", letterSpacing: "-0.02em", lineHeight: 1.12 }}>
+            The research sits where careers, technology, and organizations meet.
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18 }}>
+            {RESEARCH_PILLARS.map((pillar) => (
+              <article
+                key={pillar.title}
+                style={{ background: "#ffffff", border: "1px solid rgba(26,79,214,0.15)", borderRadius: 8, padding: "26px 24px" }}
+              >
+                <div style={{ fontSize: 19, fontWeight: 900, color: "#0a1628", marginBottom: 12 }}>{pillar.title}</div>
+                <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: 0 }}>{pillar.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "96px 24px", background: "#ffffff" }}>
         <div
           style={{
             maxWidth: 980,
             margin: "0 auto",
             background: "#0a1628",
-            borderRadius: 20,
+            borderRadius: 12,
             padding: "34px 30px",
             color: "#f8faff",
           }}
         >
-          <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#93b4ff" }}>
+          <span style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#93b4ff" }}>
             Positioning
           </span>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 800, color: "#ffffff", marginTop: 16, marginBottom: 20, letterSpacing: "-0.02em" }}>
-            What makes Sriram Advisory different
+          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 900, color: "#ffffff", margin: "16px 0 20px", letterSpacing: "-0.02em" }}>
+            Future of Work intelligence for professionals and organizations.
           </h2>
           <div style={{ display: "grid", gap: 14 }}>
             {DIFFERENTIATORS.map((item) => (
@@ -204,78 +218,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={{ padding: "96px 24px", background: "#ffffff", textAlign: "center" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 800, color: "#0a1628", marginBottom: 20, letterSpacing: "-0.02em" }}>
-            Start with the path that fits your situation.
+      <section style={{ padding: "96px 24px", background: "#f7f9fc", textAlign: "center" }}>
+        <div style={{ maxWidth: 740, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(28px, 3.8vw, 46px)", fontWeight: 900, color: "#0a1628", margin: "0 0 18px", letterSpacing: "-0.02em" }}>
+            Read the research or start with a career guide.
           </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", marginBottom: 32 }}>
-            Use Career Intelligence if you are making a personal career decision. Use AI Delivery if you are responsible for moving an AI initiative toward production.
+          <p style={{ fontSize: 17, lineHeight: 1.8, color: "#5a6a8a", margin: "0 0 32px" }}>
+            Use the research library for broader workforce signals, or choose a guide when you need a practical next step for your own role.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
             <Link
-              href="/assessments"
+              href="/reports"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
                 padding: "15px 28px",
-                borderRadius: 10,
+                borderRadius: 8,
                 background: "#1a4fd6",
                 color: "#ffffff",
                 textDecoration: "none",
-                fontWeight: 700,
+                fontWeight: 800,
                 border: "1px solid #3b6ef0",
               }}
             >
-              Career Intelligence
+              Read Research
             </Link>
             <Link
-              href="/bundles"
+              href="/guides"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
                 padding: "15px 28px",
-                borderRadius: 10,
-                background: "transparent",
+                borderRadius: 8,
+                background: "#ffffff",
                 color: "#1a4fd6",
                 textDecoration: "none",
-                fontWeight: 700,
-                border: "1px solid rgba(126,179,255,0.25)",
+                fontWeight: 800,
+                border: "1px solid rgba(26,79,214,0.22)",
               }}
             >
-              Browse Bundles
-            </Link>
-            <Link
-              href="/ai-delivery-intelligence"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "15px 28px",
-                borderRadius: 10,
-                background: "transparent",
-                color: "#1a4fd6",
-                textDecoration: "none",
-                fontWeight: 700,
-                border: "1px solid rgba(126,179,255,0.25)",
-              }}
-            >
-              AI Delivery
+              Career Guides
             </Link>
           </div>
-          <p style={{ fontSize: 14, lineHeight: 1.8, color: "#5a6a8a", marginTop: 26 }}>
-            Prefer to ask directly? Email{" "}
-            <a href="mailto:sriram@sriramadvisory.com" style={{ color: "#1a4fd6", fontWeight: 700, textDecoration: "none" }}>
-              sriram@sriramadvisory.com
-            </a>{" "}
-            or WhatsApp{" "}
-            <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{ color: "#1a4fd6", fontWeight: 700, textDecoration: "none" }}>
-              +91 93422 29420
-            </a>
-            .
-          </p>
         </div>
       </section>
 

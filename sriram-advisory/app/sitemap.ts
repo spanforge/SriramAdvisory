@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 import { ARTICLES } from "./insights/[slug]/page";
 
 export default function sitemap(): MetadataRoute.Sitemap {

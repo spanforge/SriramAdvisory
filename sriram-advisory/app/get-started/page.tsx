@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,39 +6,39 @@ import { useState } from "react";
 
 const PRODUCTS = [
   {
-    tier: "AI Career Risk Score",
-    price: "₹999",
+    tier: "Career Intelligence Assessment",
+    price: "Rs 999",
     tag: "Most popular",
-    desc: "Personalised 1-page assessment of your specific role — scored by Sriram.",
+    desc: "Personalised 1-page assessment of your specific role - scored by Sriram.",
     items: [
       "Role-specific AI exposure analysis",
-      "SA-AIRS™ 5-dimension score",
+      "SA-AIRS(TM) 5-dimension score",
       "Risk tier placement",
       "Top 3 priority actions",
       "Delivered within 24 hours",
     ],
-    cta: "Get My Risk Score — ₹999",
+    cta: "Get My Assessment - Rs 999",
     href: "https://rzp.io/sriramadvisory",
     external: true,
     highlight: true,
   },
   {
     tier: "Pro Edition",
-    price: "₹999",
+    price: "Rs 999",
     tag: "Full intelligence",
     desc: "Complete intelligence report + quarterly updates for serious professionals.",
     items: [
       "Everything in Risk Score",
-      "SA-AIRS™ methodology in detail with visual charts",
+      "SA-AIRS(TM) methodology in detail with visual charts",
       "7 industry deep dives (IT, BPO, BFSI, Healthcare, Manufacturing, Retail, Education)",
       "Salary outlook scenarios & premium insights",
       "AI tools curated by profession",
-      "Dedicated Top 10% Ladder™ section",
+      "Dedicated Top 10% Ladder(TM) section",
       "90-day roadmap (detailed & actionable)",
       "Resume & LinkedIn positioning guide",
       "Two quarterly updates included",
     ],
-    cta: "Get Pro Edition — ₹999",
+    cta: "Get Pro Edition - Rs 999",
     href: "https://rzp.io/sriramadvisory",
     external: true,
     highlight: false,
@@ -92,7 +92,7 @@ export default function GetStartedPage() {
           </h1>
           <p style={{ fontSize: 16, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 32px" }}>
             Designed for Indian professionals. Choose the depth that matches your situation.
-            All prices in INR (₹).
+            All prices in INR.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{
@@ -101,7 +101,7 @@ export default function GetStartedPage() {
               padding: "10px 20px", borderRadius: 8, fontWeight: 500,
               border: "1px solid rgba(10,22,40,0.15)",
             }}>
-              Questions? WhatsApp us →
+              Questions? WhatsApp us {"->"}
             </a>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function GetStartedPage() {
                   <div style={{ display: "flex", flexDirection: "column", gap: 9, marginBottom: 32 }}>
                     {p.items.map((item) => (
                       <div key={item} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                        <span style={{ color: "#1a4fd6", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>✓</span>
+                        <span style={{ color: "#1a4fd6", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>Done</span>
                         <span style={{ fontSize: 14, color: "#3a4a6a", lineHeight: 1.5 }}>{item}</span>
                       </div>
                     ))}
@@ -196,17 +196,17 @@ export default function GetStartedPage() {
             {[
               {
                 tier: "Clarity Call",
-                price: "₹3,999 – ₹7,499",
+                price: "Rs 3,999 - Rs 7,499",
                 sub: "30 minutes",
-                desc: "1:1 with Sriram to map your exact next move. Includes a full SA-AIRS™ audit of your specific role.",
-                items: ["Pre-call SA-AIRS™ audit of your role", "30-minute 1:1 session", "Exact next-move roadmap", "Session notes delivered"],
+                desc: "1:1 with Sriram to map your exact next move. Includes a full SA-AIRS(TM) audit of your specific role.",
+                items: ["Pre-call SA-AIRS(TM) audit of your role", "30-minute 1:1 session", "Exact next-move roadmap", "Session notes delivered"],
               },
               {
                 tier: "Domain Deep Dive Program",
-                price: "₹9,999 – ₹24,999+",
+                price: "Rs 9,999 - Rs 24,999+",
                 sub: "Custom 90-day program",
-                desc: "Custom transition program: from your current role to its AI-era equivalent.",
-                items: ["Personalised 90-day transition plan", "Weekly accountability sessions", "Role-to-AI-era equivalence mapping", "Curated upskill & tool recommendations", "Direct founder access throughout"],
+                desc: "Custom transition program: from your current role to its future-of-work equivalent.",
+                items: ["Personalised 90-day transition plan", "Weekly accountability sessions", "Role-to-future-of-work equivalence mapping", "Curated upskill & tool recommendations", "Direct founder access throughout"],
               },
             ].map((p) => (
               <div key={p.tier} style={{
@@ -229,7 +229,7 @@ export default function GetStartedPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28, flex: 1 }}>
                   {p.items.map((item) => (
                     <div key={item} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                      <span style={{ color: "#1a4fd6", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>✓</span>
+                      <span style={{ color: "#1a4fd6", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>Done</span>
                       <span style={{ fontSize: 14, color: "#3a4a6a", lineHeight: 1.5 }}>{item}</span>
                     </div>
                   ))}
@@ -241,7 +241,7 @@ export default function GetStartedPage() {
                   fontSize: 14, fontWeight: 700,
                   border: "2px solid #1a4fd6",
                 }}>
-                  Enquire on WhatsApp →
+                  Enquire on WhatsApp {"->"}
                 </a>
               </div>
             ))}
@@ -256,13 +256,13 @@ export default function GetStartedPage() {
       <section style={{ background: "#ffffff", padding: "40px 24px", borderTop: "1px solid rgba(10,22,40,0.07)" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center" }}>
           {[
-            "Advisory analysis — not a guaranteed prediction",
+            "Advisory analysis - not a guaranteed prediction",
             "For personal use only",
             "No drip email sequences after purchase",
-            "Working with real professionals — not a generic AI tool",
+            "Working with real professionals - not a generic AI tool",
           ].map((item) => (
             <div key={item} style={{ display: "flex", gap: 8, alignItems: "center" }}>
-              <span style={{ color: "#1a4fd6", fontSize: 16 }}>•</span>
+              <span style={{ color: "#1a4fd6", fontSize: 16 }}>-</span>
               <span style={{ fontSize: 13, color: "#5a6a8a" }}>{item}</span>
             </div>
           ))}
@@ -291,7 +291,7 @@ export default function GetStartedPage() {
               background: "rgba(16,180,140,0.08)", border: "1px solid rgba(16,180,140,0.25)",
               borderRadius: 12, padding: "28px 32px", textAlign: "center",
             }}>
-              <div style={{ fontSize: 28, marginBottom: 10 }}>✓</div>
+              <div style={{ fontSize: 28, marginBottom: 10 }}>Done</div>
               <div style={{ fontSize: 16, fontWeight: 700, color: "#0d9e7e", marginBottom: 8 }}>Message received</div>
               <p style={{ fontSize: 14, color: "#5a6a8a", margin: 0 }}>
                 You will hear back within 24 hours at {form.email}
@@ -354,7 +354,7 @@ export default function GetStartedPage() {
                   letterSpacing: "0.02em", transition: "background 0.15s",
                 }}
               >
-                {loading ? "Sending…" : "Send Message →"}
+                {loading ? "Sending..." : "Send Message ->"}
               </button>
               <p style={{ fontSize: 13, color: "#8898b8", margin: "0", textAlign: "center" }}>
                 Or reach us directly at{" "}
@@ -378,11 +378,11 @@ export default function GetStartedPage() {
           {[
             {
               q: "What does the Pro Edition add over the Risk Score?",
-              a: "The Pro Edition (₹999) includes everything in the Risk Score plus detailed industry deep dives across 7 sectors, salary outlook scenarios, AI tools curated by profession, a dedicated Top 10% Ladder™ section, a 90-day roadmap, LinkedIn positioning guide, and two quarterly updates.",
+              a: "The Pro Edition (Rs 999) includes everything in the Risk Score plus detailed industry deep dives across 7 sectors, salary outlook scenarios, AI tools curated by profession, a dedicated Top 10% Ladder(TM) section, a 90-day roadmap, LinkedIn positioning guide, and two quarterly updates.",
             },
             {
               q: "How does the Clarity Call work?",
-              a: "You book a 30-minute 1:1 call with Sriram. Before the call, he completes a full SA-AIRS™ audit of your specific role. On the call, you discuss your exact situation and leave with a clear next-move roadmap. Session notes are delivered after.",
+              a: "You book a 30-minute 1:1 call with Sriram. Before the call, he completes a full SA-AIRS(TM) audit of your specific role. On the call, you discuss your exact situation and leave with a clear next-move roadmap. Session notes are delivered after.",
             },
             {
               q: "What if I am not satisfied with my purchase?",
@@ -390,7 +390,7 @@ export default function GetStartedPage() {
             },
             {
               q: "Are the prices final?",
-              a: "Current pricing is as listed. Founder discounts are available in direct conversations — DM or WhatsApp to know more.",
+              a: "Current pricing is as listed. Founder discounts are available in direct conversations - DM or WhatsApp to know more.",
             },
           ].map((item) => (
             <div key={item.q} style={{

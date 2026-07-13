@@ -1,4 +1,5 @@
-import Link from "next/link";
+﻿import Link from "next/link";
+import Image from "next/image";
 import { NAV_ITEMS } from "@/lib/siteCatalog";
 
 export default function Footer() {
@@ -24,11 +25,7 @@ export default function Footer() {
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 360 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <img
-                src="/sriram.png"
-                alt="Sriram Advisory"
-                style={{ width: 38, height: 38, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }}
-              />
+              <Image src="/sriram.png" alt="Sriram Advisory" width={38} height={38} style={{ width: 38, height: 38, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }} />
               <div>
                 <div style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", letterSpacing: "-0.01em" }}>
                   Sriram Advisory
@@ -43,12 +40,12 @@ export default function Footer() {
                     marginTop: 2,
                   }}
                 >
-                  Workforce Intelligence & Transformation for the AI Era
+                  Future of Work Research and Advisory
                 </div>
               </div>
             </div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Workforce intelligence and transformation for professionals navigating AI-driven career change.
+              India-focused research on how work, careers, skills, and organizations are changing.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <a href="mailto:sriram@sriramadvisory.com" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>
@@ -83,6 +80,7 @@ export default function Footer() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
                   { label: "Contact", href: "/contact" },
+                  { label: "Research Method", href: "/methodology" },
                   { label: "FAQ", href: "/faq" },
                   { label: "Insights", href: "/insights" },
                 ].map((item) => (
@@ -129,7 +127,7 @@ export default function Footer() {
           }}
         >
           <p style={{ fontSize: 13, color: "rgba(10,22,40,0.6)", margin: 0 }}>
-            © {new Date().getFullYear()} Sriram Advisory. Educational and analytical commentary only.
+            (c) {new Date().getFullYear()} Sriram Advisory. Educational and analytical commentary only.
           </p>
           <a
             href="https://www.linkedin.com/newsletters/sriram-advisory-7461301611261284352/"

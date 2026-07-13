@@ -1,11 +1,11 @@
-import Navbar from "@/components/Navbar";
+﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Disclaimer | Sriram Advisory",
-  description: "Full legal disclaimer for Sriram Advisory. Educational and analytical commentary only — not career counselling, legal advice, or employment guidance.",
+  description: "Full legal disclaimer for Sriram Advisory. Educational and analytical commentary only - not career counselling, legal advice, or employment guidance.",
 };
 
 export default function DisclaimerPage() {
@@ -21,7 +21,7 @@ export default function DisclaimerPage() {
             Disclaimer
           </h1>
           <p style={{ fontSize: 16, color: "#6a7a9a", lineHeight: 1.7 }}>
-            Last updated: May 2026 · Sriram Advisory, India
+            Last updated: May 2026  -  Sriram Advisory, India
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ export default function DisclaimerPage() {
 
           {/* ALERT BOX */}
           <div style={{ background: "rgba(255,80,80,0.07)", border: "1px solid rgba(255,80,80,0.25)", borderRadius: 14, padding: "32px 36px", marginBottom: 56 }}>
-            <div style={{ fontSize: 14, fontWeight: 800, color: "#dc2626", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>Important — Read Before Purchasing</div>
+            <div style={{ fontSize: 14, fontWeight: 800, color: "#dc2626", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>Important - Read Before Purchasing</div>
             <p style={{ fontSize: 16, color: "#1a2030", lineHeight: 1.75, marginBottom: 20 }}>
               The Career Intelligence Report and all associated services provided by Sriram Advisory are{" "}
               <strong style={{ color: "#fff" }}>educational and analytical commentary only</strong>.
@@ -50,7 +50,7 @@ export default function DisclaimerPage() {
                 "Employment advice regulated under any professional standard",
               ].map((item) => (
                 <div key={item} style={{ display: "flex", gap: 12 }}>
-                  <span style={{ color: "#dc2626", flexShrink: 0 }}>✗</span>
+                  <span style={{ color: "#dc2626", flexShrink: 0 }}>!</span>
                   <span style={{ fontSize: 15, color: "#4a5a7a" }}>{item}</span>
                 </div>
               ))}
@@ -62,15 +62,15 @@ export default function DisclaimerPage() {
               title: "1. Nature of the Service",
               content: [
                 "Sriram Advisory provides analytical commentary, thinking frameworks, and structured self-reflection tools for professionals seeking to understand their career positioning in an AI-influenced market.",
-                "All content, reports, scores, and frameworks are for informational and educational purposes only. They are intended to support independent reflection and decision-making — not to replace professional advice.",
+                "All content, reports, scores, and frameworks are for informational and educational purposes only. They are intended to support independent reflection and decision-making - not to replace professional advice.",
                 "The Career Intelligence Report is a personal diagnostic tool based on self-reported inputs. It does not constitute a formal assessment, clinical evaluation, or professional opinion.",
               ],
             },
             {
-              title: "2. SA-AIRS™ Score Limitations",
+              title: "2. SA-AIRS(TM) Score Limitations",
               content: [
-                "The SA-AIRS™ score is based exclusively on your self-reported inputs. It reflects patterns you have described — not an objective audit of your actual role, skills, or market position.",
-                "All scores are directional guidance — not precise measurements, clinical assessments, or statistical predictions.",
+                "The SA-AIRS(TM) score is based exclusively on your self-reported inputs. It reflects patterns you have described - not an objective audit of your actual role, skills, or market position.",
+                "All scores are directional guidance - not precise measurements, clinical assessments, or statistical predictions.",
                 "Confidence levels indicate our internal estimate of score reliability given your inputs. They are not formal measurements of statistical confidence.",
                 "A score does not predict whether you will be displaced by AI. Many factors beyond thinking patterns influence career outcomes: market conditions, sector-specific dynamics, organisational decisions, geography, timing, and factors outside individual control.",
               ],
@@ -79,7 +79,7 @@ export default function DisclaimerPage() {
               title: "3. Thinking Frame Assessments",
               content: [
                 "The 5 Thinking Frames are conceptual frameworks for structured self-reflection. They are not psychological instruments, validated psychometric tools, or peer-reviewed assessment methodologies.",
-                "Frame scores indicate patterns suggested by your answers — not clinical diagnoses of your cognitive patterns or personality.",
+                "Frame scores indicate patterns suggested by your answers - not clinical diagnoses of your cognitive patterns or personality.",
                 "Disagreeing with your frame score is normal and encouraged. Use it as a starting point for reflection, not as a definitive label.",
               ],
             },
@@ -88,7 +88,7 @@ export default function DisclaimerPage() {
               content: [
                 "Sriram Advisory makes no warranty, express or implied, that following any recommendation, practice challenge, or thinking shift described in any report will result in improved career outcomes, job security, salary improvement, promotion, or any other specific result.",
                 "Career outcomes depend on many factors outside any individual's thinking patterns: economic conditions, industry trends, organisational decisions, skills, experience, market demand, and others.",
-                "The 30-day re-assessment tracks changes in your self-reported thinking patterns only — not your actual career trajectory or market position.",
+                "The 30-day re-assessment tracks changes in your self-reported thinking patterns only - not your actual career trajectory or market position.",
               ],
             },
             {
@@ -102,10 +102,10 @@ export default function DisclaimerPage() {
             {
               title: "6. Professional Advice",
               content: [
-                "If you require legal advice — consult a qualified lawyer.",
-                "If you require financial or investment advice — consult a SEBI-registered financial advisor.",
-                "If you are experiencing career distress, anxiety, or mental health challenges — consult a qualified mental health professional.",
-                "If you require formal career counselling — consult a registered career counsellor.",
+                "If you require legal advice - consult a qualified lawyer.",
+                "If you require financial or investment advice - consult a SEBI-registered financial advisor.",
+                "If you are experiencing career distress, anxiety, or mental health challenges - consult a qualified mental health professional.",
+                "If you require formal career counselling - consult a registered career counsellor.",
                 "Nothing in any Sriram Advisory report substitutes for professional advice appropriate to your specific situation.",
               ],
             },
