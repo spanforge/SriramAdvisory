@@ -76,8 +76,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Frameworks", href: "/frameworks" },
   { label: "Research & Insights", href: "/reports", footerLabel: "Research" },
-  { label: "Products & Assets", href: "/guides", footerLabel: "Products & Guides" },
-  { label: "Our Thinking", href: "/our-thinking" },
+  { label: "Products & Assets", href: "/products" },
   { label: "About", href: "/about" },
 ];
 

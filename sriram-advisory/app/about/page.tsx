@@ -228,6 +228,23 @@ export default function AboutPage() {
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
             <Link
+              href="/our-thinking"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "15px 28px",
+                borderRadius: 8,
+                background: "#0a1628",
+                color: "#ffffff",
+                textDecoration: "none",
+                fontWeight: 800,
+                border: "1px solid #0a1628",
+              }}
+            >
+              Read Our Thinking
+            </Link>
+            <Link
               href="/reports"
               style={{
                 display: "inline-flex",

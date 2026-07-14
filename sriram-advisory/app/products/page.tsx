@@ -1,431 +1,291 @@
-﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TrackedLink from "@/components/TrackedLink";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Research Products | Sriram Advisory",
+  title: "Products & Assets | Sriram Advisory",
   description:
-    "Research products from Sriram Advisory, including Future of Work reports, role guides, and career intelligence assessments.",
+    "Sriram Advisory products and assets organized by framework, with SA-AIRS learning paths for career decisions under AI-driven uncertainty.",
 };
 
-const PRODUCTS = [
+const LEARNING_PATH = [
   {
-    badge: "New - May 2026",
-    badgeColor: "#ffffff",
-    badgeBg: "#dc2626",
-    badgeBorder: "#ef4444",
-    accentColor: "#dc2626",
-    tag: "India Workforce Intelligence",
+    step: "Start here",
+    title: "SA-AIRS Career Risk Audit",
+    body: "Get your current role interpreted across exposure, defensibility, market pressure, and practical next moves.",
+    href: "/am-i-future-proof",
+    price: "Rs 499",
+    signal: "Best first step",
+  },
+  {
+    step: "Role context",
+    title: "Career Intelligence Guides",
+    body: "Choose a role-specific guide when you need practical next steps for the work you do now.",
+    href: "/guides",
+    price: "From Rs 499",
+    signal: "Learning path",
+  },
+  {
+    step: "Market view",
     title: "AI Risk Rankings India 2026",
-    price: "Rs 999",
-    strikePrice: null,
-    priceNote: "Top 25 High-Risk Careers Report",
-    tagline: "25 ranked careers. 4 risk bands. 100+ pages.",
-    blurb:
-      "A structured analysis of careers facing rising automation and market pressure in India, with role-level context, adaptation direction, and supporting market signals.",
-    bullets: [
-      "Top 25 careers ranked with risk bands, headcounts, and salary data",
-      "Clear risk bands with practical interpretation",
-      "Deep-dive vulnerability profiles for 5 occupational clusters",
-      "Individual adaptation framework with 90-day direction by role",
-      "Career transition paths mapped for each high-risk occupation",
-      "4 Indian case studies with illustrative transition profiles",
-    ],
-    cta: "View report - Rs 999 ->",
+    body: "Use the wider market report when you need to understand role-level pressure across India.",
     href: "/products/ai-risk-rankings-india-2026",
-    external: false,
-    featured: false,
-    bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
-    borderColor: "#fecaca",
-  },
-  {
-    badge: "New Premium Report",
-    badgeColor: "#ffffff",
-    badgeBg: "#0d9268",
-    badgeBorder: "#34d399",
-    accentColor: "#0d9268",
-    tag: "Launch Price",
-    title: "AI Futures 2026",
-    price: "Rs 799",
-    strikePrice: "Rs 999",
-    priceNote: "Premium Report",
-    tagline: "Signals. Scenarios. Strategic adaptation lens.",
-    blurb:
-      "A premium India-first intelligence report for professionals who want a clearer view of where AI may shift leverage, pressure, and career advantage in India over the next phase.",
-    bullets: [
-      "Scenario framing instead of hype-heavy predictions",
-      "India-first reading of leverage, pressure, and role shifts",
-      "Limited preview on-page so the insight stays inside the paid report",
-      "Built for professionals making strategic career decisions",
-      "Launch pricing before the full-price release",
-      "Cashfree checkout with email delivery",
-    ],
-    cta: "Get AI Futures 2026 ->",
-    href: "/products/ai-futures-2026",
-    external: false,
-    featured: true,
-    bgGradient: "linear-gradient(135deg, #f2fbf8 0%, #dcfce7 100%)",
-    borderColor: "#bbf7d0",
-  },
-  {
-    badge: "New Premium Report",
-    badgeColor: "#ffffff",
-    badgeBg: "#0f6cbd",
-    badgeBorder: "#60a5fa",
-    accentColor: "#0f6cbd",
-    tag: "Launch Price",
-    title: "State of QA Careers India 2026",
-    price: "Rs 799",
-    strikePrice: "Rs 999",
-    priceNote: "Premium Report",
-    tagline: "Testing careers. AI pressure. Strategic repositioning.",
-    blurb:
-      "A focused India-first intelligence report for QA professionals who want a clearer read on how testing careers are changing, where the pressure is rising, and what stronger positioning looks like next.",
-    bullets: [
-      "Built specifically for QA and test professionals",
-      "Maps role shifts, pressure points, and adaptation direction",
-      "Premium report for strategic career decision-making",
-      "India-first context instead of generic global commentary",
-      "Launch pricing before the full-price release",
-      "Cashfree checkout with email delivery",
-    ],
-    cta: "Get State of QA Careers 2026 ->",
-    href: "/products/state-of-qa-careers-india-2026",
-    external: false,
-    featured: false,
-    bgGradient: "linear-gradient(135deg, #f2f8ff 0%, #dbeafe 100%)",
-    borderColor: "#bfdbfe",
-  },
-  {
-    badge: "Personalised",
-    badgeColor: "#a78bfa",
-    badgeBg: "rgba(167,139,250,0.12)",
-    badgeBorder: "rgba(167,139,250,0.3)",
-    accentColor: "#7c3aed",
-    tag: "Delivered Within 24 Hours",
-    title: "Career Intelligence Assessment",
     price: "Rs 999",
-    strikePrice: "Rs 1,999",
-    priceNote: "Launch Price - Personalised",
-    tagline: "Your role. Your context. Your next decision.",
-    blurb:
-      "A structured assessment for professionals who want an independent reading of role exposure, market pressure, and practical next moves.",
-    bullets: [
-      "Role-specific interpretation delivered as a concise report",
-      "Clear explanation of exposure, pressure, and confidence level",
-      "Short-term and medium-term watch areas",
-      "Practical next moves for learning and positioning",
-      "Delivered directly by email",
-    ],
-    cta: "Order assessment - Rs 999 ->",
-    href: "/products/airs-assessment",
-    external: false,
-    featured: false,
-    bgGradient: "linear-gradient(135deg, #f5f0ff 0%, #ede9fe 100%)",
-    borderColor: "#ddd6fe",
+    signal: "Deeper report",
   },
+];
+
+const FRAMEWORK_GROUPS = [
+  {
+    framework: "SA-AIRS",
+    label: "Flagship decision system",
+    body: "Role exposure, defensibility, market pressure, and next moves under AI-driven uncertainty.",
+    assets: [
+      {
+        title: "SA-AIRS Career Risk Audit",
+        type: "Audit",
+        path: "Start here",
+        href: "/am-i-future-proof",
+        price: "Rs 499",
+        body: "A 48-hour role diagnosis with five dimensions, risk horizon, and practical next moves.",
+      },
+      {
+        title: "Career Intelligence Report - SA-AIRS Pro",
+        type: "Assessment",
+        path: "Personal diagnosis",
+        href: "/career-intelligence-report/sa-airs-pro",
+        price: "Rs 999",
+        body: "A structured diagnostic for professionals who want a deeper SA-AIRS role score and benchmarks.",
+      },
+      {
+        title: "AI Risk Rankings India 2026",
+        type: "Report",
+        path: "Market context",
+        href: "/products/ai-risk-rankings-india-2026",
+        price: "Rs 999",
+        body: "A role-level view of AI pressure across Indian careers and adaptation direction.",
+      },
+    ],
+  },
+  {
+    framework: "AI Leverage Ladder",
+    label: "Supporting framework",
+    body: "Move from basic tool use to workflow ownership, better decisions, and stronger professional leverage.",
+    assets: [
+      {
+        title: "AI Literacy for Absolute Beginners",
+        type: "Guide",
+        path: "Foundation",
+        href: "/ai-literacy/absolute-beginners",
+        price: "Rs 499",
+        body: "A practical foundation for professionals who need to build AI fluency before role-specific moves.",
+      },
+      {
+        title: "Python Developer AI Leverage Guide 2026",
+        type: "Role guide",
+        path: "Role application",
+        href: "/guides/python-developer-ai-leverage-guide-2026",
+        price: "Rs 499",
+        body: "A role-specific guide for moving beyond script-heavy execution into stronger AI-assisted leverage.",
+      },
+      {
+        title: "Java Developer AI Leverage Guide 2026",
+        type: "Role guide",
+        path: "Role application",
+        href: "/guides/java-developer-ai-leverage-guide-2026",
+        price: "Rs 499",
+        body: "A guide for using AI to move up the value chain without abandoning the Java ecosystem.",
+      },
+    ],
+  },
+  {
+    framework: "Replaceability Curve",
+    label: "Supporting framework",
+    body: "Understand quiet value erosion before it becomes visible as job loss, salary pressure, or weak demand.",
+    assets: [
+      {
+        title: "Why Expertise Becomes a Trap",
+        type: "Research report",
+        path: "Concept depth",
+        href: "/products/why-expertise-becomes-a-trap",
+        price: "Report",
+        body: "A research report on competency traps, professional reinvention, and value erosion during technology shifts.",
+      },
+      {
+        title: "The Seniority Trap",
+        type: "Insight",
+        path: "Short read",
+        href: "/insights/seniority-trap-mid-career-ai-risk",
+        price: "Free",
+        body: "An essay on why mid-career experience can become fragile when market signals change.",
+      },
+    ],
+  },
+  {
+    framework: "Career Positioning Audit",
+    label: "Supporting framework",
+    body: "Strengthen the professional signal the market sees: resume clarity, LinkedIn framing, proof, and direction.",
+    assets: [
+      {
+        title: "Career Positioning Audit",
+        type: "Service",
+        path: "Signal repair",
+        href: "/services/career-positioning-audit",
+        price: "Rs 999",
+        body: "A structured audit of how your resume and LinkedIn profile read to the market today.",
+      },
+      {
+        title: "Business Analyst to AI Product Manager Guide 2026",
+        type: "Role guide",
+        path: "Transition path",
+        href: "/guides/ba-to-ai-pm-guide-2026",
+        price: "Rs 499",
+        body: "A transition guide for stronger problem framing, AI product ownership, and outcome-led positioning.",
+      },
+    ],
+  },
+];
+
+const MEASUREMENT_POINTS = [
+  "SA-AIRS audit page views and checkout starts",
+  "Products & Assets path clicks by framework",
+  "Guide and report overview clicks",
+  "Checkout submit events and payment-status outcomes",
 ];
 
 export default function ProductsPage() {
   return (
-    <div className="font-body bg-white text-[#0a1628] min-h-screen">
+    <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
 
       <section
         style={{
-          background: "linear-gradient(135deg, #f0f5ff 0%, #e8eef8 55%, #f4f7fe 100%)",
-          paddingTop: 100,
-          paddingBottom: 72,
-          textAlign: "center",
+          background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 58%, #edf7f2 100%)",
+          padding: "112px 24px 88px",
+          borderBottom: "1px solid rgba(26,79,214,0.12)",
         }}
       >
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 20px" }}>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              background: "rgba(26,79,214,0.08)",
-              border: "1px solid rgba(26,79,214,0.2)",
-              borderRadius: 20,
-              padding: "6px 16px",
-              marginBottom: 28,
-            }}
-          >
-            <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#1a4fd6", display: "inline-block" }} />
-            <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a4fd6" }}>
-              Research Products
-            </span>
-          </div>
-          <h1
-            style={{
-              fontSize: "clamp(36px, 5vw, 60px)",
-              fontWeight: 800,
-              color: "#0a1628",
-              lineHeight: 1.1,
-              marginBottom: 20,
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Choose the research format that fits the decision
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 26 }}>
+            Products & Assets
+          </span>
+          <h1 style={{ fontSize: "clamp(40px, 5.4vw, 68px)", fontWeight: 900, color: "#0a1628", lineHeight: 1.08, margin: "0 0 24px", letterSpacing: "-0.02em" }}>
+            Choose the asset by the decision you need to make.
           </h1>
-          <p style={{ fontSize: "clamp(16px, 2vw, 19px)", color: "#5a6a8a", lineHeight: 1.7, maxWidth: 580, margin: "0 auto 12px" }}>
-            Reports, guides, and assessments for professionals and teams trying to understand how work is changing.
-          </p>
-          <p style={{ fontSize: 15, color: "#8898b8", fontStyle: "italic" }}>
-            Built to create clearer judgment, not louder predictions.
+          <p style={{ fontSize: "clamp(17px, 2.1vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 780, margin: 0 }}>
+            Phase 1 keeps the catalog simple: SA-AIRS first, then supporting assets organized by framework and learning path.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: "80px 20px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 1080, margin: "0 auto", display: "flex", flexDirection: "column", gap: 40 }}>
-          {PRODUCTS.map((product) => (
-            <div
-              key={product.title}
-              style={{
-                background: product.bgGradient,
-                border: `1.5px solid ${product.featured ? product.accentColor : product.borderColor}`,
-                borderRadius: 20,
-                padding: "40px 40px",
-                position: "relative",
-                overflow: "hidden",
-                boxShadow: product.featured ? "0 8px 40px rgba(13,146,104,0.12)" : "none",
-              }}
-            >
-              {product.featured && (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 20,
-                    right: 24,
-                    background: product.accentColor,
-                    color: "#ffffff",
-                    fontSize: 13,
-                    fontWeight: 700,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    padding: "4px 12px",
-                    borderRadius: 12,
-                  }}
-                >
-                  Premium Launch
-                </div>
-              )}
+      <section style={{ padding: "88px 24px", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 760, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+              SA-AIRS Learning Path
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              Start narrow, then add role and market context.
+            </h2>
+          </div>
 
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 32, alignItems: "flex-start" }}>
-                <div style={{ flex: "1 1 340px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-                    <span
-                      style={{
-                        fontSize: 13,
-                        fontWeight: 700,
-                        letterSpacing: "0.08em",
-                        textTransform: "uppercase",
-                        background: product.badgeBg,
-                        color: product.badgeColor,
-                        border: `1px solid ${product.badgeBorder}`,
-                        padding: "3px 10px",
-                        borderRadius: 10,
-                      }}
-                    >
-                      {product.badge}
-                    </span>
-                    <span style={{ fontSize: 13, color: "#5a6a8a" }}>{product.tag}</span>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
+            {LEARNING_PATH.map((item, index) => (
+              <TrackedLink
+                key={item.title}
+                href={item.href}
+                eventName="Learning Path Click"
+                eventProperties={{ path_step: item.step, asset: item.title, position: index + 1 }}
+                style={{ textDecoration: "none" }}
+              >
+                <article style={{ height: "100%", border: index === 0 ? "2px solid #1a4fd6" : "1px solid #dbe5f5", borderRadius: 8, padding: "26px 24px", background: index === 0 ? "#eef4ff" : "#f8fbff" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", marginBottom: 14 }}>
+                    <span style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268" }}>{item.step}</span>
+                    <span style={{ fontSize: 12, fontWeight: 900, color: "#1a4fd6" }}>{item.price}</span>
                   </div>
-                  <h2 style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 800, color: "#0a1628", marginBottom: 6, lineHeight: 1.2 }}>
-                    {product.title}
-                  </h2>
-                  <p style={{ fontSize: 15, color: product.accentColor, fontWeight: 600, marginBottom: 16 }}>
-                    {product.tagline}
-                  </p>
-                  <p style={{ fontSize: 15, color: "#3a4a6a", lineHeight: 1.7, marginBottom: 24 }}>
-                    {product.blurb}
-                  </p>
-                  <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 24, flexWrap: "wrap" }}>
-                    {product.strikePrice && (
-                      <span style={{ fontSize: 22, fontWeight: 600, color: "#8898b8", textDecoration: "line-through" }}>
-                        {product.strikePrice}
-                      </span>
-                    )}
-                    <span style={{ fontSize: 36, fontWeight: 800, color: product.accentColor }}>{product.price}</span>
-                    <span style={{ fontSize: 13, color: "#8898b8" }}>{product.priceNote}</span>
-                  </div>
-                  <Link
-                    href={product.href}
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 6,
-                      background: product.accentColor,
-                      color: "#ffffff",
-                      fontWeight: 700,
-                      fontSize: 15,
-                      padding: "13px 28px",
-                      borderRadius: 10,
-                      textDecoration: "none",
-                      letterSpacing: "0.01em",
-                    }}
-                  >
-                    {product.cta}
-                  </Link>
-                </div>
+                  <h3 style={{ fontSize: 24, lineHeight: 1.18, color: "#0a1628", margin: "0 0 12px" }}>{item.title}</h3>
+                  <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: "0 0 18px" }}>{item.body}</p>
+                  <span style={{ display: "inline-flex", fontSize: 12, fontWeight: 900, letterSpacing: "0.10em", textTransform: "uppercase", color: "#304159", background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 999, padding: "5px 10px" }}>
+                    {item.signal}
+                  </span>
+                </article>
+              </TrackedLink>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <div style={{ flex: "1 1 260px" }}>
-                  <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5a6a8a", marginBottom: 14 }}>
-                    What&apos;s included
+      <section style={{ padding: "88px 24px", background: "#f7f9fc" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 780, marginBottom: 34 }}>
+            <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
+              Organized By Framework
+            </span>
+            <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
+              SA-AIRS leads. Supporting frameworks stay secondary.
+            </h2>
+          </div>
+
+          <div style={{ display: "grid", gap: 22 }}>
+            {FRAMEWORK_GROUPS.map((group) => (
+              <section key={group.framework} style={{ border: group.framework === "SA-AIRS" ? "2px solid #1a4fd6" : "1px solid #dbe5f5", borderRadius: 8, background: "#ffffff", padding: "26px 24px" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "minmax(220px, 0.55fr) minmax(0, 1.45fr)", gap: 22, alignItems: "start" }} className="home-two-col">
+                  <div>
+                    <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 12 }}>
+                      {group.label}
+                    </div>
+                    <h3 style={{ fontSize: 28, lineHeight: 1.15, color: "#0a1628", margin: "0 0 12px" }}>
+                      {group.framework}
+                    </h3>
+                    <p style={{ fontSize: 15, lineHeight: 1.75, color: "#52627e", margin: 0 }}>{group.body}</p>
                   </div>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                    {product.bullets.map((bullet) => (
-                      <div key={bullet} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                        <span style={{ color: product.accentColor, fontWeight: 700, flexShrink: 0, fontSize: 14, marginTop: 2 }}>+</span>
-                        <span style={{ fontSize: 14, color: "#2a3a5a", lineHeight: 1.5 }}>{bullet}</span>
-                      </div>
+
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
+                    {group.assets.map((asset) => (
+                      <TrackedLink
+                        key={asset.href}
+                        href={asset.href}
+                        eventName="Product Asset Click"
+                        eventProperties={{ framework: group.framework, asset: asset.title, asset_type: asset.type }}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <article style={{ height: "100%", border: "1px solid #dbe5f5", borderRadius: 8, padding: "20px 18px", background: "#f8fbff" }}>
+                          <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginBottom: 12 }}>
+                            <span style={{ fontSize: 12, fontWeight: 900, color: "#1a4fd6" }}>{asset.type}</span>
+                            <span style={{ fontSize: 12, fontWeight: 900, color: "#0d9268" }}>{asset.price}</span>
+                          </div>
+                          <h4 style={{ fontSize: 19, lineHeight: 1.25, color: "#0a1628", margin: "0 0 10px", fontWeight: 900 }}>{asset.title}</h4>
+                          <p style={{ fontSize: 14, lineHeight: 1.65, color: "#52627e", margin: "0 0 14px" }}>{asset.body}</p>
+                          <span style={{ color: "#1a4fd6", fontSize: 13, fontWeight: 900 }}>{asset.path} {"->"}</span>
+                        </article>
+                      </TrackedLink>
                     ))}
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ padding: "0 20px 80px", background: "#ffffff" }}>
-        <div
-          style={{
-            maxWidth: 1080,
-            margin: "0 auto",
-            background: "linear-gradient(135deg, #0a1628 0%, #102346 58%, #1a4fd6 100%)",
-            borderRadius: 20,
-            padding: "32px 28px",
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 1fr) auto",
-            gap: 20,
-            alignItems: "center",
-          }}
-          className="home-two-col"
-        >
-          <div>
-            <span style={{ fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "#93b4ff" }}>
-              Bundles
-            </span>
-            <h2 style={{ fontSize: "clamp(24px, 3.4vw, 36px)", color: "#ffffff", margin: "10px 0", letterSpacing: "-0.02em" }}>
-              Need more than one product?
-            </h2>
-            <p style={{ fontSize: 15, color: "rgba(219,234,254,0.86)", lineHeight: 1.75, margin: 0, maxWidth: 680 }}>
-              Bundles combine related guides and reports into role-specific intelligence stacks, starting at Rs 799.
-            </p>
-          </div>
-          <Link
-            href="/bundles"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              background: "#ffffff",
-              color: "#102346",
-              fontWeight: 800,
-              fontSize: 14,
-              padding: "13px 22px",
-              borderRadius: 10,
-              textDecoration: "none",
-              whiteSpace: "nowrap",
-            }}
-          >
-            View Bundles {"->"}
-          </Link>
-        </div>
-      </section>
-
-      <section style={{ padding: "80px 20px", background: "#f8faff" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6" }}>Compare</span>
-            <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 800, color: "#0a1628", marginTop: 12 }}>
-              Not sure which to start with?
-            </h2>
-          </div>
-          <div style={{ overflowX: "auto" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-              <thead>
-                <tr style={{ background: "#0a1628", color: "#ffffff" }}>
-                  <th style={{ padding: "14px 18px", textAlign: "left", borderRadius: "10px 0 0 0", fontWeight: 600 }}>Feature</th>
-                  <th style={{ padding: "14px 18px", textAlign: "center", fontWeight: 600, background: "#0d9268" }}>
-                    AI Futures 2026
-                    <br />
-                    <s style={{ fontWeight: 400, fontSize: 13, opacity: 0.7 }}>Rs 999</s> Rs 799
-                  </th>
-                  <th style={{ padding: "14px 18px", textAlign: "center", fontWeight: 600 }}>AI Risk Rankings<br />Rs 999</th>
-                  <th style={{ padding: "14px 18px", textAlign: "center", borderRadius: "0 10px 0 0", fontWeight: 600 }}>
-                    AIRS Score
-                    <br />
-                    <s style={{ fontWeight: 400, fontSize: 13, opacity: 0.6 }}>Rs 1,999</s> Rs 999
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ["India-specific content", "Yes", "Yes", "Yes"],
-                  ["Forward-looking scenarios", "Yes", "Light", "No"],
-                  ["Career risk ranking", "No", "Yes", "No"],
-                  ["Personalised to your role", "No", "No", "Yes"],
-                  ["Strategic adaptation lens", "Yes", "Yes", "Yes"],
-                  ["Detailed market signals", "Yes", "Yes", "No"],
-                  ["Best for", "Thinking ahead", "Understanding risk", "Getting your score"],
-                  ["Delivery", "Email", "Email", "Within 24h"],
-                ].map(([feature, futures, rankings, airs], i) => (
-                  <tr key={feature} style={{ background: i % 2 === 0 ? "#ffffff" : "#f8faff" }}>
-                    <td style={{ padding: "12px 18px", color: "#2a3a5a", fontWeight: 500 }}>{feature}</td>
-                    <td style={{ padding: "12px 18px", textAlign: "center", color: "#0d9268", fontWeight: 600, background: "rgba(13,146,104,0.04)" }}>{futures}</td>
-                    <td style={{ padding: "12px 18px", textAlign: "center", color: "#dc2626", fontWeight: 600 }}>{rankings}</td>
-                    <td style={{ padding: "12px 18px", textAlign: "center", color: "#7c3aed", fontWeight: 600 }}>{airs}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+              </section>
+            ))}
           </div>
         </div>
       </section>
 
-      <section style={{ padding: "80px 20px", background: "#0a1628", textAlign: "center" }}>
-        <div style={{ maxWidth: 580, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(24px, 3.5vw, 38px)", fontWeight: 800, color: "#ffffff", marginBottom: 16 }}>
-            Not sure where to start?
+      <section style={{ padding: "88px 24px", background: "#0a1628", color: "#ffffff" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#93b4ff" }}>
+            Phase 1 Measurement
+          </span>
+          <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0 24px", color: "#ffffff" }}>
+            The site is now set up to watch real behavior.
           </h2>
-          <p style={{ fontSize: 16, color: "#8898b8", lineHeight: 1.7, marginBottom: 32 }}>
-            Start with Future of Work research if you want a wider map. Choose a role guide when you need practical next steps, or an assessment when you want your own role interpreted directly.
+          <p style={{ fontSize: 17, lineHeight: 1.8, color: "#dbe7ff", margin: "0 0 28px" }}>
+            Page views are handled by Vercel Analytics. Custom events now capture the moments that matter for Phase 1 validation.
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
-            <Link
-              href="/products/ai-futures-2026"
-              style={{
-                background: "#0d9268",
-                color: "#ffffff",
-                fontWeight: 700,
-                fontSize: 14,
-                padding: "12px 22px",
-                borderRadius: 8,
-                textDecoration: "none",
-              }}
-            >
-              Get AI Futures 2026 {"->"}
-            </Link>
-            <Link
-              href="/bundles"
-              style={{
-                background: "transparent",
-                color: "#8898b8",
-                fontWeight: 600,
-                fontSize: 14,
-                padding: "12px 22px",
-                borderRadius: 8,
-                textDecoration: "none",
-                border: "1px solid rgba(136,152,184,0.3)",
-              }}
-            >
-              Browse Bundles
-            </Link>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+            {MEASUREMENT_POINTS.map((point) => (
+              <div key={point} style={{ border: "1px solid rgba(255,255,255,0.14)", borderRadius: 8, padding: "16px 18px", background: "rgba(255,255,255,0.06)", color: "#f8faff", fontSize: 15, lineHeight: 1.65, fontWeight: 750 }}>
+                {point}
+              </div>
+            ))}
           </div>
         </div>
       </section>

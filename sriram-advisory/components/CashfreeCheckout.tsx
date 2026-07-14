@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { load } from "@cashfreepayments/cashfree-js";
+import { track } from "@vercel/analytics";
 
 interface Props {
   productName: string;
@@ -79,6 +80,7 @@ export default function CashfreeCheckout({
     e.preventDefault();
     setError("");
     setLoading(true);
+    track("Checkout Submit", { product: productName, amount });
 
     try {
       const res = await fetch("/api/create-order", {
@@ -119,7 +121,10 @@ export default function CashfreeCheckout({
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          track("Checkout Start", { product: productName, amount });
+          setOpen(true);
+        }}
         style={{
           display: "inline-flex",
           alignItems: "center",

@@ -8,6 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: base, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/our-thinking`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/frameworks`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/frameworks/sa-airs`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/frameworks/ai-leverage-ladder`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/frameworks/replaceability-curve`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/frameworks/career-positioning-audit`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/career-intelligence-report`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/ai-literacy`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/ai-literacy/absolute-beginners`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { NAV_ITEMS } from "@/lib/siteCatalog";
 
 export default function Navbar() {
@@ -98,6 +99,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   aria-current={active ? "page" : undefined}
+                  onClick={() => track("Nav Click", { label: link.label, href: link.href, location: "desktop" })}
                   style={{
                     fontSize: 12,
                     fontWeight: 500,
@@ -193,7 +195,10 @@ export default function Navbar() {
                   href={link.href}
                   role="menuitem"
                   aria-current={active ? "page" : undefined}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    track("Nav Click", { label: link.label, href: link.href, location: "mobile" });
+                    setOpen(false);
+                  }}
                   style={{
                     fontSize: 15,
                     fontWeight: 500,

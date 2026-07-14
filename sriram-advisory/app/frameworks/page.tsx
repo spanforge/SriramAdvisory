@@ -36,6 +36,27 @@ export default function FrameworksPage() {
         </div>
       </section>
 
+      <section style={{ padding: "72px 24px 0", background: "#ffffff" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", border: "2px solid #1a4fd6", borderRadius: 8, padding: "30px 28px", background: "#eef4ff" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) auto", gap: 24, alignItems: "center" }} className="home-two-col">
+            <div>
+              <span style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268" }}>
+                Flagship Framework
+              </span>
+              <h2 style={{ fontSize: "clamp(28px, 3.8vw, 44px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "12px 0", color: "#0a1628" }}>
+                SA-AIRS is the first framework to understand.
+              </h2>
+              <p style={{ fontSize: 16, lineHeight: 1.8, color: "#4a5a7a", margin: 0, maxWidth: 720 }}>
+                It is the main decision system for interpreting role exposure, defensibility, and next moves under AI-driven uncertainty. The other frameworks support the broader reading.
+              </p>
+            </div>
+            <Link href="/frameworks/sa-airs" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "14px 24px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 900, whiteSpace: "nowrap" }}>
+              Open SA-AIRS
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
           {FRAMEWORK_ITEMS.map((framework) => (
