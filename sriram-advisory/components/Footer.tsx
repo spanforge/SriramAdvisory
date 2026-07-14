@@ -80,8 +80,8 @@ export default function Footer() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
                   { label: "Contact", href: "/contact" },
+                  { label: "Our Thinking", href: "/our-thinking" },
                   { label: "Research Method", href: "/methodology" },
-                  { label: "FAQ", href: "/faq" },
                   { label: "Insights", href: "/insights" },
                 ].map((item) => (
                   <li key={item.href}>
