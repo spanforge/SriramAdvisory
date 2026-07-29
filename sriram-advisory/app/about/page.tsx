@@ -5,7 +5,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Sriram Advisory | Future of Work Research and Advisory",
+  title: "About | Sriram Advisory",
   description:
     "Sriram Advisory is a Future of Work research and advisory practice studying careers, skills, organizations, and industries.",
 };
@@ -228,7 +228,7 @@ export default function AboutPage() {
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
             <Link
-              href="/our-thinking"
+              href="/about/our-thinking"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

@@ -196,7 +196,7 @@ export default async function ArticlePage({ params }: Props) {
             color: "#0a1628", margin: "0 0 16px", lineHeight: 1,
           }}>Know Where You Actually Stand</h2>
           <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 32px" }}>
-            Get your Career Intelligence Assessment - personalised to your specific role. Delivered within 24 hours.
+            Get your SA-AIRS Career Risk Audit - personalised to your specific role. Delivered within 24 hours.
           </p>
           <Link href="/get-started" style={{
             display: "inline-flex", alignItems: "center", gap: 8,

@@ -41,7 +41,7 @@ export default function TermsPage() {
             {
               heading: "2. Services Offered",
               body: `Sriram Advisory offers the following products and services:
-- Career Intelligence Assessment (Rs 999) - a personalised 1-page SA-AIRS(TM) assessment of your specific role, scored by Sriram and delivered within 24 hours
+- SA-AIRS Career Risk Audit (Rs 1,999) - a personalised assessment of your specific role, scored by Sriram and delivered within 24 hours
 - Career Intelligence Report - SA-AIRS Pro (Rs 999) - a comprehensive intelligence report including full SA-AIRS(TM) methodology, industry deep dives, salary outlook, and quarterly update coverage
 - Clarity Call (Rs 3,999 - Rs 7,499) - a 30-minute 1:1 strategy session with Sriram, including a full SA-AIRS(TM) audit and session notes
 - Domain Deep Dive Program (Rs 9,999 - Rs 24,999+) - a custom 90-day transition program from your current role to its future-of-work equivalent`,
@@ -54,7 +54,7 @@ The accuracy of the assessment depends on the accuracy and completeness of the i
             },
             {
               heading: "4. Delivery",
-              body: `- Career Intelligence Assessment: Delivered by email within 24 hours of confirmed payment (Indian business days)
+              body: `- SA-AIRS Career Risk Audit: Delivered by email within 24 hours of confirmed payment (Indian business days)
 - Career Intelligence Report - SA-AIRS Pro: Delivered by email within 48 hours of confirmed payment
 - Clarity Call: Session scheduled within 5 business days of payment; session notes delivered within 24 hours after the call
 - Domain Deep Dive Program: Onboarding plan delivered within 48 hours; weekly check-ins conducted as agreed

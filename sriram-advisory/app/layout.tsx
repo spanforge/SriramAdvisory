@@ -23,17 +23,17 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | Future of Work Research and Advisory",
+  title: "Sriram Advisory | Workforce Intelligence for the AI Era",
   description:
-    "Sriram Advisory studies how work is changing across technology, AI, automation, careers, skills, leadership, and organizations.",
+    "Workforce intelligence for Indian professionals and organizations - guides, reports, assessments, and advisory built around the SA-AIRS(TM) framework.",
   icons: {
     icon: "/sriram.png",
     apple: "/sriram.png",
   },
   openGraph: {
-    title: "Sriram Advisory | Future of Work Research and Advisory",
+    title: "Sriram Advisory | Workforce Intelligence for the AI Era",
     description:
-      "Future of Work intelligence for professionals and organizations.",
+      "Workforce intelligence for Indian professionals and organizations - guides, reports, assessments, and advisory built around the SA-AIRS(TM) framework.",
     type: "website",
   },
 };

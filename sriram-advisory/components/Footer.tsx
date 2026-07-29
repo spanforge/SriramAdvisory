@@ -40,12 +40,12 @@ export default function Footer() {
                     marginTop: 2,
                   }}
                 >
-                  Future of Work Research and Advisory
+                  Workforce Intelligence for the AI Era
                 </div>
               </div>
             </div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#5a6a8a" }}>
-              India-focused research on how work, careers, skills, and organizations are changing.
+              Workforce intelligence for Indian professionals and organizations.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <a href="mailto:sriram@sriramadvisory.com" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>
@@ -80,8 +80,6 @@ export default function Footer() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {[
                   { label: "Contact", href: "/contact" },
-                  { label: "Our Thinking", href: "/our-thinking" },
-                  { label: "Research Method", href: "/methodology" },
                   { label: "Insights", href: "/insights" },
                 ].map((item) => (
                   <li key={item.href}>

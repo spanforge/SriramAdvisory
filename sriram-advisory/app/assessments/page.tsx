@@ -11,15 +11,37 @@ export const metadata: Metadata = {
 
 const ASSESSMENTS = [
   {
-    title: "Am I Future-Proof? Audit",
-    subtitle: "48-hour audit for near-term decision clarity.",
-    body: "For professionals who want a sharper interpretation layer on top of the underlying assessment logic.",
-    href: "/am-i-more durable",
-    cta: "View Audit",
+    title: "SA-AIRS Career Risk Audit",
+    subtitle: "Flagship role assessment - Rs 1,999.",
+    body: "For professionals who want an independent interpretation of role exposure, market pressure, and practical next moves.",
+    href: "/products/airs-assessment",
+    cta: "Start with SA-AIRS",
     status: "Available Now",
     accentColor: "#dc2626",
     bgGradient: "linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%)",
     borderColor: "#fecaca",
+  },
+  {
+    title: "SA-AIRS Pro Report",
+    subtitle: "Five-dimension score and role benchmarks - Rs 999.",
+    body: "A deeper analytical report with dimension benchmarks, Top 10% Ladder placement, and a 90-day reassessment.",
+    href: "/career-intelligence-report/sa-airs-pro",
+    cta: "View Pro Report",
+    status: "Deep Dive",
+    accentColor: "#1a4fd6",
+    bgGradient: "linear-gradient(135deg, #f0f4ff 0%, #dbeafe 100%)",
+    borderColor: "#bfdbfe",
+  },
+  {
+    title: "Career Positioning Audit",
+    subtitle: "Resume and LinkedIn positioning review - Rs 999.",
+    body: "A structured review of your market signal, positioning gaps, and the highest-leverage changes to make next.",
+    href: "/services/career-positioning-audit",
+    cta: "View Positioning Audit",
+    status: "Positioning",
+    accentColor: "#b45309",
+    bgGradient: "linear-gradient(135deg, #fff9f2 0%, #ffedd5 100%)",
+    borderColor: "#fed7aa",
   },
 ];
 
@@ -75,8 +97,7 @@ export default function AssessmentsPage() {
               margin: "0 auto",
             }}
           >
-            Structured assessment products sit inside the larger workforce intelligence
-            system and help professionals translate market change into personal clarity.
+            One place for role-risk diagnosis, deeper SA-AIRS analysis, and career-positioning clarity.
           </p>
         </div>
       </section>

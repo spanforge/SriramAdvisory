@@ -6,8 +6,8 @@ import { useState } from "react";
 
 const PRODUCTS = [
   {
-    tier: "Career Intelligence Assessment",
-    price: "Rs 999",
+    tier: "SA-AIRS Career Risk Audit",
+    price: "Rs 1,999",
     tag: "Most popular",
     desc: "Personalised 1-page assessment of your specific role - scored by Sriram.",
     items: [
@@ -17,7 +17,7 @@ const PRODUCTS = [
       "Top 3 priority actions",
       "Delivered within 24 hours",
     ],
-    cta: "Get My Assessment - Rs 999",
+    cta: "Get My Assessment - Rs 1,999",
     href: "https://rzp.io/sriramadvisory",
     external: true,
     highlight: true,

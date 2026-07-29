@@ -335,7 +335,7 @@ export default function MethodologyPage() {
             ))}
           </div>
           <div style={{ marginTop: 26 }}>
-            <Link href="/frameworks" style={{ color: "#1a4fd6", fontSize: 15, fontWeight: 900, textDecoration: "none" }}>
+            <Link href="/about/our-thinking" style={{ color: "#1a4fd6", fontSize: 15, fontWeight: 900, textDecoration: "none" }}>
               View public framework pages {"->"}
             </Link>
           </div>

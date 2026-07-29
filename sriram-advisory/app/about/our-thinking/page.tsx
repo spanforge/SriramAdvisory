@@ -166,11 +166,11 @@ export default function OurThinkingPage() {
             SA-AIRS is the clearest starting point for professionals who want a structured read on role exposure and next moves.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
-            <Link href="/frameworks/sa-airs" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 900, border: "1px solid #3b6ef0" }}>
-              Read SA-AIRS
+            <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 900, border: "1px solid #3b6ef0" }}>
+              Read the Methodology
             </Link>
-            <Link href="/am-i-future-proof" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#ffffff", color: "#1a4fd6", textDecoration: "none", fontWeight: 900, border: "1px solid rgba(26,79,214,0.22)" }}>
-              Start the audit
+            <Link href="/assessments" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#ffffff", color: "#1a4fd6", textDecoration: "none", fontWeight: 900, border: "1px solid rgba(26,79,214,0.22)" }}>
+              Start the assessment
             </Link>
           </div>
         </div>

@@ -82,8 +82,8 @@ export default function Navbar() {
                   whiteSpace: "nowrap",
                 }}
               >
-                <span className="site-nav-tagline-full">Future of Work Research and Advisory</span>
-                <span className="site-nav-tagline-compact">Research and Advisory</span>
+                <span className="site-nav-tagline-full">Workforce Intelligence for the AI Era</span>
+                <span className="site-nav-tagline-compact">Workforce Intelligence</span>
               </div>
             </div>
           </Link>

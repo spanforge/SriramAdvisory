@@ -183,7 +183,7 @@ export default function CasesPage() {
           <span className="section-label">Start Your Audit</span>
           <h2 className="section-title">Get Your Baseline Score</h2>
           <p className="section-sub" style={{ textAlign: "center", marginBottom: 32 }}>
-            Before you can change the score, you need to know it. Get your Career Intelligence Assessment - your number in 24 hours.
+            Before you can change the score, you need to know it. Get your SA-AIRS Career Risk Audit - your number in 24 hours.
           </p>
           <Link href="/get-started" className="btn-primary" style={{ display: "inline-flex" }}>
             Get Your Risk Score &rarr;

@@ -54,8 +54,8 @@ export default function RefundPage() {
 
           {[
             {
-              heading: "1. Career Intelligence Assessment (Rs 999)",
-              body: `If your Career Intelligence Assessment was delivered within the promised timeframe and contains a complete SA-AIRS(TM) score, dimension breakdown, and Top 3 Moves, the report is considered delivered in full.
+              heading: "1. SA-AIRS Career Risk Audit (Rs 1,999)",
+              body: `If your SA-AIRS Career Risk Audit was delivered within the promised timeframe and contains a complete SA-AIRS(TM) score, dimension breakdown, and Top 3 Moves, the report is considered delivered in full.
 
 If you believe the report was not delivered, was materially incomplete, or did not reflect the information you provided, email sriram@sriramadvisory.com within 7 days of delivery. We will either re-do the assessment at no charge or issue a full refund.
 

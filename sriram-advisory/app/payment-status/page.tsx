@@ -14,9 +14,9 @@ function PaymentStatusContent() {
   const isGuidePurchase = normalizedProduct.includes("guide");
   const isServicePurchase =
     normalizedProduct.includes("service") || normalizedProduct.includes("audit");
-  const homeLink = isGuidePurchase ? "/guides" : isServicePurchase ? "/services" : "/products";
+  const homeLink = isGuidePurchase ? "/guides" : isServicePurchase ? "/assessments" : "/reports";
   const successMessage = isGuidePurchase
-    ? "Your guide will be manually emailed to the address you provided, usually within 30 minutes. Please check your spam folder as well."
+    ? "Your guide will be emailed to the address you provided after payment confirmation. Please check your spam folder as well."
     : isServicePurchase
       ? "We will use the email you provided to coordinate your resume and LinkedIn submission, then deliver your audit report within 48 to 72 hours."
       : "You will receive your digital report on the email address you provided within a few minutes. Check your spam folder if you do not see it.";

@@ -27,7 +27,7 @@ export default function AIRSPage() {
       <section style={{ background: "linear-gradient(135deg, #1a0a2e 0%, #2d1a50 60%, #4a1fa8 100%)", paddingTop: 104, paddingBottom: 84, textAlign: "center" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 20px" }}>
           <span style={{ display: "inline-flex", color: "#c4b5fd", fontSize: 13, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 24 }}>
-            Career Intelligence Assessment
+            SA-AIRS Career Risk Audit
           </span>
           <h1 style={{ fontSize: "clamp(38px, 5.4vw, 62px)", fontWeight: 900, color: "#ffffff", lineHeight: 1.08, margin: "0 0 20px", letterSpacing: "-0.02em" }}>
             Get an independent read on your role.
@@ -36,7 +36,7 @@ export default function AIRSPage() {
             A structured assessment for professionals who want to understand how their role is changing and what to do next.
           </p>
           <a href="#order-form" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#7c3aed", color: "#ffffff", fontWeight: 800, fontSize: 16, padding: "15px 30px", borderRadius: 8, textDecoration: "none", border: "1px solid #a78bfa" }}>
-            Order Assessment - Rs 999
+            Order Assessment - Rs 1,999
           </a>
           <p style={{ marginTop: 18, fontSize: 13, color: "rgba(221,214,254,0.82)" }}>
             Secure payment. Structured intake. Email delivery.
@@ -93,17 +93,17 @@ export default function AIRSPage() {
             After payment, you will receive intake instructions at the email address you provide.
           </p>
           <CashfreeCheckout
-            productName="Career Intelligence Assessment"
-            amount={999}
+            productName="SA-AIRS Career Risk Audit"
+            amount={1999}
             accentColor="#7c3aed"
             deliveryNote="Intake instructions and delivery details will be sent to your email."
             emailNote="Use the email where you want to receive the assessment instructions."
-            buttonLabel="Pay Rs 999"
+            buttonLabel="Pay Rs 1,999"
             buttonStyle={{ background: "#7c3aed", color: "#ffffff", fontWeight: 800, fontSize: 16, padding: "15px 30px", borderRadius: 8, border: "1px solid #a78bfa" }}
           />
           <div style={{ marginTop: 26 }}>
-            <Link href="/products" style={{ color: "#7c3aed", textDecoration: "none", fontWeight: 800 }}>
-              {"<-"} See all research products
+            <Link href="/assessments" style={{ color: "#7c3aed", textDecoration: "none", fontWeight: 800 }}>
+              {"<-"} See all assessments
             </Link>
           </div>
         </div>

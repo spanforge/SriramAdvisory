@@ -226,7 +226,7 @@ export default function FreePage() {
               {[
                 { label: "Buy Reports", href: "/reports", background: "#1a4fd6" },
                 { label: "Buy Guides", href: "/guides", background: "#0f766e" },
-                { label: "Explore Services", href: "/services", background: "#b45309" },
+                { label: "Explore Assessments", href: "/assessments", background: "#b45309" },
               ].map((item) => (
                 <Link
                   key={item.href}

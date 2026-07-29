@@ -5,7 +5,7 @@ import BeehiivSubscribeForm from "@/components/BeehiivSubscribeForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sriram Advisory | SA-AIRS Career Decision Systems",
+  title: "Sriram Advisory | Workforce Intelligence for the AI Era",
   description:
     "Sriram Advisory helps Indian IT professionals make clearer career decisions under AI-driven uncertainty using evidence-based frameworks starting with SA-AIRS.",
 };
@@ -17,7 +17,7 @@ const SA_AIRS_STEPS = [
   },
   {
     title: "Measure",
-    body: "Use SA-AIRS to read where work is exposed, where it is defensible, and where the signal is weak.",
+    body: "The Rs 1,999 SA-AIRS Career Risk Audit gives you a structured read on exposure, market pressure, and practical next moves.",
   },
   {
     title: "Improve",
@@ -25,31 +25,24 @@ const SA_AIRS_STEPS = [
   },
   {
     title: "Master",
-    body: "Keep updating as the market changes instead of relying on a static career plan.",
+    body: "Reports and guides keep you current as the market shifts - this isn't a one-time result.",
   },
 ];
 
-const FEATURED_ASSETS = [
+const STARTING_POINTS = [
   {
-    label: "Start Here",
+    label: "Rs 1,999",
     title: "SA-AIRS Career Risk Audit",
-    body: "A 48-hour role diagnosis across five dimensions, with a risk horizon and practical next moves.",
-    href: "/am-i-future-proof",
+    body: "A structured assessment of your role, exposure, market pressure, and practical next moves.",
+    href: "/assessments",
     cta: "Start with SA-AIRS",
   },
   {
-    label: "Framework",
-    title: "SA-AIRS Decision System",
-    body: "The public overview of the role-exposure framework behind the audit, reports, and advisory work.",
-    href: "/frameworks/sa-airs",
-    cta: "See the framework",
-  },
-  {
-    label: "Trust Builder",
-    title: "Our Thinking",
-    body: "How Sriram Advisory develops, validates, and refines frameworks before turning them into products.",
-    href: "/our-thinking",
-    cta: "Read the standard",
+    label: "From Rs 499",
+    title: "Career Intelligence Guides",
+    body: "Role-specific playbooks for QA, DevOps, BA, Java, Python, and more.",
+    href: "/guides",
+    cta: "Browse Guides",
   },
 ];
 
@@ -99,14 +92,14 @@ export default function HomePage() {
               Make clearer career decisions when AI is rewriting the rules.
             </h1>
             <p style={{ fontSize: "clamp(18px, 2.2vw, 23px)", lineHeight: 1.65, color: "#4a5a7a", margin: "0 0 36px", maxWidth: 760 }}>
-              Start with SA-AIRS(TM), a practical Decision System that helps you see which parts of your role are exposed, which are defensible, and what to do next.
+              Use the SA-AIRS(TM) Career Risk Audit to see which parts of your role are exposed, which are defensible, and what to do next.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
-              <Link href="/am-i-future-proof" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 900, border: "1px solid #3b6ef0" }}>
-                Start with SA-AIRS - Rs 499
+              <Link href="/assessments" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 900, border: "1px solid #3b6ef0" }}>
+                Start with SA-AIRS - Rs 1,999
               </Link>
-              <Link href="/frameworks" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, color: "#1a4fd6", textDecoration: "none", fontWeight: 900, border: "1px solid rgba(26,79,214,0.22)", background: "#ffffff" }}>
-                Explore All Frameworks
+              <Link href="/guides" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, color: "#1a4fd6", textDecoration: "none", fontWeight: 900, border: "1px solid rgba(26,79,214,0.22)", background: "#ffffff" }}>
+                Browse Career Guides
               </Link>
             </div>
           </div>
@@ -158,14 +151,14 @@ export default function HomePage() {
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <div style={{ maxWidth: 760, marginBottom: 34 }}>
             <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
-              Featured Assets
+              Choose Your Starting Point
             </span>
             <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
-              Start with the decision system, then choose the output you need.
+              Choose the depth of career intelligence you need.
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", gap: 18 }}>
-            {FEATURED_ASSETS.map((asset) => (
+            {STARTING_POINTS.map((asset) => (
               <Link key={asset.title} href={asset.href} style={{ textDecoration: "none" }}>
                 <article style={{ height: "100%", border: "1px solid rgba(26,79,214,0.14)", borderRadius: 8, padding: "26px 24px", background: "#ffffff" }}>
                   <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 12 }}>
@@ -237,7 +230,7 @@ export default function HomePage() {
             Get future-of-work intelligence in your inbox.
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5a6a8a", maxWidth: 680, margin: "0 auto 28px" }}>
-            Clear, practical research on careers, skills, AI, automation, and the changing world of work.
+            Clear, practical research on careers, skills, AI, and the changing world of work - the same research that feeds every Guide, Report, and Score on this site.
           </p>
           <BeehiivSubscribeForm />
         </div>
@@ -246,13 +239,13 @@ export default function HomePage() {
       <section style={{ padding: "96px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 820, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontSize: "clamp(32px, 4.8vw, 56px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "#0a1628", margin: "0 0 18px" }}>
-            Start with the role question before the market answers it for you.
+            Get a structured assessment before the market decides for you.
           </h2>
           <p style={{ fontSize: 18, lineHeight: 1.75, color: "#5a6a8a", margin: "0 0 32px" }}>
-            SA-AIRS gives you a structured first read on exposure, defensibility, and practical next moves.
+            The SA-AIRS Career Risk Audit gives you a clear read on exposure, market pressure, and practical next moves.
           </p>
-          <Link href="/am-i-future-proof" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 30px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 900, border: "1px solid #3b6ef0" }}>
-            Start with SA-AIRS
+          <Link href="/assessments" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 30px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 900, border: "1px solid #3b6ef0" }}>
+            Start with SA-AIRS - Rs 1,999
           </Link>
         </div>
       </section>

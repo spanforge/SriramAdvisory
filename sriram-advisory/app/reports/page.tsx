@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { REPORTS } from "@/lib/siteCatalog";
 
 export const metadata: Metadata = {
-  title: "Research | Sriram Advisory",
+  title: "Reports | Sriram Advisory",
   description:
     "Future of Work research reports on careers, skills, AI, automation, GCCs, Indian IT, and workforce change.",
 };

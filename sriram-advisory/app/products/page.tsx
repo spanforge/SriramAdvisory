@@ -14,8 +14,8 @@ const LEARNING_PATH = [
     step: "Start here",
     title: "SA-AIRS Career Risk Audit",
     body: "Get your current role interpreted across exposure, defensibility, market pressure, and practical next moves.",
-    href: "/am-i-future-proof",
-    price: "Rs 499",
+    href: "/products/airs-assessment",
+    price: "Rs 1,999",
     signal: "Best first step",
   },
   {
@@ -44,11 +44,11 @@ const FRAMEWORK_GROUPS = [
     assets: [
       {
         title: "SA-AIRS Career Risk Audit",
-        type: "Audit",
+        type: "Assessment",
         path: "Start here",
-        href: "/am-i-future-proof",
-        price: "Rs 499",
-        body: "A 48-hour role diagnosis with five dimensions, risk horizon, and practical next moves.",
+        href: "/products/airs-assessment",
+        price: "Rs 1,999",
+        body: "A structured role assessment covering exposure, market pressure, and practical next moves.",
       },
       {
         title: "Career Intelligence Report - SA-AIRS Pro",

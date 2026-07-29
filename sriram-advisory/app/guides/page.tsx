@@ -7,7 +7,7 @@ import { GUIDES } from "@/lib/siteCatalog";
 import { LIFETIME_UPDATES_BODY, LIFETIME_UPDATES_TITLE } from "@/lib/guideSalesContent";
 
 export const metadata: Metadata = {
-  title: "Career Intelligence Guides | Sriram Advisory",
+  title: "Guides | Sriram Advisory",
   description:
     "Future of Work career guides for professionals who want role-specific intelligence, clear skill direction, and practical next steps.",
 };
