@@ -94,6 +94,23 @@ export default function Navbar() {
           >
             {NAV_ITEMS.map((link) => {
               const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+              if (link.label === "Tools") {
+                return (
+                  <details key={link.href} style={{ position: "relative" }}>
+                    <summary
+                      style={{ fontSize: 12, fontWeight: 500, padding: "6px 8px", borderRadius: 6, color: active ? "#0a1628" : "#5a6a8a", background: active ? "rgba(10,22,40,0.06)" : "transparent", cursor: "pointer", listStyle: "none", whiteSpace: "nowrap" }}
+                    >
+                      Tools <span aria-hidden="true">⌄</span>
+                    </summary>
+                    <div style={{ position: "absolute", top: "calc(100% + 12px)", left: "50%", transform: "translateX(-50%)", width: 250, padding: 8, border: "1px solid #dbe5f5", borderRadius: 10, background: "#fff", boxShadow: "0 16px 40px rgba(10,22,40,.14)" }}>
+                      <Link href={link.href} onClick={() => track("Nav Click", { label: "Free AI Exposure Check", href: link.href, location: "desktop" })} style={{ display: "block", padding: "11px 12px", borderRadius: 7, color: "#0a1628", textDecoration: "none", fontSize: 13, fontWeight: 700 }}>
+                        Free AI Exposure Check
+                        <span style={{ display: "block", marginTop: 3, color: "#71809b", fontSize: 11, fontWeight: 500 }}>Six questions · Free result</span>
+                      </Link>
+                    </div>
+                  </details>
+                );
+              }
               return (
                 <Link
                   key={link.href}
@@ -209,7 +226,7 @@ export default function Navbar() {
                     background: active ? "rgba(10,22,40,0.06)" : "transparent",
                   }}
                 >
-                  {link.label}
+                  {link.label === "Tools" ? "Tools · Free AI Exposure Check" : link.label}
                 </Link>
               );
             })}

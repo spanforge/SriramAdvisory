@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/about/our-thinking`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/career-intelligence-report`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/assessments`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/tools/free-ai-exposure-check`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/products/airs-assessment`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/ai-literacy`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/ai-literacy/absolute-beginners`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

@@ -98,6 +98,9 @@ export default function HomePage() {
               <Link href="/assessments" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, background: "#1a4fd6", color: "#ffffff", textDecoration: "none", fontWeight: 900, border: "1px solid #3b6ef0" }}>
                 Start with SA-AIRS - Rs 1,999
               </Link>
+              <Link href="/tools/free-ai-exposure-check" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, color: "#1a4fd6", textDecoration: "none", fontWeight: 900, border: "1px solid rgba(26,79,214,0.22)", background: "#ffffff" }}>
+                Take the Free AI Exposure Check
+              </Link>
               <Link href="/guides" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "15px 28px", borderRadius: 8, color: "#1a4fd6", textDecoration: "none", fontWeight: 900, border: "1px solid rgba(26,79,214,0.22)", background: "#ffffff" }}>
                 Browse Career Guides
               </Link>

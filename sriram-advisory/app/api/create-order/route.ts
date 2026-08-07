@@ -12,13 +12,21 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json();
-  const { productName, amount, name, email, phone } = body;
+  const { productName, amount, name, email, phone, productCode } = body;
+
+  const assessmentPrices: Record<string, number> = {
+    exposure_guide: 499,
+    exposure_call: 1000,
+    exposure_bundle: 1499,
+  };
 
   if (!productName || !amount || !name || !email) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  const parsedAmount = parseFloat(amount);
+  const parsedAmount = typeof productCode === "string" && productCode in assessmentPrices
+    ? assessmentPrices[productCode]
+    : parseFloat(amount);
   if (isNaN(parsedAmount) || parsedAmount <= 0) {
     return NextResponse.json({ error: "Invalid amount" }, { status: 400 });
   }

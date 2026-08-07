@@ -74,6 +74,7 @@ export type FreeResourceItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Tools", href: "/tools/free-ai-exposure-check" },
   { label: "Guides", href: "/guides" },
   { label: "Bundles", href: "/bundles" },
   { label: "Reports", href: "/reports" },
