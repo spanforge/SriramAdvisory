@@ -1,240 +1,34 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { track } from "@vercel/analytics";
-import { NAV_ITEMS } from "@/lib/siteCatalog";
+import { useEffect, useRef, useState } from "react";
+import { pillars } from "@/lib/advisoryContent";
 
 export default function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-
-  return (
-    <>
-      <nav
-        aria-label="Main navigation"
-        style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
-          background: "rgba(255,255,255,0.97)",
-          backdropFilter: "blur(12px)",
-          borderBottom: "1px solid rgba(10,22,40,0.08)",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: 1200,
-            width: "100%",
-            margin: "0 auto",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: 68,
-            padding: "0 20px",
-            gap: 12,
-            minWidth: 0,
-          }}
-        >
-          <Link
-            href="/"
-            className="site-nav-brand"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              textDecoration: "none",
-              flexShrink: 1,
-              minWidth: 0,
-            }}
-          >
-            <Image
-              src="/sriram.png"
-              alt="Sriram Advisory"
-              width={40}
-              height={40}
-              style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }}
-            />
-            <div style={{ minWidth: 0 }}>
-              <div
-                className="site-nav-title"
-                style={{
-                  fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                  fontSize: 22,
-                  letterSpacing: "0.08em",
-                  color: "#0a1628",
-                  lineHeight: 1,
-                }}
-              >
-                Sriram Advisory
-              </div>
-              <div
-                className="site-nav-tagline"
-                style={{
-                  fontSize: 11,
-                  letterSpacing: "0.06em",
-                  color: "#1a4fd6",
-                  textTransform: "uppercase",
-                  lineHeight: 1.5,
-                  fontWeight: 600,
-                  whiteSpace: "nowrap",
-                }}
-              >
-                <span className="site-nav-tagline-full">Workforce Intelligence for the AI Era</span>
-                <span className="site-nav-tagline-compact">Workforce Intelligence</span>
-              </div>
-            </div>
-          </Link>
-
-          <div
-            style={{ alignItems: "center", gap: 2, flexShrink: 0 }}
-            className="hidden lg:flex"
-          >
-            {NAV_ITEMS.map((link) => {
-              const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
-              if (link.label === "Tools") {
-                return (
-                  <details key={link.href} style={{ position: "relative" }}>
-                    <summary
-                      style={{ fontSize: 12, fontWeight: 500, padding: "6px 8px", borderRadius: 6, color: active ? "#0a1628" : "#5a6a8a", background: active ? "rgba(10,22,40,0.06)" : "transparent", cursor: "pointer", listStyle: "none", whiteSpace: "nowrap" }}
-                    >
-                      Tools <span aria-hidden="true">⌄</span>
-                    </summary>
-                    <div style={{ position: "absolute", top: "calc(100% + 12px)", left: "50%", transform: "translateX(-50%)", width: 250, padding: 8, border: "1px solid #dbe5f5", borderRadius: 10, background: "#fff", boxShadow: "0 16px 40px rgba(10,22,40,.14)" }}>
-                      <Link href={link.href} onClick={() => track("Nav Click", { label: "Free AI Exposure Check", href: link.href, location: "desktop" })} style={{ display: "block", padding: "11px 12px", borderRadius: 7, color: "#0a1628", textDecoration: "none", fontSize: 13, fontWeight: 700 }}>
-                        Free AI Exposure Check
-                        <span style={{ display: "block", marginTop: 3, color: "#71809b", fontSize: 11, fontWeight: 500 }}>Six questions · Free result</span>
-                      </Link>
-                    </div>
-                  </details>
-                );
-              }
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  aria-current={active ? "page" : undefined}
-                  onClick={() => track("Nav Click", { label: link.label, href: link.href, location: "desktop" })}
-                  style={{
-                    fontSize: 12,
-                    fontWeight: 500,
-                    textDecoration: "none",
-                    padding: "6px 8px",
-                    borderRadius: 6,
-                    color: active ? "#0a1628" : "#5a6a8a",
-                    background: active ? "rgba(10,22,40,0.06)" : "transparent",
-                    transition: "color 0.15s, background 0.15s",
-                    letterSpacing: "0.01em",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-
-          </div>
-
-          <button
-            className="flex lg:hidden"
-            onClick={() => setOpen(!open)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              flexDirection: "column",
-              gap: 5,
-              padding: 6,
-              flexShrink: 0,
-            }}
-          >
-            <span
-              style={{
-                display: "block",
-                width: 22,
-                height: 2,
-                background: "#0a1628",
-                borderRadius: 2,
-                transform: open ? "rotate(45deg) translate(5px,5px)" : "none",
-                transition: "transform 0.2s",
-              }}
-            />
-            <span
-              style={{
-                display: "block",
-                width: 22,
-                height: 2,
-                background: "#0a1628",
-                borderRadius: 2,
-                opacity: open ? 0 : 1,
-                transition: "opacity 0.2s",
-              }}
-            />
-            <span
-              style={{
-                display: "block",
-                width: 22,
-                height: 2,
-                background: "#0a1628",
-                borderRadius: 2,
-                transform: open ? "rotate(-45deg) translate(5px,-5px)" : "none",
-                transition: "transform 0.2s",
-              }}
-            />
-          </button>
+  const helpButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    function keydown(event: KeyboardEvent) {
+      if (event.key === "Escape") { if (helpOpen) helpButton.current?.focus(); setHelpOpen(false); setMobileOpen(false); }
+    }
+    document.addEventListener("keydown", keydown);
+    return () => document.removeEventListener("keydown", keydown);
+  }, [helpOpen]);
+  const current = (href: string) => pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+  return <>
+    <a className="sa-skip" href="#main-content">Skip to main content</a>
+    <header className="sa-header"><div className="sa-nav-wrap">
+      <Link className="sa-brand" href="/" aria-label="Sriram Advisory home"><span className="sa-brand-mark">SA</span><span>Sriram Advisory<small>IT services performance &amp; careers</small></span></Link>
+      <button className="sa-menu-button" type="button" aria-expanded={mobileOpen} aria-controls="primary-navigation" onClick={() => setMobileOpen(v => !v)}><span aria-hidden="true">{mobileOpen ? "×" : "☰"}</span><span>{mobileOpen ? "Close" : "Menu"}</span></button>
+      <nav id="primary-navigation" className={`sa-navigation${mobileOpen ? " is-open" : ""}`} aria-label="Primary navigation">
+        <div className="sa-dropdown"><button ref={helpButton} type="button" className="sa-nav-link" aria-expanded={helpOpen} onClick={() => setHelpOpen(v => !v)}>Practices <span aria-hidden="true">⌄</span></button>
+          <div className={`sa-dropdown-panel${helpOpen ? " is-open" : ""}`}>{pillars.map(p => <Link key={p.id} href={p.href} aria-current={current(p.href) ? "page" : undefined}><strong>{p.label}</strong><span>{p.summary}</span></Link>)}</div>
         </div>
-
-        {open && (
-          <div
-            id="mobile-nav"
-            role="menu"
-            aria-label="Mobile navigation"
-            style={{
-              borderTop: "1px solid rgba(10,22,40,0.08)",
-              background: "rgba(255,255,255,0.99)",
-              padding: "12px 20px 20px",
-              display: "flex",
-              flexDirection: "column",
-              gap: 4,
-            }}
-            className="lg:hidden"
-          >
-            {NAV_ITEMS.map((link) => {
-              const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  role="menuitem"
-                  aria-current={active ? "page" : undefined}
-                  onClick={() => {
-                    track("Nav Click", { label: link.label, href: link.href, location: "mobile" });
-                    setOpen(false);
-                  }}
-                  style={{
-                    fontSize: 15,
-                    fontWeight: 500,
-                    textDecoration: "none",
-                    padding: "10px 14px",
-                    borderRadius: 8,
-                    color: active ? "#0a1628" : "#5a6a8a",
-                    background: active ? "rgba(10,22,40,0.06)" : "transparent",
-                  }}
-                >
-                  {link.label === "Tools" ? "Tools · Free AI Exposure Check" : link.label}
-                </Link>
-              );
-            })}
-          </div>
-        )}
+        <Link className="sa-nav-link" href="/resources" aria-current={current("/resources") ? "page" : undefined}>Resources</Link><Link className="sa-nav-link" href="/insights" aria-current={current("/insights") ? "page" : undefined}>Insights</Link><Link className="sa-nav-link" href="/about" aria-current={current("/about") ? "page" : undefined}>About</Link><Link className="sa-nav-link" href="/contact" aria-current={current("/contact") ? "page" : undefined}>Contact</Link><Link className="sa-nav-cta" href="/contact">Discuss Your Challenge</Link>
       </nav>
-
-      <div id="main-content" tabIndex={-1} style={{ outline: "none" }} />
-    </>
-  );
+    </div></header>
+  </>;
 }

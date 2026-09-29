@@ -1,13 +1,15 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import type { Metadata } from "next";
+import ProductStructuredData from "@/components/ProductStructuredData";
 
 export const metadata: Metadata = {
   title: "Career Intelligence Report - Pro Edition | Sriram Advisory",
   description:
     "A career intelligence report for Indian professionals who want structured research on role change, industry signals, and practical next steps.",
+  alternates: { canonical: "/products/pro-edition" },
 };
 
 const INCLUDES = [
@@ -29,6 +31,7 @@ export default function ProEditionPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <ProductStructuredData name="Career Intelligence Report - Pro Edition" description="India-specific career intelligence on role change, industry signals and practical next steps." path="/products/pro-edition" price={999} />
 
       <section style={{ background: "linear-gradient(135deg, #0a1628 0%, #102346 62%, #1a4fd6 100%)", paddingTop: 104, paddingBottom: 84, textAlign: "center" }}>
         <div style={{ maxWidth: 780, margin: "0 auto", padding: "0 20px" }}>
@@ -67,7 +70,7 @@ export default function ProEditionPage() {
       <section style={{ padding: "88px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.1fr)", gap: 34 }} className="home-two-col">
           <div>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               What Is Included
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", color: "#0a1628", lineHeight: 1.12, margin: "16px 0" }}>

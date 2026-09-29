@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "HR Sector Guides | Sriram Advisory",
   description:
     "India-first HR career intelligence guides for HR professionals navigating AI automation, role compression, and repositioning into higher-leverage work.",
+  alternates: { canonical: "/guides/hr" },
 };
 
 const HR_GUIDE = {

@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
+import ProductStructuredData from "@/components/ProductStructuredData";
 
 export const metadata: Metadata = {
   title: "AI Futures 2026 | Sriram Advisory",
   description:
     "A premium India-first AI futures report for professionals who want a clearer view of coming career shifts, strategic signals, and adaptation paths. Rs 799 launch price.",
+  alternates: { canonical: "/products/ai-futures-2026" },
 };
 
 const WHAT_YOU_GET = [
@@ -52,10 +54,11 @@ export default function AIFutures2026Page() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <ProductStructuredData name="AI Futures 2026" description="An India-first report on coming career shifts, strategic signals and adaptation paths." path="/products/ai-futures-2026" price={799} />
 
       <section
         style={{
-          background: "linear-gradient(135deg, #031b16 0%, #0a3b2f 58%, #0d9268 100%)",
+          background: "linear-gradient(135deg, #031b16 0%, #0a3b2f 58%, #1a4fd6 100%)",
           paddingTop: 100,
           paddingBottom: 84,
           position: "relative",
@@ -168,7 +171,7 @@ export default function AIFutures2026Page() {
                 <CashfreeCheckout
                   productName="AI Futures 2026 - Premium Report"
                   amount={799}
-                  accentColor="#0d9268"
+                  accentColor="#1a4fd6"
                   deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                   emailNote="Your AI Futures 2026 report will be delivered to this email."
                   buttonLabel="Get the Report - Rs 799"
@@ -177,7 +180,7 @@ export default function AIFutures2026Page() {
                     alignItems: "center",
                     justifyContent: "center",
                     width: "100%",
-                    background: "#0d9268",
+                    background: "#1a4fd6",
                     color: "#ffffff",
                     fontWeight: 700,
                     fontSize: 17,
@@ -236,12 +239,12 @@ export default function AIFutures2026Page() {
               <CashfreeCheckout
                 productName="AI Futures 2026 - Premium Report"
                 amount={799}
-                accentColor="#0d9268"
+                accentColor="#1a4fd6"
                 deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
                 emailNote="Your AI Futures 2026 report will be delivered to this email."
                 buttonLabel="Get AI Futures 2026 ->"
                 buttonStyle={{
-                  background: "#0d9268",
+                  background: "#1a4fd6",
                   color: "#ffffff",
                   fontWeight: 700,
                   fontSize: 17,
@@ -284,7 +287,7 @@ export default function AIFutures2026Page() {
       <section style={{ background: "#f7fffb", padding: "72px 20px" }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 42 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6" }}>
               What You Get
             </span>
             <h2 style={{ fontSize: "clamp(24px, 3.5vw, 38px)", fontWeight: 800, color: "#0a1628", marginTop: 12, letterSpacing: "-0.02em" }}>
@@ -302,7 +305,7 @@ export default function AIFutures2026Page() {
                   padding: "24px 22px",
                 }}
               >
-                <div style={{ fontSize: 16, fontWeight: 800, color: "#0d9268", marginBottom: 10 }}>{item.title}</div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: "#1a4fd6", marginBottom: 10 }}>{item.title}</div>
                 <div style={{ fontSize: 14, color: "#5a6a8a", lineHeight: 1.7 }}>{item.desc}</div>
               </div>
             ))}
@@ -357,7 +360,7 @@ export default function AIFutures2026Page() {
       <section
         style={{
           padding: "104px 24px",
-          background: "linear-gradient(160deg, #031b16 0%, #0a3b2f 62%, #0d9268 100%)",
+          background: "linear-gradient(160deg, #031b16 0%, #0a3b2f 62%, #1a4fd6 100%)",
           textAlign: "center",
         }}
       >
@@ -380,12 +383,12 @@ export default function AIFutures2026Page() {
             <CashfreeCheckout
               productName="AI Futures 2026 - Premium Report"
               amount={799}
-              accentColor="#0d9268"
+              accentColor="#1a4fd6"
               deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
               emailNote="Your AI Futures 2026 report will be delivered to this email."
               buttonLabel="Secure My Copy ->"
               buttonStyle={{
-                background: "#0d9268",
+                background: "#1a4fd6",
                 color: "#ffffff",
                 fontWeight: 700,
                 fontSize: 16,
@@ -406,7 +409,7 @@ export default function AIFutures2026Page() {
       <MobileStickyCheckoutBar
         productName="AI Futures 2026 - Premium Report"
         amount={799}
-        accentColor="#0d9268"
+        accentColor="#1a4fd6"
         deliveryNote="Delivered to your inbox, typically within 30 minutes of payment."
         emailNote="Your AI Futures 2026 report will be delivered to this email."
                   buttonLabel="Get the Report - Rs 799"

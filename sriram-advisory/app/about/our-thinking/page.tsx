@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -77,7 +77,7 @@ export default function OurThinkingPage() {
 
       <section style={{ padding: "88px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+          <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
             Why SA-AIRS Was Created
           </span>
           <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0 20px", color: "#0a1628" }}>
@@ -139,7 +139,7 @@ export default function OurThinkingPage() {
       <section style={{ padding: "88px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <div style={{ maxWidth: 760, marginBottom: 34 }}>
-            <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               AI And Human Judgment
             </span>
             <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>

@@ -65,7 +65,7 @@ export const BUNDLE_SECTIONS: BundleSection[] = [
     eyebrow: "Role Bundles",
     title: "Start with your role",
     tagline: "Two assets. One clearer next move.",
-    accentColor: "#0d9268",
+    accentColor: "#1a4fd6",
     tint: "linear-gradient(135deg, #f2fbf8 0%, #dcfce7 100%)",
     borderColor: "#bbf7d0",
     bundles: [

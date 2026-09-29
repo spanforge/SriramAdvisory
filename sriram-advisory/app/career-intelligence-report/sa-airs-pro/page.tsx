@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Career Intelligence Report - SA-AIRS Pro | Sriram Advisory",
   description:
     "India's first analytical scoring system for career and workforce risk. 5 dimensions. One composite score. All inputs traceable. SA-AIRS Pro Report - Rs 999.",
+  alternates: { canonical: "/career-intelligence-report/sa-airs-pro" },
 };
 
 const SIX_PARTS = [
@@ -124,7 +125,7 @@ export default function SaAirsProPage() {
                 width: 6,
                 height: 6,
                 borderRadius: "50%",
-                background: "#0d9268",
+                background: "#1a4fd6",
                 display: "inline-block",
               }}
             />
@@ -152,7 +153,7 @@ export default function SaAirsProPage() {
               fontWeight: 700,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              color: "#0d9268",
+              color: "#1a4fd6",
               marginBottom: 24,
             }}
           >
@@ -180,7 +181,7 @@ export default function SaAirsProPage() {
               maxWidth: 620,
             }}
           >
-            A structured intelligence report built on live market data, role-level automation
+            A structured intelligence report built on current market data, role-level automation
             trends, hiring patterns, and industry benchmarks.
           </p>
           <p
@@ -200,7 +201,7 @@ export default function SaAirsProPage() {
             <CashfreeCheckout
               productName="Career Intelligence Report - Pro"
               amount={999}
-              accentColor="#0d9268"
+              accentColor="#1a4fd6"
               buttonLabel="Get My Score - Rs 999"
               buttonStyle={{
                 display: "flex",
@@ -242,7 +243,7 @@ export default function SaAirsProPage() {
                 Pro Report
               </div>
               <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-                <div style={{ fontSize: 32, fontWeight: 800, color: "#0d9268" }}>Rs 999</div>
+                <div style={{ fontSize: 32, fontWeight: 800, color: "#1a4fd6" }}>Rs 999</div>
               </div>
               <div style={{ fontSize: 14, color: "#5a6a8a", marginTop: 4 }}>
                 Includes quarterly update assessment
@@ -254,7 +255,7 @@ export default function SaAirsProPage() {
             <CashfreeCheckout
               productName="Career Intelligence Report - Pro"
               amount={999}
-              accentColor="#0d9268"
+              accentColor="#1a4fd6"
               buttonLabel="Get My Score - Rs 999"
               buttonStyle={{
                 background: "#1a4fd6",
@@ -283,7 +284,7 @@ export default function SaAirsProPage() {
               fontWeight: 700,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "#0d9268",
+              color: "#1a4fd6",
             }}
           >
             The Problem
@@ -355,7 +356,7 @@ export default function SaAirsProPage() {
                 fontWeight: 700,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "#0d9268",
+                color: "#1a4fd6",
               }}
             >
               The Report
@@ -435,7 +436,7 @@ export default function SaAirsProPage() {
                   fontWeight: 700,
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
-                  color: "#0d9268",
+                  color: "#1a4fd6",
                   display: "block",
                   marginBottom: 24,
                 }}
@@ -445,7 +446,7 @@ export default function SaAirsProPage() {
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 {FOR_YOU.map((item) => (
                   <div key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <span style={{ color: "#0d9268", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>
+                    <span style={{ color: "#1a4fd6", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>
                       +
                     </span>
                     <span style={{ fontSize: 15, color: "#4a5a7a", lineHeight: 1.6 }}>{item}</span>
@@ -523,7 +524,7 @@ export default function SaAirsProPage() {
             <CashfreeCheckout
               productName="Career Intelligence Report - Pro"
               amount={999}
-              accentColor="#0d9268"
+              accentColor="#1a4fd6"
               buttonLabel="Get My Score - Rs 999"
               buttonStyle={{
                 background: "#1a4fd6",

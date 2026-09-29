@@ -1,5 +1,9 @@
 # Sriram Advisory
 
+The public site is organised around Careers and Capabilities, Business and Delivery, Technology and Digital Safety, and Education and Learning. The September 2026 rewrite retains the existing product, guide, assessment and Cashfree routes while adding enquiry-led advisory services and filterable editorial directories.
+
+Contact enquiries and free-resource requests submit directly to the existing Sriram Advisory Formspree form. Confirm the Formspree notification destination after deployment; no enquiry database or email-service environment variables are required by this application.
+
 Website for [sriramadvisory.com](https://sriramadvisory.com) — AI career displacement risk assessments using the SA-AIRS™ methodology.
 
 **Stack:** Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Vercel Analytics
@@ -74,7 +78,6 @@ public/
 | `/about` | Founder bio, philosophy, differentiators |
 | `/report` | Full Report product page |
 | `/get-started` | Pricing + intake page (Razorpay) |
-| `/cases` | Case studies (4 real anonymised assessments) |
 | `/insights` | Insights index page |
 | `/insights/[slug]` | Individual insight articles |
 | `/system` | SA-AIRS™ methodology overview (no proprietary weights) |

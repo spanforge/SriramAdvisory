@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TrackedLink from "@/components/TrackedLink";
 import type { Metadata } from "next";
@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Products & Assets | Sriram Advisory",
   description:
     "Sriram Advisory products and assets organized by framework, with SA-AIRS learning paths for career decisions under AI-driven uncertainty.",
+  alternates: { canonical: "/products" },
 };
 
 const LEARNING_PATH = [
@@ -182,7 +183,7 @@ export default function ProductsPage() {
       <section style={{ padding: "88px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <div style={{ maxWidth: 760, marginBottom: 34 }}>
-            <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 900, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               SA-AIRS Learning Path
             </span>
             <h2 style={{ fontSize: "clamp(30px, 4.2vw, 50px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "16px 0", color: "#0a1628" }}>
@@ -201,7 +202,7 @@ export default function ProductsPage() {
               >
                 <article style={{ height: "100%", border: index === 0 ? "2px solid #1a4fd6" : "1px solid #dbe5f5", borderRadius: 8, padding: "26px 24px", background: index === 0 ? "#eef4ff" : "#f8fbff" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", marginBottom: 14 }}>
-                    <span style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268" }}>{item.step}</span>
+                    <span style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6" }}>{item.step}</span>
                     <span style={{ fontSize: 12, fontWeight: 900, color: "#1a4fd6" }}>{item.price}</span>
                   </div>
                   <h3 style={{ fontSize: 24, lineHeight: 1.18, color: "#0a1628", margin: "0 0 12px" }}>{item.title}</h3>
@@ -232,7 +233,7 @@ export default function ProductsPage() {
               <section key={group.framework} style={{ border: group.framework === "SA-AIRS" ? "2px solid #1a4fd6" : "1px solid #dbe5f5", borderRadius: 8, background: "#ffffff", padding: "26px 24px" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "minmax(220px, 0.55fr) minmax(0, 1.45fr)", gap: 22, alignItems: "start" }} className="home-two-col">
                   <div>
-                    <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 12 }}>
+                    <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", marginBottom: 12 }}>
                       {group.label}
                     </div>
                     <h3 style={{ fontSize: 28, lineHeight: 1.15, color: "#0a1628", margin: "0 0 12px" }}>
@@ -253,7 +254,7 @@ export default function ProductsPage() {
                         <article style={{ height: "100%", border: "1px solid #dbe5f5", borderRadius: 8, padding: "20px 18px", background: "#f8fbff" }}>
                           <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginBottom: 12 }}>
                             <span style={{ fontSize: 12, fontWeight: 900, color: "#1a4fd6" }}>{asset.type}</span>
-                            <span style={{ fontSize: 12, fontWeight: 900, color: "#0d9268" }}>{asset.price}</span>
+                            <span style={{ fontSize: 12, fontWeight: 900, color: "#1a4fd6" }}>{asset.price}</span>
                           </div>
                           <h4 style={{ fontSize: 19, lineHeight: 1.25, color: "#0a1628", margin: "0 0 10px", fontWeight: 900 }}>{asset.title}</h4>
                           <p style={{ fontSize: 14, lineHeight: 1.65, color: "#52627e", margin: "0 0 14px" }}>{asset.body}</p>

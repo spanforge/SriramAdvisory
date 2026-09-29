@@ -17,7 +17,7 @@ export default function AiLiteracyPage() {
 
       <section
         style={{
-          background: "linear-gradient(135deg, #071713 0%, #0f2f4d 55%, #0d9268 100%)",
+          background: "linear-gradient(135deg, #071713 0%, #0f2f4d 55%, #1a4fd6 100%)",
           paddingTop: 96,
           paddingBottom: 72,
           textAlign: "center",
@@ -147,7 +147,7 @@ export default function AiLiteracyPage() {
                         fontWeight: 800,
                         letterSpacing: "0.08em",
                         textTransform: "uppercase",
-                        background: "#0d9268",
+                        background: "#1a4fd6",
                         color: "#ffffff",
                         padding: "4px 10px",
                         borderRadius: 999,
@@ -162,7 +162,7 @@ export default function AiLiteracyPage() {
                     <div style={{ fontSize: 11, color: "#5f7291", textTransform: "uppercase", fontWeight: 700 }}>
                       Price
                     </div>
-                    <div style={{ fontSize: 22, fontWeight: 900, color: "#0d9268" }}>
+                    <div style={{ fontSize: 22, fontWeight: 900, color: "#1a4fd6" }}>
                       {product.price}
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function AiLiteracyPage() {
                     alignItems: "center",
                     justifyContent: "center",
                     textDecoration: "none",
-                    background: "#0d9268",
+                    background: "#1a4fd6",
                     color: "#ffffff",
                     borderRadius: 10,
                     padding: "12px 16px",

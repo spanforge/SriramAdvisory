@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -40,7 +40,7 @@ export default function FrameworksPage() {
         <div style={{ maxWidth: 1180, margin: "0 auto", border: "2px solid #1a4fd6", borderRadius: 8, padding: "30px 28px", background: "#eef4ff" }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) auto", gap: 24, alignItems: "center" }} className="home-two-col">
             <div>
-              <span style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268" }}>
+              <span style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6" }}>
                 Flagship Framework
               </span>
               <h2 style={{ fontSize: "clamp(28px, 3.8vw, 44px)", lineHeight: 1.12, letterSpacing: "-0.02em", margin: "12px 0", color: "#0a1628" }}>
@@ -62,7 +62,7 @@ export default function FrameworksPage() {
           {FRAMEWORK_ITEMS.map((framework) => (
             <Link key={framework.slug} href={`/frameworks/${framework.slug}`} style={{ textDecoration: "none" }}>
               <article style={{ height: "100%", border: framework.slug === "sa-airs" ? "2px solid #1a4fd6" : "1px solid #dbe5f5", borderRadius: 8, padding: "26px 24px", background: framework.slug === "sa-airs" ? "#eef4ff" : "#f8fbff" }}>
-                <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 12 }}>
+                <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", marginBottom: 12 }}>
                   {framework.slug === "sa-airs" ? "Flagship - Role Exposure Framework" : framework.eyebrow}
                 </div>
                 <h2 style={{ fontSize: 25, lineHeight: 1.18, color: "#0a1628", margin: "0 0 12px" }}>{framework.title}</h2>

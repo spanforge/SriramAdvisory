@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
+import ProductStructuredData from "@/components/ProductStructuredData";
 
 export const metadata: Metadata = {
   title: "AI Risk Rankings India 2026 | Sriram Advisory",
   description:
     "India-first career and workforce risk rankings report covering the top 25 high-risk careers, 4 exposure bands, adaptation paths, and 100+ pages of research-backed market intelligence. Rs 999.",
+  alternates: { canonical: "/products/ai-risk-rankings-india-2026" },
 };
 
 const TOP5_PREVIEW = [
@@ -114,13 +116,11 @@ const SOURCES = [
   "MeitY India AI Governance Guidelines",
 ];
 
-const TESTIMONIAL =
-  "The career intelligence report provided by Sriram Advisory is really good and comprehensive. Sriram Srinivasan has put in efforts to study the risks faced by professionals role-wise across the spectrum of the industry from service companies, GCCs, botique IT firms, startups. This gives an idea to the professionals at different stages of their career to assess themselves and how to stay relevant in the industry. I had a look at the report, it looked impressive with the kind of detailing. I urge people to try it.";
-
 export default function AIRiskRankingsPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <ProductStructuredData name="AI Risk Rankings India 2026" description="India-first career and workforce risk rankings with exposure bands, adaptation paths and research-backed market intelligence." path="/products/ai-risk-rankings-india-2026" price={999} />
 
       <section
         style={{
@@ -588,46 +588,6 @@ export default function AIRiskRankingsPage() {
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "72px 20px", background: "#fff5f5" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 36 }}>
-            <span
-              style={{
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "#dc2626",
-                display: "block",
-                marginBottom: 12,
-              }}
-            >
-              Customer Feedback
-            </span>
-            <h2
-              style={{
-                fontSize: "clamp(24px, 3.5vw, 36px)",
-                fontWeight: 800,
-                color: "#0a1628",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              What one reader said after reviewing it
-            </h2>
-          </div>
-          <div
-            style={{
-              background: "#ffffff",
-              border: "1px solid #fecaca",
-              borderRadius: 18,
-              padding: "28px 28px",
-            }}
-          >
-            <p style={{ fontSize: 18, lineHeight: 1.8, color: "#24364d", margin: 0 }}>&quot;{TESTIMONIAL}&quot;</p>
           </div>
         </div>
       </section>

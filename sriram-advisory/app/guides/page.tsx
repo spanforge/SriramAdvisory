@@ -1,196 +1,25 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Hero, PageShell, Section } from "@/components/AdvisoryUI";
 import GuidesCatalog from "@/components/GuidesCatalog";
 import { GUIDES } from "@/lib/siteCatalog";
 import { LIFETIME_UPDATES_BODY, LIFETIME_UPDATES_TITLE } from "@/lib/guideSalesContent";
 
 export const metadata: Metadata = {
-  title: "Guides | Sriram Advisory",
-  description:
-    "Future of Work career guides for professionals who want role-specific intelligence, clear skill direction, and practical next steps.",
+  title: "Career Guides | Sriram Advisory",
+  description: "Role-specific career guides with practical direction for professionals responding to changes in work.",
+  alternates: { canonical: "/guides" },
 };
 
-const GUIDE_DELIVERY_NOTE = "Delivered to your inbox, typically within 30 minutes of payment.";
-const BONUS_GUIDE_NOTE =
-  "Every guide includes the Agentic AI Field Guide bonus at no extra cost.";
-
 export default function GuidesPage() {
-  return (
-    <div className="font-body bg-white text-[#0a1628] min-h-screen">
-      <Navbar />
-
-      <section
-        style={{
-          background: "linear-gradient(135deg, #0a1628 0%, #102346 60%, #1a4fd6 100%)",
-          paddingTop: 96,
-          paddingBottom: 72,
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 20px" }}>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              background: "rgba(59,110,240,0.18)",
-              border: "1px solid rgba(59,110,240,0.45)",
-              borderRadius: 20,
-              padding: "6px 16px",
-              marginBottom: 28,
-            }}
-          >
-            <span
-              style={{
-                width: 7,
-                height: 7,
-                borderRadius: "50%",
-                background: "#3b6ef0",
-                display: "inline-block",
-              }}
-            />
-            <span
-              style={{
-                fontSize: 13,
-                fontWeight: 600,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "#93b4ff",
-              }}
-            >
-              Career Intelligence Guides
-            </span>
-          </div>
-          <h1
-            style={{
-              fontSize: "clamp(36px, 5vw, 58px)",
-              fontWeight: 800,
-              color: "#ffffff",
-              lineHeight: 1.1,
-              marginBottom: 20,
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Career Intelligence Guides
-          </h1>
-          <p
-            style={{
-              fontSize: "clamp(15px, 2vw, 18px)",
-              color: "rgba(200,220,255,0.84)",
-              lineHeight: 1.75,
-              maxWidth: 680,
-              margin: "0 auto 24px",
-            }}
-          >
-            Role-specific guides that translate Future of Work research into practical next steps for professionals.
-          </p>
-          <Link
-            href="/bundles"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "13px 24px",
-              borderRadius: 10,
-              background: "#ffffff",
-              color: "#102346",
-              textDecoration: "none",
-              fontSize: 14,
-              fontWeight: 800,
-              border: "1px solid rgba(255,255,255,0.2)",
-            }}
-          >
-            Need more context? Browse bundles
-          </Link>
-        </div>
-      </section>
-
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 20px 80px" }}>
-        <div
-          style={{
-            background: "linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%)",
-            border: "1px solid #c7d7ff",
-            borderRadius: 24,
-            padding: "28px 24px",
-            marginBottom: 28,
-            boxShadow: "0 20px 50px rgba(10, 22, 40, 0.06)",
-          }}
-        >
-          <p
-            style={{
-              fontSize: 15,
-              color: "#40526b",
-              lineHeight: 1.7,
-              margin: "0 auto 24px",
-              maxWidth: 860,
-              textAlign: "center",
-            }}
-          >
-            New to AI as one part of the Future of Work? Start with{" "}
-            <Link href="/ai-literacy" style={{ color: "#1a4fd6", fontWeight: 800, textDecoration: "none" }}>
-              AI Literacy
-            </Link>{" "}
-            before choosing a role guide.
-          </p>
-
-          <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-            <span
-              style={{
-                fontSize: 12,
-                fontWeight: 800,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "#1a4fd6",
-                display: "block",
-                marginBottom: 10,
-              }}
-            >
-              Public Commitment
-            </span>
-            <h2
-              style={{
-                fontSize: "clamp(24px, 3.5vw, 36px)",
-                fontWeight: 900,
-                color: "#0a1628",
-                letterSpacing: "-0.03em",
-                marginBottom: 12,
-              }}
-            >
-              {LIFETIME_UPDATES_TITLE}
-            </h2>
-            <p
-              style={{
-                fontSize: 15,
-                color: "#40526b",
-                lineHeight: 1.8,
-                margin: 0,
-              }}
-            >
-              {LIFETIME_UPDATES_BODY}
-            </p>
-            <p
-              style={{
-                fontSize: 15,
-                color: "#40526b",
-                lineHeight: 1.8,
-                margin: "14px 0 0",
-              }}
-            >
-              If you need a guide plus market context, the bundles page combines related guides and reports into role-specific stacks.
-            </p>
-          </div>
-        </div>
-
-        <GuidesCatalog
-          guides={GUIDES}
-          deliveryNote={GUIDE_DELIVERY_NOTE}
-          bonusNote={BONUS_GUIDE_NOTE}
-        />
-      </section>
-
-      <Footer />
-    </div>
-  );
+  return <PageShell>
+    <Hero eyebrow="Career resources" title="Role-specific guidance for a changing market" body="Compare the career guides currently available from Sriram Advisory and choose the one that fits your role and decision." primary={{ label: "Browse guides", href: "#guide-directory" }} secondary={{ label: "View career bundles", href: "/bundles" }} />
+    <Section muted eyebrow="Published commitment" title={LIFETIME_UPDATES_TITLE} intro={LIFETIME_UPDATES_BODY}>
+      <p className="sa-section-intro">If you need a guide together with wider market context, the bundles page combines selected guides and reports.</p>
+      <Link className="sa-arrow" href="/bundles">Browse career bundles →</Link>
+    </Section>
+    <Section id="guide-directory" title="Find the guide for your role" intro="Search the published catalogue and review the scope before purchasing.">
+      <GuidesCatalog guides={GUIDES} deliveryNote="Delivered to your inbox, typically within 30 minutes of payment." bonusNote="Every guide includes the Agentic AI Field Guide bonus at no extra cost." />
+    </Section>
+  </PageShell>;
 }

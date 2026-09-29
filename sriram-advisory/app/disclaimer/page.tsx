@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer | Sriram Advisory",
   description: "Full legal disclaimer for Sriram Advisory. Educational and analytical commentary only - not career counselling, legal advice, or employment guidance.",
+  alternates: { canonical: "/disclaimer" },
 };
 
 export default function DisclaimerPage() {
@@ -21,7 +22,7 @@ export default function DisclaimerPage() {
             Disclaimer
           </h1>
           <p style={{ fontSize: 16, color: "#6a7a9a", lineHeight: 1.7 }}>
-            Last updated: May 2026  -  Sriram Advisory, India
+            Last updated: 29 September 2026  -  Sriram Advisory, India
           </p>
         </div>
       </section>
@@ -34,7 +35,7 @@ export default function DisclaimerPage() {
             <div style={{ fontSize: 14, fontWeight: 800, color: "#dc2626", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>Important - Read Before Purchasing</div>
             <p style={{ fontSize: 16, color: "#1a2030", lineHeight: 1.75, marginBottom: 20 }}>
               The Career Intelligence Report and all associated services provided by Sriram Advisory are{" "}
-              <strong style={{ color: "#fff" }}>educational and analytical commentary only</strong>.
+              <strong style={{ color: "#0a3d91" }}>educational and analytical commentary only</strong>.
             </p>
             <p style={{ fontSize: 15, fontWeight: 700, color: "#0a1628", marginBottom: 12 }}>
               This is NOT and does NOT constitute:

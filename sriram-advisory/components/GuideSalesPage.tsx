@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import ProductRecommendations from "@/components/ProductRecommendations";
+import StructuredData from "@/components/StructuredData";
 import Link from "next/link";
 import {
   BONUS_GUIDE_NOTE,
@@ -13,20 +14,51 @@ import {
   LIFETIME_UPDATES_TITLE,
   SHARED_FAQ,
   type GuidePageContent,
+  guideSalesContent,
 } from "@/lib/guideSalesContent";
+import { siteConfig } from "@/lib/advisoryContent";
 
 type GuideSalesPageProps = {
   content: GuidePageContent;
 };
 
 export default function GuideSalesPage({ content }: GuideSalesPageProps) {
-  const { theme } = content;
-  const testimonials = content.testimonials ?? (content.testimonial ? [content.testimonial] : []);
+  const slug = Object.entries(guideSalesContent).find(([, value]) => value === content)?.[0];
+  const canonicalUrl = slug ? `${siteConfig.canonicalOrigin}/guides/${slug}` : `${siteConfig.canonicalOrigin}/guides`;
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: content.productName,
+    description: content.heroSummary,
+    url: canonicalUrl,
+    brand: { "@id": `${siteConfig.canonicalOrigin}/#organization` },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: "499",
+      availability: "https://schema.org/InStock",
+      url: canonicalUrl,
+    },
+  };
+  const theme = {
+    ...content.theme,
+    accent: "#1a4fd6",
+    accentSoft: "#1a4fd6",
+    accentStrong: "#0a3d91",
+    heroGradient: "linear-gradient(135deg, #ffffff 0%, #f2f7ff 100%)",
+    heroText: "#526b8a",
+    sectionTint: "#f8fbff",
+    sectionBorder: "#dbe5f5",
+    panelTint: "#ffffff",
+    finalGradient: "linear-gradient(135deg, #ffffff 0%, #f2f7ff 100%)",
+  };
+  const testimonials: NonNullable<GuidePageContent["testimonials"]> = [];
   const isAiLiteracy = content.category === "ai-literacy";
 
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <StructuredData data={productSchema} />
 
       <section
         style={{
@@ -72,18 +104,18 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 7,
-                  background: "rgba(220,38,38,0.2)",
-                  border: "1px solid rgba(220,38,38,0.45)",
+                  background: "#f2f7ff",
+                  border: "1px solid #b8caea",
                   borderRadius: 20,
                   padding: "6px 16px",
                   fontSize: 12,
                   fontWeight: 700,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#fca5a5",
+                  color: "#0a3d91",
                 }}
               >
-                SA-AIRS Score: {content.score} - {content.riskLabel}
+                Role context · SA-AIRS {content.score}
               </span>
             )}
             <span
@@ -136,13 +168,19 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           <p
             style={{
               fontSize: 15,
-              color: "rgba(255,255,255,0.65)",
+              color: "#526b8a",
               fontStyle: "italic",
               marginBottom: 28,
             }}
           >
             {content.heroNote}
           </p>
+
+          {!isAiLiteracy && (
+            <p style={{ fontSize: 13, color: "#526b8a", margin: "-12px auto 28px", maxWidth: 700 }}>
+              The score is a structured decision-support signal, not a prediction of an individual employment outcome.
+            </p>
+          )}
 
           <div
             style={{
@@ -157,12 +195,12 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
               <div
                 key={item}
                 style={{
-                  background: "rgba(255,255,255,0.1)",
-                  border: "1px solid rgba(255,255,255,0.15)",
+                  background: "#f8fbff",
+                  border: "1px solid #dbe5f5",
                   borderRadius: 999,
                   padding: "10px 16px",
                   fontSize: 13,
-                  color: "#f8fbff",
+                  color: "#526b8a",
                 }}
               >
                 {item}
@@ -173,8 +211,8 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
           <div
             className="hero-price-box"
             style={{
-              background: "rgba(255,255,255,0.07)",
-              border: "1px solid rgba(255,255,255,0.15)",
+              background: "#ffffff",
+              border: "1px solid #dbe5f5",
               borderRadius: 20,
               maxWidth: 700,
               margin: "0 auto",
@@ -185,7 +223,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                 style={{
                   fontSize: 48,
                   fontWeight: 900,
-                  color: "#ffffff",
+                  color: "#1a4fd6",
                   letterSpacing: "-0.03em",
                 }}
               >
@@ -208,7 +246,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
             <p
               style={{
                 fontSize: 13,
-                color: "rgba(255,255,255,0.82)",
+                color: "#526b8a",
                 lineHeight: 1.6,
                 margin: "0 0 14px",
               }}
@@ -218,7 +256,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
             <p
               style={{
                 fontSize: 13,
-                color: "rgba(255,255,255,0.72)",
+                color: "#526b8a",
                 lineHeight: 1.6,
                 margin: "0 0 14px",
               }}
@@ -227,8 +265,8 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
             </p>
             <div
               style={{
-                background: "rgba(255,255,255,0.08)",
-                border: "1px solid rgba(255,255,255,0.14)",
+                background: "#f8fbff",
+                border: "1px solid #dbe5f5",
                 borderRadius: 14,
                 padding: "14px 16px",
                 margin: "0 0 20px",
@@ -937,7 +975,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                   fontWeight: 800,
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
-                  color: "#0d9268",
+                  color: "#1a4fd6",
                   marginBottom: 8,
                 }}
               >
@@ -954,7 +992,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                 alignItems: "center",
                 justifyContent: "center",
                 textDecoration: "none",
-                background: "#0d9268",
+                background: "#1a4fd6",
                 color: "#ffffff",
                 borderRadius: 10,
                 padding: "12px 16px",

@@ -1,25 +1,25 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { load } from "@cashfreepayments/cashfree-js";
 import { track } from "@vercel/analytics";
+import Link from "next/link";
 
 const ROLES = [
-  ["QA / Manual Testing", "QA Engineer Guide"],
-  ["Selenium / Automation Testing", "Selenium Engineer Upgrade Guide"],
-  ["Cloud Engineer", "Cloud Engineer AI Survival Guide"],
-  ["Java Developer", "Java Developer AI Leverage Guide"],
-  ["Business Analyst", "Business Analyst Survival Guide"],
-  ["BA to AI PM Transition", "Business Analyst to AI Product Manager Guide"],
-  ["DevOps Engineer", "DevOps Survival Guide"],
-  ["Data Engineer", "Data Engineer AI Survival Guide"],
-  ["Data Analyst", "Data Analyst Career Guide"],
-  ["BPO / Customer Support", "BPO & Customer Support Career Survival Guide"],
-  ["HR / Recruiter", "HR Recruiter Survival Guide"],
-  ["Project / Delivery Manager", "Project / Delivery Manager Survival Guide"],
-  ["FDE (Forward Deployed Engineer)", "FDE Career Transition Guide"],
-  ["Fresher / Student", "Fresher AI Survival Guide"],
-  ["Other / Not listed", "Matched Career Guide"],
+  ["QA / Manual Testing", "QA Engineer Survival Guide 2026", "/guides/qa-engineer-survival-guide-2026"],
+  ["Selenium / Automation Testing", "Selenium Engineer Upgrade Guide 2026", "/guides/selenium-engineer-upgrade-guide-2026"],
+  ["Cloud Engineer", "Cloud Engineer AI Survival Guide 2026", "/guides/cloud-engineer-ai-survival-guide-2026"],
+  ["Java Developer", "Java Developer AI Leverage Guide 2026", "/guides/java-developer-ai-leverage-guide-2026"],
+  ["Business Analyst", "Business Analyst Survival Guide 2026", "/guides/business-analyst-survival-guide-2026"],
+  ["BA to AI PM Transition", "Business Analyst to AI Product Manager Career Transition Guide 2026", "/guides/ba-to-ai-pm-guide-2026"],
+  ["DevOps Engineer", "DevOps Survival Guide 2026", "/guides/devops-survival-guide-2026"],
+  ["Data Engineer", "Data Engineer AI Survival Guide 2026", "/guides/data-engineer-ai-survival-guide-2026"],
+  ["Data Analyst", "Data Analyst Career Guide 2026", "/guides/data-analyst-career-guide-2026"],
+  ["BPO / Customer Support", "BPO & Customer Support Career Survival Guide 2026", "/guides/bpo-career-survival-guide-2026"],
+  ["HR / Recruiter", "HR Recruiter Survival Guide 2026", "/guides/hr-recruiter-survival-guide-2026"],
+  ["Project / Delivery Manager", "Project Manager / Delivery Manager Survival Guide 2026", "/guides/project-delivery-manager-survival-guide-2026"],
+  ["FDE (Forward Deployed Engineer)", "FDE Career Transition Guide 2026", "/guides/fde-career-transition-guide-2026"],
+  ["Fresher / Student", "Fresher AI Survival Guide", "/guides/fresher-ai-survival-guide"],
+  ["Other / Not listed", "Browse all career guides", "/guides"],
 ] as const;
 
 type Question = {
@@ -54,24 +54,13 @@ const QUESTIONS: readonly Question[] = [
   ], dimension: "Role Confidence", insight: "You are not fully confident your role stays essential as AI improves — worth addressing directly."},
 ];
 
-const PRODUCTS = {
-  guide: { code: "exposure_guide", title: "Role-matched guide", price: 499, detail: "A practical guide selected for your current role." },
-  call: { code: "exposure_call", title: "1-hour clarity session", price: 1000, detail: "A focused one-to-one session with Sriram." },
-  bundle: { code: "exposure_bundle", title: "Guide + clarity session", price: 1499, detail: "Get the role-matched guide and the full clarity session." },
-} as const;
-
-type ProductKey = keyof typeof PRODUCTS;
-type Stage = "intro" | "role" | "questions" | "result" | "offer";
+type Stage = "intro" | "role" | "questions" | "result";
 
 export default function FreeAiExposureCheck() {
   const [stage, setStage] = useState<Stage>("intro");
   const [roleIndex, setRoleIndex] = useState<number | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [lead, setLead] = useState({ name: "", email: "" });
-  const [selected, setSelected] = useState<ProductKey | null>(null);
-  const [paying, setPaying] = useState(false);
-  const [error, setError] = useState("");
 
   const score = useMemo(() => {
     const total = QUESTIONS.reduce((sum, question) => {
@@ -99,6 +88,7 @@ export default function FreeAiExposureCheck() {
 
   const question = QUESTIONS[questionIndex];
   const guideName = roleIndex === null ? "Matched Career Guide" : ROLES[roleIndex][1];
+  const guideHref = roleIndex === null ? "/guides" : ROLES[roleIndex][2];
 
   function begin() {
     track("Free Assessment Start");
@@ -110,30 +100,6 @@ export default function FreeAiExposureCheck() {
     else {
       track("Free Assessment Complete", { score, band: band.label });
       setStage("result");
-    }
-  }
-
-  async function buy() {
-    if (!selected) return;
-    setPaying(true);
-    setError("");
-    const product = PRODUCTS[selected];
-    const productName = selected === "guide" ? `${guideName} - AI Exposure Check` : selected === "bundle" ? `${guideName} + 1-Hour Clarity Session` : "1-Hour Clarity Session";
-    track("Free Assessment Checkout", { product: selected, amount: product.price });
-    try {
-      const response = await fetch("/api/create-order", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productCode: product.code, productName, amount: product.price, name: lead.name.trim(), email: lead.email.trim() }),
-      });
-      const data = await response.json();
-      if (!response.ok || !data.payment_session_id) throw new Error(data.error || "Could not create the payment order.");
-      const mode = (process.env.NEXT_PUBLIC_CASHFREE_ENV ?? "sandbox") as "sandbox" | "production";
-      const cashfree = await load({ mode });
-      await cashfree.checkout({ paymentSessionId: data.payment_session_id, redirectTarget: "_self" });
-    } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "Something went wrong. Please try again.");
-      setPaying(false);
     }
   }
 
@@ -172,27 +138,11 @@ export default function FreeAiExposureCheck() {
         {stage === "result" && <div>
           <div className="assessment-center assessment-result"><p className="assessment-step">Your result</p><div className="assessment-score">{score}<span>/100</span></div><strong style={{ color: band.color, background: band.bg }}>{band.label}</strong><p>{band.copy}</p></div>
           {weakest && <div className="assessment-insight"><b>Your biggest factor: {weakest.dimension}</b><span>{weakest.insight}</span></div>}
-          <form className="assessment-lead" onSubmit={(event) => { event.preventDefault(); track("Free Assessment Lead", { role: ROLES[roleIndex ?? 14][0], score }); setStage("offer"); }}>
-            <h3>See your personalized options</h3><p>Your score is free. Enter your details to view the guide matched to your role, a clarity session, or both.</p>
-            <input required maxLength={100} value={lead.name} onChange={(event) => setLead({ ...lead, name: event.target.value })} placeholder="Full name" aria-label="Full name" />
-            <input required maxLength={200} type="email" value={lead.email} onChange={(event) => setLead({ ...lead, email: event.target.value })} placeholder="Email address" aria-label="Email address" />
-            <button className="assessment-primary" type="submit">See my options →</button>
-          </form>
-        </div>}
-
-        {stage === "offer" && <div>
-          <div className="assessment-center"><p className="assessment-step">Your options, {lead.name.split(" ")[0]}</p><h2>Choose what is useful to you</h2><p>Select one option. The exact total shown here will open in Cashfree.</p></div>
-          <div className="assessment-products">{(Object.keys(PRODUCTS) as ProductKey[]).map((key) => {
-            const product = PRODUCTS[key]; const checked = selected === key;
-            return <label key={key} className={`${checked ? "selected" : ""} ${key === "bundle" ? "featured" : ""}`}>
-              {key === "bundle" && <em>COMPLETE OPTION</em>}
-              <input type="checkbox" checked={checked} onChange={() => setSelected(checked ? null : key)} />
-              <span><b>{key === "guide" ? guideName : product.title}</b><small>{product.detail}</small></span><strong>₹{product.price.toLocaleString("en-IN")}</strong>
-            </label>;
-          })}</div>
-          {error && <p className="assessment-error" role="alert">{error}</p>}
-          <button className="assessment-primary assessment-buy" disabled={!selected || paying} onClick={buy}>{paying ? "Opening Cashfree…" : selected ? `Buy now · ₹${PRODUCTS[selected].price.toLocaleString("en-IN")}` : "Select an option to buy"}</button>
-          <p className="assessment-trust">Secure Cashfree checkout · One-time payment · Call not useful? Full refund, no questions asked.</p>
+          <div className="assessment-lead">
+            <h3>A relevant next resource</h3>
+            <p>{guideName}</p>
+            <Link className="assessment-primary" href={guideHref} onClick={() => track("Free Assessment Recommendation", { role: ROLES[roleIndex ?? 14][0], score })}>Review this guide →</Link>
+          </div>
         </div>}
       </div>
       <p className="assessment-footnote">A directional lite assessment built on the SA-AIRS™ framework.</p>

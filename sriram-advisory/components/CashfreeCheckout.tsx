@@ -307,9 +307,10 @@ export default function CashfreeCheckout({
                 <input
                   id="checkout-phone"
                   type="tel"
+                  required
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="Optional"
+                  placeholder="10-digit mobile number"
                   maxLength={15}
                   style={{
                     width: "100%",
@@ -323,7 +324,7 @@ export default function CashfreeCheckout({
                   }}
                 />
                 <p style={{ fontSize: 11, color: "#8898b8", marginTop: 5 }}>
-                  Optional. Helpful only if payment support is needed.
+                  Required by the payment provider for transaction support.
                 </p>
               </div>
 

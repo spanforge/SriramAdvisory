@@ -1,14 +1,2 @@
-﻿import type { MetadataRoute } from "next";
-
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/api/", "/admin/"],
-      },
-    ],
-    sitemap: "https://sriramadvisory.com/sitemap.xml",
-  };
-}
+import type{MetadataRoute}from"next";import{siteConfig}from"@/lib/advisoryContent";
+export default function robots():MetadataRoute.Robots{return{rules:[{userAgent:'*',allow:'/',disallow:['/api/','/admin/','/data/']}],sitemap:`${siteConfig.canonicalOrigin}/sitemap.xml`}}

@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -65,3 +66,4 @@ free-assesssement.jsx
 Free_Assessement_Spec.docx
 free-assessment.jsx
 Free_Assessment_Spec.docx
+Sriram_Advisory_Website_Development_Specification_v1_1.docx

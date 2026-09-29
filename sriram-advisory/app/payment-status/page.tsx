@@ -123,7 +123,7 @@ function PaymentStatusContent() {
             </p>
             <p style={{ fontSize: 13, color: "#8898b8", marginBottom: 24 }}>Order ID: {orderId}</p>
             <Link
-              href="/get-started"
+              href="/contact"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -168,7 +168,7 @@ function PaymentStatusContent() {
                 Try Again
               </Link>
               <Link
-                href="/get-started"
+                href="/contact"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",

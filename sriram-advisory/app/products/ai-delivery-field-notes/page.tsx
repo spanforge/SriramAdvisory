@@ -3,11 +3,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
+import ProductStructuredData from "@/components/ProductStructuredData";
 
 export const metadata: Metadata = {
   title: "AI Delivery Field Notes | Sriram Advisory",
   description:
     "A practical field guide for the person carrying an AI initiative from pilot to production. Includes field notes, templates, scorecards, war stories, and maturity model guidance. Rs 499.",
+  alternates: { canonical: "/products/ai-delivery-field-notes" },
 };
 
 const INCLUDED_RESOURCES = [
@@ -96,6 +98,7 @@ export default function AIChampionFieldNotesPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <ProductStructuredData name="AI Delivery Field Notes" description="A practical guide to carrying an AI initiative from pilot to trusted production rollout." path="/products/ai-delivery-field-notes" price={499} />
 
       <section
         style={{

@@ -5,9 +5,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Sriram Advisory",
   description: "Privacy policy for Sriram Advisory. How we collect, use, and protect your personal information.",
+  alternates: { canonical: "/privacy" },
 };
 
-const LAST_UPDATED = "14 May 2026";
+const LAST_UPDATED = "29 September 2026";
 
 export default function PrivacyPage() {
   return (
@@ -43,7 +44,7 @@ export default function PrivacyPage() {
               body: `We collect information you provide directly when you:
 - Purchase or enquire about a product or service (name, professional role, industry, years of experience, concern, email address)
 - Complete a contact form or submit a service request via the website
-- Make a payment (name, email - payment is processed by Razorpay and we do not store card details)
+- Make a payment (name, email, mobile number - payment is processed by the provider shown at checkout and we do not store card details)
 - Contact us via email or WhatsApp
 
 We do not collect sensitive personal data (health, financial account details, biometric data).`,
@@ -72,10 +73,9 @@ We do not sell, rent, or share your personal data with third parties for marketi
             {
               heading: "6. Third-Party Services",
               body: `We use the following third-party services that may process your data:
-- Razorpay - payment processing (governed by Razorpay's privacy policy)
-- Formspree - form submission handling (governed by Formspree's privacy policy)
+- The payment provider shown at checkout - payment processing (governed by that provider's privacy policy)
+- Formspree - contact-enquiry and free-resource form submission handling (governed by Formspree's privacy policy)
 - Vercel - website hosting (governed by Vercel's privacy policy)
-- Neon - database infrastructure (governed by Neon's privacy policy)
 
 Each of these services operates under their own privacy policies and data processing agreements.`,
             },
@@ -91,7 +91,7 @@ To exercise any of these rights, email sriram@sriramadvisory.com with the subjec
             },
             {
               heading: "8. Data Security",
-              body: `We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, disclosure, alteration, or destruction. Our database is hosted on Neon with encryption at rest and in transit.`,
+              body: `We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, disclosure, alteration, or destruction. Website enquiries are submitted to Formspree over an encrypted connection and handled under Formspree's security and retention practices.`,
             },
             {
               heading: "9. Cookies",

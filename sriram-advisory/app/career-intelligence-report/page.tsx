@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Reports | Sriram Advisory",
   description:
     "India-first intelligence reports on career and workforce risk, market shifts, and role diagnostics for working professionals.",
+  alternates: { canonical: "/career-intelligence-report" },
 };
 
 const REPORTS = [
@@ -35,7 +36,7 @@ const REPORTS = [
       "A forward-looking intelligence report for professionals who want a clearer view of how AI may reshape work, careers, and leverage in India over the next phase.",
     price: "Rs 799",
     href: "/products/ai-futures-2026",
-    accentColor: "#0d9268",
+    accentColor: "#1a4fd6",
     bgGradient: "linear-gradient(135deg, #f2fbf8 0%, #dcfce7 100%)",
     borderColor: "#bbf7d0",
     bullets: [

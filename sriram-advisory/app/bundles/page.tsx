@@ -12,6 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Bundles | Sriram Advisory",
   description: BUNDLE_PAGE_SUBTITLE,
+  alternates: { canonical: "/bundles" },
 };
 
 export default function BundlesPage() {

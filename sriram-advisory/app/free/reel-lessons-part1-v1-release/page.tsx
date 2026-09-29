@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const THEME = {
-  accent: "#0f766e",
+  accent: "#1a4fd6",
   accentSoft: "#a7f3d0",
   accentStrong: "#065f46",
-  heroGradient: "linear-gradient(135deg, #061412 0%, #0b2d29 52%, #0f766e 100%)",
+  heroGradient: "linear-gradient(135deg, #061412 0%, #0b2d29 52%, #1a4fd6 100%)",
   heroText: "rgba(209,250,229,0.86)",
   sectionTint: "#ecfdf5",
   sectionBorder: "#86efac",

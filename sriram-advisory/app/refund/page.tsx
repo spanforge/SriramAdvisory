@@ -4,10 +4,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Refund Policy | Sriram Advisory",
-  description: "Refund policy for Sriram Advisory Full Report and Deep Dive engagements.",
+  description: "Refund policy for Sriram Advisory digital products, assessments and advisory engagements.",
+  alternates: { canonical: "/refund" },
 };
 
-const LAST_UPDATED = "14 May 2026";
+const LAST_UPDATED = "29 September 2026";
 
 export default function RefundPage() {
   return (
@@ -46,32 +47,27 @@ export default function RefundPage() {
               fontSize: 13, color: "#1a4fd6", letterSpacing: "0.1em", marginBottom: 10,
             }}>THE SHORT VERSION</div>
             <p style={{ fontSize: 15, color: "#0a1628", lineHeight: 1.75, margin: 0 }}>
-              If your Full Report or Deep Dive is delivered and you genuinely feel it did not meet the standard described, email us within 7 days.
-              We will either re-do the assessment or issue a full refund - no questions asked.
-              We have issued Rs 0 in refunds to date because we stand behind the work.
+              If a delivered product or service is materially incomplete or does not match its published description, email us within 7 days of delivery.
+              We will review the issue and, where appropriate, replace the file, correct or re-do the work, or issue a refund.
             </p>
           </div>
 
           {[
             {
-              heading: "1. SA-AIRS Career Risk Audit (Rs 1,999)",
-              body: `If your SA-AIRS Career Risk Audit was delivered within the promised timeframe and contains a complete SA-AIRS(TM) score, dimension breakdown, and Top 3 Moves, the report is considered delivered in full.
-
-If you believe the report was not delivered, was materially incomplete, or did not reflect the information you provided, email sriram@sriramadvisory.com within 7 days of delivery. We will either re-do the assessment at no charge or issue a full refund.
-
-Refund requests submitted more than 7 days after delivery will not be processed.`,
+              heading: "1. Digital Guides, Reports, and Bundles",
+              body: `Because digital files cannot be returned, a completed and accessible digital delivery is normally final. If a file was not delivered, cannot be opened, is materially incomplete, or does not match the product description, email sriram@sriramadvisory.com within 7 days of delivery. We will replace or correct the file, or issue a refund where the issue cannot be resolved.`,
             },
             {
-              heading: "2. Career Intelligence Report - SA-AIRS Pro (Rs 999)",
-              body: `If your Career Intelligence Report - SA-AIRS Pro was delivered and is complete, it is considered delivered in full. If you believe the report was materially incomplete or did not reflect your submission, email us within 7 days of delivery for a re-do or full refund.`,
+              heading: "2. Personalised Assessments and Audits",
+              body: `If a personalised assessment or audit was not delivered, was materially incomplete, or did not reflect the information you submitted, email us within 7 days of delivery. We will review the issue and either correct or re-do the work at no charge, or issue a refund where the issue cannot be resolved.`,
             },
             {
-              heading: "3. Clarity Call (Rs 3,999 - Rs 7,499)",
-              body: `If the call does not occur within 5 business days of your confirmed availability and this is our fault, you are entitled to a full refund. If you cancel after scheduling but before the call, a partial refund may be issued at our discretion. Session notes are delivered within 24 hours of the call and are considered part of the deliverable.`,
+              heading: "3. Business Advisory Engagements",
+              body: `Cancellation, rescheduling, and refund terms for a Business and Delivery Health Check or other agreed advisory work are stated in the written proposal. If the delivered work is materially incomplete against that proposal, contact us within 7 days so the issue can be reviewed and resolved.`,
             },
             {
-              heading: "4. Domain Deep Dive Program (Rs 9,999 - Rs 24,999+)",
-              body: `If the onboarding plan is not delivered within 48 hours of confirmed payment and this is our fault, you are entitled to a full refund. Once the program is underway, partial refunds may be issued on a pro-rata basis at our discretion, based on what has been delivered.`,
+              heading: "4. Legacy Purchases",
+              body: `A product or service purchased under an earlier written offer remains subject to the terms confirmed at the time of purchase. Email sriram@sriramadvisory.com with the order reference if you need help with a previous purchase.`,
             },
             {
               heading: "5. How to Request a Refund",
@@ -80,11 +76,11 @@ Refund requests submitted more than 7 days after delivery will not be processed.
 - Brief description of the issue
 - Your order confirmation or payment reference
 
-We will respond within 2 business days. Approved refunds are processed back to the original payment method within 5-7 business days via Razorpay.`,
+We will respond within 2 business days. Approved refunds are returned to the original payment method through the payment provider. Processing time after approval depends on that provider and your bank.`,
             },
             {
               heading: "6. Our Commitment",
-              body: `We do not hide behind fine print. If the work was not what was described, we fix it or refund it. This is not marketing - it is how we operate.`,
+              body: `If the work was not what was described, we will review the issue fairly and work to correct it. Nothing in this policy limits rights available under applicable law.`,
             },
           ].map((section) => (
             <div key={section.heading} style={{ marginBottom: 40 }}>

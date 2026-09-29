@@ -1,150 +1,27 @@
-﻿import Link from "next/link";
 import Image from "next/image";
-import { NAV_ITEMS } from "@/lib/siteCatalog";
+import Link from "next/link";
+import { pillars, siteConfig } from "@/lib/advisoryContent";
+
+const groups = [
+  { title: "Practices", links: pillars.map(({ label, href }) => ({ label, href })) },
+  { title: "Career Intelligence", links: [{ label: "Guides", href: "/guides" }, { label: "Assessments", href: "/assessments" }, { label: "Reports", href: "/reports" }, { label: "Bundles", href: "/bundles" }] },
+  { title: "Insights", links: [{ label: "All Insights", href: "/insights" }, { label: "Technology & Digital Safety", href: "/insights?topic=technology-digital-safety" }, { label: "Education & Learning", href: "/insights?topic=education" }] },
+  { title: "Company", links: [{ label: "About", href: "/about" }, { label: "Contact", href: "/contact" }] },
+];
 
 export default function Footer() {
-  return (
-    <footer
-      aria-label="Site footer"
-      style={{
-        background: "#f7f9fc",
-        borderTop: "1px solid rgba(26,79,214,0.18)",
-        padding: "64px 40px 40px",
-      }}
-    >
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: 32,
-            marginBottom: 40,
-          }}
-        >
-          <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 360 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <Image src="/sriram.png" alt="Sriram Advisory" width={38} height={38} style={{ width: 38, height: 38, borderRadius: "50%", objectFit: "cover", border: "2px solid #1a4fd6", flexShrink: 0 }} />
-              <div>
-                <div style={{ fontSize: 18, fontWeight: 800, color: "#0a1628", letterSpacing: "-0.01em" }}>
-                  Sriram Advisory
-                </div>
-                <div
-                  style={{
-                    fontSize: 13,
-                    color: "#0d9268",
-                    letterSpacing: "0.10em",
-                    textTransform: "uppercase",
-                    fontWeight: 700,
-                    marginTop: 2,
-                  }}
-                >
-                  Workforce Intelligence for the AI Era
-                </div>
-              </div>
-            </div>
-            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "#5a6a8a" }}>
-              Workforce intelligence for Indian professionals and organizations.
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <a href="mailto:sriram@sriramadvisory.com" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>
-                sriram@sriramadvisory.com
-              </a>
-              <a href="https://wa.me/919342229420" target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, color: "#1a4fd6", textDecoration: "none", fontWeight: 700 }}>
-                WhatsApp: +91 93422 29420
-              </a>
-            </div>
-          </div>
-
-          <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
-            <nav aria-label="Explore navigation">
-              <p style={{ fontSize: 13, fontWeight: 700, color: "#5a6a8a", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 16px" }}>
-                Explore
-              </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
-                {NAV_ITEMS.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>
-                      {item.footerLabel ?? item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <nav aria-label="Company navigation">
-              <p style={{ fontSize: 13, fontWeight: 700, color: "#5a6a8a", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 16px" }}>
-                Company
-              </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
-                {[
-                  { label: "Contact", href: "/contact" },
-                  { label: "Insights", href: "/insights" },
-                ].map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <nav aria-label="Legal navigation">
-              <p style={{ fontSize: 13, fontWeight: 700, color: "#5a6a8a", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 16px" }}>
-                Legal
-              </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
-                {[
-                  { label: "Privacy Policy", href: "/privacy" },
-                  { label: "Terms of Service", href: "/terms" },
-                  { label: "Refund Policy", href: "/refund" },
-                  { label: "Disclaimer", href: "/disclaimer" },
-                ].map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} style={{ fontSize: 14, color: "#4a5a7a", textDecoration: "none" }}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-        <div
-          style={{
-            borderTop: "1px solid rgba(26,79,214,0.15)",
-            paddingTop: 28,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: 16,
-          }}
-        >
-          <p style={{ fontSize: 13, color: "rgba(10,22,40,0.6)", margin: 0 }}>
-            (c) {new Date().getFullYear()} Sriram Advisory. Educational and analytical commentary only.
-          </p>
-          <a
-            href="https://www.linkedin.com/newsletters/sriram-advisory-7461301611261284352/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              fontSize: 13,
-              color: "#0a66c2",
-              textDecoration: "none",
-              fontWeight: 500,
-            }}
-          >
-            LinkedIn Newsletter
-          </a>
-        </div>
+  return <footer className="sa-footer"><div className="sa-wrap">
+    <div className="sa-footer-grid">
+      <div className="sa-footer-about">
+        <Image src="/sriram.png" alt="Sriram Srinivasan" width={64} height={64} />
+        <strong>{siteConfig.brandName}</strong>
+        <p>{siteConfig.descriptor}</p>
+        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+        <div className="sa-footer-social"><a href={siteConfig.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a></div>
       </div>
-    </footer>
-  );
+      {groups.map(group => <div key={group.title}><h2>{group.title}</h2><ul>{group.links.map(link => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul></div>)}
+    </div>
+    <div className="sa-legal-links"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/refund">Refunds</Link><Link href="/disclaimer">Disclaimer</Link></div>
+    <p className="sa-copyright">© {new Date().getFullYear()} Sriram Advisory. IT services performance and career intelligence.</p>
+  </div></footer>;
 }

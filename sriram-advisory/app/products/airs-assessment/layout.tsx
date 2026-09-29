@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "SA-AIRS Career Risk Audit | Sriram Advisory",
   description:
     "A structured Rs 1,999 career-risk assessment covering role exposure, market pressure, defensibility, and practical next moves.",
+  alternates: { canonical: "/products/airs-assessment" },
 };
 
 export default function AirsAssessmentLayout({ children }: { children: ReactNode }) {

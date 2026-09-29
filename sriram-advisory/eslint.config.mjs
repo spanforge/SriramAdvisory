@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "free-assessment.jsx",
+    "free-assesssement.jsx",
   ]),
 ]);
 

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "IT Sector Guides | Sriram Advisory",
   description:
     "India-first career intelligence guides for IT professionals navigating AI risk, market shifts, and role repositioning.",
+  alternates: { canonical: "/guides/it" },
 };
 
 const GUIDE_DELIVERY_NOTE = "Delivered to your inbox, typically within 30 minutes of payment.";
@@ -26,7 +27,7 @@ const GUIDES = [
       "For Cloud Engineers who want to move from traditional infrastructure provisioning into AI-native cloud engineering, GPU platform design, model-serving reliability, and stronger AI infrastructure positioning.",
     price: "Rs 499",
     href: "/guides/cloud-engineer-ai-survival-guide-2026",
-    accentColor: "#0f766e",
+    accentColor: "#1a4fd6",
     bgGradient: "linear-gradient(135deg, #f0fdf9 0%, #d9fbe8 100%)",
     borderColor: "#99f6e4",
     role: "Cloud Engineer",
@@ -90,7 +91,7 @@ const GUIDES = [
       "For Business Analysts who need to move beyond documentation-heavy work and reposition around problem framing, business value, and stronger analyst signal.",
     price: "Rs 499",
     href: "/guides/business-analyst-survival-guide-2026",
-    accentColor: "#0f766e",
+    accentColor: "#1a4fd6",
     bgGradient: "linear-gradient(135deg, #f4fffd 0%, #dffaf3 100%)",
     borderColor: "#99f6e4",
     role: "Business Analyst",
@@ -138,7 +139,7 @@ const GUIDES = [
       "For QA professionals under the sharpest AI pressure who want a clearer path toward stronger quality ownership and more durable relevance.",
     price: "Rs 499",
     href: "/guides/qa-engineer-survival-guide-2026",
-    accentColor: "#0d9268",
+    accentColor: "#1a4fd6",
     bgGradient: "linear-gradient(135deg, #f5fff9 0%, #e3faec 100%)",
     borderColor: "#bbf7d0",
     role: "QA",
@@ -170,7 +171,7 @@ const GUIDES = [
       "For Python developers who want to use AI to move beyond script-heavy execution and build stronger positioning around automation, backend judgment, data workflows, and AI-assisted engineering leverage.",
     price: "Rs 499",
     href: "/guides/python-developer-ai-leverage-guide-2026",
-    accentColor: "#0f766e",
+    accentColor: "#1a4fd6",
     bgGradient: "linear-gradient(135deg, #f2fffb 0%, #d8f5ec 100%)",
     borderColor: "#99f6e4",
     role: "Python Developer",

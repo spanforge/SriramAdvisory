@@ -171,7 +171,7 @@ export default function AIDeliveryIntelligencePage() {
                 fontSize: 15,
               }}
             >
-              <span style={{ color: "#0d9268", fontWeight: 900, marginRight: 8 }}>{"\u2713"}</span>
+              <span style={{ color: "#1a4fd6", fontWeight: 900, marginRight: 8 }}>{"\u2713"}</span>
               {item}
             </div>
           ))}

@@ -1,215 +1,111 @@
-﻿import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Link from "next/link";
-import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-
-export type Article = {
-  slug: string;
-  type: "Analysis" | "Framework" | "Data";
-  title: string;
-  teaser: string;
-  tag: string;
-  date: string;
-  readTime: string;
-  body: string;
-};
-
-export const ARTICLES: Article[] = [
-  {
-    slug: "seniority-trap-mid-career-ai-risk",
-    type: "Analysis",
-    title: "The Seniority Trap: Why Mid-Career Professionals Face the Highest AI Risk",
-    teaser: "Junior employees adapt. Senior executives are insulated. It is the 8-18 year professional who is most exposed - here is why, and what to do about it.",
-    tag: "Career Strategy",
-    date: "14 May 2026",
-    readTime: "6 min read",
-    body: `There is a pattern that shows up repeatedly across the professionals I assess.
-
-Junior employees - the 0-5 year cohort - are anxious, but they adapt. They have not built an identity around a specific way of doing things. They are used to learning. They pick up tools fast. Their risk is real, but so is their flexibility.
-
-Senior executives - the 20+ year cohort - are largely insulated. Not because they are irreplaceable (many are not), but because their work is wrapped in relationship capital, institutional trust, and decision authority that AI cannot replicate. They are also expensive enough that companies are reluctant to restructure around them.
-
-The professionals with the highest structural risk are in the middle. The 8-18 year band. Mid-level managers. Senior individual contributors. Functional specialists. People who have built genuine expertise - but in a domain where that expertise is increasingly replicable.
-
-**Why the middle gets squeezed**
-
-Here is what happens when AI increases productivity for a given function:
-
-The junior work disappears first - it is the easiest to automate. But companies do not hire fewer juniors and keep the same number of seniors. They restructure the entire layer. The senior specialist who used to manage a team of five analysts now manages one - or none. Their output is still needed, but the organisational justification for their cost is weaker.
-
-At the same time, the executive above them is not going anywhere. So the mid-senior professional is caught: they cannot move up (the executive layer has not thinned), and they cannot justify the support structure they were built around.
-
-This is the seniority trap. The expertise is real. The vulnerability is structural.
-
-**The four signals to watch**
-
-In SA-AIRS(TM) assessments, mid-career professionals who score in the High or Very High risk tier tend to share four characteristics:
-
-1. Their core deliverables are digital and text-based - reports, analyses, decks, recommendations
-2. Their seniority comes from depth in one domain, not breadth across the organisation
-3. Their direct reports are in roles with high automation feasibility
-4. Their relationship capital is internal (cross-functional influence) rather than external (client trust, market reputation)
-
-This is not a death sentence. It is a diagnosis. And a diagnosis is useful because it points to the right interventions.
-
-**What actually moves the needle**
-
-The professionals who successfully reposition in this window share one common strategy: they shift from being the best at a task to being the person who determines which tasks matter.
-
-That sounds abstract. Here is what it looks like in practice:
-
-The senior data analyst who repositions stops being the one who builds the model and starts being the one who defines which questions the model should answer - and whose judgment is trusted when the model is wrong.
-
-The mid-level marketing manager who repositions stops being the one who produces campaigns and starts being the one who owns the relationship with the agency, the brief, the brand guardrails - the judgment layer that AI cannot replace.
-
-This is not reskilling in the conventional sense. You are not learning a new tool. You are changing what you are accountable for.
-
-**The 90-day window**
-
-The professionals I have seen successfully navigate this had one thing in common: they moved before the pressure was visible. They did not wait for a restructure announcement. They read the signals early - in how their work was being discussed, in what their managers were starting to do themselves with AI tools, in where budget was flowing - and they began repositioning quietly.
-
-Ninety days is enough time to shift your role's centre of gravity if you know what to move toward. But it requires an honest read of where you actually sit on the risk spectrum first.
-
-That is what the SA-AIRS(TM) assessment is designed to give you.`,
-  },
-];
-
-const TYPE_COLOURS: Record<string, { bg: string; text: string }> = {
-  Analysis: { bg: "rgba(26,79,214,0.08)", text: "#1a4fd6" },
-  Framework: { bg: "rgba(79,195,247,0.1)", text: "#0991c5" },
-  Data: { bg: "rgba(16,180,140,0.08)", text: "#0d9e7e" },
-};
+import { notFound } from "next/navigation";
+import { Breadcrumbs, ClosingCTA, Hero, LinkCard, PageShell, Section } from "@/components/AdvisoryUI";
+import StructuredData from "@/components/StructuredData";
+import { siteConfig } from "@/lib/advisoryContent";
+import { INSIGHTS } from "@/lib/insights";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = ARTICLES.find((a) => a.slug === slug);
-  if (!article) return { title: "Not Found" };
+  const article = INSIGHTS.find(item => item.slug === slug);
+  if (!article) return { title: "Insight not found" };
   return {
     title: `${article.title} | Sriram Advisory`,
-    description: article.teaser,
+    description: article.summary,
+    alternates: { canonical: `/insights/${article.slug}` },
+    authors: [{ name: "Sriram Srinivasan", url: "/about" }],
+    openGraph: {
+      type: "article",
+      title: article.title,
+      description: article.summary,
+      publishedTime: article.date,
+      modifiedTime: article.date,
+      authors: ["Sriram Srinivasan"],
+    },
   };
 }
 
-export async function generateStaticParams() {
-  return ARTICLES.map((a) => ({ slug: a.slug }));
+export function generateStaticParams() {
+  return INSIGHTS.map(article => ({ slug: article.slug }));
 }
 
-export default async function ArticlePage({ params }: Props) {
+function ArticleBody({ body }: { body: string }) {
+  const blocks = body.split("\n\n");
+  return <div className="sa-article-body">
+    {blocks.map((block, index) => {
+      if (block.startsWith("## ")) return <h2 key={index}>{block.slice(3)}</h2>;
+      if (/^1\. /.test(block)) {
+        return <ol key={index}>{block.split("\n").map(line => <li key={line}>{line.replace(/^\d+\. /, "")}</li>)}</ol>;
+      }
+      return <p key={index}>{block}</p>;
+    })}
+  </div>;
+}
+
+export default async function InsightPage({ params }: Props) {
   const { slug } = await params;
-  const article = ARTICLES.find((a) => a.slug === slug);
+  const article = INSIGHTS.find(item => item.slug === slug);
   if (!article) notFound();
 
-  const c = TYPE_COLOURS[article.type] ?? TYPE_COLOURS["Analysis"];
-  const paragraphs = article.body.split("\n\n");
+  const date = new Intl.DateTimeFormat("en-IN", { dateStyle: "long", timeZone: "Asia/Kolkata" }).format(new Date(article.date));
+  const related = INSIGHTS.filter(item => item.slug !== article.slug && item.topic === article.topic).slice(0, 2);
+  const articleUrl = `${siteConfig.canonicalOrigin}/insights/${article.slug}`;
+  const nextSteps = {
+    business: {
+      title: "Apply the thinking to a delivery challenge",
+      body: "See how a focused review can turn operating evidence into a prioritised 90-day action plan.",
+      href: "/services/business-delivery-health-check",
+      label: "Review the Health Check",
+    },
+    career: {
+      title: "Use the insight in your own career decision",
+      body: "Explore the assessments, reports and guides currently available for individual professionals.",
+      href: "/careers",
+      label: "Explore Career Guidance",
+    },
+    "technology-digital-safety": {
+      title: "Read technology change in its work context",
+      body: "Explore related insights on technology adoption, digital safety and their effect on IT services work.",
+      href: "/insights?topic=technology-digital-safety",
+      label: "Browse Technology Insights",
+    },
+    education: {
+      title: "Connect learning to capability and work",
+      body: "Explore related insights on practical learning and the transition from education into changing professional work.",
+      href: "/insights?topic=education",
+      label: "Browse Learning Insights",
+    },
+  } as const;
+  const nextStep = nextSteps[article.topic];
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.summary,
+    datePublished: article.date,
+    dateModified: article.date,
+    mainEntityOfPage: articleUrl,
+    url: articleUrl,
+    author: { "@id": `${siteConfig.canonicalOrigin}/#founder` },
+    publisher: { "@id": `${siteConfig.canonicalOrigin}/#organization` },
+    image: `${siteConfig.canonicalOrigin}/sriram.png`,
+  };
 
-  return (
-    <>
-      <Navbar />
-
-      {/* HERO */}
-      <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 72, background: "#0a1628" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <Link href="/insights" style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            fontSize: 13, color: "rgba(248,250,255,0.65)", textDecoration: "none",
-            fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em",
-            marginBottom: 32,
-          }}>
-            {"<-"} Back to Insights
-          </Link>
-
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
-            <span style={{
-              display: "inline-flex",
-              background: c.bg, color: c.text,
-              fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
-              padding: "4px 12px", borderRadius: 20,
-            }}>{article.type}</span>
-            <span style={{ fontSize: 13, color: "rgba(248,250,255,0.65)" }}>{article.tag}</span>
-          </div>
-
-          <h1 style={{
-            fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-            fontSize: "clamp(32px, 5vw, 58px)", lineHeight: 1.05,
-            letterSpacing: "0.02em", color: "#f8faff", margin: "0 0 28px",
-          }}>{article.title}</h1>
-
-          <p style={{
-            fontSize: 18, color: "rgba(248,250,255,0.65)", lineHeight: 1.7, margin: "0 0 32px",
-          }}>{article.teaser}</p>
-
-          <div style={{
-            display: "flex", gap: 24, alignItems: "center",
-            fontFamily: "var(--font-dm-mono), monospace",
-            fontSize: 13, color: "rgba(248,250,255,0.65)",
-          }}>
-            <span>{article.date}</span>
-            <span style={{ color: "rgba(136,152,184,0.3)" }}> - </span>
-            <span>{article.readTime}</span>
-          </div>
-        </div>
-      </section>
-
-      {/* BODY */}
-      <section className="px-5 md:px-10" style={{ background: "#ffffff", paddingTop: 64, paddingBottom: 80 }}>
-        <div style={{ maxWidth: 680, margin: "0 auto" }}>
-          {paragraphs.map((para, i) => {
-            if (para.startsWith("**") && para.endsWith("**")) {
-              return (
-                <h2 key={i} style={{
-                  fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-                  fontSize: 26, letterSpacing: "0.04em", color: "#0a1628",
-                  margin: "48px 0 16px",
-                }}>{para.replace(/\*\*/g, "")}</h2>
-              );
-            }
-            if (para.startsWith("1. ") || para.startsWith("2. ")) {
-              const items = para.split("\n").filter(Boolean);
-              return (
-                <ol key={i} style={{ paddingLeft: 24, margin: "0 0 24px" }}>
-                  {items.map((item, j) => (
-                    <li key={j} style={{ fontSize: 16, color: "#3a4a6a", lineHeight: 1.8, marginBottom: 8 }}>
-                      {item.replace(/^\d+\. /, "")}
-                    </li>
-                  ))}
-                </ol>
-              );
-            }
-            return (
-              <p key={i} style={{ fontSize: 16, color: "#3a4a6a", lineHeight: 1.85, margin: "0 0 24px" }}>
-                {para}
-              </p>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="px-5 md:px-10" style={{ background: "#f0f4f8", paddingTop: 72, paddingBottom: 72, textAlign: "center" }}>
-        <div style={{ maxWidth: 540, margin: "0 auto" }}>
-          <h2 style={{
-            fontFamily: "var(--font-bebas, 'Bebas Neue', sans-serif)",
-            fontSize: "clamp(28px, 4vw, 44px)", letterSpacing: "0.02em",
-            color: "#0a1628", margin: "0 0 16px", lineHeight: 1,
-          }}>Know Where You Actually Stand</h2>
-          <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75, margin: "0 0 32px" }}>
-            Get your SA-AIRS Career Risk Audit - personalised to your specific role. Delivered within 24 hours.
-          </p>
-          <Link href="/get-started" style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "#1a4fd6", color: "#ffffff", textDecoration: "none",
-            padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 15,
-            border: "1px solid #3b6ef0",
-          }}>
-            Get Your Risk Score {"->"}
-          </Link>
-        </div>
-      </section>
-
-      <Footer />
-    </>
-  );
+  return <PageShell>
+    <StructuredData data={schema} />
+    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Insights", href: "/insights" }, { label: article.title }]} />
+    <Hero
+      eyebrow={article.type}
+      title={article.title}
+      body={article.summary}
+      primary={{ label: "Browse all insights", href: "/insights" }}
+    />
+    <Section title="Article" intro={`By Sriram Srinivasan · Published and reviewed ${date} · ${article.readTime}`}>
+      <ArticleBody body={article.body} />
+    </Section>
+    {related.length > 0 && <Section muted title="Related thinking"><div className="sa-grid sa-grid-2">{related.map(item => <LinkCard key={item.slug} meta={item.type} title={item.title} body={item.summary} href={`/insights/${item.slug}`} cta="Read insight" />)}</div></Section>}
+    <ClosingCTA title={nextStep.title} body={nextStep.body} href={nextStep.href} label={nextStep.label} />
+  </PageShell>;
 }

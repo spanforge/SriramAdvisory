@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { FrameworkItem } from "@/lib/frameworkCatalog";
@@ -28,7 +28,7 @@ export default function FrameworkDetailPage({ framework }: FrameworkDetailPagePr
           <Link href="/frameworks" style={{ color: "#1a4fd6", fontSize: 14, fontWeight: 900, textDecoration: "none", display: "inline-flex", marginBottom: 26 }}>
             {"<-"} All Frameworks
           </Link>
-          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268", display: "block", marginBottom: 20 }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6", display: "block", marginBottom: 20 }}>
             {framework.eyebrow}
           </span>
           <h1 style={{ fontSize: "clamp(38px, 5.4vw, 68px)", fontWeight: 900, color: "#0a1628", lineHeight: 1.08, margin: "0 0 24px", letterSpacing: "-0.02em" }}>
@@ -54,7 +54,7 @@ export default function FrameworkDetailPage({ framework }: FrameworkDetailPagePr
             </p>
           </div>
           <div style={{ border: "1px solid #dbe5f5", borderRadius: 8, padding: 24, background: "#f8fbff" }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               Concept
             </span>
             <p style={{ fontSize: 17, lineHeight: 1.85, color: "#4a5a7a", margin: "16px 0 24px" }}>
@@ -63,7 +63,7 @@ export default function FrameworkDetailPage({ framework }: FrameworkDetailPagePr
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 10 }}>
               {["Signal", "Interpretation", "Decision"].map((step, index) => (
                 <div key={step} style={{ minHeight: 92, border: "1px solid rgba(26,79,214,0.18)", borderRadius: 8, padding: "14px 12px", background: "#ffffff" }}>
-                  <div style={{ width: 26, height: 26, borderRadius: 8, background: index === 1 ? "#0d9268" : "#1a4fd6", color: "#ffffff", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 900, marginBottom: 10 }}>
+                  <div style={{ width: 26, height: 26, borderRadius: 8, background: index === 1 ? "#1a4fd6" : "#1a4fd6", color: "#ffffff", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 900, marginBottom: 10 }}>
                     {index + 1}
                   </div>
                   <div style={{ fontSize: 14, fontWeight: 900, color: "#0a1628" }}>{step}</div>
@@ -100,7 +100,7 @@ export default function FrameworkDetailPage({ framework }: FrameworkDetailPagePr
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 0.85fr) minmax(0, 1.15fr)", gap: 34 }} className="home-two-col">
           <div>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               Applications
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
@@ -123,7 +123,7 @@ export default function FrameworkDetailPage({ framework }: FrameworkDetailPagePr
       <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
         <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: 24 }} className="home-two-col">
           <div style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "28px 26px" }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               Case Study
             </span>
             <h2 style={{ fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.18, color: "#0a1628", margin: "14px 0 18px" }}>
@@ -181,7 +181,7 @@ export default function FrameworkDetailPage({ framework }: FrameworkDetailPagePr
             {framework.evolution}
           </p>
           <div style={{ border: "1px solid #dbe5f5", borderRadius: 8, padding: "22px 20px", background: "#ffffff" }}>
-            <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0d9268", marginBottom: 10 }}>
+            <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1a4fd6", marginBottom: 10 }}>
               Download
             </div>
             <h3 style={{ fontSize: 22, color: "#0a1628", margin: "0 0 10px" }}>{framework.downloadTitle}</h3>

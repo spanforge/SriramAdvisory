@@ -5,9 +5,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service | Sriram Advisory",
   description: "Terms of service for Sriram Advisory assessments and strategic advisory engagements.",
+  alternates: { canonical: "/terms" },
 };
 
-const LAST_UPDATED = "14 May 2026";
+const LAST_UPDATED = "29 September 2026";
 
 export default function TermsPage() {
   return (
@@ -40,11 +41,12 @@ export default function TermsPage() {
             },
             {
               heading: "2. Services Offered",
-              body: `Sriram Advisory offers the following products and services:
-- SA-AIRS Career Risk Audit (Rs 1,999) - a personalised assessment of your specific role, scored by Sriram and delivered within 24 hours
-- Career Intelligence Report - SA-AIRS Pro (Rs 999) - a comprehensive intelligence report including full SA-AIRS(TM) methodology, industry deep dives, salary outlook, and quarterly update coverage
-- Clarity Call (Rs 3,999 - Rs 7,499) - a 30-minute 1:1 strategy session with Sriram, including a full SA-AIRS(TM) audit and session notes
-- Domain Deep Dive Program (Rs 9,999 - Rs 24,999+) - a custom 90-day transition program from your current role to its future-of-work equivalent`,
+              body: `Sriram Advisory currently offers:
+- Digital career guides, research reports, and report bundles shown in the Resources catalogue
+- SA-AIRS assessments and the Career Positioning Audit shown on the Assessments pages
+- Business and Delivery Health Check engagements agreed through a written proposal
+
+The product page or written proposal shown before purchase defines the scope, price, deliverables, and any applicable delivery timing.`,
             },
             {
               heading: "3. Nature of the Service",
@@ -54,16 +56,13 @@ The accuracy of the assessment depends on the accuracy and completeness of the i
             },
             {
               heading: "4. Delivery",
-              body: `- SA-AIRS Career Risk Audit: Delivered by email within 24 hours of confirmed payment (Indian business days)
-- Career Intelligence Report - SA-AIRS Pro: Delivered by email within 48 hours of confirmed payment
-- Clarity Call: Session scheduled within 5 business days of payment; session notes delivered within 24 hours after the call
-- Domain Deep Dive Program: Onboarding plan delivered within 48 hours; weekly check-ins conducted as agreed
+              body: `Digital products are delivered to the email address provided at checkout according to the timing stated on the relevant product page. Personalised assessments and audits are delivered according to the timing stated on their service page. Business advisory scope, schedule, outputs, and fees are confirmed in a written proposal before work begins.
 
-Delivery timelines may be extended during high-volume periods. You will be notified if this applies to your order.`,
+If an exceptional delay affects an order, you will be notified using the contact information supplied with the purchase.`,
             },
             {
               heading: "5. Payment",
-              body: `All paid products and services are processed via Razorpay. Sriram Advisory does not store payment card details. All prices are in Indian Rupees (INR) and inclusive of applicable taxes where required.`,
+              body: `Online payments are processed by the payment provider shown at checkout. Sriram Advisory does not store payment card details. Prices are shown in Indian Rupees (INR) unless otherwise stated and include applicable taxes where required.`,
             },
             {
               heading: "6. Intellectual Property",

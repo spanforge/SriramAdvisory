@@ -23,6 +23,10 @@ const METHOD_PRINCIPLES = [
     body: "Career and workforce risk cannot be reduced to a single trend. We look at where human judgment, accountability, trust, and context still matter.",
   },
   {
+    title: "AI assistance is human-reviewed",
+    body: "AI can help organize evidence, compare patterns, and explore scenarios. It does not make autonomous recommendations, and every client-facing conclusion is reviewed in context.",
+  },
+  {
     title: "Outputs must be usable",
     body: "Research is translated into reports, briefings, guides, and advisory notes that help people decide what to learn, monitor, change, or question next.",
   },
@@ -77,6 +81,7 @@ const DATA_USED = [
 
 const DATA_NOT_USED = [
   "Private employer data without permission",
+  "Confidential client material that has not been explicitly agreed, minimized, or redacted",
   "Individual career data published as identifiable examples",
   "Black-box claims that cannot be explained in plain language",
   "One-factor predictions that reduce workforce change to AI alone",
@@ -139,7 +144,7 @@ export default function MethodologyPage() {
             How we study work before turning it into advice.
           </h1>
           <p style={{ fontSize: "clamp(17px, 2.1vw, 21px)", color: "#4a5a7a", lineHeight: 1.75, maxWidth: 760, margin: 0 }}>
-            Sriram Advisory uses structured research, professional judgment, and practical interpretation to understand how careers, skills, teams, and organizations are changing.
+            Sriram Advisory combines structured research and responsible AI-assisted analysis with professional judgment to understand how careers, skills, teams, and organizations are changing.
           </p>
         </div>
       </section>
@@ -147,7 +152,7 @@ export default function MethodologyPage() {
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1120, margin: "0 auto" }}>
           <div style={{ maxWidth: 760, marginBottom: 34 }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               Principles
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0 0" }}>
@@ -191,7 +196,7 @@ export default function MethodologyPage() {
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 0.8fr) minmax(0, 1.2fr)", gap: 34 }} className="home-two-col">
           <div>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               Question Selection
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
@@ -214,7 +219,7 @@ export default function MethodologyPage() {
       <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
         <div style={{ maxWidth: 1120, margin: "0 auto" }}>
           <div style={{ maxWidth: 780, marginBottom: 34 }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               Research Cycle
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
@@ -243,7 +248,7 @@ export default function MethodologyPage() {
       <section style={{ padding: "92px 24px", background: "#f7f9fc" }}>
         <div style={{ maxWidth: 1120, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: 24 }} className="home-two-col">
           <div style={{ background: "#ffffff", border: "1px solid #dbe5f5", borderRadius: 8, padding: "28px 26px" }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               What We Use
             </span>
             <h2 style={{ fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.18, color: "#0a1628", margin: "14px 0 20px" }}>
@@ -278,7 +283,7 @@ export default function MethodologyPage() {
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 1120, margin: "0 auto" }}>
           <div style={{ maxWidth: 780, marginBottom: 34 }}>
-            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+            <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
               Confidence Levels
             </span>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0" }}>
@@ -301,7 +306,7 @@ export default function MethodologyPage() {
 
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
             Interpretation
           </span>
           <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0 18px" }}>
@@ -312,6 +317,9 @@ export default function MethodologyPage() {
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.85, color: "#4a5a7a", margin: 0 }}>
             The goal is not to publish a formula. The goal is to help professionals and teams understand what is changing, why it matters, and what to do next.
+          </p>
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#0a1628", fontWeight: 800, margin: "18px 0 0" }}>
+            AI supports the analysis. Experience shapes the advice. You remain responsible for the decision.
           </p>
         </div>
       </section>
@@ -344,7 +352,7 @@ export default function MethodologyPage() {
 
       <section style={{ padding: "92px 24px", background: "#ffffff" }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#0d9268" }}>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: "#1a4fd6" }}>
             Review Cycle
           </span>
           <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 1.12, letterSpacing: "-0.02em", color: "#0a1628", margin: "16px 0 18px" }}>

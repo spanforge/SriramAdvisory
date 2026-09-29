@@ -173,7 +173,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         stage: "Stage 2",
         title: "AI Becomes Usable",
         desc: "You understand the basics well enough to test tools, write better prompts, and judge outputs.",
-        color: "#0d9268",
+        color: "#1a4fd6",
       },
       {
         stage: "Stage 3",
@@ -199,15 +199,15 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       "Use this handbook to build practical AI literacy, then decide which tools, workflows, or career moves deserve your attention.",
     faqDelivery: DELIVERY_NOTE,
     theme: {
-      accent: "#0d9268",
+      accent: "#1a4fd6",
       accentSoft: "#86efac",
       accentStrong: "#0f4c81",
-      heroGradient: "linear-gradient(135deg, #071713 0%, #0f2f4d 52%, #0d9268 100%)",
+      heroGradient: "linear-gradient(135deg, #071713 0%, #0f2f4d 52%, #1a4fd6 100%)",
       heroText: "rgba(222,247,239,0.88)",
       sectionTint: "#f0fdf4",
       sectionBorder: "#bbf7d0",
       panelTint: "#f7fffb",
-      finalGradient: "linear-gradient(160deg, #071713 0%, #0f2f4d 58%, #0d9268 100%)",
+      finalGradient: "linear-gradient(160deg, #071713 0%, #0f2f4d 58%, #1a4fd6 100%)",
     },
   },
   "cloud-engineer-ai-survival-guide-2026": {
@@ -294,7 +294,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         stage: "Stage 2",
         title: "Cloud Reliability / Platform Owner",
         desc: "You begin to signal stronger judgment around SLAs, platform reliability, cost controls, and infrastructure trade-offs.",
-        color: "#0f766e",
+        color: "#1a4fd6",
       },
       {
         stage: "Stage 3",
@@ -320,10 +320,10 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       "Use this guide to turn cloud engineering experience into stronger AI-native positioning, clearer proof, and a more durable market story.",
     faqDelivery: DELIVERY_NOTE,
     theme: {
-      accent: "#0f766e",
+      accent: "#1a4fd6",
       accentSoft: "#99f6e4",
       accentStrong: "#0f4c81",
-      heroGradient: "linear-gradient(135deg, #061713 0%, #0b3b36 52%, #0f766e 100%)",
+      heroGradient: "linear-gradient(135deg, #061713 0%, #0b3b36 52%, #1a4fd6 100%)",
       heroText: "rgba(214,255,244,0.86)",
       sectionTint: "#ecfdf5",
       sectionBorder: "#99f6e4",
@@ -421,7 +421,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         stage: "Stage 3",
         title: "AI-Native Data Engineer",
         desc: "You are positioned as the bridge between data systems and AI systems, owning the data layer where production models succeed or fail.",
-        color: "#0f766e",
+        color: "#1a4fd6",
       },
     ],
     forYou: [
@@ -443,13 +443,13 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     theme: {
       accent: "#0891b2",
       accentSoft: "#a5f3fc",
-      accentStrong: "#0f766e",
+      accentStrong: "#1a4fd6",
       heroGradient: "linear-gradient(135deg, #06141a 0%, #083344 52%, #0891b2 100%)",
       heroText: "rgba(207,250,254,0.86)",
       sectionTint: "#ecfeff",
       sectionBorder: "#67e8f9",
       panelTint: "#f7feff",
-      finalGradient: "linear-gradient(160deg, #06141a 0%, #083344 60%, #0f766e 100%)",
+      finalGradient: "linear-gradient(160deg, #06141a 0%, #083344 60%, #1a4fd6 100%)",
     },
   },
   "project-delivery-manager-survival-guide-2026": {
@@ -905,7 +905,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         stage: "Stage 3",
         title: "Higher-Leverage Analyst",
         desc: "Problem framing, feature thinking, and stronger outcome ownership.",
-        color: "#0f766e",
+        color: "#1a4fd6",
       },
     ],
     forYou: [
@@ -925,7 +925,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       "Use this guide to build a clearer market story, stronger proof, and a more credible next-step plan.",
     faqDelivery: DELIVERY_NOTE,
     theme: {
-      accent: "#0f766e",
+      accent: "#1a4fd6",
       accentSoft: "#99f6e4",
       accentStrong: "#155e75",
       heroGradient: "linear-gradient(135deg, #08131f 0%, #0f2740 50%, #155e75 100%)",
@@ -1147,7 +1147,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         stage: "Stage 3",
         title: "Higher-Leverage QA Positioning",
         desc: "You are presented as someone who protects quality outcomes, not just someone who runs test cases.",
-        color: "#0d9268",
+        color: "#1a4fd6",
       },
     ],
     forYou: [
@@ -1162,29 +1162,12 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       "You want a technical course on Selenium or automation fundamentals.",
       "You want a global QA market analysis instead of India-first guidance.",
     ],
-    ctaTitle: "Move before the role narrows further.",
+    ctaTitle: "Build a stronger direction for your QA career.",
     ctaBody:
-      "Use this guide to replace vague fear with a clearer plan, stronger positioning, and a more more durable QA story.",
+      "Use this guide to replace vague uncertainty with a clearer plan, stronger positioning, and a more durable QA story.",
     faqDelivery: DELIVERY_NOTE,
-    testimonials: [
-      {
-        quote:
-          "I subscribed to the newsletter and bought the QA Survival Guide. Both have given me real clarity about what to do next in my career. The guidance is practical enough that I am planning to pick up more guides for my professional journey.",
-        source: "QA Engineer, 6 years experience",
-      },
-      {
-        quote:
-          "I highly recommend the QA Survival Guide by Sriram Advisory. It delivers practical insights and a structured approach that simplify complex QA concepts into actionable strategies. This guide is a valuable resource for both aspiring and experienced QA professionals, helping us stay confident and resilient in the real-world testing market.",
-        source: "",
-      },
-      {
-        quote:
-          "This guide is highly useful for manual testers at any experience level who want to upskill and transition into AI QA roles.",
-        source: "",
-      },
-    ],
     theme: {
-      accent: "#0d9268",
+      accent: "#1a4fd6",
       accentSoft: "#6ee7b7",
       accentStrong: "#0f5c3a",
       heroGradient: "linear-gradient(135deg, #071a14 0%, #0d3322 50%, #0f5c3a 100%)",
@@ -1285,7 +1268,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         stage: "Stage 3",
         title: "Higher-Leverage Quality Positioning",
         desc: "You are seen as someone who can own stronger automation outcomes in a more AI-shaped environment.",
-        color: "#0d9268",
+        color: "#1a4fd6",
       },
     ],
     forYou: [
@@ -1400,7 +1383,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         stage: "Stage 2",
         title: "AI-Augmented Python Delivery",
         desc: "You start using AI to increase output while signaling better review judgment, workflow design, test thinking, and maintainability.",
-        color: "#0f766e",
+        color: "#1a4fd6",
       },
       {
         stage: "Stage 3",
@@ -1426,10 +1409,10 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
       "Use this guide to turn Python experience into stronger future-of-work positioning, clearer proof, and a more durable market story.",
     faqDelivery: DELIVERY_NOTE,
     theme: {
-      accent: "#0f766e",
+      accent: "#1a4fd6",
       accentSoft: "#99f6e4",
       accentStrong: "#0f4c81",
-      heroGradient: "linear-gradient(135deg, #051916 0%, #0b3b36 52%, #0f766e 100%)",
+      heroGradient: "linear-gradient(135deg, #051916 0%, #0b3b36 52%, #1a4fd6 100%)",
       heroText: "rgba(214,255,244,0.86)",
       sectionTint: "#ecfdf5",
       sectionBorder: "#99f6e4",
@@ -1890,7 +1873,7 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
         stage: "Stage 3",
         title: "AI-Ready Early Professional",
         desc: "You are positioned as someone who can learn faster, use modern tools well, and contribute with better clarity from day one.",
-        color: "#0f766e",
+        color: "#1a4fd6",
       },
     ],
     forYou: [
@@ -1912,13 +1895,13 @@ export const guideSalesContent: Record<string, GuidePageContent> = {
     theme: {
       accent: "#0f4c81",
       accentSoft: "#93c5fd",
-      accentStrong: "#0f766e",
+      accentStrong: "#1a4fd6",
       heroGradient: "linear-gradient(135deg, #06111f 0%, #0f2f4d 55%, #0f4c81 100%)",
       heroText: "rgba(220,238,255,0.86)",
       sectionTint: "#eff6ff",
       sectionBorder: "#93c5fd",
       panelTint: "#f8fbff",
-      finalGradient: "linear-gradient(160deg, #06111f 0%, #0f2f4d 60%, #0f766e 100%)",
+      finalGradient: "linear-gradient(160deg, #06111f 0%, #0f2f4d 60%, #1a4fd6 100%)",
     },
   },
   "devops-survival-guide-2026": {

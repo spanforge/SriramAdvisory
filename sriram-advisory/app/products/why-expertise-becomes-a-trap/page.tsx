@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
+import ProductStructuredData from "@/components/ProductStructuredData";
 
 export const metadata: Metadata = {
   title: "Why Expertise Becomes a Trap | Sriram Advisory",
   description:
     "A Sriram Advisory Intelligence Series report on why expertise can become a trap during AI-driven change, automation, and professional reinvention. Rs 499.",
+  alternates: { canonical: "/products/why-expertise-becomes-a-trap" },
 };
 
 const WHAT_YOU_GET = [
@@ -62,6 +64,7 @@ export default function WhyExpertiseBecomesATrapPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <ProductStructuredData name="Why Expertise Becomes a Trap" description="An intelligence report on expertise, AI-driven change and professional reinvention." path="/products/why-expertise-becomes-a-trap" price={499} />
 
       <section
         style={{

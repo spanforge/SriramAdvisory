@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import ProductRecommendations from "@/components/ProductRecommendations";
 import CashfreeCheckout from "@/components/CashfreeCheckout";
 import MobileStickyCheckoutBar from "@/components/MobileStickyCheckoutBar";
+import ProductStructuredData from "@/components/ProductStructuredData";
 
 export const metadata: Metadata = {
   title: "State of QA Careers India 2026 | Sriram Advisory",
   description:
     "A premium India-first report for QA professionals who want a clearer view of testing-career shifts, AI pressure points, and adaptation paths. Rs 799 launch price.",
+  alternates: { canonical: "/products/state-of-qa-careers-india-2026" },
 };
 
 const WHAT_YOU_GET = [
@@ -52,6 +54,7 @@ export default function StateOfQACareersIndia2026Page() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <ProductStructuredData name="State of QA Careers India 2026" description="An India-first report on testing-career shifts, AI pressure points and adaptation paths." path="/products/state-of-qa-careers-india-2026" price={799} />
 
       <section
         style={{
