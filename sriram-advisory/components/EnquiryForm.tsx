@@ -1,10 +1,76 @@
 "use client";
-import Link from"next/link";import{useSearchParams}from"next/navigation";import{useMemo,useState}from"react";import{interestLabels,offerInterest,type Interest}from"@/lib/advisoryContent";
-const FORMSPREE_ENDPOINT="https://formspree.io/f/mojzewly";
-const interests=Object.keys(interestLabels)as Interest[];type Form={name:string;email:string;interest:Interest;organisation:string;teamSize:string;message:string;acknowledgement:boolean;website:string};
-export default function EnquiryForm(){const params=useSearchParams();const initial=interests.includes(params.get('interest')as Interest)?params.get('interest')as Interest:'other';const queryOffer=params.get('offer')??'';const initialOffer=offerInterest[queryOffer]===initial?queryOffer:'';const[form,setForm]=useState<Form>({name:'',email:'',interest:initial,organisation:'',teamSize:'',message:'',acknowledgement:false,website:''});const[offer,setOffer]=useState(initialOffer);const[status,setStatus]=useState<'idle'|'sending'|'sent'|'error'>('idle');const[errors,setErrors]=useState<Record<string,string>>({});
-const organisationVisible=['business','capability'].includes(form.interest);const teamVisible=organisationVisible;const set=(name:keyof Form,value:string|boolean)=>setForm(v=>({...v,[name]:value}));const validate=useMemo(()=>()=>{const e:Record<string,string>={};if(form.name.trim().length<2)e.name='Enter your name (at least 2 characters).';if(!/^\S+@\S+\.\S+$/.test(form.email)||form.email.length>254)e.email='Enter a valid email address.';if(['business','capability'].includes(form.interest)&&form.organisation.trim().length<2)e.organisation='Enter your organisation.';if(form.message.trim().length<20)e.message='Describe your challenge in at least 20 characters.';if(form.message.length>3000)e.message='Keep your message within 3,000 characters.';if(!form.acknowledgement)e.acknowledgement='Your acknowledgement is required.';return e},[form]);
-async function submit(e:React.FormEvent){e.preventDefault();const next=validate();setErrors(next);if(Object.keys(next).length){document.getElementById('enquiry-errors')?.focus();return}setStatus('sending');const payload=new FormData();payload.append('name',form.name.trim());payload.append('email',form.email.trim());payload.append('interest',interestLabels[form.interest]);payload.append('organisation',organisationVisible?form.organisation.trim():'Not applicable');payload.append('team_size',teamVisible?form.teamSize:'Not applicable');payload.append('message',form.message.trim());payload.append('offer',offer||'None');payload.append('source',location.pathname);payload.append('consent','Agreed to the website privacy acknowledgement');payload.append('_subject',`New Sriram Advisory enquiry: ${interestLabels[form.interest]}`);payload.append('_gotcha',form.website);try{const res=await fetch(FORMSPREE_ENDPOINT,{method:'POST',headers:{Accept:'application/json'},body:payload});if(!res.ok){setStatus('error');return}setStatus('sent');setForm(v=>({...v,name:'',email:'',organisation:'',teamSize:'',message:'',acknowledgement:false,website:''}))}catch{setStatus('error')}}
-if(status==='sent')return <div className="sa-status" role="status"><h2>Thank you. Your enquiry has been received.</h2><p>We will respond using the email address you provided.</p></div>;
-return <form className="sa-form" onSubmit={submit} noValidate>{Object.keys(errors).length>0&&<div id="enquiry-errors" className="sa-error-summary" role="alert" tabIndex={-1}><strong>Please correct the highlighted fields.</strong></div>}<p className="sa-help">Fields marked * are required.</p><div className="sa-form-row"><Field label="Name *" error={errors.name}><input value={form.name} onChange={e=>set('name',e.target.value)} maxLength={100}/></Field><Field label="Email *" error={errors.email}><input type="email" value={form.email} onChange={e=>set('email',e.target.value)} maxLength={254}/></Field></div><Field label="What would you like to discuss? *"><select value={form.interest} onChange={e=>{const interest=e.target.value as Interest;set('interest',interest);if(offerInterest[offer]!==interest)setOffer('')}}>{interests.map(i=><option value={i} key={i}>{interestLabels[i]}</option>)}</select></Field>{organisationVisible&&<div className="sa-form-row"><Field label="Organisation *" error={errors.organisation}><input value={form.organisation} onChange={e=>set('organisation',e.target.value)} maxLength={150}/></Field>{teamVisible&&<Field label="Team size"><select value={form.teamSize} onChange={e=>set('teamSize',e.target.value)}><option value="">Select if useful</option>{['1','2–10','11–50','51–200','201–1000','1001+'].map(x=><option key={x}>{x}</option>)}</select></Field>}</div>}<Field label="Message *" error={errors.message}><textarea value={form.message} onChange={e=>set('message',e.target.value)} maxLength={3000}/></Field><div className="sa-honeypot" aria-hidden="true"><label>Website<input tabIndex={-1} autoComplete="off" value={form.website} onChange={e=>set('website',e.target.value)}/></label></div><label className="sa-consent"><input type="checkbox" checked={form.acknowledgement} onChange={e=>set('acknowledgement',e.target.checked)}/><span>I agree that Sriram Advisory may use these details to respond to my enquiry. <Link href="/privacy">Privacy Policy</Link>.{errors.acknowledgement&&<span className="sa-error"> {errors.acknowledgement}</span>}</span></label>{status==='error'&&<p className="sa-error" role="alert">We could not confirm your enquiry. Please try again, or email us directly.</p>}<button className="sa-btn sa-btn-primary" disabled={status==='sending'}>{status==='sending'?'Sending…':'Send Enquiry'}</button></form>}
-function Field({label,error,children}:{label:string;error?:string;children:React.ReactNode}){return <label className="sa-field"><span>{label}</span>{children}{error&&<span className="sa-error">{error}</span>}</label>}
+import Link from "next/link";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { enabledInterests, interestLabels, isInterest, copy, siteIdentity, type Interest } from "@/lib/positioning";
+import { validateEnquiry, formErrors, type Enquiry } from "@/lib/enquiryValidation";
+
+export type SubmissionResult = { ok: true; enquiryId: string } | { ok: false; code: string; fieldErrors?: Record<string, string> };
+type Fields = { name: string; email: string; organisation: string; interest: Interest; challenge: string; attempts: string; outcome: string; privacyAcknowledged: boolean; source: string; website: string };
+type Props = { initialInterest?: string; source?: string; onSubmitEnquiry: (payload: Enquiry & { website: string }, key: string) => Promise<SubmissionResult> };
+
+export default function EnquiryForm({ initialInterest, source = "contact", onSubmitEnquiry }: Props) {
+  const options = enabledInterests();
+  const [form, setForm] = useState<Fields>({ name: "", email: "", organisation: "", interest: isInterest(initialInterest) && options.includes(initialInterest) ? initialInterest : "general", challenge: "", attempts: "", outcome: "", privacyAcknowledged: false, source, website: "" });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "failure">("idle");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [failure, setFailure] = useState("");
+  const [optionalOpen, setOptionalOpen] = useState(false);
+  const key = useRef<string | null>(null);
+  const inFlight = useRef(false);
+  const success = useRef<HTMLHeadingElement>(null);
+  useEffect(() => { if (status === "success") success.current?.focus(); }, [status]);
+  function change(field: keyof Fields, value: string | boolean) {
+    key.current = null; // Edited payload is a new submission; uncertain retries keep the old UUID.
+    setForm(previous => ({ ...previous, [field]: value }));
+  }
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (inFlight.current) return;
+    const result = validateEnquiry(form);
+    setErrors(result.errors);
+    if (!result.payload) { requestAnimationFrame(() => document.getElementById("enquiry-errors")?.focus()); return; }
+    if (!key.current) key.current = crypto.randomUUID();
+    inFlight.current = true; setStatus("sending"); setFailure("");
+    try {
+      const response = await onSubmitEnquiry({ ...result.payload, website: form.website }, key.current);
+      if (response.ok) { key.current = null; setStatus("success"); }
+      else {
+        setStatus("failure");
+        if (response.fieldErrors) { setErrors(response.fieldErrors); requestAnimationFrame(() => document.getElementById("enquiry-errors")?.focus()); }
+        setFailure(response.code === "rate_limited" ? formErrors.rate : response.code === "payload_too_large" ? formErrors.length : response.code === "unsupported_request" ? "This request could not be accepted. Your text is still here. Please email Sriram directly." : copy.contact.failure);
+      }
+    } catch { setStatus("failure"); setFailure(copy.contact.failure); }
+    finally { inFlight.current = false; }
+  }
+  const labels: Record<string, string> = { name: "Your name", email: "Email address", organisation: "Organisation", interest: "What would you like to discuss?", challenge: "What is happening?", attempts: "What have you already tried?", outcome: "What would a useful outcome look like?", privacyAcknowledged: "Privacy Notice", form: "Enquiry" };
+  const fields = [
+    { name: "name", label: labels.name, max: 100, required: true, type: "text", autoComplete: "name" },
+    { name: "email", label: labels.email, max: 254, required: true, type: "email", autoComplete: "email" },
+    { name: "organisation", label: labels.organisation, max: 120, required: false, type: "text", autoComplete: "organization" },
+    { name: "challenge", label: labels.challenge, max: 2000, required: true, type: "textarea", autoComplete: "off" },
+    { name: "attempts", label: labels.attempts, max: 1000, required: false, type: "textarea", autoComplete: "off" },
+    { name: "outcome", label: labels.outcome, max: 1000, required: false, type: "textarea", autoComplete: "off" },
+  ];
+  function renderField(field: typeof fields[number]) { return <div className="sa-field" key={field.name}>
+        {field.name === "challenge" && <div className="sa-field"><label htmlFor="enquiry-interest">{labels.interest} *</label><select id="enquiry-interest" value={form.interest} onChange={event => change("interest", event.target.value)} aria-invalid={Boolean(errors.interest)} aria-describedby={errors.interest ? "error-interest" : undefined}>{options.map(interest => <option key={interest} value={interest}>{interestLabels[interest]}</option>)}</select>{errors.interest && <p className="sa-error" id="error-interest">{errors.interest}</p>}</div>}
+        <label htmlFor={`enquiry-${field.name}`}>{field.label}{field.required ? " *" : " (optional)"}</label>
+        {field.type === "textarea" ? <textarea id={`enquiry-${field.name}`} name={field.name} required={field.required} value={String(form[field.name as keyof Fields])} onChange={event => change(field.name as keyof Fields, event.target.value)} aria-invalid={Boolean(errors[field.name])} aria-describedby={`${field.name}-hint${errors[field.name] ? ` error-${field.name}` : ""}`} /> : <input id={`enquiry-${field.name}`} name={field.name} type={field.type} autoComplete={field.autoComplete} required={field.required} value={String(form[field.name as keyof Fields])} onChange={event => change(field.name as keyof Fields, event.target.value)} aria-invalid={Boolean(errors[field.name])} aria-describedby={`${field.name}-hint${errors[field.name] ? ` error-${field.name}` : ""}`} />}
+        <p className="sa-help" id={`${field.name}-hint`}>{field.name === "outcome" ? "If you are not sure yet, you can leave this blank. " : ""}Maximum {field.max} characters.</p>
+        {errors[field.name] && <p className="sa-error" id={`error-${field.name}`}>{errors[field.name]}</p>}
+      </div>; }
+  if (status === "success") return <div className="sa-status" aria-live="polite"><h2 ref={success} tabIndex={-1}>Thank you. Your enquiry has been received.</h2><p>Sriram will review it and reply by email about a suitable next step.</p></div>;
+  return <form className="sa-form" onSubmit={submit} noValidate>
+    {Object.keys(errors).length > 0 && <div id="enquiry-errors" className="sa-error-summary" role="alert" tabIndex={-1}><strong>{formErrors.summary}</strong><ul>{Object.entries(errors).map(([field, error]) => <li key={field}><a href={`#enquiry-${field === "form" ? "name" : field}`}>{labels[field] ?? field}: {error}</a></li>)}</ul></div>}
+    <p className="sa-help">Fields marked * are required. Please do not send confidential material.</p>
+    <fieldset className="sa-enquiry-fields" disabled={status === "sending"}>
+      {fields.slice(0, 4).map(renderField)}
+      <details className="sa-optional-fields" open={optionalOpen || Boolean(errors.attempts || errors.outcome)} onToggle={event => setOptionalOpen(event.currentTarget.open)}><summary>Add what you have tried and the outcome you want (optional)</summary><div>{fields.slice(4).map(renderField)}</div></details>
+      <div className="sa-honeypot" aria-hidden="true"><label>Website<input name="website" value={form.website} onChange={event => change("website", event.target.value)} tabIndex={-1} autoComplete="off" /></label></div>
+      <label className="sa-consent" htmlFor="enquiry-privacyAcknowledged"><input id="enquiry-privacyAcknowledged" type="checkbox" checked={form.privacyAcknowledged} onChange={event => change("privacyAcknowledged", event.target.checked)} aria-invalid={Boolean(errors.privacyAcknowledged)} aria-describedby={errors.privacyAcknowledged ? "error-privacyAcknowledged" : undefined} /><span>I have read the <Link href="/privacy">Privacy Notice</Link> and understand how this enquiry will be handled.</span></label>
+      {errors.privacyAcknowledged && <p className="sa-error" id="error-privacyAcknowledged">{errors.privacyAcknowledged}</p>}
+    </fieldset>
+    <div aria-live="polite">{status === "sending" && <p>Sending…</p>}{status === "failure" && <p className="sa-error">{failure}</p>}</div>
+    <button className="sa-btn sa-btn-primary" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Send enquiry"}</button>
+    <p className="sa-email-fallback">Prefer email? <a href={`mailto:${siteIdentity.email}`}>{siteIdentity.email}</a>.</p>
+  </form>;
+}

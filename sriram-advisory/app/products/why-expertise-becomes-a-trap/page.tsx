@@ -64,6 +64,7 @@ export default function WhyExpertiseBecomesATrapPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <ProductStructuredData name="Why Expertise Becomes a Trap" description="An intelligence report on expertise, AI-driven change and professional reinvention." path="/products/why-expertise-becomes-a-trap" price={499} />
 
       <section
@@ -395,6 +396,7 @@ export default function WhyExpertiseBecomesATrapPage() {
       />
 
       <ProductRecommendations />
+      </main>
       <Footer />
     </div>
   );

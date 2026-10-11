@@ -1,2 +1,5 @@
-import type{MetadataRoute}from"next";import{siteConfig}from"@/lib/advisoryContent";
-export default function robots():MetadataRoute.Robots{return{rules:[{userAgent:'*',allow:'/',disallow:['/api/','/admin/','/data/']}],sitemap:`${siteConfig.canonicalOrigin}/sitemap.xml`}}
+import type { MetadataRoute } from "next";
+import { siteIdentity } from "@/lib/positioning";
+export default function robots(): MetadataRoute.Robots {
+  return { rules: [{ userAgent: "*", allow: "/", disallow: ["/api/", "/admin/", "/data/", "/payment-status", "/preview/"] }], sitemap: `${siteIdentity.origin}/sitemap.xml` };
+}

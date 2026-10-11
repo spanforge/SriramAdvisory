@@ -196,6 +196,7 @@ export default function PaymentStatusPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <Suspense
         fallback={
           <div
@@ -212,6 +213,7 @@ export default function PaymentStatusPage() {
       >
         <PaymentStatusContent />
       </Suspense>
+      </main>
       <Footer />
     </div>
   );

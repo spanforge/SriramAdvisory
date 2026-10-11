@@ -1,3 +1,11 @@
-import type{Metadata}from"next";import{Suspense}from"react";import{PageShell,Hero,Section}from"@/components/AdvisoryUI";import InsightsDirectory from"@/components/InsightsDirectory";
-export const metadata:Metadata={title:"IT Services Insights | Sriram Advisory",description:"Practical thinking on IT services delivery, career change and the technology, safety and learning questions that shape them.",alternates:{canonical:"/insights"}};
-export default function Insights(){return <PageShell><Hero eyebrow="IT services insights" title="Ideas for better delivery and stronger careers" body="Evidence-led notes on the changing IT services industry. Technology, digital safety and education appear as supporting lenses when they affect work, capability or career decisions." primary={{label:"Browse insights",href:"#insights-directory"}}/><Section id="insights-directory" title="Latest insights"><Suspense fallback={<p>Loading insights…</p>}><InsightsDirectory/></Suspense></Section></PageShell>}
+import type { Metadata } from "next";
+import { PageShell, Hero, Section } from "@/components/AdvisoryUI";
+import InsightsDirectory from "@/components/InsightsDirectory";
+import { copy } from "@/lib/positioning";
+import type { SearchParameters } from "@/lib/directory";
+export const metadata: Metadata = { title: "Thinking on Work and Technology | Sriram Advisory", description: copy.thinking.summary, alternates: { canonical: "/insights" } };
+export default async function DirectoryPage({ searchParams }: { searchParams: Promise<SearchParameters> }) {
+  const params = await searchParams;
+  return <PageShell><Hero title={copy.thinking.title} body={copy.thinking.summary} primary={{ label: "Browse the thinking", href: "#directory" }} />
+    <Section id="directory" title="All thinking"><InsightsDirectory params={params} /></Section></PageShell>;
+}

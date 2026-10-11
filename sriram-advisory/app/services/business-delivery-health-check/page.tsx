@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
+import { UnavailableService } from "@/components/EditorialUI";
+import { healthCheckEnabled } from "@/lib/positioning";
 
 export const metadata: Metadata = { title: "Business and Delivery Health Check | Sriram Advisory", description: "A focused review that identifies delivery and operating priorities and supports a practical 90-day action plan.", alternates: { canonical: "/services/business-delivery-health-check" } };
 
 export default function Page() {
+  if (!healthCheckEnabled) return <UnavailableService />;
   return <ServicePage
     title="Business and Delivery Health Check"
     path="/services/business-delivery-health-check"
@@ -19,6 +22,6 @@ export default function Page() {
     sampleTitle="What a health-check output can look like"
     sampleSections={[{ heading: "Current-state observation", detail: "A concise description of the delivery pattern and the evidence behind it." }, { heading: "Why it matters", detail: "The practical consequence for commitments, quality, customers or team capacity." }, { heading: "Priority action", detail: "A named action, accountable owner and an appropriate review point." }, { heading: "90-day view", detail: "A sequenced set of near-term priorities rather than an unbounded transformation programme." }]}
     cta="Request a Health Check Discussion"
-    href="/contact?interest=business&offer=business-delivery-health-check"
+    href="/contact?interest=health-check"
   />;
 }

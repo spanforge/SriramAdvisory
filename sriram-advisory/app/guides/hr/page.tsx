@@ -35,6 +35,7 @@ export default function HRGuidesPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
 
       <section
         style={{
@@ -278,6 +279,7 @@ export default function HRGuidesPage() {
         </article>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

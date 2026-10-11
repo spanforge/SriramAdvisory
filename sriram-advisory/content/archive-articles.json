@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "delivery-reporting-that-supports-decisions",
+    "type": "Framework",
+    "title": "Delivery Reporting Should Make the Next Decision Easier",
+    "summary": "A practical test for whether project reporting is helping leaders act or simply documenting activity.",
+    "topic": "business",
+    "date": "2026-09-24",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "sales-to-delivery-handover",
+    "type": "Framework",
+    "title": "Make Sales Commitments Survive the Handover to Delivery",
+    "summary": "A simple way to expose assumptions, dependencies and ownership before a proposal becomes a delivery problem.",
+    "topic": "business",
+    "date": "2026-09-17",
+    "readTime": "6 min read"
+  },
+  {
+    "slug": "choose-ai-use-cases-before-tools",
+    "type": "Analysis",
+    "title": "Choose the AI Use Case Before Choosing the Tool",
+    "summary": "A disciplined way to test whether an AI idea solves a useful problem and can be adopted responsibly.",
+    "topic": "technology-digital-safety",
+    "date": "2026-09-10",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "practical-learning-reveals-understanding",
+    "type": "Framework",
+    "title": "Practical Learning Should Reveal What a Student Understands",
+    "summary": "Why application, explanation and revision can show more than completion alone.",
+    "topic": "education",
+    "date": "2026-09-03",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "seniority-trap-mid-career-ai-risk",
+    "type": "Analysis",
+    "title": "The Seniority Trap: When Experience Needs a Different Role",
+    "summary": "Why structural change can place pressure on experienced specialists and managers, and what to examine next.",
+    "topic": "career",
+    "date": "2026-05-14",
+    "readTime": "6 min read"
+  }
+]

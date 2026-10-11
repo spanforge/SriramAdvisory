@@ -54,6 +54,7 @@ export default function AIFutures2026Page() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <ProductStructuredData name="AI Futures 2026" description="An India-first report on coming career shifts, strategic signals and adaptation paths." path="/products/ai-futures-2026" price={799} />
 
       <section
@@ -416,6 +417,7 @@ export default function AIFutures2026Page() {
       />
 
       <ProductRecommendations />
+      </main>
       <Footer />
     </div>
   );

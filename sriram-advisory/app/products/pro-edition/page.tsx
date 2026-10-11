@@ -31,6 +31,7 @@ export default function ProEditionPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <ProductStructuredData name="Career Intelligence Report - Pro Edition" description="India-specific career intelligence on role change, industry signals and practical next steps." path="/products/pro-edition" price={999} />
 
       <section style={{ background: "linear-gradient(135deg, #0a1628 0%, #102346 62%, #1a4fd6 100%)", paddingTop: 104, paddingBottom: 84, textAlign: "center" }}>
@@ -119,6 +120,7 @@ export default function ProEditionPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

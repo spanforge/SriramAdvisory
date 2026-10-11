@@ -1,14 +1,13 @@
+import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    transitionIndicator: false,
-  },
+  pageExtensions: ["ts", "tsx", "js", "jsx", "mdx"],
+  outputFileTracingIncludes: { "/insights/*": ["./content/articles/*.mdx"], "/insights": ["./content/articles/*.mdx"], "/": ["./content/articles/*.mdx"] },
   async redirects() {
     return [
-      { source: "/frameworks/:path*", destination: "/about/our-thinking", permanent: true },
       { source: "/products", destination: "/assessments", permanent: true },
-      { source: "/services", destination: "/assessments", permanent: true },
+      { source: "/services", destination: "/work-with-sriram", statusCode: 301 },
       { source: "/our-thinking", destination: "/about/our-thinking", permanent: true },
       { source: "/snapshot", destination: "/tools/free-ai-exposure-check", permanent: true },
       { source: "/technology-digital-safety", destination: "/insights?topic=technology-digital-safety", permanent: true },
@@ -36,4 +35,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default createMDX()(nextConfig);

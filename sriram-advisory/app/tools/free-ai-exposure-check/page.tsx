@@ -12,7 +12,7 @@ export default function FreeAiExposureCheckPage() {
   return (
     <div className="font-body min-h-screen bg-white text-[#0a1628]">
       <Navbar />
-      <main>
+      <main id="main-content">
         <FreeAiExposureCheck />
       </main>
       <Footer />

@@ -233,6 +233,7 @@ export default function ITGuidesPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
 
       <section
         style={{
@@ -385,6 +386,7 @@ export default function ITGuidesPage() {
         />
       </section>
 
+      </main>
       <Footer />
     </div>
   );

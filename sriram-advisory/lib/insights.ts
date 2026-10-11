@@ -167,7 +167,7 @@ Practical learning is strongest when the activity and the evidence both serve th
   {
     slug: "seniority-trap-mid-career-ai-risk",
     type: "Analysis",
-    title: "The Seniority Trap: Why Mid-Career Professionals Face the Highest AI Risk",
+    title: "The Seniority Trap: When Experience Needs a Different Role",
     summary: "Why structural change can place pressure on experienced specialists and managers, and what to examine next.",
     topic: "career",
     date: "2026-05-14",

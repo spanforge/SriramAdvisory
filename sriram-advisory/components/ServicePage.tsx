@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { services } from "@/lib/positioning";
 import { PageShell, Breadcrumbs, Hero, Section, ClosingCTA } from "@/components/AdvisoryUI";
 import StructuredData from "@/components/StructuredData";
 import { siteConfig } from "@/lib/advisoryContent";
@@ -41,6 +43,7 @@ export default function ServicePage(props: Props) {
     </Section>
     <Section title="How the engagement works"><ol className="sa-process">{props.steps.map((step, index) => <li key={step}><strong>{step}</strong><span>Step {index + 1} of {props.steps.length}</span></li>)}</ol></Section>
     <Section muted title="Scope and boundaries"><div className="sa-grid sa-grid-2"><div className="sa-card"><h3>Included</h3><ul>{props.included.map(item => <li key={item}>{item}</li>)}</ul></div><div className="sa-card"><h3>Not included</h3><ul>{props.excluded.map(item => <li key={item}>{item}</li>)}</ul></div></div><p className="sa-section-intro" style={{ marginTop: 28 }}>{props.boundary}</p></Section>
+    {services.find(service => service.slug === "implementation-support")?.enabled && <Section title="Acting on the findings" intro="Need help acting on the findings? Implementation support can be agreed separately around a defined work package."><Link href="/services/implementation-support">Explore implementation support →</Link></Section>}
     <Section title="Before you enquire" intro="A short first message is enough. Please do not send confidential project material at this stage.">
       <div className="sa-grid sa-grid-2"><div className="sa-card"><h3>A useful fit when</h3><ul><li>The delivery or operating problem can be scoped to an agreed area</li><li>A responsible leader can provide context and review the findings</li><li>The organisation wants priorities and a practical action plan</li></ul></div><div className="sa-card"><h3>Probably not the right fit when</h3><ul><li>The requirement is an emergency response or technical security service</li><li>The immediate need is outsourced implementation or formal certification</li><li>A guaranteed commercial or delivery outcome is required</li></ul></div></div>
     </Section>

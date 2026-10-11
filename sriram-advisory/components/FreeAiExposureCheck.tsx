@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 import Link from "next/link";
 
 const ROLES = [

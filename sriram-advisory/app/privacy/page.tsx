@@ -8,12 +8,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const LAST_UPDATED = "29 September 2026";
+const LAST_UPDATED = "11 October 2026";
 
 export default function PrivacyPage() {
   return (
     <>
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#0a1628" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{
@@ -68,7 +69,7 @@ We do not sell, rent, or share your personal data with third parties for marketi
             },
             {
               heading: "5. Data Retention",
-              body: `We retain your personal data for as long as necessary to deliver the service and for a reasonable period thereafter (typically 12 months) to handle any follow-up queries. Anonymised aggregate data may be retained indefinitely for methodology calibration.`,
+              body: `Unconverted advisory enquiries are deleted after 180 days. Active client records follow the agreed engagement policy. For existing purchased services, we retain the information needed to deliver the service and handle follow-up queries for a reasonable period thereafter (typically 12 months). Anonymised aggregate data may be retained indefinitely for methodology calibration.`,
             },
             {
               heading: "6. Third-Party Services",
@@ -95,7 +96,7 @@ To exercise any of these rights, email sriram@sriramadvisory.com with the subjec
             },
             {
               heading: "9. Cookies",
-              body: `This website uses Vercel Analytics, which collects anonymised usage data (page views, general device type). We do not use advertising cookies or third-party tracking cookies.`,
+              body: `Optional usage analytics is currently disabled. We do not use advertising cookies or third-party tracking cookies.`,
             },
             {
               heading: "10. Changes to This Policy",
@@ -120,6 +121,7 @@ To exercise any of these rights, email sriram@sriramadvisory.com with the subjec
           ))}
         </div>
       </section>
+      </main>
       <Footer />
     </>
   );

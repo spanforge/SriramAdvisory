@@ -1,111 +1,37 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Breadcrumbs, ClosingCTA, Hero, LinkCard, PageShell, Section } from "@/components/AdvisoryUI";
+import { Breadcrumbs, PageShell } from "@/components/AdvisoryUI";
+import ArticleCard from "@/components/ArticleCard";
 import StructuredData from "@/components/StructuredData";
-import { siteConfig } from "@/lib/advisoryContent";
-import { INSIGHTS } from "@/lib/insights";
-
+import CopyArticleLink from "@/components/CopyArticleLink";
+import { getArticle, getPublishedArticles, getRelatedArticles } from "@/lib/thinking";
+import { siteIdentity } from "@/lib/positioning";
 type Props = { params: Promise<{ slug: string }> };
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const article = INSIGHTS.find(item => item.slug === slug);
-  if (!article) return { title: "Insight not found" };
-  return {
-    title: `${article.title} | Sriram Advisory`,
-    description: article.summary,
-    alternates: { canonical: `/insights/${article.slug}` },
-    authors: [{ name: "Sriram Srinivasan", url: "/about" }],
-    openGraph: {
-      type: "article",
-      title: article.title,
-      description: article.summary,
-      publishedTime: article.date,
-      modifiedTime: article.date,
-      authors: ["Sriram Srinivasan"],
-    },
-  };
+  const article = getArticle((await params).slug);
+  if (!article) return { title: "Article not found", robots: { index: false } };
+  return { title: `${article.title} | Sriram Advisory`, description: article.summary, alternates: { canonical: `/insights/${article.slug}` }, authors: [{ name: article.author, url: "/about" }], openGraph: { type: "article", title: article.title, description: article.summary, publishedTime: article.publishedAt ?? undefined, modifiedTime: article.updatedAt ?? undefined, authors: [article.author] } };
 }
-
-export function generateStaticParams() {
-  return INSIGHTS.map(article => ({ slug: article.slug }));
-}
-
-function ArticleBody({ body }: { body: string }) {
-  const blocks = body.split("\n\n");
-  return <div className="sa-article-body">
-    {blocks.map((block, index) => {
-      if (block.startsWith("## ")) return <h2 key={index}>{block.slice(3)}</h2>;
-      if (/^1\. /.test(block)) {
-        return <ol key={index}>{block.split("\n").map(line => <li key={line}>{line.replace(/^\d+\. /, "")}</li>)}</ol>;
-      }
-      return <p key={index}>{block}</p>;
-    })}
-  </div>;
-}
-
-export default async function InsightPage({ params }: Props) {
-  const { slug } = await params;
-  const article = INSIGHTS.find(item => item.slug === slug);
+export function generateStaticParams() { return getPublishedArticles().map(article => ({ slug: article.slug })); }
+export default async function ArticlePage({ params }: Props) {
+  const article = getArticle((await params).slug);
   if (!article) notFound();
-
-  const date = new Intl.DateTimeFormat("en-IN", { dateStyle: "long", timeZone: "Asia/Kolkata" }).format(new Date(article.date));
-  const related = INSIGHTS.filter(item => item.slug !== article.slug && item.topic === article.topic).slice(0, 2);
-  const articleUrl = `${siteConfig.canonicalOrigin}/insights/${article.slug}`;
-  const nextSteps = {
-    business: {
-      title: "Apply the thinking to a delivery challenge",
-      body: "See how a focused review can turn operating evidence into a prioritised 90-day action plan.",
-      href: "/services/business-delivery-health-check",
-      label: "Review the Health Check",
-    },
-    career: {
-      title: "Use the insight in your own career decision",
-      body: "Explore the assessments, reports and guides currently available for individual professionals.",
-      href: "/careers",
-      label: "Explore Career Guidance",
-    },
-    "technology-digital-safety": {
-      title: "Read technology change in its work context",
-      body: "Explore related insights on technology adoption, digital safety and their effect on IT services work.",
-      href: "/insights?topic=technology-digital-safety",
-      label: "Browse Technology Insights",
-    },
-    education: {
-      title: "Connect learning to capability and work",
-      body: "Explore related insights on practical learning and the transition from education into changing professional work.",
-      href: "/insights?topic=education",
-      label: "Browse Learning Insights",
-    },
-  } as const;
-  const nextStep = nextSteps[article.topic];
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description: article.summary,
-    datePublished: article.date,
-    dateModified: article.date,
-    mainEntityOfPage: articleUrl,
-    url: articleUrl,
-    author: { "@id": `${siteConfig.canonicalOrigin}/#founder` },
-    publisher: { "@id": `${siteConfig.canonicalOrigin}/#organization` },
-    image: `${siteConfig.canonicalOrigin}/sriram.png`,
-  };
-
+  const related = getRelatedArticles(article);
+  const canonical = `${siteIdentity.origin}/insights/${article.slug}`;
+  const date = new Intl.DateTimeFormat("en-IN", { dateStyle: "long", timeZone: "Asia/Kolkata" }).format(new Date(`${article.publishedAt}T00:00:00+05:30`));
+  const Body = article.Body;
   return <PageShell>
-    <StructuredData data={schema} />
-    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Insights", href: "/insights" }, { label: article.title }]} />
-    <Hero
-      eyebrow={article.type}
-      title={article.title}
-      body={article.summary}
-      primary={{ label: "Browse all insights", href: "/insights" }}
-    />
-    <Section title="Article" intro={`By Sriram Srinivasan · Published and reviewed ${date} · ${article.readTime}`}>
-      <ArticleBody body={article.body} />
-    </Section>
-    {related.length > 0 && <Section muted title="Related thinking"><div className="sa-grid sa-grid-2">{related.map(item => <LinkCard key={item.slug} meta={item.type} title={item.title} body={item.summary} href={`/insights/${item.slug}`} cta="Read insight" />)}</div></Section>}
-    <ClosingCTA title={nextStep.title} body={nextStep.body} href={nextStep.href} label={nextStep.label} />
+    <StructuredData data={{ "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.summary, datePublished: article.publishedAt, dateModified: article.updatedAt, mainEntityOfPage: canonical, url: canonical, author: { "@id": `${siteIdentity.origin}/#founder` }, publisher: { "@id": `${siteIdentity.origin}/#organization` } }} />
+    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Thinking", href: "/insights" }]} />
+    <article className="sa-wrap sa-reading-column">
+      <header className="sa-article-header"><p className="sa-eyebrow">{article.category}</p><h1>{article.title}</h1><p className="sa-lede">{article.summary}</p><p className="sa-article-byline">{article.author} · <time dateTime={article.publishedAt ?? undefined}>{date}</time> · {article.readTime}</p>{article.illustrative && <p className="sa-illustrative">Illustrative reasoning post — not a client case study</p>}</header>
+      {article.publicationNote && <p className="sa-help">{article.originalUrl ? <a href={article.originalUrl}>{article.publicationNote}</a> : article.publicationNote}</p>}
+      <div className="sa-article-body"><Body /></div>
+      {article.sources.length > 0 && <section className="sa-article-sources"><h2>Sources</h2><ul>{article.sources.map(source => <li key={source.url}><a href={source.url}>{source.title}</a></li>)}</ul></section>}
+      <div className="sa-article-invitation"><Link href={article.ctaHref ?? `/contact?interest=${article.interest}`}>{article.cta} →</Link></div>
+      {related.length > 0 && <section className="sa-related"><h2>Related thinking</h2><div className="sa-grid sa-grid-2">{related.map(item => <ArticleCard key={item.slug} article={item} />)}</div></section>}
+      <div className="sa-article-end"><Link href="/insights">← Back to Thinking</Link><CopyArticleLink url={canonical} /></div>
+    </article>
   </PageShell>;
 }

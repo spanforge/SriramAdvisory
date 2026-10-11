@@ -1,33 +1,43 @@
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { pillars } from "@/lib/advisoryContent";
+import { navigation } from "@/lib/positioning";
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [helpOpen, setHelpOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const menu = useRef<HTMLElement>(null);
   const pathname = usePathname();
-  const helpButton = useRef<HTMLButtonElement>(null);
+  function close() { setOpen(false); trigger.current?.focus(); }
   useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    menu.current?.querySelector<HTMLButtonElement>("button")?.focus();
     function keydown(event: KeyboardEvent) {
-      if (event.key === "Escape") { if (helpOpen) helpButton.current?.focus(); setHelpOpen(false); setMobileOpen(false); }
+      if (event.key === "Escape") { event.preventDefault(); setOpen(false); trigger.current?.focus(); }
+      if (event.key !== "Tab") return;
+      const controls = menu.current?.querySelectorAll<HTMLElement>('a[href], button:not([disabled])');
+      if (!controls?.length) return;
+      const first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     }
+    const media = window.matchMedia("(min-width: 1100px)");
+    const resize = () => { if (media.matches) setOpen(false); };
+    media.addEventListener("change", resize);
     document.addEventListener("keydown", keydown);
-    return () => document.removeEventListener("keydown", keydown);
-  }, [helpOpen]);
-  const current = (href: string) => pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+    return () => { document.body.style.overflow = previousOverflow; document.removeEventListener("keydown", keydown); media.removeEventListener("change", resize); };
+  }, [open]);
   return <>
     <a className="sa-skip" href="#main-content">Skip to main content</a>
     <header className="sa-header"><div className="sa-nav-wrap">
-      <Link className="sa-brand" href="/" aria-label="Sriram Advisory home"><span className="sa-brand-mark">SA</span><span>Sriram Advisory<small>IT services performance &amp; careers</small></span></Link>
-      <button className="sa-menu-button" type="button" aria-expanded={mobileOpen} aria-controls="primary-navigation" onClick={() => setMobileOpen(v => !v)}><span aria-hidden="true">{mobileOpen ? "×" : "☰"}</span><span>{mobileOpen ? "Close" : "Menu"}</span></button>
-      <nav id="primary-navigation" className={`sa-navigation${mobileOpen ? " is-open" : ""}`} aria-label="Primary navigation">
-        <div className="sa-dropdown"><button ref={helpButton} type="button" className="sa-nav-link" aria-expanded={helpOpen} onClick={() => setHelpOpen(v => !v)}>Practices <span aria-hidden="true">⌄</span></button>
-          <div className={`sa-dropdown-panel${helpOpen ? " is-open" : ""}`}>{pillars.map(p => <Link key={p.id} href={p.href} aria-current={current(p.href) ? "page" : undefined}><strong>{p.label}</strong><span>{p.summary}</span></Link>)}</div>
-        </div>
-        <Link className="sa-nav-link" href="/resources" aria-current={current("/resources") ? "page" : undefined}>Resources</Link><Link className="sa-nav-link" href="/insights" aria-current={current("/insights") ? "page" : undefined}>Insights</Link><Link className="sa-nav-link" href="/about" aria-current={current("/about") ? "page" : undefined}>About</Link><Link className="sa-nav-link" href="/contact" aria-current={current("/contact") ? "page" : undefined}>Contact</Link><Link className="sa-nav-cta" href="/contact">Discuss Your Challenge</Link>
+      <Link className="sa-brand" href="/" aria-label="Sriram Advisory home"><span className="sa-brand-mark" aria-hidden="true">SA</span><span>Sriram Advisory</span></Link>
+      <button ref={trigger} className="sa-menu-button" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(true)}>Menu</button>
+      <nav ref={menu} id="primary-navigation" className={`sa-navigation${open ? " is-open" : ""}`} aria-label="Primary navigation">
+        <button className="sa-menu-close" type="button" onClick={close}>Close menu</button>
+        {navigation.map((item, index) => <Link key={item.href} href={item.href} className={index === navigation.length - 1 ? "sa-nav-cta" : "sa-nav-link"} aria-current={pathname === item.href ? "page" : undefined} onClick={() => { if (open) close(); }}>{item.label}</Link>)}
       </nav>
     </div></header>
   </>;

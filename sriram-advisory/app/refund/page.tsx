@@ -1,6 +1,7 @@
 ﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import { proRefundPromise } from "@/lib/commercialCopy";
 
 export const metadata: Metadata = {
   title: "Refund Policy | Sriram Advisory",
@@ -8,12 +9,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/refund" },
 };
 
-const LAST_UPDATED = "29 September 2026";
+const LAST_UPDATED = "11 October 2026";
 
 export default function RefundPage() {
   return (
     <>
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#0a1628" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{
@@ -53,6 +55,10 @@ export default function RefundPage() {
           </div>
 
           {[
+            {
+              heading: "Career Intelligence Report – Pro: specific refund promise",
+              body: `${proRefundPromise} This product-specific promise applies in addition to the general policy below. Earlier purchases retain the offer confirmed at the time of purchase.`,
+            },
             {
               heading: "1. Digital Guides, Reports, and Bundles",
               body: `Because digital files cannot be returned, a completed and accessible digital delivery is normally final. If a file was not delivered, cannot be opened, is materially incomplete, or does not match the product description, email sriram@sriramadvisory.com within 7 days of delivery. We will replace or correct the file, or issue a refund where the issue cannot be resolved.`,
@@ -97,6 +103,7 @@ We will respond within 2 business days. Approved refunds are returned to the ori
           ))}
         </div>
       </section>
+      </main>
       <Footer />
     </>
   );

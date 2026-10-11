@@ -58,6 +58,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <StructuredData data={productSchema} />
 
       <section
@@ -752,13 +753,13 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
                 marginBottom: 12,
               }}
             >
-              Honest trust signals, not invented social proof
+              Practical guidance with a clear purpose
             </h2>
             <p style={{ fontSize: 15, color: "#4a5a7a", lineHeight: 1.75, marginBottom: 14 }}>
               {FOUNDER_TRUST_NOTE}
             </p>
             <p style={{ fontSize: 15, color: "#5a6a8a", lineHeight: 1.75 }}>
-              These pages deliberately tell you who the guide is not for, because the goal is not to push everyone through checkout. The goal is to help the right professional make a sharper career decision faster.
+              I explain the audience, contents and limits of each guide so you can decide whether it fits your question. Use it to connect your experience to a practical next step.
             </p>
           </div>
         </div>
@@ -1008,6 +1009,7 @@ export default function GuideSalesPage({ content }: GuideSalesPageProps) {
 
       <ProductRecommendations />
 
+      </main>
       <Footer />
     </div>
   );

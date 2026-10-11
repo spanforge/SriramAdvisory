@@ -119,7 +119,7 @@ const FRAMEWORK_GROUPS = [
         path: "Short read",
         href: "/insights/seniority-trap-mid-career-ai-risk",
         price: "Free",
-        body: "An essay on why mid-career experience can become fragile when market signals change.",
+        body: "A post on why mid-career experience can become fragile when market signals change.",
       },
     ],
   },
@@ -159,6 +159,7 @@ export default function ProductsPage() {
   return (
     <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
+      <main id="main-content" className="sa-legacy">
 
       <section
         style={{
@@ -291,6 +292,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

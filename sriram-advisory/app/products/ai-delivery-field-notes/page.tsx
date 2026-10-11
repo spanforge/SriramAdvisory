@@ -98,6 +98,7 @@ export default function AIChampionFieldNotesPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <ProductStructuredData name="AI Delivery Field Notes" description="A practical guide to carrying an AI initiative from pilot to trusted production rollout." path="/products/ai-delivery-field-notes" price={499} />
 
       <section
@@ -426,6 +427,7 @@ export default function AIChampionFieldNotesPage() {
       </section>
 
       <ProductRecommendations />
+      </main>
       <Footer />
     </div>
   );

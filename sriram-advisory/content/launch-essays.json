@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "before-buying-an-ai-tool",
+    "title": "Before buying an AI tool, examine why the task exists",
+    "summary": "A faster task is useful only when the task still serves a useful purpose.",
+    "category": "Technology in practice",
+    "author": "Sriram Srinivasan",
+    "publishedAt": "2026-10-11",
+    "updatedAt": "2026-10-11",
+    "status": "published",
+    "featured": true,
+    "sources": [],
+    "cta": "Have a technology decision to work through? Discuss your challenge",
+    "interest": "general",
+    "illustrative": true
+  },
+  {
+    "slug": "look-at-unfinished-work",
+    "title": "When everyone is busy, look at the unfinished work",
+    "summary": "Activity alone cannot tell you where progress is getting stuck.",
+    "category": "Work and organisations",
+    "author": "Sriram Srinivasan",
+    "publishedAt": "2026-10-11",
+    "updatedAt": "2026-10-11",
+    "status": "published",
+    "featured": true,
+    "sources": [],
+    "cta": "Is progress getting stuck? Discuss your challenge",
+    "interest": "sprint",
+    "illustrative": false
+  },
+  {
+    "slug": "training-needs-practice",
+    "title": "Training needs a place to become practice",
+    "summary": "Course completion is a starting point for examining capability, not the final measure.",
+    "category": "Learning and capability",
+    "author": "Sriram Srinivasan",
+    "publishedAt": "2026-10-11",
+    "updatedAt": "2026-10-11",
+    "status": "published",
+    "featured": true,
+    "sources": [],
+    "cta": "Working on a capability challenge? Discuss a workshop",
+    "interest": "workshop",
+    "illustrative": false
+  }
+]

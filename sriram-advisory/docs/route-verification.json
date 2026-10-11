@@ -1,0 +1,538 @@
+{
+  "productionSitemapCaptured": "2026-10-11",
+  "productionPaths": 42,
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/about/our-thinking",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/ai-delivery-intelligence",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/ai-literacy",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/ai-literacy/absolute-beginners",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/assessments",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/bundles",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/business",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/career-intelligence-report",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/career-intelligence-report/sa-airs-pro",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/careers",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/disclaimer",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/frameworks",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/frameworks/ai-leverage-ladder",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/frameworks/career-positioning-audit",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/frameworks/replaceability-curve",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/frameworks/sa-airs",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/free",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/free/reel-lessons-part1-v1-release",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/guides",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/ba-to-ai-pm-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/bpo-career-survival-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/business-analyst-survival-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/cloud-engineer-ai-survival-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/data-analyst-career-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/data-engineer-ai-survival-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/devops-survival-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/fde-career-transition-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/fresher-ai-survival-guide",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/hr",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/guides/hr-recruiter-survival-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/it",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/guides/java-developer-ai-leverage-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/project-delivery-manager-survival-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/python-developer-ai-leverage-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/qa-engineer-survival-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/guides/selenium-engineer-upgrade-guide-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/insights",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/insights/before-buying-an-ai-tool",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/insights/choose-ai-use-cases-before-tools",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/insights/delivery-reporting-that-supports-decisions",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/insights/look-at-unfinished-work",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/insights/practical-learning-reveals-understanding",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/insights/sales-to-delivery-handover",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/insights/seniority-trap-mid-career-ai-risk",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/insights/training-needs-practice",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/methodology",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/payment-status",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/products",
+      "status": 308,
+      "location": "/assessments",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/products/ai-delivery-field-notes",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/products/ai-futures-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/products/ai-risk-rankings-india-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/products/airs-assessment",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/products/pro-edition",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/products/state-of-qa-careers-india-2026",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/products/why-expertise-becomes-a-trap",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/refund",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/report",
+      "status": 307,
+      "location": "/reports",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/reports",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/resources",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/resources/decision-note-template",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/resources/problem-framing-worksheet",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/resources/sales-delivery-handover-checklist",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/resources/sprint-deliverables-example",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/services/business-delivery-health-check",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/services/career-positioning-audit",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/services/implementation-support",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/services/problem-solving-sprint",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/services/team-workshops",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/system",
+      "status": 307,
+      "location": "/methodology",
+      "pass": true,
+      "productionListed": false
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/tools/free-ai-exposure-check",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": true
+    },
+    {
+      "path": "/work-with-sriram",
+      "status": 200,
+      "location": "",
+      "pass": true,
+      "productionListed": false
+    }
+  ]
+}

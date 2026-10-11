@@ -1,9 +1,10 @@
 import { AI_LITERACY_PRODUCTS, FREE_RESOURCES, GUIDES, REPORTS } from "./siteCatalog";
 import { INSIGHTS } from "./insights";
+import { consultingResources } from "@/content/consulting-resources";
 
 export const siteConfig = {
   brandName: "Sriram Advisory",
-  descriptor: "Founder-led, AI-enabled IT services performance and career intelligence.",
+  descriptor: "Clear thinking. Practical progress.",
   canonicalOrigin: "https://www.sriramadvisory.com",
   email: "sriram@sriramadvisory.com",
   whatsapp: "https://wa.me/919342229420",
@@ -29,6 +30,7 @@ export type ResourceRecord = {
 const slugId = (href: string) => href.split("/").filter(Boolean).join("-");
 
 export const resources: ResourceRecord[] = [
+  ...consultingResources.map((resource, index): ResourceRecord => ({ id: resource.slug, title: resource.title, summary: resource.summary, topic: "business", format: "template", access: "free", href: `/resources/${resource.slug}`, role: "Leaders and teams", featuredRank: index - 10, publishedAt: "2026-10-11" })),
   { id: "free-ai-exposure", title: "Free AI Exposure Check", summary: "A six-question educational check to explore how AI may affect parts of your role.", topic: "career", format: "tool", access: "free", href: "/tools/free-ai-exposure-check", role: "All professionals", featuredRank: 1, publishedAt: "2026-09-01" },
   ...GUIDES.map((guide, index): ResourceRecord => ({ id: slugId(guide.href), title: guide.title, summary: guide.blurb, topic: "career", format: "guide", access: "paid", price: guide.price, href: guide.href, role: guide.role, featuredRank: 10 + index, publishedAt: "2026-06-01" })),
   ...REPORTS.map((report, index): ResourceRecord => ({ id: slugId(report.href), title: report.title, summary: report.blurb, topic: "career", format: "report", access: "paid", price: report.price, href: report.href, role: "Professionals and leaders", featuredRank: 40 + index, publishedAt: "2026-06-01" })),

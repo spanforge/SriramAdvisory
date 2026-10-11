@@ -67,3 +67,8 @@ Free_Assessement_Spec.docx
 free-assessment.jsx
 Free_Assessment_Spec.docx
 Sriram_Advisory_Website_Development_Specification_v1_1.docx
+Sriram_Advisory_Website_Implementation_Specification_v2_1.docx
+
+# Local verification artifacts
+/test-results/
+/playwright-report/

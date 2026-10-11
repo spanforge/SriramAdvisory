@@ -19,6 +19,7 @@ export default function BundlesPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
 
       <section
         className="bundles-hero"
@@ -601,6 +602,7 @@ export default function BundlesPage() {
         }
       `}</style>
 
+      </main>
       <Footer />
     </div>
   );

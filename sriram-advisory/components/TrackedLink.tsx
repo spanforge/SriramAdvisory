@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 import type { CSSProperties, ReactNode } from "react";
 
 type TrackedLinkProps = {

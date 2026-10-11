@@ -13,6 +13,7 @@ export default function DisclaimerPage() {
   return (
     <div style={{ background: "#ffffff", color: "#0a1628", minHeight: "100vh" }}>
       <Navbar />
+      <main id="main-content" className="sa-legacy">
 
       <section style={{ background: "linear-gradient(160deg, #f8faff 0%, #eef3ff 60%, #e6efff 100%)", paddingTop: 120, paddingBottom: 80, position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(26,79,214,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(26,79,214,0.04) 1px, transparent 1px)", backgroundSize: "64px 64px" }} />
@@ -143,6 +144,7 @@ export default function DisclaimerPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

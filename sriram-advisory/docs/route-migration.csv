@@ -1,0 +1,79 @@
+old URL,action,new URL,canonical,reason,test status
+/,retain,/,https://www.sriramadvisory.com/,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/about,retain,/about,https://www.sriramadvisory.com/about,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/about/our-thinking,retain,/about/our-thinking,https://www.sriramadvisory.com/about/our-thinking,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/ai-delivery-intelligence,retain,/ai-delivery-intelligence,https://www.sriramadvisory.com/ai-delivery-intelligence,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/ai-literacy,retain,/ai-literacy,https://www.sriramadvisory.com/ai-literacy,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/ai-literacy/absolute-beginners,retain,/ai-literacy/absolute-beginners,https://www.sriramadvisory.com/ai-literacy/absolute-beginners,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/assessments,retain,/assessments,https://www.sriramadvisory.com/assessments,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/bundles,retain,/bundles,https://www.sriramadvisory.com/bundles,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/business,retain,/business,https://www.sriramadvisory.com/business,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/career-intelligence-report,retain,/career-intelligence-report,https://www.sriramadvisory.com/career-intelligence-report,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/career-intelligence-report/sa-airs-pro,retain,/career-intelligence-report/sa-airs-pro,https://www.sriramadvisory.com/career-intelligence-report/sa-airs-pro,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/careers,retain,/careers,https://www.sriramadvisory.com/careers,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/contact,retain,/contact,https://www.sriramadvisory.com/contact,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/disclaimer,retain,/disclaimer,https://www.sriramadvisory.com/disclaimer,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/frameworks,redirect,/about/our-thinking,https://www.sriramadvisory.com/about/our-thinking,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/frameworks/ai-leverage-ladder,redirect,/about/our-thinking,https://www.sriramadvisory.com/about/our-thinking,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/frameworks/career-positioning-audit,redirect,/about/our-thinking,https://www.sriramadvisory.com/about/our-thinking,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/frameworks/replaceability-curve,redirect,/about/our-thinking,https://www.sriramadvisory.com/about/our-thinking,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/frameworks/sa-airs,redirect,/about/our-thinking,https://www.sriramadvisory.com/about/our-thinking,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/free,retain,/free,https://www.sriramadvisory.com/free,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/free/reel-lessons-part1-v1-release,retain,/free/reel-lessons-part1-v1-release,https://www.sriramadvisory.com/free/reel-lessons-part1-v1-release,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/guides,retain,/guides,https://www.sriramadvisory.com/guides,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/guides/[slug],retain,/guides/[slug],https://www.sriramadvisory.com/guides/[slug],Repository baseline; reconcile production sitemap and redirect precedence,Route template; concrete content rows tested separately
+/guides/ba-to-ai-pm-guide-2026,retain,/guides/ba-to-ai-pm-guide-2026,https://www.sriramadvisory.com/guides/ba-to-ai-pm-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/bpo-career-survival-guide-2026,retain,/guides/bpo-career-survival-guide-2026,https://www.sriramadvisory.com/guides/bpo-career-survival-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/business-analyst-survival-guide-2026,retain,/guides/business-analyst-survival-guide-2026,https://www.sriramadvisory.com/guides/business-analyst-survival-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/cloud-engineer-ai-survival-guide-2026,retain,/guides/cloud-engineer-ai-survival-guide-2026,https://www.sriramadvisory.com/guides/cloud-engineer-ai-survival-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/data-analyst-career-guide-2026,retain,/guides/data-analyst-career-guide-2026,https://www.sriramadvisory.com/guides/data-analyst-career-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/data-engineer-ai-survival-guide-2026,retain,/guides/data-engineer-ai-survival-guide-2026,https://www.sriramadvisory.com/guides/data-engineer-ai-survival-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/devops-survival-guide-2026,retain,/guides/devops-survival-guide-2026,https://www.sriramadvisory.com/guides/devops-survival-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/fde-career-transition-guide-2026,retain,/guides/fde-career-transition-guide-2026,https://www.sriramadvisory.com/guides/fde-career-transition-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/fresher-ai-survival-guide,retain,/guides/fresher-ai-survival-guide,https://www.sriramadvisory.com/guides/fresher-ai-survival-guide,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/hr,retain,/guides/hr,https://www.sriramadvisory.com/guides/hr,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/guides/hr-recruiter-survival-guide-2026,retain,/guides/hr-recruiter-survival-guide-2026,https://www.sriramadvisory.com/guides/hr-recruiter-survival-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/it,retain,/guides/it,https://www.sriramadvisory.com/guides/it,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/guides/java-developer-ai-leverage-guide-2026,retain,/guides/java-developer-ai-leverage-guide-2026,https://www.sriramadvisory.com/guides/java-developer-ai-leverage-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/project-delivery-manager-survival-guide-2026,retain,/guides/project-delivery-manager-survival-guide-2026,https://www.sriramadvisory.com/guides/project-delivery-manager-survival-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/python-developer-ai-leverage-guide-2026,retain,/guides/python-developer-ai-leverage-guide-2026,https://www.sriramadvisory.com/guides/python-developer-ai-leverage-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/qa-engineer-survival-guide-2026,retain,/guides/qa-engineer-survival-guide-2026,https://www.sriramadvisory.com/guides/qa-engineer-survival-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/guides/selenium-engineer-upgrade-guide-2026,retain,/guides/selenium-engineer-upgrade-guide-2026,https://www.sriramadvisory.com/guides/selenium-engineer-upgrade-guide-2026,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/insights,retain,/insights,https://www.sriramadvisory.com/insights,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/insights/[slug],retain,/insights/[slug],https://www.sriramadvisory.com/insights/[slug],Repository baseline; reconcile production sitemap and redirect precedence,Route template; concrete content rows tested separately
+,create,/insights/before-buying-an-ai-tool,https://www.sriramadvisory.com/insights/before-buying-an-ai-tool,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/insights/choose-ai-use-cases-before-tools,retain,/insights/choose-ai-use-cases-before-tools,https://www.sriramadvisory.com/insights/choose-ai-use-cases-before-tools,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/insights/delivery-reporting-that-supports-decisions,retain,/insights/delivery-reporting-that-supports-decisions,https://www.sriramadvisory.com/insights/delivery-reporting-that-supports-decisions,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+,create,/insights/look-at-unfinished-work,https://www.sriramadvisory.com/insights/look-at-unfinished-work,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/insights/practical-learning-reveals-understanding,retain,/insights/practical-learning-reveals-understanding,https://www.sriramadvisory.com/insights/practical-learning-reveals-understanding,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/insights/sales-to-delivery-handover,retain,/insights/sales-to-delivery-handover,https://www.sriramadvisory.com/insights/sales-to-delivery-handover,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/insights/seniority-trap-mid-career-ai-risk,retain,/insights/seniority-trap-mid-career-ai-risk,https://www.sriramadvisory.com/insights/seniority-trap-mid-career-ai-risk,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+,create,/insights/training-needs-practice,https://www.sriramadvisory.com/insights/training-needs-practice,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/methodology,retain,/methodology,https://www.sriramadvisory.com/methodology,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/payment-status,retain,/payment-status,https://www.sriramadvisory.com/payment-status,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/privacy,retain,/privacy,https://www.sriramadvisory.com/privacy,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/products,redirect,/assessments,https://www.sriramadvisory.com/assessments,Repository baseline; reconcile production sitemap and redirect precedence,Local 308 -> 200; inherited redirects require final migration review
+/products/ai-delivery-field-notes,retain,/products/ai-delivery-field-notes,https://www.sriramadvisory.com/products/ai-delivery-field-notes,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/products/ai-futures-2026,retain,/products/ai-futures-2026,https://www.sriramadvisory.com/products/ai-futures-2026,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/products/ai-risk-rankings-india-2026,retain,/products/ai-risk-rankings-india-2026,https://www.sriramadvisory.com/products/ai-risk-rankings-india-2026,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/products/airs-assessment,retain,/products/airs-assessment,https://www.sriramadvisory.com/products/airs-assessment,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/products/pro-edition,retain,/products/pro-edition,https://www.sriramadvisory.com/products/pro-edition,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/products/state-of-qa-careers-india-2026,retain,/products/state-of-qa-careers-india-2026,https://www.sriramadvisory.com/products/state-of-qa-careers-india-2026,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/products/why-expertise-becomes-a-trap,retain,/products/why-expertise-becomes-a-trap,https://www.sriramadvisory.com/products/why-expertise-becomes-a-trap,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/refund,retain,/refund,https://www.sriramadvisory.com/refund,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/report,redirect,/reports,https://www.sriramadvisory.com/reports,Repository baseline; reconcile production sitemap and redirect precedence,Local 307 -> 200; inherited redirects require final migration review
+/reports,retain,/reports,https://www.sriramadvisory.com/reports,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/resources,retain,/resources,https://www.sriramadvisory.com/resources,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+,create,/resources/decision-note-template,https://www.sriramadvisory.com/resources/decision-note-template,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+,create,/resources/problem-framing-worksheet,https://www.sriramadvisory.com/resources/problem-framing-worksheet,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+,create,/resources/sales-delivery-handover-checklist,https://www.sriramadvisory.com/resources/sales-delivery-handover-checklist,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+,create,/resources/sprint-deliverables-example,https://www.sriramadvisory.com/resources/sprint-deliverables-example,Captured production sitemap and concrete prerender route inventory,Local HTTP 200
+/services/business-delivery-health-check,retain,/services/business-delivery-health-check,https://www.sriramadvisory.com/services/business-delivery-health-check,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/services/career-positioning-audit,retain,/services/career-positioning-audit,https://www.sriramadvisory.com/services/career-positioning-audit,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+,create,/services/implementation-support,https://www.sriramadvisory.com/services/implementation-support,Specified v2.1 service route,Local HTTP 200
+,create,/services/problem-solving-sprint,https://www.sriramadvisory.com/services/problem-solving-sprint,Specified v2.1 service route,Local HTTP 200
+,create,/services/team-workshops,https://www.sriramadvisory.com/services/team-workshops,Specified v2.1 service route,Local HTTP 200
+/system,redirect,/methodology,https://www.sriramadvisory.com/methodology,Repository baseline; reconcile production sitemap and redirect precedence,Local 307 -> 200; inherited redirects require final migration review
+/terms,retain,/terms,https://www.sriramadvisory.com/terms,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+/tools/free-ai-exposure-check,retain,/tools/free-ai-exposure-check,https://www.sriramadvisory.com/tools/free-ai-exposure-check,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
+,create,/work-with-sriram,https://www.sriramadvisory.com/work-with-sriram,Specified v2.1 service route,Local HTTP 200

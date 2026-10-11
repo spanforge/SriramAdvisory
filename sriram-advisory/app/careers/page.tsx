@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ClosingCTA, Hero, LinkCard, PageShell, Section } from "@/components/AdvisoryUI";
+import { copy } from "@/lib/positioning";
 import { relatedInsights, resources } from "@/lib/advisoryContent";
 
 export const metadata: Metadata = {
@@ -16,8 +17,8 @@ export default function CareersPage() {
   return <PageShell>
     <Hero
       eyebrow="Career Intelligence"
-      title="Make a stronger career decision as IT services work changes."
-      body="India-focused assessments, guides and research for professionals across IT services, GCCs and adjacent digital roles navigating AI, changing expectations and career positioning."
+      title={copy.careers.title}
+      body={copy.careers.summary}
       primary={{ label: "Explore Career Assessments", href: "/assessments" }}
       secondary={{ label: "Take the Free AI Exposure Check", href: "/tools/free-ai-exposure-check" }}
     />
@@ -56,6 +57,6 @@ export default function CareersPage() {
 
     {careerInsights.length > 0 && <Section title="Career intelligence insights"><div className="sa-grid">{careerInsights.slice(0, 3).map(article => <LinkCard key={article.slug} title={article.title} body={article.summary} href={`/insights/${article.slug}`} cta="Read insight" />)}</div></Section>}
 
-    <ClosingCTA title="What career decision are you working through?" body="Share your role, context and the decision you need to make. We will identify the most relevant current resource or next step." href="/contact?interest=career" label="Discuss Your Career Question" />
+    <ClosingCTA title="What career decision are you working through?" body="Share your role, context and the decision you need to make. I will help identify the most relevant current resource or next step." href="/contact?interest=career" label="Discuss Your Career Question" />
   </PageShell>;
 }

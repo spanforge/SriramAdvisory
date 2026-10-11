@@ -9,9 +9,9 @@ export function PageShell({ children }: { children: ReactNode }) {
   return <><Navbar /><main id="main-content">{children}</main><Footer /></>;
 }
 
-export function Hero({ eyebrow, title, body, primary, secondary }: { eyebrow?: string; title: string; body: string; primary: { label: string; href: string }; secondary?: { label: string; href: string } }) {
+export function Hero({ eyebrow, title, body, tagline, primary, secondary }: { eyebrow?: string; title: string; body: string; tagline?: string; primary: { label: string; href: string }; secondary?: { label: string; href: string } }) {
   return <section className="sa-hero"><div className="sa-wrap sa-prose">
-    {eyebrow && <p className="sa-eyebrow">{eyebrow}</p>}<h1>{title}</h1><p className="sa-lede">{body}</p>
+    {eyebrow && <p className="sa-eyebrow">{eyebrow}</p>}<h1>{title}</h1>{tagline && <p className="sa-service-tagline">{tagline}</p>}<p className="sa-lede">{body}</p>
     <div className="sa-actions"><Link className="sa-btn sa-btn-primary" href={primary.href}>{primary.label}</Link>{secondary && <Link className="sa-btn sa-btn-secondary" href={secondary.href}>{secondary.label}</Link>}</div>
   </div></section>;
 }
@@ -33,6 +33,6 @@ export function ResourceCard({ resource }: { resource: ResourceRecord }) {
   return <LinkCard title={resource.title} body={resource.summary} href={resource.href} cta={resource.access === "free" ? "Open resource" : "View details"} meta={`${resource.topic.replaceAll("-", " ")} · ${resource.format} · ${resource.price ?? "Free"}`} />;
 }
 
-export function ClosingCTA({ title = "What would you like to improve?", body = "Tell us where you are facing a challenge. We will help you identify whether Sriram Advisory is the right fit.", href = "/contact", label = "Discuss Your Challenge" }: { title?: string; body?: string; href?: string; label?: string }) {
+export function ClosingCTA({ title = "What would you like to improve?", body = "Tell me where you are facing a challenge. I will help you establish whether my experience fits the question.", href = "/contact", label = "Discuss Your Challenge" }: { title?: string; body?: string; href?: string; label?: string }) {
   return <section className="sa-closing"><div className="sa-wrap sa-prose"><h2>{title}</h2><p>{body}</p><Link className="sa-btn sa-btn-primary" href={href}>{label}</Link></div></section>;
 }

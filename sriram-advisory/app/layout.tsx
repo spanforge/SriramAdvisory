@@ -1,4 +1,20 @@
-import type{Metadata}from"next";import StructuredData from"@/components/StructuredData";import{siteConfig}from"@/lib/advisoryContent";import"./globals.css";
-export const metadata:Metadata={metadataBase:new URL("https://www.sriramadvisory.com"),title:{default:"Sriram Advisory",template:"%s"},description:"Founder-led, AI-enabled advisory for better IT services delivery and stronger career decisions.",icons:{icon:"/sriram.png",apple:"/sriram.png"},openGraph:{siteName:"Sriram Advisory",type:"website",images:[{url:"/sriram.png",alt:"Sriram Advisory"}]}};
-export const viewport={width:"device-width",initialScale:1,maximumScale:5,userScalable:true};
-export default function RootLayout({children}:{children:React.ReactNode}){const graph={"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":`${siteConfig.canonicalOrigin}/#organization`,name:siteConfig.brandName,url:siteConfig.canonicalOrigin,email:siteConfig.email,logo:`${siteConfig.canonicalOrigin}/sriram.png`,founder:{"@id":`${siteConfig.canonicalOrigin}/#founder`}},{"@type":"Person","@id":`${siteConfig.canonicalOrigin}/#founder`,name:"Sriram Srinivasan",url:`${siteConfig.canonicalOrigin}/about`,image:`${siteConfig.canonicalOrigin}/sriram.png`,jobTitle:"Founder",worksFor:{"@id":`${siteConfig.canonicalOrigin}/#organization`},knowsAbout:["IT services delivery","Operations","SDLC and quality","Sales and pre-sales","Professional capability development","Technology adoption","Career intelligence","Responsible AI-assisted analysis"]},{"@type":"WebSite","@id":`${siteConfig.canonicalOrigin}/#website`,name:siteConfig.brandName,url:siteConfig.canonicalOrigin,publisher:{"@id":`${siteConfig.canonicalOrigin}/#organization`}},{"@type":"ProfessionalService","@id":`${siteConfig.canonicalOrigin}/#service`,name:siteConfig.brandName,url:siteConfig.canonicalOrigin,email:siteConfig.email,description:"Founder-led, AI-enabled advisory for better IT services delivery and stronger career decisions across the changing IT services industry.",founder:{"@id":`${siteConfig.canonicalOrigin}/#founder`}}]};return <html lang="en"><body><StructuredData data={graph}/>{children}</body></html>}
+import type { Metadata, Viewport } from "next";
+import StructuredData from "@/components/StructuredData";
+import { siteIdentity } from "@/lib/positioning";
+import "./globals.css";
+import "./editorial.css";
+export const metadata: Metadata = {
+  metadataBase: new URL(siteIdentity.origin),
+  title: { default: "Sriram Advisory | Look Beyond the Obvious", template: "%s" },
+  description: siteIdentity.description,
+  icons: { icon: "/sriram.png", apple: "/sriram.png" },
+  openGraph: { siteName: siteIdentity.name, type: "website" },
+};
+export const viewport: Viewport = { width: "device-width", initialScale: 1 };
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const graph = { "@context": "https://schema.org", "@graph": [
+    { "@type": "Organization", "@id": `${siteIdentity.origin}/#organization`, name: siteIdentity.name, url: siteIdentity.origin, email: siteIdentity.email, founder: { "@id": `${siteIdentity.origin}/#founder` } },
+    { "@type": "Person", "@id": `${siteIdentity.origin}/#founder`, name: siteIdentity.founder, url: `${siteIdentity.origin}/about`, sameAs: [siteIdentity.linkedin], ...(siteIdentity.portrait ? { image: `${siteIdentity.origin}${siteIdentity.portrait}` } : {}), jobTitle: "Independent consultant and founder" },
+  ] };
+  return <html lang="en"><body><StructuredData data={graph} />{children}</body></html>;
+}

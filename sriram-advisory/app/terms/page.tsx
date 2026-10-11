@@ -14,6 +14,7 @@ export default function TermsPage() {
   return (
     <>
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <section className="px-5 md:px-10" style={{ paddingTop: 120, paddingBottom: 80, background: "#0a1628" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{
@@ -103,6 +104,7 @@ Career decisions are yours to make. The assessment is a tool - not a directive.`
           ))}
         </div>
       </section>
+      </main>
       <Footer />
     </>
   );

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { load } from "@cashfreepayments/cashfree-js";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 
 interface Props {
   productName: string;

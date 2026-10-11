@@ -54,6 +54,7 @@ export default function StateOfQACareersIndia2026Page() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
       <ProductStructuredData name="State of QA Careers India 2026" description="An India-first report on testing-career shifts, AI pressure points and adaptation paths." path="/products/state-of-qa-careers-india-2026" price={799} />
 
       <section
@@ -417,6 +418,7 @@ export default function StateOfQACareersIndia2026Page() {
       />
 
       <ProductRecommendations />
+      </main>
       <Footer />
     </div>
   );

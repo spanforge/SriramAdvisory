@@ -14,6 +14,7 @@ export default function AiLiteracyPage() {
   return (
     <div className="font-body bg-white text-[#0a1628] min-h-screen">
       <Navbar />
+      <main id="main-content" className="sa-legacy">
 
       <section
         style={{
@@ -207,6 +208,7 @@ export default function AiLiteracyPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );
