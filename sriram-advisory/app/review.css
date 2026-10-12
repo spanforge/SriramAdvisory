@@ -1,0 +1,41 @@
+﻿/* Product and market advisory, specification v3.0. */
+:root {--sa-ink:#17212b;--sa-brand:#174a73;--sa-accent:#174a73;--sa-surface:#f4f6f8;--sa-border:#dce2e7}
+body,.sa-header,.sa-hero,.sa-footer {background:#fff}
+.sa-wrap,.sa-nav-wrap {width:min(1120px,calc(100% - 64px))}
+.sa-hero h1 {font-size:clamp(38px,4.1vw,56px)}
+.sa-btn-primary,.sa-nav-cta {background:var(--sa-brand);color:#fff}
+.sa-btn-secondary {border:1px solid var(--sa-brand);color:var(--sa-brand)}
+.review-hero-grid {display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:64px;align-items:center}
+.review-hero-grid>div {min-width:0}
+.review-portrait-block .sa-portrait {max-width:280px}
+.review-portrait-block>p {margin-top:16px;font-size:16px;font-weight:600}
+.review-portrait-block>p span {display:block;font-size:14px;font-weight:400;color:var(--sa-muted)}
+.review-decisions {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.review-decision {padding:32px;border:1px solid var(--sa-border);background:#fff}
+.review-decision h3 {font-size:28px;margin:12px 0}
+.review-decision p {margin-bottom:24px;color:var(--sa-muted)}
+.review-decision a {font-size:16px;font-weight:600}
+.review-number {font-size:13px;color:var(--sa-brand);letter-spacing:.12em}
+.review-outputs {margin-bottom:32px}
+.review-deliverables {list-style:decimal-leading-zero;padding-left:32px;max-width:760px}
+.review-deliverables li {border-bottom:1px solid var(--sa-border);padding:24px 0 24px 16px}
+.review-deliverables li::marker {color:var(--sa-brand);font-size:16px}
+.review-deliverables h3 {font-size:26px;margin-bottom:8px}
+.review-process {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;padding-left:24px;margin-bottom:40px}
+.review-email-panel {max-width:760px;padding:32px;border:1px solid var(--sa-border);background:var(--sa-surface);margin-bottom:24px}
+.review-email-panel h3 {font-size:30px;margin-bottom:16px}
+.review-email-address {display:block;margin-top:24px;text-decoration:underline;overflow-wrap:anywhere}
+.review-email-panel .sa-help {margin-top:16px}
+.review-article-meta {font-size:14px;color:var(--sa-muted)}
+@media(max-width:900px){.review-hero-grid{grid-template-columns:minmax(0,1fr) 220px;gap:32px}.review-process{grid-template-columns:1fr;gap:24px}}
+@media(max-width:700px){
+.sa-wrap,.sa-nav-wrap{width:calc(100% - 40px)}
+.sa-hero{padding:36px 0 44px}.sa-hero h1{font-size:36px;line-height:1.13}
+.sa-eyebrow{margin-bottom:16px;font-size:13px}.sa-lede{font-size:17px;line-height:1.55}
+.sa-actions{margin-top:24px;flex-wrap:wrap}.sa-experience-line{font-size:14px;margin-top:20px}
+.review-hero-grid{grid-template-columns:1fr;gap:36px}.review-portrait-block{max-width:220px}
+.review-decisions{grid-template-columns:1fr;gap:16px}.review-decision,.review-email-panel{padding:24px}
+.sa-section,.sa-closing{padding:44px 0}.sa-section h2,.sa-closing h2{font-size:30px}
+.sa-section-intro,.review-decision p{font-size:16px}}
+@media(max-width:350px){.sa-hero h1{font-size:32px}.sa-brand{font-size:17px}.sa-nav-wrap{gap:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

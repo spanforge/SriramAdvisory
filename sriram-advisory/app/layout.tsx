@@ -1,11 +1,13 @@
-import type { Metadata, Viewport } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import StructuredData from "@/components/StructuredData";
 import { siteIdentity } from "@/lib/positioning";
 import "./globals.css";
 import "./editorial.css";
+import "./review.css";
 export const metadata: Metadata = {
+  robots: process.env.NODE_ENV !== "production" || process.env.SRIRAM_STAGING === "1" ? { index: false, follow: false } : undefined,
   metadataBase: new URL(siteIdentity.origin),
-  title: { default: "Sriram Advisory | Look Beyond the Obvious", template: "%s" },
+  title: { default: "Product and Market Advisory | Sriram Advisory", template: "%s" },
   description: siteIdentity.description,
   icons: { icon: "/sriram.png", apple: "/sriram.png" },
   openGraph: { siteName: siteIdentity.name, type: "website" },
@@ -18,3 +20,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   ] };
   return <html lang="en"><body><StructuredData data={graph} />{children}</body></html>;
 }
+
+

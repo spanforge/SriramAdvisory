@@ -1,50 +1,26 @@
-import type { Metadata } from "next";
+﻿import Image from "next/image";
 import Link from "next/link";
-import { PageShell, Section } from "@/components/AdvisoryUI";
-import { Button, FounderHero } from "@/components/EditorialUI";
-import ArticleCard from "@/components/ArticleCard";
-import { copy, services, siteIdentity } from "@/lib/positioning";
-import { getFeaturedArticles } from "@/lib/thinking";
-
-export const metadata: Metadata = {
-  title: "Sriram Advisory | Look Beyond the Obvious",
-  description: siteIdentity.description,
-  alternates: { canonical: "/" },
-};
+import {PageShell, Section, ClosingCTA} from "@/components/AdvisoryUI";
+import {Button} from "@/components/EditorialUI";
+import {decisions, reviewMetadata} from "@/lib/reviewContent";
+import {getProductMarketArticles} from "@/lib/thinking";
+export const metadata = reviewMetadata("Product and Market Advisory | Sriram Advisory","Helping you assess product ideas, market demand, distribution and adoption. Work directly with Sriram on your next product decision.","/");
 export default function Home() {
-  const articles = getFeaturedArticles();
-  const c = copy.continuation;
-  return <PageShell>
-    <FounderHero eyebrow={copy.home.eyebrow} title={copy.home.title} summary={copy.home.summary} experience={copy.home.experience}>
-      <Button href="/contact?interest=general">Discuss your challenge</Button><Button href="/#worked-example" secondary>See how I think</Button>
-    </FounderHero>
-    {articles.length > 0 && <Section title="How I see things" intro="Technology progress is not the same as human progress. My writing examines familiar explanations, overlooked connections and the choices people can make." muted>
-      <div className="sa-grid">{articles.map(article => <ArticleCard key={article.slug} article={article} />)}</div>
-      <p className="sa-section-intro">The same curiosity shapes my advisory work. I question the first explanation, look at the wider context and help people decide what to do next.</p>
-      <div className="sa-actions"><Button href="/insights" secondary>Explore my thinking</Button><Link href={siteIdentity.linkedin}>Read my writing on LinkedIn</Link></div>
-    </Section>}
-    <Section title={copy.home.situationsTitle} intro={copy.home.situationsIntro}>
-      <ul className="sa-situations">{copy.situations.map(([title, body]) => <li key={title}><strong>{title}</strong><span>{body}</span></li>)}</ul>
-    </Section>
-    <Section id="worked-example" title={copy.home.exampleIntroTitle} intro={copy.home.exampleIntro} muted>
-      <div className="sa-worked-example">
-        <p className="sa-illustrative">{copy.example.label}</p><h3>{copy.example.title}</h3>
-        <ol className="sa-example-steps">{copy.exampleStages.map(([stage, text]) => <li key={stage}><strong>{stage}</strong><p>{text}</p></li>)}</ol>
-        <p>{copy.example.qualification}</p>
-      </div>
-      <div className="sa-actions"><Button href="/thinking-in-practice">Explore three practical examples</Button></div>
-    </Section>
-    {services.find(service => service.slug === "problem-solving-sprint")?.enabled && <Section id="start-here" eyebrow="Start here: Problem-Solving Sprint" title={c.sprintTitle} intro={c.sprintSummary}>
-      <div className="sa-grid sa-sprint-outputs">
-        <article className="sa-card"><h3>A clearer problem</h3><p>A problem brief describing the situation, the outcome that matters and the constraints.</p></article>
-        <article className="sa-card"><h3>A reasoned decision</h3><p>A decision note setting out evidence, assumptions, options and a recommended direction.</p></article>
-        <article className="sa-card"><h3>A practical next step</h3><p>A 30-day action plan with agreed owners, first steps and measures to review.</p></article>
-      </div>
-      <div className="sa-actions"><Button href="/services/problem-solving-sprint">Explore the Sprint</Button><Link href="/resources/sprint-deliverables-example">See sample deliverables</Link></div>
-      <p className="sa-help">One challenge, with scope, timetable, your team&apos;s involvement and fee agreed before work begins. <Link href="/work-with-sriram">Explore other ways to work together.</Link></p>
-    </Section>}
-    <Section title={c.experienceTitle} intro={c.experienceBody}><p className="sa-section-intro">{c.experienceClosing}</p><Link href="/about">Meet Sriram →</Link></Section>
-    <Section title={c.contactTitle} intro={c.contactBody}><Button href="/contact?interest=general">Discuss your challenge</Button><p className="sa-email-fallback">Prefer email? <a href={`mailto:${siteIdentity.email}`}>{siteIdentity.email}</a>.</p></Section>
-  </PageShell>;
+ return <PageShell>
+ <section className="sa-hero review-home-hero"><div className="sa-wrap review-hero-grid"><div>
+ <p className="sa-eyebrow">Product and market advisory</p>
+ <h1>Decide what to build. Understand how it can find customers.</h1>
+ <p className="sa-lede">I help you test product ideas, examine market demand, plan how to reach customers and understand what encourages people to start—and keep—using a product.</p>
+ <div className="sa-actions"><Button href="/contact">Request a Review</Button><Button href="/work-with-sriram" secondary>See How I Help</Button></div>
+ <p className="sa-experience-line">Work directly with Sriram Srinivasan. 30 years across technology, delivery and commercial responsibilities.</p>
+ </div><aside className="review-portrait-block"><Image src="/sriram.png" alt="Sriram Srinivasan, founder of Sriram Advisory" width={360} height={450} loading="lazy" className="sa-portrait"/><p>Sriram Srinivasan<span>Founder, Sriram Advisory</span></p></aside></div></section>
+ <Section eyebrow="One decision at a time" title="Which decision are you facing?"><div className="review-decisions">{decisions.map((d,i)=><article className="review-decision" key={d.stage}><span className="review-number" aria-hidden="true">0{i+1}</span><h3>{d.title}</h3><p>{d.body}</p><Link href={"/contact?stage="+d.stage}>Discuss This Decision <span aria-hidden="true">→</span></Link></article>)}</div></Section>
+ <Section title="Start with a Product and Market Review" intro="Bring one product decision or growth problem. We agree the question, examine the available evidence and work towards a reasoned next step." muted>
+ <div className="sa-grid review-outputs">{[["A clear decision brief","Define the question and the outcome that matters."],["Evidence and assumptions made explicit","Understand what is known and what still needs testing."],["A recommended next test","Agree measures for reviewing the result."]].map(([title,body])=><article className="sa-card" key={title}><h3>{title}</h3><p>{body}</p></article>)}</div>
+ <p className="sa-section-intro">This is a paid advisory engagement. Scope, timetable and fee are agreed before work begins. Sending an enquiry does not commit you to a purchase.</p><Button href="/work-with-sriram">See What the Review Includes</Button></Section>
+ <Section title="See how I examine products and markets" intro="Research on why products succeed or struggle to find customers, and what encourages people to adopt them."><div className="sa-grid sa-grid-2">{getProductMarketArticles().slice(0,3).map(article=><article className="sa-card" key={article.slug}><p className="review-article-meta">Analysis · {article.category} · <time dateTime={article.publishedAt??undefined}>{article.publishedAt}</time></p><h3><Link href={"/thinking/"+article.slug}>{article.title}</Link></h3><p>{article.summary}</p><Link href={"/thinking/"+article.slug}>Read Post →</Link></article>)}</div><div className="sa-actions"><Button href="/thinking" secondary>Read Research &amp; Insights</Button></div></Section>
+ <Section title="Work directly with Sriram" intro="My background spans software engineering, delivery, commercial responsibilities, capability building and entrepreneurship. I bring those perspectives to product and market questions, make my reasoning visible and help you decide what to test next." muted><Link href="/about">About Sriram →</Link></Section>
+ <ClosingCTA title="What decision is holding you back?" body="Tell me what you are building or selling, where you are stuck and what you have already tried." label="Request a Review"/>
+ </PageShell>;
 }
 

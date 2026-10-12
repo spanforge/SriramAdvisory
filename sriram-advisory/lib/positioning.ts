@@ -1,14 +1,15 @@
-import copy from "@/content/site-v21.json";
+﻿import copy from "@/content/site-v21.json";
 export { copy };
 export const siteIdentity = {
   name: "Sriram Advisory", founder: "Sriram Srinivasan", email: "sriram@sriramadvisory.com",
-  origin: "https://www.sriramadvisory.com", tagline: "Look beyond the obvious. Move forward.",
-  description: "Helping business owners and leaders see persistent problems differently, uncover overlooked causes and choose practical next steps.",
+  origin: "https://www.sriramadvisory.com", tagline: "Product and market advisory.",
+  description: "Helping you assess product ideas, market demand, distribution and adoption. Work directly with Sriram on your next product decision.",
   // Existing portrait reuse approved by owner on 11 October 2026; null enables text-only fallback.
   portrait: "/sriram.png" as string | null,
   linkedin: "https://www.linkedin.com/in/sriramadvisory/",
 };
 export const interestLabels = {
+  idea: "Idea", market: "Market", distribution: "Distribution", adoption: "Adoption", unsure: "Unsure",
   general: "A business or technology challenge", sprint: "Problem-Solving Sprint",
   implementation: "Implementation support", workshop: "Team workshop",
   "health-check": "Delivery Health Check", career: "Career question",
@@ -27,8 +28,11 @@ export function enabledInterests(): Interest[] {
   });
 }
 export const navigation = [
-  { label: "Work with Sriram", href: "/work-with-sriram" },
-  { label: "Thinking", href: "/insights" }, { label: "About", href: "/about" },
-  { label: "Resources", href: "/resources" }, { label: "Discuss your challenge", href: "/contact" },
+  { label: "How I Help", href: "/work-with-sriram" },
+  { label: "Research & Insights", href: "/thinking" }, { label: "About", href: "/about" },
+  { label: "Request a Review", href: "/contact" },
 ];
 export function enquiryHref(interest: Interest) { return `/contact?interest=${interest}`; }
+
+
+

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/refund" },
 };
 
-const LAST_UPDATED = "11 October 2026";
+const LAST_UPDATED = "12 October 2026";
 
 export default function RefundPage() {
   return (
@@ -68,8 +68,8 @@ export default function RefundPage() {
               body: `If a personalised assessment or audit was not delivered, was materially incomplete, or did not reflect the information you submitted, email us within 7 days of delivery. We will review the issue and either correct or re-do the work at no charge, or issue a refund where the issue cannot be resolved.`,
             },
             {
-              heading: "3. Business Advisory Engagements",
-              body: `Cancellation, rescheduling, and refund terms for a Business and Delivery Health Check or other agreed advisory work are stated in the written proposal. If the delivered work is materially incomplete against that proposal, contact us within 7 days so the issue can be reviewed and resolved.`,
+              heading: "3. Product and Market Review and Other Advisory Engagements",
+              body: `Cancellation, rescheduling, and refund terms for a Product and Market Review, Business and Delivery Health Check or other agreed advisory work are stated in the written proposal. If the delivered work is materially incomplete against that proposal, contact us within 7 days so the issue can be reviewed and resolved.`,
             },
             {
               heading: "4. Legacy Purchases",
@@ -108,3 +108,4 @@ We will respond within 2 business days. Approved refunds are returned to the ori
     </>
   );
 }
+

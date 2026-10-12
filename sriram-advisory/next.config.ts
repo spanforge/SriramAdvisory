@@ -1,11 +1,12 @@
-import createMDX from "@next/mdx";
+﻿import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "mdx"],
-  outputFileTracingIncludes: { "/insights/*": ["./content/articles/*.mdx"], "/insights": ["./content/articles/*.mdx"], "/": ["./content/articles/*.mdx"] },
+  outputFileTracingIncludes: { "/thinking/*": ["./content/articles/*.mdx"], "/thinking": ["./content/articles/*.mdx"], "/insights/*": ["./content/articles/*.mdx"], "/insights": ["./content/articles/*.mdx"], "/": ["./content/articles/*.mdx"] },
   async redirects() {
     return [
+      { source: "/services/problem-solving-sprint", destination: "/work-with-sriram", statusCode: 301 },
       { source: "/products", destination: "/assessments", permanent: true },
       { source: "/services", destination: "/work-with-sriram", statusCode: 301 },
       { source: "/our-thinking", destination: "/about/our-thinking", permanent: true },
@@ -22,6 +23,7 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+
       {
         source: "/:path*",
         headers: [
@@ -36,3 +38,5 @@ const nextConfig: NextConfig = {
 };
 
 export default createMDX()(nextConfig);
+
+

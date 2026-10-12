@@ -1,0 +1,41 @@
+[
+    {
+        "slug":  "what-nature-teaches-us-about-product-distribution",
+        "title":  "What nature teaches us about product distribution",
+        "summary":  "Building software is easier. Distribution remains hard. What seeds, bees and shared incentives can teach us about helping products spread.",
+        "category":  "Distribution and adoption",
+        "author":  "Sriram Srinivasan",
+        "publishedAt":  "2026-10-12",
+        "updatedAt":  null,
+        "status":  "published",
+        "featured":  true,
+        "sources":  [
+
+                    ],
+        "cta":  "Request a Review",
+        "ctaHref":  "/contact",
+        "interest":  "distribution",
+        "illustrative":  false
+    },
+    {
+        "slug":  "how-products-found-their-customers-01-dropbox",
+        "title":  "How Products Found Their Customers — 01 Dropbox",
+        "summary":  "Dropbox rewarded referrals with more of what customers already valued: storage. The lesson is to make discovery valuable for everyone involved.",
+        "category":  "Distribution and adoption",
+        "author":  "Sriram Srinivasan",
+        "publishedAt":  "2026-10-12",
+        "updatedAt":  null,
+        "status":  "published",
+        "featured":  true,
+        "sources":  [
+                        {
+                            "url":  "https://blog.dropbox.com/topics/company/dropbox-referrals-are-now-twice-as-nice",
+                            "title":  "Dropbox: Dropbox referrals are now twice as nice! (3 April 2012)"
+                        }
+                    ],
+        "cta":  "Request a Review",
+        "ctaHref":  "/contact",
+        "interest":  "distribution",
+        "illustrative":  false
+    }
+]

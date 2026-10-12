@@ -4,11 +4,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Sriram Advisory",
-  description: "Terms of service for Sriram Advisory assessments and strategic advisory engagements.",
+  description: "Terms of service for the Product and Market Review and existing Sriram Advisory products.",
   alternates: { canonical: "/terms" },
 };
 
-const LAST_UPDATED = "29 September 2026";
+const LAST_UPDATED = "12 October 2026";
 
 export default function TermsPage() {
   return (
@@ -43,21 +43,24 @@ export default function TermsPage() {
             {
               heading: "2. Services Offered",
               body: `Sriram Advisory currently offers:
+- Product and Market Review: a paid advisory engagement focused on one agreed question about an idea, market, distribution or adoption
 - Digital career guides, research reports, and report bundles shown in the Resources catalogue
 - SA-AIRS assessments and the Career Positioning Audit shown on the Assessments pages
 - Business and Delivery Health Check engagements agreed through a written proposal
 
-The product page or written proposal shown before purchase defines the scope, price, deliverables, and any applicable delivery timing.`,
+The product page or written proposal shown before purchase defines the scope, price, deliverables, and any applicable delivery timing. Sending a review enquiry is free and does not create a paid booking. A review starts only after the written scope, timetable, evidence requirements and fee are agreed.`,
             },
             {
               heading: "3. Nature of the Service",
-              body: `SA-AIRS(TM) assessments are structured analytical opinions based on the information you provide and Sriram Advisory's proprietary methodology. They are not financial advice, legal advice, or a guarantee of any employment outcome.
+              body: `The Product and Market Review provides advisory judgement based on available evidence. It may recommend proceeding, revising, pausing or gathering more evidence. It does not guarantee demand, customer adoption, revenue or product success. Development, advertising, creative production, sales execution, interviews, surveys, participant recruitment and paid data are included only where explicitly agreed in the written scope.
+
+SA-AIRS(TM) assessments are structured analytical opinions based on the information you provide and Sriram Advisory's proprietary methodology. They are not financial advice, legal advice, or a guarantee of any employment outcome.
 
 The accuracy of the assessment depends on the accuracy and completeness of the information you provide. Providing false or incomplete information will affect the quality of your results.`,
             },
             {
               heading: "4. Delivery",
-              body: `Digital products are delivered to the email address provided at checkout according to the timing stated on the relevant product page. Personalised assessments and audits are delivered according to the timing stated on their service page. Business advisory scope, schedule, outputs, and fees are confirmed in a written proposal before work begins.
+              body: `Digital products are delivered to the email address provided at checkout according to the timing stated on the relevant product page. Personalised assessments and audits are delivered according to the timing stated on their service page. Product and Market Review and other advisory scope, schedule, outputs, and fees are confirmed in a written proposal before work begins.
 
 If an exceptional delay affects an order, you will be notified using the contact information supplied with the purchase.`,
             },
@@ -109,3 +112,4 @@ Career decisions are yours to make. The assessment is a tool - not a directive.`
     </>
   );
 }
+

@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { enabledInterests, interestLabels, isInterest, copy, siteIdentity, type Interest } from "@/lib/positioning";
+import { interestLabels, isInterest, copy, siteIdentity, type Interest } from "@/lib/positioning";
 import { validateEnquiry, formErrors, type Enquiry } from "@/lib/enquiryValidation";
 
 export type SubmissionResult = { ok: true; enquiryId: string } | { ok: false; code: string; fieldErrors?: Record<string, string> };
@@ -9,8 +9,8 @@ type Fields = { name: string; email: string; organisation: string; interest: Int
 type Props = { initialInterest?: string; source?: string; onSubmitEnquiry: (payload: Enquiry & { website: string }, key: string) => Promise<SubmissionResult> };
 
 export default function EnquiryForm({ initialInterest, source = "contact", onSubmitEnquiry }: Props) {
-  const options = enabledInterests();
-  const [form, setForm] = useState<Fields>({ name: "", email: "", organisation: "", interest: isInterest(initialInterest) && options.includes(initialInterest) ? initialInterest : "general", challenge: "", attempts: "", outcome: "", privacyAcknowledged: false, source, website: "" });
+  const options: Interest[] = ["idea", "market", "distribution", "adoption", "unsure"];
+  const [form, setForm] = useState<Fields>({ name: "", email: "", organisation: "", interest: isInterest(initialInterest) && options.includes(initialInterest) ? initialInterest : "unsure", challenge: "", attempts: "", outcome: "", privacyAcknowledged: false, source, website: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "failure">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [failure, setFailure] = useState("");
@@ -74,3 +74,4 @@ export default function EnquiryForm({ initialInterest, source = "contact", onSub
     <p className="sa-email-fallback">Prefer email? <a href={`mailto:${siteIdentity.email}`}>{siteIdentity.email}</a>.</p>
   </form>;
 }
+

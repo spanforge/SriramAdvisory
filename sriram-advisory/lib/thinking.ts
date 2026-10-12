@@ -1,7 +1,10 @@
-import "server-only";
+﻿import "server-only";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { ComponentType } from "react";
+import productMarketPosts from "@/content/product-market-posts.json";
+import NatureDistribution from "@/content/articles/what-nature-teaches-us-about-product-distribution.mdx";
+import DropboxDistribution from "@/content/articles/how-products-found-their-customers-01-dropbox.mdx";
 import archive from "@/content/archive-articles.json";
 import launch from "@/content/launch-essays.json";
 import linkedinPosts from "@/content/linkedin-posts.json";
@@ -18,6 +21,8 @@ import Article7 from "@/content/articles/training-needs-practice.mdx";
 export const categories = ["Decisions and judgment", "Work and organisations", "Technology in practice", "Learning and capability", "Technology and society"];
 const archiveCategories: Record<string, string> = { business: "Work and organisations", career: "Career decisions", "technology-digital-safety": "Technology in practice", education: "Learning and capability" };
 const bodies: Record<string, ComponentType> = {
+  "what-nature-teaches-us-about-product-distribution": NatureDistribution,
+  "how-products-found-their-customers-01-dropbox": DropboxDistribution,
   "delivery-reporting-that-supports-decisions": Article0,
   "sales-to-delivery-handover": Article1,
   "choose-ai-use-cases-before-tools": Article2,
@@ -36,6 +41,7 @@ export type Article = {
   interest: string; illustrative: boolean; body: string; readTime: string; Body: ComponentType;
 };
 const records: Omit<Article, "body" | "readTime" | "Body">[] = [
+  ...productMarketPosts.map(article => ({ ...article, status: article.status as Article["status"] })),
   ...linkedinPosts.map(article => ({ ...article, status: article.status as Article["status"] })),
   ...archive.map(article => ({
     slug: article.slug, title: article.title, summary: article.summary,
@@ -62,4 +68,9 @@ export function getRelatedArticles(article: Article): Article[] {
   const others = getPublishedArticles().filter(item => item.slug !== article.slug).sort((a, b) => (b.publishedAt ?? "").localeCompare(a.publishedAt ?? ""));
   const same = others.filter(item => item.category === article.category);
   return [...same, ...others.filter(item => item.category !== article.category)].slice(0, 2);
+}
+
+export function getProductMarketArticles(): Article[] {
+  const slugs = new Set(productMarketPosts.map(article => article.slug));
+  return getPublishedArticles().filter(article => slugs.has(article.slug));
 }

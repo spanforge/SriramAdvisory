@@ -1,16 +1,11 @@
-import Link from "next/link";
-import type { Metadata } from "next";
-import { PageShell, Section } from "@/components/AdvisoryUI";
-import { FounderHero, Button } from "@/components/EditorialUI";
-import { copy, siteIdentity } from "@/lib/positioning";
-import { founderProfile } from "@/content/founder-profile";
-export const metadata: Metadata = { title: "About Sriram Srinivasan | Sriram Advisory", description: "Meet Sriram Srinivasan and explore his approach to delivery, capability, technology decisions and practical problem-solving.", alternates: { canonical: "/about" } };
+﻿import {PageShell, Section, ClosingCTA} from "@/components/AdvisoryUI";
+import {FounderHero, Button} from "@/components/EditorialUI";
+import {reviewMetadata} from "@/lib/reviewContent";
+export const metadata = reviewMetadata("About Sriram Srinivasan | Sriram Advisory","Meet the founder of Sriram Advisory: 30 years across technology, delivery, commercial responsibilities and capability building.","/about");
 export default function About() {
-  const c = copy.about;
-  return <PageShell><FounderHero title={c.title} summary={c.summary}><Button href="/contact">Discuss your challenge</Button></FounderHero>
-    <section className="sa-section"><div className="sa-wrap sa-prose"><p>{c.connections}</p><p>{c.approach}</p></div></section>
-    <Section title="Experience grounded in how work gets done"><div className="sa-prose">{founderProfile.narrative.map(paragraph => <p key={paragraph}>{paragraph}</p>)}<p className="sa-help">Sriram Advisory is my independent practice. My advice reflects my own judgement and does not represent my employers or clients.</p><a href={siteIdentity.linkedin}>More about my professional background on LinkedIn →</a></div></Section>
-    <Section title={c.processTitle} intro={c.process} muted><p>You work directly with me. I lead the agreed advisory work and make any need for a different specialist explicit.</p><Link href="/resources/sprint-deliverables-example">See a fictional example of the deliverables →</Link></Section>
-    <Section title={c.spanforgeTitle} intro={c.spanforge}><p>Building tools keeps me close to practical questions about evaluation, reliability and the work needed to make a technology useful. I bring that perspective to advisory discussions; Sriram Advisory and Spanforge are separate businesses.</p><a href="https://www.getspanforge.com">Explore Spanforge →</a></Section>
-  </PageShell>;
+ return <PageShell><FounderHero title="I help you examine the decisions behind a product." summary="I am Sriram Srinivasan, founder of Sriram Advisory. My experience spans 30 years across technology, delivery, commercial responsibilities and capability building, alongside experience running a business."><Button href="/contact">Request a Review</Button></FounderHero>
+ <Section title="Evidence, assumptions and a practical next step"><div className="sa-prose"><p>My focus at Sriram Advisory is product ideas, market demand, distribution and adoption. I examine the evidence, question assumptions and help clients choose a practical next step. Where a question needs specialist expertise beyond my experience, I make that clear.</p><p>I am building this practice through research, published analysis and focused advisory engagements. My recommendations reflect the evidence available and the limits of what it can establish.</p></div></Section>
+ <Section title="An independent initiative" muted><p>I am employed full-time at Wipro. Sriram Advisory is my independent initiative. The views and services presented here are my own and do not represent or imply endorsement by Wipro. Engagements are considered subject to my professional obligations and availability.</p></Section>
+ <ClosingCTA title="Work directly with me" body="Share the product decision you are facing. I will assess whether it fits my experience and availability." label="Request a Review"/></PageShell>;
 }
+

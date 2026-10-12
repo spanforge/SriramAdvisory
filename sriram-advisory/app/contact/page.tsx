@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { PageShell, Section } from "@/components/AdvisoryUI";
-import { FounderHero, Button } from "@/components/EditorialUI";
-import { copy } from "@/lib/positioning";
+﻿import Link from "next/link";
+import {PageShell, Hero, Section} from "@/components/AdvisoryUI";
 import FormspreeEnquiryForm from "@/components/FormspreeEnquiryForm";
-export const metadata: Metadata = { title: "Discuss Your Challenge | Sriram Advisory", description: copy.contact.summary, alternates: { canonical: "/contact" } };
-export default async function Contact({ searchParams }: { searchParams: Promise<{ interest?: string }> }) {
-  const { interest } = await searchParams;
-  return <PageShell><FounderHero title={copy.contact.title} summary={copy.contact.summary}><Button href="#enquiry-form">Send an enquiry</Button></FounderHero>
-    <Section id="enquiry-form" title="Start with a short description" intro={copy.contact.warning}><FormspreeEnquiryForm initialInterest={interest} /></Section>
-    <Section title="What happens next" intro="I review your message and reply personally by email. If the question fits my experience, we agree a first discussion to clarify the situation and a useful next step." muted><p>The first discussion establishes what you want to change, what you have tried and whether my experience fits. You can ask about scope, fees and what working together would involve.</p><p>A short description is enough. Sending this form does not commit you to a paid service. Any proposal confirms the work, timing and fee before you decide.</p></Section>
-  </PageShell>;
+import {reviewMetadata} from "@/lib/reviewContent";
+export const metadata=reviewMetadata("Request a Product and Market Review | Sriram Advisory","Share a short description of your product decision and discuss whether a Product and Market Review is a suitable next step.","/contact");
+export default async function Contact({searchParams}:{searchParams:Promise<{stage?:string;interest?:string}>}) {
+ const {stage,interest}=await searchParams;
+ const reviewStages=["idea","market","distribution","adoption","unsure"];
+ const initialInterest=stage&&reviewStages.includes(stage)?stage:interest??"unsure";
+ return <PageShell><Hero title="Tell me about your product decision." body="Share a short description of your situation. I will review it and contact you to discuss whether a Product and Market Review is a suitable next step." primary={{label:"Send an enquiry",href:"#enquiry-form"}}/>
+ <Section id="enquiry-form" title="Start with a short description"><FormspreeEnquiryForm initialInterest={initialInterest}/><p className="sa-help">Please avoid sharing confidential documents or sensitive personal information at this stage. This enquiry is not a paid booking. Scope and fee are agreed separately.</p><p className="sa-help">Read the <Link href="/privacy">Privacy Notice</Link> for information about how your enquiry is used.</p></Section>
+ <Section title="What happens next" intro="I assess whether your question fits my experience and availability. If a review is suitable, we agree a written scope, timetable, evidence requirements and fee before work begins." muted><p>A review begins only after we agree the scope and fee.</p></Section></PageShell>;
 }

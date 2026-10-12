@@ -1,21 +1,15 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { PageShell, Hero, Section, ClosingCTA } from "@/components/AdvisoryUI";
-import { ServiceSummaries, ServiceFAQ } from "@/components/EditorialUI";
-import { copy, healthCheckEnabled } from "@/lib/positioning";
-import EngagementComparison from "@/components/EngagementComparison";
-export const metadata: Metadata = { title: "Work with Sriram | Sriram Advisory", description: copy.work.summary, alternates: { canonical: "/work-with-sriram" } };
+﻿import {PageShell, Hero, Section, ClosingCTA} from "@/components/AdvisoryUI";
+import {outputs, reviewFaq, reviewMetadata} from "@/lib/reviewContent";
+export const metadata = reviewMetadata("Product and Market Review | Sriram Advisory","Work directly with Sriram on one question about your idea, market, distribution or adoption. Receive a written recommendation and a practical next experiment.","/work-with-sriram");
 export default function WorkWithSriram() {
-  const c = copy.work;
-  return <PageShell><Hero title={c.title} body={c.summary} primary={{ label: "Discuss your challenge", href: "/contact?interest=general" }} />
-    <Section eyebrow="The starting point" title="Begin with a Problem-Solving Sprint" intro={copy.continuation.sprintSummary}><Link className="sa-btn sa-btn-primary" href="/services/problem-solving-sprint">Explore the Sprint</Link></Section>
-    <section className="sa-section sa-muted" aria-label="Ways to work together"><div className="sa-wrap"><ServiceSummaries /></div></section>
-    <Section title={c.fitTitle} intro={c.fit}><p>{c.fitClosing}</p></Section>
-    <Section title="Choose the starting point that fits the question" intro="A Sprint helps resolve one problem or decision. A Health Check examines patterns across a defined delivery area. Implementation support and workshops can follow when the next piece of work is clear." muted><EngagementComparison /></Section>
-    <Section title="Work directly with me" intro="I lead the discovery, analysis and readout. We agree what I will do, what your team contributes and when we will review the work."><p>Before you commit, the proposal sets out the timetable, participant time, evidence requirements and fee. An initial enquiry helps establish fit and does not commit you to a paid engagement.</p><p><Link href="/thinking-in-practice">Explore three examples of my approach</Link></p><Link href="/resources/sprint-deliverables-example">Inspect fictional sample deliverables →</Link></Section>
-    <Section title={c.agreementTitle} intro={c.agreement} muted><p>{c.boundary}</p></Section>
-    {healthCheckEnabled && <Section title={c.healthTitle} intro={c.healthSummary}><Link href="/services/business-delivery-health-check">Explore the Health Check →</Link></Section>}
-    <Section title="Questions before we begin"><ServiceFAQ /></Section>
-    <ClosingCTA title={copy.continuation.contactTitle} body={copy.continuation.contactBody} href="/contact?interest=general" label="Discuss your challenge" />
-  </PageShell>;
+ return <PageShell><Hero eyebrow="One focused advisory engagement" title="Product and Market Review" body="Make your next product decision with clearer evidence. Work directly with me on one question about your idea, market, distribution or adoption." primary={{label:"Request a Review",href:"/contact"}} secondary={{label:"Read My Research",href:"/thinking"}}/>
+ <Section title="When the review can help" intro="You are considering an idea and want to examine the problem before building. You have an offer but are unsure who is most likely to buy. You have launched and need to decide how to reach customers. Or people try the product but struggle to continue using it."><p>My focus is software and digital products. Broader enquiries are considered individually.</p></Section>
+ <Section title="What we examine" intro="The customer and the problem; current alternatives and workarounds; available evidence of demand; the reasons someone might switch; and the distribution or adoption constraint relevant to your question." muted><p>We agree which of these belong in your review before starting. The engagement examines one agreed decision.</p></Section>
+ <Section title="What you receive"><ol className="review-deliverables">{outputs.map(([title,body])=><li key={title}><h3>{title}</h3><p>{body}</p></li>)}</ol></Section>
+ <Section title="How it works" muted><ol className="review-process"><li><strong>Share your situation.</strong><p>I assess whether the question fits my experience and availability.</p></li><li><strong>Agree the engagement.</strong><p>We agree a written scope, timetable, evidence requirements and fee.</p></li><li><strong>Examine the evidence.</strong><p>I examine the agreed material and research, discuss the findings with you and deliver the written review.</p></li></ol><p>You provide relevant context and agreed materials. Customer interviews, participant recruitment, surveys, paid data, advertising spend and implementation are included only if explicitly scoped. Evidence gaps may remain when customers or data are unavailable.</p></Section>
+ <Section title="Fees and timing" intro="The review is a paid engagement. You receive a proposal with the scope, timetable and fee before committing."><p>An enquiry is free and does not create a paid booking.</p></Section>
+ <Section title="Questions before we begin" muted><div className="sa-faq-list">{reviewFaq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></Section>
+ <ClosingCTA title="What decision is holding you back?" body="Bring one product decision or growth problem. We can discuss whether a review is the right next step." label="Request a Review"/></PageShell>;
 }
+
+

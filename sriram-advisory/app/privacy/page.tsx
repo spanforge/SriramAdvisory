@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const LAST_UPDATED = "11 October 2026";
+const LAST_UPDATED = "12 October 2026";
 
 export default function PrivacyPage() {
   return (
@@ -38,13 +38,13 @@ export default function PrivacyPage() {
           {[
             {
               heading: "1. Who We Are",
-              body: `Sriram Advisory ("we", "our", "us") is a solo advisory practice operated by Sriram, based in India. We provide career and workforce risk assessments and strategic advisory services. Our contact email is sriram@sriramadvisory.com.`,
+              body: `Sriram Advisory ("we", "our", "us") is a solo advisory practice operated by Sriram, based in India. We provide product and market advisory and retain existing career products. Our contact email is sriram@sriramadvisory.com.`,
             },
             {
               heading: "2. What Information We Collect",
               body: `We collect information you provide directly when you:
 - Purchase or enquire about a product or service (name, professional role, industry, years of experience, concern, email address)
-- Complete a contact form or submit a service request via the website
+- Request a Product and Market Review (name, email, optional organisation, product stage, situation and any optional context you provide)
 - Make a payment (name, email, mobile number - payment is processed by the provider shown at checkout and we do not store card details)
 - Contact us via email or WhatsApp
 
@@ -53,9 +53,10 @@ We do not collect sensitive personal data (health, financial account details, bi
             {
               heading: "3. How We Use Your Information",
               body: `We use your information to:
-- Deliver the assessment or service you requested
+- Assess your review enquiry, reply to you, and discuss scope, timing and fees
+- Deliver the Product and Market Review, assessment or other service you requested
 - Send your report or snapshot results
-- Follow up on your engagement (only if you have an active service request)
+- Follow up on your enquiry or agreed engagement
 - Improve our assessment methodology (using aggregated, anonymised data)
 
 We do not sell, rent, or share your personal data with third parties for marketing purposes.`,
@@ -69,13 +70,13 @@ We do not sell, rent, or share your personal data with third parties for marketi
             },
             {
               heading: "5. Data Retention",
-              body: `Unconverted advisory enquiries are deleted after 180 days. Active client records follow the agreed engagement policy. For existing purchased services, we retain the information needed to deliver the service and handle follow-up queries for a reasonable period thereafter (typically 12 months). Anonymised aggregate data may be retained indefinitely for methodology calibration.`,
+              body: `Enquiry information is used to assess your request and manage related correspondence. Retention depends on whether the enquiry leads to an engagement, whether correspondence is ongoing, and any applicable record-keeping obligations. Contact sriram@sriramadvisory.com to request deletion of your enquiry information; any information that must be retained for an applicable obligation is handled separately. Active client records follow the agreed engagement policy. Existing purchases remain subject to their applicable service and record-keeping requirements.`,
             },
             {
               heading: "6. Third-Party Services",
               body: `We use the following third-party services that may process your data:
 - The payment provider shown at checkout - payment processing (governed by that provider's privacy policy)
-- Formspree - contact-enquiry and free-resource form submission handling (governed by Formspree's privacy policy)
+- Formspree - contact-enquiry and existing free-resource form submission handling (governed by Formspree's privacy policy)
 - Vercel - website hosting (governed by Vercel's privacy policy)
 
 Each of these services operates under their own privacy policies and data processing agreements.`,
@@ -92,7 +93,7 @@ To exercise any of these rights, email sriram@sriramadvisory.com with the subjec
             },
             {
               heading: "8. Data Security",
-              body: `We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, disclosure, alteration, or destruction. Website enquiries are submitted to Formspree over an encrypted connection and handled under Formspree's security and retention practices.`,
+              body: `We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, disclosure, alteration, or destruction. Review enquiries are submitted to Formspree over an encrypted connection. Formspree processes form submissions under its own privacy and security practices.`,
             },
             {
               heading: "9. Cookies",
@@ -126,3 +127,7 @@ To exercise any of these rights, email sriram@sriramadvisory.com with the subjec
     </>
   );
 }
+
+
+
+
