@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import { siteIdentity } from "@/lib/positioning";
-const links = [["How I Help", "/work-with-sriram"], ["Research & Insights", "/thinking"], ["About", "/about"], ["Contact", "/contact"]];
+const links = [["How I Help", "/work-with-sriram"], ["Products", "/products"], ["Research & Insights", "/thinking"], ["About", "/about"], ["Contact", "/contact"]];
 export default function Footer() {
   return <footer className="sa-footer"><div className="sa-wrap">
     <div className="sa-footer-intro"><strong>{siteIdentity.name}</strong><p className="sa-footer-tagline">{siteIdentity.tagline}</p><p>{siteIdentity.description}</p></div>

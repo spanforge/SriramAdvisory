@@ -29,6 +29,7 @@ export function enabledInterests(): Interest[] {
 }
 export const navigation = [
   { label: "How I Help", href: "/work-with-sriram" },
+  { label: "Products", href: "/products" },
   { label: "Research & Insights", href: "/thinking" }, { label: "About", href: "/about" },
   { label: "Request a Review", href: "/contact" },
 ];
