@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/services/problem-solving-sprint", destination: "/work-with-sriram", statusCode: 301 },
-      { source: "/products", destination: "/assessments", permanent: true },
       { source: "/services", destination: "/work-with-sriram", statusCode: 301 },
       { source: "/our-thinking", destination: "/about/our-thinking", permanent: true },
       { source: "/snapshot", destination: "/tools/free-ai-exposure-check", permanent: true },
