@@ -5,6 +5,7 @@ import { Breadcrumbs, PageShell } from "@/components/AdvisoryUI";
 
 import StructuredData from "@/components/StructuredData";
 import CopyArticleLink from "@/components/CopyArticleLink";
+import TrackedLink from "@/components/TrackedLink";
 import { getArticle, getPublishedArticles, getProductMarketArticles } from "@/lib/thinking";
 import { siteIdentity } from "@/lib/positioning";
 type Props = { params: Promise<{ slug: string }> };
@@ -29,7 +30,7 @@ export default async function ArticlePage({ params }: Props) {
       {article.publicationNote && <p className="sa-help">{article.originalUrl ? <a href={article.originalUrl}>{article.publicationNote}</a> : article.publicationNote}</p>}
       <div className="sa-article-body"><Body /></div>
       {article.sources.length > 0 && <section className="sa-article-sources"><h2>Sources</h2><ul>{article.sources.map(source => <li key={source.url}><a href={source.url}>{source.title}</a></li>)}</ul></section>}
-      <div className="sa-article-invitation"><Link href="/contact">Request a Review →</Link></div>
+      <div className="sa-article-invitation"><TrackedLink href="/contact" eventName="review_cta_click" eventProperties={{ placement: "article" }}>Request a Review →</TrackedLink></div>
       {related.length > 0 && <section className="sa-related"><h2>Related thinking</h2><div className="sa-grid sa-grid-2">{related.map(item => <article className="sa-card" key={item.slug}><h3><Link href={"/thinking/" + item.slug}>{item.title}</Link></h3><p>{item.summary}</p><Link href={"/thinking/" + item.slug}>Read Post →</Link></article>)}</div></section>}
       <div className="sa-article-end"><Link href="/thinking">Back to Research &amp; Insights</Link><CopyArticleLink url={canonical} /></div>
     </article>

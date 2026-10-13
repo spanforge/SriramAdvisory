@@ -71,7 +71,7 @@ old URL,action,new URL,canonical,reason,test status
 /services/business-delivery-health-check,retain,/services/business-delivery-health-check,https://www.sriramadvisory.com/services/business-delivery-health-check,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
 /services/career-positioning-audit,retain,/services/career-positioning-audit,https://www.sriramadvisory.com/services/career-positioning-audit,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200
 ,create,/services/implementation-support,https://www.sriramadvisory.com/services/implementation-support,Specified v2.1 service route,Local HTTP 200
-,create,/services/problem-solving-sprint,https://www.sriramadvisory.com/services/problem-solving-sprint,Specified v2.1 service route,Local HTTP 200
+/services/problem-solving-sprint,301,/work-with-sriram,https://www.sriramadvisory.com/work-with-sriram,Replaced by the Product and Market Review,301 configured and locally tested
 ,create,/services/team-workshops,https://www.sriramadvisory.com/services/team-workshops,Specified v2.1 service route,Local HTTP 200
 /system,redirect,/methodology,https://www.sriramadvisory.com/methodology,Repository baseline; reconcile production sitemap and redirect precedence,Local 307 -> 200; inherited redirects require final migration review
 /terms,retain,/terms,https://www.sriramadvisory.com/terms,Repository baseline; reconcile production sitemap and redirect precedence,Local HTTP 200

@@ -1,22 +1,24 @@
-# Enquiry operations — implementation v2.1
+# Enquiry operations — Product and Market Review
 
 Selected option: **A — existing Formspree integration**, form `mojzewly`. The owner confirmed Formspree on 11 October 2026. No Formspree read/master keys belong in client code. Existing paid/free customer workflows are separate and remain intact.
 
 ## Submission contract
 
-The owner approved activation and all contact fields. The visitor acknowledges the linked Privacy Notice and submits name, email, optional organisation, one of six interests, challenge, optional attempts/outcome, privacyAcknowledged and an allowlisted source. The live client uses the same existing endpoint (`https://formspree.io/f/mojzewly`), FormData POST and JSON Accept header as FreeGuideLeadForm. The existing guide form code is unchanged. The transport includes _subject, an enquiryReference and the provider's _gotcha honeypot.
+The visitor acknowledges the linked Privacy Notice and submits name, email, one of five stages (Idea, Market, Distribution, Adoption, Unsure), situation, optional HTTP(S) product link, optional organisation/attempts/outcome, privacyAcknowledged and an allowlisted source. The client uses the existing endpoint (`https://formspree.io/f/mojzewly`), FormData POST and JSON Accept header. The existing guide form code is unchanged. The transport includes _subject, an enquiryReference and the provider's _gotcha honeypot.
 
-Only a successful provider response shows confirmation. Failed requests retain the visitor's text for retry. Validation runs locally; no new server endpoint or server validation enforcement is claimed. The UUID reference is for correlation, not proven provider idempotency. A mocked browser check passed without sending an external enquiry. Inbox delivery still requires account-specific verification.
+Only an HTTP success with JSON `ok: true` shows confirmation. Requests time out after 15 seconds. Failed requests retain the visitor's text and reference for retry. Pending submissions are locked. Validation runs locally; no new server endpoint or server validation enforcement is claimed. The UUID reference is for correlation, not proven provider idempotency. Browser checks use mocked provider responses and do not send an external enquiry. Prior handoff notes record owner-confirmed inbox delivery.
+
+On 13 October 2026 the owner declined the additional storage, retry and retention feature. Keep Formspree; do not add a database, queue, automatic deletion policy or subscription. Those original specification requirements are intentionally outside the revised scope, not claimed as implemented.
 
 ## Owner operations and remaining evidence
 
 1. Sign into the existing Formspree account and open form `mojzewly`. Confirm the recipient is the intended owner mailbox, sender/Reply-To settings, durable submission retention, and domain restrictions.
 2. Demonstrate recovery of a received submission from the protected inbox independently of email notification. Export only to authorised storage; never publish exported submissions or API credentials.
 3. Confirm failed notification visibility/retries and the owner's alert/recovery procedure. Preserve the same reference for possible duplicate notification or submission recovery; no exactly-once email claim.
-4. Apply deletion of unconverted enquiries after **180 days**, the spec default adopted for this implementation. Active client records follow the engagement policy. Document the periodic review/deletion owner and reconcile provider retention capabilities. Delete a test submission and verify deletion/export access.
+4. Handle deletion requests at sriram@sriramadvisory.com. No automatic retention period is approved or implemented in this release; do not publish an invented schedule.
 5. Test delivery to an approved test mailbox before release, with explicit permission to send that test. No real or synthetic external enquiry is sent by development checks.
-6. The publicly documented provider API does not establish transactional UUID idempotency. Passing an Idempotency-Key or reference alone does **not** prove deduplication. Same-key/concurrent/timeout/changed-payload tests, 24-hour hash retention, 409 behaviour, and configured quota equivalence remain mandatory release evidence. Resolve any shortfall with the smallest durable extension; do not invent success or claim these gates pass.
-7. Verify five submissions per 15 minutes per keyed IP hash and ten/day per normalised email hash or a documented equivalent; do not store raw IP in the enquiry record. Provider spam screening is not proof of these precise quotas.
+6. The provider API does not establish transactional UUID idempotency. Passing a reference alone does not prove deduplication. Durable retry deduplication and a custom queue are excluded by the owner's revised scope. A retry after an uncertain timeout can produce duplicate provider records.
+7. Provider abuse controls remain in use; the application does not claim custom IP/email quotas. No raw IP, email address or enquiry text is sent to analytics.
 
 No public enquiry read/list endpoint or owner admin app is introduced. Provider authentication, recipient/sender, failed delivery and deletion settings cannot be inspected from this checkout.
 

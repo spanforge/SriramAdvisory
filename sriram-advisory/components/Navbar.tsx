@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/lib/positioning";
+import { track } from "@/lib/analytics";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function Navbar() {
       <button ref={trigger} className="sa-menu-button" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(true)}>Menu</button>
       <nav ref={menu} id="primary-navigation" className={`sa-navigation${open ? " is-open" : ""}`} aria-label="Primary navigation">
         <button className="sa-menu-close" type="button" onClick={close}>Close menu</button>
-        {navigation.map((item, index) => <Link key={item.href} href={item.href} className={index === navigation.length - 1 ? "sa-nav-cta" : "sa-nav-link"} aria-current={pathname === item.href ? "page" : undefined} onClick={() => { if (open) close(); }}>{item.label}</Link>)}
+        {navigation.map((item, index) => <Link key={item.href} href={item.href} className={index === navigation.length - 1 ? "sa-nav-cta" : "sa-nav-link"} aria-current={pathname === item.href ? "page" : undefined} onClick={() => { if (item.href === "/contact") track("review_cta_click", { placement: "navigation" }); if (open) close(); }}>{item.label}</Link>)}
       </nav>
     </div></header>
   </>;

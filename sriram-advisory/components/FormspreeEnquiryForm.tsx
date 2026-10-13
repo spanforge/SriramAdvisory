@@ -18,8 +18,11 @@ async function submitEnquiry(payload: Enquiry & { website: string }, key: string
     method: "POST",
     body: formData,
     headers: { Accept: "application/json" },
+    signal: AbortSignal.timeout(15000),
   });
   if (!response.ok) return { ok: false, code: response.status === 429 ? "rate_limited" : "provider_error" };
+  const result = await response.json();
+  if (result?.ok !== true) return { ok: false, code: "provider_error" };
   return { ok: true, enquiryId: key };
 }
 

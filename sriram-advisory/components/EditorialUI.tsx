@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { siteIdentity, copy, services } from "@/lib/positioning";
 import { PageShell } from "@/components/AdvisoryUI";
+import TrackedLink from "@/components/TrackedLink";
 
 export function FounderHero({ title, summary, eyebrow, experience, children }: { title: string; summary: string; eyebrow?: string; experience?: string; children: ReactNode }) {
   return <section className="sa-hero"><div className={`sa-wrap sa-founder-hero${siteIdentity.portrait ? " has-portrait" : ""}`}>
@@ -10,7 +11,8 @@ export function FounderHero({ title, summary, eyebrow, experience, children }: {
     {siteIdentity.portrait && <Image className="sa-portrait" src={siteIdentity.portrait} alt="Sriram Srinivasan, founder of Sriram Advisory" width={360} height={450} priority />}
   </div></section>;
 }
-export function Button({ href, children, secondary = false }: { href: string; children: ReactNode; secondary?: boolean }) {
+export function Button({ href, children, secondary = false, placement = "hero" }: { href: string; children: ReactNode; secondary?: boolean; placement?: string }) {
+  if (href.startsWith("/contact")) return <TrackedLink className={`sa-btn ${secondary ? "sa-btn-secondary" : "sa-btn-primary"}`} href={href} eventName="review_cta_click" eventProperties={{ placement }}>{children}</TrackedLink>;
   return <Link className={`sa-btn ${secondary ? "sa-btn-secondary" : "sa-btn-primary"}`} href={href}>{children}</Link>;
 }
 export function ServiceSummaries() {

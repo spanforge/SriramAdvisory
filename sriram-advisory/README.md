@@ -1,8 +1,10 @@
 # Sriram Advisory
 
-The public site is organised around Careers and Capabilities, Business and Delivery, Technology and Digital Safety, and Education and Learning. The September 2026 rewrite retains the existing product, guide, assessment and Cashfree routes while adding enquiry-led advisory services and filterable editorial directories.
+The primary journey is Product and Market Review: Home, How I Help, Research & Insights, About and Request a Review. The owner removed the solopreneur audience restriction and Resources menu link. Existing product, guide, assessment, resource and Cashfree routes remain available.
 
-Contact enquiries and free-resource requests submit directly to the existing Sriram Advisory Formspree form. Confirm the Formspree notification destination after deployment; no enquiry database or email-service environment variables are required by this application.
+Contact enquiries and free-resource requests submit directly to the existing Sriram Advisory Formspree form. Review enquiries validate the optional HTTP(S) product link, preserve text after failure, lock pending submissions and time out after 15 seconds. The owner declined additional durable storage, queue and retention automation. No new database or email-service environment variables are required. See docs/FORM_OPERATIONS.md and docs/v3-local-review.md.
+
+Hosted staging uses `SRIRAM_STAGING=1`, `STAGING_USERNAME` and `STAGING_PASSWORD` (server-only). Missing staging credentials block access. Production keeps `SRIRAM_STAGING=0`. Review measurement is wired to the existing Vercel Analytics package with URL redaction and an event/property allowlist; set `NEXT_PUBLIC_REVIEW_ANALYTICS=1` at build time only if the existing plan already supports custom events. No new analytics subscription is required.
 
 Website for [sriramadvisory.com](https://sriramadvisory.com) — AI career displacement risk assessments using the SA-AIRS™ methodology.
 

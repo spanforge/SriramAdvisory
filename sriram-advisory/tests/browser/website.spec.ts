@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const routes = ["/", "/work-with-sriram", "/services/problem-solving-sprint", "/services/implementation-support", "/services/team-workshops", "/about", "/business", "/resources", "/careers", "/contact", "/insights", "/insights/before-buying-an-ai-tool", "/services/business-delivery-health-check", "/products/airs-assessment", "/tools/free-ai-exposure-check"];
+const routes = ["/", "/work-with-sriram", "/thinking", "/thinking/how-products-found-their-customers-01-dropbox", "/services/problem-solving-sprint", "/services/implementation-support", "/services/team-workshops", "/about", "/business", "/resources", "/careers", "/contact", "/insights", "/insights/before-buying-an-ai-tool", "/services/business-delivery-health-check", "/products/airs-assessment", "/tools/free-ai-exposure-check"];
 
 test("every redesigned and retained primary journey has one shared shell", async ({ page }) => {
   for (const route of routes) {
@@ -18,7 +18,7 @@ test("every redesigned and retained primary journey has one shared shell", async
 test("responsive layouts and 200% zoom do not overflow", async ({ page }) => {
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 1000 });
-    for (const route of ["/", "/work-with-sriram", "/resources", "/insights", "/insights/before-buying-an-ai-tool", "/contact"]) {
+    for (const route of ["/", "/work-with-sriram", "/about", "/thinking", "/thinking/how-products-found-their-customers-01-dropbox", "/resources", "/insights", "/insights/before-buying-an-ai-tool", "/contact"]) {
       await page.goto(route);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), `${route} at ${width}px`).toBe(true);
     }
@@ -29,6 +29,31 @@ test("responsive layouts and 200% zoom do not overflow", async ({ page }) => {
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), "200% zoom").toBe(true);
 });
 
+test("mobile hero keeps the review action on the first screen", async ({ page }, testInfo) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const action = page.locator(".review-home-hero").getByRole("link", { name: "Request a Review", exact: true });
+  const bounds = await action.boundingBox();
+  expect(bounds).not.toBeNull();
+  expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(844);
+  await page.screenshot({ path: testInfo.outputPath("homepage-mobile.png"), fullPage: true });
+});
+
+test("all sitemap routes, sharing image and retained download resolve", async ({ request }, testInfo) => {
+  const sitemap = await (await request.get("/sitemap.xml")).text();
+  const paths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/gu)].map(match => new URL(match[1]).pathname);
+  const results: { path: string; status: number }[] = [];
+  for (const path of [...new Set([...paths, "/opengraph-image", "/SA_Conversion_Sprint_v2.docx"])]) {
+    const response = await request.get(path);
+    results.push({ path, status: response.status() });
+    expect(response.status(), path).toBe(200);
+  }
+  const redirect = await request.get("/services/problem-solving-sprint", { maxRedirects: 0 });
+  expect(redirect.status()).toBe(301);
+  expect(redirect.headers().location).toBe("/work-with-sriram");
+  await testInfo.attach("route-verification", { body: JSON.stringify(results, null, 2), contentType: "application/json" });
+});
+
 test("mobile menu traps focus, closes on Escape and restores focus", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
@@ -37,15 +62,15 @@ test("mobile menu traps focus, closes on Escape and restores focus", async ({ pa
   await expect(trigger).toHaveAttribute("aria-expanded", "true");
   await expect(page.getByRole("button", { name: "Close menu" })).toBeFocused();
   await page.keyboard.press("Shift+Tab");
-  await expect(page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Discuss your challenge" })).toBeFocused();
+  await expect(page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Request a Review" })).toBeFocused();
   await page.keyboard.press("Tab");
   await expect(page.getByRole("button", { name: "Close menu" })).toBeFocused();
   await page.keyboard.press("Escape");
   await expect(trigger).toBeFocused();
   await expect(trigger).toHaveAttribute("aria-expanded", "false");
   await trigger.click();
-  await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Thinking", exact: true }).click();
-  await expect(page).toHaveURL(/\/insights$/);
+  await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Research & Insights", exact: true }).click();
+  await expect(page).toHaveURL(/\/thinking$/);
   await expect(trigger).toHaveAttribute("aria-expanded", "false");
 });
 
@@ -87,13 +112,14 @@ test("initial HTML includes directory results and SEO excludes private states", 
   expect(redirect.headers().location).toBe("/work-with-sriram?interest=general");
 });
 
-test("homepage has full illustrative example and only the new advisory hierarchy", async ({ page }) => {
+test("homepage explains the product review and preserves the approved broader audience", async ({ page }, testInfo) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("See the problem clearly. Find a practical way forward.");
-  await expect(page.locator("#worked-example")).toContainText("Illustrative example — not a client case study");
-  await expect(page.locator(".sa-example-steps li")).toHaveCount(5);
-  await expect(page.locator(".sa-thinking-steps li")).toHaveCount(4);
-  await expect(page.locator(".sa-article-card")).toHaveCount(3);
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Decide what to build. Understand how it can find customers.");
+  await expect(page.locator(".review-decision")).toHaveCount(4);
+  await expect(page.getByRole("heading", { name: "Start with a Product and Market Review" })).toBeVisible();
+  await expect(page.locator("main")).toContainText("This is a paid advisory engagement.");
+  await expect(page.locator("main")).not.toContainText(/solopreneur/i);
+  await expect(page.locator("footer").getByRole("link", { name: "Resources", exact: true })).toHaveCount(0);
   await expect(page.getByRole("img", { name: "Sriram Srinivasan, founder of Sriram Advisory" })).toBeVisible();
-  await page.screenshot({ path: "test-results/homepage-desktop.png", fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath("homepage-desktop.png"), fullPage: true });
 });

@@ -5,7 +5,7 @@ export const MAX_ENQUIRY_BYTES = 32 * 1024;
 export const sourceIds = ["contact", "home", "work-with-sriram", "business", "careers", "problem-solving-sprint", "implementation-support", "team-workshops", "health-check", "thinking"] as const;
 export type Enquiry = {
   name: string; email: string; organisation: string; interest: Interest;
-  challenge: string; attempts: string; outcome: string;
+  challenge: string; attempts: string; outcome: string; productUrl: string;
   privacyAcknowledged: true; source: string;
 };
 export const formErrors = {
@@ -16,7 +16,7 @@ export const formErrors = {
   rate: "Too many attempts. Please wait and try again, or email Sriram directly.",
   summary: "Please check the highlighted fields.",
 };
-const limits = { name: [2, 100], email: [1, 254], organisation: [0, 120], challenge: [20, 2000], attempts: [0, 1000], outcome: [0, 1000] } as const;
+const limits = { name: [2, 100], email: [1, 254], organisation: [0, 120], challenge: [20, 2000], attempts: [0, 1000], outcome: [0, 1000], productUrl: [0, 2048] } as const;
 export function codePointLength(value: string) { return Array.from(value).length; }
 export function validateEnquiry(input: unknown): { payload?: Enquiry; errors: Record<string, string>; honeypot: boolean } {
   const errors: Record<string, string> = {};
@@ -34,6 +34,12 @@ export function validateEnquiry(input: unknown): { payload?: Enquiry; errors: Re
   }
   // Preserve local-part case for delivery. No HTML is interpreted.
   if (!errors.email && (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/u.test(values.email) || /[\r\n\u0000]/u.test(values.email))) errors.email = formErrors.email;
+  if (values.productUrl && !errors.productUrl) {
+    try {
+      const url = new URL(values.productUrl);
+      if (!/^https?:\/\//iu.test(values.productUrl) || !["http:", "https:"].includes(url.protocol) || !url.hostname || /[\s\u0000-\u001f]/u.test(values.productUrl)) throw new Error("Invalid URL");
+    } catch { errors.productUrl = "Enter a complete HTTP or HTTPS URL, or leave this blank."; }
+  }
   if (!isInterest(raw.interest) || !enabledInterests().includes(raw.interest)) errors.interest = "Please choose what you would like to discuss.";
   if (raw.privacyAcknowledged !== true) errors.privacyAcknowledged = formErrors.privacyAcknowledged;
   if (raw.website !== undefined && typeof raw.website !== "string") errors.form = formErrors.summary;
@@ -45,5 +51,5 @@ export function validateEnquiry(input: unknown): { payload?: Enquiry; errors: Re
   };
 }
 export function canonicalEnquiry(payload: Enquiry) {
-  return JSON.stringify([payload.name, payload.email, payload.organisation, payload.interest, payload.challenge, payload.attempts, payload.outcome, payload.privacyAcknowledged, payload.source]);
+  return JSON.stringify([payload.name, payload.email, payload.organisation, payload.interest, payload.challenge, payload.attempts, payload.outcome, payload.productUrl, payload.privacyAcknowledged, payload.source]);
 }

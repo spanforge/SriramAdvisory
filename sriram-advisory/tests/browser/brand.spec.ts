@@ -1,14 +1,10 @@
 import { test, expect } from "@playwright/test";
 
-test("consulting resources and service comparison make the offer tangible", async ({ page }) => {
+test("product review outputs are clear and retained resources remain accessible", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator(".sa-lede")).toContainText("IT services");
-  await page.getByRole("link", { name: "See a sample of the work you receive" }).click();
-  await expect(page.locator(".sa-illustrative")).toContainText("Fictional worked example");
-  for (const name of ["Problem brief", "Decision note", "30-day action plan"]) await expect(page.getByRole("heading", { name, exact: true })).toBeVisible();
+  await expect(page.locator(".sa-lede")).toContainText("product ideas");
   await page.goto("/work-with-sriram");
-  await expect(page.getByRole("heading", { name: "One problem or decision: a Sprint" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "One delivery area: a Health Check" })).toBeVisible();
+  for (const name of ["Decision brief", "Evidence review", "Recommended direction", "Next experiment", "Review conversation"]) await expect(page.getByRole("heading", { name, exact: true })).toBeVisible();
   await page.goto("/resources?collection=consulting");
   await expect(page.locator(".sa-card")).toHaveCount(4);
   await page.getByRole("searchbox").fill("decision");

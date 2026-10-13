@@ -4,6 +4,7 @@ import { siteConfig, type ResourceRecord } from "@/lib/advisoryContent";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import TrackedLink from "@/components/TrackedLink";
 
 export function PageShell({ children }: { children: ReactNode }) {
   return <><Navbar /><main id="main-content">{children}</main><Footer /></>;
@@ -12,7 +13,7 @@ export function PageShell({ children }: { children: ReactNode }) {
 export function Hero({ eyebrow, title, body, tagline, primary, secondary }: { eyebrow?: string; title: string; body: string; tagline?: string; primary: { label: string; href: string }; secondary?: { label: string; href: string } }) {
   return <section className="sa-hero"><div className="sa-wrap sa-prose">
     {eyebrow && <p className="sa-eyebrow">{eyebrow}</p>}<h1>{title}</h1>{tagline && <p className="sa-service-tagline">{tagline}</p>}<p className="sa-lede">{body}</p>
-    <div className="sa-actions"><Link className="sa-btn sa-btn-primary" href={primary.href}>{primary.label}</Link>{secondary && <Link className="sa-btn sa-btn-secondary" href={secondary.href}>{secondary.label}</Link>}</div>
+    <div className="sa-actions">{primary.href.startsWith("/contact") ? <TrackedLink className="sa-btn sa-btn-primary" href={primary.href} eventName="review_cta_click" eventProperties={{ placement: "hero" }}>{primary.label}</TrackedLink> : <Link className="sa-btn sa-btn-primary" href={primary.href}>{primary.label}</Link>}{secondary && <Link className="sa-btn sa-btn-secondary" href={secondary.href}>{secondary.label}</Link>}</div>
   </div></section>;
 }
 
@@ -34,5 +35,5 @@ export function ResourceCard({ resource }: { resource: ResourceRecord }) {
 }
 
 export function ClosingCTA({ title = "What would you like to improve?", body = "Tell me where you are facing a challenge. I will help you establish whether my experience fits the question.", href = "/contact", label = "Discuss Your Challenge" }: { title?: string; body?: string; href?: string; label?: string }) {
-  return <section className="sa-closing"><div className="sa-wrap sa-prose"><h2>{title}</h2><p>{body}</p><Link className="sa-btn sa-btn-primary" href={href}>{label}</Link></div></section>;
+  return <section className="sa-closing"><div className="sa-wrap sa-prose"><h2>{title}</h2><p>{body}</p><TrackedLink className="sa-btn sa-btn-primary" href={href} eventName="review_cta_click" eventProperties={{ placement: "closing" }}>{label}</TrackedLink></div></section>;
 }

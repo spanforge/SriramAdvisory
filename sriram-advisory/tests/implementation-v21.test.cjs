@@ -17,9 +17,12 @@ require.extensions[".ts"] = function (module, filename) {
 const { validateEnquiry, canonicalEnquiry, codePointLength } = require("../lib/enquiryValidation.ts");
 const { matchesSearch, normaliseSearch, paginate, directoryHref } = require("../lib/directory.ts");
 const { services, enabledInterests } = require("../lib/positioning.ts");
+const { sanitiseAnalyticsUrl, reviewEvent } = require("../lib/analytics.ts");
+const { proxy } = require("../proxy.ts");
+const { NextRequest } = require("next/server");
 const valid = () => ({ name: "Example Visitor", email: "Mixed.Case@example.test", interest: "general", challenge: "A sufficiently long example question.", privacyAcknowledged: true });
 
-test("enquiry accepts all six categories, preserves email case and defaults optional fields", () => {
+test("enquiry validator accepts enabled interests, preserves email case and defaults optional fields", () => {
   for (const interest of enabledInterests()) {
     const result = validateEnquiry({ ...valid(), interest, source: "unknown" });
     assert.deepEqual(result.errors, {});
@@ -28,12 +31,52 @@ test("enquiry accepts all six categories, preserves email case and defaults opti
     for (const field of ["organisation", "attempts", "outcome"]) assert.equal(result.payload[field], "");
   }
 });
-test("server validation rejects invalid enum, unknown fields and absent privacy acknowledgement", () => {
+test("enquiry validator rejects invalid enum, unknown fields and absent privacy acknowledgement", () => {
   assert.ok(validateEnquiry({ ...valid(), interest: "constructor" }).errors.interest);
   assert.ok(validateEnquiry({ ...valid(), extra: "unknown" }).errors.form);
   assert.ok(validateEnquiry({ ...valid(), privacyAcknowledged: false }).errors.privacyAcknowledged);
   assert.ok(validateEnquiry({ ...valid(), email: "x@example.test\r\nInjected: value" }).errors.email);
   assert.ok(validateEnquiry(null).errors.form);
+});
+
+test("optional product links accept HTTP(S) only and enforce the 2048-character boundary", () => {
+  for (const productUrl of ["", "https://example.com/product", "http://example.com", " https://example.com "]) {
+    assert.deepEqual(validateEnquiry({ ...valid(), productUrl }).errors, {});
+  }
+  for (const productUrl of ["javascript:alert(1)", "ftp://example.com", "example.com", "https://", "https://example.com/ bad", "https://example.com/" + "x".repeat(2048)]) {
+    assert.ok(validateEnquiry({ ...valid(), productUrl }).errors.productUrl, productUrl);
+  }
+});
+
+test("analytics strips private URL state and ignores legacy events and arbitrary properties", () => {
+  assert.equal(sanitiseAnalyticsUrl("https://www.sriramadvisory.com/contact?email=private@example.com#private"), "https://www.sriramadvisory.com/contact");
+  assert.equal(sanitiseAnalyticsUrl("https://www.sriramadvisory.com/thinking/private-person"), "https://www.sriramadvisory.com/thinking/article");
+  assert.equal(sanitiseAnalyticsUrl("https://www.sriramadvisory.com/payment-status?order=private"), null);
+  assert.equal(sanitiseAnalyticsUrl("https://www.sriramadvisory.com/insights?q=private"), null);
+  assert.equal(reviewEvent("purchase", { email: "private" }), null);
+  assert.equal(reviewEvent("review_cta_click", { placement: "private" }), null);
+  assert.deepEqual(reviewEvent("review_cta_click", { placement: "hero", email: "private", href: "private" }), { name: "review_cta_click", properties: { placement: "hero" } });
+  assert.deepEqual(reviewEvent("enquiry_success", { email: "private" }), { name: "enquiry_success", properties: {} });
+});
+
+test("staging fails closed, challenges unauthorised access and leaves production open", () => {
+  const keys = ["SRIRAM_STAGING", "STAGING_USERNAME", "STAGING_PASSWORD"];
+  const previous = Object.fromEntries(keys.map(key => [key, process.env[key]]));
+  try {
+    process.env.SRIRAM_STAGING = "1";
+    delete process.env.STAGING_USERNAME; delete process.env.STAGING_PASSWORD;
+    assert.equal(proxy(new NextRequest("https://example.com/")).status, 503);
+    process.env.STAGING_USERNAME = "reviewer"; process.env.STAGING_PASSWORD = "local-test-only";
+    const denied = proxy(new NextRequest("https://example.com/"));
+    assert.equal(denied.status, 401);
+    assert.equal(denied.headers.get("x-robots-tag"), "noindex, nofollow");
+    const auth = "Basic " + Buffer.from("reviewer:local-test-only").toString("base64");
+    const accepted = proxy(new NextRequest("https://example.com/", { headers: { authorization: auth } }));
+    assert.equal(accepted.status, 200);
+    assert.equal(accepted.headers.get("cache-control"), "private, no-store");
+    process.env.SRIRAM_STAGING = "0";
+    assert.equal(proxy(new NextRequest("https://example.com/")).headers.get("x-robots-tag"), null);
+  } finally { for (const key of keys) { if (previous[key] === undefined) delete process.env[key]; else process.env[key] = previous[key]; } }
 });
 test("Unicode limits count code points and trim boundary whitespace", () => {
   assert.equal(codePointLength("😀😀"), 2);

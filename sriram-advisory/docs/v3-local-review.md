@@ -1,6 +1,8 @@
 ﻿# Specification v3.0 local review
 Local-only implementation. No production deployment.
 
+Current fixes and revised scope: [13 October 2026 handoff](v3-fixes-2026-10-13.md). The earlier email-only preview and verification notes below are historical; the current enquiry flow uses Formspree. The owner removed the Resources menu as well as the solopreneur restriction and declined additional storage/retry/retention automation.
+
 ## Inventory and migration
 Replaced /, /work-with-sriram, /about, /contact, shared navigation and footer.
 Added /thinking and /thinking/[slug] with existing published MDX content.

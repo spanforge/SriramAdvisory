@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const LAST_UPDATED = "12 October 2026";
+const LAST_UPDATED = "13 October 2026";
 
 export default function PrivacyPage() {
   return (
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
               heading: "2. What Information We Collect",
               body: `We collect information you provide directly when you:
 - Purchase or enquire about a product or service (name, professional role, industry, years of experience, concern, email address)
-- Request a Product and Market Review (name, email, optional organisation, product stage, situation and any optional context you provide)
+- Request a Product and Market Review (name, email, product stage, situation, optional product or website link and any optional context you provide)
 - Make a payment (name, email, mobile number - payment is processed by the provider shown at checkout and we do not store card details)
 - Contact us via email or WhatsApp
 
@@ -97,7 +97,9 @@ To exercise any of these rights, email sriram@sriramadvisory.com with the subjec
             },
             {
               heading: "9. Cookies",
-              body: `Optional usage analytics is currently disabled. We do not use advertising cookies or third-party tracking cookies.`,
+              body: process.env.NEXT_PUBLIC_REVIEW_ANALYTICS === "1" && process.env.NODE_ENV === "production" && process.env.SRIRAM_STAGING !== "1"
+                ? `We use Vercel Web Analytics to measure visits to the review pages, review enquiry link clicks, enquiry starts and successful submissions. We exclude query parameters and URL fragments, redact article identifiers, and do not send your name, email address, product link or enquiry text to analytics. We do not use advertising cookies.`
+                : `Optional usage analytics is currently disabled. We do not use advertising cookies or third-party tracking cookies.`,
             },
             {
               heading: "10. Changes to This Policy",

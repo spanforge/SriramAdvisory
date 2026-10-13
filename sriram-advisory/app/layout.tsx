@@ -1,5 +1,6 @@
 ﻿import type { Metadata, Viewport } from "next";
 import StructuredData from "@/components/StructuredData";
+import ReviewAnalytics from "@/components/ReviewAnalytics";
 import { siteIdentity } from "@/lib/positioning";
 import "./globals.css";
 import "./editorial.css";
@@ -18,7 +19,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     { "@type": "Organization", "@id": `${siteIdentity.origin}/#organization`, name: siteIdentity.name, url: siteIdentity.origin, email: siteIdentity.email, founder: { "@id": `${siteIdentity.origin}/#founder` } },
     { "@type": "Person", "@id": `${siteIdentity.origin}/#founder`, name: siteIdentity.founder, url: `${siteIdentity.origin}/about`, sameAs: [siteIdentity.linkedin], ...(siteIdentity.portrait ? { image: `${siteIdentity.origin}${siteIdentity.portrait}` } : {}), jobTitle: "Independent consultant and founder" },
   ] };
-  return <html lang="en"><body><StructuredData data={graph} />{children}</body></html>;
+  const analyticsEnabled = process.env.NODE_ENV === "production" && process.env.SRIRAM_STAGING !== "1" && process.env.NEXT_PUBLIC_REVIEW_ANALYTICS === "1";
+  return <html lang="en"><body><StructuredData data={graph} />{children}<ReviewAnalytics enabled={analyticsEnabled} /></body></html>;
 }
 
 
