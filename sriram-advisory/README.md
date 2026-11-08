@@ -12,6 +12,14 @@ Run `npm run build`. Upload the contents of `dist/` to your static hosting provi
 
 Configure the host to serve sriramadvisory.com with a valid TLS certificate and redirect HTTP to HTTPS. TLS is a hosting setting; it is not enabled by local HTML. Keep unknown URLs as 404 responses rather than rewriting legacy routes to this page.
 
+### Vercel
+
+This site is static HTML, not Next.js. Set the project's Framework Preset to **Other** and Root Directory to **sriram-advisory**. The included `vercel.json` explicitly disables framework detection, builds with `node scripts/build.mjs`, skips dependency installation, and publishes `dist/`.
+
+A second `vercel.json` at the repository root supports projects whose Root Directory is left blank, using the corresponding nested build and output paths. Each configuration is relative to its own project root; do not mix their paths.
+
+Commit and push the configuration, then redeploy the latest commit. If the old Next.js error persists, check that the deployment includes this commit and that Root Directory is either blank or `sriram-advisory`. Remove any old `next build` or `.next` dashboard overrides. The site does not need a `next` dependency.
+
 ## Content and brand assets
 
 Edit `index.html` for copy and `styles.css` for layout. The supplied original PNGs are preserved in this directory. The page uses 720 × 720 WebP derivatives in `assets/`, resized and compressed from those PNGs without cropping, recoloring, or recreating the artwork. Slogans embedded in the approved artwork are preserved.
